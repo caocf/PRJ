@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="message" extends="cement-interceptor" namespace="/">
+		
+		<!-- 增加用户信息 -->
+		<action name="addMessageInfo" class="com.huzhouport.wechat.action.MessageAction"
+			method="addMessageInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 查询 -->
+		<action name="showMessageInfo" class="com.huzhouport.wechat.action.MessageAction"
+			method="showMessageInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+
+	</package>
+
+</struts>    

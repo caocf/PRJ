@@ -1,0 +1,134 @@
+@CHARSET "UTF-8";
+
+.see {
+	margin: 45px 0 0 0;
+	text-align: left;
+	table-layout: fixed;
+	width: 813px;
+	vertical-align: top;
+	background: #fff;
+	border-top: 1px solid red;
+	border: 1px solid red;
+	border-collapse: collapse;
+}
+
+.see td {
+	margin: 0;
+	padding: 10px 0 10px 17px;
+	border: 1px solid red;
+}
+
+.see .lefttd {
+	font-weight: bold;
+	color: red
+}
+
+.seenew {
+	margin: 45px 0 0 0;
+	text-align: left;
+	table-layout: fixed;
+	width: 813px;
+	vertical-align: top;
+	background: #fff;
+}
+
+.seenew td {
+	margin: 0;
+	padding: 12px 0 6px 17px;
+}
+
+.list_kind {
+	margin: 0;
+	padding: 0;
+	width: 830px;
+	height: 0;
+	border-top: 1px solid #d6d6d6;
+	overflow: hidden;
+}
+
+.seedivapproval {
+	margin: 0;
+	padding: 0 0 0 10px;
+	width: 820px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	border-top: 1px solid #d6d6d6;
+	background-color: #f5f7fa;
+	font-weight: bold;
+	background-color: #f5f7fa;
+	text-align: left;
+	overflow-x: hidden;
+}
+
+.seedivapproval p {
+	color: #323944;
+	margin: 0 0 0 15px;
+}
+
+.submit {
+	margin: 0 0 0 15px;
+}
+
+.see1 {
+	margin: 0;
+	text-align: left;
+	table-layout: fixed;
+	width: 830px;
+	vertical-align: top;
+	border-bottom: 0;
+	background: #fff;
+}
+
+.see1td {
+	margin: 0;
+	padding: 12px 0 6px 17px;
+}
+
+#Photodiv1 {
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	text-align: left;
+}
+
+#Photodiv1 .fileitem_div {
+	float: left;
+	margin: 0;
+	padding: 20px;
+	width: 117px;
+	height: 95px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#Photodiv1 .fileitem_div img {
+	margih: 0;
+	padding: 0 0 8px 0;
+	width: 77px;
+	height: 77px;
+	border: none;
+}
+
+#Photodiv1 td .txt {
+	margih: 0;
+	padding: 0;
+	width: 77px;
+	overflow: hidden;
+	border: solid 1px red
+}
+
+.photo {
+	margin: 0;
+	padding: 0 0 0 10px;
+	width: 803px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	border-top: 1px solid #d6d6d6;
+	background-color: #f5f7fa;
+	font-weight: bold;
+	background-color: #f5f7fa;
+	text-align: left;
+	overflow-x: hidden;
+}

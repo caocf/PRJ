@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.meeting.model.MeetingType" table="meeting_type">
+		<id name="id" column="id">
+		</id>
+		<property name="typename" column="typename"></property>
+		<property name="capacity" column="capacity"></property>
+				<property name="typeid" column="typeid"></property>
+	</class>
+</hibernate-mapping>

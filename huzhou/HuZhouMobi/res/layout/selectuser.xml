@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/selectuser_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu">
+
+
+            <ImageButton
+                android:id="@+id/selectuser_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:contentDescription="@string/back"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/title_back" />
+
+            <TextView
+                android:id="@+id/selectuser_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/addresslist_button"
+                android:textColor="#0067ac"
+                android:textSize="18sp" 
+                android:layout_toRightOf="@+id/selectuser_back"/>
+
+            <ImageButton
+                android:id="@+id/selectuser_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:src="@drawable/address_zhuye" 
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/go_home"/>
+             <ImageButton
+                android:id="@+id/selectuser_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:src="@drawable/le_submit" 
+                android:layout_toLeftOf="@+id/selectuser_home"
+                android:contentDescription="@string/finish"/>
+        </RelativeLayout>
+
+    <EditText
+        android:id="@+id/selectuser_searchcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/selectuser_title_rl"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/selectuser_searchbutton"
+        android:background="@drawable/address_select"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:paddingLeft="30dp"
+        android:singleLine="true" />
+
+    <ImageButton
+        android:id="@+id/selectuser_searchbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/selectuser_title_rl"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent"
+        android:src="@drawable/address_serech" 
+        android:contentDescription="@string/search"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectuser_searchcontent" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/selectuser_dep_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/address_tree"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/addresslist_newbutton"
+                android:textColor="#8b8b8b"
+                android:textSize="14sp" />
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/selectuser_dep_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectuser_dep_title" />
+
+            <Button
+                android:id="@+id/selectuser_user_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectuser_dep_lv"
+                android:background="@drawable/address_tree"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/addresslist_newbutton1"
+                android:textColor="#8b8b8b"
+                android:textSize="14sp" />
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/selectuser_user_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectuser_user_title" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

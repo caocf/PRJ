@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+<package name="dangerousGoodsJob" extends="cement-interceptor" namespace="/">
+   	 <!-- 显示列表 ajax js-->
+   		<action name="showDangerousGoodsJob" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="showDangerousGoodsJob">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+	 <!-- 搜索 ajax js-->
+   		<action name="selectDangerousGoodsJob" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="selectDangerousGoodsJob">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+ <!-- 查看 审批-->
+   		<action name="showDangerousGoodsJobApproval" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="showDangerousGoodsJobApproval">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+
+<!-- 审批-->
+   		<action name="DangerousGoodsJobApproval" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="DangerousGoodsJobApproval">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<!-- 新建-->
+   		<action name="newDangerousGoodsJob" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="newDangerousGoodsJob">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<!-- 危险品码头作业申报显示 手机端-->
+   		<action name="showDangerousGoodsJob1" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="showDangerousGoodsJob1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 危险品码头作业申报查找 手机端-->
+   		<action name="selectDangerousGoodsJob1" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="selectDangerousGoodsJob1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   			<!-- 危险品码头作业申报显示 手机端 只显示自己-->
+   		<action name="showDangerousGoodsJob2" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="showDangerousGoodsJob2">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 危险品码头作业申报查找 手机端只显示自己-->
+   		<action name="selectDangerousGoodsJob2" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="selectDangerousGoodsJob2">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 作业码头列表-->
+   		<action name="findWharfJobNum" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="findWharfJobNum">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 查找作业码头列表-->
+   		<action name="selectWharfJobNum" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="selectWharfJobNum">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<action name="showDangerousGoodsJobByWharf" class="com.huzhouport.dangerousGoodsJob.action.DangerousGoodsJobAction"  method="showDangerousGoodsJobByWharf">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		
+   </package></struts>

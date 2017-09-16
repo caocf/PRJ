@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+    <class name="com.huzhouport.knowledge.model.Knowledge" table="mm_Knowledge" >
+       <id name="knowledgeID" column="KnowledgeID" >
+            <generator class="native"></generator>
+        </id>
+        <property name="knowledgeName" column="KnowledgeName" ></property>
+        <property name="knowledgeIndex" column="KnowledgeIndex" ></property>
+        <property name="partOfKind" column="PartOfKind" ></property>
+        <property name="isLink" column="IsLink" ></property>
+        <property name="knowledgeContent" column="KnowledgeContent" ></property>
+         <property name="isLinkInfo" column="IsLinkInfo" ></property>
+        <property name="date" column="KnowledgeDate" ></property>
+       <property name="usernames" column="KnowledgeUsers" ></property>
+       
+    </class>
+    
+</hibernate-mapping>

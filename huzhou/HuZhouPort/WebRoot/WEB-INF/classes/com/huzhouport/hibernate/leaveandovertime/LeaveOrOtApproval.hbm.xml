@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+    <class name="com.huzhouport.leaveandovertime.model.LeaveOrOtApproval" table="mm_LeaveOrOtApproval" >
+       <id name="userID" column="UserID" >
+            <generator class="assigned"></generator>
+        </id>
+        <property name="approval1" column="Approval1" ></property>
+        <property name="approval2" column="Approval2" ></property>
+        <property name="approval3" column="Approval3" ></property>
+        
+    </class>
+    
+</hibernate-mapping>

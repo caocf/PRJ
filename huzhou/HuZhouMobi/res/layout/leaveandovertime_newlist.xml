@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <RelativeLayout
+        android:id="@+id/leaveandovertime_newlist_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/leaveandovertime_newlist_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/leaveandovertime_newlist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/leaveandovertime_newlist_back"
+            android:gravity="fill_vertical"
+            android:text="@string/leaveandovertime_button"
+            android:textColor="#0067ac"
+            android:textSize="18sp"/>
+
+        <ImageButton
+            android:id="@+id/leaveandovertime_newlist_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/leaveandovertime_newlist_add"
+            android:background="#00000000"
+            android:contentDescription="@string/search"
+            android:src="@drawable/title_search" />
+         <ImageButton
+            android:id="@+id/leaveandovertime_newlist_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:contentDescription="@string/search"
+            android:src="@drawable/title_add" />
+         <ImageButton
+            android:id="@+id/leaveandovertime_newlist_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:contentDescription="@string/search"
+            android:src="@drawable/le_del" 
+            android:visibility="gone"/>
+         
+     
+         
+         
+    </RelativeLayout>
+    
+   <LinearLayout
+       android:id="@+id/leaveandovertime_newlist_titleL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leaveandovertime_newlist_titleR"
+        android:baselineAligned="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" 
+        >
+       <ImageButton 
+           android:id="@+id/leaveandovertime_newlist_approval"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/leave_approval_pressed"
+           android:background="@color/transparent"
+           android:layout_weight="1"
+           android:contentDescription="@string/image_default_describe"
+           />
+       <ImageButton 
+           android:id="@+id/leaveandovertime_newlist_apply"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/leave_apply_normal"
+           android:background="@color/transparent"
+           android:layout_weight="1"
+           android:contentDescription="@string/image_default_describe"
+           />
+       <ImageButton 
+           android:id="@+id/leaveandovertime_newlist_all"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/leave_all_normal"
+           android:background="@color/transparent"
+           android:layout_weight="1"
+           android:contentDescription="@string/image_default_describe"
+           />
+   </LinearLayout>
+    
+      <android.support.v4.view.ViewPager
+        android:id="@+id/leaveandovertime_newlist_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leaveandovertime_newlist_titleL"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" 
+        />
+      
+      
+        <LinearLayout
+        android:id="@+id/leaveandovertime_newlist_addL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leaveandovertime_newlist_titleR"
+        android:baselineAligned="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical" 
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="#f7f7f7"
+        >
+       <ImageButton 
+           android:id="@+id/leaveandovertime_newlist_addleave"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/le_addleave"
+           android:background="@color/transparent"
+           android:layout_gravity="center_horizontal"
+           android:contentDescription="@string/image_default_describe"
+           />
+       <ImageButton 
+           android:id="@+id/leaveandovertime_newlist_addovertime"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/le_addovertiem"
+           android:background="@color/transparent"
+           android:layout_marginTop="10dp"
+           android:layout_gravity="center_horizontal"
+           android:contentDescription="@string/image_default_describe"
+           />
+         <ImageButton 
+           android:id="@+id/leaveandovertime_newlist_addtravel"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/le_addtravel"
+           android:background="@color/transparent"
+           android:layout_marginTop="10dp"
+           android:layout_gravity="center_horizontal"
+           android:contentDescription="@string/image_default_describe"
+           />
+       
+       
+   </LinearLayout>
+      
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="wharfWork" location="165,10" size="280,1085">
+    <action name="showWharfWork" location="65,47" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="selectWharfWork" location="65,152" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="showWharfWork1" location="65,257" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="selectWharfWork1" location="65,362" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="viewWharfWork" location="65,467" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="viewWharf" location="65,572" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="addWharfWork" location="65,677" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="wharfBinDingWharfName" location="65,782" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="selectwharfBinDingWharfName" location="65,887" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="updateWharfName" location="65,992" size="150,62">
+      <result name="success" />
+      <result name="fail">
+        <resourceEdge source="fail" routing="0" target="error.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="error.jsp" path="/error.jsp" location="10,870" size="150,55" />
+</Struts2Diagram>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+    <class name="com.huzhouport.leaveandovertime.model.LeaveOrOt" table="mm_LeaveOrOt" >
+       <id name="leaveOrOtID" column="LeaveOrOtID" >
+            <generator class="native"></generator>
+        </id>
+        <property name="leaveOrOtKind" column="LeaveOrOtKind" ></property>
+        <property name="leaveOrOtUser" column="LeaveOrOtUser" ></property>
+        <property name="leaveOrOtReason" column="LeaveOrOtReason" ></property>
+        <property name="leaveOrOtDate" column="LeaveOrOtDate" ></property>
+        <property name="beginDate" column="BeginDate" ></property>
+        <property name="lastDate" column="LastDate" ></property>
+        <property name="endDate" column="EndDate" ></property>
+        <property name="approvalID1" column="ApprovalID1" ></property>
+        <property name="approvalResult1" column="ApprovalResult1" ></property>
+        <property name="approvalOpinion1" column="ApprovalOpinion1" ></property>
+        <property name="approvalTime1" column="ApprovalTime1" ></property>
+        <property name="approvalID2" column="ApprovalID2" ></property>
+        <property name="approvalResult2" column="ApprovalResult2" ></property>
+        <property name="approvalOpinion2" column="ApprovalOpinion2" ></property>
+        <property name="approvalTime2" column="ApprovalTime2" ></property>
+        <property name="approvalID3" column="ApprovalID3" ></property>
+        <property name="approvalResult3" column="ApprovalResult3" ></property>
+        <property name="approvalOpinion3" column="ApprovalOpinion3" ></property>
+        <property name="approvalTime3" column="ApprovalTime3" ></property>
+        <property name="approvalResult" column="ApprovalResult" ></property>
+          <property name="address" column="Address" ></property>
+    </class>
+    
+</hibernate-mapping>

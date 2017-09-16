@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:background="#ffffff">
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+        <ImageButton
+            android:id="@+id/basesourch_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/basesourch_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+    
+     <LinearLayout
+       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+         <TextView 
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp" 
+        android:textSize="16sp"
+        android:text="船名号"
+        android:background="#ffffff"
+        android:gravity="center_vertical" />
+          <EditText 
+        android:id="@+id/search_ninecode_add_num"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp" 
+        android:textSize="16sp"
+        android:background="#ffffff"
+        android:gravity="center_vertical" />
+        
+       </LinearLayout> 
+    
+   
+     <TextView 
+         android:id="@+id/search_ninecode_add_num_xian"
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:background="@color/line_color" />
+      <LinearLayout
+       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+          <TextView 
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp" 
+        android:textSize="16sp"
+        android:text="九位码"
+        android:background="#ffffff"
+        android:gravity="center_vertical" />
+    <EditText 
+        android:id="@+id/search_ninecode_add_edit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/search_ninecode_hint"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="16sp"
+        android:background="#ffffff"
+        android:maxLength="9"
+        android:inputType="number"  />
+     </LinearLayout>
+    <TextView 
+         android:id="@+id/search_ninecode_add_edit_xian"
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:background="@color/line_color" />
+    <LinearLayout
+       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+    <TextView 
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp" 
+        android:textSize="16sp"
+        android:text="上传文件"
+        android:background="#ffffff"
+        android:gravity="center_vertical" />
+     <ImageButton
+                            android:id="@+id/search_ninecode_add_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:background="#00000000"
+                            android:layout_marginLeft="16dp"
+                            android:contentDescription="@string/photograph"
+                            android:gravity="center"
+                            android:src="@drawable/addbig" 
+                            android:layout_marginRight="16dp"
+                             />
+     </LinearLayout>
+     <TextView 
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:background="@color/line_color" />
+     <Gallery
+           android:id="@+id/search_ninecode_add_gallery"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_vertical"  >
+         
+     </Gallery>  
+    <ImageButton
+                android:id="@+id/search_ninecode_add_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="26dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/imgbt_submit" />
+    
+</LinearLayout>

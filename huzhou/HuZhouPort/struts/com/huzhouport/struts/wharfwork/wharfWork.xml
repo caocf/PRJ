@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+<package name="wharfWork" extends="cement-interceptor" namespace="/">
+   	 <!-- 显示列表ajax js-->
+   		<action name="showWharfWork" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="showWharfWork">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+		<action name="selectWharfWork" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="selectWharfWork">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="showWharfWork1" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="showWharfWork1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+		<action name="selectWharfWork1" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="selectWharfWork1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="viewWharfWork" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="viewWharfWork">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<action name="viewWharf" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="viewWharf">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<action name="addWharfWork" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="addWharfWork">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<action name="wharfBinDingWharfName" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="wharfBinDingWharfName">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<action name="selectwharfBinDingWharfName" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="selectwharfBinDingWharfName">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="updateWharfName" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="updateWharfName">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="wharfWorkSurplus" class="com.huzhouport.wharfWork.action.WharfWorkAction"  method="wharfWorkSurplus">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   </package></struts>

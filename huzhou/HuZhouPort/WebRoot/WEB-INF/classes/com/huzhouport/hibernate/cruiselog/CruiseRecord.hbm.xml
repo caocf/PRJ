@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+    <class name="com.huzhouport.cruiselog.model.CruiseRecord" table="cruise_record" >
+       <id name="id" column="id" >
+            <generator class="increment"></generator>
+        </id>
+        <property name="tool" column="tool" ></property>
+        <property name="meters" column="meters" ></property>
+        <property name="startTime" column="startTime" ></property>
+        <property name="endTime" column="endTime" ></property>
+         <property name="status" column="status" ></property>
+         <property name="issues" column="issues" ></property>
+        <set name="userids" table="cruise_user" lazy="false">  
+            <key column="cruiseid"/>  
+            <many-to-many column="userid" class="com.huzhouport.user.model.User"/>  
+        </set> 
+        <set name="tacks" table="cruise_recordtrack" cascade="save-update" lazy="false">  
+            <key column="cruiseid"/>  
+            <many-to-many column="tackid" class="com.huzhouport.cruiselog.model.CruiseTrack"/>  
+        </set>
+    </class>
+    
+</hibernate-mapping>

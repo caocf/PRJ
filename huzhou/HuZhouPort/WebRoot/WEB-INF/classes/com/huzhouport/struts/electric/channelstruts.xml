@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="channelReport" extends="cement-interceptor"
+		namespace="/">
+
+		<!-- 查询信息 -->
+		<action name="showChannelInfo" class="com.huzhouport.electric.action.ChannelAction"
+			method="showChannelInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!-- 增加 -->
+		<action name="addChannelInfo" class="com.huzhouport.electric.action.ChannelAction"
+			method="addChannelInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 按ID-->
+		<action name="showChannelID" class="com.huzhouport.electric.action.ChannelAction"
+			method="showChannelID">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 导出 -->
+		<action name="downloadFileModel" class="com.huzhouport.electric.action.ChannelAction"
+			method="downloadFileModel">
+			<result name="excl" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="channelExcel.xls"</param>
+				<param name="inputName">downfileExcl</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<action name="inputChannelInfo" class="com.huzhouport.electric.action.ChannelAction"
+			method="inputChannelInfo">
+			<result name="success">/page/electric/channelList.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+
+</struts>    

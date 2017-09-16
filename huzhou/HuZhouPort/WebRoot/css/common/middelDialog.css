@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+/*弹出窗口*/
+.window {
+	font-size: 12px;
+	position: absolute;
+	width: 522px;
+	overflow: hidden;
+}
+
+.window .window-header {
+	margin:0;
+	background: url(../../image/dialog/dialog_top2.png) no-repeat;
+	width: 477px;
+	padding: 24px 0 0 45px;
+	font-weight: bold;
+	font-size: 16px;
+	height: 24px;
+	
+}
+
+.window .window-body {
+	width: 522px;
+	height:515px;
+	background: url(../../image/dialog/dialog_content2.png) no-repeat;
+	background-position: bottom;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+
+
+   <bean id="leaveandovertimedao" class="com.huzhouport.leaveandovertime.dao.impl.DaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>	
+  
+
+	<bean id="leaveAndOvertimeServer" class="com.huzhouport.leaveandovertime.service.impl.LeaveAndOvertimeServerImpl">
+		<property name="dao" ref="leaveandovertimedao"></property>
+		<property name="pushMsgService" ref="pushMsgService"></property>
+	</bean>
+	
+	
+<bean name="LeaveAndOvertimeAction" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction" scope="prototype"  >
+		<property name="leaveAndOvertimeServer" ref="leaveAndOvertimeServer"></property>
+		 <property name="logsaveserver" ref="logsaveserver"></property>
+	</bean> 
+
+
+
+
+</beans>

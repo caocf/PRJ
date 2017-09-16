@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.electricreport.model.Boatman" table="mm_Boatman">
+		<id name="boatmanID" column="BoatmanID">
+			<generator class="native"></generator>
+		</id>
+	<property name="boatmanKind" column="BoatmanKind"></property>
+	<property name="boatmanName" column="BoatmanName"></property>
+	<property name="boatmanShip" column="BoatmanShip"></property>
+	<property name="boatCardNum" column="BoatCardNum"></property>
+	<property name="boatCardID" column="BoatCardID"></property>
+	</class>
+</hibernate-mapping>

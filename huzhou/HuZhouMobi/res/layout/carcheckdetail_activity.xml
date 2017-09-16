@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#f9f9f9"
+    android:id="@+id/parent">
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" 
+        android:onClick="onViewClick">
+         <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back"
+            android:onClick="onViewClick" >
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="详情"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>       
+    </LinearLayout>
+    
+    
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	   <LinearLayout 
+	       android:id="@+id/container"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:background="#d7d7d7"> 
+	    
+	       <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center|left"
+    android:paddingLeft="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="#f9f9f9">
+        
+        <LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_weight="1"
+	    android:gravity="center|left"> 
+	    <TextView
+	        android:id="@+id/tx1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:text="申请人"
+            android:textColor="#666666" 
+            android:textSize="14sp" />
+	    <TextView
+	        android:id="@+id/tx2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:text="申请时间"
+            android:layout_marginTop="10dp"
+            android:textColor="#666666" 
+            android:textSize="14sp" />
+	     </LinearLayout>
+	     <ImageView 
+	         android:id="@+id/img"
+	         android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/meeting_approving"
+	    android:layout_marginRight="16dp"/>
+        </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="用车时间"
+            android:textColor="#666666" 
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/starttime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:hint="请选择用车开始时间"
+            android:gravity="center|left"
+            android:layout_marginRight="16dp"
+            android:textSize="14sp"/>           
+        
+    </LinearLayout>
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />    
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" 
+        android:focusableInTouchMode="true">
+        
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="还车时间"
+            android:textColor="#666666" 
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:hint="请选择还车时间"
+            android:layout_marginRight="16dp"
+            android:textSize="14sp"
+             android:gravity="center|left" />      
+        
+    </LinearLayout>     
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" 
+        android:layout_marginTop="16dp"/>
+     
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="用车人数"
+            android:textColor="#666666" 
+            android:textSize="16sp" />
+        <TextView 
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:hint="请输入用车人数"
+             android:gravity="center|left"
+            android:inputType="number"
+            android:textSize="14sp"/>     
+        
+    </LinearLayout>
+       
+         
+         <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+         
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="上车地点"
+            android:textColor="#666666" 
+            android:textSize="16sp" />
+        <TextView 
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:hint="请输入上车地点"
+            android:textSize="14sp"
+             android:gravity="center|left"/>     
+        
+    </LinearLayout>
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="目的地"
+            android:textColor="#666666" 
+            android:textSize="16sp" />
+        <TextView 
+            android:id="@+id/target"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:hint="请输入目的地"
+            android:textSize="14sp"
+             android:gravity="center|left"/>     
+        
+    </LinearLayout>
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="用车理由"
+            android:textColor="#666666" 
+            android:textSize="16sp" />
+        <TextView 
+            android:id="@+id/reason"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+           android:singleLine="false"
+            android:hint="请填写用车理由"
+            android:textSize="14sp"
+             android:gravity="center|left"/>     
+        
+    </LinearLayout>
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" 
+        android:layout_marginTop="16dp"/>
+       <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center|left"
+            android:text="联系电话"
+            android:textColor="#666666" 
+            android:textSize="16sp" />
+        <TextView 
+            android:id="@+id/tel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:hint="请输入联系电话"
+            android:inputType="number"
+            android:textSize="14sp"
+             android:gravity="center|left"/>     
+        
+    </LinearLayout>
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+         
+          <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999"
+        android:layout_marginTop="16dp" />
+          
+          <TextView 
+              android:paddingLeft="16dp"
+            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:background="#fff"
+        android:layout_weight="1"
+        android:text="流程状态"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+           <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+           <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+          <ImageView 
+              android:id="@+id/img1"
+             android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_state_wait"/>
+           <TextView 
+              android:id="@+id/flow1"
+             android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:background="#fff"
+        android:text="等待科长审批"
+        android:textColor="#ff8400"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+         android:textSize="16sp"/>
+           <TextView 
+              android:id="@+id/mark1"
+              android:paddingLeft="16dp"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:background="#fff"
+        android:text="备注"
+        android:visibility="gone"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+         android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView 
+              android:id="@+id/sign1"
+              android:paddingLeft="16dp"
+            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:background="#fff"
+        android:text="签名"
+        android:visibility="gone"
+        android:paddingBottom="10dp"
+         android:textSize="15sp"/>
+           <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+           <LinearLayout
+                 android:id="@+id/check1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9"
+        android:divider="#d7d7d7"
+        android:showDividers="middle"
+        android:visibility="visible"
+        android:orientation="horizontal" >
+           <TextView 
+              android:id="@+id/agree"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:text="同意"
+        android:textColor="#28AF1E"
+         android:padding="16dp"
+        android:gravity="center"
+        android:layout_weight="1"
+         android:textSize="16sp"
+         android:onClick="onApAgree"/>
+           <TextView
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="#999999" /> 
+            <TextView 
+              android:id="@+id/reject"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:text="驳回"
+        android:textColor="#FF0C0C"
+        android:padding="16dp"
+        android:gravity="center"
+         android:textSize="16sp"
+           android:layout_weight="1"
+           android:onClick="onApReject"/>
+           </LinearLayout>
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+             <LinearLayout
+                 android:id="@+id/flowl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+          <ImageView 
+              android:id="@+id/img2"
+             android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_state_wait"/>
+           <TextView 
+              android:id="@+id/flow2"
+             android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:background="#fff"
+        android:text="等待办公室审批"
+        android:textColor="#ff8400"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+         android:textSize="16sp"/>
+           <TextView 
+              android:id="@+id/mark2"
+              android:paddingLeft="16dp"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:background="#fff"
+        android:text="备注"
+        android:visibility="gone"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+         android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView 
+              android:id="@+id/sign2"
+              android:paddingLeft="16dp"
+            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|left"
+        android:background="#fff"
+        android:text="签名"
+        android:visibility="gone"
+        android:paddingBottom="10dp"
+         android:textSize="15sp"/>
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+            <LinearLayout
+                 android:id="@+id/check2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9"
+        android:visibility="visible"
+        android:orientation="horizontal" >
+           <TextView 
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:text="派车"
+        android:textColor="#28AF1E"
+         android:padding="16dp"
+        android:gravity="center"
+        android:layout_weight="1"
+         android:textSize="16sp"
+          android:onClick="onOfficeAgree"/>
+           <TextView
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="#999999" /> 
+            <TextView 
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:text="驳回"
+        android:textColor="#FF0C0C"
+        android:padding="16dp"
+        android:gravity="center"
+         android:textSize="16sp"
+           android:layout_weight="1"
+            android:onClick="onOfficeReject"/>           
+            
+           </LinearLayout>
+           <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+    </LinearLayout>
+    
+</ScrollView>
+
+</LinearLayout>
+

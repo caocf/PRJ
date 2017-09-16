@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="16dp">
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    <TextView 
+        android:id="@+id/issuename"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="护岸情况-压顶破损"/>
+  <TextView 
+      android:id="@+id/kz"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="K305"
+    android:layout_marginLeft="10dp"/>
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:layout_marginTop="8dp">
+    <TextView 
+        android:id="@+id/channel"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="京杭运河"/>
+  <TextView 
+      android:id="@+id/lorr"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:text="右岸"/>
+</LinearLayout>
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:layout_marginTop="8dp">
+    <TextView 
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="2019-8-7"/>
+</LinearLayout>
+
+</LinearLayout>

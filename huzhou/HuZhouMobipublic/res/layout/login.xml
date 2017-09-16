@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/login_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/login_back"
+            android:gravity="center_vertical"
+            android:text="@string/login_btn"
+            android:textColor="@color/fragment_title"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
+
+        <TextView
+            android:id="@+id/login_txt1"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="fill_vertical"
+            android:text="@string/login_usename_title"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/login_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/login_txt1"
+            android:background="@color/transparent"
+            android:gravity="fill_vertical"
+            android:hint="@string/login_use"
+            android:inputType="textUri"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/Light_black"
+            android:textColorHint="@color/logo_edit"
+            >
+        </EditText>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >
+
+        <TextView
+            android:id="@+id/login_txt2"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="fill_vertical"
+            android:text="@string/login_pwd_title"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/login_psd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/login_txt2"
+            android:background="@color/transparent"
+            android:gravity="fill_vertical"
+            android:hint="@string/login_pwd"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/Light_black"
+            android:textColorHint="@color/logo_edit"
+            >
+        </EditText>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color" />
+
+    <ImageButton
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/imgbt_logo"
+        android:onClick="loginButton" >
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/login_warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/warn"
+        android:onClick="WarnButton" 
+        android:visibility="gone">
+    </ImageButton>
+    
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" >  
+    <CheckBox 
+        android:id="@+id/login_checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"/>
+     <TextView
+            android:id="@+id/login_checkbox_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/login_checkbox1"
+            android:text="@string/login_checkbox1"
+            android:textSize="17sp"
+            android:gravity="fill_vertical"></TextView>
+    <CheckBox 
+        android:id="@+id/login_checkbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/login_checkbox_tv1"/>
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/login_checkbox2"
+            android:text="@string/login_checkbox2"
+            android:textSize="17sp"
+            android:gravity="fill_vertical"></TextView>
+</RelativeLayout>
+   
+</LinearLayout>

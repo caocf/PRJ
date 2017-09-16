@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">通知详情</h1>
+		</header>
+		<div class="mui-content" style="margin-top: 30px;">
+			<div class="mui-h4" style="text-align: center;" id="title">标题</div>
+			<div style="text-align: right;margin-right: 10px;" id="time">2016-11-28 10:56:56</div>
+			<div id="content" style="text-indent: 2em;">内容</div>
+		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+				mui.init();
+				mui.plusReady(function(event){
+					mui.back = function(){
+						plus.webview.currentWebview().hide();
+					}
+				});
+				window.addEventListener("toDetail",function(event){
+					var param = event.detail.param;
+					var data = JSON.parse(param);
+					console.log(JSON.stringify(data));
+					document.getElementById("title").innerHTML=data.knowledgeName;
+					document.getElementById("content").innerHTML = data.knowledgeContent;
+					var time = data.date.split("T");
+					var timeDiv = document.getElementById("time");
+					if(time.length == 2){
+						timeDiv.innerHTML = time[0] + " "+time[1];
+					}else{
+						timeDiv.innerHTML = time[0];
+					}
+					
+				});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+     <!-- 配置DAO组件 -->
+	<bean id="scheduleDao" class="com.huzhouport.schedule.dao.impl.ScheduleDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+
+	<!-- 配置业务逻辑组件 -->
+ 	<bean id="scheduleService" class="com.huzhouport.schedule.service.impl.ScheduleServiceImpl">
+		<!-- 为业务逻辑组件注入DAO组件 -->
+		<property name="scheduleDao" ref="scheduleDao"></property>
+		<property name="baseDao" ref="baseDao"></property>
+		<property name="pushMsgService" ref="pushMsgService"></property>
+	</bean>
+
+
+	<!-- 创建userInfoAction实例 -->
+	<bean id="scheduleAction" class="com.huzhouport.schedule.action.ScheduleAction"
+		scope="prototype">
+		<property name="scheduleService" ref="scheduleService"></property>
+		<property name="baseService" ref="baseService"></property>
+		<property name="pushservice" ref="pushservice"></property>
+	</bean>
+
+</beans>

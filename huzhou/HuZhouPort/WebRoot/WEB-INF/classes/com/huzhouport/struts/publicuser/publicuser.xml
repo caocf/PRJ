@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="publicuser" extends="cement-interceptor" namespace="/">
+		<!--船户公众用户列表或搜索-->
+		<action name="PublicUserListByShip" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="PublicUserListByShip">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--码头公众用户列表或搜索-->
+		<action name="PublicUserListByWharf" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="PublicUserListByWharf">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--删除公众用户 -->
+		<action name="DeletePublicUser" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="DeletePublicUser">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--删除公众用户 -->
+		<action name="DeleteWharfUser" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="DeleteWharfUser">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!--船舶证书列表 -->
+		<action name="ShipCheckList" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="ShipCheckList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--码头证书列表 -->
+		<action name="WharfCheckList" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="WharfCheckList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--新增船户 -->
+		<action name="AddPublicByShip" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="AddPublicByShip">
+			<result name="success" type="redirect" >/page/publicuser/shipuser_list.jsp</result>
+			<result name="error">/page/publicuser/shipuser_add.jsp</result>
+		</action>
+		<!--新增码头组 -->
+		<action name="AddPublicByWharf" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="AddPublicByWharf">
+			<result name="success" type="redirect" >/page/publicuser/wharfuser_list.jsp</result>
+			<result name="error">/page/publicuser/wharfuser_add.jsp</result>
+		</action>
+		<!--新增船户签证 -->
+		<action name="AddShipBook" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="AddShipBook">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--新增码头证据-->
+		<action name="AddWharfBook" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="AddWharfBook">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--删除船户签证 -->
+		<action name="DeleteShipBook" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="DeleteShipBook">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--删除码头证据-->
+		<action name="DeleteWharfBook" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="DeleteWharfBook">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--船户信息 -->
+		<action name="PublicInfoByShip" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="PublicInfoByShip">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--码头主信息-->
+		<action name="PublicInfoByWharf" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="PublicInfoByWharf">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--修改船户签证 -->
+		<action name="UpdatePublicInfoByShip" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="UpdatePublicInfoByShip">
+			<result name="success" type="redirect" >/page/publicuser/shipuser_list.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="deleteShipBindingById" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="deleteShipBindingById">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="deleteShipFileById" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="deleteShipFileById">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--修改码头证据-->
+		<action name="UpdatePublicInfoByWharf" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="UpdatePublicInfoByWharf">
+			<result name="success" type="redirect" >/page/publicuser/wharfuser_list.jsp</result>
+			<result name="error" />
+		</action>
+		<action name="deleteWharfBindingById" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="deleteWharfBindingById">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="deleteWharfFileById" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="deleteWharfFileById">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--公众手机登陆-->
+		<action name="LoginPublicMobi" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="LoginPublicMobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--公众手机修改密码-->
+		<action name="ChangePsdPublicMobi" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="ChangePsdPublicMobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="publicUserById" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="publicUserById">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="publicUserByIdWharf" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="publicUserByIdWharf">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--PC端船户登陆-->
+		<action name="LoginPcByPublic" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="LoginPcByPublic">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--获取公众用户的绑定船舶-->
+		<action name="FindPublicUserByShip" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="FindPublicUserByShip">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--修改bindName-->
+		<action name="UpdateBindNameBySession" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="UpdateBindNameBySession">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--修改bindName-->
+		<action name="UpdateBindName" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="UpdateBindName">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="SelctBoatManForReportByUser" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="SelctBoatManForReportByUser">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		
+		<action name="Register" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="DoReg">            
+			
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="RegisterList" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="RegisterList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="Regunique" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="regid">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="Audit" class="com.huzhouport.publicuser.action.PublicUserAction"
+			method="Audit">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		
+		
+	</package>
+</struts>    

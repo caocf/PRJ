@@ -1,0 +1,312 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	font-family: SimSun;
+	display: block;
+	background-color: #fff;	
+	/*scrollbar-arrow-color: #f4ae21; 三角箭头的颜色*/
+	/*scrollbar-face-color: #333; 立体滚动条的颜色*/
+	/*scrollbar-3dlight-color: #666; 立体滚动条亮边的颜色*/
+	/*scrollbar-highlight-color: #666; 滚动条空白部分的颜色*/
+	/*scrollbar-shadow-color: #999;立体滚动条阴影的颜色*/
+	/*scrollbar-darkshadow-color: #666;立体滚动条强阴影的颜色*/
+	/*scrollbar-track-color: #666;立体滚动条背景颜色*/
+	/*scrollbar-base-color:#f8f8f8; 滚动条的基本颜色*/
+	/*Cursor:url(mouse.cur);自定义个性鼠标*/
+	overflow-x: hidden;
+}
+
+a {
+	cursor: pointer
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.loadingData{margin:10px 0 0 0; display: none;width:100%;text-align: center;}
+/*文字操作*/
+.operation {
+	cursor: pointer;
+	color: #2290e5;
+}
+
+.operation:link {
+	text-decoration: none;
+	color: #2290e5
+}
+
+.operation:visited {
+	text-decoration: none;
+	color: #2290e5
+}
+
+.operation:hover {
+	text-decoration: underline;
+	color: #2290e5
+}
+
+.operation:active {
+	text-decoration: underline;
+	color: #1877c0
+}
+
+/*删除*/
+.operation2 {
+	cursor: pointer;
+	color: #ff3d3d;
+}
+
+.operation2:link {
+	text-decoration: none;
+	color: #ff3d3d
+}
+
+.operation2:visited {
+	text-decoration: none;
+	color: #ff3d3d
+}
+
+.operation2:hover {
+	text-decoration: underline;
+	color: #ff3d3d
+}
+
+.operation2:active {
+	text-decoration: underline;
+	color: #db0202
+}
+
+/*右侧返回栏-长*/
+#layer1 {
+	margin: 0;
+	padding: 0;
+	width: 830px;
+	height: 44px;
+	background: #f5f7fa;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	border-style:solid;
+	border-color: #d6d6d6;
+	border-width: 0 0 1px 0;
+}
+
+#layer1 img {
+	margin: 8px 0 7px 10px;
+	pading: 0;
+	border: 0px
+}
+
+#layer1 hr {
+	margin: 0;
+	pading: 0;
+	width: 100%;
+	height: 1px;
+	border: none;
+	border-top: 1px solid #d6d6d6;
+	vertical-align: top;
+}
+/*右侧返回栏-短*/
+#layer_short {
+	margin: 0;
+	padding: 0;
+	width: 636px;
+	height: 44px;
+	background: #f5f7fa;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	border-style:solid;
+	border-color: #d6d6d6;
+	border-width: 0 0 1px 0;
+}
+
+#layer_short img {
+	margin: 8px 0 7px 10px;
+	pading: 0;
+	border: 0px
+}
+
+#layer_short hr {
+	margin: 0;
+	pading: 0;
+	width: 100%;
+	height: 1px;
+	border: none;
+	border-top: 1px solid #d6d6d6;
+	vertical-align: top;
+}
+
+/*输入框、按钮*/
+.input_box {
+	margin: 0;
+	padding: 0 5px;
+	width: 202px;
+	height: 27px;
+	line-height: 27px;
+	vertical-align: middle;
+	border: solid 1px #d8d8d8;
+	outline: none;
+	background-color: #fff;
+}
+
+.promptSpan {
+	margin: 0;
+	padding: 0;
+	color: red;
+}
+
+/*选择框*/
+.select_box {
+	margin: 0;
+	padding: 0 0 0 5px;
+	width: 212px;
+	height: 27px;
+	line-height: 27px;
+	vertical-align: middle;
+	border: solid 1px #d8d8d8;
+	scrollbar-arrow-color: #d8d8d8; /*三角箭头的颜色*/
+}
+TEXTAREA {
+	resize: none; /*固定大小*/
+}
+/*搜索输入框、选择框*/
+.search_input_box {
+	margin: 0;
+	padding: 2px 5px;
+	width: 212px;
+	height: 21px;
+	line-height: 21px;
+	vertical-align: middle;
+	border: solid 1px #d8d8d8;
+	border-right: none;
+	scrollbar-arrow-color: #d8d8d8; /*三角箭头的颜色*/
+	outline: none;
+}
+
+.search_select_box {
+	margin: 0;
+	padding: 0 5px;
+	width: 70px;
+	
+	line-height: 27px;
+	vertical-align: middle;
+	background: transparent;
+	border: solid 1px #d8d8d8;
+	-webkit-appearance: none;
+}
+
+/*按钮图片*/
+.u3_img {
+	margin: 0 10px 0 0;
+	padding: 0;
+	border: none;
+}
+
+.input_submit {
+	width: 82px;
+	height: 30px;
+	background: url(../../image/operation/submit_normal.png);
+	border: none;
+}
+.input_reset2 {
+	width: 82px;
+	height: 30px;
+	background: url(../../image/operation/reset_big_normal2.png);
+	border: none;
+}
+.input_reset {
+	width: 82px;
+	height: 30px;
+	background: url(../../image/operation/reset_big_normal.png);
+	border: none;
+}
+.content_kind {
+	margin: 0;
+	padding: 0 10px;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	border-top: 1px solid #d6d6d6;
+	background-color: #f5f7fa;
+	font-weight: bold;
+	background-color: #f5f7fa;
+	text-align: left;
+}
+.table_see_div{
+		margin: 0;
+	padding: 0;
+	width: 100%;
+	line-height: 20px;word-break:break-all; 
+}
+
+/*跳页*/
+#pageDiv {
+	text-align: right;
+	margin: 0;
+	padding: 6px 15px 6px 0;
+	background: #fff;
+	border: none;
+}
+
+#pageDiv p {
+	margin: 0;
+	padding: 0;
+}
+
+.indexCommon {
+	width: 14px;
+	height: auto;
+}
+
+.dCommonA {
+	margin: 0 5px 0 0;
+	padding: 0
+}
+
+#pageDiv a:link {
+	text-decoration: none;
+	color: #323944
+}
+
+#pageDiv a:visited {
+	text-decoration: none;
+	color: #323944
+}
+
+#pageDiv a:hover {
+	text-decoration: underline;
+	color: #1d2128
+}
+
+#pageDiv a:active {
+	text-decoration: underline;
+	color: #1d2128
+}
+
+
+/*分页---周剑*/
+#fenye {
+	height: 25px;
+	margin-top: 5px;
+	margin-right:10px;
+	text-align: right;
+}

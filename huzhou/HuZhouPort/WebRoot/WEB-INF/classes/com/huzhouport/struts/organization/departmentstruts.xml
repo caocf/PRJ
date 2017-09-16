@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="department" extends="cement-interceptor"
+		namespace="/">
+		<!-- 查询 全部部门-->
+		<action name="showDepartmentList"
+			class="com.huzhouport.organization.action.DepartmentAction" method="showDepartmentList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<!-- 查询 上级部门-->
+		<action name="searchParentDepartmentName"
+			class="com.huzhouport.organization.action.DepartmentAction" method="searchParentDepartmentName">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 新增 -->
+		<action name="addDepartmentInfo"
+			class="com.huzhouport.organization.action.DepartmentAction" method="addDepartmentInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 删除 -->
+		<action name="deleteDepartmentInfo"
+			class="com.huzhouport.organization.action.DepartmentAction" method="deleteDepartmentInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 修改 -->
+		<action name="updateDepartmentInfo"
+			class="com.huzhouport.organization.action.DepartmentAction" method="updateDepartmentInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 手机端 分级查找 -->
+		<action name="findUserAndDepartment"
+			class="com.huzhouport.organization.action.DepartmentAction" method="findUserAndDepartment">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>		
+		</package>
+</struts>    

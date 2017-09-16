@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    android:orientation="horizontal"
+    android:shrinkColumns="1"
+    android:stretchColumns="1" >
+
+    <RelativeLayout
+        android:id="@+id/FrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/electricreport_main_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/electricreport_main_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/electricreport_main_back"
+            android:text="@string/electricreport_main"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/electricreport_main_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent"
+            android:src="@drawable/le_submit" />
+
+    </RelativeLayout>
+
+    <TableRow
+        android:id="@+id/TableRow1"
+        android:layout_below="@+id/FrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/electricreport_main_name"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/electricreport_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:hint="@string/electricreport_main_inputname"
+            android:layout_span="3"
+            android:background="@color/white"
+            android:textSize="17sp" >
+        </EditText>
+    </TableRow>
+
+<RelativeLayout
+    android:id="@+id/TableRow2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/TableRow1"
+    android:layout_marginTop="0.5dp"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="left|center_vertical"
+        android:text="@string/electricreport_main_draft"
+        android:textColor="@color/Light_gray"
+        android:textSize="17sp" />
+    <ImageButton
+    android:id="@+id/electricreport_main_jia"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:layout_alignParentTop="true"
+    android:layout_toLeftOf="@+id/electricreport_add_draft"
+    android:background="@color/transparent"
+    android:src="@drawable/imgbt_jia" />
+
+<EditText
+        android:id="@+id/electricreport_add_draft"
+        android:layout_width="40dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/electricreport_main_jian"
+        android:background="@color/white"
+        android:ems="10"
+        android:gravity="center|center_vertical"
+        android:hint="@string/electricreport_main_inputcargoNumber"
+        android:numeric="decimal"
+        android:textSize="17sp" 
+        android:text="5.5">
+    </EditText>
+<TextView
+        android:id="@+id/electricreport_add_mi"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:drawableRight="@drawable/leave_imgright"
+        android:gravity="right|center_vertical"
+        android:text="米"
+        android:textColor="@color/Light_gray"
+        android:textSize="17sp" />
+
+<ImageButton
+        android:id="@+id/electricreport_main_jian"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/electricreport_add_mi"
+        android:background="@color/transparent"
+        android:src="@drawable/imgbt_jian" />
+
+</RelativeLayout>
+
+    <!-- <TableRow
+        android:id="@+id/TableRow2"
+        android:layout_below="@+id/TableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/electricreport_main_draft"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+
+        
+         <EditText
+            android:id="@+id/electricreport_add_draft"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:hint="@string/electricreport_main_inputdraft"
+            android:layout_span="3"
+            android:numeric="decimal" 
+            android:background="@color/white"
+            android:textSize="17sp" >
+        </EditText>
+    </TableRow> -->
+
+    <TableRow
+        android:id="@+id/TableRow3"
+        android:layout_below="@+id/TableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/electricreport_main_shipUserName"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+
+        
+            <EditText
+            android:id="@+id/electricreport_add_shipUserName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:hint="@string/electricreport_main_inputshipUserName"
+            android:layout_span="3"
+            android:background="@color/white"
+            android:textSize="17sp" >
+        </EditText>
+    </TableRow>
+
+    <TableRow
+         android:id="@+id/TableRow4"
+        android:layout_below="@+id/TableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/electricreport_main_arrival"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/electricreport_add_arrival"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:hint="@string/electricreport_main_inputarrival"
+            android:drawableRight="@drawable/leave_imgright"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="17sp" /> 
+           <!--  <EditText
+            android:id="@+id/electricreport_add_arrival"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:hint="@string/electricreport_main_inputarrival"
+            android:layout_span="3"
+            android:background="@color/white"
+            android:textSize="17sp" >
+        </EditText> -->
+    </TableRow>
+
+    <TableRow
+         android:id="@+id/TableRow5"
+        android:layout_below="@+id/TableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/electricreport_main_pier"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+
+        
+            <TextView
+            android:id="@+id/electricreport_add_pier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="right"
+            android:hint="@string/electricreport_main_inputpier"
+            android:drawableRight="@drawable/leave_imgright"
+            android:layout_span="3"
+            android:background="@color/white"
+            android:textSize="17sp" >
+        </TextView>
+    </TableRow>
+
+    <!-- <TableRow
+         android:id="@+id/TableRow6"
+        android:layout_below="@+id/TableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/electricreport_main_cargoSituation"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+
+        
+            <EditText
+            android:id="@+id/electricreport_add_cargoSituation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:hint="@string/electricreport_main_inputcargoSituation"
+            android:layout_span="3"
+            android:background="@color/white"
+            android:textSize="17sp" >
+        </EditText>
+        <Spinner
+            android:id="@+id/electricreport_add_cargoSituation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_spinner"
+            android:textSize="12sp" /> 
+    </TableRow> -->
+
+    <TableRow 
+        android:id="@+id/TableRow7"
+        android:layout_below="@+id/TableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/electricreport_main_type"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+
+        
+            <TextView
+            android:id="@+id/electricreport_add_type"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:hint="@string/electricreport_main_inputtype"
+            android:drawableRight="@drawable/leave_imgright"
+            android:layout_span="3"
+            android:background="@color/white"
+            android:textSize="17sp" >
+        </TextView>
+    </TableRow>
+<TableLayout
+    android:id="@+id/TableRow8"
+        android:layout_below="@+id/TableRow7"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="@string/electricreport_main_cargoNumber"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+
+            <EditText
+            android:id="@+id/electricreport_add_cargoNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="right|center_vertical"
+            android:hint="@string/electricreport_main_inputcargoNumber"
+            android:layout_span="3"
+            android:background="@color/white"
+            android:numeric="decimal" 
+            android:textSize="17sp" >
+        </EditText>
+        <TextView
+            android:id="@+id/electricreport_add_uniti"
+            android:layout_width="1dip"
+            android:layout_height="48dp"
+            android:layout_marginRight="15dp"
+            android:gravity="right|center_vertical"
+            android:text="吨"
+            android:drawableRight="@drawable/leave_imgright"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp" />
+    </TableRow>
+</TableLayout>
+</RelativeLayout>

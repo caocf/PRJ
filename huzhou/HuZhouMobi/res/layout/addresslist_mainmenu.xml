@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addresslist_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addresslist_new_searchtextname" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/address_newbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/address_tree"
+                android:padding="10dp"
+                android:text="@string/addresslist_newbutton"
+                android:textSize="14sp"
+                android:textColor="#8b8b8b"
+                android:gravity="center_vertical"
+                
+                />
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/addresslist_new_viewlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address_newbutton" 
+                />
+
+            <Button
+                android:id="@+id/address_newbutton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addresslist_new_viewlist"
+                android:background="@drawable/address_tree"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/addresslist_newbutton1"
+                android:textSize="14sp"
+                android:textColor="#8b8b8b"/>
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/addresslist_new_viewlist1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address_newbutton1" 
+                
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/addresslist_new_searchbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"  
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="6dp"  
+        android:layout_marginRight="10dp"            
+        android:background="@color/transparent"
+        android:src="@drawable/address_serech" />
+
+    <EditText
+        android:id="@+id/addresslist_new_searchtextname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/addresslist_new_searchbutton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"        
+        android:layout_toLeftOf="@+id/addresslist_new_searchbutton"
+        android:background="@drawable/address_select"
+        android:ems="10"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:paddingLeft="30dp"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">日程安排</h1>
+			<a class="  mui-btn-link mui-pull-right" id="add"><img id="add_img" src="../images/leave_submit_normal.png" style="width: 44px;" /></a>
+		</header>
+		<div class="mui-content">
+			<div class="mui-card">
+				<ul class="mui-table-view-cell" id="tree">
+					
+				</ul>
+			</div>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var callback = function(list, parentId) {
+				parentId = parentId || -1;
+//				console.log(parentId);
+
+				var tree = document.getElementById("tree");
+				for(var i = 0; i < list.length; i++) {
+					if(parentId == list[i].partOfDepartmentId) {
+						var tr = document.createElement("li");
+						tr.classList.add("mui-table-view-cell", "mui-collapse");
+						tr.ref = list[i].departmentId;
+						var a = document.createElement("a");
+						a.className = "mui-navigate-right";
+						a.innerHTML = list[i].departmentName;
+						tr.appendChild(a);
+						if(checkChild(list, list[i].departmentId)) {
+							var ul = document.createElement("ul");
+							ul.id = "opt" + list[i].departmentId;
+							ul.classList.add("mui-table-view","mui-table-view-chevron");
+							tr.appendChild(ul);
+							if(list[i].partOfDepartmentId == -1) {
+								tree.appendChild(tr);
+							} else {
+								var opt = document.getElementById("opt" + list[i].partOfDepartmentId);
+								opt.appendChild(tr);
+							}
+							callback(list,list[i].departmentId);
+						} else {
+							tr.addEventListener("tap",function(event){
+//								console.log(this.ref);
+								localStorage.deptId = this.ref;
+								mui.openWindow("deptUserList.html","dul");
+							});
+							if(list[i].partOfDepartmentId == -1) {
+								tree.appendChild(tr);
+							} else {
+								var opt = document.getElementById("opt" + list[i].partOfDepartmentId);
+								opt.appendChild(tr);
+							}
+						}
+
+					}
+				}
+			}
+			var checkChild = function(list, did) {
+				for(var i = 0; i < list.length; i++) {
+//					console.log(list[i].partOfDepartmentId +":::"+ did)
+					if(list[i].partOfDepartmentId == did) {
+						return true;
+					}
+				}
+				return false;
+			}
+//			callback(list, -1);
+			app.showDepartmentList(callback);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="comprehensive" extends="cement-interceptor" namespace="/">
+
+		<action name="comprehensiveCaptureHtml" class="com.huzhouport.comprehensive.action.ModelActionComprehensive"
+			method="captureHtml">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="comprehensiveFindDetailInfo" class="com.huzhouport.comprehensive.action.ModelActionComprehensive"
+			method="findDetailInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+
+</struts>    

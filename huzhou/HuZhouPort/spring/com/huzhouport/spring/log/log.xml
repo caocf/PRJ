@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+      	<!-- 日志-->
+	  <bean id="userdao1" class="com.huzhouport.log.dao.impl.DaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate" />
+	</bean>	
+     <bean id="logsaveserver" class="com.huzhouport.log.service.impl.LogsaveServerImpl">
+		<property name="dao" ref="userdao1"></property>
+	</bean>
+	      
+  
+  
+
+	<bean id="server" class="com.huzhouport.log.service.impl.ServerImpl">
+		<property name="dao" ref="userdao1"></property>
+	</bean>
+	
+
+	
+	
+	
+<bean name="UserAction" class="com.huzhouport.log.action.LogAction"  scope="prototype">
+		<property name="server" ref="server"></property>
+	     <property name="logsaveserver" ref="logsaveserver"></property>
+	</bean> 
+
+
+
+
+</beans>

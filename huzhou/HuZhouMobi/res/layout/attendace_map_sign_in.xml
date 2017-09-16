@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/attendace_main_inmap"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/attendace_main_inmap_titleText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/attendace_main_inmap"
+            android:gravity="center_vertical"
+            android:text="@string/attendace_sign_in"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/attendace_main_inmap_bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tableRow2"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/frameLayout1" >
+    </com.baidu.mapapi.map.MapView>
+
+    <!--
+     <TextView
+    android:id="@+id/attendace_main_datesignin"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:layout_above="@+id/attendace_mainin_inmap_button"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="5dp"
+    android:gravity="left"
+    android:textSize="14sp" 
+    android:text="SJ"/>
+    -->
+ <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_above="@+id/tableRow1"
+        android:layout_alignParentLeft="true">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/positioning"
+            android:gravity="center"
+            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/attendace_main_localtextsignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp" />
+</TableRow>
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <ImageButton
+            android:id="@+id/attendace_main_inmap_localtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/imgbt_attenbackcheck"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/attendace_mainin_inmap_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/imgbt_attenin" />
+    </TableRow>
+
+   
+</RelativeLayout>

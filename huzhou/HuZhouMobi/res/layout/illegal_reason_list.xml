@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_background"
+    android:orientation="vertical"
+    android:shrinkColumns="0"
+    android:stretchColumns="1" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/reasonlsit_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <AutoCompleteTextView
+            android:id="@+id/reasonlsit_autotext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/reasonlsit_bt"
+            android:layout_toRightOf="@+id/reasonlsit_back"
+            android:background="@drawable/leave_select"
+            android:hint="@string/regularvisa_search"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/reasonlsit_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/search"
+            android:src="@drawable/le_select" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/reasonlsit_list_historybutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/address_tree"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/illegal_select_history"
+                android:textColor="#8b8b8b"
+                android:textSize="14sp" />
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/reasonlsit_list_historylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reasonlsit_list_historybutton"
+                android:layout_marginBottom="0.5dp" />
+
+            <Button
+                android:id="@+id/reasonlsit_list_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reasonlsit_list_historylist"
+                android:background="@drawable/address_tree"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/spinner_reason"
+                android:textColor="#8b8b8b"
+                android:textSize="14sp" />
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/reasonlsit_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reasonlsit_list_button"
+                android:layout_marginBottom="0.5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

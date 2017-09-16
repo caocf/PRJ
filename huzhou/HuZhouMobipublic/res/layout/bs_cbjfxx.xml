@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/title_backgrundmenu"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/bs_cbjfxx_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:contentDescription="@string/back"
+                android:src="@drawable/title_back" >
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/bs_cbjfxx_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textColor="#0067ac"
+                android:textSize="18sp" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/bs_cbjfxx_pb2"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"
+                android:layout_marginTop="10dp" />
+
+            <com.huzhouport.common.util.BorderTextForTopAndBottom
+                android:id="@+id/bs_cbjfxx_warntitle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/Light_white"
+                android:gravity="left|fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/bs_cbjfxx_warn"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.huzhouport.common.util.MultiListView
+                android:id="@+id/bs_cbjfxx_warnlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.huzhouport.common.util.MultiListView>
+
+            <com.huzhouport.common.util.BorderTextForTopAndBottom
+                android:id="@+id/bs_cbjfxx_nowarntitle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/Light_white"
+                android:gravity="left|fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/bs_cbjfxx_nowarn"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.huzhouport.common.util.MyExpandableListView
+                android:id="@+id/bs_cbjfxx_nowarnlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.huzhouport.common.util.MyExpandableListView>
+
+            <TextView
+                android:id="@+id/bs_cbjfxx_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/bs_cbjfxx_txt"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

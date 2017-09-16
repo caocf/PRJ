@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="illegal" extends="cement-interceptor" namespace="/">
+	
+		<action name="updateab" class="com.huzhouport.illegal.action.IllegalAction"
+			method="updateab">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="UpdateExcutorList" class="com.huzhouport.illegal.action.IllegalAction"
+			method="UpdateExcutorList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="ExcutorList" class="com.huzhouport.illegal.action.IllegalAction"
+			method="ExcutorList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="AbImageByAid" class="com.huzhouport.illegal.action.IllegalAction"
+			method="AbImageByAid">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="ReceiveAndPush" class="com.huzhouport.illegal.action.IllegalAction"
+			method="ReceiveAndPush">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="AbNormalListByStatusAndPot" class="com.huzhouport.illegal.action.IllegalAction"
+			method="AbNormalListByStatusAndPot">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="SubmitAbNormalProcess" class="com.huzhouport.illegal.action.IllegalAction"
+			method="SubmitAbNormalProcess">
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="fileUpload">
+               <!-- 配置允许上传的文件类型，多个用","分隔 -->
+               <!-- 3gp,avi,bmp,(jpg\jpeg),mp4,wav -->
+               <param name="allowedTypes">
+                   video/3gpp,video/x-msvideo,application/x-MS-bmp,image/jpeg,video/mp4,audio/x-wav
+               </param>
+               <!-- 配置允许上传的文件大小，单位字节 100M -->
+               <param name="maximumSize">100000000</param>
+           </interceptor-ref>
+           
+			
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--取证列表或搜索-->
+		<action name="showIllegalList" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showIllegalList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--取证列表或搜索-手机端-->
+		<action name="showIllegalList_mobi" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showIllegalList_mobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--取证列表或搜索-手机端-待审核-->
+		<action name="showIllegalListByCheck_mobi" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showIllegalListByCheck_mobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--显示违章信息-->
+		<action name="showInfoByIllegalId" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showInfoByIllegalId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--显示审核信息-->
+		<action name="showCheckInfoByIllegalId" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showCheckInfoByIllegalId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!--显示违章附件信息-->
+		<action name="showEvidenceByIllegalId" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showEvidenceByIllegalId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--显示违章补充信息-->
+		<action name="showSupplementByIllegalId" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showSupplementByIllegalId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--增加违章取证信息-->
+		<action name="addIllegalByIllegalId" class="com.huzhouport.illegal.action.IllegalAction"
+			method="addIllegalByIllegalId">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!--增加违章取证信息-->
+		<action name="AddIllegal" class="com.huzhouport.illegal.action.IllegalAction"
+			method="addIllegalByServer">
+			<result name="success" type="redirect" >
+			/page/business/illegal_add.jsp?sc=1
+			</result>
+			<result name="error">
+			/page/business/illegal_add.jsp?sc=2
+			</result>
+		</action>
+		<!--增加违章补充信息-->
+		<action name="addSupplementByIllegalId" class="com.huzhouport.illegal.action.IllegalAction"
+			method="addSupplementByIllegalId">
+			<result name="success" type="redirect" >
+			/page/business/illegal_update.jsp?sc=1&amp;illegalId=${illegalId}
+			</result>
+			<result name="error">
+			/page/business/illegal_update.jsp?sc=2&amp;illegalId=${illegalId}
+			</result>
+		</action>
+		<!--增加违章补充信息-手机端-->
+		<action name="addSupplementByIllegalId_mobile" class="com.huzhouport.illegal.action.IllegalAction"
+			method="addSupplementByMobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--删除单个附件-->
+		<action name="deleteEvidenceByEvidenceId" class="com.huzhouport.illegal.action.IllegalAction"
+			method="deleteEvidenceByEvidenceId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!--审核违章信息-->
+		<action name="checkIllegalByMobi" class="com.huzhouport.illegal.action.IllegalAction"
+			method="checkIllegalByMobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="checkIllegalByServer" class="com.huzhouport.illegal.action.IllegalAction"
+			method="checkIllegalByServer">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--位置信息-->
+		<action name="showLocationByIllegalId" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showLocationByIllegalId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 违章缘由列表 -->
+		<action name="showIllegalReasonList" class="com.huzhouport.illegal.action.IllegalAction"
+			method="showIllegalReasonList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 搜索违章缘由列表 -手机端-->
+		<action name="searchIllegalReasonList" class="com.huzhouport.illegal.action.IllegalAction"
+			method="searchIllegalReasonList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+</struts>    

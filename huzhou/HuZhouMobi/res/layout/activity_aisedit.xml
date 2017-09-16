@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal"  >
+
+        <ImageButton
+            android:id="@+id/basesourch_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" 
+            android:onClick="onViewClick">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/basesourch_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="绑定船名"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:orientation="horizontal"
+	    android:paddingTop="16dp"
+	     android:paddingLeft="16dp"
+	     android:paddingBottom="16dp">
+	   	  <TextView 
+	       android:layout_width="80dp"
+	       android:layout_height="wrap_content"
+	       android:text="AIS编号:"
+	       android:textSize="17sp"
+	       android:textColor="#666666"/> 
+	        <TextView 
+	       android:id="@+id/aisnum"
+	       android:layout_marginLeft="12dp"
+	       android:padding="12dp"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_weight="1"
+	       android:textSize="17dp"/> 
+	</LinearLayout>
+     <EditText 
+	       android:layout_width="match_parent"
+	    android:layout_height="1dp" 
+	    android:background="#d7d7d7"/>
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:orientation="horizontal"
+	    android:paddingTop="16dp"
+	     android:paddingLeft="16dp"
+	     android:paddingBottom="16dp">
+	   	  <TextView 
+	       android:layout_width="80dp"
+	       android:layout_height="wrap_content"
+	       android:text="船舶名称:"
+	      
+	       android:textSize="17sp"
+	       android:textColor="#666666"
+	       /> 
+	        <EditText 
+	       android:id="@+id/shipname"
+	       android:layout_marginLeft="12dp"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_weight="1"
+	       android:background="@null"
+	        android:textSize="17dp"
+	        android:textColor="#333333"
+	        android:enabled="false"
+	        android:padding="12dp"/>
+	         <Button 
+	             android:id="@+id/eb"
+	             android:layout_marginLeft="16dp"
+	             android:layout_marginRight="16dp"
+	             android:background="@drawable/btn_bg"
+	             android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:textColor="#fff"
+	       android:text="编辑"
+	       android:onClick="onViewClick"/>
+	</LinearLayout>	 
+	
+    <TextView 
+	       android:layout_width="match_parent"
+	    android:layout_height="1dp" 
+	    android:background="#d7d7d7"/>
+    
+     <Button 
+            android:id="@+id/sumbit"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_bg"
+            android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:textColor="#fff"
+	       android:text="提交修改"
+	       android:layout_marginTop="30dp"
+	       android:onClick="onViewClick"
+	       android:visibility="gone"/>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+    <class name="com.huzhouport.cruiselog.model.CruiseLog" table="mm_CruiseLog" >
+       <id name="cruiseLogID" column="CruiseLogID" >
+            <generator class="native"></generator>
+        </id>
+        <property name="cruiseLogUser" column="CruiseLogUser" ></property>
+        <property name="cruiseLogLoaction" column="CruiseLogLoaction" ></property>
+        <property name="shipName" column="ShipName" ></property>
+        <property name="startTime" column="StartTime" ></property>
+        <property name="endTime" column="EndTime" ></property>
+        <property name="state" column="State" ></property>
+    </class>
+    
+</hibernate-mapping>

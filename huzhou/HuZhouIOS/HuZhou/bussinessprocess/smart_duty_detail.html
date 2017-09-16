@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<style>
+			.left{
+				float: left;
+			}
+			.right{
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">异常报警详情</h1>
+		</header>
+		
+		<div class="mui-content">
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					<span id="shipName" class="left">无船名数据</span>
+					
+				</li>
+				<li class="mui-table-view-cell">
+					<table>
+						<tr>
+							<td>当前监测点：</td>
+							<td id="potName"></td>
+						</tr>
+						<tr>
+							<td>航行：</td>
+							<td id="route"></td>
+						</tr>
+						<tr>
+							<td>AIS：</td>
+							<td id="ais"></td>
+						</tr>
+						<tr>
+							<td>黑名单船舶：</td>
+							<td id="blackList">暂无数据</td>
+						</tr>
+					</table>
+				</li>
+				<li class="mui-table-view-cell">
+					<span class="left">是否违章</span>
+					<span class="right" id="isIllegal">暂无数据</span>
+				</li>
+				<li class="mui-table-view-cell">
+					<span class="left">是否有过期证书</span>
+					<span class="right" id="isCert">暂无数据</span>
+				</li>
+				<li class="mui-table-view-cell">
+					<span class="left">是否欠费</span>
+					<span class="right" id="isArrearage">暂无数据</span>
+				</li>
+				<li class="mui-table-view-cell" style="padding: 0px 20px;">
+					<button id="chuli" style="background-color: #0062CC;float: left;color: #ffffff;width: 150px;height: 50px;">立即处理</button>
+					<button id="hulue" style="background-color: #0062CC;float: right;color: #ffffff;width: 150px;height: 50px;">忽略</button>
+				</li>
+			</ul>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			var result = null;
+			mui.plusReady(function(){
+				mui.back = function(){
+					plus.webview.currentWebview().hide();
+				}
+				result = plus.webview.create("smart_duty_result.html","smart_duty_result");
+			});
+			var param = null;
+			window.addEventListener("toDetail",function(event) {
+				param = JSON.parse(event.detail.param);
+				if(param.shipname != null && param.shipname != "") {
+					document.getElementById("shipName").innerHTML = param.shipname;
+				}
+				if(param.route == 1) {
+					document.getElementById("route").innerHTML = "下行";
+				}else{
+					document.getElementById("route").innerHTML = "上行";
+				}
+				if(param.AIS == 1) {
+					document.getElementById("ais").style.color = "black";
+					document.getElementById("ais").innerHTML = "开启";
+				}else{
+					document.getElementById("ais").style.color = "red";
+					document.getElementById("ais").innerHTML = "关闭";
+				}
+				if(param.blackList == 1) {
+					document.getElementById("blackList").style.color="black";
+					document.getElementById("blackList").innerHTML = "是";
+				}else{
+					document.getElementById("blackList").style.color="red";
+					document.getElementById("blackList").innerHTML = "否";
+				}
+				if(param.arrearage == 1) {
+					document.getElementById("isArrearage").innerHTML = "是";
+				}
+				if(param.illegal == 1) {
+					document.getElementById("isIllegal").innerHTML = "是";
+				}
+				if(param.cert != null) {
+					document.getElementById("isCert").innerHTML = "是";
+				}
+			});
+			document.getElementById("chuli").addEventListener("tap",function(event){
+				mui.fire(result,"toResult",{type:1,id:param.aid});
+				result.show();
+						
+			});
+			document.getElementById("hulue").addEventListener("tap",function(event){
+				mui.fire(result,"toResult",{type:0,id:param.aid});
+				result.show();
+						
+			});
+		</script>
+	</body>
+
+</html>

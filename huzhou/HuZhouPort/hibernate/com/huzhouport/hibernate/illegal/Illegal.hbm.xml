@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象 
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.illegal.model.Illegal"
+		table="mm_Illegal">
+		<id name="illegalId" column="IllegalID">
+			<generator class="native" />
+		</id>
+		<!-- 定义其他属性 -->
+		<property name="enforecers1" column="Enforecers1"></property>
+		<property name="enforecers2" column="Enforecers2"></property>
+		<property name="illegalObject" column="IllegalObject"></property>
+		<property name="illegalReason" column="IllegalReason"></property>
+		<property name="illegalContent" column="IllegalContent"></property>
+		<property name="illegalTime" column="IllegalTime"></property>
+		<property name="illegalLocation" column="IllegalLocation"></property>
+		<property name="illegalCategories" column="IllegalCategories"></property>
+		<property name="reviewWether" column="ReviewWether"></property>
+		<property name="reviewUser" column="ReviewUser"></property>
+		<property name="reviewResult" column="ReviewResult"></property>
+		<property name="reviewComment" column="ReviewComment"></property>
+		<property name="reviewTime" column="ReviewTime"></property>
+		<property name="isPost" column="IsPost"></property>		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#f9f9f9">
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" 
+        android:onClick="onBack">
+         <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back"
+            android:onClick="onBack" >
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="用车管理"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>       
+    </LinearLayout>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:onClick="onMyAp">
+    <TextView 
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的申请"
+            android:gravity="center|left"
+            android:drawableLeft="@drawable/ic_myapplication"
+            android:drawablePadding="10dp"
+            android:textSize="16sp" 
+            android:padding="16dp"
+            android:focusable="true"
+            android:onClick="onMyAp"/>
+    <TextView 
+        android:id="@+id/tx1"
+        android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+    <TextView 
+        android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7"/>
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:onClick="onMyCheck" >
+    <TextView 
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待我审批"
+            android:gravity="center|left"
+            android:drawableLeft="@drawable/ic_approval"
+            android:drawablePadding="10dp"
+            android:textSize="16sp" 
+            android:padding="16dp"/>
+    <TextView 
+        android:id="@+id/tx2"
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+     </LinearLayout>
+    <TextView 
+        android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7"/>
+    
+     <Button
+             android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+		android:layout_marginBottom="16dp"
+        android:gravity="center"    
+        android:text="新建申请"   
+        android:textColor="@color/white" 
+        android:includeFontPadding="false"
+        android:background="@drawable/btn_bg"
+        android:onClick="onNewAp"/>
+
+</LinearLayout>
+

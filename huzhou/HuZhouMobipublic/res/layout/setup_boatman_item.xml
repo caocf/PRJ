@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/boatkind"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:gravity="left|fill_vertical"
+        android:textColor="@color/Light_black"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/boatkindId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/setup_boatman_deletebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:background="@color/transparent"
+        android:src="@drawable/upload_cancel" />
+
+    <EditText
+        android:id="@+id/setup_boatman_et"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/setup_boatman_deletebutton"
+        android:layout_toRightOf="@id/boatkind"
+        android:background="@color/transparent"
+        android:gravity="left|center_vertical"
+        android:hint="@string/setup_boatman_hint"
+        android:maxLength="20"
+        android:textColor="@color/Light_black"
+        android:textColorHint="@color/Light_gray"
+        android:textSize="17sp" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/boatkind1_card"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/boatkind"
+        android:drawableRight="@drawable/leave_imgright"
+        android:gravity="center_vertical"
+        android:textColor="@color/Light_black"
+        android:textSize="17sp" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/boatkind1_cardID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/setup_boatman_num"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/boatkind"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/boatkind1_card"
+        android:background="@color/transparent"
+        android:gravity="left|center_vertical"
+        android:hint="@string/setup_boatman_cardnum_hint"
+        android:maxLength="20"
+        android:textColor="@color/Light_black"
+        android:textColorHint="@color/Light_gray"
+        android:textSize="17sp" >
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/setup_boatman_num"
+        android:background="@color/grey" />
+
+</RelativeLayout>

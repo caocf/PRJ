@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+     <!-- 配置DAO组件 -->
+	<bean id="permitDao" class="com.huzhouport.permit.dao.impl.PermitDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+
+	<!-- 配置业务逻辑组件 -->
+ 	<bean id="permitService" class="com.huzhouport.permit.service.impl.PermitServiceImpl">
+		<!-- 为业务逻辑组件注入DAO组件 -->
+		<property name="permitDao" ref="permitDao"></property>
+	</bean>
+
+
+	<!-- 创建userInfoAction实例 -->
+	<bean id="permitAction" class="com.huzhouport.permit.action.PermitAction"
+		scope="prototype">
+		<property name="permitService" ref="permitService"></property>
+	</bean>
+
+</beans>

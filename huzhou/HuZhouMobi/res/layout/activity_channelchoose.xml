@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" 
+        android:onClick="onBack">
+         <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back"
+            android:onClick="onBack" >
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="选择航道"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>       
+    </LinearLayout>
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:orientation="horizontal"
+            >
+        <RadioButton 
+            android:id="@+id/r1"
+             android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="骨干航道"
+            android:checked="true"
+            
+            android:button="@null"
+            android:drawableBottom="@drawable/radiobt_abselector_process"/>
+         <RadioButton 
+             android:id="@+id/r2"
+             android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="支线航道"
+            android:checked="false"
+            android:button="@null"
+            android:drawableBottom="@drawable/radiobt_abselector_process"/>
+        
+    </RadioGroup>
+	<TextView 
+	    android:layout_width="match_parent"
+            android:layout_height="1dp" 
+            android:background="#d7d7d7"/>
+	
+	<ListView 
+	    android:id="@+id/listview"
+	    android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+	</ListView>
+
+</LinearLayout>

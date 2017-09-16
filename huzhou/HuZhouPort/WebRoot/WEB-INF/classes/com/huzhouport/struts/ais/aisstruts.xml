@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="ais" extends="cement-interceptor" namespace="/">
+
+
+		<action name="queryShipnameByAisNo" class="com.huzhouport.aisno.action.AISNoAction"
+			method="queryShipnameByAisNo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="saveAis" class="com.huzhouport.aisno.action.AISNoAction"
+			method="saveAis">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="updateAis" class="com.huzhouport.aisno.action.AISNoAction"
+			method="updateAis">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+
+		<action name="queryShipnameByShipname" class="com.huzhouport.aisno.action.AISNoAction"
+			method="queryShipnameByShipname">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="saveAisByShipname" class="com.huzhouport.aisno.action.AISNoAction"
+			method="saveAisByShipname">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="queryEditAisList" class="com.huzhouport.aisno.action.AISNoAction"
+			method="queryEditAisList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="showaisinfo" class="com.huzhouport.aisno.action.AISNoAction"
+			method="showAisInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+				<action name="appaisinfo" class="com.huzhouport.aisno.action.AISNoAction"
+			method="appAisInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+			<action name="UpDateGZ" class="com.huzhouport.aisno.action.AISNoAction"
+			method="UpDateGZ">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+			<action name="UpDateGZ2" class="com.huzhouport.aisno.action.AISNoAction"
+			method="UpDateGZ2">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="updateShipnameByAisNo" class="com.huzhouport.aisno.action.AISNoAction"
+			method="updateShipnameByAisNo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+
+</struts>    

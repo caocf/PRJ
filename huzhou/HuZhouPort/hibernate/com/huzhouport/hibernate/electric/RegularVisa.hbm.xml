@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.electric.model.RegularVisa" table="mm_regularvisa">
+		<id name="regularvisaID" column="RegularvisaID">
+			<generator class="native"></generator>
+		</id>
+		<property name="fixedID" column="FixedID"></property>
+		<property name="mark" column="Mark"></property>
+		<property name="ingTime" column="IngTime"></property>
+		<property name="reportTime" column="ReportTime"></property>
+		<property name="cargoTypes" column="CarryType"></property>
+		<property name="carrying" column="Carrying"></property>
+		<property name="uniti" column="Uniti"></property>
+		<property name="regularvisaUserName" column="RegularvisaUserName"></property>
+	</class>
+</hibernate-mapping>

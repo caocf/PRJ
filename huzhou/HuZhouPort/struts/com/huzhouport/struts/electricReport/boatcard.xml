@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+	<package name="boatcard" extends="cement-interceptor"
+		namespace="/">
+		<!-- 证书列表-分页 -->
+		<action name="ShowBoatcardListByPage"
+			class="com.huzhouport.electricreport.action.BoatcardAction"
+			method="ShowBoatcardListByPage">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!-- 证书删除 -->
+		<action name="DeleteBoatCard"
+			class="com.huzhouport.electricreport.action.BoatcardAction"
+			method="DeleteBoatCard">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!-- 证书修改 -->
+		<action name="UpdateBoatCard"
+			class="com.huzhouport.electricreport.action.BoatcardAction"
+			method="UpdateBoatCard">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!-- 证书新增 -->
+		<action name="AddBoatCard"
+			class="com.huzhouport.electricreport.action.BoatcardAction"
+			method="AddBoatCard">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!-- 证书列表 -->
+		<action name="ShowBoatcardList"
+			class="com.huzhouport.electricreport.action.BoatcardAction"
+			method="ShowBoatcardList">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+	</package>
+</struts>

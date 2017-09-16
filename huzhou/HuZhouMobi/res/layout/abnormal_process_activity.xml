@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+         <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back"
+            android:onClick="GoBack" >
+        </ImageButton>
+        <TextView
+            android:id="@+id/process_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>       
+    </LinearLayout>
+    
+           <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+          android:focusable="true"  
+        android:focusableInTouchMode="true" >
+    
+   <FrameLayout 
+       android:id="@+id/frame_option"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       
+   </FrameLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="备注信息"
+        android:textSize="13dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="7dp"/>
+    
+    <EditText 
+        android:id="@+id/edit_remark"
+       android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="请在此输入备注"
+       
+        android:background="@drawable/abnormal_edittext"/>
+    
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="图片"
+        android:textSize="13dp"
+        android:layout_marginLeft="16dp"/>
+     
+      <com.huzhouport.abnormal.ImageGridView
+        android:id="@+id/ab_gridView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" />
+    
+   
+           
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/imgbt_abselector_pass"
+            android:contentDescription="@string/back"
+              android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1" 
+            android:layout_gravity="center"
+            android:text="提交"
+            android:textColor="#ffffff"
+            android:onClick="Submit"/>
+            
+      
+    </LinearLayout>
+</ScrollView>    
+</LinearLayout>
+

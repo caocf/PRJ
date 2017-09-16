@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.huzhouportpublic"
+    android:versionCode="55"
+    android:versionName="3.4.08191523" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 上网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- GPS定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- 接收手机完全开启状态权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
+    <!-- 读取电话状态权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 摄像和播放 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 手机震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 地图其余 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <!-- 微客服开始 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <!-- 微客服添加结束 -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.huzhouport.main.MainPage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微客服添加开始 -->
+
+
+        <!-- 请到 http://appkefu.com/AppKeFu/admin/ 申请appkey -->
+        <meta-data
+            android:name="com.appkefu.lib.appkey"
+            android:value="3ab667152967c1093fabcf135d764eda" />
+
+        <!-- 聊天窗口, 可通过修改layout文件appkefu_chat_activity.xml自定义窗口UI -->
+
+        <activity
+            android:name="com.appkefu.lib.ui.activity.KFChatActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Anim_style2" />
+        <activity
+            android:name="com.appkefu.lib.ui.activity.KFSettingsActivity"
+            android:theme="@style/Anim_style2" />
+
+        <!-- 微客服添加结束 -->
+        <activity
+            android:name="com.huzhouport.main.Warn"
+            android:icon="@drawable/sos"
+            android:label="@string/app_name1"
+            android:launchMode="singleInstance"
+            android:process="com.huzhouport.main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.huzhouport.main.Login"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.integratedquery.CBJFXX"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.integratedquery.CBWZXX"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.PortDynmicNewsMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.PortDynmicNewsSee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.PortdynmicnewsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.IndustryInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.IndusrtyInfoSee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portnotice.PortNoticeMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portnotice.PortNoticeSee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.navigation.PortNavigationMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.navigation.PortNavigationSee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.navigation.PortNavigationSearch"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.knowledge.KnowledgeView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.knowledge.OtherList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.knowledge.KnowledgeShow"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.knowledge.Knowledgelist"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.knowledge.KnowledgetextShow"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.knowledge.KnowledgeNewView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.dangerousgoodsportln.DangerousgoodsportlnList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsportln.DangerousgoodsportlnapprovalView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsportln.DangerousgoodsportlnapprovalSubmit"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsportln.DangerousgoodsportlnAddList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsportln.DangerousgoodsportlnAddView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsportln.DangerousgoodsportlnAdd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsjob.DangerousgoodsjobList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsjob.DangerousgoodsjobapprovalView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsjob.DangerousgoodsjobapprovalSubmit"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsjob.DangerousgoodsjobAddList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsjob.DangerousgoodsjobAddView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.dangerousgoodsjob.DangerousgoodsjobAdd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.setup.SetUpMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.setup.ChangeBinding"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.setup.SetUpPerson"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.setup.SetUpPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.upload.UploadActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        、
+        <activity
+            android:name="com.huzhouport.setup.SetMy"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.setup.Complain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.setup.SetBoatman"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.setup.SelectCard"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.setup.SelectBoatman"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.setup.SelectBoatmanKind"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkSearch"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkView1"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkAdd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkAddGoods"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkAddGoodsSecend"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkAddUniti"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.wharfwork.WharfWorkAddPortMart"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.DynmicNewsMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.DynmicNewsSee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.ComprehensiveMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.portdynmicnews.ComprehensiveSee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportAddWharf"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportNewList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportAddByCopy"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportNewShow"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportChange"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportNewSearch"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportNewAdd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportNewAddPort"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportNewUpdate"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.electricreport.ElectricReportNewAddShipName"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.complain.activity.TagListActivity"
+            android:label="@string/title_activity_tag_list"
+            android:theme="@style/Anim_style2" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.complain.activity.ChangeTagActivity"
+            android:label="@string/title_activity_change_tag"
+            android:theme="@style/Anim_style2" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.complain.activity.ComplainMainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Anim_style2" >
+        </activity>
+        <activity
+            android:name="com.appkefu.lib.ui.activity.KFFAQActivity"
+            android:theme="@style/Anim_style2" />
+        <activity
+            android:name="com.appkefu.lib.ui.activity.KFFAQDetailActivity"
+            android:theme="@style/Anim_style2" />
+        
+        <activity
+            android:name="com.huzhouport.main.Register"
+            android:theme="@style/Anim_style2" />
+        <activity
+            android:name="com.huzhouport.common.GetSDTreeActivity"
+            android:theme="@style/Anim_style2" />
+        
+        <activity
+            android:name="com.huzhouport.main.RegResult"
+            android:theme="@style/Anim_style2" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="4d8SpCi5Lmgwhyuj0q1nTApC" />
+
+        <!-- 微客服添加开始 -->
+
+
+        <!-- 发送语音辅助service -->
+        <service
+            android:name="com.appkefu.lib.soundrecorder.KFRecorderService"
+            android:exported="true" />
+
+        <!-- 主service -->
+        <service
+            android:name="com.appkefu.lib.service.KFMainService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.CONNECT" />
+                <action android:name="com.appkefu.lib.action.DISCONNECT" />
+                <action android:name="com.appkefu.lib.action.TOGGLE" />
+                <action android:name="com.appkefu.lib.action.SEND" />
+                <action android:name="com.appkefu.lib.action.NETWORK_STATUS_CHANGED" />
+                <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED" />
+            </intent-filter>
+        </service>
+
+        <!-- 获取OpenUDID, 专用于客服 -->
+        <service android:name="org.OpenUDID.OpenUDID_service" >
+            <intent-filter>
+                <action android:name="org.openudid.GETUDID" />
+            </intent-filter>
+        </service>
+
+        <!-- 为此应用私有的独立进程 -->
+        <service
+            android:name="com.huzhouport.pushmsg.ServerPushService"
+            android:process=":message" >
+        </service>
+
+        <!-- 监听网络变化 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.huzhouport.upload.NetStateReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.appkefu.lib.receivers.KFAlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.LOGIN_ALARM" />
+            </intent-filter>
+        </receiver>
+        <!-- 微客服添加结束 -->
+    </application>
+
+</manifest>

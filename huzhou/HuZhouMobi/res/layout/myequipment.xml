@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/leaveandover_newlist_add_rtop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+   <RelativeLayout
+        android:id="@+id/equipment_add_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/equipment_add_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" 
+            android:onClick="onBack"/>
+
+        <TextView
+            android:id="@+id/equipment_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/equipment_add_back"
+            android:gravity="fill_vertical"
+            android:text="我的设备"
+            android:textColor="#0067ac"
+            android:textSize="18sp"
+            android:onClick="onBack"/>
+        
+           <ImageButton
+            android:id="@+id/equipment_add_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:contentDescription="@string/search"
+            android:src="@drawable/le_submit" 
+            android:visibility="gone"/>
+        
+    </RelativeLayout>
+    
+    <WebView
+        android:id="@+id/comprehensivesee_see_count"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_below="@+id/equipment_add_titleR" />
+    <ScrollView
+        android:id="@+id/equipment_view_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/equipment_add_titleR"
+         android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TableLayout
+                android:id="@+id/equipment_viewtiteltable1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"
+                android:shrinkColumns="1"
+                android:stretchColumns="1" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp" >
+
+                    <TextView
+                        android:id="@+id/equipment_add_equipmentUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/leaveandovertime_view_leaveOrOtUser"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/equipment_add_equipmentUserNeirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical|right"
+                        android:textSize="18sp"  
+                        android:paddingRight="10dp"                          
+                        >
+                    </TextView>
+                </TableRow>
+                
+                
+              <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp" >
+
+                    <TextView
+                        android:id="@+id/equipment_add_equipmentKind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/equipment_view_equipmentKind"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/equipment_add_equipmentKindNeirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical|right"
+                        android:drawableRight="@drawable/leave_imgright"
+                        android:paddingRight="10dp"  
+                        android:drawablePadding="5dp"
+                        android:textSize="18sp" >
+                    </TextView>                
+                     <TextView
+                        android:id="@+id/equipment_add_equipmentKindID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </TableRow>
+                
+                
+                
+             
+
+                
+                
+                 <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp" >
+
+                    <TextView
+                        android:id="@+id/equipment_add_approvalID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="@string/equipment_view_approvalID"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/equipment_add_approvalIDNeirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"  
+                        android:textSize="18sp"
+                         android:drawablePadding="5dp"
+                         android:drawableRight="@drawable/leave_imgright" >  
+                    </TextView>
+                        <TextView
+                        android:id="@+id/equipment_add_approvalIDID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:visibility="gone" 
+                        />
+                    
+                </TableRow>
+                
+                 
+              
+                
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp" >
+
+                    <TextView
+                        android:id="@+id/equipment_add_equipmentReason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/equipment_view_equipmentReason"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/equipment_add_equipmentReasonNeirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#f5f5f5"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"  
+                        android:textSize="18sp"
+                        android:text="@string/equipment_add_equipmentReason"
+                        android:textColor="#A3A3A3"
+                         >
+                    </EditText>
+                </TableRow>
+                
+        
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    
+</RelativeLayout>

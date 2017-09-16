@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link href="../css/mui.indexedlist.css" rel="stylesheet" />
+		<style>
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.mui-bar {
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+			
+			#done.mui-disabled {
+				color: gray;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">日程安排</h1>
+			<a class="mui-btn-link mui-pull-right" id="done"><img id="add_img" src="../images/leave_submit_normal.png" style="width: 44px;" /></a>
+		</header>
+		<div class="mui-content">
+			<div id='list' class="mui-indexed-list">
+				<!--<div class="mui-indexed-list-search mui-input-row mui-search">
+					<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索用户">
+				</div>-->
+				<div class="mui-indexed-list-bar">
+				</div>
+				<div class="mui-indexed-list-alert"></div>
+				<div class="mui-indexed-list-inner">
+					<div class="mui-indexed-list-empty-alert">没有数据</div>
+					<ul class="mui-table-view" id="ulList">
+						<ul>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.indexedlist.js"></script>
+		<!--<script src="../js/mui.grouplist.testdata.js"></script>-->
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			var callback = function(data) {
+//				console.log(JSON.stringify(data));
+				var str = "<li data-value=\"{value}\" data-tags=\"{tags}\" class=\"mui-table-view-cell mui-indexed-list-item mui-checkbox mui-left\">" +
+					"<input type=\"checkbox\" value=\"{code}\"/>{key}</li>";
+				var ul = document.getElementById("ulList");
+				var allStr = "";
+				for(var i = 0; i < data.list.length; i++) {
+					var userInfo = data.list[i];
+					var temp = str;
+					temp = temp.replace(/{value}/, userInfo.userId).replace(/{tag}/, userInfo.userId).replace(/{code}/, userInfo.userId).replace(/{key}/, userInfo.name)
+					allStr += temp;
+				}
+				ul.innerHTML = allStr;
+			};
+
+			var done = document.getElementById('done');
+			//done event
+			done.addEventListener('tap', function() {
+				var checkboxArray = [].slice.call(list.querySelectorAll('input[type="checkbox"]'));
+				var checkedValues = [];
+				var checkedCodes = [];
+				checkboxArray.forEach(function(box) {
+					if(box.checked) {
+						checkedValues.push(box.parentNode.innerText);
+						checkedCodes.push(box['value']);
+					}
+				});
+				if(checkedValues.length > 0) {
+					//					mui.alert('你选择了: ' + checkedValues);
+					var wv = plus.webview.getWebviewById("calender_add");
+					mui.fire(wv, "addUser", {
+						codes: checkedCodes,
+						values: checkedValues
+					});
+					wv.show();
+					plus.webview.currentWebview().close();
+				} else {
+					mui.alert('你没选择任何人员');
+				}
+			}, false);
+			mui.ready(function() {
+				var deptId = localStorage.deptId || 264;
+				app.showUserList(deptId, callback);
+				var header = document.querySelector('header.mui-bar');
+				var list = document.getElementById('list');
+//				console.log("done:" + done);
+				//calc hieght
+				list.style.height = (document.body.offsetHeight - header.offsetHeight) + 'px';
+				//create
+				window.indexedList = new mui.IndexedList(list);
+				mui('.mui-indexed-list-inner').on('change', 'input', function() {
+					var count = list.querySelectorAll('input[type="checkbox"]:checked').length;
+					//					var value = count ? "完成(" + count + ")" : "完成";
+					//					done.innerHTML = value;
+					if(count) {
+						if(done.classList.contains("mui-disabled")) {
+							done.classList.remove("mui-disabled");
+						}
+					} else {
+						if(!done.classList.contains("mui-disabled")) {
+							done.classList.add("mui-disabled");
+						}
+					}
+				});
+				mui.back = function() {
+					plus.webview.currentWebview().close();
+				}
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.inspection.model.Inspection" table="mm_Inspection">
+		<id name="inspectionId" column="InspectionID">
+			<generator class="native"></generator>
+		</id>
+		<property name="inspectionUser" column="InspectionUser"></property>
+		<property name="inspectionKind" column="InspectionKind"></property>
+		<property name="inspectionObjectKind" column="InspectionObjectKind"></property>
+		<property name="inspectionObject" column="InspectionObject"></property>
+		<property name="inspectionContent" column="InspectionContent"></property>
+		<property name="inspectionTime" column="InspectionTime"></property>
+		<property name="inspectionLocation" column="InspectionLocation"></property>
+		<property name="insCategoriese" column="InspectionCategoriese"></property>
+		<property name="reviewWether" column="ReviewWether"></property>
+		<property name="reviewResult" column="ReviewResult"></property>
+		<property name="reviewUser" column="ReviewUser"></property>
+		<property name="reviewComment" column="ReviewComment"></property>
+		<property name="reviewTime" column="ReviewTime"></property>
+
+	</class>
+</hibernate-mapping>

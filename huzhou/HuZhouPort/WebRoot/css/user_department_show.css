@@ -1,0 +1,233 @@
+@CHARSET "UTF-8";
+
+#content {
+	margin: 0;
+	padding: 0;
+	width: 830px;
+	height: 630px;
+}
+
+#u2 {
+	width: 830px;
+	margin: 0;
+	padding: 0;
+	height: 630px;
+}
+
+#u2_left {
+	float: left;
+	width: 192px;
+	margin: 0;
+	padding: 0;
+	height: 630px;
+	border: none;
+	border-right: solid 1px #c9d9e9;
+}
+
+#u2_left p {
+	width: 192px;
+	margin: 0;
+	padding: 0;
+	height: 35px;
+	line-height: 35px;
+	background: #f5f7fa;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom: solid 1px #c9d9e9;
+}
+
+#organization {
+	font-size: 14px;
+}
+
+#deparmentTreeDiv {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	height: 585px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#department_tree,#department_tree ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#department_tree li {
+	margin: 0;
+	padding: 8px 4px 0 12px;
+}
+
+#department_tree li img {
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+
+#u2_right {
+	float: left;
+	width: 636px;
+	margin: 0;
+	padding: 0;
+	height: 610px;
+}
+
+#u2_right_content {
+	width: 636px;
+	margin: 0;
+	padding: 0;
+	height: 610px;
+	overflow: hidden;
+}
+
+.u2_top {
+	width: 626px;
+	margin: 0 0 0 10px;
+	padding: 0;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+.u2_top img {
+	margin: 4px 10px 4px 0;
+	padding: 0;
+	
+	border: none;
+}
+
+.u3_top {
+	width: 636px;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
+	border: none;
+	border-bottom: 1px solid #d6d6d6;
+}
+.u3_top img {
+	margin: 4px 0 4px 10px;
+	padding: 0;
+	border: none;
+}
+
+#u2_top_left {
+	float: left;
+	width: 218px;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+}
+
+#u2_top_left img {
+	margin: 4px 10px 4px 0;
+	padding: 0;
+	border: none;
+	
+}
+
+#u2_top_right {
+	float: right;
+	width: 395px;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+#u2_top_right img {
+	margin: 4px 10px 4px 0;
+	padding: 0;
+	border: none;
+	vertical-align: middle;
+}
+
+.show_first table {
+	margin: 16px 0 0 16px;
+	padding: 0;
+}
+
+.show_second table {
+	margin: 16px 0 0 16px;
+	padding: 0;
+}
+
+#add_departmentDiv {
+	float: left;
+	width: 616px;
+	margin: 0;
+	padding: 0;
+	height: 590px;
+}
+
+.open_table {
+	margin: 54px 10px 10px 10px;
+	padding: 0;
+	table-layout: fixed;
+	width: 616px;
+	text-align: left;
+}
+
+.open_table td {
+	margin: 0;
+	padding: 10px 0;
+}
+
+
+
+.listTable {
+	margin: 0 10px;
+	padding: 0;
+	table-layout: fixed;
+	width: 616px;
+	text-align: center;
+}
+
+.listTable th {
+	padding: 0;
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	background-color: #e6e6e6;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis; /* 支持 Opera */
+}
+
+.listTable td {
+	padding: 0 5px 0 0;
+	font-size: 12px;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis; /* 支持 Opera */
+}
+
+.UserStatusDIV {
+	margin: 19px 40px;
+	padding: 0;
+	text-align: center;
+}
+
+.UserStatusDIV INPUT {
+	margin: 0 0 0 10px;
+	padding: 0;
+	text-align: center;
+}
+
+.changeUserStatus_font {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}

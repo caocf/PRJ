@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/address_list_item"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="10dp"
+    android:stretchColumns="0" >
+
+    <TextView
+        android:id="@+id/knowledge_ifnew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:textColor="@color/red"
+        android:singleLine="true"
+        android:textSize="16sp" 
+        />
+
+    <ImageButton
+        android:id="@+id/knowledge_itembutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/knowledge_ifnew"
+        android:background="@drawable/knowledge_text" />
+
+    <TextView
+        android:id="@+id/knowledge_knowledgeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/knowledge_itembutton"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/knowledge_knowledgeIndex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/knowledge_knowledgeName"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/knowledge_itembutton"
+        android:layout_toLeftOf="@+id/knowledge_knowledgetime"
+        android:singleLine="true"
+        android:textColor="#8b8b8b"
+        android:textSize="14sp" 
+        >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/knowledge_knowledgetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/knowledge_knowledgeName"
+        android:textColor="#8b8b8b"
+        android:textSize="12sp" 
+        android:layout_marginTop="2dp"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/knowledge_knowledgeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/knowledge_isLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

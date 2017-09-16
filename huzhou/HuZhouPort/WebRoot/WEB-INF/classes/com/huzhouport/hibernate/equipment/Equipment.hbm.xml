@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+    <class name="com.huzhouport.equipment.model.Equipment" table="mm_Equipment" >
+       <id name="equipmentID" column="EquipmentID" >
+            <generator class="native"></generator>
+        </id>
+        <property name="equipmentKind" column="EquipmentKind" ></property>
+        <property name="equipmentUser" column="EquipmentUser" ></property>
+        <property name="equipmentReason" column="EquipmentReason" ></property>
+        <property name="equipmentDate" column="EquipmentDate" ></property>
+        <property name="approvalID" column="ApprovalID" ></property>
+        <property name="approvalResult" column="ApprovalResult" ></property>
+        <property name="approvalOpinion" column="ApprovalOpinion" ></property>
+        <property name="approvalTime" column="ApprovalTime" ></property>
+    </class>
+    
+</hibernate-mapping>

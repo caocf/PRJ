@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+	<package name="boatmankind" extends="cement-interceptor"
+		namespace="/">
+		<!-- 船员职位列表 -->
+		<action name="ShowBoatmanKindList"
+			class="com.huzhouport.electricreport.action.BoatmanKindAction"
+			method="ShowBoatmanKindList">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!-- 船员职位列表-分页 -->
+		<action name="ShowBoatmanKindListByPage"
+			class="com.huzhouport.electricreport.action.BoatmanKindAction"
+			method="ShowBoatmanKindListByPage">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!-- 船员职位删除 -->
+		<action name="DeleteBoatmanKind"
+			class="com.huzhouport.electricreport.action.BoatmanKindAction"
+			method="DeleteBoatmanKind">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!-- 船员职位修改 -->
+		<action name="UpdateBoatmanKind"
+			class="com.huzhouport.electricreport.action.BoatmanKindAction"
+			method="UpdateBoatmanKind">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!-- 船员职位新增 -->
+		<action name="AddBoatmanKind"
+			class="com.huzhouport.electricreport.action.BoatmanKindAction"
+			method="AddBoatmanKind">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+	</package>
+</struts>

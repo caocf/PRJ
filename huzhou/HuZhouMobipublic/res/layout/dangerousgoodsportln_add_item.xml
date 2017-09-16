@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="10dp" >
+    
+        <TextView
+            android:id="@+id/dangerousgoodsportln_shipName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp" 
+            />
+       <TextView
+            android:id="@+id/dangerousgoodsportln_declareTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/dangerousgoodsportln_shipName"
+            android:textSize="18sp"
+            
+             />  
+            <TextView
+            android:id="@+id/dangerousgoodsportln_Port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:layout_below="@id/dangerousgoodsportln_shipName"
+             />  
+        <TextView
+            android:id="@+id/dangerousgoodsportln_cargoTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:layout_below="@id/dangerousgoodsportln_shipName"
+            android:layout_alignRight="@id/dangerousgoodsportln_Port"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/dangerousgoodsportln_Port"
+            android:singleLine="true"
+            android:layout_marginLeft="16dp"
+             />  
+          <TextView
+        android:id="@+id/dangerousgoodsportln_declareID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />           
+
+</RelativeLayout>

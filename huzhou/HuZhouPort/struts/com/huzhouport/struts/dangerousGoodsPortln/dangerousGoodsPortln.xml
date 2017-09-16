@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+<package name="dangerousGoodsPortln" extends="cement-interceptor" namespace="/">
+   	 <!-- 显示列表ajax js-->
+   		<action name="showDangerousGoodsPortln" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="showDangerousGoodsPortln">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+	 <!-- 搜索 ajax js-->
+   		<action name="selectDangerousGoodsPortln" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="selectDangerousGoodsPortln">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+ <!-- 查看 审批-->
+   		<action name="showDangerousGoodsPortlnApproval" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="showDangerousGoodsPortlnApproval">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+
+<!-- 审批-->
+   		<action name="DangerousGoodsPortlnApproval" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="DangerousGoodsPortlnApproval">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<!-- 新建-->
+   		<action name="newDangerousGoodsPortln" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="newDangerousGoodsPortln">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<!-- 显示列表 手机ajax js-->
+   		<action name="showDangerousGoodsPortln1" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="showDangerousGoodsPortln1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<!-- 查找列表 手机-->
+   		<action name="selectDangerousGoodsPortln1" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="selectDangerousGoodsPortln1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   			<!-- 显示列表 手机ajax js-->
+   		<action name="showDangerousGoodsPortln2" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="showDangerousGoodsPortln2">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<!-- 查找列表 手机-->
+   		<action name="selectDangerousGoodsPortln2" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="selectDangerousGoodsPortln2">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<!-- 新的通讯录 多层部门-->
+   		<action name="newaddresslist" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="newaddresslist">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<!-- 新的通讯录 多层部门-->
+   		<action name="newaddresslistmeeting" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="newaddresslistmeeting">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 新的通讯录 多层部门-->
+   		<action name="newaddresslistInfo" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="newaddresslistInfo">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 新的通讯录 搜索-->
+   		<action name="selectnewaddresslist" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="selectnewaddresslist">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   			<!-- 货物-->
+   		<action name="GoodsKindAll" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="GoodsKindAll">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   				<!-- 货物-->
+   		<action name="GoodsAll" class="com.huzhouport.dangerousgoodsportln.action.DangerousGoodsPortlnAction"  method="GoodsAll">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   </package></struts>

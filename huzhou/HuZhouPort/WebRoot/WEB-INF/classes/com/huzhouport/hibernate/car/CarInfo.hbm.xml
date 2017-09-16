@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.car.model.CarInfo" table="car_info">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" column="name" not-null="false"></property>
+		<property name="driver" column="driver" not-null="false"></property>
+		<property name="tel" column="tel" not-null="false"></property>
+		<property name="capcity" column="capcity" not-null="false"></property>
+		
+		
+	</class>
+</hibernate-mapping>

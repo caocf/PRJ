@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="schedule" extends="cement-interceptor"
+		namespace="/">
+		<!--根据用户搜相关事件-->
+		<action name="EventListByUserId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="EventListByUserId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--根据用户和时间搜相关事件-->
+		<action name="EventListByUserIdAndTime" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="EventListByUserIdAndTime">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--根据用户和时间搜相关事件-->
+		<action name="EventListByUserIdAndNowDate" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="EventListByUserIdAndNowDate">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+			<action name="EventListByUserIdAndNowDateR" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="EventListByUserIdAndNowDateR">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		
+		<!--查看根据事件ID-->
+		<action name="EventListByEventId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="EventListByEventId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--日程类型-->
+		<action name="EventKindList" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="EventKindList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--根据事件编号搜索附件-->
+		<action name="FindAttachmentByEventId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="FindAttachmentByEventId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--根据事件编号搜索相关人员-->
+		<action name="FindUserListByEventId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="FindUserListByEventId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--根据事件编号搜索发起人-->
+		<action name="FindFirstUser" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="FindFirstUser">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!--根据事件编号搜索相关人员和管理表-->
+		<action name="FindUserAndScheduleEventUserByEventId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="FindUserAndScheduleEventUserByEventId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--修改根据事件ID-->
+		<action name="updateByEventId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="updateByEventId">
+			<result name="success" type="redirect" >
+			/page/officoa/schedule_update.jsp?sc=1&amp;eventId=${ieventId}
+			</result>
+			<result name="error">
+			/page/officoa/schedule_update.jsp?sc=2&amp;eventId=${ieventId}
+			</result>
+		</action>
+		<!--修改根据事件ID手机端-->
+		<action name="updateByEventId_mobile" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="updateByEventId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--删除根据事件ID-->
+		<action name="deleteByEventId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="deleteByEventId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--删除附件根据附件ID-->
+		<action name="deleteAttachmentIdByAttachmentId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="deleteAttachmentIdByAttachmentId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--增加事件-->
+		<action name="addEvent" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="addEvent">
+			<result name="success" type="redirect" >/page/officoa/schedule_add.jsp?sc=1</result>
+			<result name="error">/page/officoa/schedule_add.jsp?sc=2</result>
+		</action>
+		<!--增加事件手机端-->
+		<action name="addEvent_mobile" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="addEvent">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--增加参加人意见-->
+		<action name="AddAgreeReason" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="AddAgreeReason">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="AddUser" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="AddUser">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="upDateRemind" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="upDateRemind">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		
+		<!-- 闹钟服务 -->
+		<action name="EventClickListByUserId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="EventClickListByUserId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 下载现有文件 --> 
+
+		<action name="downloadFile"
+			class="com.huzhouport.common.util.FileDownloadAction">
+			<result name="success" type="stream">
+				<param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+				<param name="inputName">inputStream</param>
+				<!--
+					使用经过转码的文件名作为下载文件名，downloadFileName属性 对应action类中的方法
+					getDownloadFileName()
+				-->
+				<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action> 
+		<!-- 回复情况 -->
+		<action name="FindFeedbackByEventId" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="FindFeedbackByEventId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="unfeedCount" class="com.huzhouport.schedule.action.ScheduleAction"
+			method="unfeedCount">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

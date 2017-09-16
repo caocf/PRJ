@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center">
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="0dp"        
+        android:background="@drawable/title_back"
+        android:onClick="onBack"/>
+        <TextView 
+            android:id="@+id/law"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="问题列表"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1"/>       
+        
+        </LinearLayout>
+        
+    	<FrameLayout
+  	    android:id="@+id/frame"
+  android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     >
+</FrameLayout>
+</LinearLayout>

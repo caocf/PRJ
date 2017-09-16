@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_background"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back"
+            android:onClick="GoBack" >
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/register_title"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+    
+    <ScrollView
+      android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  >
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:background="#f9f9f9"
+        android:orientation="vertical" >   
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        android:background="#f9f9f9">
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_phone_number" />
+
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tvPhoneNumber"
+            android:background="@color/colorTrans"
+            android:hint="@string/tv_phone_number"
+            android:maxLength="11"
+            android:phoneNumber="true"
+            android:textSize="18sp"
+            android:inputType="phone" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#f9f9f9">
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_password" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tvPassword"
+            android:background="@color/colorTrans"
+            android:hint="@string/tv_password"
+            android:textSize="18sp"
+            android:maxLength="12"
+            android:password="true"
+            android:inputType="textVisiblePassword" />
+
+        <CheckBox
+            android:id="@+id/cbShowHidePwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/pwd_checkbox_selector"
+            android:layout_alignParentRight="true"
+            android:button="@null"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:checked="false" />
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        android:background="#f9f9f9">
+
+        <TextView
+            android:id="@+id/tvRepeatpsw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_password" />
+
+        <EditText
+            android:id="@+id/repeatpsw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tvRepeatpsw"
+            android:background="@color/colorTrans"
+            android:hint="@string/tv_cfpassword"
+            android:maxLength="11"
+            android:textSize="18sp"
+            android:inputType="textVisiblePassword"
+            android:password="true"/>
+        
+        <CheckBox
+            android:id="@+id/cbRPShowHidePwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/pwd_checkbox_selector"
+            android:layout_alignParentRight="true"
+            android:button="@null"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:checked="false" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        android:background="#f9f9f9">
+
+        <TextView
+            android:id="@+id/tvShipName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_ship" />
+
+        <EditText
+            android:id="@+id/etShipName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tvShipName"
+            android:background="@color/colorTrans"
+            android:hint="@string/tv_ship_name"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        android:background="#f9f9f9">
+
+        <TextView
+            android:id="@+id/tvShipCheckName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/ic_ship" />
+
+        <EditText
+            android:id="@+id/etShipCheckName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tvShipCheckName"
+            android:background="@color/colorTrans"
+            android:hint="@string/tv_ship_check_name"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />    
+        
+        <TextView 
+          android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="8dip"
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:text="@string/addpic"  />       
+        
+        <LinearLayout 
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:background="#f9f9f9">
+        
+            
+        <LinearLayout 
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <ImageButton 
+            android:id="@+id/selimg"
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_add_pic_normal"/>
+        
+        <TextView 
+          android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="10dp"
+        android:gravity="left"
+        android:layout_gravity="center"
+        android:id="@+id/im_tx"
+        android:layout_marginTop="8dp" />
+        
+         </LinearLayout>
+         
+        <ImageButton
+                            android:id="@+id/permit_add_photograph"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:contentDescription="@string/photograph"
+                            android:gravity="center"
+                            android:background="@drawable/photograph" />
+        
+        <ImageButton
+                            android:id="@+id/permit_add_file"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:contentDescription="@string/schedule_attament"
+                            android:background="@drawable/file" 
+                            android:gravity="center"/>
+        
+       
+        
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="@dimen/activity_button_margin"
+        android:background="@drawable/btn_selector"
+        android:text="@string/register"
+        android:textColor="@color/text_color_white"
+        android:textSize="18sp"
+        android:onClick="DoRegister" />
+    </LinearLayout>
+    </ScrollView>
+<!--  -->
+</LinearLayout>

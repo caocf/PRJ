@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+	<package name="attedance" extends="cement-interceptor"
+		namespace="/">
+		<!--根据权限显示请加加班的列表并分页 -->
+		<action name="FindAttedanceByPermission"
+			class="com.huzhouport.leaveandovertime.action.AttedanceAction"
+			method="FindAttedanceByPermission">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--自己的申请 -->
+		<action name="FindAttedanceByMy"
+			class="com.huzhouport.leaveandovertime.action.AttedanceAction"
+			method="FindAttedanceByMy">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--根据权限显示请加加班的列表并分页 -->
+		<action name="FindAttedanceByPermission_APP"
+			class="com.huzhouport.leaveandovertime.action.AttedanceAction"
+			method="FindAttedanceByPermission_APP">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+
+	</package>
+</struts>

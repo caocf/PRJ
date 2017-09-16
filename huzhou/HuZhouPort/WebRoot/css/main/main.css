@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+/*主页面大致布局*/
+#container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#content {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: url(../../image/top/body_bg.jpg) no-repeat #ECF3F7;
+	background-position: bottom;
+}
+
+#mainTop {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 105px;
+	min-width: 1000px;
+}
+
+#childContent {
+	margin: 0 auto;
+	padding: 0;
+	width: 1000px;
+	min-height: 635px;
+	background-color:#fff;
+	height: 100%
+}
+
+#mainLeft {
+	margin: 0 auto;
+	padding: 0;
+	width: 1000px;
+	background-color:#fff;
+	min-height: 635px;
+	height: 100%;
+}
+.AHOVER:HOVER {
+	color: #16347a;
+}

@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+#update_container{
+	margin: 0;
+	padding:44px 0 0 0;
+	width: 813px;
+	overflow-x:hidden; 
+	height: 630px;
+}
+#illegalTable_Evidence {
+	width: 830px;
+}
+
+#submit_div {
+	margin: 10px 0 30px 0;
+	padding: 0;
+}
+
+.input_submit {
+	margin: 10px 0 30px 90px;
+	padding: 0;
+	vertical-align: top;
+}
+.input_reset{
+	margin: 10px 0 30px 10px;
+	padding: 0;
+	vertical-align: top;
+}
+
+#submit_div hr {
+	margin: 0;
+	pading: 0;
+	width: 100%;
+	height: 1px;
+	border: none;
+	border-top: 1px solid #d6d6d6;
+	vertical-align: top;
+}
+.textarea_input {
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+	width: 700px;
+	height: 150px;
+	min-width:700px;
+	min-height: 150px;
+	line-height: 20px;
+	resize:none;
+}
+#file_div{ position:relative;top:-27px;left:40px;width:76px;height:26px; overflow:hidden;}
+.file_button{ position:absolute;top:0px;right:0px;height:100%;cursor:pointer;filter:alpha(opacity:0);opacity: 0;}
+#file_img{ position:absolute;top:0px;left:0px;width:100%;height:100%;}
+#EvidenceUpload{margin:10px;padding:0; background-color: #eaeff5;text-align: left;table-layout: fixed;}
+#EvidenceUpload td{margin:0;padding:10px 10px 5px 10px;}

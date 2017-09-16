@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/portnotice_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/portnotice_main_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/portnotice_main_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/portnotice_main_back"
+            android:gravity="left|center_vertical"
+            android:text="@string/portnotice_main"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+<!-- 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/portnotice_frameLayout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/portnotice_main_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent" >
+            </com.huzhouport.leaveandovertime.MultiListView>
+
+            <TextView
+                android:id="@+id/tableRow16"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/portnotice_main_listview"
+                android:background="#d8d8d8" />
+
+            <Button
+                android:id="@+id/portnotice_loadMoreButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="@string/attendace_sign_load_more"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView> -->
+ <ListView
+               android:id="@+id/portnotice_main_listview"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/portnotice_frameLayout"
+               android:listSelector="@color/transparent" >
+
+            </ListView>
+
+           <!--  <TextView
+                android:id="@+id/tableRow16"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/portnotice_main_listview"
+                android:background="#d8d8d8" />
+
+            <Button
+                android:id="@+id/portnotice_loadMoreButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="@string/attendace_sign_load_more"
+                android:visibility="gone" /> -->
+</RelativeLayout>

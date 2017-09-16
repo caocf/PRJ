@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color" >
+
+    <RelativeLayout
+        android:id="@+id/schedule_add_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/schedule_addforward_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/schedule_addforward_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/schedule_addforward_back"
+            android:text="@string/schedule_add_time1"
+            android:textColor="#0067ac"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/schedule_addforward_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:contentDescription="@string/finish"
+            android:src="@drawable/le_submit" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/schedule_add_RelativeLayout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:shrinkColumns="1"
+                android:stretchColumns="1" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="fill_vertical"
+                        android:gravity="left|fill_vertical"
+                        android:text="@string/schedule_title"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/schedule_addforward_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_span="2"
+                        android:hint="@string/schedule_hint_name"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/schedule_userinfo"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/schedule_addforward_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/schedule_addforward_userImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/transparent"
+                        android:contentDescription="@string/schedule_add_userNotic"
+                        android:src="@drawable/imgbt_userselect" />
+                </TableRow>
+
+                 <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left|fill_vertical"
+                        android:text="@string/schedule_user"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/schedule_addforward_canyu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="15sp"
+                        android:layout_span="2"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left|fill_vertical"
+                        android:text="@string/schedule_time"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/schedule_addforward_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_span="2"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left|fill_vertical"
+                        android:text="@string/schedule_location"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/schedule_addforward_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_span="2"
+                        android:gravity="left|fill_vertical"
+                        android:hint="@string/schedule_hint_location"
+                        android:maxLength="200"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left|fill_vertical"
+                        android:text="@string/schedule_kind"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" />
+                     <TextView
+                         android:id="@+id/schedule_addforward_kind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left|fill_vertical"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" />
+                    <!-- <Spinner
+                        android:id="@+id/schedule_addforward_kind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_span="2"
+                        android:background="@drawable/bg_spinner"
+                        android:gravity="left|fill_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:prompt="@string/spinner_kind"
+                        android:textSize="18sp" /> -->
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left|fill_vertical"
+                        android:text="@string/schedule_content"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/schedule_addforward_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="20dp"
+                        android:layout_span="2"
+                        android:gravity="left|fill_vertical"
+                        android:hint="@string/schedule_hint_content"
+                        android:maxLength="100"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </TableRow>
+            </TableLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp" >
+
+                <Spinner
+                    android:id="@+id/schedule_add_spinner1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:prompt="@string/schedule_spinner01" />
+
+                <Spinner
+                    android:id="@+id/schedule_add_spinner2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/schedule_add_spinner1"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:prompt="@string/schedule_spinner02" />
+
+                <com.huzhouport.common.util.MyGridView
+                    android:id="@+id/schedule_add_gridView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/schedule_add_spinner1"
+                    android:columnWidth="90dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="6dp"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" >
+                </com.huzhouport.common.util.MyGridView>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/schedule_addFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/schedule_attament"
+        android:src="@drawable/sc_append"
+        android:visibility="gone" />
+
+</RelativeLayout>

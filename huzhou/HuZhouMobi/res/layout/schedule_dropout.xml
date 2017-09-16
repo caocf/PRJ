@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/schedule_dropout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/schedule_dropout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/schedule_dropout_back"
+            android:text="@string/schedule_no_activity"
+            android:textColor="#0067ac"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/schedule_dropout_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/le_submit" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/schedule_dropout_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" 
+        android:layout_margin="10dp"
+        android:maxLength="200"
+        android:hint="@string/schedule_hint_result"
+        android:gravity="top|left"/>
+
+</LinearLayout>

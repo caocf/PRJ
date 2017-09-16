@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+	<!-- struts为配置文件根元素 -->
+<struts>
+	<constant name="struts.objectFactory"
+		value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+
+	<!-- 指定Web应用的默认编码集，相当于调用HttpServletRequest的setCharacterEncoding方法 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<!-- 系统常量定义，定义上传文件临时存放路径 -->
+		<constant name="struts.multipart.saveDir" 
+		value="D:\temp"></constant>
+	<!-- 设置导入时文件大小 -->
+	<constant name="struts.multipart.maxSize" value="1000000000" />
+	<constant name="struts.multipart.parser" value="jakarta" />
+	<package name="cement-interceptor" extends="json-default"
+		namespace="/">
+		<!-- 统一异常处理 -->
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	</package>
+
+	<!--综合查询管理-->
+	<include file="com/huzhouport/struts/integratedquery/*.xml" />
+	<!--用户管理-->
+	<include file="com/huzhouport/struts/user/*.xml" />
+	<!--角色管理-->
+	<include file="com/huzhouport/struts/role/*.xml" />
+	<!--组织管理-->
+	<include file="com/huzhouport/struts/organization/*.xml" />
+	<!--日志管理-->
+	<include file="com/huzhouport/struts/log/*.xml" />
+	<!--日程管理-->
+	<include file="com/huzhouport/struts/schedule/*.xml" />
+	<!--请假加班-->
+	<include file="com/huzhouport/struts/leaveandovertime/*.xml" />
+	<!--签到签退-->
+	<include file="com/huzhouport/struts/attendace/*.xml" />
+	<!--港航动态-->
+	<include file="com/huzhouport/struts/portDynmicNews/*.xml" />
+	<!--通知公告-->
+	<include file="com/huzhouport/struts/portNotice/*.xml" />
+	<!--通航公告-->
+	<include file="com/huzhouport/struts/portNavigation/*.xml" />
+	<!--知识库-->
+	<include file="com/huzhouport/struts/knowledge/*.xml" />
+	<!--违章-->
+	<include file="com/huzhouport/struts/illegal/*.xml" />
+	<!--许可-->
+	<include file="com/huzhouport/struts/permit/*.xml" />
+	<!--签到签退-->
+	<include file="com/huzhouport/struts/attendace/*.xml" />
+	<!--电子报告-->
+	<include file="com/huzhouport/struts/electric/*.xml" />
+	<!--危险品进港-->
+	<include file="com/huzhouport/struts/dangerousGoodsPortln/*.xml" />
+	<!--危险品作业-->
+	<include file="com/huzhouport/struts/dangerousGoodsJob/*.xml" />
+	<!--码头巡查-->
+	<include file="com/huzhouport/struts/patrol/*.xml" />
+	<!--行政许可预申请-->
+	<include file="com/huzhouport/struts/apply*.xml" />
+	<!--巡查日志-->
+	<include file="com/huzhouport/struts/cruiselog/*.xml" />
+	<!--设备申请-->
+	<include file="com/huzhouport/struts/equipment/*.xml" />
+	<!--综合统计-->
+	<include file="com/huzhouport/struts/statistic/*.xml" />
+	<!--公众用户管路-->
+	<include file="com/huzhouport/struts/publicuser/*.xml" />
+	<!--码头作业-->
+	<include file="com/huzhouport/struts/wharfwork/*.xml" />
+	<!--电子报告new-->
+	<include file="com/huzhouport/struts/electricReport/*.xml" />
+	<!--推送new-->
+	<include file="com/huzhouport/struts/pushmsg/*.xml" />
+	<!-- 下载统计 -->
+	<include file="com/huzhouport/struts/download/*.xml" />
+	<include file="com/huzhouport/struts/ais/*.xml" />
+	<include file="com/huzhouport/struts/shipquerylog/*.xml" />
+  <include file="com/struts/meeting/*.xml" />
+  <include file="com/huzhouport/struts/car/*.xml" />
+
+</struts>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+	<package name="electricReportNew" extends="cement-interceptor"
+		namespace="/">
+		<action name="ElectricReportListByInfo"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="ElectricReportListByInfo">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="ElectricReportListByShip"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="ElectricReportListByShip">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="ElectricReportByReportId"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="ElectricReportByReportId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="SaveElectricReport"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="SaveElectricReport">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		
+		<action name="CheckElectricReport"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="CheckElectricReport">
+			<result name="success" type="json" ><param name="root">result</param></result>
+			<result name="error"/>
+		</action>
+		
+		
+		<action name="UpdateElectricReport"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="UpdateElectricReport">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="updateReportArrivalPort"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="updateReportArrivalPort">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="SetBoatUserInfo"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="SetBoatUserInfo">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="ShowBoatUserInfo"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="ShowBoatUserInfo">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="showPortList"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="showPortList">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="showStartPort"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="showStartPort">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<action name="GetOldReport"
+			class="com.huzhouport.electricreport.action.ElectricReportAction"
+			method="GetOldReport">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+	</package>
+</struts>

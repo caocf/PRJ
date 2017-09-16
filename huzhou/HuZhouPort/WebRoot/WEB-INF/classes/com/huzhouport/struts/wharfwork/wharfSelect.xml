@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+	<package name="wharfSelectList" extends="cement-interceptor"
+		namespace="/">
+		
+		<action name="findPortAreas" class="com.huzhouport.wharfSelect.action.WharfSelectAction"
+			method="findPortAreas">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		
+		<action name="findPieceAreas" class="com.huzhouport.wharfSelect.action.WharfSelectAction"
+			method="findPieceAreas">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		
+		<action name="findWharfItems" class="com.huzhouport.wharfSelect.action.WharfSelectAction"
+			method="findWharfItems">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		
+		<action name="searchWharfItems" class="com.huzhouport.wharfSelect.action.WharfSelectAction"
+			method="searchWharfItems">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+
+
+	</package>
+</struts>

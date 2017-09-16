@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:divider="#d7d7d7"
+    android:showDividers="middle">
+ <LinearLayout 
+       android:layout_width="match_parent"
+    android:layout_height="90dp" 
+    android:orientation="horizontal"
+    android:gravity="left|center">
+     <TextView
+    	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_margin="16dp"
+    	android:text="选择类别"
+    	android:layout_weight="0"
+    	android:textColor="#0067ac"
+    	android:textSize="18sp"/>  
+    	
+    	 <net.hxkg.channel.ItemSpinner 
+    	     android:id="@+id/sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="16dp" 
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" 
+            
+            android:background="@drawable/bg_spinner" />
+    </LinearLayout>
+    
+   <Button
+       android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1" 
+            android:layout_gravity="center"
+            android:text="确定"
+            android:padding="16dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#ffffff"
+            android:onClick="Sure"/>
+   
+</LinearLayout>

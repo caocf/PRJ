@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象 
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.illegal.model.IllegalReason"
+		table="mm_IllegalReason">
+		<id name="reasonId" column="ReasonID">
+			<generator class="uuid.hex" />
+		</id>
+		<!-- 定义其他属性 -->
+		<property name="reasonName" column="ReasonName"></property>
+		<property name="refReasonID" column="RefReasonID"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<style>
+			.left{
+				float: left;
+			}
+			.right{
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;" id="title">异常报警详情</h1>
+		</header>
+		
+		<div class="mui-content">
+			<form id="result_form" name="result_form" method="post" enctype="multipart/form-data">
+				<input type="hidden" id="status" name="abnormalinfo.status" value="1"/>
+				<input type="hidden" id="id" name="abnormalinfo.aid" />
+				<input type="hidden" id="process" name="abnormalInfo.process" />
+				<input type="hidden" id="pass" name="abnormalInfo.pass" />
+				<ul class="mui-table-view mui-table-view-radio" id="chuli" style="display: none;">
+					<li class="mui-table-view-cell" id="btn_0">
+						<a class="mui-navigate-right">已经纠正</a>
+					</li>
+					<li class="mui-table-view-cell" id="btn_1">
+						<a class="mui-navigate-right">已立案处罚</a>
+					</li>
+					<li class="mui-table-view-cell" id="btn_2">
+						<a class="mui-navigate-right">已教育警告</a>
+					</li>
+					<li class="mui-table-view-cell" id="btn_3">
+						<a class="mui-navigate-right">加入黑名单</a>
+					</li>
+					<li class="mui-table-view-cell" id="btn_4">
+						<a class="mui-navigate-right">实际正常</a>
+					</li>
+				</ul>
+				
+				<ul class="mui-table-view mui-table-view-radio" id="hulue" style="display: none;">
+					<li class="mui-table-view-cell" id="btn_5">
+						<a class="mui-navigate-right">海事艇</a>
+					</li>
+					<li class="mui-table-view-cell" id="btn_6">
+						<a class="mui-navigate-right">小渔船</a>
+					</li>
+					<li class="mui-table-view-cell" id="btn_7">
+						<a class="mui-navigate-right">工程船</a>
+					</li>
+					<li class="mui-table-view-cell" id="btn_8">
+						<a class="mui-navigate-right">数据误报</a>
+					</li>
+				</ul>
+				<p>备注信息</p>
+				<textarea required="请输入备注" id="remark" name="abnormlinfo.remark"></textarea>
+				<p>图片</p>
+				<div id="images_div"></div><img src="../images/btn_add_normal.png" id="add_img">
+			</form>
+			<button id="submit_btn"><img src="../images/submit.png" style="width: 100%;"/></button>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				mui.back = function(){
+					plus.webview.currentWebview().hide();
+					document.getElementById("images_div").innerHTML = "";
+				}
+				document.getElementById("add_img").addEventListener("tap",function(event) {
+					var a = [{
+						title: "拍照"
+					}, {
+						title: "从相册中选取"
+					}];
+					plus.nativeUI.actionSheet({title:"添加照片",cancel:"取消",buttons:a},function(b){
+						switch(b.index){
+							case 0:
+								break;
+							case 1:
+								getImage();
+								break;
+							case 2:
+								galleryImg();
+								break;
+							default:
+								break;
+						}
+					});
+				});
+			});
+			var addImg = function(src){
+				var div = document.getElementById("images_div");
+				var img = document.createElement("img");
+				img.style.maxWidth = "130px";
+				img.style.maxHeight = "130px";
+				img.src = src;
+				div.insertBefore(img,div.firstChild);
+				
+			}
+			var getImage = function(){
+				var c = plus.camera.getCamera();
+				c.captureImage(function(e){
+					plus.io.resolveLocalFileSystemURL(e,function(entry){
+						var src = entry.toLocalURL() + "?version="+ new Date().getTime();
+						addImg()
+					},function(e){
+						console.error(JSON.stringify(e));
+					});
+				},function(e){
+					console.error(JSON.stringify(e));
+				},{
+					filename:"_doc/" + new Date().getTime() + ".jpg"
+				});
+			};
+			var galleryImg = function(){
+				plus.gallery.pick(function(e){
+					plus.io.resolveLocalFileSystemURL(e,function(entry){
+						var src = entry.toLocalURL() + "?version="+ new Date().getTime();
+						addImg(src);
+					},function(e){
+						console.error(JSON.stringify(e));
+					});
+				},function(e){
+					console.error(JSON.stringify(e));
+				},{
+					filter:"image"
+				});
+			};
+			window.addEventListener("toResult",function(event){
+				var type  = event.detail.type;
+				var id = event.detail.id;
+//				console.log(type);
+//				console.log(id);
+				document.getElementById("id").value = id;
+				if(type == 1){
+					document.getElementById("title").innerHTML="立即处理";
+					document.getElementById("chuli").style.display = "";
+					document.getElementById("hulue").style.display = "none";
+				}else if(type == 0){
+					document.getElementById("title").innerHTML="忽略";
+					document.getElementById("chuli").style.display = "none";
+					document.getElementById("hulue").style.display = "";
+				}
+				
+				document.querySelector(".mui-table-view.mui-table-view-radio").addEventListener("selected",function(event){
+					if(type == 1){
+						document.getElementById("process").value = event.detail.el.innerText;
+					}else if(type == 0 ){
+						document.getElementById("pass").value = event.detail.el.innerText;
+					}
+				});
+				
+			});
+			var callback = function(data){
+				if(data.abnormalinfo.status == 1){
+					mui.toast("提交成功")
+				}else{
+					mui.toast("提交失败");
+				}
+				mui.back();
+				
+			}
+			document.getElementById("submit_btn").addEventListener("tap",function(event){
+				var formData = new FormData();
+				
+				formData.append("abnormalinfo.status","1");
+				formData.append("abnormalinfo.aid",document.getElementById("id").value);
+				formData.append("abnormalinfo.process",document.getElementById("process").value);
+				formData.append("abnormalinfo.pass",document.getElementById("pass").value);
+				formData.append("abnormalinfo.remark",document.getElementById("remark").value);
+//				formData.append("image",document.getElementById("image").files[0],"img.png");
+//				console.log(JSON.stringify(formData.getAll()));
+				app.submitAbnormalProcess(formData,callback);
+			});
+			
+		</script>
+	</body>
+</html>
+	

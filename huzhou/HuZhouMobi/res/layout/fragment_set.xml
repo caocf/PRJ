@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/fragment_set_leave"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/fragment_set_leave"
+        android:textSize="18sp" >
+    </TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/fragment_set_text1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/fragment_set_textview1"
+        android:textSize="18sp" >
+    </TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/fragment_set_upload"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/fragment_set_uplosd"
+        android:textSize="18sp" >
+    </TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/fragment_set_text2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/fragment_set_textview2"
+        android:textSize="18sp" >
+    </TextView>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+    
+    <TextView
+        android:id="@+id/setup_update_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/fragment_set_edit_password"
+        android:textSize="18sp" >
+    </TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/fragment_set_text3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/fragment_set_textview3"
+        android:textSize="18sp" >
+    </TextView>
+
+    <Button
+        android:id="@+id/fragment_set_text5_bt"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/fragment_set_text5"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/fragment_set_textview5"
+        android:textSize="18sp" >
+    </TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/fragment_set_pushtime"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/fragment_set_pushtimesetting"
+        android:textSize="18sp" >
+    </TextView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+</LinearLayout>

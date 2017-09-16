@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+         <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back"
+            android:onClick="onBack" >
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="派车"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>       
+    </LinearLayout>
+    
+       <ScrollView 
+           android:id="@+id/scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	   <LinearLayout 
+	       android:id="@+id/container"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:background="#f9f9f9" > 
+    <com.huzhouport.car.CarGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:numColumns="2"
+    android:horizontalSpacing="10dp"
+    android:verticalSpacing="10dp"
+    android:stretchMode="columnWidth">
+        
+    </com.huzhouport.car.CarGridView>
+    
+    <Button
+             android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+		android:layout_marginBottom="16dp"
+        android:gravity="center"    
+        android:text="确定"   
+        android:textColor="@color/white" 
+        android:includeFontPadding="false"
+        android:background="@drawable/btn_bg"
+        android:onClick="onChoose"/>
+</LinearLayout>
+ </ScrollView>
+ <TextView 
+     android:id="@+id/tip"
+     android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="没有符合条件的车辆"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"/> 
+</LinearLayout>

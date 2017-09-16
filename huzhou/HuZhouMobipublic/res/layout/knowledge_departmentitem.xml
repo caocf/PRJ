@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/address_list_item"
+    android:orientation="horizontal" >
+   <TextView
+        android:id="@+id/knowledge_ifnew"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/red"
+        android:textSize="16sp" />
+<TextView
+        android:id="@+id/knowledge_departmentitem_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/knowledge_img"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/address_jiantou"
+        android:gravity="center_vertical"  
+        android:textSize="18sp" 
+        android:singleLine="true"/> 
+  <TextView 
+      android:id="@+id/knowledge_departmentitem_id"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+      android:visibility="gone"
+      />      
+
+</LinearLayout>

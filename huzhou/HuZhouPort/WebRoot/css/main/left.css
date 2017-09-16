@@ -1,0 +1,141 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	margin: 0;
+	padding: 0;
+	width: 1000px;
+	height: 630px;
+	overflow: hidden;
+	background-color: #fff
+}
+
+#left {
+	float: left;
+	margin: 0; 
+	padding: 0;
+	width: 168px;
+	height: 630px;
+	font-size: 14px;
+	/**background-color: #dce9f2;**/
+	border: solid 1px #c9d9e9;
+}
+
+#left ul {
+	list-style: none;
+	margin: 0px 0 0 0;
+	padding: 0;
+}
+
+#left ul li {
+	margin: 0px;
+	padding: 0;
+	width: 168px;
+	line-height: 36px;
+	color: #323944;
+	background-color: #dce9f2;
+	border-bottom: 1px solid rgb(185, 202, 212);
+}
+
+#left ul div {
+	display:none;
+	margin: 0px;
+	padding: 0;
+	width: 168px;
+	line-height: 36px;
+	color: #323944;
+	
+}
+#left ul li a {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	padding-left: 14px;
+	display: block;
+	cursor: pointer;
+	height: 36px;
+	width: 156px;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #dce9f2;
+	background: url('../../image/left/to_left.png') no-repeat 140px center;
+}
+#left ul  div a {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	padding-left: 34px;
+	display: block;
+	cursor: pointer;
+	height: 36px;
+	width: 134px;
+	font-weight: bold;
+	font-size: 14px;
+	border-top: 1px solid rgb(185, 202, 212);
+	background: none #fff;
+}
+#left ul li ul li {
+	margin: 0px;
+	padding: 0;
+	width: 168px;
+	line-height: 36px;
+	color: #323944;
+	background-color: #fff;
+	border-top: 1px solid rgb(185, 202, 212);
+}
+#left ul li ul li a {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	padding-left: 14px;
+	display: block;
+	cursor: pointer;
+	height: 36px;
+	width: 156px;
+	font-size: 13px;
+}
+.showLeftTopUl {
+	background: url('../../image/left/to_button.png') no-repeat 140px center;
+}
+
+#left ul li a {
+	color: #323944;
+}
+
+#left ul li a:link {
+	text-decoration: none;
+	/**background-color: #dce9f2;**/
+}
+
+#left ul li a:visited {
+	text-decoration: none;
+}
+
+#left ul li a:hover {
+	text-decoration: none;
+	background-color: #1188d3;
+} 
+
+#left ul li a:active {
+	text-decoration: none;
+}
+
+#right {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 830px;
+	height: 630px;
+}
+
+#mainRight {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 830px;
+	height: 630px;
+}

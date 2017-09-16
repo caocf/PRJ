@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="knowledge" extends="cement-interceptor"
+		namespace="/">
+		<!-- 显示知识库 -->
+		<action name="showKnowLedge" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="showKnowLedge">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 查找 -->
+		<action name="selectKnowLedge" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="selectKnowLedge">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+
+		<!-- 知识库内容 -->
+		<action name="KnowLedgeShow" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="KnowLedgeShow">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<!-- 知识库内容 -->
+		<action name="KnowLedgeIsLink" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="KnowLedgeIsLink">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="showKnowLedgedian" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="showKnowLedgedian">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="selectKnowLedgedian" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="selectKnowLedgedian">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="KnowLedgeView" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="KnowLedgeView">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="addknowledge" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="addknowledge">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="knowledgeAdd" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="knowledgeAdd">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="knowledgeUpdate" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="knowledgeUpdate">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="knowledgeDelete" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="knowledgeDelete">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="newknowledgelist" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="newknowledgelist">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="newknowledgelistall" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="newknowledgelistall">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="newknowledgelistpublic" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="newknowledgelistpublic">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="selectknowledgelist" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="selectknowledgelist">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="selectknowledgelistinner" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="selectknowledgelistinner">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="updateknowledge" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="updateknowledge">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="deleteknowledgekind" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="deleteknowledgekind">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+		<action name="queryFolderStructure" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="queryFolderStructure">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="queryNotifyMsgList" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="queryNotifyMsgList">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="queryNotifyMsgListAll" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="queryNotifyMsgListAll">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="queryUserOriUnreadNotifyCnt" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="queryUserOriUnreadNotifyCnt">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="queryNonUserOriNotifyListAll" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="queryNonUserOriNotifyListAll">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="queryNonUserOriNotifyMsgAll" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="queryNonUserOriNotifyMsgAll">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="queryNotifyMsgListAllByContent" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="queryNotifyMsgListAllByContent">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="queryUserOriUnreadAndUnPushNotifyCnt" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="queryUserOriUnreadAndUnPushNotifyCnt">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		
+		<action name="addAllMessageToReaded" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="addAllMessageToReaded">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="newsr" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="hhz">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="countforders" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="countforders">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="testtest" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="testtest">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+		<action name="commonee" class="com.huzhouport.knowledge.action.KnowLedgeAction"
+			method="commonee">
+			<result name="success" type="json" />
+			<result name="fail">/error.jsp</result>
+		</action>
+	</package>
+</struts>

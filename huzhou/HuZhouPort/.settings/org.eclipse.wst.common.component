@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="HuZhouPort">
+        <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/spring"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/hibernate"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/struts"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/common"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/user"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/role"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/organization"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/integratedquery"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/portNotice"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/portDynmicNews"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/wechat"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/log"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Schedule"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/LeaveAndOvertime"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/attendace"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/knowledge"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/illegal"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/permit"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/electric"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/dangerousGoodsPortln"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/dangerousGoodsJob"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/patrol"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/cruiselog"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Equipment"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/statistics"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/publicuser"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/wharfWork"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/portNavigation"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/dynmicNews"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/comprehensive"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ElectricReport"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/download"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/PushMsg"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/shipQueryLog"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/meeting"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/car"/>
+        <property name="context-root" value="/HuZhouPort"/>
+        <property name="java-output-path" value="/HuZhouPort/WebRoot/WEB-INF/classes"/>
+        <property name="me-merge-utility-modules" value="true"/>
+    </wb-module>
+</project-modules>

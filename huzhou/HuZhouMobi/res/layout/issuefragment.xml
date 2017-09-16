@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:orientation="horizontal"
+            android:background="#f2f6f9">
+        <RadioButton 
+            android:id="@+id/r1"
+             android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="航道"
+            android:checked="true"
+            
+            android:button="@null"
+            android:drawableBottom="@drawable/radiobt_abselector_process"/>
+         <RadioButton 
+             android:id="@+id/r2"
+             android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="海事"
+            android:checked="false"
+            android:button="@null"
+            android:drawableBottom="@drawable/radiobt_abselector_process"/>
+         <RadioButton 
+             android:id="@+id/r3"
+             android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="港政"
+            android:checked="false"
+            android:button="@null"
+            android:drawableBottom="@drawable/radiobt_abselector_process"/>
+        
+    </RadioGroup>
+    <TextView 
+        android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7" />
+    <TextView 
+        android:id="@+id/tip"
+        android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="暂无问题"
+            android:gravity="center"
+            android:drawableTop="@drawable/icon_no_message"
+            android:visibility="gone"/>
+    <ListView 
+	    android:id="@+id/listview"
+	    android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+	</ListView>
+	
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<TextView 
+    android:id="@+id/fixedtermreport_mainlist_shipname"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="3dp"
+    android:layout_gravity="left|center_vertical"
+    android:gravity="left|center_vertical"
+    android:text="旺财"
+    android:textSize="17sp"/>
+<TextView 
+   android:id="@+id/fixedtermreport_mainlist_port"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="3dp"
+    android:layout_gravity="left|center_vertical"
+    android:gravity="left|center_vertical"
+    android:text="旺财"
+    android:textSize="17sp"/>
+<TextView 
+    android:id="@+id/fixedtermreport_mainlist_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    android:layout_gravity="left|center_vertical"
+    android:gravity="left|center_vertical"
+    android:text="旺财"
+    android:textSize="17sp"
+    />
+</LinearLayout>

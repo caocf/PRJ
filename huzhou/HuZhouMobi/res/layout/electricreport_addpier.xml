@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:shrinkColumns="0"
+    android:stretchColumns="1"
+    android:background="@drawable/page_background"
+     >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/electricreport_addpier_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+       <!--  <TextView
+            android:id="@+id/electricreport_see_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/electricreport_addpier_back"
+            android:gravity="center_vertical"
+            android:text="@string/electricreport_pier"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView> -->
+
+<com.huzhouport.common.util.ClearEditText
+    android:id="@+id/electricreport_addpier_edit01"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="10dp"
+    android:layout_toLeftOf="@+id/electricreport_addpier_bt"
+    android:layout_toRightOf="@+id/electricreport_addpier_back"
+    android:background="@drawable/leave_select"
+    android:drawableRight="@drawable/clear"
+    android:hint="@string/regularvisa_search"
+    android:paddingBottom="2dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp"
+    android:singleLine="true"
+    android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/electricreport_addpier_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/search"
+            android:src="@drawable/le_select" />
+    </RelativeLayout>
+    
+    <ListView 
+        android:id="@+id/electricreport_main_portlist"
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp" 
+        android:background="@color/white">
+    </ListView>
+    
+    <ListView 
+        android:id="@+id/electricreport_main_pierlist"
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp" 
+        android:background="@color/white"
+        android:visibility="gone">
+    </ListView>
+    
+    <ListView 
+        android:id="@+id/electricreport_main_wharflist"
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp" 
+        android:background="@color/white"
+        android:visibility="gone">
+    </ListView>
+
+</LinearLayout>

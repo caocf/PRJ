@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/leaveandovertime_leaveaddtiteltable"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/leaveandovertime_leaveaddback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:contentDescription="@string/back"
+                android:src="@drawable/title_back" />
+
+            <TextView
+                android:id="@+id/leaveandovertime_leaveaddtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/leaveandovertime_leavebutton"
+                android:textColor="#0067ac"
+                android:textSize="18sp" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:id="@+id/leaveandovertime_addtable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/grey"
+                android:orientation="horizontal"
+                android:stretchColumns="1" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:text="@string/leaveandovertime_ApprovalID1"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID1Neirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:background="@color/white"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID1ID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/leaveandovertime_add_ApprovalID1img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:src="@drawable/userselect" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:text="@string/leaveandovertime_ApprovalID2"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID2Neirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID2ID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/leaveandovertime_add_ApprovalID2img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:src="@drawable/userselect" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:text="@string/leaveandovertime_ApprovalID3"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID3Neirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_ApprovalID3ID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <ImageButton
+                        android:id="@+id/leaveandovertime_add_ApprovalID3img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:src="@drawable/userselect" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_kindName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:text="@string/leaveandovertime_view_kindName"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <Spinner
+                        android:id="@+id/leaveandovertime_add_kindNameNeirong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/bg_spinner" 
+                        android:layout_span="3" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="10sp" >
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_beginDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:text="@string/leaveandovertime_view_beginDate"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_beginDateNeirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="3"
+                        android:background="@color/white"
+                        android:textSize="18sp" >
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:background="@color/white"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="10sp" >
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_endDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:text="@string/leaveandovertime_view_endDate"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_endDateNeirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_span="3"
+                        android:background="@color/white"
+                        android:textSize="18sp" >
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="10sp" >
+
+                    <TextView
+                        android:id="@+id/leaveandovertime_add_leaveOrOtReason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:text="@string/leaveandovertime_view_leaveOrOtReason"
+                        android:textColor="@color/Light_gray"
+                        android:textSize="18sp" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/leaveandovertime_add_leaveOrOtReasonNeirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3"
+                        android:background="@color/white"
+                        android:textSize="18sp" >
+                    </EditText>
+                </TableRow>
+            </TableLayout>
+
+            <ImageButton
+                android:id="@+id/leaveandovertime_add_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:src="@drawable/imgbt_submit" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/leaveandovertime_leaveaddrelat1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:id="@+id/leaveandovertime_userselect_titeltable"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/title_background2"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:stretchColumns="1" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:id="@+id/leaveandovertime_userselect_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/title_back" />
+
+                <TextView
+                    android:id="@+id/leaveandovertime_userselect_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/leaveandovertime_userselect"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/leaveandovertime_userselect_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:src="@drawable/title_search" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/leaveandovertime_userselect_titeltable1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/title_background2"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:stretchColumns="1"
+            android:visibility="invisible" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp" >
+
+                <com.huzhouport.common.util.ClearEditText
+                    android:id="@+id/leaveandovertime_userselect_searchtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/search_background"
+                    android:drawableLeft="@drawable/search_icon"
+                    android:drawableRight="@drawable/clear"
+                    android:hint="@string/addresslist_search"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/leaveandovertime_userselect_search1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/addresslist_quxiao" />
+
+                <Button
+                    android:id="@+id/leaveandovertime_userselect_search2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/addresslist_search"
+                    android:visibility="gone" />
+            </TableRow>
+        </TableLayout>
+
+        <ExpandableListView
+            android:id="@+id/leaveandovertime_add_viewlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leaveandovertime_userselect_titeltable" >
+        </ExpandableListView>
+        
+        
+    </RelativeLayout>
+
+</LinearLayout>

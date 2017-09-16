@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+     <!-- 配置DAO组件 -->
+	<bean id="illegalDao" class="com.huzhouport.illegal.dao.impl.IllegalDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+	
+	
+
+	<!-- 配置业务逻辑组件 -->
+ 	<bean id="illegalService" class="com.huzhouport.illegal.service.impl.IllegalServiceImpl">
+		<!-- 为业务逻辑组件注入DAO组件 -->
+		<property name="illegalDao" ref="illegalDao"></property>
+		<property name="baseDao" ref="baseDao"></property>
+		<property name="pushMsgService" ref="pushMsgService"></property>
+		
+	</bean>	
+
+		
+	<!-- 创建userInfoAction实例 -->
+	<bean id="illegalAction" class="com.huzhouport.illegal.action.IllegalAction"
+		scope="prototype">
+		<property name="illegalService" ref="illegalService"></property>
+		<property name="baseService" ref="baseService"></property>
+		<property name="pushservice" ref="pushservice"></property>
+	</bean>
+
+</beans>

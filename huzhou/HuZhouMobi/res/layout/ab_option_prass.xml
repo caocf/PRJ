@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <RadioGroup  
+         android:id="@+id/ra_group"
+        android:gravity="center"  
+        android:orientation="vertical"    
+        android:layout_width="fill_parent"     
+        android:layout_height="wrap_content"  
+        >  
+        <RadioButton     
+            android:id="@+id/btn_0"    
+            android:layout_width="fill_parent"     
+            android:layout_height="wrap_content" 
+            android:layout_margin="16dp" 
+            android:text="海事艇"   
+            android:textSize="17.0sp"     
+            android:textColor="#333333"    
+            android:gravity="left|center"   
+            android:layout_weight="1"   
+            android:button="@null" 
+            android:checked="false"
+            android:drawableRight="@drawable/radiobt_abselector_process" />   
+             <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" /> 
+        <RadioButton     
+            android:id="@+id/btn_1"  
+            android:layout_width="fill_parent"     
+            android:layout_height="wrap_content"  
+            android:layout_margin="16dp"
+            android:text="小渔船"  
+            android:textSize="17.0sp"  
+            android:textColor="#333333"    
+            android:gravity="left|center" 
+            android:layout_weight="1"  
+            android:button="@null" 
+            android:checked="false"
+            android:drawableRight="@drawable/radiobt_abselector_process"  />    
+             <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+             <RadioButton     
+            android:id="@+id/btn_3"  
+            android:layout_width="fill_parent"     
+            android:layout_height="wrap_content"  
+            android:layout_margin="16dp"
+            android:text="工程船"  
+            android:textSize="17.0sp"  
+            android:textColor="#333333"    
+            android:gravity="left|center" 
+            android:layout_weight="1"  
+            android:button="@null" 
+            android:checked="false"
+            android:drawableRight="@drawable/radiobt_abselector_process"  />    
+             <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+        <RadioButton     
+            android:id="@+id/btn_2"  
+            android:layout_width="fill_parent"     
+            android:layout_height="wrap_content"  
+            android:layout_margin="16dp"
+            android:text="数据误报"  
+            android:textSize="17.0sp" 
+            android:textColor="#333333"   
+           android:gravity="left|center" 
+            android:layout_weight="1"  
+            android:button="@null" 
+            android:checked="false"
+            android:drawableRight="@drawable/radiobt_abselector_process" />
+                    
+            
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+    </RadioGroup>
+    
+
+</LinearLayout>

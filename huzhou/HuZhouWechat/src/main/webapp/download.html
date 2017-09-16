@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>下载页面</title>
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <style>
+        .mui-content {
+            background-image: url("img/pix_public.png");
+            background-size: 100% 100%;
+        }
+
+        .mui-content img {
+            display: inline !important;
+            width: 500px;
+            height: 500px;
+            margin-bottom: 200px;
+        }
+        #download_button {
+            margin-top: 70px;
+            background-image: url("img/btn_normal.png");
+            background-size: 100% 100%;
+            width: 890px;
+            height: 150px;
+        }
+
+        #download_button:active {
+            background-image: url("img/btn_pressed.png");
+        }
+
+    </style>
+    <script src="js/jquery-3.2.0.min.js"></script>
+</head>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var height = $(window).height();
+        $("#img").css("margin-top",(height/4)+"px");
+        var rh = (height -300) > 800?(height -300):800
+        $(".mui-content").css("height", rh+ "px");
+
+        if (!is_weixin()) {
+            $("#upImg").hide();
+            $("#updiv").hide();
+        }
+    });
+    function downloadWharf() {
+        window.location.href = "http://hzgh.zgherb.com.cn/HuZhouPort/downLastApp?appid=2";
+    }
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+
+<body style="width:100%;height:100%;margin:0px auto;text-align:center;">
+
+<div class="mui-content mui-text-center">
+</div>
+
+<button id="download_button" onclick="downloadWharf()"></button>
+<div style='float:left;width:100%;height:200px;'></div>
+<div style='width:100%;position: fixed;z-index: 2050;top:0px;'
+     id="upImg">
+    <img style="float:right;margin-right:70px;margin-top:50px;"
+         src="img/download-up.png">
+</div>
+<div id="updiv"
+     style=" position: fixed;width: 100%;height: 100%;top: 0px;left: 0px;z-index: 2000;filter: Alpha(opacity=60);background: #000;    background-color: rgba(0,0,0,0.6);"></div>
+</body>
+</html>

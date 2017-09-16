@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.electric.model.Channel" table="mm_channel">
+		<id name="channelId" column="ChannelId">
+			<generator class="native"></generator>
+		</id>
+		<property name="riversCode" column="RiversCode"></property>
+		<property name="riverName" column="RiverName"></property>
+		<property name="channelCoding" column="ChannelCoding"></property>
+		<property name="channelName" column="ChannelName"></property>
+		<property name="reportUnit" column="ReportUnit"></property>
+		<property name="administrativeArea" column="AdministrativeArea"></property>
+		<property name="startingName" column="StartingName"></property>
+		<property name="startingMileage" column="StartingMileage"></property>
+		<property name="startingPointmain" column="StartingPointmain"></property>
+		<property name="startingPointoff" column="StartingPointoff"></property>
+		<property name="startingPointtype" column="StartingPointtype"></property>
+		<property name="endingName" column="EndingName"></property>
+		<property name="endingMileage" column="EndingMileage"></property>
+		<property name="endingPointmain" column="EndingPointmain"></property>
+		<property name="endingPointoff" column="EndingPointoff"></property>
+		<property name="endingPointotype" column="EndingPointotype"></property>
+		<property name="whetherSegment" column="WhetherSegment"></property>
+		<property name="segmentCategories" column="SegmentCategories"></property>
+		<property name="countriesName" column="CountriesName"></property>
+		<property name="adjacentAdministrative" column="AdjacentAdministrative"></property>
+		<property name="organizationName" column="OrganizationName"></property>
+		<property name="managementAdministrative" column="ManagementAdministrative"></property>
+		<property name="organizationNamed" column="OrganizationNamed"></property>
+		<property name="managementAdministratived" column="ManagementAdministratived"></property>
+		<property name="organizationNamef" column="OrganizationNamef"></property>
+		<property name="managementAdministrativef" column="ManagementAdministrativef"></property>
+		<property name="auxiliarySegment" column="AuxiliarySegment"></property>
+		<property name="bottleneckSection" column="BottleneckSection"></property>
+		<property name="majorShoals" column="MajorShoals"></property>
+		<property name="repeatSegment" column="RepeatSegment"></property>
+		<property name="segmentmileage" column="Segmentmileage"></property>
+		<property name="channelDepth" column="ChannelDepth"></property>
+		<property name="channelWidth" column="ChannelWidth"></property>
+		<property name="channelRadius" column="ChannelRadius"></property>
+		<property name="segmentTechnology" column="SegmentTechnology"></property>
+		<property name="segmentClassification" column="SegmentClassification"></property>
+		<property name="segmentAttributes" column="SegmentAttributes"></property>
+		<property name="channelOrganization" column="ChannelOrganization"></property>
+		<property name="institutionsAdministrativearea" column="InstitutionsAdministrativearea"></property>
+		<property name="segmentNavigation" column="SegmentNavigation"></property>
+		<property name="waterAssurance" column="WaterAssurance"></property>
+		<property name="channelSpecial" column="ChannelSpecial"></property>
+		<property name="channelSeasonal" column="ChannelSeasonal"></property>
+		<property name="segmentType" column="SegmentType"></property>
+		<property name="categoryCloth" column="CategoryCloth"></property>
+		<property name="segmentVessel" column="SegmentVessel"></property>
+		<property name="coordinates" column="Coordinates"></property>
+		<property name="coding" column="Coding"></property>
+		<property name="changeReason" column="ChangeReason"></property>
+		<property name="picture" column="Picture"></property>
+		<property name="scope" column="Scope"></property>
+		
+	</class>
+</hibernate-mapping>

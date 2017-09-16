@@ -1,0 +1,513 @@
+{
+	"@platforms": ["android", "iPhone", "iPad"],
+	"id": "H511892AD",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "湖州港航",/*应用名称，程序桌面图标名称*/
+	"version": {
+		"name": "1.0.0",/*应用版本名称*/
+		"code": "83"
+	},
+	"description": "",/*应用描述信息*/
+	"icons": {
+		"72": "icon.png"
+	},
+	"launch_path": "login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"developer": {
+		"name": "",/*开发者名称*/
+		"email": "",/*开发者邮箱地址*/
+		"url": "http://www.dcloud.io"
+	},
+	"permissions": {
+		"Accelerometer": {
+            "description": "访问加速度感应器"
+        },
+        "Audio": {
+            "description": "访问麦克风"
+        },
+        "Cache": {
+            "description": "管理应用缓存"
+        },
+        "Camera": {
+            "description": "访问摄像头"
+        },
+        "Console": {
+            "description": "跟踪调试输出日志"
+        },
+        "Contacts": {
+            "description": "访问系统联系人信息"
+        },
+        "Device": {
+            "description": "访问设备信息"
+        },
+        "Downloader": {
+            "description": "文件下载管理"
+        },
+        "Events": {
+            "description": "应用扩展事件"
+        },
+        "File": {
+            "description": "访问本地文件系统"
+        },
+        "Gallery": {
+            "description": "访问系统相册"
+        },
+        "Geolocation": {
+            "description": "访问位置信息"
+        },
+         "Invocation": {
+            "description": "使用Native.js能力"
+        },
+        "Messaging": {
+            "description": "访问通讯能力"
+        },
+        "Orientation": {
+            "description": "访问方向感应器"
+        },
+        "Proximity": {
+            "description": "访问距离感应器"
+        },
+        "Storage": {
+            "description": "管理应用本地数据"
+        },
+        
+        "Uploader": {
+            "description": "管理文件上传任务"
+        },
+        "Runtime": {
+            "description": "访问运行期环境"
+        },
+        "XMLHttpRequest": {
+            "description": "跨域网络访问"
+        },
+        "Zip": {
+            "description": "文件压缩与解压缩"
+        },
+        "Barcode": {
+            "description": "管理二维码扫描插件"
+        },
+        "Maps": {
+            "description": "管理地图插件"
+        },
+        "Speech": {
+            "description": "管理语音识别插件"
+        },
+        "Webview":{
+        	"description": "窗口管理"
+        },
+        "NativeUI":{
+        	"description": "原生UI控件"
+        },
+        "Navigator":{
+        	"description": "浏览器信息"
+        },
+        "NativeObj":{
+        	"description": "原生对象"
+        }
+	},
+	"plus": {
+		"splashscreen": {
+			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+			"waiting": true
+		},
+		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
+		"distribute": {
+			"apple": {
+				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+				"mobileprovision": "",/*iOS应用打包配置文件*/
+				"password": "",/*iOS应用打包个人证书导入密码*/
+				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"frameworks": []
+			},
+			"google": {
+				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
+				"keystore": "",/*Android应用打包使用的密钥库文件*/
+				"password": "",/*Android应用打包使用密钥库中证书的密码*/
+				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
+				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"]
+			},
+			"orientation": ["portrait-primary"],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+			"icons": {
+				"ios": {
+					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+					"auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+					"iphone": {
+						"normal": "unpackage/res/icons/57x57.png",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+						"retina": "unpackage/res/icons/114x114.png",/*iPhone高分屏程序图标，分辨率：114x114*/
+						"retina7": "unpackage/res/icons/120x120.png",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+						"spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+						"spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png","retina8":"unpackage/res/icons/180x180.png","settings-retina8":"unpackage/res/icons/87x87.png"
+					},
+					"ipad": {
+						"normal": "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
+						"retina": "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
+						"normal7": "unpackage/res/icons/76x76.png", /*iPad iOS7程序图标，分辨率：76x76*/
+						"retina7": "unpackage/res/icons/152x152.png", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+						"spotlight-normal": "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+						"spotlight-retina": "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+						"spotlight-normal7": "unpackage/res/icons/40x40.png",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+						"spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+						"settings-normal": "unpackage/res/icons/29x29.png",/*iPad设置页面程序图标，分辨率：29x29*/
+						"settings-retina": "unpackage/res/icons/58x58.png"
+					}
+				},
+				"android": {
+					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+					"xxhdpi": "unpackage/res/icons/144x144.png"
+				}
+			},
+			"splashscreen": {
+				"ios": {
+					"iphone": {
+						"default": "images/startPage/start_page320x480.png", /*iPhone3启动图片选，分辨率：320x480*/
+						"retina35": "images/startPage/start_page640x960.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "images/startPage/start_page640x1136.png","retina47":"images/startPage/start_page750x1334.png","retina55":"images/startPage/start_page750x1334.png"
+					},
+					"ipad": {
+						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
+						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": ""
+					}
+				},
+				"android": {
+					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
+					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
+					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": ""
+				}
+			}
+		}
+	},
+	"dependencies":{
+		"pages": {
+			"index.html": {
+				"href": "index.html",
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"images/mm_leaveandovertime.png",
+				"images/shivisainfor.png",
+				"images/videomoditor.png",
+				"images/delete_passed.png",
+				"images/ic_camera.png",
+				"images/knowledge_img.png",
+				"images/leave_inputfoot.png",
+				"images/mm_industry.png",
+				"images/btn_bg.9.png",
+				"images/check.png",
+				"images/kindchecked.png",
+				"images/bt_check_normal.png",
+				"images/leavestatus3.png",
+				"images/ninecode.png",
+				"images/drawer_logo.png",
+				"images/user_background.png",
+				"images/submit.png",
+				"images/bt_search_normal.png",
+				"images/signcheck_normal.png",
+				"images/zhuye_mormal.png",
+				"images/mm_shipvisainfor.png",
+				"images/portnotice_normal.png",
+				"images/address_button_normal.png",
+				"images/bt_check_pressed.png",
+				"images/check_normal.png",
+				"images/schedule_normal.png",
+				"images/mm_electricreport.png",
+				"images/fileupload_cancel_normal.png",
+				"images/ic_drawer.png",
+				"images/zhuye_pressed.png",
+				"images/officoa_pressed.png",
+				"images/knowledge_normal.png",
+				"images/mm_wharfpatrol.png",
+				"images/mm_dangerousgoodsreportin.png",
+				"images/bg_add_clock.png",
+				"images/schedule_see_pic.png",
+				"images/mm_signinandsignout.png",
+				"images/leave_no_normal.png",
+				"images/title_add_pressed.png",
+				"images/tel1_normal.png",
+				"images/cruiselog_end_pressed.png",
+				"images/mm_fixedterm.png",
+				"images/mm_waterageenterprise.png",
+				"images/mm_zonesupervision.png",
+				"images/tel1_normal_pressed.png",
+				"images/clear_normal.png",
+				"images/cruiselog_start_click.png",
+				"images/leave_select.9.png",
+				"images/ic_yichangxunluo_pressed.png",
+				"images/bg_leave_item.png",
+				"images/update_normal.png",
+				"images/portnotice_pressed.png",
+				"images/logo.png",
+				"images/soundrecord_pressed.png",
+				"images/ic_picture.png",
+				"images/leave_select_normal.png",
+				"images/click_normal.png",
+				"images/signback_pressed.png",
+				"images/time_normal.png",
+				"images/login_bg.png",
+				"images/mm_shipbaseinfor.png",
+				"images/ppt.png",
+				"images/leave_addleave_click.png",
+				"images/btn_trash_normal.png",
+				"images/audio.png",
+				"images/leave_addleave_normal.png",
+				"images/leave_addtravel_pressed.png",
+				"images/wancheng.png",
+				"images/address_tree.png",
+				"images/leave_button.png",
+				"images/mm_shipillegalinfor.png",
+				"images/ic_launcher.png",
+				"images/signbackbutton.png",
+				"images/leaveandovertime_pressed.png",
+				"images/delele_normal.png",
+				"images/address_back.png",
+				"images/leave_apply_normal.png",
+				"images/address_button_pressed.png",
+				"images/wharf_in.png",
+				"images/ic_bussinessprocess.png",
+				"images/leavestatus1.png",
+				"images/sos.png",
+				"images/schedule_text.png",
+				"images/other_file.png",
+				"images/address_jiantou.png",
+				"images/switch_on.png",
+				"images/clock.png",
+				"images/leave_travel.png",
+				"images/pdf.png",
+				"images/officoa.png",
+				"images/address_sms_pressed.png",
+				"images/mm_wharfjob.png",
+				"images/ic_action_call.png",
+				"images/wechat_normal.png",
+				"images/mm_portcharges.png",
+				"images/click_pressed.png",
+				"images/forwar_normal.png",
+				"images/activity_yes_normal.png",
+				"images/leavestatus4.png",
+				"images/leave_submit_click.png",
+				"images/knowledge_pressed.png",
+				"images/address_tel_normal.png",
+				"images/schedule_submit_normal.png",
+				"images/leave_approval_pressed.png",
+				"images/ic_action_share.png",
+				"images/wechat.png",
+				"images/activity_yes_pressed.png",
+				"images/video.png",
+				"images/cruiselog_start_normal.png",
+				"images/search_pressed.png",
+				"images/fileupload_check.png",
+				"images/file_pressed.png",
+				"images/singinsubmit_pressed.png",
+				"images/untreated.png",
+				"images/page_background.png",
+				"images/mm_electricvisa.png",
+				"images/leave_imgright.png",
+				"images/image_state_2.png",
+				"images/leave_yes_normal.png",
+				"images/leave_overtime.png",
+				"images/leave_input.png",
+				"images/sms_normal_pressed.png",
+				"images/open_backdround.png",
+				"images/bg_dialog_panel.9.png",
+				"images/address_showtel.png",
+				"images/personcenter_normal.png",
+				"images/mm_schedule.png",
+				"images/search_bt_pressed.png",
+				"images/leave_send_click.png",
+				"images/leave_delete_normal.png",
+				"images/fileupload_uncheck.png",
+				"images/shipillegalcheck_unread.png",
+				"images/scheduleunread.png",
+				"images/schedule_submit_click.png",
+				"images/leave_status4.png",
+				"images/mm_inspect.png",
+				"images/mm_illegalcheck.png",
+				"images/triangle.png",
+				"images/addresslist_pressed.png",
+				"images/xls.png",
+				"images/leave_status1.png",
+				"images/mm_mobileoa.png",
+				"images/photograph_normal.png",
+				"images/address_sms_normal.png",
+				"images/address_tel_pressed.png",
+				"images/bt_supplement_pressed.png",
+				"images/back_normal.png",
+				"images/kinduncheck.png",
+				"images/soundrecord_normal.png",
+				"images/fileupload_item_check.png",
+				"images/menu_normal.png",
+				"images/industryinfo_unread.png",
+				"images/mm_cruise.png",
+				"images/ic_setting.png",
+				"images/meetingunread.png",
+				"images/wharf_out.png",
+				"images/title_add_normal.png",
+				"images/shape_277.png",
+				"images/mm_shippayment.png",
+				"images/logo_pwd.png",
+				"images/singbacksubmit_normal.png",
+				"images/signcheck_pressed.png",
+				"images/address_select.9.png",
+				"images/submit_pressed.png",
+				"images/check_pressed.png",
+				"images/switch_off.png",
+				"images/leave_approval_normal.png",
+				"images/checkbox_no.png",
+				"images/leave_addovertime_normal.png",
+				"images/addbigf.png",
+				"images/leave_addovertime_click.png",
+				"images/feedback_pressed.png",
+				"images/signback.png",
+				"images/littleredpoint.png",
+				"images/folderunread.png",
+				"js/mui.js",
+				"images/feedback_normal.png",
+				"images/ic_yichangxunluo_normal.png",
+				"images/mm_wharfenterprise.png",
+				"images/mm_weixin.png",
+				"images/cruiselog_normal.png",
+				"images/ic_phonebook.png",
+				"images/logo_user.png",
+				"images/wharfwork.png",
+				"images/status4.png",
+				"images/addresslist_normal.png",
+				"images/singbacksubmit_pressed.png",
+				"images/two_code_pressed.png",
+				"images/shape_279.png",
+				"images/address_item.png",
+				"images/leave_no_click.png",
+				"images/personcenter_pressed.png",
+				"images/positioning.png",
+				"images/drawer_shadow.9.png",
+				"images/mm_notice.png",
+				"images/search_normal.png",
+				"images/broken_pic.png",
+				"images/activity_no_normal.png",
+				"images/leave_yes_click.png",
+				"images/wechat_pressed.png",
+				"images/wharfphoto_pressed.png",
+				"images/notes.png",
+				"images/leave_delete_click.png",
+				"images/search_background.png",
+				"images/photograph_pressed.png",
+				"images/forwar_pressed.png",
+				"images/leave_select_click.png",
+				"images/bt_search_pressed.png",
+				"images/two_code_normal.png",
+				"images/icon_video.png",
+				"images/img_cbwzxx_no_record.png",
+				"images/search_bt_normal.png",
+				"images/camera_pressed.png",
+				"images/mm_scheduleadd.png",
+				"images/list_back.png",
+				"images/fileupload_pressed.png",
+				"images/attendace_pressed.png",
+				"images/mmpressed.png",
+				"images/cruiselog_end_normal.png",
+				"images/btn_trash_pressed.png",
+				"images/submit1.png",
+				"images/portdynmicnews_pressed.png",
+				"images/bt_logo_normal.png",
+				"images/atten_pressad.png",
+				"images/activity_no_pressed.png",
+				"images/signin_pressed.png",
+				"images/equipment_img.png",
+				"images/add_clock_pressed.png",
+				"images/signin.png",
+				"images/leaveandovertime_normal.png",
+				"images/status3.png",
+				"images/doc.png",
+				"images/userselect_pressed.png",
+				"images/submit1_pressed.png",
+				"images/ic_action_search.png",
+				"images/status2.png",
+				"images/bt_supplement_normal.png",
+				"images/overtimeunread.png",
+				"images/officoa_normal.png",
+				"images/signinbutton.png",
+				"images/fileunread.png",
+				"images/fragment_title_bottom.png",
+				"images/leave_submit_normal.png",
+				"images/file_normal.png",
+				"images/image_state_1.png",
+				"images/btn_add_normal.png",
+				"images/add_clock_normal.png",
+				"images/ic_action_refresh.png",
+				"images/addbig.png",
+				"images/userselect.png",
+				"images/addbig_pressed.png",
+				"images/portdynmicnews_normal.png",
+				"images/icon_quandu.png",
+				"images/back_pressed.png",
+				"images/weiwancheng.png",
+				"images/address_head.png",
+				"images/singinsubmit_normal.png",
+				"images/schedule_pressed.png",
+				"images/mm_illegalevidence.png",
+				"images/leave_apply_pressed.png",
+				"images/leavestatus2.png",
+				"images/title_backgrundmenu.png",
+				"images/atten_pressedback.png",
+				"images/leave_img.png",
+				"images/mm_allowance.png",
+				"images/notifyunread.png",
+				"css/mui.css",
+				"images/tel_normal.png",
+				"images/cruiselog_pressed.png",
+				"images/btn_add_pressed.png",
+				"images/menu_click.png",
+				"images/clear_pressed.png",
+				"images/bt_logo_pressed.png",
+				"images/icon_quandu_pressed.png",
+				"images/leave_addtravel_normal.png",
+				"images/mm_acknowledge.png",
+				"images/sms_normal.png",
+				"images/checkbox_yes.png",
+				"images/camera_normal.png",
+				"images/knowledge_text.png",
+				"images/treated.png",
+				"images/fileupload_cancel_pressed.png",
+				"images/attendace_normal.png",
+				"images/status1.png",
+				"images/tel_normal_pressed.png",
+				"images/leave_send_normal.png",
+				"images/leave_leave.png",
+				"images/mm_portdynamic.png",
+				"images/schedule_append_pressed.png",
+				"images/time_out.png",
+				"images/fileupload_normal.png",
+				"images/mm_allowancecheck.png",
+				"images/ic_query.png",
+				"images/ic_mobileoffice.png",
+				"images/leave_all_pressed.png",
+				"images/update_pressed.png",
+				"images/mm_shipillegalcheck.png",
+				"images/leave_all_normal.png",
+				"images/mm_dangerousgoodsjobcheck.png",
+				"images/wharfphoto_normal.png",
+				"images/schedule_append_normal.png",
+				"images/mm_crewinfor.png",
+				"images/leave_status3.png"
+			]
+		}
+	}
+}

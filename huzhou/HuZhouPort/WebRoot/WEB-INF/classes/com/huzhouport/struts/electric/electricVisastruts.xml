@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="electricVisa" extends="cement-interceptor"
+		namespace="/">
+
+		<!-- 查询信息 -->
+		<action name="showElectricVisaInfo"
+			class="com.huzhouport.electric.action.ElectricVisaAction" method="showElectricVisaInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 查询信息 -->
+		<action name="showElectricVisaInfoAD"
+			class="com.huzhouport.electric.action.ElectricVisaAction" method="showElectricVisaInfoAD">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 增加 -->
+		<action name="addElectricVisaInfo"
+			class="com.huzhouport.electric.action.ElectricVisaAction" method="addElectricVisaInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 按ID-->
+		<action name="showElectricVisaID"
+			class="com.huzhouport.electric.action.ElectricVisaAction" method="showElectricVisaID">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="updateElectricVisaInfo"
+			class="com.huzhouport.electric.action.ElectricVisaAction" method="updateElectricVisaInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="updateElectircVisaByAdInfo"
+			class="com.huzhouport.electric.action.ElectricVisaAction" method="updateElectircVisaByAdInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+
+</struts>    

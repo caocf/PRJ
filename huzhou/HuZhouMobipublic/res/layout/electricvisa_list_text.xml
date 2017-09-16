@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     android:stretchColumns="0" 
+    android:shrinkColumns="0"
+    android:paddingBottom="5dp"
+     android:paddingTop="5dp"
+      android:paddingLeft="10dp"
+       android:paddingRight="10dp">
+
+   <!--  android:paddingBottom="5dp"
+     android:paddingTop="5dp"
+      android:paddingLeft="10dp" -->
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/electricvisa_list_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:textSize="16sp"
+             />
+
+        <TextView
+            android:id="@+id/electricvisa_list_text_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:textSize="14sp"
+             />
+         </TableRow>
+          <TableRow 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <TextView
+            android:id="@+id/electricvisa_list_text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:textSize="14sp"
+             />
+              <ImageView
+            android:id="@+id/schedule_addImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+           
+          />
+       <!--   <TextView
+            android:id="@+id/electricvisa_list_text_visaStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            />  -->
+           <!-- android:gravity="right|center_vertical"
+             android:padding="6dp"
+            android:layout_margin="2dp"
+            android:textSize="18sp"  -->
+             
+          
+    </TableRow>
+
+</TableLayout>
+

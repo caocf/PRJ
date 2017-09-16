@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+
+
+   <bean id="equipmentdao" class="com.huzhouport.equipment.dao.impl.DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>	
+  
+
+	<bean id="equipmentServer" class="com.huzhouport.equipment.service.impl.EquipmentServerImpl">
+		<property name="dao" ref="equipmentdao"></property>
+	</bean>
+	
+	
+<bean name="EquipmentAction" class="com.huzhouport.equipment.action.EquipmentAction"   scope="prototype" >
+		<property name="equipmentServer" ref="equipmentServer"></property>
+	   <property name="logsaveserver" ref="logsaveserver"></property>
+	</bean> 
+
+
+
+
+</beans>

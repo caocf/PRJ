@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+<package name="cruiselog" extends="cement-interceptor" namespace="/">
+   	 <!-- 显示列表ajax js-->
+   		<action name="showCruiseLog" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="showCruiseLog">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 搜索显示列表ajax js-->
+   		<action name="selectCruiseLog" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="selectCruiseLog">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<!-- 查看列表ajax js-->
+   		<action name="showCruiseLogAndIllegal" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="showCruiseLogAndIllegal">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   			<!-- 显示地图-->
+   		<action name="showMap" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="showMap">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<!-- 显示列表 手机端 未完成-->
+   		<action name="showCruiseLogUnfinish" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="showCruiseLogUnfinish">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 显示列表 手机端 完成-->
+   		<action name="showCruiseLogFinish" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="showCruiseLogFinish">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<!-- 显示列表 手机端 未完成 查找-->
+   		<action name="selectCruiseLogUnfinish" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="selectCruiseLogUnfinish">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 显示列表 手机端 完成 查找-->
+   		<action name="selectCruiseLogFinish" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="selectCruiseLogFinish">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 新建   违章id   手机端 完成 查找-->
+   		<action name="showCruiseLogIllegalList" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="showCruiseLogIllegalList">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   			<!-- 新建 -->
+   		<action name="newCruiseLog" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="newCruiseLog">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 修改 -->
+   			<action name="updateCruiseLog" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="updateCruiseLog">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 地址的保存 -->
+   			<action name="cruiseLoglocation" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="cruiseLoglocation">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 	
+   		<!-- 修改状态 -->
+   			<action name="updateCruiseLogByID" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="updateCruiseLogByID">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		<action name="findIssuesByPid" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="findIssuesByPid">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="findChannelsByType" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="findChannelsByType">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="commitCruise" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="commitCruise">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="commitIssue" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="commitIssue">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="updateCruise" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="updateCruise">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="findRecordsByUserid" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="findRecordsByUserid">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<action name="findIssuesByRid" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="findIssuesByRid">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		<action name="findEvidenceByIssueID" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="findEvidenceByIssueID">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		<action name="updateIssue" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="updateIssue">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		<action name="deleteIssue" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="deleteIssue">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		<action name="findIssuesByUser" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="findIssuesByUser">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		<action name="findCruiseToolsByTip" class="com.huzhouport.cruiselog.action.CruiseLogAction"  method="findCruiseToolsByTip">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+	
+   </package></struts>

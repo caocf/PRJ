@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<style>
+			p{
+				margin:0px 20px !important;
+				color: #000 !important;
+			}
+			.mui-table-view-cell p {
+				float: left;
+			}
+			#content{
+				background-color: #ffffff !important;
+				padding: 10px;
+			}
+			img{
+				max-width: 90%;
+			}
+		</style>
+		<!--<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>-->
+		<!--<script type="text/javascript" src="http://malsup.github.com/chili-1.7.pack.js"></script>-->
+		<!--<script type="text/javascript" src="http://malsup.github.com/jquery.media.js"></script>-->
+		<!--<script type="text/javascript" src="http://jquery.malsup.com/jquery.metadata.js"></script>-->
+		<!--<script type="text/javascript">-->
+            <!--$('a .media').media({width:500, height:400});-->
+		<!--</script>-->
+	</head>
+
+	<body>
+		<div class="mui-content" id="content">
+		</div>
+		<script src="../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.ready(function(){
+                var u = localStorage.paurl
+				console.log(u);
+                mui.ajax({
+                    type:"GET",
+                    url:"../wechat/queryDetail.form",
+                    async:false,
+                    timeout:30000,
+                    data:{
+                        url:u
+                    },
+                    success:function(data){
+                        if(data.resultCode.code == 1){
+                           document.getElementById("content").innerHTML = data.data;
+                        }
+                    },
+                    error:function(xhr,type,errorThrown){
+                        if(type == "timeout"){
+                            mui.toast("网络连接超时，请检查网络链接!");
+                        }
+                        mui.toast("query error"+JSON.stringify(xhr));
+                    }
+                });
+			});
+		</script>
+	</body>
+
+</html>

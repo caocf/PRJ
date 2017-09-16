@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/addresslist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_alignParentLeft="true" 
+        android:layout_toLeftOf="@+id/addresslist_tellphone"
+        android:layout_marginBottom="2dp"
+        android:paddingTop="10dp"/>
+
+    <ImageButton
+        android:id="@+id/addresslist_tellphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent"
+        android:src="@drawable/tel"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/addresslist_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/addresslist_name"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/addresslist_name"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textAppearance="?android:textAppearanceSmall" 
+        android:layout_toLeftOf="@id/addresslist_tellphone"
+         android:layout_alignParentLeft="true" 
+         android:paddingBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/addresslist_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

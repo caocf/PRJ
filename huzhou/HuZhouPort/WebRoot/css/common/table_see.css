@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+.table_see {
+	margin: 0;
+	padding:0;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.table_see td {
+	margin: 0;
+	padding: 10px 0 10px 10px;
+	color: #323944
+}
+
+#agreereason {
+	maigin: 0;
+	padding: 0 5px;
+	width: 646px;
+	min-height: 100px;
+	height: auto;
+	line-height: 20px;
+	color:#ccc
+}
+
+#submit_div {
+	margin: 0 0 0 86px;
+	padding: 0;
+}
+#submit_div2 {
+	margin: 0 0 10px 10px;
+	padding: 0;
+}

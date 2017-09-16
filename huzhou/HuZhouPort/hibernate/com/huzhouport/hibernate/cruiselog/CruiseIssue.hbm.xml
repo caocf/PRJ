@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+    <class name="com.huzhouport.cruiselog.model.CruiseIssue" table="cruise_issue" >
+       <id name="id" column="id" >
+            <generator class="increment"></generator>
+        </id>
+        <property name="type" column="type" ></property>
+        <property name="leftorright" column="leftorright" ></property>
+        <property name="channelid" column="channelid" ></property>
+        <property name="recordid" column="recordid" ></property>
+         <property name="kz" column="kz" ></property>
+        <property name="mark" column="mark" ></property>
+         <property name="uptime" column="uptime" ></property>
+    </class>
+    
+</hibernate-mapping>

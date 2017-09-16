@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<style>
+			p {
+				color: initial;
+			}
+			a{
+				color: initial;
+			}
+		</style>
+	</head>
+
+	<body style="background: transparent;">
+
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">港航动态</h1>
+		</header>
+		<div class="mui-content" id="content" style="background-color: transparent;margin: 10px;">
+			
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function() {
+				mui.back = function() {
+					plus.webview.currentWebview().hide();
+				}
+			});
+			window.addEventListener("toDetail", function(event) {
+				var param = event.detail.param;
+//				console.log(param);
+				app.queryPortDynmicNewsDetail(param, callback);
+			});
+			var callback = function(data) {
+//				console.log(JSON.stringify(data.modelPortDynmicNews.contenct));
+				document.getElementById("content").innerHTML = data.modelPortDynmicNews.contenct
+			};
+		</script>
+	</body>
+
+</html>

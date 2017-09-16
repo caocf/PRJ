@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<!-- 标题栏 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center"
+        android:onClick="onViewClick">
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="0dp"        
+        android:background="@drawable/title_back"
+        android:onClick="onViewClick"/>
+        <TextView 
+            android:id="@+id/law"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="移动巡航"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1" />        
+        </LinearLayout>
+        
+    <!-- 内容-->
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff">   
+    	<TextView 
+    	    android:id="@+id/l1"
+       	android:layout_width="match_parent" 
+        android:layout_height="1dp" 
+        android:background="#d7d7d7"
+        android:layout_marginTop="16dp"/>  
+        <LinearLayout
+            android:id="@+id/l2"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:onClick="onRecordList"
+        android:layout_below="@+id/l1"
+        android:visibility="visible"> 
+        
+          <TextView 
+       	android:layout_width="wrap_content" 
+        android:layout_height="48dp" 
+        android:gravity="center"
+        android:text="巡航日志"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:drawableLeft="@drawable/ic_xunhangrizhi"
+        android:drawablePadding="16dp"
+        /> 
+        <TextView 
+       	android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="1"
+        android:gravity="center"/>
+        <ImageButton 
+            android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_more" />  
+        </LinearLayout> 
+        <TextView 
+            android:id="@+id/l3"
+       	android:layout_width="match_parent" 
+        android:layout_height="1dp" 
+        android:background="#d7d7d7"
+        android:layout_below="@+id/l2"/>  
+        <LinearLayout
+            android:id="@+id/l4"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:layout_below="@+id/l3"
+        android:onClick="onIssueList"> 
+        
+          <TextView 
+       	android:layout_width="wrap_content" 
+        android:layout_height="48dp" 
+        android:gravity="center"
+        android:text="发现问题"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:drawableLeft="@drawable/ic_faxianwenti"
+        android:drawablePadding="16dp"
+        /> 
+        <TextView 
+       	android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="1"
+        android:gravity="center"/>
+        <ImageButton 
+            android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_more" />  
+        </LinearLayout> 
+         <TextView 
+             android:id="@+id/l5"
+       	android:layout_width="match_parent" 
+        android:layout_height="1dp" 
+        android:background="#d7d7d7"
+        android:layout_below="@+id/l4"/> 
+         <LinearLayout
+             android:id="@+id/newtask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:visibility="visible"
+        android:layout_below="@+id/l5"> 
+        <TextView 
+       	android:layout_width="wrap_content" 
+        android:layout_height="48dp" 
+        android:layout_marginLeft="16dp"
+        android:gravity="center"
+        android:text="准备巡航"
+        android:textSize="14sp"
+        android:textColor="#666666"/> 
+         <TextView 
+       	android:layout_width="match_parent" 
+        android:layout_height="1dp" 
+        android:background="#d7d7d7"/> 
+        <LinearLayout
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center"> 
+        
+          <TextView 
+       	android:layout_width="wrap_content" 
+        android:layout_height="48dp" 
+        android:gravity="center"
+        android:text="巡查人员"
+        android:textColor="#333333"/> 
+        <TextView 
+            android:id="@+id/menber"
+       	android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="1"
+        android:gravity="left|center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+        <TextView 
+            android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rectangle_white" 
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="添加+"        
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:onClick="onUserChoose"/>  
+        </LinearLayout> 
+        
+       
+        <TextView 
+            
+       	android:layout_width="match_parent" 
+        android:layout_height="1dp" 
+        android:background="#d7d7d7"/>
+        
+        <LinearLayout
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:paddingLeft="16dp"
+        android:gravity="center"
+        android:focusableInTouchMode="true"> 
+        
+          <TextView 
+       	android:layout_width="wrap_content" 
+        android:layout_height="48dp" 
+        android:gravity="center"
+        android:text="巡航工具"
+        android:textColor="#333333"
+        /> 
+        <TextView 
+            android:id="@+id/ship"
+       	android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_weight="1"
+        android:gravity="left|center"
+        android:background="@null"
+        android:padding="10dp"
+        android:hint="请选择工具"
+        android:onClick="onTools"/> 
+        <ImageButton 
+            android:layout_width="48dp" 
+        android:layout_height="48dp" 
+       	android:src="@drawable/address_jiantou"
+       	android:background="@null"
+       	android:onClick="onTools"/>
+        </LinearLayout>
+       
+  </LinearLayout> 
+  
+   <TextView 
+       android:id="@+id/l6"
+        android:layout_width="match_parent"
+    android:layout_height="0.1dp"
+    android:background="#bebebe"
+    android:layout_below="@+id/newtask"/>
+   <ListView 
+           android:id="@+id/listview"
+       android:layout_width="match_parent"
+  	android:layout_marginBottom="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="60dp"
+    android:background="#ffffff"
+    android:visibility="gone">
+   </ListView>
+
+   <RelativeLayout
+       android:id="@+id/incruise"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/l6"
+       android:background="#ffffff"
+       android:gravity="center"
+       android:padding="20dp"
+       android:visibility="gone" >      
+
+       <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="#ffffff"
+       android:gravity="center"
+       android:id="@+id/r1"
+       android:visibility="visible" > 
+       <ImageView
+           android:id="@+id/cruising"
+           android:layout_width="120dp"
+           android:layout_height="120dp"
+           android:background="@drawable/ic_xunhangzhong"
+           android:layout_centerHorizontal="true"
+           android:layout_centerVertical="true"/>
+
+       <ImageView
+           android:id="@+id/cruising1"
+           android:layout_width="75dp"
+           android:layout_height="75dp"
+           android:src="@drawable/ic_xunhangzhongchuan" 
+           android:layout_centerHorizontal="true"
+           android:layout_centerVertical="true"/>
+         </RelativeLayout>
+       <TextView
+           android:id="@+id/textView1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+	       android:text="您现在正在巡航中..."
+           android:textColor="#666666"
+           android:textSize="16sp"
+           android:layout_marginTop="15dp"
+           android:layout_centerHorizontal="true"
+           android:layout_below="@+id/r1" />
+
+   </RelativeLayout>
+         
+ <Button
+     android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1" 
+            android:layout_gravity="center"
+            android:text="开始巡航"
+            android:padding="16dp"
+            android:background="@drawable/btn_bg"
+            android:textColor="#ffffff"
+            android:onClick="Next"
+            android:layout_below="@+id/incruise"/>
+         
+ </RelativeLayout> 
+  </ScrollView>
+</LinearLayout>

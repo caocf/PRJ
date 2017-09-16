@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.electric.model.FixedTermReport" table="mm_fixedtermreport">
+		<id name="fixedTermID" column="FixedTermID">
+			<generator class="native"></generator>
+		</id>
+		<property name="shipName" column="ShipName"></property>
+		<property name="startingPort" column="StartingPort"></property>
+		<property name="arrivalPort" column="ArrivalPort"></property>
+		<property name="startTime" column="StartTime"></property>
+		<property name="endTime" column="EndTime"></property>
+	</class>
+</hibernate-mapping>

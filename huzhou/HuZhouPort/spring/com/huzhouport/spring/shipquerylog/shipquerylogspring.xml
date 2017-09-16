@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+     <!-- 配置DAO组件 -->
+	<bean id="shipQueryLogDao" class="com.huzhouport.shipquerylog.dao.ShipQueryLogDao">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+
+	<!-- 配置业务逻辑组件 -->
+ 	<bean id="shipQueryLogService" class="com.huzhouport.shipquerylog.service.ShipQueryLogService">
+		<!-- 为业务逻辑组件注入DAO组件 -->
+		<property name="shipQueryLogDao" ref="shipQueryLogDao"></property>
+	</bean>
+
+
+	<!-- 创建userInfoAction实例 -->
+	<bean id="shipQueryLogAction" class="com.huzhouport.shipquerylog.action.ShipQueryLogAction"
+		scope="prototype">
+		<property name="shipQueryLogService" ref="shipQueryLogService"></property>
+		<property name="aisNoService" ref="aisNoService"></property>
+	</bean>
+
+</beans>

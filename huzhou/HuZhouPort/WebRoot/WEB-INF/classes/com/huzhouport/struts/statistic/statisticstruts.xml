@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="statistic" extends="cement-interceptor"
+		namespace="/">
+		<!--违章报表  -->
+		<action name="IllegalReport" class="com.huzhouport.statistic.action.StatisticAction"
+			method="IllegalReport">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--电子报港报表  -->
+		<action name="ReportOfElectReport" class="com.huzhouport.statistic.action.StatisticAction"
+			method="ElectReport">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--电子报港的年分  -->
+		<action name="ElectByYear" class="com.huzhouport.statistic.action.StatisticAction"
+			method="ElectByYear">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--定期签证报表  -->
+		<action name="DateOfFixReport" class="com.huzhouport.statistic.action.StatisticAction"
+			method="DateOfFixReport">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--定期签证的年分  -->
+		<action name="FixByYear" class="com.huzhouport.statistic.action.StatisticAction"
+			method="FixByYear">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--个人-考勤管理报表  -->
+		<action name="DateOfLeaveReport" class="com.huzhouport.statistic.action.StatisticAction"
+			method="DateOfLeaveReport">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--考勤管理的时间段  -->
+		<action name="LeaveByTime" class="com.huzhouport.statistic.action.StatisticAction"
+			method="LeaveByTime">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 个人-考勤管理打印 -->
+		<action name="printPersonData" class="com.huzhouport.statistic.action.StatisticAction"
+			method="printPersonData">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--部门-考勤管理报表  -->
+		<action name="DateOfLeaveReportByDepartment" class="com.huzhouport.statistic.action.StatisticAction"
+			method="DateOfLeaveReportByDepartment">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--油耗的船舶列表  -->
+		<action name="DraftByBoat" class="com.huzhouport.statistic.action.StatisticAction"
+			method="DraftByBoat">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--油耗报表  -->
+		<action name="DateOfDraftReport" class="com.huzhouport.statistic.action.StatisticAction"
+			method="DateOfDraftReport">
+			<result name="success" type="json"/>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!--违章报表  -->
+		<action name="downloadIllegalExcel" class="com.huzhouport.statistic.action.DownloadExcelFile"
+		method="downloadIllegalExcel">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="report.xls"</param>
+				<param name="inputName">downloadIllegalExcel</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!--违章报表图片 -->
+		<action name="ShowIllegalImage" class="com.huzhouport.statistic.action.DownloadExcelFile">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">illegalImage</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--船舶电子报港报表  -->
+		<action name="downloadElectExcel" class="com.huzhouport.statistic.action.DownloadExcelFile"
+		method="downloadElectExcel">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="report2.xls"</param>
+				<param name="inputName">downloadElectExcel</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!--船舶电子报港图片 -->
+		<action name="ShowElectImage" class="com.huzhouport.statistic.action.DownloadExcelFile">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">electImage</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--定期签证报表  -->
+		<action name="downloadFixExcel" class="com.huzhouport.statistic.action.DownloadExcelFile"
+		method="downloadFixExcel">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="report3.xls"</param>
+				<param name="inputName">downloadFixExcel</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!--定期签证图片 -->
+		<action name="ShowFixImage" class="com.huzhouport.statistic.action.DownloadExcelFile">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">fixImage</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--请假加班报表  -->
+		<action name="downloadLeaveExcel" class="com.huzhouport.statistic.action.DownloadExcelFile"
+		method="downloadLeaveExcel">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="report4.xls"</param>
+				<param name="inputName">downloadLeaveExcel</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!--部门考勤表  -->
+		<action name="downloadLeaveByDepartment" class="com.huzhouport.statistic.action.DownloadExcelFile"
+		method="downloadLeaveByDepartment">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="report6.xls"</param>
+				<param name="inputName">downloadLeaveByDepartment</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!--请假加班图片 -->
+		<action name="ShowLeaveImage" class="com.huzhouport.statistic.action.DownloadExcelFile">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">leaveImage</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--部门考勤表图片 -->
+		<action name="ShowLeaveImageByDepartment" class="com.huzhouport.statistic.action.DownloadExcelFile">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">leaveImageByDepartment</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--油耗报表  -->
+		<action name="downloadDraftExcel" class="com.huzhouport.statistic.action.DownloadExcelFile"
+		method="downloadDraftExcel">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="report5.xls"</param>
+				<param name="inputName">downloadDraftExcel</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+		<!--油耗图片 -->
+		<action name="ShowDraftImage" class="com.huzhouport.statistic.action.DownloadExcelFile">
+			<result name="success" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">draftImage</param>
+			</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		</package>
+</struts>    

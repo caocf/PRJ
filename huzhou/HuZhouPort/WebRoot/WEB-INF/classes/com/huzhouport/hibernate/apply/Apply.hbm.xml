@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.apply.model.Apply" table="mm_apply">
+		<id name="preapplyID" column="preapplyID">
+			<generator class="native"></generator>
+		</id>
+		<property name="preapplyType" column="preapplyType"></property>
+		<property name="preapplyContent" column="preapplyContent"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../css/mui.poppicker.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">智慧监控执勤</h1>
+			<a class="  mui-btn-link mui-pull-right" id="solved">已处理情况</a>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					上岗执勤
+					<div id="dutyType" class="mui-switch mui-active">
+						<div class="mui-switch-handle"></div>
+					</div>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-table-view-chevron" id="openDuty">
+				<li class="mui-table-view-cell" id="select_pot">
+					<a class="mui-navigate-right">
+						执勤站点
+						<span style="float:right;margin-right: -30px;" id="potName"> 请选择站点</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					异常情况
+				</li>
+			</ul>
+			<div id="closeDuty" style="text-align: center;padding-top: 45%;display: none;">
+				异常巡逻未开启
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.js" ></script>
+		<script type="text/javascript" src="../js/mui.poppicker.js" ></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				gestureConfig: {
+					doubletap: true
+				},
+				subpages: [{
+					url: 'smart_duty_sub.html',
+					id: 'smart_duty_sub',
+					styles: {
+						top: '200px',
+						bottom: '0px',
+					}
+				}]
+			});
+			var dutyTypeButton = document.getElementById("dutyType");
+			dutyTypeButton.addEventListener("toggle", function(event) {
+				console.log(event.detail.isActive);
+				var isAction = event.detail.isActive;
+				if(isAction) {
+					//开启巡逻
+					document.getElementById("closeDuty").style.display = "none";
+					document.getElementById("openDuty").style.display = "";
+					plus.webview.getWebviewById("smart_duty_sub").show();
+				} else {
+					//关闭巡逻
+					document.getElementById("closeDuty").style.display = "";
+					document.getElementById("openDuty").style.display = "none";
+					plus.webview.getWebviewById("smart_duty_sub").hide();
+				}
+			});
+			var topPicker = new mui.PopPicker();
+			topPicker.setData([{
+				value: "572001",
+				text: "洪桥"
+			}, {
+				value: "572002",
+				text: "南浔"
+			}, {
+				value: "572003",
+				text: "双林"
+			}, {
+				value: "572004",
+				text: "新市"
+			}, {
+				value: "572005",
+				text: "乾元"
+			}, {
+				value: "572006",
+				text: "梅溪"
+			}, {
+				value: "572007",
+				text: "太湖"
+			}, {
+				value: "572008",
+				text: "和云桥"
+			}, {
+				value: "572009",
+				text: "湖州船闸"
+			}]);
+			var callFlush = function(){
+				var contentWebview = null;
+				if(contentWebview == null) {
+					contentWebview = plus.webview.currentWebview().children()[0];
+				}
+				contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+			}
+			document.getElementById("select_pot").addEventListener("tap", function(event) {
+				plus.webview.getWebviewById("smart_duty_sub").hide();
+				topPicker.show(function(item){
+					document.getElementById("potName").innerHTML = item[0].text;
+					localStorage.pot = item[0].text;
+					plus.webview.getWebviewById("smart_duty_sub").show();
+					//callFlush();
+				},false);
+			});
+			document.querySelector('header').addEventListener('doubletap', callFlush);
+			var back = mui.back;
+			mui.back = function(){
+				localStorage.removeItem("pot");
+				back();
+			}
+		</script>
+	</body>
+
+</html>

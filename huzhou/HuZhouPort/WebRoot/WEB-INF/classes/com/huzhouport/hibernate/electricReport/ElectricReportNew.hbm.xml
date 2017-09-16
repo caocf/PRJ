@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象  电子报告主表 创建人：周剑，修改人：沈丹丹
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.electricreport.model.ElectricReportNew" table="mm_Report">
+		<id name="reportID" column="reportID">
+			<generator class="native"></generator>
+		</id>
+		<property name="shipName" column="ShipName"></property>
+		<property name="draft" column="Draft"></property>
+		<property name="shipUser" column="ShipUser"></property>
+		<property name="shipUserName" column="ShipUserName"></property>
+		<property name="estimatedTimeOfArrival" column="EstimatedTimeOfArrival"></property>
+		<property name="toBeDockedAtThePier" column="ToBeDockedAtThePier"></property>
+		<property name="uniti" column="	Uniti"></property>
+		<property name="cargoType" column="CargoType"></property>
+		<property name="cargoNumber" column="CargoNumber"></property>
+		<property name="reportTime" column="ReportTime"></property>
+		<property name="reportKind" column="ReportKind"></property>
+		<property name="startingPort" column="StartingPort"></property>
+		<property name="arrivalPort" column="ArrivalPort"></property>
+		<property name="draftTime" column="DraftTime"></property>
+		<property name="outOrIn" column="OutOrIn"></property>
+		<property name="shipInfo" column="ShipInfo"></property>
+		<property name="prompt" column="Prompt"></property>
+		<property name="abnormal" column="Abnormal"></property>
+		
+	</class>
+</hibernate-mapping>

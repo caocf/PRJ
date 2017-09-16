@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+	<bean id="meetingDao" class="com.meeting.dao.MeetingDao">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>	
+
+	<bean id="meetingService"
+		class="com.meeting.service.MeetingService">
+		<property name="meetingDao" ref="meetingDao"></property>
+	</bean>
+	
+	<bean name="MeetingAction" class="com.meeting.action.MeetingAction"
+		scope="prototype">
+		<property name="meetingService" ref="meetingService"></property>
+		<property name="pushservice" ref="pushservice"></property>
+	</bean>
+</beans>

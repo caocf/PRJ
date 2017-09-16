@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <TableLayout
+        android:id="@+id/cruiselog_titeltable"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/cruiselog_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:contentDescription="@string/back"
+                android:src="@drawable/title_back" />
+
+            <TextView
+                android:id="@+id/cruiselog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/cruiselog_title"
+                android:textColor="#0067ac"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/cruiselog_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:contentDescription="@string/back"
+                android:src="@drawable/title_search" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@+id/cruiselog_titeltable1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:stretchColumns="1"
+        android:visibility="invisible" >
+
+        <ImageButton
+            android:id="@+id/cruiselog_searchtext_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:onClick="Back"
+            android:src="@drawable/title_back" />
+
+        <com.huzhouport.common.util.ClearEditText
+            android:id="@+id/cruiselog_searchtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/cruiselog_searchtext_bt"
+            android:layout_toRightOf="@+id/cruiselog_searchtext_back"
+            android:background="@drawable/leave_select"
+            android:drawableRight="@drawable/clear"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:textSize="16sp" 
+            android:hint="@string/cruiselog_search_hint"/>
+
+        <ImageButton
+            android:id="@+id/cruiselog_searchtext_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/search"
+            android:src="@drawable/le_select" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cruiselog_titeltable"
+        android:paddingBottom="48dp" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/cruiselog_unfinsh"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/grey"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/cruiselog_unfinsh"
+                android:textColor="#333"
+                android:textSize="14sp" >
+            </TextView>
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/cruiselog_listview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cruiselog_unfinsh" >
+            </com.huzhouport.leaveandovertime.MultiListView>
+
+            <TextView
+                android:id="@+id/cruiselog_finsh"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/cruiselog_listview1"
+                android:background="@color/grey"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/cruiselog_finsh"
+                android:textColor="#333"
+                android:textSize="14sp" >
+            </TextView>
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/cruiselog_listview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cruiselog_finsh" >
+            </com.huzhouport.leaveandovertime.MultiListView>
+        </RelativeLayout>
+    </ScrollView>
+
+    <TableLayout
+        android:id="@+id/cruiselog_bottomtiteltable"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey"
+        android:orientation="horizontal"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/cruiselog_new"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:src="@drawable/cruiselog" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

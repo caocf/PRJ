@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lname1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/complainback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" >
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/setup_tousup"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
+    <EditText
+            android:id="@+id/complain"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+             android:layout_marginLeft="15dp"
+             android:layout_marginRight="15dp"
+             android:layout_above="@+id/complain_sub"
+             android:layout_below="@+id/lname1"
+            android:gravity="left|top|center_vertical"
+            android:background="@color/white"
+            android:textSize="17sp" >
+        </EditText>
+    
+
+    <ImageButton
+        android:id="@+id/complain_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#00000000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/imgbt_submit" />
+
+</RelativeLayout>

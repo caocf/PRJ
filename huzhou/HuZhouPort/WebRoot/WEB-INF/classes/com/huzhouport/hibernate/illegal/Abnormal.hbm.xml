@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象 
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.illegal.model.Abnormal" table="mm_abnormal">
+		<id name="aid" column="aid">
+			<generator class="increment" />
+		</id>
+		<!-- 定义其他属性 -->
+		<property name="shipname" column="shipname" not-null="false"></property>
+		<property name="gatename" column="gatename" not-null="false"></property>
+		<property name="abdate" column="abdate" not-null="false"></property>
+		<property name="route" column="route" not-null="false"></property>
+		<property name="AIS" column="AIS" not-null="false"></property>
+		<property name="blacklist" column="blacklist" not-null="false"></property>
+		<property name="arrearage" column="arrearage" not-null="false"></property>
+		<property name="report" column="report" not-null="false"></property>
+		<property name="illegal" column="illegal" not-null="false"></property>
+		<property name="cert" column="cert" not-null="false"></property>
+		<property name="process" column="process" not-null="false"></property>
+		<property name="pass" column="pass" not-null="false"></property>
+		<property name="remark" column="remark" not-null="false"></property>
+		<property name="status" column="status" not-null="false"></property>
+		<property name="shipid" column="shipid" not-null="false"></property>
+	</class>
+</hibernate-mapping>

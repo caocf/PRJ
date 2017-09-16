@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bs_cbjfxx_table"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Light_white"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp" >
+
+    <TableRow
+        android:id="@+id/cbjfxx_tr01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt011"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="left"
+            android:layout_marginRight="5dp"
+            android:layout_span="4"
+            android:textColor="@color/Light_black"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/cbjfxx_tr02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt021"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/bs_cbjfxx_money"
+            android:textColor="@color/text_graycolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt022"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text_graycolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt023"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="10dp"
+            android:text="@string/bs_cbjfxx_money2"
+            android:textColor="@color/text_graycolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt024"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text_graycolor"
+            android:textSize="12sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/cbjfxx_tr03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt031"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/bs_cbjfxx_startday"
+            android:textColor="@color/text_graycolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt032"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text_graycolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt033"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="10dp"
+            android:text="@string/bs_cbjfxx_endday"
+            android:textColor="@color/text_graycolor"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbjfxx_txt034"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text_graycolor"
+            android:textSize="12sp" />
+    </TableRow>
+
+</TableLayout>

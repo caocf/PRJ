@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.aisno.model.AIS" table="gz_edit_aisno">
+		<id name="name" column="shipname">
+			<generator class="assigned" />
+		</id>
+		<property name="num" column="aisnum"></property>
+		<property name="picpath" column="picpath"></property>
+		<property name="picname" column="picname"></property>
+		<property name="adddate" column="adddate"></property>
+		<property name="man" column="man"></property>
+			<property name="checker" column="checker"></property>
+			<property name="modifyflag" column="modifyflag"></property>
+<property name="appflag" column="appflag"></property>
+	</class>
+</hibernate-mapping>

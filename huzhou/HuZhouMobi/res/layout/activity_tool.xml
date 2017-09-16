@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" 
+        android:onClick="onBack"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+         <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back"
+            android:onClick="onBack" >
+        </ImageButton>
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="搜索巡航工具"
+            android:textColor="#666666"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textSize="16sp" >
+        </EditText> 
+         <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="添加"
+            android:textColor="#0067ac"
+            android:textSize="18sp" 
+            android:layout_marginRight="20dp"
+            android:onClick="onAdd">
+        </TextView>        
+    </LinearLayout>    
+	<TextView 
+	    android:layout_width="match_parent"
+            android:layout_height="1dp" 
+            android:background="#d7d7d7"/>
+	
+	<ListView 
+	    android:id="@+id/listview"
+	    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:choiceMode="singleChoice" >
+	</ListView>
+
+</LinearLayout>

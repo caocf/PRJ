@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addresslist_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/electricreport_table"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/electricreport_list_back"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@color/transparent"
+                android:src="@drawable/title_back" />
+
+            <TextView
+                android:id="@+id/electricreport_list_titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/electricreport_list"
+                android:textColor="#0067ac"
+                android:textSize="18sp" >
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/electricreport_list_searchreportadd"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:background="@color/transparent"
+                android:src="@drawable/title_search" />
+
+            <ImageButton
+                android:id="@+id/electricreport_list_addreport"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:background="@color/transparent"
+                android:src="@drawable/title_add" />
+
+            <ImageButton
+                android:id="@+id/electricreport_list_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:contentDescription="@string/search"
+                android:src="@drawable/le_del"
+                android:visibility="gone" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/electricreport_table2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:stretchColumns="1"
+        android:visibility="invisible" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" >
+
+            <com.huzhouport.common.util.ClearEditText
+                android:id="@+id/electricreport_searchtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="5"
+                android:background="@drawable/search_background"
+                android:drawableLeft="@drawable/search_icon"
+                android:drawableRight="@drawable/clear"
+                android:hint="@string/electricvisa_search"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/electricreport_search1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="@string/electricvisa_quxiao" />
+
+            <Button
+                android:id="@+id/electricreport_search2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/electricvisa_search"
+                android:visibility="gone" />
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/electricreport_main_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/electricreport_table" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tableRow16"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/electricreport_main_list"
+        android:background="#d8d8d8" />
+
+    <LinearLayout
+        android:id="@+id/electricreport_addL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/electricreport_table"
+        android:background="#f7f7f7"
+        android:baselineAligned="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/electricreport_addL_kind1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/bigbutton"
+            android:text="@string/electricreportnew_kind1"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/electricreport_addL_kind2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+             android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bigbutton"
+            android:text="@string/electricreportnew_kind2"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.publicuser.model.WharfBinding" table="mm_WharfBinding">
+		<id name="wharfId" column="WharfId">
+			<generator class="native"></generator>
+		</id>
+		<property name="wharfNum" column="WharfNum"></property>
+		<property name="wharfUser" column="WharfUser"></property>
+		<property name="bindingTime" column="BindingTime"></property>
+		<property name="wharfNumber" column="WharfNumber"></property>
+		<property name="wharfWorkNorm" column="WharfWorkNorm"></property>
+		<property name="wharfWorkSurplus" column="WharfWorkSurplus"></property>
+	</class>
+</hibernate-mapping>

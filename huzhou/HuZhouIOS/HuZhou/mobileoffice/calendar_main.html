@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>日程安排</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.css">
+		<link rel="stylesheet" href="../css/calendar.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">日程安排</h1>
+					<a class="  mui-btn-link mui-pull-right" id="add"><img id="add_img" src="../images/title_add_normal.png" style="width: 44px;" /></a>
+				</header>
+		<div class="mui-content" id="content">
+		</div>
+		<div id="showEvent">
+			<table id="EventList" cellpadding="0" cellspacing="0">
+				<col width="7%" />
+				<col width="13%" />
+				<col width="10%" />
+				<col width="15%" />
+				<col width="15%" />
+				<col width="10%" />
+				<col width="10%" />
+				<col width="20%" />
+				<tr>
+					<th>
+						编号
+					</th>
+					<th>
+						日程名称
+					</th>
+					<th>
+						日程类型
+					</th>
+					<th>
+						时间
+					</th>
+					<th>
+						地点
+					</th>
+					<th>
+						发起人
+					</th>
+					<!--<th>
+						附件
+					</th>-->
+					<th>
+						<label class="operation">操作</label>
+					</th>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" src="../js/calendar.js" ></script>
+	<script type="text/javascript" src="../js/app.js" ></script>
+	<script type="text/javascript">//启用双击监听
+			mui.init({
+				//设置监听
+				gestureConfig: {
+					tap: true,
+					doubletap: false,
+					longtap: false,
+					swipe: false,
+					drag: true,
+					hold: true,
+					release: true
+				}
+			});
+			mui.ready(function(){
+				var date = new Date();
+				var year = date.getFullYear();
+				var month = date.getMonth() + 1;
+				var day  = date.getDate();
+				var dateobj = {year:year,month:month,day:day};
+				calenderCallback(dateobj);
+			});
+			document.getElementById("add").addEventListener("hold", function() {
+				document.getElementById("add_img").src = "../images/title_add_pressed.png";
+			});
+			document.getElementById("add").addEventListener("release", function() {
+				document.getElementById("add_img").src = "../images/title_add_normal.png";
+			});
+			document.getElementById("add").addEventListener("tap",function(){
+				mui.openWindow("calender_add.html","calender_add");
+			});
+
+			var appCallback = function(data) {
+				if(data.errorInfo != null) {
+					mui.toast(data.errorInfo);
+				} else {
+					showEventTable(data.list);
+				}
+			}
+			var calendarDetail = null;
+			var showEventTable = function(list) {
+//				console.log(JSON.stringify(list));
+				var eventList = document.getElementById("EventList");
+//				eventList.innerHTML = "<col width=\"7%\"><col width=\"13%\"><col width=\"10%\"><col width=\"15%\"><col width=\"15%\"><col width=\"10%\"><col width=\"10%\"><col width=\"20%\"><tr><th>编号</th><th>日程名称</th><th>日程类型</th><th>时间</th><th>地点</th><th>发起人</th><th>附件</th><th><label class=\"operation\">操作</label></th></tr>";
+				eventList.innerHTML = "<col width=\"7%\"><col width=\"13%\"><col width=\"10%\"><col width=\"15%\"><col width=\"15%\"><col width=\"10%\"><col width=\"10%\"><col width=\"20%\"><tr><th>编号</th><th>日程名称</th><th>日程类型</th><th>时间</th><th>地点</th><th>发起人</th><th><label class=\"operation\">操作</label></th></tr>";
+				for(var i = 0; i < list.length; i++) {
+//					console.log(JSON.stringify(list[i]));
+					var newTr = document.createElement("tr");
+					newTr.className = "addTr";
+					var td1 = document.createElement("td");
+					var td2 = document.createElement("td");
+					var td3 = document.createElement("td");
+					var td4 = document.createElement("td");
+					var td5 = document.createElement("td");
+					var td6 = document.createElement("td");
+					var td7 = document.createElement("td");
+					var td8 = document.createElement("td");
+			
+					td1.innerHTML = i + 1;
+					td2.innerHTML = list[i][0].eventName;
+					td3.innerHTML = list[i][3].scheduleKindName;
+					td4.innerHTML = list[i][0].eventTime.substr(0, 19);
+					td5.innerHTML = list[i][0].eventLocation == null ? "" : list[i][0].eventLocation;
+					td6.innerHTML = list[i][4].name
+//					td7.innerHTML = list[i]
+					td6.className = "fu" + list[i][0].eventId;
+//					td7.className = "eventId" + list[i][0].eventId;
+					td8.innerHTML = "查看";
+					td8.style.color = "blue";
+					td8.ref = JSON.stringify(list[i]);
+					td8.addEventListener("tap",function(event){
+						mui.fire(calendarDetail,"toDetail",{param:this.ref});
+						calendarDetail.show();
+					});
+			
+					newTr.appendChild(td1);
+					newTr.appendChild(td2);
+					newTr.appendChild(td3);
+					newTr.appendChild(td4);
+					newTr.appendChild(td5);
+					newTr.appendChild(td6);
+//					newTr.appendChild(td7);
+					newTr.appendChild(td8);
+					
+					eventList.appendChild(newTr);
+				}
+			};
+			var calenderCallback = function(date) {
+				app.showEventListByTime(date, appCallback);
+			};
+			
+			var parentNode = document.getElementById("content");
+			var cld = new Calendar(parentNode, {
+				el: "box",
+				value: "",
+				fn: calenderCallback
+			});
+			
+			
+			mui.plusReady(function() {
+				calendarDetail = plus.webview.create("calendar_detail.html","calendar_detail");
+			});
+	</script>
+
+</html>

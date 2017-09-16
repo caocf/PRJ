@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+<!--         <item >个人中心</item>  -->
+        <item >移动办公</item>
+        <item >业务处理</item>
+        <item >综合查询</item>
+        <item >通讯录</item>
+        <item >设置</item>
+    </string-array>
+    
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+<!--         <item>@drawable/drawer_logo</item> -->
+        <item>@drawable/ic_mobileoffice</item>
+        <item>@drawable/ic_bussinessprocess</item>
+        <item>@drawable/ic_query</item>
+        <item>@drawable/ic_phonebook</item>
+        <item>@drawable/ic_setting</item>
+    </array>
+</resources>

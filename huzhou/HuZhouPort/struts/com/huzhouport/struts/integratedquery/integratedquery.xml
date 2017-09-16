@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="data" extends="cement-interceptor" namespace="/">
+		<!-- 手机端获取数据   -->
+		<action name="GetAndPostDate" class="com.huzhouport.integratedquery.action.GetDate"
+		   method="GetDateFromPhone">
+			<result name="success" type="json" />
+			<result name="error" type="json"/>
+		</action>
+		<!-- 航运企业-->
+		<action name="GetShipingCompanies" class="com.huzhouport.integratedquery.action.GetDate"
+			method="GetShipingCompanies">
+			<result name="success" type="json" />
+			<result name="error" type="json"/>
+		</action>
+		<!-- webservice-黑名单等提示-->
+		<action name="CheckShipResult" class="com.huzhouport.integratedquery.action.Webservice"
+			method="CheckShipResult">
+			<result name="success" type="json" />
+			<result name="error" type="json"/>
+		</action>
+		<!-- webservice-黑名单等通知公告-->
+		<action name="CheckShipResultByList" class="com.huzhouport.integratedquery.action.Webservice"
+			method="CheckShipResultByList">
+			<result name="success" type="json" />
+			<result name="error" type="json"/>
+		</action>
+		
+		<action name="queryVoilateShip" class="com.huzhouport.integratedquery.action.GetDate"
+			method="queryVoilateShip">
+			<result name="success" type="json" />
+			<result name="error" type="json"/>
+		</action>
+		
+		
+		</package>
+</struts>    

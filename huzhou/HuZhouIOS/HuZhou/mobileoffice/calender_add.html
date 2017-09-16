@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/mui.picker.min.css" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
+
+		<style>
+			tr {
+				border-bottom: gainsboro solid 1px;
+			}
+			
+			.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
+			
+			* {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">添加日程</h1>
+			<a class="mui-btn-link mui-pull-right" id="done"><img id="add_img" src="../images/leave_submit_normal.png" style="width: 44px;" /></a>
+		
+		</header>
+
+		<div class="mui-content">
+			<table>
+				<tr>
+					<td>参加人员</td>
+					<td><span  id="liseOfUserName"></span>
+						<label id="select_user"><img src="../images/addbigf.png" style="max-width: 30px;"/></label>
+						<input type="hidden" value="" name="scheduleEventUser.eventUserList" id="listOfUser" />
+					</td>
+				</tr>
+				<tr>
+					<td>日程名称</td>
+					<td><input name="scheduleEvent.eventName" type="text" id="eventName" class="mui-input" placeholder="请输入日程名称"/></td>
+				</tr>
+				<tr>
+					<td>起始时间</td>
+					<td>
+						<button id='date_input' data-options='{}' class="btn mui-btn mui-btn-block">选择日期时间</button>
+					</td>
+				</tr>
+				<tr>
+					<td>地点</td>
+					<td><input name="scheduleEvent.eventLocation" type="text" id="evetnLocation" class="mui-input"/></td>
+				</tr>
+				<tr>
+					<td>类别</td>
+					<td>
+						<button id='showUserPicker' class="mui-btn mui-btn-block" type='button'>选择类别</button>
+						<input type="hidden" id="eventKind" name="scheduleEvent.eventKind" />
+					</td>
+				</tr>
+				<tr>
+					<td>内容</td>
+					<td><input name="scheduleEvent.eventcontent" id="eventContent" type="text" class="mui-input" placeholder="请输入内容"/></td>
+				</tr>
+				<tr>
+					<td>
+						<select name="scheduleEventUser.eventRemind" id="eventRemind">
+							<option value="0">无提醒</option>
+							<option value="5">5分钟</option>
+							<option value="10">10分钟</option>
+							<option selected="selected" value="15">15分钟</option>
+							<option value="30">30分钟</option>
+							<option value="60">1小时</option>
+							<option value="120">2小时</option>
+							<option value="240">4小时</option>
+							<option value="720">12小时</option>
+							<option value="1440">24小时</option>
+						</select>
+					</td>
+					<td>
+						<select name="scheduleEventUser.eventRemindType" id="eventRemindType">
+							<option selected="selected" value="1">音乐</option>
+							<option value="2">震动</option>
+							<option value="3">音乐和震动</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript" src="../js/mui.picker.min.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			var userPicker = new mui.PopPicker();
+			app.queryEventKindList(function(data) {
+//				console.log(JSON.stringify(data));
+				userPicker.setData(data);
+			});
+			var state = app.getState();
+			document.getElementById("liseOfUserName").innerHTML = state.user.name;
+			var plusReady = function() {}
+			if(window.plus) {
+				plusReady();
+			} else {
+				document.addEventListener("plusready", plusReady, false);
+			}
+
+			var pickDate = function() {
+				var optionsJson = this.getAttribute('data-options') || '{}';
+				var options = JSON.parse(optionsJson);
+				var id = this.getAttribute('id');
+
+				var picker = new mui.DtPicker(options);
+				picker.show(function(rs) {
+//					console.log(rs.text);
+					document.getElementById("date_input").innerHTML = rs.text;
+				});
+			};
+			document.getElementById("date_input").addEventListener("tap", pickDate);
+			document.getElementById("showUserPicker").addEventListener("tap", function(event) {
+//				console.log(1);
+				userPicker.show(function(item) {
+//					console.log(JSON.stringify(item));
+					document.getElementById("showUserPicker").innerHTML = item[0].text;
+					document.getElementById("eventKind").value = item[0].value;
+				}, false);
+			});
+			document.getElementById("select_user").addEventListener("tap",function(event){
+//				console.log(1);
+				mui.openWindow("userSelect.html","user_select");
+			});
+			window.addEventListener("addUser",function(event){
+//				console.log(JSON.stringify(event));
+				document.getElementById("listOfUser").value = event.detail.codes;
+				document.getElementById("liseOfUserName").innerHTML = state.user.name +","+ event.detail.values;
+				
+			});
+			var addScheduleEventCallBack =  function(data){
+				if(data == 1){
+					mui.toast("添加成功！");
+				}	
+				plus.webview.currentWebview().close();
+				plus.webview.getWebviewById("calendar_main").show();
+				
+			}
+			document.getElementById("done").addEventListener("tap",function(event){
+				var scheduleEvent = {};
+				scheduleEvent.eName = document.getElementById("eventName").value;
+				scheduleEvent.uList = document.getElementById("listOfUser").value;
+				scheduleEvent.dateTime = document.getElementById("date_input").innerHTML;
+				scheduleEvent.address = document.getElementById("evetnLocation").value;
+				scheduleEvent.kind = document.getElementById("eventKind").value;
+				scheduleEvent.content = document.getElementById("eventContent").value;
+				scheduleEvent.time = document.getElementById("eventRemind").value;
+				scheduleEvent.remindType = document.getElementById("eventRemindType").value;
+				app.addEvent(scheduleEvent,addScheduleEventCallBack);
+			});
+		</script>
+	</body>
+
+</html>

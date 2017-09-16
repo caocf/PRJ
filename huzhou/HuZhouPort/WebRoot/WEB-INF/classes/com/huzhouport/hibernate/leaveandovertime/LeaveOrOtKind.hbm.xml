@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+   <class name="com.huzhouport.leaveandovertime.model.LeaveOrOtKind" table="mm_LeaveOrOtKind" >
+        <id name="kindID" column="KindID" >
+            <generator class="native"></generator>
+        </id>
+ 
+        <property name="kindName" column="KindName" ></property>
+
+        <property name="kindType" column="KindType" ></property>
+
+        <property name="DefauleDate" column="DefauleDate" ></property>
+
+    
+   
+    
+    
+    </class>
+</hibernate-mapping>

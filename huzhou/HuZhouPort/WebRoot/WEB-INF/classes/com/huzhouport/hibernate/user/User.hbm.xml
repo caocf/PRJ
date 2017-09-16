@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.user.model.User" table="mm_User">
+		<id name="userId" column="UserId">
+			<generator class="native"></generator>
+		</id>
+		<property name="userName" column="UserName"></property>
+		<property name="name" column="Name"></property>
+		<property name="password" column="Password"></property>
+		<property name="partOfDepartment" column="PartOfDepartment"></property>
+		<property name="partOfRole" column="PartOfRole"></property>
+		<property name="tel" column="Tel"></property>
+		<property name="email" column="Email"></property>
+		<property name="lawId" column="LawID"></property>
+		<property name="partOfPost" column="PartOfPost"></property>
+		<property name="userStatus" column="UserStatus"></property>
+		<property name="order" column="Orderi"></property>
+	</class>
+</hibernate-mapping>

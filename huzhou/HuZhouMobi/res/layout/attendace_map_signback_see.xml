@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_background2" >
+
+        <ImageButton
+            android:id="@+id/attendace_signback_inmap"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/attendace_signback_inmap_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/attendace_sign_in"
+            android:textColor="#fff"
+            android:textSize="18sp" >
+        </TextView>
+
+        
+    </FrameLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/attendace_signback_inmap_bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/table1"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/frameLayout1" >
+
+    </com.baidu.mapapi.map.MapView>
+
+<TableRow
+    android:id="@+id/table1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:background="@color/grey" >
+
+    <TextView
+        android:id="@+id/attendace_signback_localtextsignin"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/attendace_signback_datesignin"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:textSize="14sp" />
+</TableRow>
+
+</RelativeLayout>

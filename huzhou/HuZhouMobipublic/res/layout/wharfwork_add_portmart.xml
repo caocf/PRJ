@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/wharfwork_add_portmart_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" 
+        android:focusableInTouchMode="true">
+
+        <ImageButton
+            android:id="@+id/wharfwork_add_portmart_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/wharfwork_add_portmart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/wharfwork_add_portmart_back"
+            android:gravity="fill_vertical"
+            android:text="@string/wharfwork_add_portmart"
+            android:textColor="#0067ac"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+         <TextView
+                android:id="@+id/wharfwork_add_portmart_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/wharfwork_add_portmart_titleR"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" 
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:text="@string/wharfwork_add_portmart_tv1"/>
+    
+         <TextView
+                android:id="@+id/wharfwork_add_portmart_tx"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_portmart_tv1"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+     <TextView
+                android:id="@+id/wharfwork_add_portmart_tv2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/wharfwork_add_portmart_tx"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" 
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:text="@string/wharfwork_add_portmart_tv2"/>
+     <TextView
+                android:id="@+id/wharfwork_add_portmart_tx1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_portmart_tv2"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+     
+    
+    
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/addresslist_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+   <RelativeLayout
+        android:id="@+id/leaveandovertime_newlist_addkind_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/leaveandovertime_newlist_addkind_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/leaveandovertime_newlist_addkind_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/leaveandovertime_newlist_addkind_back"
+            android:gravity="fill_vertical"
+            android:text="@string/leaveandovertime_newlist_kindNameselect"
+            android:textColor="#0067ac"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+ 
+  <ListView
+        android:id="@+id/leaveandovertime_newlist_addkind_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/leaveandovertime_newlist_addkind_titleR"
+        />
+
+    
+    
+</RelativeLayout>

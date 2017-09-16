@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.css">
+	</head>
+
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron">
+					
+				</ul>
+			</div>
+		</div> 
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js" ></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			var detail = null;
+			var callback = function(data,type){
+				var dataList = data.list;
+				var table = document.body.querySelector('.mui-table-view');
+//				var cells = document.body.querySelectorAll('.mui-table-view-cell');
+				if(type == 1){
+					table.innerHTML ="";
+				}
+				if(dataList.length == 0 && type == 1){
+					table.innerHTML = "未找到相符数据";
+				}
+//				console.log(JSON.stringify(dataList));
+				for (var i = 0; i < dataList.length; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						var str = "<div class='mui-table-cell mui-col-xs-10' style='word-wrap:break-word!important;word-break:break-all;white-space:initial;'>"+ dataList[i].shipname +"</div><br/>";
+						str += "<div class='mui-table-cell mui-col-xs-2 mui-text-left'><span class='mui-h5'>"+dataList[i].abdate+"</span></div>"
+						li.innerHTML = '<a class="mui-navigate-right">' +str+ '</a>';
+						li.ref = JSON.stringify(dataList[i]);
+						li.addEventListener("tap",function(event){
+							mui.fire(detail,"toDetail",{param:this.ref});
+							detail.show();
+						});
+						table.appendChild(li);
+				}
+			}
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+//					var table = document.body.querySelector('.mui-table-view');
+//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//					for (var i = cells.length, len = i + 3; i < len; i++) {
+//						var li = document.createElement('li');
+//						li.className = 'mui-table-view-cell';
+//						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+//						//下拉刷新，新纪录插到最前面；
+//						table.insertBefore(li, table.firstChild);
+//					}
+					count = 1;
+					app.abNormalListByStatusAndPot(count,10,callback,1,0);
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1000);
+				setTimeout(pulldownRefresh,60*1000);
+			}
+			var count = 0;
+			var pages = 400;
+			
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					count++;
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh(false); //参数为true代表没有更多数据了。
+//					var table = document.body.querySelector('.mui-table-view');
+//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//					for (var i = cells.length, len = i + 20; i < len; i++) {
+//						var li = document.createElement('li');
+//						li.className = 'mui-table-view-cell';
+//						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+//						table.appendChild(li);
+					app.abNormalListByStatusAndPot(count,10,callback,0,0);
+//					}
+				}, 1000);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					detail = plus.webview.create("smart_duty_detail.html","smart_duty_detail");
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/electricreportnew_addport_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:focusableInTouchMode="true" >
+
+        <ImageButton
+            android:id="@+id/electricreportnew_addport_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/electricreportnew_addport_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/electricreportnew_addport_back"
+            android:gravity="fill_vertical"
+            android:text="@string/electricreportnew_addport_title"
+            android:textColor="#0067ac"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/electricreportnew_addport_titleR" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.huzhouport.knowledge.MultiListView
+                android:id="@+id/electricreportnew_addport_viewlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/electricreportnew_addport_tx"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/electricreportnew_addport_viewlist"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+package net.hxkg.channel;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import net.hxkg.channel.HttpRequest.onResult;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject; 
+import android.R;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+public class DepSpinner extends Spinner implements onResult,AdapterView.OnItemSelectedListener
+{
+	List<String> data_list=new ArrayList<>();
+	ArrayAdapter<String> arr_adapter;
+	
+	public DepSpinner(Context context, AttributeSet attrs)
+	{
+		super(context, attrs);
+		
+		arr_adapter=new ArrayAdapter(context,R.layout.simple_spinner_item,data_list);
+		//arr_adapter.setDropDownViewResource(com.hxkg.ghpublic.R.layout.item_dropdown);
+		arr_adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item);
+		setAdapter(arr_adapter);
+		//RequestData();
+	}
+	
+	private void RequestData1()
+	{
+		data_list.add("无");
+		data_list.add("压顶破损");
+		data_list.add("墙身破损");
+		data_list.add("勾缝脱落");
+		data_list.add("踏步破损"); 
+		data_list.add("沉降破损"); 
+		data_list.add("其他问题"); 
+		
+		arr_adapter.notifyDataSetChanged();
+	}
+	
+	private void RequestData()
+	{
+		HttpRequest hr=new HttpRequest(this);
+		Map<String, Object> map=new HashMap<>();
+		map.put("id",12);
+		map.put("isroot",0);
+		hr.post("http://192.168.1.251:88/Channel/"+"user/queryalldpt", map);
+	}
+	
+	public void Notify(Map<String, String> map)
+	{
+		for(String key:map.keySet())
+		{
+			data_list.add(key);
+		}
+		arr_adapter.notifyDataSetChanged();
+	}
+
+	@Override
+	public void onSuccess(String result) 
+	{
+		try {
+			JSONArray arr=new JSONArray(result);
+			for(int i=0;i<arr.length();i++)
+			{
+				JSONObject object=arr.getJSONObject(i);
+				String nameString=object.getString("regionname");
+				data_list.add(nameString);
+			}
+			
+			arr_adapter.notifyDataSetChanged();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public void onError(int httpcode) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> arg0) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+}

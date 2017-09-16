@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+
+	<class name="com.huzhouport.wharfSelect.model.PortArea" table="mm_PortArea">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="name"></property>
+	</class>
+	
+	<class name="com.huzhouport.wharfSelect.model.PieceArea" table="mm_PieceArea">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="name"></property>
+		<property name="portareaid" column="portareaid"></property>
+	</class>
+	
+	<class name="com.huzhouport.wharfSelect.model.WharfItem" table="mm_WharfItem">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="mc" column="mc"></property>
+		<property name="bh" column="bh"></property>
+		<property name="fzr" column="fzr"></property>
+		<property name="fzdh" column="fzdh"></property>
+		<property name="jd" column="jd"></property>
+		<property name="wd" column="wd"></property>
+		<property name="pieceareaid" column="pieceareaid"></property>
+	</class>
+</hibernate-mapping>

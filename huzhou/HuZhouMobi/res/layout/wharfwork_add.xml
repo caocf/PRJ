@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom" >
+
+    <RelativeLayout
+        android:id="@+id/wharfwork_add_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" 
+        android:focusableInTouchMode="true">
+
+        <ImageButton
+            android:id="@+id/wharfwork_add_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/wharfwork_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/wharfwork_add_back"
+            android:layout_toLeftOf="@+id/wharfwork_add_submit"
+            android:gravity="fill_vertical"
+            android:text="@string/wharfwork_button"
+            android:textColor="#0067ac"
+            android:textSize="18sp"/>
+        
+        <ImageButton
+            android:id="@+id/wharfwork_add_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/le_submit" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/wharfwork_view_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wharfwork_add_titleR" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white" >
+
+            <TextView
+                android:id="@+id/wharfwork_add_wharfworkid"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@color/grey"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="#0067ac" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_wharfWorkSurplus"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/wharfwork_add_wharfworkid"
+                android:background="@color/grey"
+                android:gravity="center_vertical|right"
+                android:paddingRight="10dp"
+                android:textColor="#0067ac" />
+
+      
+
+            <TextView
+                android:id="@+id/wharfwork_add_shipName"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_wharfworkid"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/wharfwork_view_shipName"
+                android:textColor="@color/Light_gray" 
+                android:textSize="18sp"/>
+
+            <EditText
+               android:id="@+id/wharfwork_add_shipNameneirong"
+               android:layout_width="match_parent"
+               android:layout_height="38dp"
+               android:layout_below="@id/wharfwork_add_wharfworkid"
+               android:layout_toRightOf="@+id/wharfwork_add_shipName"
+               android:background="#f5f5f5"
+               android:gravity="center_vertical|right"
+               android:paddingRight="10dp"  
+               android:textSize="18sp"
+               android:hint="@string/wharfwork_add_shipName"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"
+ />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_shipName"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_startingPort"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_shipName"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/wharfwork_view_startingPort"
+                android:textColor="@color/Light_gray"
+                android:textSize="18sp" />
+
+            
+                    <EditText
+               android:id="@+id/wharfwork_add_startingPortneirong"
+               android:layout_width="match_parent"
+               android:layout_height="38dp"
+               android:layout_below="@id/wharfwork_add_shipName"
+               android:layout_toRightOf="@+id/wharfwork_add_startingPort"
+               android:background="#f5f5f5"
+               android:gravity="center_vertical|right"
+               android:paddingRight="10dp"  
+               android:textSize="18sp"
+               android:hint="@string/wharfwork_add_startingPort"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"
+ />
+            
+            
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_startingPort"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_arrivalPort"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_startingPort"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/wharfwork_view_arrivalPort"
+                android:textColor="@color/Light_gray" 
+                android:textSize="18sp"/>
+
+       
+
+               <EditText
+               android:id="@+id/wharfwork_add_arrivalPortneirong"
+               android:layout_width="match_parent"
+               android:layout_height="38dp"
+               android:layout_below="@id/wharfwork_add_startingPort"
+               android:layout_toRightOf="@+id/wharfwork_add_arrivalPort"
+               android:background="#f5f5f5"
+               android:gravity="center_vertical|right"
+               android:paddingRight="10dp"  
+               android:textSize="18sp"
+               android:hint="@string/wharfwork_add_arrivalPort"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="5dp"
+ />
+            
+            
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_arrivalPort"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_cargoTypes"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_arrivalPort"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/wharfwork_view_cargoTypes"
+                android:textColor="@color/Light_gray"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_cargoTypesneirong"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_arrivalPort"
+                android:layout_toRightOf="@+id/wharfwork_add_cargoTypes"
+                android:gravity="center_vertical|right"
+                android:paddingRight="10dp"
+                android:drawableRight="@drawable/leave_imgright"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_cargoTypes"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_carrying"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_cargoTypes"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/wharfwork_view_carrying"
+                android:textColor="@color/Light_gray"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/wharfwork_add_carryingneirong"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/wharfwork_add_cargoTypes"
+                android:layout_toRightOf="@+id/wharfwork_add_carrying"
+                android:layout_toLeftOf="@+id/wharfwork_add_carrying_type"
+                
+                android:layout_marginTop="5dp"
+                 android:layout_marginBottom="5dp"
+               android:background="#f5f5f5"
+               android:gravity="center_vertical|right"
+               android:paddingRight="10dp"  
+               android:textSize="18sp"
+               android:hint="@string/wharfwork_add_carryingneirong"
+ />
+            <TextView
+                android:id="@+id/wharfwork_add_carrying_type"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_cargoTypes"
+                android:text="@string/electricreport_main_unit1"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" 
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"
+                android:textSize="18sp"
+                android:drawableRight="@drawable/leave_imgright"
+                />
+            
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_carrying"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_portMart"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_carrying"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/wharfwork_view_portMart"
+                android:textColor="@color/Light_gray"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_portMartneirong"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_carrying"
+                android:layout_toRightOf="@+id/wharfwork_add_portMart"
+                android:gravity="center_vertical|right"
+                 android:drawableRight="@drawable/leave_imgright" 
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_portMart"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_workTime"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_portMart"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/wharfwork_view_workTime"
+                android:textColor="@color/Light_gray"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/wharfwork_add_workTimeneirong"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_portMart"
+                android:layout_toRightOf="@+id/wharfwork_add_workTime"
+                android:drawableRight="@drawable/leave_imgright"
+                android:gravity="center_vertical|right"
+                android:paddingRight="10dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_workTime"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+        
+
+            <TextView
+                android:id="@+id/wharfwork_add_locationName"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_workTime"
+                android:gravity="fill_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/wharfwork_view_locationName"
+                android:textColor="@color/Light_gray" 
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/wharfwork_add_locationNameneirong"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/wharfwork_add_workTime"
+                android:layout_toRightOf="@+id/wharfwork_add_locationName"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp" 
+                android:textSize="18sp"/>
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/wharfwork_add_map"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/wharfwork_add_locationName"
+                android:layout_marginBottom="10dp" >
+            </com.baidu.mapapi.map.MapView>
+
+            <Button
+                android:id="@+id/wharfwork_add_button"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_below="@id/wharfwork_add_map"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/leave_button"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/attament"
+                android:textColor="#8b8b8b"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/wharfwork_add_workPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wharfwork_add_button" 
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"/>
+            
+            
+              <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+           android:background="#f5f5f5"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/wharfwork_add_workPhoto"
+            android:gravity="center" 
+            >
+            
+             <ImageButton
+                android:id="@+id/wharfwork_add_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"   
+                android:background="@color/transparent"
+                android:src="@drawable/wharfphotobutton" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView> 
+</RelativeLayout>

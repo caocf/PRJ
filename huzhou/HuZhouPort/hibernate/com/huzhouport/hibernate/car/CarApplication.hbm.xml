@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.car.model.CarApplication" table="car_application">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="userid" column="userid" not-null="false"></property>
+		<property name="aptime" column="aptime" not-null="false"></property>
+		<property name="starttime" column="starttime" not-null="false"></property>
+		<property name="endtime" column="endtime" not-null="false"></property>
+		<property name="number" column="numbercount" not-null="false"></property>
+		<property name="location" column="location" not-null="false"></property>
+		<property name="target" column="target" not-null="false"></property>
+		<property name="tel" column="tel" not-null="false"></property>
+		<property name="reason" column="reason" not-null="false"></property>
+		<property name="approver1id" column="approver1id" not-null="false"></property>
+			<property name="approver2id" column="approver2id" not-null="false"></property>
+		<property name="status1id" column="status1id" not-null="false"></property>
+		<property name="status2id" column="status2id" not-null="false"></property>
+		<property name="mark1" column="mark1" not-null="false"></property>
+		<property name="mark2" column="mark2" not-null="false"></property>
+		<property name="assignmentid" column="assignmentid" not-null="false"></property>
+		<property name="aptime1" column="aptime1" not-null="false"></property>
+		<property name="aptime2" column="aptime2" not-null="false"></property>
+		<property name="isread" column="isread" not-null="false"></property>
+	</class>
+</hibernate-mapping>

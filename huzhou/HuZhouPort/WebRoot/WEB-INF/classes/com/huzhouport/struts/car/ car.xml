@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+	<package name="car" extends="cement-interceptor" namespace="/">
+		
+		<action name="applyCar" class="com.huzhouport.car.action.CarAction"
+			method="applyCar">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="findMyCarAps" class="com.huzhouport.car.action.CarAction"
+			method="findMyCarAps">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="findMyCarCheck1" class="com.huzhouport.car.action.CarAction"
+			method="findMyCarCheck1">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="findMyCarCheck2" class="com.huzhouport.car.action.CarAction"
+			method="findMyCarCheck2">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="commitCarCheck" class="com.huzhouport.car.action.CarAction"
+			method="commitCarCheck">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="findCarInfo" class="com.huzhouport.car.action.CarAction"
+			method="findCarInfo">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		
+		<action name="tipCount" class="com.huzhouport.car.action.CarAction"
+			method="tipCount">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		
+	</package>
+</struts>

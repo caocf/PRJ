@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+
+@font-face {
+	font-family: 宋体;
+	panose-1: 2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt: SimSun;
+	mso-font-charset: 134;
+	mso-generic-font-family: auto;
+	mso-font-pitch: variable;
+	mso-font-signature: 3 680460288 22 0 262145 0;
+}
+
+@font-face {
+	font-family: "\@宋体";
+	panose-1: 2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset: 134;
+	mso-generic-font-family: auto;
+	mso-font-pitch: variable;
+	mso-font-signature: 3 680460288 22 0 262145 0;
+}
+
+/* Style Definitions */
+p.MsoNormal,li.MsoNormal,div.MsoNormal {
+	mso-style-parent: "";
+	margin: 0cm;
+	margin-top: 0.3cm;
+	margin-bottom: .0001pt;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	mso-pagination: none;
+	font-size: 10.5pt;
+	mso-bidi-font-size: 12.0pt;
+	font-family: "Times New Roman";
+	mso-fareast-font-family: 宋体;
+	mso-font-kerning: 1.0pt;
+}
+
+/* Page Definitions */
+@page {
+	mso-page-border-surround-header: no;
+	mso-page-border-surround-footer: no;
+}
+
+@page Section1 {
+	size: 595.3pt 841.9pt;
+	margin: 72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin: 42.55pt;
+	mso-footer-margin: 49.6pt;
+	mso-paper-source: 0;
+	layout-grid: 15.6pt;
+}
+
+div.Section1 {
+	page: Section1;
+	layout-grid: 15.6pt;
+	border:solid 1px #000 ;
+	width: 1000px;
+	min-height:1000px;
+	height:auto;
+	margin: 0 auto;
+	padding:20px;
+}
+
+.textcont {
+	font-size: 18.0pt;
+	font-family: 宋体;
+	mso-ascii-font-family: Arial;
+	mso-hansi-font-family: Arial;
+	mso-bidi-font-family: Arial;
+
+}
+
+.texttitle {
+	font-size: 28.0pt;
+	font-family: 黑体;
+	mso-hansi-font-family: 华文中宋;
+	letter-spacing: 2.0pt
+}
+
+.texttime {
+	font-size: 18.0pt;
+	font-family: Arial
+}
+
+.MsoNormal2 {
+	mso-style-parent: "";
+	margin: 0cm;
+	margin-top: 0.3cm;
+	margin-bottom: .0001pt;
+	text-indent:2em;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	mso-pagination: none;
+	font-size: 10.5pt;
+	mso-bidi-font-size: 12.0pt;
+	font-family: "Times New Roman";
+	mso-fareast-font-family: 宋体;
+	mso-font-kerning: 1.0pt;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="industryinfo" extends="cement-interceptor" namespace="/">
+		
+		<action name="findIndustryInfoList" class="com.huzhouport.portDynmicNews.action.IndustryInfoAction"
+			method="findIndustryInfoList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="findInnerIndustryInfoList" class="com.huzhouport.portDynmicNews.action.IndustryInfoAction"
+			method="findInnerIndustryInfoList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="findPublicIndustryInfoList" class="com.huzhouport.portDynmicNews.action.IndustryInfoAction"
+			method="findPublicIndustryInfoList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="findIndustryInfoDetail" class="com.huzhouport.portDynmicNews.action.IndustryInfoAction"
+			method="findIndustryInfoDetail">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="addIndustryInfo" class="com.huzhouport.portDynmicNews.action.IndustryInfoAction"
+			method="addIndustryInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		
+		<action name="updateIndustryInfo" class="com.huzhouport.portDynmicNews.action.IndustryInfoAction"
+			method="updateIndustryInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="deleteIndustryInfo" class="com.huzhouport.portDynmicNews.action.IndustryInfoAction"
+			method="deleteIndustryInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+
+</struts>    

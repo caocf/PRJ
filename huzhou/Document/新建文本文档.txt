@@ -1,0 +1,79 @@
+<filter>
+		<filter-name>struts-cleanup</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ActionContextCleanUp</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts-cleanup</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+"jdbc:mysql://192.168.1.200:3306/Hzport"
+
+
+
+网页端:UserAction::showUserList();
+
+手机端:DangerousGoodsPortlnAction::newaddresslist();
+
+imgbt_regselect
+
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#f9f9f9">
+
+        <TextView
+            android:id="@+id/tvIconUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/icon_user" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tvIconUser"
+            android:background="@color/colorTrans"
+            android:hint="@string/tv_username"
+            android:maxLength="12"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+
+
+<!-- 调整用户状态 -->
+		<div id="changeUserStatus" style="display:none;height:160px;">
+		
+		<div class="UserStatusDIV"></div>
+		<div class="changeUserStatus_font">
+		<img src="image/operation/sure_normal.png" onClick="changeUserStatus()"
+				onmouseover="SureOver(this)" onMouseOut="SureOut(this)"/>
+		<img src="image/operation/reset_small_normal.png" onClick="hiden()"
+				onmouseover="ResetSmallOver(this)" onMouseOut="ResetSmallOut(this)" title="取消" />
+		<input type="hidden" id="hideStatusId" />
+		<input type="hidden" id="hideUserId" />
+		</div>
+		
+		</div>
+
+
+
+
+
+
++"<a onclick=updateUser('"+ userlist[i][0].userId+ "') class='operation'>" +"编辑</a>&nbsp;"
++"<a class='operation' onclick='ChangeUserStatusById("+ userlist[i][0].userId + ","+userlist[i][4].statusId+")'>" +"调整状态</a>&nbsp;"
+
+
+queryShipnameByShipname
+
+saveAisByShipname

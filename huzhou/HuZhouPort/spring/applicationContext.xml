@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<bean id="pushservice" class="com.huzhouport.illegal.service.impl.AbnormalpushService"/>
+	<!--<bean id="testcls" class="com.huzhouport.illegal.service.impl.TestCLS"/>-->
+	<!-- 连接数据库及配置公共sevice和dao层组件 -->
+	<import resource="classpath:applicationContext_Data.xml" />
+	<!--综合查询数据管理-->
+	<import resource="classpath:com/huzhouport/spring/integratedquery/*.xml"></import>
+	<!--用户数据管理-->
+	<import resource="classpath:com/huzhouport/spring/user/*.xml"></import>
+	<!--角色数据管理-->
+	<import resource="classpath:com/huzhouport/spring/role/*.xml"></import>
+	<!--组织数据管理-->
+	<import resource="classpath:com/huzhouport/spring/organization/*.xml"></import>
+	<!--日志管理-->
+	<import resource="classpath:com/huzhouport/spring/log/*.xml"></import>
+	<!--日程数据管理-->
+	<import resource="classpath:com/huzhouport/spring/schedule/*.xml"></import>
+ 	<!--加班请假-->
+	<import resource="classpath:com/huzhouport/spring/leaveandovertime/*.xml"></import>
+	<!--签到签退-->
+	<import resource="classpath:com/huzhouport/spring/attendace/*.xml"></import>
+	<!--知识库-->
+	<import resource="classpath:com/huzhouport/spring/knowledge/*.xml"></import>
+	<!--违章-->
+	<import resource="classpath:com/huzhouport/spring/illegal/*.xml"></import>
+	<!-- 许可-->
+	<import resource="classpath:com/huzhouport/spring/permit/*.xml"></import>
+	<!-- 航行电子报告-->
+	<import resource="classpath:com/huzhouport/spring/electric/*.xml"></import>
+	<!-- 危险品申报-->
+	<import resource="classpath:com/huzhouport/spring/dangerousgoodsportln/*.xml"></import>
+	<!-- 危险品申报-->
+	<import resource="classpath:com/huzhouport/spring/dangerousgoodsjob/*.xml"></import>
+	<!-- 码头巡查-->
+	<import resource="classpath:com/huzhouport/spring/patrol/*.xml"></import>
+	<!-- 巡查日志-->
+	<import resource="classpath:com/huzhouport/spring/cruiselog/*.xml"></import>
+    <!-- 设备申请-->
+	<import resource="classpath:com/huzhouport/spring/equipment/*.xml"></import>
+	<!-- 综合统计-->
+	<import resource="classpath:com/huzhouport/spring/statistic/*.xml"></import>
+	<!--公众用户管理-->
+	<import resource="classpath:com/huzhouport/spring/publicuser/*.xml"></import>
+<!--码头作业报告-->
+	<import resource="classpath:com/huzhouport/spring/wharfwork/*.xml"></import>
+	<import resource="classpath:com/huzhouport/spring/portNavigation/*.xml"></import>
+	
+	<!-- 航行电子报告new-->
+	<import resource="classpath:com/huzhouport/spring/electricReport/*.xml"></import>
+	<!-- 推送-->
+	<import resource="classpath:com/huzhouport/spring/pushmsg/*.xml"></import>
+	<!-- 下载统计 -->
+	<import resource="classpath:com/huzhouport/spring/download/*.xml"></import>
+	
+	<!-- 港航动态 -->
+	<import resource="classpath:com/huzhouport/spring/portDynmicNews/*.xml"></import>
+	
+	<import resource="classpath:com/huzhouport/spring/ais/*.xml"></import>
+	<import resource="classpath:com/huzhouport/spring/shipquerylog/*.xml"></import>
+	<import resource="classpath:com/spring/meeting/*.xml"></import>
+	<import resource="classpath:com/huzhouport/spring/car/*.xml"></import>
+	
+	
+	 <bean id="startQuertz" lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">  
+            <property name="triggers">  
+                <list>  
+                    <ref bean="doTime"/>  
+                </list>  
+            </property>  
+        </bean>
+        <bean id="doTime" class="org.springframework.scheduling.quartz.CronTriggerBean">  
+            <property name="jobDetail">  
+                <ref bean="jobtask"/>  
+            </property>  
+            <!-- cron表达式 -->  
+            <property name="cronExpression">  
+                <value>0 0 23 * * ?</value>  
+            </property>  
+        </bean>
+        <bean id="jobtask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+            <!-- 调用的类 -->  
+            <property name="targetObject">  
+                <ref bean="KnowLedgeAction"/>  
+            </property>  
+            <!-- 调用类中的方法 -->  
+            <property name="targetMethod">  
+                <value>hhz</value>  
+            </property>  
+        </bean>
+</beans>

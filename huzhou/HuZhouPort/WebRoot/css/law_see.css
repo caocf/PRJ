@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+
+#see_container {
+	margin: 0;
+	padding: 0;
+	width: 813px;
+	overflow-x:hidden; 
+}
+
+#see_content {
+	margin: 44px 0 0 0;
+	padding: 0;
+	
+}
+
+#illegalTable {
+	margin: 0 0 10px 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+#illegalTable td {
+	margin: 0;
+	padding: 10px 0 0 10px;
+}
+
+#see_content #allmap {
+	margin: 10px;
+	padding: 0;
+	width: 790px;
+	height: 300px;
+	border: solid 1px #3d9dd7;
+	overflow: hidden;
+}
+
+#illegalTable_Check {
+	margin: 0 0 10px 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+#illegalTable_Check td {
+	margin: 0;
+	padding: 10px 0 0 10px;
+}
+
+#illegalTable_Supplement {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	table-layout: fixed;
+}
+#evidenceDiv{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: left;
+}
+#evidenceDiv .fileitem_div {
+	float:left;
+	margin: 0;
+	padding: 20px;
+	width: 117px;
+	height: 95px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#evidenceDiv .fileitem_div img {
+	margih:0;
+	padding:0 0 8px 0;
+	width: 77px;
+	height: 77px;
+	border: none;
+}
+
+#evidenceDiv td .txt {
+	margih:0;
+	padding:0;
+	width: 77px;
+	overflow: hidden;border:solid 1px red
+}
+
+
+#locationName {
+	margin: 0;
+	padding: 10px 0 0 10px;
+}

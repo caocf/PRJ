@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="permit" extends="cement-interceptor" namespace="/">
+		<!-- 查询 全部列表-服务端-->
+		<action name="showInspectionList"
+			class="com.huzhouport.permit.action.PermitAction" method="showInspectionList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 查询 全部列表-手机端-->
+		<action name="showInspectionList_mobi"
+			class="com.huzhouport.permit.action.PermitAction" method="showInspectionList_mobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 待审核列表-手机端-->
+		<action name="showInspectionListByCheck_mobi"
+			class="com.huzhouport.permit.action.PermitAction" method="showInspectionListByCheck_mobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--显示许可信息-->
+		<action name="showInspectionInfoByInspectionId"
+			class="com.huzhouport.permit.action.PermitAction" method="showInspectionInfoByInspectionId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 显示审核信息-->
+		<action name="showInspectionCheckInfoByInspectionId"
+			class="com.huzhouport.permit.action.PermitAction" method="showInspectionCheckInfoByInspectionId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 显示许可附件信息-->
+		<action name="showInspectionEvidenceByInspectionId"
+			class="com.huzhouport.permit.action.PermitAction" method="showInspectionEvidenceByInspectionId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 显示许可补充信息-->
+		<action name="showInspectionSupplementByInspectionId"
+			class="com.huzhouport.permit.action.PermitAction" method="showInspectionSupplementByInspectionId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 增加许可取证信息-->
+		<action name="addInspectionByInspectionId"
+			class="com.huzhouport.permit.action.PermitAction" method="addInspectionByInspectionId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 补充许可信息-->
+		<action name="addInspectionSupplementByInspectionId"
+			class="com.huzhouport.permit.action.PermitAction" method="addInspectionSupplementByServer">
+			<result name="success" type="redirect" >
+			/page/business/permit_update.jsp?sc=1&amp;inspectionId=${inspectionId}
+			</result>
+			<result name="error">
+			/page/business/permit_update.jsp?sc=2&amp;inspectionId=${inspectionId}
+			</result>
+		</action>
+		<!-- 补充许可信息-手机端-->
+		<action name="addInspectionSupplementByInspectionId_mobi"
+			class="com.huzhouport.permit.action.PermitAction" method="addInspectionSupplementByMobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 审核许可信息-->
+		<action name="checkInspectionByServer"
+			class="com.huzhouport.permit.action.PermitAction" method="checkInspectionByServer">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 审核许可信息-->
+		<action name="checkInspectionByInspectionId"
+			class="com.huzhouport.permit.action.PermitAction" method="checkInspectionByInspectionId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 位置信息-->
+		<action name="showLocationByInspectionId"
+			class="com.huzhouport.permit.action.PermitAction" method="showLocationByInspectionId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		</package>
+</struts>    

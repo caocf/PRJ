@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">通知公告</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="mui-card">
+				<ul class="mui-table-view mui-table-view-chevron" id="list_ul">
+					<li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">产品</a>
+					</li>
+					<li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">方案</a>
+					</li>
+					<li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">新闻</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+//			var notice_list;
+			var callback = function(dataList){
+//				console.log(JSON.stringify(dataList));
+				var ul = document.getElementById("list_ul");
+				ul.innerHTML = "";
+				for(var i = 0;i<dataList.length;i++){
+					var data = dataList[i];
+					var li = document.createElement("li");
+					li.classList.add("mui-table-view-cell");
+					li.classList.add("mui-collapse");
+					var str = "<a class=\"mui-navigate-right\" href=\"#\">"+data.kindName+"</a>";
+					li.innerHTML=str;
+					li.ref = JSON.stringify(data);
+					li.addEventListener("tap",function(event){
+						mui.openWindow({url:"notice_list.html",id:"notice_list",extras:{param:this.ref}});
+//						notice_list.show();
+					});
+					ul.appendChild(li);
+				}
+			};
+			app.queryNoticeKindList(callback);
+			if(mui.os.plus){
+				mui.plusReady(function(){
+//					notice_list = plus.webview.create("notice_list.html","notice_list");
+				});
+			}
+		</script>
+	</body>
+
+</html>

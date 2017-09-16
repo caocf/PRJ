@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" >
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/setup_title"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/login_btn"
+        android:textSize="18sp" >
+    </TextView>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+    
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/register"
+        android:textSize="18sp" 
+        android:onClick="ToRegister">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+    
+    <TextView
+        android:id="@+id/login_update"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/login_update"
+        android:textSize="18sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+    
+   <TextView
+        android:id="@+id/change_Binding"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/change_Binding"
+        android:textSize="18sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+    
+    <TextView
+        android:id="@+id/setup_person"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/setup_person"
+        android:textSize="18sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/setup_update_password"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/setup_update_password"
+        android:textSize="18sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/setup_update_upload"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/setup_update_uplad"
+        android:textSize="18sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/setup_update_ver"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/setup_update_ver"
+        android:textSize="18sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/setup_above"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/setup_above"
+        android:textSize="18sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/setup_zixun"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/address_list_item"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/setup_zixun"
+        android:textSize="18sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+</LinearLayout>

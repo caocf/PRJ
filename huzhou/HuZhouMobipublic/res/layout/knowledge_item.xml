@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0"
+    android:descendantFocusability="blocksDescendants"
+     android:padding="10dp"
+     >
+
+
+
+        <TextView
+            android:id="@+id/knowledge_kindname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="18sp" 
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+         
+        <ImageButton
+            android:id="@+id/knowledge_xiazai"
+            android:focusable="false"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+                    
+          android:layout_centerInParent="true"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/knowledge_xiazai" 
+          android:background="@color/transparent"
+          android:textAppearance="?android:textAppearanceSmall" 
+          android:visibility="gone"
+          />
+
+        <TextView
+            android:id="@+id/knowledge_kindid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:visibility="gone"
+            />
+
+
+</RelativeLayout>

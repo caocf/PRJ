@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/ep_change_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/ep_change_title"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/ep_change_back"
+            android:gravity="center_vertical"
+            android:text="@string/electricreport_change"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/ep_change_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent"
+            android:src="@drawable/le_submit" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/ep_change_port"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="@string/electricvisa_main_arriva"
+            android:textColor="#666666"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/ep_change_porttext"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_toRightOf="@id/ep_change_port"
+            android:drawableRight="@drawable/leave_imgright"
+            android:gravity="right|center_vertical"
+            android:textColor="#333333"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/ep_change_time"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/ep_change_port"
+            android:gravity="center_vertical"
+            android:text="@string/electricreport_main_arrival"
+            android:textColor="#666666"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/ep_change_timetext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ep_change_port"
+            android:layout_toRightOf="@id/ep_change_time"
+            android:drawableRight="@drawable/leave_imgright"
+            android:gravity="right|center_vertical"
+            android:textColor="#333333"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>

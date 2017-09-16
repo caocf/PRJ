@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.publicuser.model.WharfFile" table="mm_WharfFile">
+		<id name="fileId" column="FileId">
+			<generator class="native"></generator>
+		</id>
+		<property name="wharfId" column="WharfId"></property>
+		<property name="fileName" column="FileName"></property>
+		<property name="filePath" column="FilePath"></property>
+	</class>
+</hibernate-mapping>

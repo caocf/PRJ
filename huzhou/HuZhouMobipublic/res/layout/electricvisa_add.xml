@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_background2" >
+
+        <ImageButton
+            android:id="@+id/electricvisa_main_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/electricvisa_main_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/electricvisa_main"
+            android:textColor="#fff"
+            android:textSize="18sp" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/electricvisa_main_search"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="right"
+            android:background="@color/transparent"
+            android:src="@drawable/search_icon" />
+    </FrameLayout>
+     <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    <TableLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:shrinkColumns="1"
+    android:stretchColumns="1">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/electricvisa_main_name"
+            android:textColor="@color/Light_gray"
+            android:gravity="center_vertical|right"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/electricvisa_add_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/electricvisa_main_inputname"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </TableRow>
+    
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/electricvisa_main_start"
+            android:textColor="@color/Light_gray"
+            android:gravity="center_vertical|right"
+            android:textSize="12sp"/>
+
+        <EditText
+            android:id="@+id/electricvisa_add_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/electricvisa_main_inputstart"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/electricvisa_main_arriva"
+            android:textColor="@color/Light_gray"
+            android:gravity="center_vertical|right"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/electricvisa_add_arriva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/electricvisa_main_inputarriva"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </TableRow>
+<TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/electricvisa_main_mark"
+            android:textColor="@color/Light_gray"
+            android:gravity="center_vertical"
+            android:textSize="12sp" />
+
+       <Spinner
+            android:id="@+id/electricvisa_add_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+             android:background="@drawable/bg_spinner"
+            android:textSize="12sp" /> 
+            
+        
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/electricvisa_main_time"
+            android:textColor="@color/Light_gray"
+            android:gravity="center_vertical"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/electricvisa_add_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/electricvisa_main_inputtime"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/electricvisa_main_types"
+            android:textColor="@color/Light_gray"
+            android:gravity="center_vertical"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/electricvisa_add_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/electricvisa_main_inputtypes"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/electricvisa_main_load"
+            android:textColor="@color/Light_gray"
+            android:gravity="center_vertical"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/electricvisa_add_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/electricvisa_main_inputload"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+    </TableRow>
+
+<TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/electricvisa_main_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_span="3"
+            android:background="@drawable/imgbt_submit"
+            android:gravity="center"
+            
+           />
+    </TableRow>
+ </TableLayout>
+</ScrollView>
+</LinearLayout>

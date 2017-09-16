@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>违章查询</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<style>
+		.mui-table-view-cell p {
+			float: left;
+		}
+	</style>
+	<script type="text/javascript" src="js/mui.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="js/cbwzxx.js?t=1"></script>
+	<script type="text/javascript">
+		function aaaa(){
+			var shipName = document.getElementById("shipName").value;
+			var code = document.getElementById("code").value;
+			var info = document.getElementById("info");
+			if (shipName == "") {
+				mui.alert("船名不能为空！");
+				return;
+			}
+			if (/[-~#^$@%&!*\s*]/.test(shipName)) {
+				mui.alert("船名不能包含特殊字符！");
+				return;
+			}
+			mui.ajax({
+				type:"POST",
+				url:"/HuZhouPort/GetAndPostDate",
+				async:false,
+				timeout:30000,
+				data:{
+					cbname:shipName,
+					method:1
+				},
+				success:function(data){
+					var list = data.list;
+					console.log(data);
+					if(list.length == 0 || list[0].CBDJH == null){
+						mui.alert('船舶名或船舶登记码错误');
+					}else{
+						var i = list[0].CBDJH.substr(-6);
+						if(i != code){
+							mui.alert('船舶名或船舶登记码错误');
+						}else{
+							mui.ajax({
+								type:"POST",
+								url:"/HuZhouPort/GetAndPostDate",
+								async:false,
+								timeout:30000,
+								data:{
+									cbname:shipName,
+									method:5
+								},
+								success:function(data){
+									console.log(data);
+									CBWZInfor(data);
+								},
+								error:function(xhr,type,errorThrown){
+									ShowWarn($(".error", XMLHttpRequest.responseText).text());
+								}
+							});
+						}
+					}
+				},
+				error:function(XMLHttpRequest,type,errorThrown){
+					ShowWarn($(".error", XMLHttpRequest.responseText).text());
+				}
+			});
+		}
+	</script>
+</head>
+
+<body>
+	<div class="mui-content" id="content">
+		<div class="mui-input-row">
+			<label>船名</label>
+			<input type="text" placeholder="请输入船名" id = "shipName">
+		</div>
+		<div class="mui-input-row">
+			<label>船舶登记号(后六位)</label>
+			<input type="text" placeholder="请输入船舶登记号后六位" id = "code">
+		</div>
+
+		<div class="mui-button-row">
+			<button type="button" class="mui-btn mui-btn-primary" onclick="aaaa()">查询</button>
+		</div>
+		<div id="info"> 
+			
+		</div>
+	</div>
+	
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.schedule.model.ScheduleEvent" table="mm_ScheduleEvent">
+		<id name="eventId" column="EventID">
+			<generator class="native"></generator>
+		</id>
+		<property name="eventName" column="EventName"></property>
+		<property name="eventKind" column="EventKind"></property>
+		<property name="eventTime" column="EventTime"></property>
+		<property name="eventLocation" column="EventLocation"></property>
+		<property name="eventContent" column="EventContent"></property>
+		
+		
+	</class>
+</hibernate-mapping>

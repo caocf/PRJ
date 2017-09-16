@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="patrol" extends="cement-interceptor" namespace="/">
+		<!-- pc端列表 -->
+		<action name="showPatrolList" class="com.huzhouport.patrol.action.PatrolAction"
+			method="showPatrolList">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>	
+		<!--列表-手机端-->
+		<action name="showPatrolList_mobi"
+			class="com.huzhouport.patrol.action.PatrolAction" method="showPatrolList_mobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!--显示详细信息-->
+		<action name="showPatrolInfoByPatrolId"
+			class="com.huzhouport.patrol.action.PatrolAction" method="showPatrolInfoByPatrolId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 显示附件信息-->
+		<action name="showPatrolEvidenceByPatrolId"
+			class="com.huzhouport.patrol.action.PatrolAction" method="showPatrolEvidenceByPatrolId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 显示补充信息-->
+		<action name="showPatrolSupplementByPatrolId"
+			class="com.huzhouport.patrol.action.PatrolAction" method="showPatrolSupplementByPatrolId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 增加信息-手机端-->
+		<action name="addPatrolByPatrolId"
+			class="com.huzhouport.patrol.action.PatrolAction" method="addPatrolByPatrolId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 补充信息-->
+		<action name="addPatrolSupplementByServer"
+			class="com.huzhouport.patrol.action.PatrolAction" method="addPatrolSupplementByServer">
+			<result name="success" type="redirect" >
+			/page/business/patrol_update.jsp?sc=1&amp;patrolId=${patrolId}
+			</result>
+			<result name="error">
+			/page/business/patrol_update.jsp?sc=2&amp;patrolId=${patrolId}
+			</result>
+		</action>
+		<!-- 补充许可信息-手机端-->
+		<action name="addPatrolSupplementByPatrolId_mobi"
+			class="com.huzhouport.patrol.action.PatrolAction" method="addPatrolSupplementByMobi">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+		<!-- 位置信息-->
+		<action name="showLocationByPatrolId"
+			class="com.huzhouport.patrol.action.PatrolAction" method="showLocationByPatrolId">
+			<result name="success" type="json" />
+			<result name="error"/>
+		</action>
+
+		</package>
+</struts>    

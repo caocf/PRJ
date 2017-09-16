@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-image: url(../images/title_backgrundmenu.png) ;background-size: 100% 44px">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title" style="color:#0067AD;font-family: '微软雅黑';text-align: left;">详情</h1>
+		</header>
+		<div class="mui-content">
+			<div> <img src="../images/schedule_see_pic.png" style="max-width: 100%;"/></div>
+			<div style="margin: 20px;">
+				<h3 id="title">标题</h3>
+				<p id="time"> 2016-11-26 00:00:00</p>
+				<table style="color: darkgray;font-size: 12px;">
+					<tr>
+						<td>类别：</td>
+						<td id="type"></td>
+					</tr>
+					<tr>
+						<td>发起人：</td>
+						<td id="user"></td>
+					</tr>
+					<tr>
+						<td>参加人员：</td>
+						<td id="userList"></td>
+					</tr>
+					<tr>
+						<td>地点：</td>
+						<td id="address"></td>
+					</tr>
+					<tr>
+						<td style="color: black;font-size: 13px;">内容：</td>
+						<td id="content"></td>
+					</tr>
+				</table>
+			</div>
+		<nav class="mui-bar mui-bar-tab">
+			<!--<a class="mui-tab-item">
+				<img src="../images/click_normal.png" style="max-width: 100%;"/>
+			</a>-->
+			<a class="mui-tab-item" id="activity">
+				<img src="../images/activity_yes_normal.png"  style="max-width: 100%;"/>
+			</a>
+			<!--<a class="mui-tab-item">
+				<img src="../images/forwar_normal.png"  style="max-width: 100%;"/>
+			</a>-->
+		</nav>
+		</div>
+		<script src="../js/mui.js"></script>
+		<script type="text/javascript" src="../js/app.js" ></script>
+		<script type="text/javascript">
+		(function($,doc,w){
+			$.init();
+			var data = {};
+			w.addEventListener("toDetail",function(event){
+				var param = event.detail.param;
+//				console.log(param);
+				data = JSON.parse(param);
+				var userList = app.eventListByEventId(data[0].eventId);
+				doc.getElementById("title").innerHTML = data[0].eventName;
+				doc.getElementById("time").innerHTML = data[0].eventTime;
+				var type = data[1].eventRemindType;
+				var typeName = "";
+				switch(type){
+					case 1:typeName = "会议";break;
+					case 2:typeName = "备注";break;
+					case 3:typeName = "出差";break;
+					default :typeName = "其他";break;
+				}
+				doc.getElementById("type").innerHTML = typeName;
+				doc.getElementById("user").innerHTML = data[4].name;
+				doc.getElementById("userList").innerHTML = userList.toString();
+				doc.getElementById("address").innerHTML = data[0].eventLocation;
+				doc.getElementById("content").innerHTML = data[0].eventContent;
+			});
+				doc.getElementById("activity").addEventListener("tap",function(event){
+					var state = app.getState();
+					var 	userId = state.user.userId;
+					var param = {};
+					param.messageId = data[0].eventId;
+					param.userId = userId;
+					app.updatePushMsgStatusByInfor(param);
+				});
+			
+			$.plusReady(function(){
+				$.back = function(){
+					plus.webview.currentWebview().hide();
+				}
+			});
+		}(mui,document,window));
+		</script>
+	</body>
+
+</html>

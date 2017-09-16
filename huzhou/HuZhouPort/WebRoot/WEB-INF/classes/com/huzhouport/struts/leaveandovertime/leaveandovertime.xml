@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+<package name="LeaveAndOvertime" extends="cement-interceptor" namespace="/">
+   	 <!-- 请假加班 ajax js-->
+   		<action name="showLeaveAndOvertime" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="showLeaveAndOvertime">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   	 	 <!-- 待审批  ajax js-->
+   	 <action name="AwaitingApproval" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="AwaitingApproval">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		 <!-- 加班  ajax js-->
+   	 <action name="Overtime" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="Overtime">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		 <!-- 请假  ajax js-->
+   <action name="Leave" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="Leave">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		   <action name="Travel" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="Travel">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   	 <!-- 请假 只显示自己的 -->
+   <action name="Leave1" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="Leave1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 	
+   		 <!-- 加班 只显示自己的 -->
+    <action name="Overtime1" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="Overtime1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		   		 <!-- 显示全部的 -->
+    <action name="LeaveAndOvertiemALL" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="LeaveAndOvertiemALL">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		
+   	 <!-- 查找  ajax js-->
+   	   <action name="selectLeaveAndOvertime" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="selectLeaveAndOvertime">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   	</action> 
+   		
+   	<!-- 审批 查看ajax js-->
+   		<action name="showLeaveAndOvertimeApproval" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="showLeaveAndOvertimeApproval">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		<!-- 审批提交 ajax js-->	 	
+<action name="LeaveAndOvertimeApprovalAgree" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="LeaveAndOvertimeApprovalAgree">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 新建 ajax js-->	
+  <action name="newLeaveAndOvertime" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="newLeaveAndOvertime">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>  	
+   	   		<!-- 查找请假加班类型-->	
+  <action name="LeaveAndOvertimeKindName" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="LeaveAndOvertimeKindName">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>  
+   		<!-- 自己审批过的-->	
+   		  <action name="LeaveAndOvertimefinish" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="LeaveAndOvertimefinish">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 自己未审批的-->	
+   		  <action name="LeaveAndOvertimeunfinish" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="LeaveAndOvertimeunfinish">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 	
+   			<!-- 自己申请的-->	
+   		  <action name="LeaveAndOvertiemALLbymy" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="LeaveAndOvertiemALLbymy">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 查找自己申请的-->	
+   		  <action name="selectLeaveAndOvertiemALLbymy" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="selectLeaveAndOvertiemALLbymy">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 	
+   			<!-- 查找全部-->	
+   		  <action name="selectLeaveAndOvertiemALL" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="selectLeaveAndOvertiemALL">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 	
+   		
+   				<!-- 自己审批过的-->	
+   		  <action name="selectLeaveAndOvertimefinish" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="selectLeaveAndOvertimefinish">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 自己未审批的-->	
+   		  <action name="selectLeaveAndOvertimeunfinish" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="selectLeaveAndOvertimeunfinish">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 	
+   		
+   			<!-- 查找审批人-->	
+   		  <action name="LeaveOrOtApproval" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="LeaveOrOtApproval">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 保存审批人-->	
+   		  <action name="SaveLeaveOrOtApproval" class="com.huzhouport.leaveandovertime.action.LeaveAndOvertimeAction"  method="SaveLeaveOrOtApproval">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   </package></struts>

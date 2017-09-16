@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- Action必须放在指定的包名空间中 -->
+	<package name="users" extends="cement-interceptor" namespace="/">
+		<!--用户列表或搜索-->
+		<action name="UserList" class="com.huzhouport.user.action.UserAction"
+			method="showUserList">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--全部用户，只查找用户表-->
+		<action name="AllUser" class="com.huzhouport.user.action.UserAction"
+			method="AllUser">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--全部用户和部门，查找用户表和部门表-->
+		<action name="AllUserAndDepartment" class="com.huzhouport.user.action.UserAction"
+			method="AllUserAndDepartment">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--用户通过ID-->
+		<action name="showUserById" class="com.huzhouport.user.action.UserAction"
+			method="showUserById">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 查询全部 职务-->
+		<action name="showPostInfo" class="com.huzhouport.user.action.UserAction"
+			method="showPostInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 查询全部 状态-->
+		<action name="showStatusInfo" class="com.huzhouport.user.action.UserAction"
+			method="showStatusInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 增加用户信息 -->
+		<action name="addUserInfo" class="com.huzhouport.user.action.UserAction"
+			method="addUserInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 搜索用户姓名 -->
+		<action name="FindByName" class="com.huzhouport.user.action.UserAction"
+			method="FindByName">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 搜索用户姓名-手机端 -->
+		<action name="FindByName_mobi" class="com.huzhouport.user.action.UserAction"
+			method="FindByName_mobi">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 更新用户信息 -->
+		<action name="updateUserInfo" class="com.huzhouport.user.action.UserAction"
+			method="updateUserInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 根据ListID修改用户信息 -->
+		<action name="deleteUserByListId" class="com.huzhouport.user.action.UserAction"
+			method="deleteUserByListId">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 根据ID修改用户信息 -->
+		<action name="deleteUserById" class="com.huzhouport.user.action.UserAction"
+			method="deleteUserById">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 修改个人资料 -->
+		<action name="personalModifyInfo" class="com.huzhouport.user.action.UserAction"
+			method="modifyPersonalInfo">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<!-- 修改密码 -->
+		<action name="ChangePassword" class="com.huzhouport.user.action.UserAction"
+			method="ChangePassword">
+			<result name="success"  type="json" />
+			<result name="error">/error.jsp</result>
+
+		</action>
+
+		<!--全部用户和部门，查找用户表和部门表    电话查找-->
+		<action name="AllUserAndDepartmentTel" class="com.huzhouport.user.action.UserAction"
+			method="AllUserAndDepartmentTel">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--全部用户和部门，查找用户表和部门表    名字-->
+		<action name="AllUserAndDepartmentUsername" class="com.huzhouport.user.action.UserAction"
+			method="AllUserAndDepartmentUsername">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--通过id找用户-->
+		<action name="AllUserAndDepartmentById" class="com.huzhouport.user.action.UserAction"
+			method="AllUserAndDepartmentById">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<!-- 登陆用户-Pc-->
+		<action name="login_pc" class="com.huzhouport.user.action.LoginAction"
+			method="login_pc">
+			<!-- 定义处理结果与视图资源之间的关系 -->
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!-- 验证码 -->
+		 <action name="validateCode" class="com.huzhouport.user.image.ValidateImageAction">
+			<param name="width">134</param>
+			<param name="height">52</param>
+			<param name="length">4</param>
+			<param name="randomString">0123456789abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ</param>
+			<result name="success" type="stream">
+				<param name="inputName">inputStream</param>
+				<param name="contentType">image/jpeg</param>
+			</result>
+		</action>	
+		<!--退出系统-->
+		<action name="ExitSystem" class="com.huzhouport.user.action.LoginAction"
+			method="ExitSystem">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<!-- 登陆用户-手机-->
+		<action name="login_mobi" class="com.huzhouport.user.action.LoginAction"
+			method="login_mobi">
+			<!--  定义处理结果与视图资源之间的关系 -->
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<!--通过部门-->
+		<action name="UserListByDepartment" class="com.huzhouport.user.action.UserAction"
+			method="UserListByDepartment">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="SetUserOrder" class="com.huzhouport.user.action.UserAction"
+			method="SetUserOrder">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+	</package>
+</struts>    

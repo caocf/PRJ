@@ -1,0 +1,89 @@
+@CHARSET "UTF-8";
+#fullbg {
+	background-color: gray;
+	left: 0;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	z-index: 3;
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+}
+
+#departmentDIv {
+	background-color: #fff;
+	left: 30%;
+	margin: 0 0 0 0;
+	padding: 1px;
+	position: fixed !important; /* 浮动对话框 */
+	position: absolute;
+	top: 30%;
+	z-index: 5;
+	border-radius: 5px;
+	display: none;
+	border: 2px solid rgb(219, 219, 255);
+	
+}
+
+#departmentDIv p {
+	margin:0;
+	background: rgb(219, 219, 255);
+	
+	padding: 5px 0 0 10px;
+	
+	height: 24px;
+}
+#departmentDIv p .title {
+	font-weight: bold;
+	font-size: 14px;
+	text-align: left;
+	padding-right: 10px;
+}
+#departmentDIv p .close {
+	float: right;
+	padding-right: 10px;
+}
+
+#departmentDIv p.close a {
+	color: #fff;
+	text-decoration: none;
+}
+.div_tree {
+	background-position: bottom;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	height: 362px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+}
+#tree,#tree ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#tree li {
+	margin: 0;
+	padding: 8px 8px 2px 12px;
+	
+}
+#tree li a{
+line-height: 12px;
+vertical-align: top;
+}
+#tree li img {
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+
+
+#ganhangju{
+    margin: 5px 0 0 0;  padding: 8px 8px 8px 12px;  display: block;  cursor: pointer;
+	
+}
+#ganhangju:hover,#tree li:hover,.selectli,#selectli{
+    background:rgb(219, 219, 255);
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+   <class name="com.huzhouport.dangerousGoodsJob.model.DangerousWorkDeclare" table="mm_DangerousWorkDeclare" >
+        <id name="declareID" column="DeclareID" >
+            <generator class="native"></generator>
+        </id>
+ 
+        <property name="shipName" column="ShipName" ></property>
+        <property name="declareTime" column="DeclareTime" ></property>
+        <property name="startingPort" column="StartingPort" ></property>
+        <property name="arrivalPort" column="ArrivalPort" ></property>
+        <property name="cargoTypes" column="CargoTypes" ></property>
+        <property name="dangerousLevel" column="DangerousLevel" ></property> 
+        <property name="wharfID" column="WharfID" ></property> 
+        <property name="workTIme" column="WorkTIme" ></property> 
+        <property name="carrying" column="Carrying" ></property>
+        <property name="reviewUser" column="ReviewUser" ></property>
+        <property name="reviewResult" column="ReviewResult" ></property>
+        <property name="reviewOpinion" column="ReviewOpinion" ></property>
+     <property name="reviewTime" column="ReviewTime" ></property>
+    </class>
+</hibernate-mapping>

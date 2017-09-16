@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    android:shrinkColumns="0"
+    android:stretchColumns="1" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/regularvisa_addpier_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/regularvisa_see_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/regularvisa_addpier_back"
+            android:gravity="center_vertical"
+            android:text="@string/regularvisa_mark"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+
+    </RelativeLayout>
+ <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/electricreport_main_pier11"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/electricreport_main_name11"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp"/>
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/electricreport_main_pier21"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/electricreport_main_name21"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/Light_gray"
+            android:textSize="17sp"/>
+
+    </TableRow>
+    
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="meeting" extends="cement-interceptor" namespace="/">
+		
+		<action name="applyroom" class="com.meeting.action.MeetingAction"
+			method="applyroom">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="queryMeetingRooms" class="com.meeting.action.MeetingAction"
+			method="queryMeetingRooms">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		
+		<action name="queryApplicationRecord" class="com.meeting.action.MeetingAction"
+			method="queryApplicationRecord">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="queryApplicationRecordByDay" class="com.meeting.action.MeetingAction"
+			method="queryApplicationRecordByDay">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="queryApplicationRecordByStatus" class="com.meeting.action.MeetingAction"
+			method="queryApplicationRecordByStatus">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="queryApplicationRecordByApprover" class="com.meeting.action.MeetingAction"
+			method="queryApplicationRecordByApprover">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="queryApplicationRecordByOffice" class="com.meeting.action.MeetingAction"
+			method="queryApplicationRecordByOffice">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="commitCheck" class="com.meeting.action.MeetingAction"
+			method="commitCheck">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="updateIsRead" class="com.meeting.action.MeetingAction"
+			method="updateIsRead">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="countAp" class="com.meeting.action.MeetingAction"
+			method="countAp">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="countMyCheck" class="com.meeting.action.MeetingAction"
+			method="countMyCheck">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="countOfficeCheck" class="com.meeting.action.MeetingAction"
+			method="countOfficeCheck">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="test" class="com.meeting.action.MeetingAction"
+			method="test">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="allMeetingRooms" class="com.meeting.action.MeetingAction"
+			method="allMeetingRooms">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		<action name="meetingRoomByMonth" class="com.meeting.action.MeetingAction"
+			method="meetingRoomByMonth">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+	</package>
+</struts>

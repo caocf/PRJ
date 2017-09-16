@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+	<package name="pushMsg" extends="cement-interceptor" namespace="/">
+		<!-- 按ID-->
+		<action name="FindUnpushedMsg" class="com.huzhouport.pushmsg.action.PushMsgAction"
+			method="FindUnpushedMsg">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="Updatepushmsgstatus" class="com.huzhouport.pushmsg.action.PushMsgAction"
+			method="Updatepushmsgstatus">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+
+		<!--修改消息状态 该已推送已读-->
+		<action name="UpdatePushmsgstatusByInfor" class="com.huzhouport.pushmsg.action.PushMsgAction"
+			method="UpdatePushmsgstatusByInfor">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		<!--查询某个用户未读的消息-->
+		<action name="FindUnpushedMsgByNoread" class="com.huzhouport.pushmsg.action.PushMsgAction"
+			method="FindUnpushedMsgByNoread">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="getPushMsgDetail" class="com.huzhouport.pushmsg.action.PushMsgAction"
+			method="getPushMsgDetail">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!-- 获得未推送未读消息列表, 获取所有未推送未读消息后，将消息设置为已推送未读 -->
+		<action name="queryUnPushedMsg" class="com.huzhouport.pushmsg.action.PushMsgAction"
+			method="queryUnPushedMsg">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<!-- 获得已推送未读消息数量 -->
+		<action name="queryPushedUnReadMsgCnt" class="com.huzhouport.pushmsg.action.PushMsgAction"
+			method="queryPushedUnReadMsgCnt">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="getPushMsgsExclude" class="com.huzhouport.pushmsg.action.PushMsgAction"
+			method="getPushMsgsExclude">
+			<result name="success" type="json" />
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+</struts>

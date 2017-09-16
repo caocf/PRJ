@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+       >
+
+        <ImageButton
+            android:id="@+id/schedule_main_imgback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/schedule_main_imgback"
+            android:layout_centerVertical="true"
+            android:text="@string/schedule_manage"
+            android:textColor="#0067ac"
+            android:textSize="18sp" />
+         <ImageButton
+            android:id="@+id/schedule_main_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:background="@color/transparent"
+            android:src="@drawable/title_add" />
+    </RelativeLayout>
+
+    <com.huzhouport.common.util.BorderText
+        android:id="@+id/schedule_toptext"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:textSize="15sp" />
+
+    <ViewFlipper
+        android:id="@+id/schedule_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/Light_gray" />
+
+</LinearLayout>

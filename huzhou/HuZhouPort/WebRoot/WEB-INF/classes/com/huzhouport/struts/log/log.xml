@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+
+<package name="system" extends="cement-interceptor" namespace="/">
+   		
+      
+   			<!-- 日志查找
+   	    <action name="selectLog" class="com.huzhouport.log.action.LogAction"  method="selectLog">
+   			<result name="success">/page/log/log.jsp</result>
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		
+   		
+   		  <action name="selectLog1" class="com.huzhouport.log.action.LogAction"  method="selectLog1">
+   			<result name="success">/page/log/log.jsp</result>
+   			<result name="fail">/error.jsp</result>
+   		</action>-->
+   		
+   		<!-- 日志显示 ajax js-->
+   		<action name="pageMedel1" class="com.huzhouport.log.action.LogAction"  method="pageMedel">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		<!-- 日志删除  ajax js-->
+   		<action name="delete1" class="com.huzhouport.log.action.LogAction"  method="delete1">
+   			<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action> 
+   		
+   		  <action name="selectLog" class="com.huzhouport.log.action.LogAction"  method="selectLog">
+   				<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   		
+   		 <action name="logSave" class="com.huzhouport.log.action.LogAction"  method="logSave">
+   				<result name="success" type="json" />
+   			<result name="fail">/error.jsp</result>
+   		</action>
+   	
+   		
+   		
+   </package>
+
+</struts>    

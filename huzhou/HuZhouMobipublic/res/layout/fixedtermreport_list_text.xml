@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<RelativeLayout
+    android:id="@+id/main_list"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+    <!-- <TextView
+        android:id="@+id/fixedtermreport_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+         android:gravity="center_vertical"
+         android:textSize="15sp"
+        android:text="进港" /> -->
+        <ImageView
+        android:id="@+id/schedule_addImage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15sp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/wharf_in"
+        android:gravity="center_vertical" />
+    <TextView
+        android:id="@+id/fixedtermreport_type"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/schedule_addImage2"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:text="进港" />
+    <TextView
+        android:id="@+id/fixedtermreport_num"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/fixedtermreport_type"
+        android:textSize="15sp"
+        android:text="进港" />
+    <TextView
+        android:id="@+id/fixedtermreport_time"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="14sp"
+        android:textColor="@color/Light_gray"
+        android:text="进港" />
+
+    
+
+    </RelativeLayout>
+<TextView 
+        android:id="@+id/tableRow16"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#d8d8d8"
+        android:layout_below="@id/main_list"
+        />
+</RelativeLayout>

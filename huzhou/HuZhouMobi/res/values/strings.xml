@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login_checkbox1">保存密码</string>
+    <string name="login_checkbox2">自动登录</string>
+    <string name="app_name">湖州港航</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="see">查看</string>
+    <string name="update">修改</string>
+    <string name="add">增加</string>
+    <string name="delete">删除</string>
+    <string name="check">审核</string>
+    <string name="finish">完成</string>
+    <string name="sure">确定</string>
+    <string name="reset">取消</string>
+    <string name="save">保存</string>
+    <string name="upload">提交</string>
+    <string name="search">搜索</string>
+    <string name="back">返回</string>
+    <string name="year">年</string>
+    <string name="mouth">月</string>
+    <string name="select">选择</string>
+    <string name="Recoder">录像</string>
+    <string name="moreing">释放加载更多</string>
+    <string name="more">加载中····</string>
+    <string name="searchResult">搜索结果</string>
+    <string name="noResult">没有搜索到相关信息</string>
+    <string name="department">群组</string>
+    <string name="remind">设置闹钟</string>
+    <string name="feedback">查看回馈</string>
+    <string name="username_search_hint">请输入真实姓名</string>
+    <string name="scan_qr_code">扫描二维码</string>
+    <string name="photograph">照相</string>
+    <string name="soundrecord">录音</string>
+    <string name="new_time">0:0</string>
+    <string name="attament">附件</string>
+    <string name="go_home">返回主页</string>
+    <string name="nohistory">无历史数据</string>
+    <!-- 综合查询 -->
+    <string name="bs_menu_title">综合查询</string>
+    <string name="bs_title">船舶基本信息</string>
+    <string name="bs_menulist01">船舶基本信息</string>
+    <string name="bs_menulist02">船舶证书信息</string>
+    <string name="bs_menulist03">船舶违章信息</string>
+    <string name="bs_menulist04">船舶签证信息</string>
+    <string name="bs_menulist05">船舶缴费信息</string>
+    <string name="bs_menulist06">船舶检验信息</string>
+    <string name="bs_menulist07">港航规费信息</string>
+    <string name="bs_menulist08">码头作业信息</string>
+    <string name="bs_menulist09">航运企业信息</string>
+    <string name="bs_menulist10">码头企业信息</string>
+    <string name="bs_menulist11">船员综合信息</string>
+    <string name="bs_sourch_btn">查询</string>
+    <string name="bs_notice">请输入船名</string>
+    <string name="bs_opentext">展开</string>
+    <string name="bs_closetext">收起</string>
+    <!-- 基本信息内容 -->
+    <string name="bs_cbjbxx_txt01">船舶名称：</string>
+    <string name="bs_cbjbxx_txt02">船检登记号：</string>
+    <string name="bs_cbjbxx_txt03">船舶登记号：</string>
+    <string name="bs_cbjbxx_txt04">船籍港：</string>
+    <string name="bs_cbjbxx_txt05">船籍港代码：</string>
+    <string name="bs_cbjbxx_txt06">船舶类型：</string>
+    <string name="bs_cbjbxx_txt07">船舶类型代码：</string>
+    <string name="bs_cbjbxx_txt08">主机总功率：</string>
+    <string name="bs_cbjbxx_txt09">总吨位：</string>
+    <string name="bs_cbjbxx_txt10">净吨位：</string>
+    <string name="bs_cbjbxx_txt11">总长（m）：</string>
+    <string name="bs_cbjbxx_txt12">船长（m）：</string>
+    <string name="bs_cbjbxx_txt13">量吨甲板长（m）：</string>
+    <string name="bs_cbjbxx_txt14">型宽（m）：</string>
+    <string name="bs_cbjbxx_txt15">型深（m）：</string>
+    <string name="bs_cbjbxx_txt16">参考载货量：</string>
+    <string name="bs_cbjbxx_txt17">吃水空载：</string>
+    <string name="bs_cbjbxx_txt18">吃水满载：</string>
+    <string name="bs_cbjbxx_txt19">船舶所有人：</string>
+    <string name="bs_cbjbxx_txt20">船舶经营人：</string>
+    <string name="bs_cbjbxx_txt21">经营人联系电话：</string>
+    <!-- 证书信息内容 -->
+    <string name="bs_cbzsxx_txt00">证书编号：</string>
+    <string name="bs_cbzsxx_txt01">证书名称：</string>
+    <string name="bs_cbzsxx_txt02">发证日期：</string>
+    <string name="bs_cbzsxx_txt03">有效期：</string>
+    <!-- 违章信息内容 -->
+    <string name="bs_cbwzxx_txt00">没有违章信息</string>
+    <string name="bs_cbwzxx_Punishment">处罚：</string>
+    <string name="bs_cbwzxx_type">类型：</string>
+    <string name="bs_cbwzxx_PunishmentType01">警告</string>
+    <string name="bs_cbwzxx_PunishmentType02">罚款</string>
+    <string name="bs_cbwzxx_PunishmentType03">暂扣证照</string>
+    <string name="bs_cbwzxx_PunishmentType04">吊销证照</string>
+    <string name="bs_cbwzxx_PunishmentType05">没收船舶</string>
+    <string name="bs_cbwzxx_PunishmentType06">没收非法财物</string>
+    <string name="bs_cbwzxx_PunishmentType07">没收违法所得</string>
+    <string name="bs_cbwzxx_PunishmentType08">责令停产停业</string>
+    <string name="bs_cbwzxx_PunishmentType09">行政拘留</string>
+    <string name="bs_cbwzxx_PunishmentType10">其他</string>
+    <string name="bs_cbwzxx_yes">是</string>
+    <string name="bs_cbwzxx_no">否</string>
+    <string name="bs_cbwzxx_time">时间：</string>
+    <string name="bs_cbwzxx_txt01">受理号：</string>
+    <string name="bs_cbwzxx_txt02">中文船名：</string>
+    <string name="bs_cbwzxx_txt03">受理时间：</string>
+    <string name="bs_cbwzxx_txt04">案由：</string>
+    <string name="bs_cbwzxx_txt05">发案时间：</string>
+    <string name="bs_cbwzxx_txt06">发案地点：</string>
+    <string name="bs_cbwzxx_txt07">案件类别：</string>
+    <string name="bs_cbwzxx_txt08">主要事实：</string>
+    <string name="bs_cbwzxx_txt09">执法手册编号：</string>
+    <string name="bs_cbwzxx_txt10">违法内容：</string>
+    <string name="bs_cbwzxx_txt11">违反条款：</string>
+    <string name="bs_cbwzxx_txt12">处罚条款：</string>
+    <string name="bs_cbwzxx_txt13">处罚意见：</string>
+    <string name="bs_cbwzxx_txt14">处罚类别：</string>
+    <string name="bs_cbwzxx_txt15">是否处罚：</string>
+    <string name="bs_cbwzxx_txt16">是否结案：</string>
+    <string name="bs_cbwzxx_txt17">结案日期：</string>
+    <string name="bs_cbwzxx_no_record">船舶记录良好 暂无违章信息</string>
+    <string name="bs_cbjfxx_noreslut">缴费记录</string>
+    <!-- 缴费信息内容 -->
+    <string name="bs_cbjfxx_money">应缴金额：</string>
+    <string name="bs_cbjfxx_money2">实缴金额：</string>
+    <string name="bs_cbjfxx_startday">有效期起：</string>
+    <string name="bs_cbjfxx_endday">有效期至：</string>
+    <string name="bs_cbjfxx_owe">欠费：</string>
+    <string name="bs_cbjfxx_txt">没有缴费信息</string>
+    <string name="bs_cbjfxx_txt01">开票序列号：</string>
+    <string name="bs_cbjfxx_txt02">缴费项目：</string>
+    <string name="bs_cbjfxx_txt03">应缴金额（元）：</string>
+    <string name="bs_cbjfxx_txt04">实缴金额（元）：</string>
+    <string name="bs_cbjfxx_txt05">有效期起：</string>
+    <string name="bs_cbjfxx_txt06">有效期止：</string>
+    <string name="bs_cbjfxx_txt07">开票日期：</string>
+    <string name="bs_cbjfxx_txt08">开票单位：</string>
+    <string name="bs_cbjfxx_txt09">开票地市：</string>
+    <string name="bs_cbjfxx_txt10">退费标志：</string>
+    <string name="bs_cbjfxx_txt11">作废标志：</string>
+    <string name="bs_cbjfxx_txt12">销号标志：</string>
+    <string name="bs_cbjfxx_warn">欠费信息</string>
+    <string name="bs_cbjfxx_nowarn">已缴费信息</string>
+    <!-- 船检信息内容 -->
+    <string name="bs_cbcjxx_txt00">没有船检信息：</string>
+    <string name="bs_cbcjxx_jybh">检验编号：</string>
+    <string name="bs_cbcjxx_zwcm">中文船名：</string>
+    <string name="bs_cbcjxx_jydd">检验地点：</string>
+    <string name="bs_cbcjxx_jydwmc">检验单位名称：</string>
+    <string name="bs_cbcjxx_jybm">检验部门：</string>
+    <string name="bs_cbcjxx_sqr">申请人：</string>
+    <string name="bs_cbcjxx_jyzl">检验种类：</string>
+    <string name="bs_cbcjxx_jyksrq">检验开始日期：</string>
+    <string name="bs_cbcjxx_xcjyrq">下次检验日期：</string>
+    <string name="bs_cbcjxx_jywcrq">检验完成日期：</string>
+    <string name="bs_cbcjxx_qtjy">其他检验：</string>
+    <string name="bs_cbcjxx_sfwc">是否完成：</string>
+    <string name="bs_cbcjxx_bz">备注： </string>
+    <!-- 日程 -->
+    <string name="schedule_manage">日程安排</string>
+    <string name="schedule_manage1">公务通知列表</string>
+    <string name="schedule_all_time">公务时间:</string>
+    <string name="schedule_meeting_time">公务时间:</string>
+    <string name="schedule_add">添加日程</string>
+    <string name="schedule_add_time">添加公务通知</string>
+    <string name="schedule_add1">添加转发日程</string>
+    <string name="schedule_add_time1">添加转发会议</string>
+    <string name="set_clock">设置闹钟</string>
+    <string name="schedule_activity">日程反馈</string>
+    <string name="schedule_no_activity">不参加</string>
+    <string name="schedule_title">日程名称：</string>
+    <string name="schedule_time_title">会议名称：</string>
+    <string name="schedule_first_user">发起人：</string>
+    <string name="schedule_user">参加人员：</string>
+    <string name="schedule_userinfo">转发给：</string>
+    <string name="schedule_time">起始时间：</string>
+    <string name="schedule_location">地点：</string>
+    <string name="schedule_kind">类别：</string>
+    <string name="spinner_kind">类别</string>
+    <string name="schedule_content">内容：</string>
+    <string name="schedule_add_userNotic">增加用户</string>
+    <string name="schedule_hint_name">请输入日程名称</string>
+    <string name="schedule_hint_name1">请输入日程名称</string>
+    <string name="schedule_hint_location">请输入日程地点</string>
+    <string name="schedule_hint_content">请输入日程内容</string>
+    <string name="schedule_hint_result">请输入不参加的理由</string>
+    <string name="schedule_attament">添加附件</string>
+    <string name="schedule_YESorNO">是否参加：</string>
+    <string name="schedule_reason">理由：</string>
+    <string name="schedule_update">编辑日程</string>
+    <string name="schedule_see">详情</string>
+    <string name="schedule_spinner01">提前时间</string>
+
+    <string-array name="schedule_spinner01">
+        <item>无提醒</item>
+        <item>5分钟</item>
+        <item>10分钟</item>
+        <item>15分钟</item>
+        <item>20分钟</item>
+        <item>30分钟</item>
+        <item>1个小时</item>
+        <item>2个小时</item>
+        <item>4个小时</item>
+        <item>12个小时</item>
+    </string-array>
+
+    <string name="schedule_spinner02">提醒方式</string>
+
+    <string-array name="schedule_spinner02">
+        <item>音乐</item>
+        <item>震动</item>
+        <item>音乐和震动</item>
+    </string-array>
+
+    <!-- 业务查询 -->
+    <string name="business_title">业务查询</string>
+    <!-- 违章 -->
+    <string name="illegal_add">违章取证</string>
+    <string name="illegal_user">执法人：</string>
+    <string name="illegal_user1">第一执法人：</string>
+    <string name="illegal_user2">第二执法人：</string>
+    <string name="illegal_approvaluser">审核人：</string>
+    <string name="illegal_user3">补充人：</string>
+    <string name="illegal_object">违章对象：</string>
+    <string name="illegal_reason">违章缘由：</string>
+    <string name="spinner_reason">违章缘由</string>
+    <string name="illegal_description">违章描述：</string>
+    <string name="illegal_hint_addUser">选择第二执法人</string>
+    <string name="illegal_time">执法时间：</string>
+    <string name="illegal_updateList">补充情况：</string>
+    <string name="illegal_bt1">港政</string>
+    <string name="illegal_bt2">运政</string>
+    <string name="illegal_bt3">航政</string>
+    <string name="illegal_bt4">海事</string>
+    <string name="illegal_search_hint">船名或执法人员姓名</string>
+    <string name="illegal_bt_update">补充取证</string>
+    <string name="illegal_check">违章审核</string>
+    <string name="illegal_check_do">审核</string>
+    <string name="illegal_check_reasult">审核结果：</string>
+    <string name="illegal_check_content">审核建议：</string>
+    <string name="illegal_select_history">历史记录</string>
+    <string name="illegal_check_spinner">审核结果</string>
+
+    <string-array name="illegal_check_spinner">
+        <item>通过</item>
+        <item>驳回</item>
+    </string-array>
+    <!-- 违章 -->
+    <string name="permit_add">许可踏勘</string>
+    <string name="permit_user">踏勘人员：</string>
+    <string name="permit_update_user">补充人：</string>
+    <string name="permit_object">码头：</string>
+    <string name="permit_description">事实描述：</string>
+    <string name="permit_updateList">补充情况：</string>
+    <string name="permit_search_hint">码头、航道或踏勘人员姓名</string>
+    <string name="patrol_search_hint">码头、巡查人姓名</string>
+    <string name="permit_check">许可审批</string>
+    <string name="permit_check_do">审批</string>
+    <string name="permit_check_reasult">审批结果：</string>
+    <string name="permit_check_content">审批建议：</string>
+    <!-- 码头巡查 -->
+    <string name="patrol_add">码头巡查</string>
+    <string name="patrol_user">巡查人员：</string>
+
+    <!-- 颜色 -->
+    <color name="white">#fff</color>
+    <color name="transparent">#00000000</color>
+    <color name="alpha_grey">#e0e8e8e8</color>
+    <color name="black">#000</color>
+    <color name="grey">#e8e8e8</color>
+    <color name="blue">#3e9bd4</color>
+    <color name="red">#e84c3d</color>
+    <color name="Light_black">#333</color>
+    <color name="Light_gray">#666</color>
+    <color name="Light_a3">#a3a3a3</color>
+    <color name="Light_white">#f5f5f5</color>
+    <color name="logo_edit">#9cabbf</color>
+    <color name="line_color">#e8e8e8</color>
+    <color name="text_graycolor">#8b8b8b</color>
+    <color name="leave_green">#7fc41c</color>
+    <color name="leave_red">#da251c</color>
+    <color name="leave_yellow">#ee970d</color>
+    <color name="fragment_title">#0067ac</color>
+    <color name="fragment_text_nocheck">#333333</color>
+    <color name="fragment_blue_xian">#0166aa</color>
+    <color name="fragment_blue">#0067ac</color>
+    <color name="fragment_gray">#666666</color>
+    <color name="fragment_background">#f9f9f9</color>
+    <!-- 通讯录 -->
+    <string name="addresslist_button">通讯录</string>
+    <string name="addresslist_button1">联系人详情</string>
+    <string name="addresslist_but1">联系人</string>
+    <string name="addresslist_but2">群组</string>
+    <string name="addresslist_search">搜索</string>
+    <string name="addresslist_quxiao">取消</string>
+    <string name="addresslist_nofind">没有数据</string>
+    <string name="addresslist_tel">电话</string>
+    <string name="addresslist_del">部门</string>
+    <string name="addresslist_newbutton">下属部门</string>
+    <string name="addresslist_newbutton1">部门人员</string>
+    <string name="addresslist_text1">手机号码</string>
+    <string name="addresslist_text2">虚拟网短号</string>
+    <string name="addresslist_text3">家庭号码</string>
+    <!-- 知识库 -->
+    <string name="knowledge_button">知识库</string>
+    <!-- 动态 -->
+    <string name="portdynmicnews_main">港航动态</string>
+    <string name="portdynmicnews_industryInfo">行业资讯</string>
+    <string name="portdynmicnews_see">港航动态</string>
+    <!-- 公告 -->
+    <string name="portnotice_main">通知公告</string>
+    <string name="portnotice_see">通知查看</string>
+    <!-- 签到签退 -->
+    <string name="attendace_main">签到签退</string>
+    <string name="attendace_sign_in">签到</string>
+    <string name="attendace_sign_insee">查看详情</string>
+    <string name="attendace_sign_back">签退</string>
+    <string name="attendace_sign_backsee">签退详情</string>
+    <string name="attendace_location">提交当前位置</string>
+    <string name="attendace_sign_list">签到签退</string>
+    <string name="attendace_sign_load_more">加载更多...</string>
+    <!-- 地图 -->
+    <string name="shipmap_main">区域地图</string>
+    <!-- 请假加班 -->
+    <string name="leaveandovertime_button">考勤管理</string>
+    <string name="leaveandovertime_leavebutton">请假</string>
+    <string name="leaveandovertime_overtimebutton">加班</string>
+    <string name="leaveandovertime_approvalbutton">审批</string>
+    <string name="leaveandovertime_view_leaveOrOtUser">申请人：</string>
+    <string name="leaveandovertime_view_travl">出差地点：</string>
+    <string name="leaveandovertime_view_approvalName">审批人：</string>
+    <string name="leaveandovertime_view_kindName">请假类型：</string>
+    <string name="leaveandovertime_view_beginDate">开始时间：</string>
+    <string name="leaveandovertime_view_endDate">结束时间：</string>
+    <string name="leaveandovertime_view_lastDate">请假时长：</string>
+    <string name="leaveandovertime_view_leaveOrOtReason">请假事由：</string>
+    <string name="leaveandovertime_view_status">状态</string>
+    <string name="leaveandovertime_userselect">人员选择</string>
+    <string name="leaveandovertime_ApprovalID1">直接领导：</string>
+    <string name="leaveandovertime_ApprovalID2">上级领导：</string>
+    <string name="leaveandovertime_ApprovalID3">分管领导：</string>
+    <string name="leaveandovertime_submit">提交</string>
+    <string name="leaveandovertime_approval">审批</string>
+    <string name="leaveandovertime_approval_result">审批结果：</string>
+    <string name="leaveandovertime_approval_Opinion">审批意见：</string>
+    <string name="leaveandover_newlist_approvalbutton">待审批</string>
+    <string name="leaveandover_newlist_approvalbutton1">已审批</string>
+    <string name="leaveandovertime_newlist_result">审批状态：</string>
+    <string name="leaveandovertime_newlist_button">详情</string>
+    <string name="leaveandovertime_newlist_button1">审批记录</string>
+    <string name="leaveandovertime_newlist_add">请假申请</string>
+    <string name="leaveandovertime_newlist_kindName">类别：</string>
+    <string name="leaveandovertime_newlist_kindNameselect">类别选择：</string>
+    <string name="leaveandovertime_newlist_leaveOrOtReason">请填写事由</string>
+    <string name="leaveandovertime_add_address">请填写出差地点</string>
+    <string name="leaveandovertime_newlist_add_beginDateNeirong_morning">上午</string>
+    <string name="leaveandovertime_newlist_add_endDateNeirong_afternoon">下午</string>
+
+    <string-array name="leaveandovertime_newlist_add_time">
+        <item>上午</item>
+        <item>下午</item>
+        <item>取消</item>
+    </string-array>
+
+    <!-- 航行电子报告 -->
+    <string name="electricreport_main">航行电子报告单</string>
+    <string name="electricreport_main_name">船名号</string>
+    <string name="electricreport_main_inputname">请输入船舶的名称</string>
+    <string name="electricreport_main_draft">实际吃水</string>
+    <string name="electricreport_main_inputdraft">请输入实际吃水量</string>
+    <string name="electricreport_main_shipUserName">船长姓名</string>
+
+    <string name="electricreport_main_arrival">预计进出港时间</string>
+    <string name="electricreport_main_inputarrival">请输入预计进出港时间</string>
+    <string name="electricreport_main_pier">本次作业码头</string>
+    <string name="electricreport_main_inputpier">请输入本次作业码头</string>
+    <string name="electricreport_main_cargoSituation">载货情况</string>
+    <string name="electricreport_main_inputcargoSituation">请输入载货情况</string>
+    <string name="electricreport_main_type">载货种类</string>
+    <string name="electricreport_main_inputtype">请输入载货种类</string>
+    <string name="electricreport_main_cargoNumber">载货数量</string>
+    <string name="electricreport_main_inputcargoNumber">请输入数量</string>
+    <string name="electricreport_main_name1">湖州港</string>
+    <string name="electricreport_main_name2">嘉兴港</string>
+    <string name="electricreport_main_name3">杭州港口</string>
+    <string name="electricreport_main_name4">嘉善码头</string>
+    
+    <string name="electricreport_main_ty1">煤炭及制品</string>
+    <string name="electricreport_main_ty2">石油天然气及制品</string>
+    <string name="electricreport_main_ty3">金属矿石</string>
+    <string name="electricreport_main_ty4">木材</string>
+    <string name="electricreport_main_ty5">水泥</string>
+    <string name="electricreport_main_ty6">非金属矿石</string>
+    <string name="electricreport_main_ty7">农林牧渔产品</string>
+    <string name="electricreport_main_ty8">其他货物</string>
+    <string name="electricreport_main_unit1">吨</string>
+    <string name="electricreport_main_unit2">升</string>
+    <string name="electricreport_main_unit3">包</string>
+    <string name="electricreport_main_unit4">箱</string>
+    <string name="electricreport_main_unit5">桶</string>
+    <string name="electricreport_main_unit6">袋</string>
+    <string name="electricreport_main_unit7">件</string>
+    <string name="electricreport_main_unit8">台</string>
+    <string name="electricreport_main_name11">进港</string>
+    <string name="electricreport_main_name21">出港</string>
+    <string name="electricreport_list">航行电子报告信息列表</string>
+    <string name="electricreport_content">航行电子报告信息查看</string>
+    <string name="electricreport_pier">选择码头</string>
+    <string name="electricreport_type">选择货物种类</string>
+    <string name="electricreport_uniti">选择单位</string>
+    <string name="regularvisa_mark">选择进出港</string>
+    <string name="regularvisa_search">请输入查询条件</string>
+
+    <string-array name="electricreport_spinner">
+        <item>空船</item>
+        <item>满船</item>
+    </string-array>
+    <!-- 电子签证 -->
+    <string name="electricvisa_main">电子签证信息</string>
+    <string name="electricvisa_main_name">船名号：</string>
+    <string name="electricvisa_main_inputname">请输入船名号：</string>
+    <string name="electricvisa_main_start">起运港：</string>
+    <string name="electricvisa_main_inputstart">请输入起运港：</string>
+    <string name="electricvisa_main_arriva">目的港：</string>
+    <string name="electricvisa_main_inputarriva">请输入目的港：</string>
+    <string name="electricvisa_main_mark">进出港标记</string>
+    <string name="electricvisa_main_inputmark">请输入进出港标记</string>
+    <string name="electricvisa_main_time">进出港时间：</string>
+    <string name="electricvisa_main_inputtime">请输入进出港时间：</string>
+    <string name="electricvisa_main_types">货物名称：</string>
+    <string name="electricvisa_main_inputtypes">请输入货物名称：</string>
+    <string name="electricvisa_main_load">载重（吨）：</string>
+    <string name="electricvisa_main_inputload">请输入载重：</string>
+    <string name="electricvisa_main_status">签证结果：</string>
+    <string name="electricvisa_main_content">审核内容：</string>
+    <string name="electricvisa_list">电子签证信息列表</string>
+    <string name="electricvisa_list_qz">待签证</string>
+    <string name="electricvisa_list_me">我的签证</string>
+    <string name="electricvisa_list_all">全部</string>
+    <string name="electricvisa_content">电子签证信息查看</string>
+    <string name="electricvisa_mainapply">电子签证</string>
+    <string name="electricvisa_search">搜索</string>
+    <string name="electricvisa_quxiao">取消</string>
+    <!-- 定期签证 -->
+    <string name="fixedtermreport_list">定期签证航次报告</string>
+    <string name="regularvisa_add">定期签证报告单</string>
+    <string name="regularvisa_see">定期签证信息</string>
+    <string name="regularvisa_add_port1">起运港</string>
+    <string name="regularvisa_add_inport1">请输入起运港</string>
+    <string name="regularvisa_add_port2">目的港</string>
+    <string name="regularvisa_add_inport2">请输入目的港</string>
+
+    <string-array name="electricvisa_spinner">
+        <item>进港</item>
+        <item>出港</item>
+    </string-array>
+    <string-array name="electricvisa1_spinner">
+        <item>同意</item>
+        <item>驳回</item>
+    </string-array>
+    <!-- 登陆 -->
+    <string name="login_use">请输入用户名</string>
+    <string name="login_pwd">请输入密码</string>
+    <string name="login_btn">登陆</string>
+
+    <!-- 危险品进港 -->
+    <string name="dangerousgoodsportln_button">危险品进港审批</string>
+    <string name="dangerousgoodsportln_button1">危险品进港</string>
+    <string name="dangerousgoodsportln_ShipName">船名号：</string>
+    <string name="dangerousgoodsportln_DeclareTime">申报时间：</string>
+    <string name="dangerousgoodsportln_PortTime">进港时间：</string>
+    <string name="dangerousgoodsportln_StartingPort">起运港：</string>
+    <string name="dangerousgoodsportln_ArrivalPort">目的港：</string>
+    <string name="dangerousgoodsportln_CargoTypes">货物名称：</string>
+    <string name="dangerousgoodsportln_DangerousLevel">危险品等级：</string>
+    <string name="dangerousgoodsportln_Carrying">载重(吨/升)：</string>
+    <string name="dangerousgoodsportln_ReviewUser">审批人员：</string>
+    <string name="dangerousgoodsportln_ReviewResult">审核结果：</string>
+    <string name="dangerousgoodsportln_ReviewOpinion">审核原因：</string>
+    <string name="dangerousgoodsportln_ReviewTime">审核时间：</string>
+    <string name="dangerousgoodsportln_search">船名，港口，货物</string>
+    <!-- 危险品码头作业 -->
+    <string name="dangerousgoodsjob_button">危险货物码头作业审批</string>
+    <string name="dangerousgoodsjob_button1">危险货物码头作业</string>
+    <string name="dangerousgoodsjob_wharfName">作业码头名称：</string>
+    <string name="dangerousgoodsjob_workTIme">申请作业时间：</string>
+    <string name="dangerousgoodsjob_wharfNameselect">作业码头选择：</string>
+    <string name="dangerousgoodsjob_search">船名，码头</string>
+
+    <string-array name="dangerousgoodsportln_DangerousLevel_spinner">
+        <item>爆炸品</item>
+        <item>气体</item>
+        <item>易燃液体</item>
+        <item>易燃固体</item>
+        <item>氧化剂</item>
+        <item>毒性物质</item>
+        <item>放射性物质</item>
+        <item>腐蚀品</item>
+        <item>杂项危险物品</item>
+    </string-array>
+
+    <!-- 巡航日志 -->
+    <string name="cruiselog_title">巡航</string>
+    <string name="cruiselog_search_hint">巡航区域或者巡航人员</string>
+    <string name="cruiselog_add_title">创建巡航日志</string>
+    <string name="cruiselog_unfinsh">未完成</string>
+    <string name="cruiselog_finsh">完成</string>
+    <string name="cruiselog_shijian">巡航中的事件</string>
+    <string name="cruiselog_cruiseLogLoaction">巡航区域：</string>
+    <string name="cruiselog_cruiseLogUserName">巡航人员：</string>
+    <string name="cruiselog_shipName">交通工具：</string>
+    <string name="cruiselog_startTime">开始时间：</string>
+    <string name="cruiselog_endTime">结束时间：</string>
+    <string name="action_search">搜索</string>
+    <string name="action_refresh">刷新</string>
+    <string name="action_share">分享</string>
+    <string name="left_login">未登入</string>
+    <string name="action_prompt">提示:</string>
+    <string name="left_mobileoffice">移动办公</string>
+    <string name="left_bussinessprocessing">业务处理</string>
+    <string name="left_query">综合查询</string>
+    <string name="left_phonebook">通讯录</string>
+    <string name="left_setting">设置</string>
+    <string name="left_vote">投票</string>
+    <string name="left_focus">聚合阅读</string>
+    <string name="left_pic">图片</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="refresh">刷新</string>
+    <string name="person">个人中心</string>
+    <string name="sliding_title">SlidingMenu Demo</string>
+    <string name="desc_list_item_icon">SlidingMenu</string>
+    <string name="equipment_title">设备申请</string>
+    <string name="equipment_view_equipmentKind">申请物品：</string>
+    <string name="equipment_view_equipmentDate">申请时间：</string>
+    <string name="equipment_view_equipmentReason">申请原因：</string>
+    <string name="equipment_view_approvalID">审批人员：</string>
+    <string name="equipment_view_approvalResult">审批结果：</string>
+    <string name="equipment_view_approvalOpinion">审批意见：</string>
+    <string name="equipment_view_approvalTime">审批时间：</string>
+    <string name="equipment_add_equipmentReason">请填写原因</string>
+    <string name="fragment_set_leave">请假加班审批人设置</string>
+    <string name="fragment_set_textview1">网络地址</string>
+    <string name="fragment_set_textview2">设备信息</string>
+    <string name="fragment_set_edit_password">修改密码</string>
+    <string name="fragment_set_textview3">检查更新</string>
+    <string name="fragment_set_textview4">使用帮助</string>
+    <string name="fragment_set_textview5">关于我们</string>
+    <string name="fragment_set_pushtimesetting">推送时间设定</string>
+    <string name="fragment_set_my_tv2"></string>
+    <string name="fragment_set_my_tv3">Copyright(©)2013-2014</string>
+    <string name="fragment_set_my_title">关于我们</string>
+    <string name="fragment_set_mei_title">设备信息</string>
+    <string name="fragment_set_mei_tv">IMEI号</string>
+    <string name="fragment_set_ip_title">网络地址</string>
+    <string name="fragment_set_ip_tv">网络端口</string>
+    <string name="fragment_set_ip_update_title">修改网络地址</string>
+    <string name="fragment_set_uplosd">上传管理</string>
+    <string name="fragment_set_pushmsgtimer_title">信息推送时间</string>
+    <string name="fragment_set_pushmsgtimer_setting">推送时间(分钟)</string>
+
+    <!-- 签证 -->
+    <string name="cbjzxx_id">序号：</string>
+    <string name="cbjzxx_zwcm">中文船名：</string>
+    <string name="cbjzxx_qzsj">签证时间：</string>
+    <string name="cbjzxx_qzdd">签证地点：</string>
+    <string name="cbjzxx_jcgsj">进出港时间</string>
+    <string name="cbjzxx_sfgmc">始发港名称：</string>
+    <string name="cbjzxx_mdgmc">目的港名称：</string>
+    <string name="cbjzxx_qzlx">签证类型名称：</string>
+    <string name="cbjzxx_qzh">签证号：</string>
+    <string name="cbjzxx_zkrs">载客人数：</string>
+    <string name="cbjzxx_zhl">载货量：</string>
+    <string name="cbjzxx_cyrs">船员人数：</string>
+    <string name="cbjzxx_qzry">签证人员：</string>
+    <string name="cbjzxx_jlsj">记录时间：</string>
+    <string name="cbjzxx_jcglx">进出港类型：</string>
+    <!-- 航运企业信息 -->
+    <string name="hyqyxx_notice">请输入航运企业名称</string>
+    <string name="hyqyxx_qymc">企业名称：</string>
+    <string name="hyqyxx_qydd">企业地址：</string>
+    <string name="hyqyxx_frdb">法人代表：</string>
+    <string name="hyqyxx_dhhm">电话号码：</string>
+    <string name="hyqyxx_hyfl">行业分类：</string>
+    <string name="hyqyxx_zykyhq">主营客运航区：</string>
+    <string name="hyqyxx_zyhyhq">主营货运航区：</string>
+    <string name="hyqyxx_zykyfw">主营客运范围：</string>
+    <string name="hyqyxx_zyhyfw">主营货运范围：</string>
+    <string name="hyqyxx_jyfw">兼营范围：</string>
+    <string name="hyqyxx_pzrq">批准日期：</string>
+    <!-- 码头作业信息 -->
+    <string name="mtzyxx_notice">请输入码头作业名称</string>
+    <!-- 码头企业信息 -->
+    <string name="mtqyxx_notice">请输入码头企业名称</string>
+    <!-- 码头作业报告 -->
+    <string name="wharfwork_button">码头作业信息</string>
+    <string name="wharfwork_view_name">上报人：</string>
+    <string name="wharfwork_view_shipName">船名号：</string>
+    <string name="wharfwork_view_startingPort">起运港：</string>
+    <string name="wharfwork_view_arrivalPort">目的港：</string>
+    <string name="wharfwork_view_cargoTypes">货物名称：</string>
+    <string name="wharfwork_view_carrying">货物数量：</string>
+    <string name="wharfwork_view_portMart">进出港标记：</string>
+    <string name="wharfwork_view_workTime">作业时间：</string>
+    <string name="wharfwork_view_declareTime">申报时间：</string>
+    <string name="wharfwork_view_locationName">当前位置：</string>
+    <string name="wharfwork_add_shipName">请输入船名号</string>
+    <string name="wharfwork_add_startingPort">请输入起运港</string>
+    <string name="wharfwork_add_arrivalPort">请输入目的港</string>
+    <string name="wharfwork_add_carryingneirong">请输入货物数量</string>
+    <string name="wharfwork_add_gooods">货物选择</string>
+    <string name="wharfwork_add_portmart">进出港标记选择</string>
+    <string name="wharfwork_add_portmart_tv1">进港</string>
+    <string name="wharfwork_add_portmart_tv2">出港</string>
+    <string name="main_login">登录</string>
+    <string name="main_selectusername">切换帐号</string>
+    <string name="electricreportnew_show_kind">报告类型</string>
+    <string name="electricreport_show_draft">油耗</string>
+    <string name="electricreport_show_drafttime">最近加油时间</string>
+    <string name="electricreportnew_show_name">报告人</string>
+    <string name="electricreportnew_show_time">报告时间</string>
+    <string name="electricreportnew_show_address1">始发港</string>
+    <string name="electricreportnew_show_address2">目的港</string>
+    <string name="electricreportnew_kind1">重船航行报告</string>
+    <string name="electricreportnew_kind2">空船航行报告</string>
+    <string name="electricreportnew_addport_title">港口选择</string>
+    
+    <string name="image_default_describe">这是一张图片</string>
+    <string name="setup_boatman_title">相关船员信息</string>
+
+    <string name="old_password">原密码</string>
+    <string name="new_password">新密码</string>
+    <string name="check_password">确认密码</string>
+    <string name="old_password_hint">请输入原密码</string>
+    <string name="new_password_hint">请输入新密码</string>
+    <string name="check_password_hint">再次输入密码</string>
+    <string name="setup_update_password">修改密码</string>
+    
+    <string name="search_ninecode_add_edit">请输入船名</string>
+    <string name="search_ninecode_hint">请输入九位码</string>
+    <string name="search_ninecode_see">查看船舶基本信息</string>
+    <string name="search_ninecode_update">修改船舶九位码</string>
+    <string name="search_ninecode_hint1">船舶九位码基本信息</string>
+    <string name="search_ninecode_hint2">船舶九位码修改信息</string>
+</resources>

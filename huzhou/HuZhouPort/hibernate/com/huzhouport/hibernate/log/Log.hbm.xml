@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+   <class name="com.huzhouport.log.model.Log" table="mm_Log" >
+        <id name="logId" column="LogID" >
+            <generator class="native"></generator>
+        </id>
+ 
+        <property name="logUser" column="LogUser" ></property>
+
+        <property name="logTime" column="LogTime" ></property>
+
+        <property name="logContent" column="LogContent" ></property>
+
+    <property name="partOfStyle" column="PartOfStyle" ></property> 
+   <property name="isApp" column="IsApp" ></property> 
+   <property name="bz" column="bz" ></property> 
+    </class>
+</hibernate-mapping>

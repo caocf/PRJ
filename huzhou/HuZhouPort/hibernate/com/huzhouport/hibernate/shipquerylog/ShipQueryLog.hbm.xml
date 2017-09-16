@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- 
+    每个class对应一个持久化对象
+-->
+<hibernate-mapping>
+	<class name="com.huzhouport.shipquerylog.model.ShipQueryLog" table="mm_queryShipLog">
+		<id name="logId" column="logId">
+			<generator class="native"></generator>
+		</id>
+		<property name="logUserid" column="logUserid"></property>
+		<property name="logUserName" column="logUserName"></property>
+		<property name="lan" column="lan"></property>
+		<property name="lon" column="lon"></property>
+		<property name="shipname" column="shipname"></property>
+		<property name="querytime" column="querytime"></property>
+		<property name="shipnum" column="shipnum"></property>
+		<property name="qzyc" column="qzyc"></property>
+		<property name="jfyc" column="jfyc"></property>
+		<property name="zsyc" column="zsyc"></property>
+		<property name="wzyc" column="wzyc"></property>
+		
+	</class>
+</hibernate-mapping>
