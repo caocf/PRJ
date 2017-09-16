@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TKnowledgeBase" table="t_knowledge_base" schema="zjport">
+        <id name="stBaseId" column="ST_BASE_ID"/>
+        <property name="stBaseTitle" column="ST_BASE_TITLE"/>
+        <property name="dtSend" column="DT_SEND"/>
+        <property name="stStructureId" column="ST_STRUCTURE_ID"/>
+        <property name="stAttachmentMiddleId" column="ST_ATTACHMENT_MIDDLE_ID"/>
+        <property name="stBaseContent" column="ST_BASE_CONTENT"/>
+        <property name="stUserId" column="ST_USER_ID"/>
+        <property name="stBaseKeyword" column="ST_BASE_KEYWORD"/>
+        <property name="stIsValid" column="ST_IS_VALID"/>
+    </class>
+</hibernate-mapping>

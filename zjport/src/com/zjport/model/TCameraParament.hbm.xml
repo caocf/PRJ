@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.Parament" table="t_camera_parament" schema="zjport">
+        <id name="cameraId" column="camera_id">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="matrixCode" column="matrix_code"/>
+        <property name="monitorId" column="monitor_id"/>
+        <property name="cameraName" column="camera_name"/>
+        <property name="deviceIp" column="device_ip"/>
+        <property name="devicePort" column="device_port"/>
+        <property name="deviceType" column="device_type"/>
+        <property name="user" column="user"/>
+        <property name="password" column="password"/>
+        <property name="channalNum" column="channal_num"/>
+        <property name="protocolType" column="protocol_type"/>
+        <property name="streamType" column="stream_type"/>
+        <property name="isEhomeDevice" column="is_ehome_device"/>
+        <property name="deviceIndexCode" column="device_index_code"/>
+        <property name="vagIp" column="vag_ip"/>
+        <property name="vagPort" column="vag_port"/>
+        <property name="cameraIndexCode" column="camera_index_code"/>
+        <property name="streamPu" column="stream_pu"/>
+        <property name="streamCu" column="dtream_cu"/>
+        <property name="regionId" column="region_id"/>
+        <property name="controlUnitId" column="control_unit_id"/>
+        <property name="cascad" column="cascad"/>
+        <property name="cascadeCameraIndexCode" column="cascade_camera_index_code"/>
+        <property name="cascadeIasIp" column="cascade_ias_ip"/>
+        <property name="cascadeIasPort" column="cascade_ias_port"/>
+        <property name="cascadDeviceType" column="cascad_device_type"/>
+        <property name="streamServerIp" column="stream_server_ip"/>
+        <property name="streamServerPort" column="stream_server_port"/>
+        <property name="isUseStreamServer" column="is_use_stream_server"/>
+        <property name="deviceId" column="device_id"/>
+        <property name="userId" column="user_id"/>
+        <property name="pagIp" column="pag_ip"/>
+        <property name="pagPort" column="pag_port"/>
+        <property name="userSession" column="user_session"/>
+        <property name="userRightLevel" column="user_right_level"/>
+        <property name="linkedMode" column="linked_mode"/>
+        <property name="useStreamServerCascade" column="use_stream_server_cascade"/>
+        <property name="cascadeStreamRtspPath" column="cascade_stream_rtsp_path"/>
+        <property name="ptzControl" column="ptz_control"/>
+        <property name="snapPricture" column="snap_pricture"/>
+        <property name="recordVideo" column="record_video"/>
+        <property name="threeDPosition" column="three_d_position"/>
+        <property name="digitalZoom" column="digital_zoom"/>
+        <property name="ptzConfigPrivilege" column="ptz_config_privilege"/>
+        <property name="videoConfigPrivilege" column="video_config_privilege"/>
+    </class>
+</hibernate-mapping>

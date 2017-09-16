@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TKnowledgeBaseStructure" table="t_knowledge_base_structure" schema="zjport">
+        <id name="stStructureId" column="ST_STRUCTURE_ID"/>
+        <property name="stStructureName" column="ST_STRUCTURE_NAME"/>
+        <property name="stParentStructureId" column="ST_PARENT_STRUCTURE_ID"/>
+        <property name="stStructureDescribe" column="ST_STRUCTURE_DESCRIBE"/>
+    </class>
+</hibernate-mapping>

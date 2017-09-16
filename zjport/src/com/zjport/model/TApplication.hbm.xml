@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TApplication" table="t_application" schema="zjport">
+        <id name="stApplicationId" column="ST_APPLICATION_ID"/>
+        <property name="stAppName" column="ST_APP_NAME"/>
+        <property name="stAppUrl" column="ST_APP_URL"/>
+        <property name="stAppImgUrl" column="ST_APP_IMG_URL"/>
+    </class>
+</hibernate-mapping>

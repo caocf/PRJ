@@ -1,0 +1,39 @@
+@charset "UTF-8";
+.bluetree * {font-size: 10pt;font-family:"Microsoft Yahei",Verdana,Simsun,"Segoe UI Web Light","Segoe UI Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","Helvetica Neue",Arial}
+.bluetree li ul{ margin:0; padding:0}
+.bluetree li {line-height:30px;}
+.bluetree li a {width:100%;height:30px;padding-top: 0px;}
+.bluetree li a:hover {text-decoration:none; background-color: #e5f3ff;}
+.bluetree li a:hover .qzidiv{color: #0067ac;}
+.bluetree li.showIcon>a span.button{background-image:url("../../image/left_menuForOutLook_white.png");}
+.bluetree li a.curSelectedNode {background-color:#cde8ff;border:0;height:30px;}
+.bluetree li a.curSelectedNode .qzidiv{color: #0067ac;}
+/*.bluetree li a.curSelectedNode span.button{background-image:url("../image/left_menuForOutLook_white.png");}*/
+.bluetree li span {line-height:30px;}
+.bluetree li span.button {margin-top: -7px;}
+.bluetree li span.button.switch {width: 16px;height: 16px;}
+.bluetree .node_name {width: 90%;display: inline-block;margin-left:5px;}
+.bluetree .node_name>span {float: left}
+.bluetree li a.level0 span {font-weight: bold;}
+.bluetree li span.button {background-image:url("../../image/left_menuForOutLook.png"); *background-image:url("../../image/left_menuForOutLook.gif")}
+.bluetree li span.button.switch {width: 20px; height:20px;position: relative;top:2px;}
+.bluetree li span.button.noline_open {background-position: 0 0;}
+.bluetree li span.button.noline_close {background-position: -18px 0;}
+.bluetree li span.button.noline_open.level0 {background-position: 0 -18px;}
+.bluetree li span.button.noline_close.level0 {background-position: -18px -18px;}
+.qzidiv{
+    cursor: pointer;
+    float: right;
+    width: 30px;
+    height:100%;
+    color: white;
+    text-align: center;
+}
+.qzidiv>i{
+    line-height: 30px;
+    font-size: 15px;
+}
+.qzidiv:hover{
+    background-color: rgb(0,88,146);
+    color: white!important;
+}

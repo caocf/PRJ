@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.zjport.model.TPortletPart" table="t_portlet_part" schema="zjport">
+        <id name="stPortletPartId" type="java.lang.Integer">
+            <column name="ST_PORTLET_PART_ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="stPortletPartMiddleId" type="java.lang.String">
+            <column name="ST_PORTLET_PART_MIDDLE_ID"/>
+        </property>
+        <property name="stPortletLibId" type="java.lang.Integer">
+            <column name="ST_PORTLET_LIB_ID"/>
+        </property>
+        <property name="stPosition" type="java.lang.String">
+            <column name="ST_POSITION"/>
+        </property>
+        <property name="stOrder" type="java.lang.Integer">
+            <column name="ST_ORDER"/>
+        </property>
+        <property name="stDisplayForm" type="java.lang.String">
+            <column name="ST_DISPLAY_FORM"/>
+        </property>
+        <property name="stColor" type="java.lang.String">
+            <column name="ST_COLOR"/>
+        </property>
+    </class>
+</hibernate-mapping>

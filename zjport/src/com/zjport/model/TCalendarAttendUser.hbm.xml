@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TCalendarAttendUser" table="t_calendar_attend_user" schema="zjport">
+        <id name="stCalendarAttendUserId" column="ST_CALENDAR_ATTEND_USER_ID"/>
+        <property name="stCalendarMiddleId" column="ST_CALENDAR_MIDDLE_ID"/>
+        <property name="stUserId" column="ST_USER_ID"/>
+    </class>
+</hibernate-mapping>

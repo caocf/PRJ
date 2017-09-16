@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TBoard" table="t_board" schema="zjport">
+        <id name="stBoardId" column="ST_BOARD_ID"/>
+        <property name="stBoardName" column="ST_BOARD_NAME"/>
+        <property name="stBoardIp" column="ST_BOARD_IP"/>
+        <property name="stBoardDescribe" column="ST_BOARD_DESCRIBE"/>
+        <property name="stBoardManager" column="ST_BOARD_MANAGER"/>
+    </class>
+</hibernate-mapping>

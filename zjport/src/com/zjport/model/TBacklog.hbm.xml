@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TBacklog" table="t_backlog" schema="zjport">
+        <id name="stBacklogId" type="java.lang.Integer">
+            <column name="ST_BACKLOG_ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="stBacklogName" type="java.lang.String">
+            <column name="ST_BACKLOG_NAME"/>
+        </property>
+        <property name="stType" type="java.lang.String">
+            <column name="ST_TYPE"/>
+        </property>
+        <property name="stRelationId" type="java.lang.Integer">
+            <column name="ST_RELATION_ID"/>
+        </property>
+        <property name="stUserId" type="java.lang.Integer">
+            <column name="ST_USER_ID"/>
+        </property>
+        <property name="stState" type="java.lang.Boolean">
+            <column name="ST_STATE"/>
+        </property>
+        <property name="dtCreate" type="timestamp">
+            <column name="DT_CREATE"/>
+        </property>
+        <property name="dtDeal" type="timestamp">
+            <column name="DT_DEAL"/>
+        </property>
+    </class>
+</hibernate-mapping>

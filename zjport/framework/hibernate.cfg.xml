@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url"><![CDATA[jdbc:mysql://localhost:3306/zjport]]></property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+    <mapping resource="com/zjport/model/TApplication.hbm.xml"/>
+    <mapping class="com.zjport.model.TApplication"/>
+    <mapping resource="com/zjport/model/TAttachment.hbm.xml"/>
+    <mapping class="com.zjport.model.TAttachment"/>
+    <mapping class="com.zjport.model.TBacklog"/>
+    <mapping resource="com/zjport/model/TBacklog.hbm.xml"/>
+    <mapping resource="com/zjport/model/TCalendar.hbm.xml"/>
+    <mapping class="com.zjport.model.TCalendar"/>
+    <mapping class="com.zjport.model.TInformation"/>
+    <mapping resource="com/zjport/model/TInformation.hbm.xml"/>
+    <mapping resource="com/zjport/model/TInformationTarget.hbm.xml"/>
+    <mapping class="com.zjport.model.TInformationTarget"/>
+    <mapping resource="com/zjport/model/TKnowledgeBase.hbm.xml"/>
+    <mapping class="com.zjport.model.TKnowledgeBase"/>
+    <mapping class="com.zjport.model.TOrg"/>
+    <mapping resource="com/zjport/model/TOrg.hbm.xml"/>
+    <mapping class="com.zjport.model.TPosition"/>
+    <mapping resource="com/zjport/model/TPosition.hbm.xml"/>
+    <mapping resource="com/zjport/model/TUser.hbm.xml"/>
+    <mapping class="com.zjport.model.TUser"/>
+    <mapping resource="com/zjport/model/TUserApplication.hbm.xml"/>
+    <mapping class="com.zjport.model.TUserApplication"/>
+    <mapping resource="com/zjport/model/TWebColumn.hbm.xml"/>
+    <mapping class="com.zjport.model.TWebColumn"/>
+    <mapping resource="com/zjport/model/TWebName.hbm.xml"/>
+    <mapping class="com.zjport.model.TWebName"/>
+    <mapping class="com.zjport.model.TAddressListGroup"/>
+    <mapping resource="com/zjport/model/TAddressListGroup.hbm.xml"/>
+    <mapping class="com.zjport.model.TArea"/>
+    <mapping resource="com/zjport/model/TArea.hbm.xml"/>
+    <mapping class="com.zjport.model.TDepartment"/>
+    <mapping resource="com/zjport/model/TDepartment.hbm.xml"/>
+    <mapping class="com.zjport.model.TOrgSync"/>
+    <mapping resource="com/zjport/model/TOrgSync.hbm.xml"/>
+    <mapping class="com.zjport.model.TPositionSync"/>
+    <mapping resource="com/zjport/model/TPositionSync.hbm.xml"/>
+    <mapping class="com.zjport.model.TBoard"/>
+    <mapping resource="com/zjport/model/TBoard.hbm.xml"/>
+    <mapping resource="com/zjport/model/TScanDepartment.hbm.xml"/>
+    <mapping class="com.zjport.model.TScanDepartment"/>
+    <mapping class="com.zjport.model.TKnowledgeBaseStructure"/>
+    <mapping resource="com/zjport/model/TKnowledgeBaseStructure.hbm.xml"/>
+    <mapping resource="com/zjport/model/TCalendarAttendUser.hbm.xml"/>
+    <mapping class="com.zjport.model.TCalendarAttendUser"/>
+    <mapping resource="com/zjport/model/TAddressListMiddle.hbm.xml"/>
+    <mapping class="com.zjport.model.TAddressListMiddle"/>
+    <mapping resource="com/zjport/model/TCameraParament.hbm.xml"/>
+    <mapping resource="com/zjport/model/TCamera.hbm.xml"/>
+    <mapping class="com.zjport.model.TPortlet"/>
+    <mapping resource="com/zjport/model/TPortlet.hbm.xml"/>
+    <mapping class="com.zjport.model.TPortletPart"/>
+    <mapping resource="com/zjport/model/TPortletPart.hbm.xml"/>
+    <mapping resource="com/zjport/model/TPortletLib.hbm.xml"/>
+    <mapping class="com.zjport.model.TPortletLib"/>
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

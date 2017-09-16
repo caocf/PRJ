@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TPortletLib" table="t_portlet_lib" schema="zjport">
+        <id name="stPortletLibId" type="java.lang.Integer">
+            <column name="ST_PORTLET_LIB_ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="stModuleName" type="java.lang.String">
+            <column name="ST_MODULE_NAME"/>
+        </property>
+        <property name="stModuleId" type="java.lang.String">
+            <column name="ST_MODULE_ID"/>
+        </property>
+        <property name="stIcon" type="java.lang.String">
+            <column name="ST_ICON"/>
+        </property>
+        <property name="stUrl" type="java.lang.String">
+            <column name="ST_URL"/>
+        </property>
+        <property name="stDescribe" type="java.lang.String">
+            <column name="ST_DESCRIBE"/>
+        </property>
+        <property name="stOrder" type="java.lang.Integer">
+            <column name="ST_ORDER"/>
+        </property>
+        <property name="stUserName" type="java.lang.String">
+            <column name="ST_USER_NAME"/>
+        </property>
+        <property name="dtCreate" type="timestamp">
+            <column name="DT_CREATE"/>
+        </property>
+        <property name="stType" type="java.lang.String">
+            <column name="ST_TYPE"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TUser" table="t_user" schema="zjport">
+        <id name="stUserId" type="java.lang.Integer">
+            <column name="ST_USER_ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="stUserSyncId" type="java.lang.String">
+            <column name="ST_USER_SYNC_ID"/>
+        </property>
+        <property name="stAccount" type="java.lang.String">
+            <column name="ST_ACCOUNT"/>
+        </property>
+        <property name="stPassword" type="java.lang.String">
+            <column name="ST_PASSWORD"/>
+        </property>
+        <property name="stUserName" type="java.lang.String">
+            <column name="ST_USER_NAME"/>
+        </property>
+        <property name="stPositionId" type="java.lang.Integer">
+            <column name="ST_POSITION_ID"/>
+        </property>
+        <property name="stDepartmentId" type="java.lang.String">
+            <column name="ST_DEPARTMENT_ID"/>
+        </property>
+        <property name="stOrgId" type="java.lang.String">
+            <column name="ST_ORG_ID"/>
+        </property>
+        <property name="stPhoto" type="java.lang.Byte">
+            <column name="ST_PHOTO"/>
+        </property>
+        <property name="stLawCode" type="java.lang.String">
+            <column name="ST_LAW_CODE"/>
+        </property>
+        <property name="stPhone" type="java.lang.String">
+            <column name="ST_PHONE"/>
+        </property>
+        <property name="stEmail" type="java.lang.String">
+            <column name="ST_EMAIL"/>
+        </property>
+        <property name="stOfficePhone" type="java.lang.String">
+            <column name="ST_OFFICE_PHONE"/>
+        </property>
+        <property name="stFuctitiousPhone" type="java.lang.String">
+            <column name="ST_FUCTITIOUS_PHONE"/>
+        </property>
+        <property name="stState" type="java.lang.String">
+            <column name="ST_STATE"/>
+        </property>
+        <property name="stAddress" type="java.lang.Integer">
+            <column name="ST_ADDRESS"/>
+        </property>
+        <property name="stOrder" type="java.lang.Integer">
+            <column name="ST_ORDER"/>
+        </property>
+        <property name="stAddressListId" type="java.lang.Integer">
+            <column name="ST_ADDRESS_LIST_ID"/>
+        </property>
+        <property name="stJs" type="java.lang.Integer">
+            <column name="ST_JS"/>
+        </property>
+        <property name="stLocation" type="java.lang.String">
+            <column name="ST_LOCATION"/>
+        </property>
+        <property name="stOldAccount" type="java.lang.String">
+            <column name="ST_OLD_ACCOUNT"/>
+        </property>
+    </class>
+</hibernate-mapping>

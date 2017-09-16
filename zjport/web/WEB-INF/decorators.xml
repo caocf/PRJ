@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<decorators defaultdir="/decorators">
+    <!-- 此处用来定义不需要过滤的页面 -->  
+    <excludes>
+        <pattern>/welcome.jsp*</pattern>
+        <pattern>/calendar.jsp*</pattern>
+        <pattern>/cbgz.jsp*</pattern>
+    </excludes>
+  
+ <!-- 用来定义装饰器要过滤的页面 -->  
+    <decorator name="main" page="main.jsp">
+      <pattern>/login/*</pattern>
+      <pattern>/information/*</pattern>
+      <pattern>/officeAssistant/*</pattern>
+      <pattern>/system/*</pattern>
+      <pattern>/videoview/*</pattern>
+      <pattern>/query/*</pattern>
+      <pattern>/smart/*</pattern>
+      <pattern>/electronicmap/*</pattern>
+    </decorator>
+</decorators>

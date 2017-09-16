@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TAttachment" table="t_attachment" schema="zjport">
+        <id name="stAttachmentId" column="ST_ATTACHMENT_ID"/>
+        <property name="stAttachmentMiddleId" column="ST_ATTACHMENT_MIDDLE_ID"/>
+        <property name="stFileName" column="ST_FILE_NAME"/>
+        <property name="stFileType" column="ST_FILE_TYPE"/>
+        <property name="stFileSize" column="ST_FILE_SIZE"/>
+        <property name="stFileContent" column="ST_FILE_CONTENT"/>
+        <property name="stFileDescribe" column="ST_FILE_DESCRIBE"/>
+        <property name="stFileSource" column="ST_FILE_SOURCE"/>
+    </class>
+</hibernate-mapping>

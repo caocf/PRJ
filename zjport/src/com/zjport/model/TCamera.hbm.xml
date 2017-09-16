@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.Camera" table="t_camera" schema="zjport">
+        <id name="cameraId" column="camera_id"/>
+        <property name="indexCode" column="index_code"/>
+        <property name="name" column="name"/>
+        <property name="deviceId" column="device_id"/>
+        <property name="regionId" column="region_id"/>
+        <property name="controlUnitId" column="control_unit_id"/>
+        <property name="chanNum" column="chan_num"/>
+        <property name="cameraType" column="camera_type"/>
+        <property name="streamType" column="stream_type"/>
+        <property name="latitude" column="latitude"/>
+        <property name="longitude" column="longitude"/>
+        <property name="sequenceIdx" column="sequence_idx"/>
+        <property name="caseCadeIndex" column="case_cade_index"/>
+        <property name="recLactionList" column="rec_laction_list"/>
+        <property name="privilegeCodeList" column="privilege_code_list"/>
+    </class>
+</hibernate-mapping>

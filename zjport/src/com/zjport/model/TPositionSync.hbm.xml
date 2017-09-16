@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TPositionSync" table="t_position_sync" schema="zjport">
+        <id name="stPositionSyncId" column="ST_POSITION_SYNC_ID"/>
+        <property name="stPositionName" column="ST_POSITION_NAME"/>
+        <property name="stOrgSyncId" column="ST_ORG_SYNC_ID"/>
+        <property name="stAddress" column="ST_ADDRESS"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TInformationTarget" table="t_information_target" schema="zjport">
+        <id name="stInformTargetId" column="ST_INFORM_TARGET_ID"/>
+        <property name="stInformTargetGroupName" column="ST_INFORM_TARGET_GROUP_NAME"/>
+        <property name="stUserId" column="ST_USER_ID"/>
+        <property name="stCreateUserId" column="ST_CREATE_USER_ID"/>
+    </class>
+</hibernate-mapping>

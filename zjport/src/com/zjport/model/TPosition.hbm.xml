@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TPosition" table="t_position" schema="zjport">
+        <id name="stPositionId" column="ST_POSITION_ID"/>
+        <property name="stPositionName" column="ST_POSITION_NAME"/>
+    </class>
+</hibernate-mapping>

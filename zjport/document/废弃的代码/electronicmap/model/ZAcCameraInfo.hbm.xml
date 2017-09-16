@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.ZAcCameraInfo" table="z_ac_camera_info" schema="zjport">
+        <id name="cameraId" column="CAMERA_ID">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="deviceId" column="DEVICE_ID"/>
+        <property name="powerChannelId" column="POWER_CHANNEL_ID"/>
+        <property name="controlUnitId" column="CONTROL_UNIT_ID"/>
+        <property name="indexCode" column="INDEX_CODE"/>
+        <property name="name" column="NAME"/>
+        <property name="channelNo" column="CHANNEL_NO"/>
+        <property name="cameraType" column="CAMERA_TYPE"/>
+        <property name="vrmServerId" column="VRM_SERVER_ID"/>
+        <property name="recordLocationSet" column="RECORD_LOCATION_SET"/>
+        <property name="recordMode" column="RECORD_MODE"/>
+        <property name="streamType" column="STREAM_TYPE"/>
+        <property name="streamLinkType" column="STREAM_LINK_TYPE"/>
+        <property name="shareFlag" column="SHARE_FLAG"/>
+        <property name="matrixCode" column="MATRIX_CODE"/>
+        <property name="pixel" column="PIXEL"/>
+        <property name="ptzType" column="PTZ_TYPE"/>
+        <property name="isBindAudio" column="IS_BIND_AUDIO"/>
+        <property name="isDisplay" column="IS_DISPLAY"/>
+        <property name="mainBitRate" column="MAIN_BIT_RATE"/>
+        <property name="mainRateType" column="MAIN_RATE_TYPE"/>
+        <property name="streamUrl" column="STREAM_URL"/>
+        <property name="sequenceIdx" column="SEQUENCE_IDX"/>
+        <property name="operatorId" column="OPERATOR_ID"/>
+        <property name="createTime" column="CREATE_TIME"/>
+        <property name="updateTime" column="UPDATE_TIME"/>
+        <property name="regionId" column="REGION_ID"/>
+        <property name="latitude" column="LATITUDE"/>
+        <property name="longitude" column="LONGITUDE"/>
+        <property name="isShowMap" column="IS_SHOW_MAP"/>
+        <property name="gisName" column="GIS_NAME"/>
+        <property name="cascadeIndex" column="CASCADE_INDEX"/>
+        <property name="localCascadeIndex" column="LOCAL_CASCADE_INDEX"/>
+        <property name="channelType" column="CHANNEL_TYPE"/>
+        <property name="manufacturerType" column="MANUFACTURER_TYPE"/>
+        <property name="state" column="STATE"/>
+        <property name="flag" column="FLAG"/>
+    </class>
+</hibernate-mapping>

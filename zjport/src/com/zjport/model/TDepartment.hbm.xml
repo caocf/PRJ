@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TDepartment" table="t_department" schema="zjport">
+        <id name="stDepartmentId" column="ST_DEPARTMENT_ID"/>
+        <property name="stDepartmentName" column="ST_DEPARTMENT_NAME"/>
+        <property name="stOrgId" column="ST_ORG_ID"/>
+        <property name="stKeyman" column="ST_KEYMAN"/>
+        <property name="stContactMan" column="ST_CONTACT_MAN"/>
+        <property name="stContactTel" column="ST_CONTACT_TEL"/>
+    </class>
+</hibernate-mapping>

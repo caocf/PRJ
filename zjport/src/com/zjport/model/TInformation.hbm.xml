@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TInformation" table="t_information" schema="zjport">
+        <id name="stInformId" type="java.lang.Integer">
+            <column name="ST_INFORM_ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="stInformTitle" type="java.lang.String">
+            <column name="ST_INFORM_TITLE"/>
+        </property>
+        <property name="stInformContent" type="java.lang.String">
+            <column name="ST_INFORM_CONTENT"/>
+        </property>
+        <property name="stInformKeyword" type="java.lang.String">
+            <column name="ST_INFORM_KEYWORD"/>
+        </property>
+        <property name="stWebNameId" type="java.lang.Integer">
+            <column name="ST_WEB_NAME_ID"/>
+        </property>
+        <property name="stWebColumnId" type="java.lang.Integer">
+            <column name="ST_WEB_COLUMN_ID"/>
+        </property>
+        <property name="stInformColor" type="java.lang.String">
+            <column name="ST_INFORM_COLOR"/>
+        </property>
+        <property name="stInformFromId" type="java.lang.Integer">
+            <column name="ST_INFORM_FROM_ID"/>
+        </property>
+        <property name="dtCreate" type="timestamp">
+            <column name="DT_CREATE"/>
+        </property>
+        <property name="dtSend" type="timestamp">
+            <column name="DT_SEND"/>
+        </property>
+        <property name="stType" type="java.lang.String">
+            <column name="ST_TYPE"/>
+        </property>
+        <property name="stState" type="java.lang.String">
+            <column name="ST_STATE"/>
+        </property>
+        <property name="stAttachmentMiddleId" type="java.lang.String">
+            <column name="ST_ATTACHMENT_MIDDLE_ID"/>
+        </property>
+        <property name="stApprovalUserId" type="java.lang.Integer">
+            <column name="ST_APPROVAL_USER_ID"/>
+        </property>
+        <property name="stBackContent" type="java.lang.String">
+            <column name="ST_BACK_CONTENT"/>
+        </property>
+        <property name="dtApproval" type="timestamp">
+            <column name="DT_APPROVAL"/>
+        </property>
+        <property name="stIsValid" type="java.lang.Boolean">
+            <column name="ST_IS_VALID"/>
+        </property>
+        <property name="stScanDepartMiddleId" type="java.lang.String">
+            <column name="ST_SCAN_DEPART_MIDDLE_ID"/>
+        </property>
+        <property name="stInformObject" type="java.lang.String">
+            <column name="ST_INFORM_OBJECT"/>
+        </property>
+        <property name="stResult" type="java.lang.String">
+            <column name="ST_RESULT"/>
+        </property>
+        <property name="stTemplet" type="java.lang.String">
+            <column name="ST_TEMPLET"/>
+        </property>
+        <property name="stFailnum" type="java.lang.String">
+            <column name="ST_FAILNUM"/>
+        </property>
+    </class>
+</hibernate-mapping>

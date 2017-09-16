@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*高级搜索div样式*/
+.searchStyle .nametext,#yxtj .nametext {
+	float: left;
+	width: 10%;
+	font-size: 13px;
+	font-weight:bold;
+	text-align: right;
+	line-height: 24px;
+}
+
+.searchStyle ul,#yxtj ul {
+	list-style: none;
+	width: 85%;
+	float: left;
+	padding-bottom: 10px;
+	border-bottom: dashed 1px #666;
+}
+
+.searchStyle ul li {
+	float: left;
+	min-width: 70px;
+	width: auto;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+/*已选提交div样式*/
+
+#yxtj ul li {
+	float: left;
+	padding: 0 0 0 10px;
+	width: auto;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+#yxtj a,.searchStyle a{
+	text-decoration: none;
+	outline: none;
+	border-radius: 4px;
+	display: inline-block;
+	height: 24px;
+	padding: 0 10px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.searchStyle a:hover{
+	color: #ff6600;
+	background: #f3edc2;
+}
+
+#yxtj a {
+	background: #f60;
+	color: #fff;
+}
+
+#yxtj a:hover {
+	background-position: right -15px
+}
+
+.searchStyle .selected a{
+	color: #fff;
+	background-color: #f60
+}
+
+/* 更多div样式 */
+#more {
+	width: 80px;
+	height:15px;
+	margin: 0px auto;
+	text-align: center;
+	cursor: pointer;
+	border-left: solid 1px #F4F4F4;
+	border-right: solid 1px #F4F4F4;
+	border-bottom: solid 1px #F4F4F4;
+	
+	-moz-border-radius: 0px 0px 15px 15px ;   /*  Mozilla(Firefox, Flock等浏览器) */
+	-webkit-border-radius: 0px 0px 15px 15px ;/* WebKit (Safari, Chrome等浏览器) */
+	border-radius:  0px 0px 15px 15px ;       /* Opera浏览器/IE9- */
+}
+
+.sidebar-menu li > a > .pull-right {
+    margin-top:-7px !important;
+}

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TCurise" table="t_curise" schema="zjport">
+        <id name="stCruiseId" column="ST_CRUISE_ID">
+            <generator class="native"/>
+        </id>
+        <property name="stChannel" column="ST_CHANNEL"/>
+        <property name="stCruiseFrom" column="ST_CRUISE_FROM"/>
+        <property name="stCruiseTo" column="ST_CRUISE_TO"/>
+        <property name="dtCuriseBegin" column="DT_CURISE_BEGIN"/>
+        <property name="dtCuriseEnd" column="DT_CURISE_END"/>
+        <property name="stCruiseUser" column="ST_CRUISE_USER"/>
+        <property name="stCuriseMiddleId" column="ST_CURISE_MIDDLE_ID"/>
+        <property name="stIsValid" column="ST_IS_VALID"/>
+        <property name="stCuriseContent" column="ST_CURISE_CONTENT"/>
+    </class>
+</hibernate-mapping>

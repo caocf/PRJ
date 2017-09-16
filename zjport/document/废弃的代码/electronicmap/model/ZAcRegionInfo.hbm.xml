@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.ZAcRegionInfo" table="z_ac_region_info" schema="zjport">
+        <id name="regionId" column="REGION_ID">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="controlUnitId" column="CONTROL_UNIT_ID"/>
+        <property name="indexCode" column="INDEX_CODE"/>
+        <property name="name" column="NAME"/>
+        <property name="parentId" column="PARENT_ID"/>
+        <property name="parentTree" column="PARENT_TREE"/>
+        <property name="regionLevel" column="REGION_LEVEL"/>
+        <property name="useStreamServer" column="USE_STREAM_SERVER"/>
+        <property name="streamServerId" column="STREAM_SERVER_ID"/>
+        <property name="description" column="DESCRIPTION"/>
+        <property name="sequenceIdx" column="SEQUENCE_IDX"/>
+        <property name="operatorId" column="OPERATOR_ID"/>
+        <property name="createTime" column="CREATE_TIME"/>
+        <property name="updateTime" column="UPDATE_TIME"/>
+        <property name="useStreamStrictPath" column="USE_STREAM_STRICT_PATH"/>
+        <property name="cascadeIndex" column="CASCADE_INDEX"/>
+        <property name="flag" column="FLAG"/>
+    </class>
+</hibernate-mapping>

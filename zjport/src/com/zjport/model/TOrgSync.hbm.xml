@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TOrgSync" table="t_org_sync" schema="zjport">
+        <id name="stOrgSyncId" column="ST_ORG_SYNC_ID"/>
+        <property name="stOrgName" column="ST_ORG_NAME"/>
+        <property name="stOrgCode" column="ST_ORG_CODE"/>
+        <property name="stOrgDm" column="ST_ORG_DM"/>
+        <property name="stOrgType" column="ST_ORG_TYPE"/>
+        <property name="stOrgDomain" column="ST_ORG_DOMAIN"/>
+        <property name="stParentOrg" column="ST_PARENT_ORG"/>
+        <property name="stAddress" column="ST_ADDRESS"/>
+        <property name="stIfScan" column="ST_IF_SCAN"/>
+        <property name="stIfNode" column="ST_IF_NODE"/>
+        <property name="stOrgShortName" column="ST_ORG_SHORT_NAME"/>
+        <property name="stOrgArea" column="ST_ORG_AREA"/>
+    </class>
+</hibernate-mapping>

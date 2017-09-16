@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TWebName" table="t_web_name" schema="zjport">
+        <id name="stWebNameId" column="ST_WEB_NAME_ID"/>
+        <property name="stName" column="ST_NAME"/>
+        <property name="stUrl" column="ST_URL"/>
+        <property name="stIsValid" column="ST_IS_VALID"/>
+    </class>
+</hibernate-mapping>

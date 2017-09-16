@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.zjport.model.TAddressListMiddle" table="t_address_list_middle" schema="zjport">
+        <id name="stAddressListMiddleId" column="ST_ADDRESS_LIST_MIDDLE_ID"/>
+        <property name="stUserId" column="ST_USER_ID"/>
+        <property name="stAddressListGroupId" column="ST_ADDRESS_LIST_GROUP_ID"/>
+    </class>
+</hibernate-mapping>
