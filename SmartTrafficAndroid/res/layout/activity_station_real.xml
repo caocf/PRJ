@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/back_groud">
+
+    <FrameLayout
+        android:id="@+id/smart_bus_station_real_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/title_background_normal" >
+
+        <TextView
+            android:id="@+id/smart_bus_station_real_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/smart_bus_station_real_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/selector_smart_bus_back"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/smart_bus_station_real_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/selector_smart_bus_refresh" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/smart_bus_station_real_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/back_groud_white" >
+    </ListView>
+
+</LinearLayout>

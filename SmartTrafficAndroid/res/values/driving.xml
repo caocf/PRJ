@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="driving_school_view">驾校信息</string>
+    <string name="driving_student_view">学员服务</string>
+    <string name="driving_favor_view">收藏夹</string>
+    <string name="driving_more_view">更多</string>
+    
+    <string name="driving_more_suggest">意见建议</string>
+    <string name="driving_more_complain">我要投诉</string>
+    <string name="driving_more_base">驾校培训概况</string>
+    <string name="driving_more_about">关于驾校培训</string>
+    
+    <string name="driving_default_sort">默认排序</string>
+    <string name="driving_level_sort">信誉排序</string>
+    
+    <string name="driving_student_order">预约驾校</string>
+    <string name="driving_student_grade">成绩查询</string>
+    <string name="driving_student_exam">考试查询</string>
+    
+    <string name="driving_name_hint">输入姓名</string>
+    <string name="driving_idetify_hint">输入身份证</string>
+    <string name="driving_address_hint">输入家庭住址</string>
+    <string name="driving_birth_hint">输入出生日期</string>
+    <string name="driving_telephone_hint">输入联系方式</string>
+    <string name="driving_school_hint">选择驾校</string>
+    <string name="driving_order_hint">预约报名</string>
+    
+    <string name="driving_grade_phone_hint">请输入身份证号或登记的手机号</string>
+    <string name="driving_grade_query_hint">成绩查询</string>
+    
+    <string name="driving_exam_query_hint">考试查询</string>
+    
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+	    <EditText 
+	        android:id="@+id/input_list_edit"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center_vertical"
+	        android:paddingLeft="10dp"
+	        android:background="@drawable/textview_border_shape"
+	        android:hint="@string/string_other_inputview_edit_hint"/>
+
+	    <ImageView
+	        android:id="@+id/input_down_List_image"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:contentDescription="@string/image_content_discribe"
+	        android:src="@drawable/selector_input_dowm" />
+
+    </LinearLayout>
+
+    <ListView 
+        android:id="@+id/input_choice_list"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone">      
+    </ListView>
+</LinearLayout>

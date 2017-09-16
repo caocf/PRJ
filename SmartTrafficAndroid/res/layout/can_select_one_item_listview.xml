@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+    
+    <TextView
+        android:id="@+id/select_one_point_list_item_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"/>
+    
+	<ImageView
+	    android:id="@+id/select_list_item_image"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_vertical"
+	    android:layout_marginBottom="10dp"
+	    android:layout_marginRight="10dp"
+	    android:layout_marginTop="10dp"
+	    android:contentDescription="@string/image_content_discribe"
+	    android:src="@drawable/bus_filter_choose_normal" />
+
+</LinearLayout>

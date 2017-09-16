@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/driving_student_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+   <EditText 
+       android:id="@+id/driving_student_name"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/driving_name_hint"/>
+   
+   <EditText 
+       android:id="@+id/driving_student_identyfy"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/driving_idetify_hint"/>
+   
+   <EditText 
+       android:id="@+id/driving_student_birth"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/driving_birth_hint"/>
+   
+   <EditText 
+       android:id="@+id/driving_student_address"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/driving_address_hint"/>
+   
+   <EditText 
+       android:id="@+id/driving_student_tele"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/driving_telephone_hint"/>
+   
+   <EditText 
+       android:id="@+id/driving_student_school"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/driving_school_hint"/>
+   
+   <Button 
+       android:id="@+id/driving_student_enter"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/driving_order_hint"
+       android:textColor="@color/back_groud_white"
+       android:gravity="center"
+       android:background="@drawable/selector_button_search_backgroud"
+       android:onClick="search"/>
+</LinearLayout>

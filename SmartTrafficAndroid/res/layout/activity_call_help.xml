@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/car_repair_call_help_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/call_help_dialog_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:divider="#00000000"
+		android:dividerHeight="10dp" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/border_shape_call_help"
+         >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/call_help_voice"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="voice" />
+
+        <ImageView
+            android:id="@+id/bike_riding_detail_change"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/call_help_location"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="location"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:id="@+id/call_help_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/call_help_background_input_box"
+            android:hint="请输入内容"/>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/sharp_circle_button"
+            android:onClick="send"
+            android:text="发送" />
+
+    </LinearLayout>
+    
+</LinearLayout>

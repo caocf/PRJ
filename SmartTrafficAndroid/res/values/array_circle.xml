@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_circle_type_top">
+        <item >array_circle_common</item>  
+        <item >array_cirlce_traffic</item> 
+        <item >array_circle_economic</item>   
+        <item >array_circle_house</item> 
+        <item >array_circle_life</item> 
+        <item >array_circle_hotel</item> 
+        <item >array_circle_eat</item> 
+        <item >array_circle_happy</item> 
+        <item >array_circle_trip</item> 
+        <item >array_circle_hospitol</item> 
+        <item >array_circle_media</item> 
+        <item >array_circle_nature</item>     
+        <item >array_circle_other</item>
+    </string-array>
+    
+    <string-array name="array_circle_common">
+        <item >01,公共管理</item>
+        <item >0102,省市县政府</item>
+        <item >0103,乡镇街道</item>
+        <item >0104,部门管理</item>
+        <item >0105,办事机构</item>
+        <item >0106,行业组织</item>
+        <item >0107,市政公用</item>
+        <item >0108,企事业单位</item>
+        <item >0109,村级自治机构</item>
+        <item >0101,其他</item>
+    </string-array>
+    
+    <string-array name="array_cirlce_traffic">
+        <item >02,交通运输</item>
+        <item >0202,火车汽车站</item>
+        <item >0203,机场</item>
+        <item >0204,货运</item>
+        <item >0205,仓储</item>
+        <item >0206,票务</item>
+        <item >0207,港口码头</item>
+        <item >0209,服务区</item>
+        <item >0210,收费站</item>
+        <item >0211,加油站</item>
+        <item >0212,汽车租赁</item>
+        <item >0213,汽车销售</item>
+        <item >0214,汽车服务</item>
+        <item >0215,公路桥</item>
+        <item >0216,铁路桥</item>
+        <item >0217,街道</item>
+        <item >0201,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_economic">
+        <item >03,金融保险</item>
+        <item >0302,银行</item>
+        <item >0303,自动取款</item>
+        <item >0304,保险公司</item>
+        <item >0305,投资信托</item>
+        <item >0301,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_house">
+        <item >04,房产楼盘</item>
+        <item >0402,住宅小区</item>
+        <item >0403,大楼大厦</item>
+        <item >0404,房产物业</item>
+        <item >0405,房产公司</item>
+        <item >0406,房产中介</item>
+        <item >0401,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_life">
+        <item >05,生活服务</item>
+        <item >0502,超市商场</item>
+		<item >0503,综合市场</item>
+		<item >0504,家政维修</item>
+		<item >0505,花艺摄影</item>
+		<item >0506,水电气</item>
+		<item >0507,快递通信</item>
+		<item >0508,律师咨询</item>
+		<item >0509,公厕</item>
+		<item >0510,烟酒日杂</item>
+		<item >0501,其他</item>
+
+    </string-array>
+    
+    <string-array name="array_circle_hotel">
+        <item >06,酒店住宿</item>
+        <item >0602,星级饭店</item>
+		<item >0603,一般旅馆</item>
+		<item >0604,非星级度假村</item>
+		<item >0601,其他</item>
+
+    </string-array>
+    
+    <string-array name="array_circle_eat">
+        <item >07,美食餐饮</item>
+        <item >0702,快餐</item>
+		<item >0703,西餐馆</item>
+		<item >0704,中餐馆</item>
+		<item >0705,地方名店</item>
+		<item >0701,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_happy">
+        <item >08,休闲娱乐</item>
+        <item >0802,酒吧茶楼</item>
+		<item >0803,影剧院</item>
+		<item >0804,书店音像</item>
+		<item >0805,网吧游艺</item>
+		<item >0806,公园游乐场</item>
+		<item >0807,体育场馆</item>
+		<item >0808,健身活动</item>
+		<item >0809,娱乐城</item>
+		<item >0810,洗浴足道</item>
+		<item >0811,动物园</item>
+		<item >0812,高尔夫球场</item>
+		<item >0813,滑冰场</item>
+		<item >0801,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_trip">
+        <item >09,旅游服务</item>
+        <item >0902,旅游景点</item>
+		<item >0903,宗教庙宇</item>
+		<item >0904,旅行社</item>
+		<item >0901,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_hospitol">
+        <item >10,医疗卫生</item>
+        <item >1002,医院</item>
+		<item >1003,卫生院</item>
+		<item >1004,药房保健品</item>
+		<item >1005,救护车</item>
+		<item >1006,康复中心</item>
+		<item >1001,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_media">
+        <item >11,文化娱乐</item>
+        <item >1102,幼儿园</item>
+		<item >1103,小学</item>
+		<item >1104,中学</item>
+		<item >1105,高等院校</item>
+		<item >1106,职业院校</item>
+		<item >1107,综合培训</item>
+		<item >1108,驾校</item>
+		<item >1109,新闻传媒</item>
+		<item >1110,研究所</item>
+		<item >1111,图书馆</item>
+		<item >1112,文工团</item>
+		<item >1113,出版社</item>
+		<item >1114,电台</item>
+		<item >1115,会议中心</item>
+		<item >1101,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_nature">
+        <item >12,自然要素</item>
+        <item >1202,自然村</item>
+		<item >1203,泉</item>
+		<item >1204,瀑布</item>
+		<item >1205,水井</item>
+		<item >1206,山洞溶洞</item>
+		<item >1207,山峰</item>
+		<item >1201,其他</item>
+    </string-array>
+    
+    <string-array name="array_circle_other">
+        <item >13,其他</item>
+        <item >1302,装饰纺织品</item>
+		<item >1303,五金化工</item>
+		<item >1304,文体办公</item>
+		<item >1305,通讯电器</item>
+		<item >1306,造纸建材</item>
+		<item >1307,食品加工</item>
+		<item >1308,建设工程</item>
+		<item >1309,贸易</item>
+		<item >1310,技术服务</item>
+		<item >1311,进出口</item>
+		<item >1312,农林</item>
+		<item >1313,印刷</item>
+		<item >1301,其他</item>
+    </string-array>
+</resources>

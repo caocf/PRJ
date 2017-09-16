@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="news_select_type">
+        <item >城市公交</item>
+        <item >高速公路</item>
+        <item >普通公路</item>
+        <item >国道</item>
+        <item >省道</item>
+        <item >其他公路</item>
+        
+        <item >公交</item>
+        <item >长途客运</item>
+        <item >民航</item>
+        <item >公共自行车</item>
+        <item >铁路</item>
+        <item >出租车</item>
+    </string-array>
+</resources>

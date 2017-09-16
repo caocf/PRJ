@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/user_forget_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/train_no_first_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"       
+        android:text="找回密码需验证手机号" />
+    
+    <EditText
+        android:id="@+id/user_forget_one_phones"
+        android:layout_width="match_parent"
+        android:inputType="phone"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"       
+        android:hint="请输入您的手机号"/>
+    
+    <Button
+        android:id="@+id/train_no_first_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_button_search_backgroud"
+        android:text="下一步"
+        android:gravity="center"
+        android:textColor="@color/back_groud_white"
+        android:onClick="next"/>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="about_us">
+        <item >0</item>
+        <item >   嘉兴智慧交通“禾行通”是由嘉兴市交通运输局面向公众推出的交通出行便民服务软件，用户可免费下载使用，目前可提供智慧公交、智慧电召、公共自行车、停车诱导、行车诱导、交通指数、交通快讯等交通信息服务，特别感谢嘉兴移动对“禾行通”建设的支持。</item>
+        <item >嘉兴智慧交通</item>
+    </string-array>
+    
+    <string-array name="about_trip">
+        <item >1</item>
+        <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="about_bus">
+        <item >2</item>
+        <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="about_train">
+        <item >3</item>
+       <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="about_air">
+        <item >4</item>
+        <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="about_drving">
+        <item >6</item>
+        <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="about_repair">
+        <item >5</item>
+        <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="about_news">
+        <item >7</item>
+        <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="about_bike">
+        <item >8</item>
+        <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="about_smart_bus">
+        <item >9</item>
+        <item >智慧交通禾行通手机软件，为市民提供交通出行规划、智慧公交、智慧电召、公共自行车的实时查询，行车诱导、停车诱导、民航、铁路、客运等票务的查询，以及汽车维修、驾培服务等智慧交通信息服务</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+</resources>

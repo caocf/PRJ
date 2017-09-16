@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp" >
+
+    <ImageView
+        android:id="@+id/listview_transfer_detatil_image"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_content_discribe"
+        android:src="@drawable/trip_icon_start" />
+
+    <TextView
+        android:id="@+id/listview_transfer_detatil_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

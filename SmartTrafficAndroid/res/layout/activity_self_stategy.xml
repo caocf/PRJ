@@ -1,0 +1,222 @@
+<ScrollView 
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+       	android:layout_height="fill_parent"
+       	android:scrollbars="vertical"    
+       	android:background="@color/back_groud"   	
+       	>     	
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	
+	    <FrameLayout
+	        android:id="@+id/trip_driving_self_stategy_head"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	    </FrameLayout>
+	    
+	    <ListView
+	        android:id="@+id/trip_driving_self_stategy_select_listview"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/back_groud_white" >
+	    </ListView>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="6dp"
+	        android:paddingBottom="6dp"      
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginRight="15dp" 
+	        android:background="@drawable/textview_border_shape">
+	
+	        <TextView
+	            android:id="@+id/trip_driving_self_stategy_more"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:paddingLeft="10dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:textSize="16sp"
+	            android:text="高级设置" />
+	
+	        <ImageView
+	            android:id="@+id/trip_driving_self_stategy_more_select"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:src="@drawable/switch_off_"
+	            android:onClick="moreSelect" />
+	
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/trip_driving_self_stategy_andvance_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"        
+	        android:orientation="vertical"
+	        android:visibility="gone"
+	        >
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="6dp"
+	        	android:paddingBottom="6dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp" 
+		        android:background="@drawable/textview_border_shape">
+		
+		        <TextView
+		            android:id="@+id/trip_driving_self_stategy_more_danger"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:paddingLeft="10dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:textSize="16sp"
+		            android:text="是否车载危险品" />
+		
+		        <ImageView
+		            android:id="@+id/trip_driving_self_stategy_more_danger_select"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:src="@drawable/switch_off_" 
+		            android:onClick="moreSelect"/>
+		
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="6dp"
+	        	android:paddingBottom="6dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp" 
+		        android:background="@drawable/textview_border_shape">
+		
+		        <TextView
+		            android:id="@+id/trip_driving_self_stategy_more_limit"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:paddingLeft="10dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:textSize="16sp"
+		            android:text="限载（吨）" />
+		
+		        <EditText 
+		            android:id="@+id/trip_driving_self_stategy_more_limit_value"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:hint="45"/>
+		
+		    </LinearLayout>
+		    
+		     <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="6dp"
+	        	android:paddingBottom="6dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp" 
+		        android:background="@drawable/textview_border_shape">
+		
+		        <TextView
+		            android:id="@+id/trip_driving_self_stategy_more_length"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:paddingLeft="10dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:textSize="16sp"
+		            android:text="长（米）" />
+		
+		        <EditText 
+		            android:id="@+id/trip_driving_self_stategy_more_length_value"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:hint="10"/>
+		
+		    </LinearLayout>
+		    
+		      <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="6dp"
+	        	android:paddingBottom="6dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp" 
+		        android:background="@drawable/textview_border_shape">
+		
+		        <TextView
+		            android:id="@+id/trip_driving_self_stategy_more_width"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:paddingLeft="10dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:textSize="16sp"
+		            android:text="宽（米）" />
+		
+		        <EditText 
+		            android:id="@+id/trip_driving_self_stategy_more_width_value"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:hint="3"/>
+		
+		    </LinearLayout>
+		
+		       <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="6dp"
+	        	android:paddingBottom="6dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp" 
+		        android:background="@drawable/textview_border_shape">
+		
+		        <TextView
+		            android:id="@+id/trip_driving_self_stategy_more_height"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:paddingLeft="10dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:textSize="16sp"
+		            android:text="高（米）" />
+		
+		        <EditText 
+		            android:id="@+id/trip_driving_self_stategy_more_height_value"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:hint="45"/>
+		
+		    </LinearLayout>
+	 	</LinearLayout>
+	    <Button
+	        android:id="@+id/favor_enter"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_marginBottom="30dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onclick" 
+	        android:gravity="center"
+	        android:text="确定"
+	        android:textColor="@color/back_groud_white"
+	        android:background="@drawable/selector_button_search_backgroud"/>
+	
+	</LinearLayout>
+</ScrollView>

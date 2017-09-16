@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+	    <ImageView
+	        android:id="@+id/imageView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:contentDescription="@string/image_content_discribe"
+	        android:src="@drawable/trip_icon_start" />
+
+	    <LinearLayout 
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="10dp"
+		    android:paddingTop="10dp"
+		    android:paddingBottom="10dp"
+		    android:orientation="vertical">
+	
+		    <TextView
+		        android:id="@+id/bike_riding_detail_station"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:text="" />
+	
+		    <TextView
+		        android:id="@+id/bike_riding_detail_infomation"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="30dp"
+		        android:text="" />
+	    
+	    </LinearLayout>
+	    
+	    <ImageView
+	        android:id="@+id/bike_riding_detail_change"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:contentDescription="@string/image_content_discribe"
+	        android:src="@drawable/selector_input_dowm" />
+
+</LinearLayout>

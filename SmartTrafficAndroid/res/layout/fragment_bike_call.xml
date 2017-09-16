@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bike_call_backgroud" >
+
+    <FrameLayout
+        android:id="@+id/bike_call_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/bike_riding_detail_infomation"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"    
+        android:layout_marginTop="20dp" 
+        android:textSize="20sp"
+        android:text="嘉兴公共自行车服务电话" />
+
+    <TextView
+        android:id="@+id/bike_detatil_name"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" 
+        android:textSize="20sp"
+        android:text="0573-89976100" />
+
+    <Button
+        android:id="@+id/bike_call_button"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" 
+        android:text="拨号咨询" 
+        android:gravity="center"
+        android:onClick="call"
+        android:background="@drawable/selector_button_search_backgroud"
+        android:textColor="@color/back_groud_white"/>
+
+</LinearLayout>

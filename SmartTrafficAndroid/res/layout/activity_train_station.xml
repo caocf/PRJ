@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/busstation_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <FrameLayout 
+        android:id="@+id/busstation_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"> 
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/busstation_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/trip_driving_self_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select_onclick"
+            android:src="@drawable/train_station_station_pressed" />
+
+        <ImageView
+            android:id="@+id/bus_ticket_by_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select_onclick"
+            android:src="@drawable/train_no_search_normal" />
+
+        <ImageView
+            android:id="@+id/bus_station_by_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select_onclick"
+            android:src="@drawable/train_station_search_normal" />
+
+        <ImageView
+            android:id="@+id/bus_tickets_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select_onclick"
+            android:src="@drawable/train_tickets_order_normal" />
+
+        <ImageView
+            android:id="@+id/bus_tickets_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select_onclick"
+            android:src="@drawable/more_normal_1" />
+
+    </LinearLayout>
+    
+</LinearLayout>

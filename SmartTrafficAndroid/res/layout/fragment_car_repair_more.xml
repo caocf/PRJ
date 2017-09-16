@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/back_groud">
+
+    <FrameLayout
+        android:id="@+id/driving_more_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+      <TextView
+          android:id="@+id/car_repair_more_suggest"
+          android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginTop="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/textview_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:clickable="true" 
+          android:text="@string/driving_more_suggest"/>
+
+      <TextView
+          android:id="@+id/car_repair_more_complain"
+          android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/textview_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:clickable="true" 
+          android:text="@string/driving_more_complain" />
+    
+
+      <TextView
+          android:id="@+id/car_repair_more_about"
+         android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/textview_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:clickable="true"
+          android:text="关于汽车维修" />
+
+</LinearLayout>

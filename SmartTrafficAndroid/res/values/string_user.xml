@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_user_register_reminder">注册需验证您的手机号</string>
+    <string name="string_user_register_hint">请输入您的手机号</string>
+    <string name="string_user_register_next">下一步</string>
+</resources>

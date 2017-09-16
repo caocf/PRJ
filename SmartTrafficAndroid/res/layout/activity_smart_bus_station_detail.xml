@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/smart_bus_station_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/back_groud" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_background_normal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/smart_bus_station_detail_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingLeft="20dp"
+                    android:text="" />
+
+                <ImageView
+                    android:id="@+id/smart_bus_station_detail_exchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/image_content_discribe"
+                    android:onClick="onclick"
+                    android:src="@drawable/selector_smart_bus_back"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/smart_bus_station_detail_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/image_content_discribe"
+                    android:onClick="onclick"
+                    android:src="@drawable/selector_smart_bus_refresh" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/back_groud_white" >
+
+                <TextView
+                    android:id="@+id/smart_bus_station_detail_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="" />
+
+                <ImageView
+                    android:id="@+id/smart_bus_station_detail_go_there"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/image_content_discribe"
+                    android:onClick="onclick"
+                    android:src="@drawable/selector_school_get_there" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bike_riding_detail_infomation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview_border_shape"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/string_smart_station_nearby_line" />
+
+            <ListView
+                android:id="@+id/smart_bus_station_detail_line_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/back_groud_white" >
+            </ListView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview_border_shape"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/string_smart_station_nearby_station" />
+
+            <ListView
+                android:id="@+id/smart_bus_station_nearby_station_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/back_groud_white" >
+            </ListView>
+
+            <TextView
+                android:id="@+id/bike_detatil_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview_border_shape"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/string_smart_station_nearby_bike" />
+
+            <ListView
+                android:id="@+id/smart_bus_station_nearby_bike_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/back_groud_white" >
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/smart_bus_station_detail_clock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/smart_bus_clock" />
+
+        <ImageView
+            android:id="@+id/smart_bus_station_detail_circle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/smart_bus_circle" />
+
+        <ImageView
+            android:id="@+id/smart_bus_station_detail_favor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/smart_bus_favor" />
+
+        <ImageView
+            android:id="@+id/smart_bus_station_detail_suggestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/smart_bus_suggestion" />
+
+        <ImageView
+            android:id="@+id/smart_bus_station_detail_debug"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/smart_bus_debug" />
+    </LinearLayout>
+
+</LinearLayout>

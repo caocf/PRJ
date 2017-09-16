@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_air_real_info">未查到航班实时信息</string>
+    <string name="error_air_no_info">未查到相关航班信息</string>
+    
+    <string name="error_air_no_real_info">未查到相关航班实时信息</string>
+    <string name="error_air_station_info">未查到相关机场信息</string>
+    <string name="error_air_tickets_info">未查到相关机票信息</string>
+    <string name="error_air_city_info">未查到相关机场城市信息</string>
+    
+    <string name="error_alarm_line_info">未查到提醒线路信息</string>
+    
+    <string name="error_bike_select_point">未查到相关位置信息</string>
+    <string name="error_bike_station_info">未查到相关公共自行车站点信息</string>
+    
+    <string name="error_bus_real_info">未查到相关长途实时信息</string>
+    <string name="error_bus_station_info">未查到相关长途客运站信息</string>
+    <string name="error_bus_tickets_info">未查到相关票务信息</string>
+    
+    <string name="error_car_repair_station_info">未查到相关汽车维修点信息</string>
+    
+    <string name="error_complain_info">提交用户投诉失败</string>
+    <string name="error_debug_info">提交错误修改失败</string>
+    <string name="error_suggestion_info">提交用户建议失败</string>
+    
+    <string name="error_driving_station_info">未查到相关驾校信息</string>
+    
+    <string name="error_nearby_station_info">未查到周边信息</string>
+    
+    <string name="error_news_info">未查到交通快讯信息</string>
+    <string name="error_news_detail_info">未查到新闻详情信息</string>
+    
+    <string name="error_smart_bus_go_there_info">未查到去哪里线路信息</string>
+    <string name="error_smart_bus_point_info">未查到相关地址信息</string>
+    <string name="error_smart_bus_station_info">未查到相关公交站点信息</string>
+    <string name="error_smart_bus_line_detail">未查到相关线路详情信息</string>
+    <string name="error_smart_bus_line_trace">未查到相关线路轨迹信息</string>
+    <string name="error_smart_bus_news_info">未查到相关公交新闻信息</string>
+    <string name="error_smart_bus_news_detail_info">未查到相关新闻详情信息</string>
+    <string name="error_smart_bus_station_detail_info">未查到公交站点相关详情信息</string>
+    <string name="error_smart_bus_transfer">未查到相关公交换乘信息</string>
+    <string name="error_smart_bus_station_real">未查到相关公交实时信息</string>
+    <string name="error_smart_bus_qr">未查到该二维码对应信息</string>
+    <string name="error_smart_bus_no_nearby">未查到附近站点</string>
+    
+    <string name="error_train_no_info">未查到相关车次票务详情信息</string>
+    <string name="error_train_no_real_info">未查到列车实时信息</string>
+    <string name="error_train_station_info">未查到相关车站信息</string>
+    <string name="error_train_tickets_info">未查到相关车票信息</string>
+    
+    <string name="error_trip_point_info">未查到相关地点信息</string>
+    
+    <string name="error_user_login_info">用户登录出错</string>
+    <string name="error_user_register_phone">注册手机号出错</string>
+    <string name="error_user_register_user_info">注册用户信息出错</string>
+    <string name="error_user_register_verify_info">注册验证码出错</string>
+    <string name="error_user_forget_phone">找回密码出错</string>
+    <string name="error_user_forget_modify_pass">修改密码出错</string>
+    <string name="error_user_forget_verify">找回密码验证出错</string>
+    
+</resources>

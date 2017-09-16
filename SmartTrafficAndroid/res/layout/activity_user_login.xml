@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/back_groud">
+
+    <FrameLayout
+        android:id="@+id/user_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <EditText 
+        android:id="@+id/user_login_phones"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:hint="请输入手机号码" 
+        android:background="@drawable/textview_border_shape"/>
+
+    <EditText 
+        android:id="@+id/user_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:password="true"
+        android:background="@drawable/textview_border_shape"
+        android:hint="请输入密码" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="登录"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="@drawable/selector_button_search_backgroud"
+        android:onClick="finish"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/user_login_auto"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableLeft="@drawable/item_check"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:onClick="auto"
+            android:text="两周内自动登录"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/air_no_real_end_airport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/textview_under_backgroud_2"
+            android:clickable="true"
+            android:gravity="center_vertical|right"
+            android:onClick="forget"
+            android:text="忘记密码？" />
+    </LinearLayout>
+
+</LinearLayout>

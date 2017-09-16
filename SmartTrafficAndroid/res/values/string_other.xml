@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_other_inputview_edit_hint">请输入内容</string>
+    
+    <string-array name="array_other_inputview_default_name">
+        <item >语音输入</item>
+        <item >收藏线路</item>
+        <item >我的位置</item>
+        <item >地图选点</item>
+    </string-array>
+    
+    
+    <string name="string_suggestion_type_name">建议类别</string>
+    <string name="string_suggestion_title_hint">请输入标题</string>
+    <string name="string_suggestion_content_hint">请输入内容</string>
+    <string name="string_suggestion_contact">联系方式</string>
+    <string name="string_suggestion_contact_persion">联系人姓名</string>
+    <string name="string_suggestion_submit">提交</string>
+    <string name="string_suggestion_leave_contact">匿名建议</string>
+    <string name="string_suggestion_submit_history">历史记录</string>
+    
+</resources>

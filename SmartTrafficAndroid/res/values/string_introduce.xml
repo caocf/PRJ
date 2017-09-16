@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="introduce_smart_bus">
+        <item >0</item>
+        <item >智慧公交概况\n智慧公交介绍\n智慧公交内容\n智慧公交特点</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="introduce_city_bike">
+        <item >0</item>
+        <item >公共自行车概况\n公共自行车介绍\n公共自行车内容\n公共自行车特点</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+    
+    <string-array name="introduce_driving_school">
+        <item >0</item>
+        <item >驾校概况\n驾校介绍\n公驾校内容\n驾校特点</item>
+        <item >嘉兴智慧交通——2014.09.04</item>
+    </string-array>
+</resources>

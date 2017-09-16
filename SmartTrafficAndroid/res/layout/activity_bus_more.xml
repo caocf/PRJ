@@ -1,0 +1,162 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/back_groud">
+
+    <FrameLayout
+        android:id="@+id/bus_more_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+         	android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginTop="10dp"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+        	android:orientation="horizontal">
+       		 <TextView
+	            android:id="@+id/bus_more_select_name"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content"
+	            android:textSize="17sp"
+	        	android:textColor="#333333"
+	            android:text="隐藏当日不开车次" 
+	            android:layout_gravity="center_vertical"/>
+
+       		 <ImageView
+       		     android:id="@+id/bus_more_select_show_type"
+       		     android:layout_width="wrap_content"
+       		     android:layout_height="match_parent"
+       		     android:src="@drawable/switch_off_"
+       		     android:layout_gravity="center_vertical"
+       		     android:onClick="click"
+       		     android:layout_marginRight="10dp" />
+
+		</LinearLayout> 
+		
+        <LinearLayout
+         	android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+        	android:orientation="horizontal">
+	        <TextView
+	            android:id="@+id/trip_driving_self_clear"
+	             android:layout_width="0dp"
+	             android:layout_weight="1"
+		        android:layout_height="match_parent"
+		        android:textSize="17sp"
+		        android:textColor="#333333"
+		        android:gravity="center_vertical"        
+		        android:clickable="true" 
+		        android:onClick="click"
+	            android:text="默认乘坐日期" />    
+            <TextView 
+                android:id="@+id/bus_more_select_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:clickable="true" 
+		        android:onClick="click"
+		        android:drawableRight="@drawable/arrow_right"
+		        android:paddingRight="10dp"
+                />
+        </LinearLayout>    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        >
+
+        <TextView
+            android:id="@+id/bus_more_suggestion"
+             android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginTop="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:clickable="true" 
+	        android:onClick="click"
+            android:text="意见建议" />
+
+        <TextView
+            android:id="@+id/bus_more_complain"
+             android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:clickable="true" 
+	        android:onClick="click"
+            android:text="我要投诉" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/bus_more_about"
+             android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginTop="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:clickable="true" 
+	        android:onClick="click"
+            android:text="关于长途客运" />
+        <TextView
+            android:id="@+id/bus_clear_history"
+             android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:clickable="true" 
+	        android:onClick="click"
+            android:text="清空历史记录" />
+
+    </LinearLayout>
+
+</LinearLayout>

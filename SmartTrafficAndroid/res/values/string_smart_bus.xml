@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_smart_bus_less_change">换乘少</string>
+    <string name="string_smart_bus_less_time">时间短</string>
+    <string name="string_smart_bus_less_foot">步行少</string>
+    <string name="string_smart_bus_less_price">价格少</string>
+    <string name="string_smart_bus_less_length">路程短</string>
+    
+    
+    <string name="string_smart_bus_transfer">换乘</string>
+    <string name="string_smart_bus_line">线路</string>
+    <string name="string_smart_bus_station">站点</string>
+    
+    <string name="string_smart_bus_line_reach">到站</string>
+    <string name="string_smart_bus_line_on">途中</string>
+    
+    <string name="string_alarm_next">下一步</string>
+    
+    <string name="string_alarm_up">上车提醒</string>
+    <string name="string_alarm_down">下车提醒</string>
+    <string name="string_alarm_method">提醒方式</string>
+    <string name="string_alarm_method_defaul">按站点</string>
+    <string name="string_alarm_time">提醒时间</string>
+    <string name="string_alarm_time_default">提前两站</string>
+    <string name="string_alarm_advance">高级设置</string>
+    <string name="string_alarm_crowed">是否考虑车内拥挤度</string>
+    <string name="string_alarm_plan_upcar">计划上车时间</string>
+    <string name="string_alarm_week">提醒周期</string>
+    
+    <string name="string_smart_bus_favor_delete">删除</string>
+    
+    <string name="string_alarm_0">日</string>
+    <string name="string_alarm_1">一</string>
+    <string name="string_alarm_2">二</string>
+    <string name="string_alarm_3">三</string>
+    <string name="string_alarm_4">四</string>
+    <string name="string_alarm_5">五</string>
+    <string name="string_alarm_6">六</string>
+    
+    <string name="string_alarm_enter">确定</string>
+    <string name="string_alarm_cancel">取消</string>
+    
+    
+    <string name="string_nearby_search_at_nearby">在"我的位置"附近搜索</string>
+    
+    <string name="string_nearby_item_1">公共自行车</string>
+    <string name="string_nearby_item_2">名胜景点</string>
+    <string name="string_nearby_item_3">长途车站</string>
+    <string name="string_nearby_item_4">加油站</string>
+    <string name="string_nearby_item_5">停车场</string>
+    <string name="string_nearby_item_6">公交站</string>
+    <string name="string_nearby_item_7">出租车</string>
+    <string name="string_nearby_item_8">自定义</string>
+    
+    <string name="string_smart_station_nearby_line">途径线路</string>
+    <string name="string_smart_station_nearby_station">附近公交站</string>
+    <string name="string_smart_station_nearby_bike">附近公共自行车</string>
+    
+    <string-array name="array_alarm_method">
+        <item >按站点</item>
+        <item >按时间</item>
+        <item >按距离</item>
+    </string-array>
+    
+    <string-array name="array_alarm_station">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+        <item >5</item>
+    </string-array>
+    
+    <string-array name="array_alarm_time">
+        <item >1</item>
+        <item >2</item>
+        <item >5</item>
+        <item >10</item>
+        <item >15</item>
+        <item >20</item>
+    </string-array>
+    
+    <string-array name="array_alarm_length">
+        <item >100</item>
+        <item >200</item>
+        <item >500</item>
+        <item >1000</item>
+        <item >1500</item>
+        <item >2000</item>
+    </string-array>
+</resources>

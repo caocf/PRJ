@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="string_app_name">智慧交通禾行通</string>
+    <string name="string_main_traffic">全路网指数</string>
+    <string-array name="array_main_content">
+        <item>智慧公交</item>
+        <item>智慧电召</item>
+        <item>公共自行车</item>       
+        <item>停车诱导</item>
+        <item>行车诱导</item>    
+        <item>交通快讯</item>
+    </string-array>
+    
+    <string-array name="array_region_city">
+        <item >嘉兴</item>
+        <item >桐乡</item>
+        <item >海宁</item>
+        <item >海盐</item>
+        <item >平湖</item>
+        <item >嘉善</item>
+    </string-array>
+    
+    <string-array name="array_left_item_name">
+        <item >个人中心</item>
+<!--        <item >我要投诉</item> -->  
+        <item >意见建议</item>   
+
+        <item >分享好友</item>
+        <item >检查更新</item>
+        <item >关于我们</item>
+<!--          <item >使用帮助</item>
+-->
+        <item >退出&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</item>
+    </string-array>
+</resources>

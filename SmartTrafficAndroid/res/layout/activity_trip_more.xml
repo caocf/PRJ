@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/trip_more_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/back_groud">
+	    <TextView
+	        android:id="@+id/trip_more_suggestion"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginTop="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:clickable="true" 
+	        android:onClick="click"
+	        android:text="意见建议"
+	        />
+	
+	    <TextView
+	        android:id="@+id/trip_more_complain"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:text="我要投诉" 
+	        android:clickable="true" 
+	        android:onClick="click"/>
+	
+	    <TextView
+	        android:id="@+id/trip_more_about"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:textSize="17sp"
+	        android:textColor="#333333"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/selector_border_shape"
+	        android:paddingLeft="15dp"
+	        android:drawableRight="@drawable/arrow_right"
+	        android:paddingRight="10dp"
+	        android:text="关于出行规划"
+	        android:clickable="true" 
+	        android:onClick="click" />
+	</LinearLayout>
+</LinearLayout>

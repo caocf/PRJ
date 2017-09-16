@@ -1,0 +1,157 @@
+<ScrollView 
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+       	android:layout_height="fill_parent"
+       	android:scrollbars="vertical"    
+       	android:background="@color/back_groud"   	
+       	>     	
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	
+	    <FrameLayout
+	        android:id="@+id/trip_driving_self_stategy_head"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	    </FrameLayout>
+	    
+	    <ListView
+	        android:id="@+id/trip_driving_self_stategy_select_listview"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/back_groud_white" >
+	    </ListView>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="6dp"
+	        android:paddingBottom="6dp"      
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginRight="15dp" 
+	        android:background="@drawable/textview_border_shape">
+	
+	        <TextView
+	            android:id="@+id/trip_driving_self_stategy_more"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:paddingLeft="10dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:textSize="16sp"
+	            android:text="高级设置" />
+	
+	        <ImageView
+	            android:id="@+id/trip_driving_self_stategy_more_select"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:src="@drawable/switch_off_"
+	            android:onClick="moreSelect" />
+	
+	    </LinearLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/trip_driving_self_stategy_andvance_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"        
+	        android:orientation="vertical"
+	        android:visibility="gone"
+	        >
+		    
+		     <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="6dp"
+	        	android:paddingBottom="6dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp" 
+		        android:background="@drawable/textview_border_shape">
+		
+		        <TextView
+		            android:id="@+id/trip_driving_self_stategy_more_length"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:paddingLeft="10dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:drawableRight="@drawable/item_uncheck"
+		            android:paddingRight="10dp"
+		            android:paddingTop="10dp"
+		            android:paddingBottom="10dp"
+		            android:textSize="16sp"
+		            android:text="费用最低" />
+		
+		        	
+		    </LinearLayout>
+		    
+		      <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="6dp"
+	        	android:paddingBottom="6dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp" 
+		        android:background="@drawable/textview_border_shape">
+		
+		        <TextView
+		            android:id="@+id/trip_driving_self_stategy_more_width"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:paddingLeft="10dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:drawableRight="@drawable/item_uncheck"
+		            android:paddingRight="10dp"
+		            android:paddingTop="10dp"
+		            android:paddingBottom="10dp"
+		            android:textSize="16sp"
+		            android:text="最早到达" />
+		
+		
+		    </LinearLayout>
+		
+		       <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:paddingTop="6dp"
+	        	android:paddingBottom="6dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp" 
+		        android:background="@drawable/textview_border_shape">
+		
+		        <TextView
+		            android:id="@+id/trip_driving_self_stategy_more_height"
+		            android:layout_width="0dp"
+		            android:layout_weight="1"
+		            android:paddingLeft="10dp"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_vertical"
+		            android:drawableRight="@drawable/item_uncheck"
+		            android:paddingRight="10dp"
+		            android:paddingTop="10dp"
+		            android:paddingBottom="10dp"
+		            android:textSize="16sp"
+		            android:text="时间短" />
+		
+		    </LinearLayout>
+	 	</LinearLayout>
+	    <Button
+	        android:id="@+id/favor_enter"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_marginBottom="30dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onclick" 
+	        android:gravity="center"
+	        android:background="@drawable/selector_button_search"/>
+	
+	</LinearLayout>
+</ScrollView>

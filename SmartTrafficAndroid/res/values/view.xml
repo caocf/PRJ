@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_head_fragment_back_name">返回</string>
+    <string name="common_head_fragment_title_name">交通快讯</string>
+    <string name="common_head_fragment_select_name">列表</string>
+</resources>

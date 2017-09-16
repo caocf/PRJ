@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<!--  
+    <FrameLayout
+        android:id="@+id/driving_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>  -->
+
+    <FrameLayout
+        android:id="@+id/driving_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout> 
+    
+<!--   	<fragment
+        android:name="com.example.smarttraffic.drivingSchool.DrivingInfoMapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" /> -->
+	
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/driving_school_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/driving_school_view"
+            android:gravity="center"
+            android:onClick="itemOnclick"
+            android:src="@drawable/selector_school_message" />
+
+        <ImageView
+            android:id="@+id/drving_student_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/driving_student_view"
+            android:gravity="center"
+            android:onClick="itemOnclick"
+            android:src="@drawable/selector_school_service" />
+
+        <ImageView
+            android:id="@+id/driving_favor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/driving_favor_view"
+            android:gravity="center"
+            android:onClick="itemOnclick"
+            android:src="@drawable/selector_school_favor" />
+
+        <ImageView
+            android:id="@+id/driving_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/driving_more_view"
+            android:gravity="center"
+            android:onClick="itemOnclick"
+            android:src="@drawable/repair_more_normal" />
+
+    </LinearLayout>
+
+</LinearLayout>

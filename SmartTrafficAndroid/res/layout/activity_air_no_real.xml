@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/back_groud" >
+
+    <FrameLayout
+        android:id="@+id/air_no_real_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/air_backgroud" >
+
+        <TextView
+            android:id="@+id/air_no_real_start_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/back_groud_white"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/air_no_real_end_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/air_no_real_start_city"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="22dp"
+            android:textColor="@color/back_groud_white"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/air_no_real_start_airport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/air_no_real_start_city"
+            android:layout_below="@+id/air_no_real_start_city"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/back_groud_white"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/air_no_real_end_airport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/air_no_real_start_airport"
+            android:layout_alignBottom="@+id/air_no_real_start_airport"
+            android:layout_alignRight="@+id/air_no_real_end_city"
+            android:textColor="@color/back_groud_white"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/air_no_real_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/air_no_real_start_airport"
+            android:layout_below="@+id/air_no_real_start_airport"
+            android:layout_marginTop="10dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/air_no_real_kind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/air_no_real_time"
+            android:layout_alignBottom="@+id/air_no_real_time"
+            android:layout_alignRight="@+id/air_no_real_end_airport"
+            android:text="" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:background="@drawable/textview_border_shape" >
+
+            <TextView
+                android:id="@+id/bike_detatil_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="14dp"
+                android:text="实际起飞" />
+
+            <TextView
+                android:id="@+id/bike_riding_detail_infomation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/bike_detatil_name"
+                android:layout_alignBottom="@+id/bike_detatil_name"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="28dp"
+                android:text="计划起飞" />
+
+            <TextView
+                android:id="@+id/air_no_real_real_starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/bike_detatil_name"
+                android:layout_below="@+id/bike_detatil_name"
+                android:layout_marginTop="14dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/air_no_real_plan_starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/air_no_real_real_starttime"
+                android:layout_alignBottom="@+id/air_no_real_real_starttime"
+                android:layout_alignLeft="@+id/bike_riding_detail_infomation"
+                android:text="" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:background="@drawable/textview_border_shape" >
+
+            <TextView
+                android:id="@+id/bike_detatil_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="37dp"
+                android:layout_marginTop="14dp"
+                android:text="实际到达" />
+
+            <TextView
+                android:id="@+id/bike_riding_detail_infomation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/bike_detatil_name"
+                android:layout_alignBottom="@+id/bike_detatil_name"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="28dp"
+                android:text="计划到达" />
+
+            <TextView
+                android:id="@+id/air_no_real_real_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/bike_detatil_name"
+                android:layout_below="@+id/bike_detatil_name"
+                android:layout_marginTop="14dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/air_no_real_plan_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/air_no_real_real_endtime"
+                android:layout_alignBottom="@+id/air_no_real_real_endtime"
+                android:layout_alignLeft="@+id/bike_riding_detail_infomation"
+                android:text="" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

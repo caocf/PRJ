@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_call_help">您好，欢迎使用维修呼救系统，您可以输入问题或者语音或选择当前位置，系统将根据您的位置为您联系最合适维修厂家服务</string>
+</resources>

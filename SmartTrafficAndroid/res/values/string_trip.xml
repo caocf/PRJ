@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_trip_default_stategy">线路最短</string>
+    <string name="string_trip_history_label">历史记录</string>
+    <string name="string_trip_history_clear">清除历史记录</string>
+    <string name="string_trip_enter_start_city_label"> 请输入起点</string>
+    <string name="string_trip_enter_end_city_label"> 请输入终点</string>
+    
+    <string name="string_trip_commn_default_stategy">公交</string>
+    <string name="string_trip_commn_select">偏好</string>
+    
+    <string-array name="array_trip_stategy">
+        <item >线路最短</item>
+        <item >收费最少</item>
+        <item >时间最短</item>
+        <item >路况最好</item>
+    </string-array>
+    
+    <string-array name="array_trip_common_stategy">
+        <item >综合考虑</item>
+        <item >公交</item>
+        <item >长途</item>
+        <item >民航</item>
+        <item >铁路</item>
+        <item >出租车</item>
+    </string-array>
+    
+    <string name="format_string_trip_date">%1$d 月%2$d 日  %3$d：%4$d</string>
+</resources>

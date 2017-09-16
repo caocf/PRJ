@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/delete_start_point_list_item_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textColor="#5e97ee"
+        android:text="" />
+    
+	<ImageView
+	    android:id="@+id/delete_between_list_item_image"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_vertical"
+	    android:contentDescription="@string/image_content_discribe"
+	    android:src="@drawable/historical_records_icon_arrow_left" />
+	
+    <TextView
+        android:id="@+id/delete_end_point_list_item_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textColor="#5e97ee"
+        android:text="" />
+    
+    <ImageView
+        android:id="@+id/delete_select_list_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:contentDescription="@string/image_content_discribe"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/item_uncheck" />
+
+</LinearLayout>

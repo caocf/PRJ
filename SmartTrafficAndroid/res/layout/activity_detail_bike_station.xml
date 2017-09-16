@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/driving_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/bike_riding_detail_infomation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:textColor="#a3a3a3"
+            android:text="@string/string_bike_name" />
+
+        <TextView
+            android:id="@+id/bike_detatil_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/bike_riding_detail_infomation"
+            android:layout_alignBottom="@+id/bike_riding_detail_infomation"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/bike_riding_detail_infomation"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bike_riding_detail_infomation"
+            android:layout_below="@+id/bike_riding_detail_infomation"
+            android:layout_marginTop="10dp"
+            android:textColor="#a3a3a3"
+            android:text="@string/string_bike_id" />
+
+        <TextView
+            android:id="@+id/bike_detatil_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignLeft="@+id/bike_detatil_name"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="10dp"
+            android:textColor="#a3a3a3"
+            android:text="@string/string_bike_time" />
+
+        <TextView
+            android:id="@+id/bike_detatil_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView5"
+            android:layout_alignLeft="@+id/bike_detatil_id"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView5"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="10dp"
+            android:textColor="#a3a3a3"
+            android:text="@string/string_bike_info" />
+
+        <TextView
+            android:id="@+id/bike_detatil_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignLeft="@+id/bike_detatil_time"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView7"
+            android:layout_below="@+id/textView7"
+            android:layout_marginTop="10dp"
+            android:textColor="#a3a3a3"
+            android:text="@string/string_bike_address"/>
+
+        <TextView
+            android:id="@+id/bike_detatil_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView9"
+            android:layout_alignLeft="@+id/bike_detatil_info"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/bike_riding_detail_infomation"
+            android:layout_marginRight="20dp"
+            android:contentDescription="@string/image_content_discribe"
+            android:src="@drawable/selector_school_get_there" 
+            android:onClick="gothere"
+            android:clickable="true"/>
+
+<!--          <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bike_detatil_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:onClick="addToFavor"
+            android:gravity="center"
+            android:text="添加到收藏夹" />
+-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/detail_favor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="favor"
+            android:src="@drawable/smart_bus_favor"
+            android:background="@drawable/selector_smart_bus_backgroud" />
+
+        <ImageView
+            android:id="@+id/detail_suggest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/image_content_discribe"
+            android:src="@drawable/smart_bus_suggestion"
+            android:onClick="suggest" 
+            android:background="@drawable/selector_smart_bus_backgroud"/>
+
+        <ImageView
+            android:id="@+id/detail_wrong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/image_content_discribe"
+            android:src="@drawable/smart_bus_debug" 
+            android:onClick="debug"
+            android:background="@drawable/selector_smart_bus_backgroud"/>
+
+    </LinearLayout>
+
+</LinearLayout>

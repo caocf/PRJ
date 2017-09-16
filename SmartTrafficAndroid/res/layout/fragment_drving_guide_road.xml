@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <cennavi.cenmapsdk.android.map.CNMKMapView
+        android:id="@+id/driving_guide_road_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <!--  <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#aeffffff" >
+    </ListView>-->
+    <com.example.smarttraffic.driverguide.AutoScrollView
+       android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" 
+   android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#aeffffff" >
+        <TextView 
+            android:id="@+id/autotext"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"    />
+        </com.example.smarttraffic.driverguide.AutoScrollView>
+</RelativeLayout>

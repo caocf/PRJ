@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_background_normal" >
+
+    <ImageView
+        android:id="@+id/common_head_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/image_content_discribe"
+        android:src="@drawable/selector_title_back" />
+    
+    <TextView
+        android:id="@+id/common_head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/common_head_back"
+        android:textColor="#151111"
+        android:textSize="20sp"/>
+    
+    <Spinner
+        android:id="@+id/common_head_zone"
+        android:layout_width="52dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+       	
+        android:layout_toRightOf="@+id/common_head_title"
+        android:layout_alignBottom="@+id/common_head_back"    
+        android:background="@drawable/title_background_normal"
+        
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/common_head_zone"
+        android:layout_centerVertical="true"
+        android:src="@drawable/head_select_circle"
+        android:contentDescription="@string/image_content_discribe"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/bike_riding_detail_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_alignRight="@+id/common_head_zone"
+        android:layout_centerVertical="true"
+        android:src="@drawable/head_select_down"
+        android:contentDescription="@string/image_content_discribe" 
+        android:visibility="gone"/>
+
+</RelativeLayout>

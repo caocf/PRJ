@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/listview_suggestion_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/listview_suggestion_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="#a3a3a3"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/listview_suggestion_persion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#a3a3a3"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/listview_suggestion_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#a3a3a3"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/listview_suggestion_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#a3a3a3"
+        android:text="" />
+    
+</LinearLayout>
+

@@ -1,0 +1,78 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/back_groud">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:paddingBottom="10dp" >
+        
+	    <Button
+	        android:id="@+id/trip_driving_self_search"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="70dp"
+	        android:layout_alignParentTop="true"
+	        android:gravity="center"
+	        android:background="@drawable/selector_button_search"
+	        android:layout_marginRight="10dp"
+	        android:textColor="#ffffff" />
+	    
+	    <LinearLayout
+	        android:id="@+id/smart_bus_line_history_layout"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/trip_driving_self_search"
+		    android:layout_marginTop="20dp"
+		    android:orientation="vertical" >
+	
+		    <TextView
+		        android:id="@+id/smart_bus_line_history_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginTop="10dp"
+		        android:text="@string/string_trip_history_label"
+		        android:textColor="#5c5c5c" 
+		        android:textSize="14sp"/>
+	
+		    <ListView
+		        android:id="@+id/trip_driving_self_history"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dp"
+		        android:background="#ffffff" >
+		    </ListView>
+			<TextView
+		        android:id="@+id/smart_bus_line_history_clear"
+		        android:layout_width="match_parent"
+		        android:layout_height="40dp"
+		        android:gravity="center"
+		        android:clickable="true"
+		        android:text="@string/string_trip_history_clear" 
+		        android:background="@drawable/textview_border_shape"/>
+	    
+		</LinearLayout>
+	    
+	    <com.example.smarttraffic.view.InputListView
+	        android:id="@+id/trip_driving_self_end"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginLeft="10dp"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginTop="10dp" >
+   	 	</com.example.smarttraffic.view.InputListView>
+	    
+	</RelativeLayout>
+
+	
+	
+
+</LinearLayout>

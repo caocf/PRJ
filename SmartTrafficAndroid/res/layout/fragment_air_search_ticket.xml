@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back_groud" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/textview_border_shape"
+         >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/textview_border_shape">
+
+            <TextView
+                android:id="@+id/search_start_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="14dp"
+                android:text="@string/string_air_start_city"
+                android:textColor="#5c5c5c" />
+
+            <TextView
+                android:id="@+id/search_end_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:text="@string/string_air_end_city"
+                android:textColor="#5c5c5c"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/bus_search_exchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/image_content_discribe"
+                android:src="@drawable/selector_text_change" />
+
+            <TextView
+                android:id="@+id/search_start_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bus_search_exchange"
+                android:layout_alignLeft="@+id/search_start_city_name"
+                android:background="@drawable/textview_under_backgroud"
+                android:clickable="true"
+                android:text="@string/string_air_default_start"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/search_end_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bus_search_exchange"
+                android:layout_alignRight="@+id/search_end_city_name"
+                android:background="@drawable/textview_under_backgroud"
+                android:clickable="true"
+                android:text="@string/string_air_default_end"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/textview_border_shape">
+
+            <TextView
+                android:id="@+id/search_time_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="14dp"
+                android:text="@string/string_air_search_time"
+                android:textColor="@color/font_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/search_time"
+	            android:layout_width="0dp"
+	            android:layout_height="45dp"
+	            android:orientation="horizontal"
+	            android:layout_weight="1"
+	            android:clickable="true"
+	            android:background="@drawable/textview_under_backgroud">
+	            <TextView
+	                android:id="@+id/search_time_date"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:duplicateParentState="true"
+	                android:clickable="true"
+	                android:layout_gravity="center_vertical"
+	                android:textSize="20sp"
+	                android:layout_marginLeft="10dp"
+	                android:textColor="#333333"	                
+	                 />
+	            
+	            <TextView
+	                android:id="@+id/search_week"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:duplicateParentState="true"
+	                android:clickable="true"
+	                android:layout_gravity="center_vertical"
+	                android:textSize="16sp"
+	                android:layout_marginLeft="10dp"
+	                android:textColor="#333333"
+	                 />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/textview_border_shape">
+
+            <TextView
+                android:id="@+id/search_kind_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:text="@string/string_air_type"
+                android:textColor="@color/font_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/search_kind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/textview_under_backgroud"
+                android:clickable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/textview_border_shape" >
+
+            <TextView
+                android:id="@+id/search_bus_ticket_fuzzy_station"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/item_check"
+                android:drawablePadding="5dp"
+                android:layout_weight="1"
+                android:text="@string/string_air_ticket_item_1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/search_bus_ticket_connect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/string_air_ticket_item_2"
+                android:drawableLeft="@drawable/item_uncheck"
+                android:drawablePadding="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+            
+
+            <TextView
+                android:id="@+id/search_bus_ticket_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/string_air_ticket_item_3"
+                android:drawableLeft="@drawable/item_uncheck"
+                android:drawablePadding="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_ticket_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:background="@drawable/selector_button_search"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/search_ticket_history_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/bus_search_history_short_line"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/bus_search_history_short_line"
+            android:text="@string/bus_hostory_name"
+            android:textColor="#5e97ee"
+            android:textSize="16sp" />
+        
+        <ListView
+	        android:id="@+id/search_ticket_history"
+	        android:layout_width="match_parent"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_gravity="center_horizontal"
+	        android:divider="@color/back_groud_white"
+	        android:layout_height="wrap_content" >
+    	
+    	</ListView>
+    </LinearLayout>
+
+    
+
+</LinearLayout>

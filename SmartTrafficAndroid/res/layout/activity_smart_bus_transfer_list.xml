@@ -1,0 +1,201 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/back_groud"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/smart_bus_transfer_list_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" 
+        android:background="@drawable/title_background_normal">
+
+        <TextView
+            android:id="@+id/smart_bus_transfer_list_start"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/historical_records_icon_arrow_left"
+            android:contentDescription="@string/image_content_discribe" />
+
+        <TextView
+            android:id="@+id/smart_bus_transfer_list_end"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/smart_bus_transfer_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="changeStartAndEnd"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/selector_smart_bus_back" />
+
+        <ImageView
+            android:id="@+id/smart_bus_transfer_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="refreshLine"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/selector_smart_bus_refresh"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/smart_bus_transfer_list_select_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/color_smart_bus_item_select"
+            android:textColor="@color/back_groud_white"
+            android:onClick="select"
+            android:clickable="true"
+            android:text="@string/string_smart_bus_less_change" />
+        
+        <TextView
+            android:id="@+id/smart_bus_transfer_list_select_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/textview_border_shape"
+            android:onClick="select"
+            android:clickable="true"
+            android:text="@string/string_smart_bus_less_time" />
+        
+        <TextView
+            android:id="@+id/smart_bus_transfer_list_select_3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/textview_border_shape"
+            android:onClick="select"
+            android:clickable="true"
+            android:text="@string/string_smart_bus_less_foot" />
+        
+        <TextView
+            android:id="@+id/smart_bus_transfer_list_select_4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/textview_border_shape"
+            android:onClick="select"
+            android:clickable="true"
+            android:text="@string/string_smart_bus_less_price" />
+        
+        <TextView
+            android:id="@+id/smart_bus_transfer_list_select_5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/textview_border_shape"
+            android:onClick="select"
+            android:clickable="true"
+            android:text="@string/string_smart_bus_less_length" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/smart_bus_transfer_list_listview"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/back_groud_white" >
+    </ListView>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+         >
+
+        <ImageView
+            android:id="@+id/smart_bus_transfer_detail_clock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/smart_bus_clock" 
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:onClick="onclick"
+            android:contentDescription="@string/image_content_discribe"/>
+
+        <ImageView
+            android:id="@+id/smart_bus_transfer_detail_circle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/smart_bus_circle"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:onClick="onclick"
+            android:contentDescription="@string/image_content_discribe" />
+
+        <ImageView
+            android:id="@+id/smart_bus_transfer_detail_favor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/smart_bus_favor"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:onClick="onclick"
+            android:contentDescription="@string/image_content_discribe" />
+
+        <ImageView
+            android:id="@+id/smart_bus_transfer_detail_suggestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/smart_bus_suggestion" />
+
+        <ImageView
+            android:id="@+id/smart_bus_transfer_detail_debug"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/smart_bus_debug" />
+
+    </LinearLayout>
+    
+</LinearLayout>

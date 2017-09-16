@@ -1,0 +1,172 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	    <FrameLayout
+	        android:id="@+id/nearby_head"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	    </FrameLayout>
+	<ScrollView 
+	        android:id="@+id/scrollView1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        
+	        >
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:background="@color/back_groud"
+		    >
+		
+		    
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" 
+		        android:background="@color/back_groud_white"
+		        android:paddingBottom="20dp"
+		        android:paddingTop="8dp" >
+	
+		        <TextView
+		            android:id="@+id/bike_riding_detail_infomation"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:text="@string/string_nearby_search_at_nearby" />
+	
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp" >
+	
+		            <TextView
+		                android:id="@+id/nearby_item_1"
+		                android:layout_width="0dp"
+		                android:layout_weight="1"
+		                android:layout_height="wrap_content"
+		                android:drawableTop="@drawable/nearby_bike"
+		                android:drawablePadding="10dp"
+		                android:gravity="center"
+		                android:textColor="#666666"
+		                android:text="@string/string_nearby_item_1"
+		                android:clickable="true"
+		                android:onClick="onclick" />
+	
+		            <TextView
+		                android:id="@+id/nearby_item_2"
+		                android:layout_width="0dp"
+		                android:layout_weight="1"
+		                android:layout_height="wrap_content"
+		                android:drawableTop="@drawable/nearby_interesting"
+		                android:drawablePadding="10dp"
+		                android:gravity="center"
+		                android:textColor="#666666"
+		                android:text="@string/string_nearby_item_2" 
+		                android:clickable="true"
+		                android:onClick="onclick"/>
+	
+		            <TextView
+		                android:id="@+id/nearby_item_3"
+		                android:layout_width="0dp"
+		                android:layout_weight="1"
+		                android:layout_height="wrap_content"
+		                android:drawableTop="@drawable/nearby_long_station"
+		                android:drawablePadding="10dp"
+		                android:gravity="center"
+		                android:text="@string/string_nearby_item_3"
+		                android:clickable="true"
+		                android:textColor="#666666"
+		                android:onClick="onclick"/>
+	
+		            <TextView
+		                android:id="@+id/nearby_item_4"
+		                android:layout_width="0dp"
+		                android:layout_weight="1"
+		                android:layout_height="wrap_content"
+		                android:drawableTop="@drawable/nearby_oil"
+		                android:drawablePadding="10dp"
+		                android:gravity="center"
+		                android:text="@string/string_nearby_item_4" 
+		                android:clickable="true"
+		                android:textColor="#666666"
+		                android:onClick="onclick"/>
+	
+		        </LinearLayout>
+	
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp" >
+	
+		            <TextView
+		                android:id="@+id/nearby_item_5"
+		                android:layout_width="0dp"
+		                android:layout_weight="1"
+		                android:layout_height="wrap_content"
+		                android:drawableTop="@drawable/nearby_parking"
+		                android:drawablePadding="10dp"
+		                android:gravity="center"
+		                android:text="@string/string_nearby_item_5"
+		                android:clickable="true"
+		                android:textColor="#666666"
+		                android:onClick="onclick" />
+	
+		            <TextView
+		                android:id="@+id/nearby_item_6"
+		                android:layout_width="0dp"
+		                android:layout_weight="1"
+		                android:layout_height="wrap_content"
+		                android:drawableTop="@drawable/nearby_station"
+		                android:drawablePadding="10dp"
+		                android:gravity="center"
+		                android:text="@string/string_nearby_item_6"
+		                android:clickable="true"
+		                android:textColor="#666666"
+		                android:onClick="onclick"/>
+	
+		            <TextView
+		                android:id="@+id/nearby_item_7"
+		                android:layout_width="0dp"
+		                android:layout_weight="1"
+		                android:layout_height="wrap_content"
+		                android:drawableTop="@drawable/nearby_taxi"
+		                android:drawablePadding="10dp"
+		                android:gravity="center"
+		                android:text="@string/string_nearby_item_7"
+		                android:clickable="true"
+		                android:textColor="#666666"
+		                android:onClick="onclick"/>
+	
+		            <TextView
+		                android:id="@+id/nearby_item_8"
+		                android:layout_width="0dp"
+		                android:layout_weight="1"
+		                android:layout_height="wrap_content"
+		                android:drawableTop="@drawable/nearby_define"
+		                android:drawablePadding="10dp"
+		                android:gravity="center"
+		                android:text="@string/string_nearby_item_8"
+		                android:clickable="true"
+		                android:textColor="#666666"
+		                android:onClick="onclick" />
+	
+		        </LinearLayout>
+	
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:id="@+id/nearby_type_content_class_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical" >
+		    </LinearLayout>
+		
+	
+		</LinearLayout>
+	
+	</ScrollView>
+</LinearLayout>

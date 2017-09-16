@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.smarttraffic"
+    android:versionCode="83"
+    android:versionName="1.1.12131348" >
+
+    <uses-sdk android:minSdkVersion="11" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.example.smarttraffic.map.CenMapApiDemoApp"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!--
+         <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="7Ixk6I6pmznOGt3HjdeeUaF3" />
+
+        -->
+        <activity
+            android:name="com.example.smarttraffic.EnterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.TripHomeActivity"
+            android:label="@string/title_activity_trip_home"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.news.NewsHomeActivity"
+            android:label="@string/title_activity_news_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.busStation.BusStationActivity"
+            android:label="@string/title_activity_bus_station"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.busStation.BusMoreActivity"
+            android:label="@string/title_activity_bus_more"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.busStation.SelectCityActivity"
+            android:label="@string/title_activity_select_city"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.busStation.TicketsInfoActivity"
+            android:label="@string/title_activity_tickets_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.drivingSchool.DrivingHomeActivity"
+            android:label="@string/title_activity_driving_home"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <activity
+            android:name="com.example.smarttraffic.drivingSchool.OrderSchoolActivity"
+            android:label="@string/title_activity_order_school"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.drivingSchool.DrivingStudentGradeActivity"
+            android:label="@string/title_activity_driving_student_grade"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.drivingSchool.DrivingStudentExamActivity"
+            android:label="@string/title_activity_driving_student_grade"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.drivingSchool.DetailSchoolActivity"
+            android:label="@string/title_activity_detail_school"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.SelfStategyActivity"
+            android:label="@string/title_activity_self_stategy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.busStation.BusRealActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.train.TrainStationActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.train.TrainMoreActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.train.TrainTicketsInfoActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.train.TrainRealActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.airport.AirMoreActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.airport.AirNoActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.airport.AirStationActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.airport.AirTicketsInfoActivity"
+            android:label="@string/title_activity_bus_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.drivingSchool.FavorDeleteActivity"
+            android:label="@string/title_activity_favor_delete"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.TripMapActivity"
+            android:label="@string/title_activity_trip_map"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.TripMoreActivity"
+            android:label="@string/title_activity_trip_more"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.TripFavorActivity"
+            android:label="@string/title_activity_trip_more"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.DeleteTripFavorActivity"
+            android:label="@string/title_activity_trip_more"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.TripListInfoActivity"
+            android:label="@string/title_activity_trip_list_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.common.about.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.common.suggestion.SuggestionActivity"
+            android:label="@string/title_activity_suggestion"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.common.complain.ComplainActivity"
+            android:label="@string/title_activity_suggestion"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.carRepair.CarRepairHomeActivity"
+            android:label="@string/title_activity_suggestion"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.carRepair.DetailCarRepairActivity"
+            android:label="@string/title_activity_suggestion"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.carRepair.FavorDeleteActivity"
+            android:label="@string/title_activity_suggestion"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.common.debug.DebugActivity"
+            android:label="@string/title_activity_suggestion"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.news.NewsDetailActivity"
+            android:label="@string/title_activity_news_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.airport.SelectCityActivity"
+            android:label="@string/title_activity_news_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.UserLoginActivity"
+            android:label="@string/title_activity_user_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.UserRegisterActivity"
+            android:label="@string/title_activity_user_register"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.UserRegisterVerifyActivity"
+            android:label="@string/title_activity_user_register_verify"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.UserRegisterPasswordActivity"
+            android:label="@string/title_activity_user_register_password"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.ForgetFindActivity"
+            android:label="@string/title_activity_forget_find"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.ForgetVerigyActivity"
+            android:label="@string/title_activity_forget_verigy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.ForgetPasswordActivity"
+            android:label="@string/title_activity_forget_password"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.UserMainActivity"
+            android:label="@string/title_activity_user_main"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.help.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.carRepair.CallHelpActivity"
+            android:label="@string/title_activity_call_help"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.airport.AirRealInfoActivity"
+            android:label="@string/title_activity_call_help"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.airport.AirNoRealActivity"
+            android:label="@string/title_activity_air_no_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.airport.AirStationInfoActivity"
+            android:label="@string/title_activity_air_station_info"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.train.TrainNoTicketsDetailActivity"
+            android:label="@string/title_activity_train_no_tickets_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.train.TrainStationInfoActivity"
+            android:label="@string/title_activity_train_no_tickets_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.busStation.BusStationInfoActivity"
+            android:label="@string/title_activity_train_no_tickets_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bike.BikeHomeActivity"
+            android:label="@string/title_activity_bike_home"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bike.BikeFavorActivity"
+            android:label="@string/title_activity_bike_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bike.BikeFavorDeleteActivity"
+            android:label="@string/title_activity_bike_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bike.BikeStationDetailActivity"
+            android:label="@string/title_activity_bike_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusHomeActivity"
+            android:label="@string/title_activity_bus_home"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusMoreActivity"
+            android:label="@string/title_activity_bus_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusNewsActivity"
+            android:label="@string/title_activity_smart_bus_news"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusTransferListActivity"
+            android:label="@string/title_activity_smart_bus_transfer_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusTransferDetailActivity"
+            android:label="@string/title_activity_smart_bus_transfer_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusFavorActivity"
+            android:label="@string/title_activity_smart_bus_favor"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusFavorDeleteActivity"
+            android:label="@string/title_activity_smart_bus_favor"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusLineDetailActivity"
+            android:label="@string/title_activity_smart_bus_line_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusLineMapActivity"
+            android:label="@string/title_activity_smart_bus_line_map"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusNearbyStationMapActivity"
+            android:label="@string/title_activity_smart_bus_line_map"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusStationDetailActivity"
+            android:label="@string/title_activity_smart_bus_station_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.nearby.NearByActivity"
+            android:label="@string/title_activity_near_by"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.nearby.NearbyDetailActivity"
+            android:label="@string/title_activity_nearby_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.nearby.NearByDetailMapActivity"
+            android:label="@string/title_activity_near_by_detail_map"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.alarm.AlarmSearchActivity"
+            android:label="@string/title_activity_alarm_search"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SelectPointActivity"
+            android:label="@string/title_activity_select_point"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.TransferDetailActivity"
+            android:label="@string/title_activity_transfer_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.TransferDetailMapActivity"
+            android:label="@string/title_activity_transfer_detail_map"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.StationRealActivity"
+            android:label="@string/title_activity_station_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusNewsDetailActivity"
+            android:label="@string/title_activity_station_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.alarm.AlarmLineSelectActivity"
+            android:label="@string/title_activity_station_real"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.alarm.AlarmUpActivity"
+            android:label="@string/title_activity_alarm_up"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.alarm.AlarmFavorActivity"
+            android:label="@string/title_activity_alarm_up"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.alarm.AlarmFavorDeleteActivity"
+            android:label="@string/title_activity_alarm_up"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.SelectPointActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.TripLineMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.tripPlan.CommonSelfStategyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SelectStationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SelectLineActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.GoThereMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.alarm.SelectStationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bike.SelectPointActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bike.BikeRidingDetailMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.common.introduce.IntroduceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.common.complain.ComplainHistoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.alarm.AlarmStationSelectActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name="com.example.smarttraffic.alarm.UpService" >
+        </service>
+        <service android:name="com.example.smarttraffic.alarm.DownService" >
+        </service>
+
+        <activity
+            android:name="com.example.smarttraffic.smartBus.SmartBusNearbyStationListActivity"
+            android:label="@string/title_activity_smart_bus_nearby_station_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bike.BikeRidingListActivity"
+            android:label="@string/title_activity_bike_riding_list"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bike.BikeRidingDetailActivity"
+            android:label="@string/title_activity_bike_riding_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.common.suggestion.SuggestionHistoryActivity"
+            android:label="@string/title_activity_suggestion_history"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.news.NewsListDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.parking.ParkingHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.parking.ParkingListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.parking.ParkingMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.parking.ParkingDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.map.MapSelectPointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.smarttraffic.driverguide.DriverGuideActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.example.smarttraffic.driverguide.DriverGuide2Activity"
+            android:screenOrientation="landscape" >
+        </activity>
+        
+        <activity
+            android:name="com.example.smarttraffic.bikenew.BikeNewHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bikenew.BikeNewListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bikenew.BikeNewMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.EditPasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bikenew.BikeNewFavorActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bikenew.BikeNewDeleteFavorActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.StatementActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.common.suggestion.SuggestionNewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.bikenew.SearchHintActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.parking.SearchHintActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.user.UserEditActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.smartBus.GoThereListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.taxi.TaxiListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.taxi.TaxiMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.smarttraffic.taxi.TaxiDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.example.smarttraffic.news.NewsJTGZDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+         <service
+            android:name="com.example.smarttraffic.voice.PushAbInfo"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+    </application>
+
+</manifest>

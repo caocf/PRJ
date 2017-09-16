@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+     <FrameLayout
+        android:id="@+id/driving_student_exam_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+   <EditText 
+       android:id="@+id/driving_student_exam_identify"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="@string/driving_grade_phone_hint"/>
+   
+   <Button 
+       android:id="@+id/driving_student_exam_query"
+       android:layout_marginTop="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/driving_exam_query_hint"
+       android:textColor="@color/back_groud_white"
+       android:background="@drawable/selector_button_search_backgroud"
+       android:gravity="center"
+       android:onClick="search"/>
+
+</LinearLayout>

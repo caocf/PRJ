@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	
+    <FrameLayout
+        android:id="@+id/driving_map_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+	    android:layout_alignParentRight="true">
+    </FrameLayout>
+    
+    <cennavi.cenmapsdk.android.map.CNMKMapView
+        android:id="@+id/driving_mapview_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" 
+        android:layout_below="@+id/driving_map_head"/>
+    <ImageView
+        android:id="@+id/base_mapview_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/selector_map_location" 
+        android:contentDescription="@string/image_content_discribe"/>
+
+    <ImageView
+        android:id="@+id/base_mapview_reduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/base_mapview_location"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/selector_map_reduce"
+        android:contentDescription="@string/image_content_discribe" />
+
+    <ImageView
+        android:id="@+id/base_mapview_enlarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/base_mapview_reduce"
+        android:layout_alignLeft="@+id/base_mapview_reduce"
+        android:src="@drawable/selector_map_enlarge"
+        android:contentDescription="@string/image_content_discribe" />
+
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingLeft="5dp"
+	    android:paddingRight="5dp"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:layout_alignParentLeft="true"
+		android:layout_alignParentRight="true"
+		android:layout_below="@+id/driving_map_head"
+	    android:orientation="horizontal"
+	    android:background="@drawable/title_background_normal">
+
+		<com.example.smarttraffic.view.InputListView
+		    android:id="@+id/driving_school_search_inputview"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:background="#eeeeee" >
+	
+		</com.example.smarttraffic.view.InputListView>
+
+		<Button
+		    android:id="@+id/driving_search"
+		    android:layout_width="wrap_content"
+		    android:layout_height="40dp"
+		    android:layout_gravity="top"
+		    android:background="@drawable/textview_border_shape"
+		    android:text="搜索" />
+
+	</LinearLayout>
+</RelativeLayout>

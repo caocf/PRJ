@@ -1,0 +1,178 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/back_groud" >
+
+    <FrameLayout
+        android:id="@+id/smart_bus_main_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_background_normal" >
+
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+        	android:layout_height="match_parent"
+        	android:orientation="vertical">
+	        <TextView
+	            android:id="@+id/smart_bus_main_transfer"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textSize="18sp"
+	            android:onClick="change"
+	            android:clickable="true"      
+	            android:layout_gravity="center_vertical"
+	            android:text="@string/string_smart_bus_line" />
+
+	        <ImageView
+	            android:id="@+id/smart_bus_main_transfer_line"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/line"
+	            android:contentDescription="@string/image_content_discribe" 
+	            android:visibility="invisible"/>
+
+		</LinearLayout>
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+        	android:layout_height="match_parent"
+        	android:orientation="vertical">
+	        <TextView
+	            android:id="@+id/smart_bus_main_line"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textSize="18sp"
+	            android:onClick="change"
+	            android:clickable="true"      
+	            android:layout_gravity="center_vertical"
+	            android:text="@string/string_smart_bus_transfer" />
+
+	        <ImageView
+	            android:id="@+id/smart_bus_main_line_line"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/line"
+	            android:contentDescription="@string/image_content_discribe" 
+	            android:visibility="invisible"/>
+
+		</LinearLayout>
+		
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+        	android:layout_height="match_parent"
+        	android:orientation="vertical">
+	        <TextView
+	            android:id="@+id/smart_bus_main_station"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textSize="18sp"
+	            android:onClick="change"
+	            android:clickable="true"      
+	            android:layout_gravity="center_vertical"
+	            android:text="@string/string_smart_bus_station" />
+
+	        <ImageView
+	            android:id="@+id/smart_bus_main_station_line"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/line"
+	            android:contentDescription="@string/image_content_discribe"
+	            android:visibility="invisible" />
+
+		</LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/smart_bus_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"        
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/smart_bus_main_clock"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/smart_bus_clock"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select"
+             />
+
+        <ImageView
+            android:id="@+id/smart_bus_main_circle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/smart_bus_circle"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select" />
+        
+        <ImageView
+            android:id="@+id/smart_bus_main_favor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/smart_bus_favor"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select" />
+        
+        <ImageView
+            android:id="@+id/smart_bus_main_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/smart_bus_order"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select" />
+        
+        <ImageView
+            android:id="@+id/smart_bus_main_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/smart_bus_news"
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe" 
+            android:onClick="select"/>
+        
+        <ImageView
+            android:id="@+id/smart_bus_main_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/smart_bus_more" 
+            android:background="@drawable/selector_smart_bus_backgroud"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="select"/>
+
+    </LinearLayout>
+    
+</LinearLayout>

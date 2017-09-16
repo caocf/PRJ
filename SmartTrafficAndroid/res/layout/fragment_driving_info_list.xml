@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back_groud" >
+
+    <FrameLayout
+        android:id="@+id/driving_list_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/textview_border_shape_4" >
+
+        <TextView
+            android:id="@+id/driving_sort_default"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/driving_default_sort" 
+            android:textColor="@color/driving_name_color"
+            android:textSize="16sp"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/driving_sort_level"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/driving_level_sort"
+            android:textColor="@color/driving_unname_color"
+            android:textSize="16sp"
+            android:clickable="true" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+            
+        <ListView
+            android:id="@+id/driving_list"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/back_groud_white" >
+                        
+        </ListView>
+
+        <LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:layout_above="@+id/driving_list"
+			android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"
+		    android:orientation="horizontal">
+	        <com.example.smarttraffic.view.InputListView
+	            android:id="@+id/driving_school_search_inputview"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="wrap_content">
+	        </com.example.smarttraffic.view.InputListView>
+	        
+	        <Button
+		    android:id="@+id/driving_search"
+		    android:layout_width="wrap_content"
+		    android:layout_height="40dp"
+		    android:layout_gravity="top"
+		    android:background="@drawable/textview_border_shape"
+		    android:text="搜索" />
+	    </LinearLayout>    
+
+    </RelativeLayout>
+
+</LinearLayout>

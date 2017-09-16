@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/suggestion_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/suggestion_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/string_suggestion_type_name" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/image_content_discribe"
+            android:src="@drawable/head_select_circle" />
+
+	    <Spinner
+	        android:id="@+id/suggestion_type"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"        
+	        android:background="@color/back_groud_white"/>
+
+	    <ImageView
+	        android:id="@+id/imageView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:contentDescription="@string/image_content_discribe"
+	        android:src="@drawable/head_select_down" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/suggestion_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/string_suggestion_title_hint"/>
+    
+    <EditText
+        android:id="@+id/suggestion_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="top"
+        android:hint="@string/string_suggestion_content_hint"/>
+    
+    <EditText
+        android:id="@+id/suggestion_contact_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/string_suggestion_contact_persion"/>
+    
+    <EditText
+        android:id="@+id/suggestion_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/string_suggestion_contact"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            android:id="@+id/suggestion_leave_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_suggestion_leave_contact"
+            android:drawableLeft="@drawable/item_uncheck" 
+            android:drawablePadding="10dp"
+            android:clickable="true"
+            android:onClick="click"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/suggestion_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/string_suggestion_submit" 
+        android:onClick="submit"
+        android:gravity="center"
+        android:background="@drawable/selector_button_search_backgroud"
+        android:textColor="@color/back_groud_white"/>
+
+</LinearLayout>

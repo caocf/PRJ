@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_traffic_value_label">交通指数</string>
+    <string name="string_traffic_status_label">交通状况</string>
+    <string name="string_traffic_average_speed">平均车速</string>
+</resources>

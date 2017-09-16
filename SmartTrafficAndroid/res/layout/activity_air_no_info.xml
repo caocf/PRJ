@@ -1,0 +1,217 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/back_groud" >
+
+    <FrameLayout
+        android:id="@+id/train_no_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bus_backgroud" 
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/train_no_first_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="上海"
+            android:textColor="@color/back_groud_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/train_no_last_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/train_no_first_city"
+            android:layout_alignBottom="@+id/train_no_first_city"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="嘉兴"
+            android:textColor="@color/back_groud_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/train_no_start_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/train_no_first_city"
+            android:layout_below="@+id/train_no_first_city"
+            android:layout_marginTop="10dp"
+            android:text="16:00"
+            android:textColor="@color/back_groud_white" />
+        
+        <TextView
+            android:id="@+id/train_no_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/train_no_start_city"
+            android:layout_below="@+id/train_no_start_city"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:text="虹桥"
+            android:textColor="@color/back_groud_white" />
+
+        <TextView
+            android:id="@+id/train_no_end_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/train_no_start_city"
+            android:layout_alignBottom="@+id/train_no_start_city"
+            android:layout_alignRight="@+id/train_no_last_city"
+            android:text="16:00"
+            android:textColor="@color/back_groud_white" />
+        
+        <TextView
+            android:id="@+id/train_no_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/train_no_start_time"
+            android:layout_alignBottom="@+id/train_no_start_time"
+            android:layout_alignRight="@+id/train_no_last_city"
+            android:text="南站"
+            android:textColor="@color/back_groud_white" />
+
+        <TextView
+            android:id="@+id/air_no_cost_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/train_no_end_city"
+            android:layout_alignBottom="@+id/train_no_end_city"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/back_groud_white"
+            android:textSize="14sp"
+            android:text="1:00" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/air_no_cost_time"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/air_port_stop"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@string/image_content_discribe" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/air_no_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/back_groud_white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp"
+            android:background="@drawable/textview_border_shape">
+
+            <TextView
+                android:id="@+id/air_no_eco"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="经济舱" />
+
+            <TextView
+                android:id="@+id/train_no_first_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView" />
+            
+            <TextView
+                android:id="@+id/train_no_first_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp"
+            android:background="@drawable/textview_border_shape" >
+            
+            <TextView
+                android:id="@+id/air_no_cus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="商务舱" />
+
+            <TextView
+                android:id="@+id/train_no_second_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView" />
+            
+            <TextView
+                android:id="@+id/train_no_second_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" 
+            android:paddingBottom="10dp"
+            android:background="@drawable/textview_border_shape" >
+            
+            <TextView
+                android:id="@+id/air_no_fir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="头等舱" />
+
+            <TextView
+                android:id="@+id/train_no_bus_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView" />
+            
+            <TextView
+                android:id="@+id/train_no_bus_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TextView" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

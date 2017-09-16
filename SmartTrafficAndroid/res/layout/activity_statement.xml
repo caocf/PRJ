@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="用户须知" 
+        android:textColor="#333333"
+        android:textSize="16sp"/>
+    
+    <View android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#dddddd"/>
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+	    <TextView
+	        android:id="@+id/statement_content"       
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="16sp"
+	        android:textColor="#333333"
+	        android:lineSpacingMultiplier="1.5"/>
+	</ScrollView>
+
+    <Button
+        android:id="@+id/statement_agree"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/selector_button_search_backgroud"
+        android:textSize="16sp"
+        android:textColor="#ffffff" 
+        android:gravity="center"
+        android:text="我同意" />
+
+</LinearLayout>

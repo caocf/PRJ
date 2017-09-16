@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/back_groud">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/trip_map_back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_title_back"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick" />
+
+        <ImageView
+            android:id="@+id/trip_map_self"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/title_car_pressed" />
+        
+        <ImageView
+            android:id="@+id/trip_map_bus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_content_discribe"
+            android:onClick="onclick"
+            android:src="@drawable/selector_trip_image_bus" />
+
+        <TextView
+            android:id="@+id/trip_map_favor"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:contentDescription="@string/image_content_discribe"
+            android:clickable="true"
+            android:onClick="onclick"
+            android:textColor="@color/history_color"
+            android:background="@drawable/textview_under_backgroud_2"
+            android:textSize="16sp"
+            android:text="@string/string_trip_commn_select" />
+        
+    </LinearLayout>
+    
+	<fragment 
+	    android:id="@+id/trip_mapview"
+	    android:name="com.example.smarttraffic.map.FragmentBaseMapview"
+	    android:layout_width="match_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"/>
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="5dp"
+	     >
+
+		<TextView
+		    android:id="@+id/trip_map_info"
+		    android:layout_width="match_parent"
+		    android:layout_marginLeft="10dp"
+		    android:layout_height="60dp"
+		    android:clickable="true"
+            android:onClick="onclick"/>
+
+	</LinearLayout>
+	    
+</LinearLayout>

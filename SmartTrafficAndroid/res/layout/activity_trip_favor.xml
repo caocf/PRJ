@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/trip_favor_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/title_background_normal">
+
+        <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+	        <TextView
+	            android:id="@+id/trip_driving_self_favor"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textSize="17sp"
+	            android:text="自驾" 
+	            android:textColor="#0067ac"
+	            android:clickable="true"
+	            android:onClick="onclick"/>
+
+	        <ImageView
+	            android:id="@+id/trip_driving_self_underline"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal"
+	            android:contentDescription="@string/image_content_discribe"
+	            android:src="@drawable/line" />
+
+        </LinearLayout>
+       <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+	        <TextView
+	            android:id="@+id/trip_driving_common_favor"
+	            android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textSize="17sp"
+	            android:text="公共交通"
+	            android:clickable="true"
+	            android:onClick="onclick" />
+
+	        <ImageView
+	            android:id="@+id/trip_driving_common_favor_underline"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_horizontal"
+	            android:contentDescription="@string/image_content_discribe"
+	            android:src="@drawable/line" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/trip_favor_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

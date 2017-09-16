@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="string_air_start_city">出发地</string>
+    <string name="string_air_end_city">目的地</string>
+    <string name="string_air_search_time">出发日期</string>
+    <string name="string_air_type">仓位类型</string>
+    
+    <string name="string_air_default_start">上海</string>
+    <string name="string_air_default_end">北京</string>
+    <string name="string_air_hostory_name">搜索历史</string>
+    
+    <string name="string_air_ticket_item_1">联网查询</string>
+    <string name="string_air_ticket_item_2">正晚点</string>
+    <string name="string_air_ticket_item_3">余票查询</string>
+    
+    <string name="format_string_air_time_label">%1$d月%2$d日</string>
+    <string name="format_string_air_time_week_lable">星期%1$s</string>
+    <string name="format_string_air_time_full_label">%1$d月%2$d日  星期%3$s</string>
+    
+    <string-array name="array_air_kind">
+	    <item >全部</item>
+	    <item >经济舱</item>
+	    <item >头等舱</item>
+	    <item >商务舱</item>
+    </string-array>
+    
+    <string-array name="array_air_date">
+        <item >一</item>
+        <item >二</item>
+        <item >三</item>
+        <item >四</item>
+        <item >五</item>
+        <item >六</item>
+        <item >七</item>
+    </string-array>
+</resources>

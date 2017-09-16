@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/bus_tickets_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:textColor="@color/time_color"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/bus_tickets_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bus_tickets_time"
+        android:layout_below="@+id/bus_tickets_time"
+        android:textColor="@color/name_color"
+        android:textSize="12sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/bus_tickets_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bus_tickets_time"
+        android:layout_alignBottom="@+id/bus_tickets_time"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/bus_tickets_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bus_tickets_start"
+        android:layout_alignBottom="@+id/bus_tickets_start"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="26dp"
+        android:textColor="@color/price_color"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/bus_tickets_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bus_tickets_type"
+        android:layout_alignBottom="@+id/bus_tickets_type"
+        android:layout_alignLeft="@+id/bus_tickets_start"
+        android:textSize="12sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/bus_tickets_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bus_tickets_end"
+        android:layout_alignBottom="@+id/bus_tickets_end"
+        android:layout_alignRight="@+id/bus_tickets_price"
+        android:textColor="@color/name_color"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/bike_riding_detail_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/icon_end" 
+        android:contentDescription="@string/image_content_discribe"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bus_tickets_type"
+        android:layout_marginRight="19dp"
+        android:layout_toLeftOf="@+id/bus_tickets_start"
+        android:src="@drawable/icon_start" 
+        android:contentDescription="@string/image_content_discribe"/>
+
+</RelativeLayout>

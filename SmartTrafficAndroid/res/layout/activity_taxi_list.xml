@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/taxi_list_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="为您找到附近最近的5辆出租车:" 
+        android:textColor="#666666"
+        android:padding="10dp"/>
+
+    <ListView
+        android:id="@+id/taxi_list_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    
+</LinearLayout>

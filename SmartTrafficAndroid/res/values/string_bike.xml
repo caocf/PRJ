@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="string_bike_name">站点名称：</string>
+    <string name="string_bike_id">站点编号：</string>
+    <string name="string_bike_time">服务时间：</string>
+    <string name="string_bike_address">站点地址：</string>
+    <string name="string_bike_info">站点信息：</string>
+    
+    <string name="string_bike_back">反向</string>
+    <string name="string_bike_to_bus">切换公交</string>
+    <string name="string_bike_line_detail">方案详情:</string>
+    <string name="string_bike_show_left">查看终点周边可还车位</string>
+    
+    <string name="string_bike_search">搜索</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bus_start_city">出发地</string>
+    <string name="bus_end_city">目的地</string>
+    <string name="bus_search_time">出发日期</string>
+    <string name="bus_type">客车车型</string>
+    <string name="bus_number">班线车次</string>
+    <string name="bus_search_enter">搜索</string>
+    <string name="bus_start">嘉兴</string>
+    <string name="bus_end">杭州</string>
+    <string name="bus_hostory_name">搜索历史</string>
+    
+    <string name="bus_search_city_hint">请输入城市名称</string>
+    <string name="bus_search_city_default_name">默认城市</string>
+    <string name="bus_search_city_default">嘉兴</string>
+    <string name="bus_search_city_hot_name">热门城市</string>
+    
+    <string name="tickets_before_name">前一天</string>
+    <string name="tickets_after_name">后一天</string>
+    
+    <string name="bus_no_item_1">正晚点</string>
+    <string name="bus_no_item_2">站点百科</string>
+    
+    <string name="bus_ticket_item_1">模糊站名</string>
+    <string name="bus_ticket_item_2">联网查询</string>
+    <string name="bus_ticket_item_3">余票查询</string>
+    
+    <string name="bus_search_hint">请输入班线号</string>
+    
+    <string-array name="bus_search_sort_name">
+        <item >时间从早到晚</item>
+        <item >时间从晚到早</item>
+        <item >票价从高到低</item>
+        <item >票价从低到高</item>
+    </string-array>
+    
+    <string-array name="bus_kind">
+        <item >全部</item>
+        <item >大型客车</item>
+        <item >中型客车</item>
+        <item >小型客车</item>
+    </string-array>
+</resources>

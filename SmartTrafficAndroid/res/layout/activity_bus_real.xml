@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/back_groud" >
+
+    <FrameLayout
+        android:id="@+id/bus_no_real_time_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bus_backgroud" 
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/train_no_first_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:text="上海"
+            android:gravity="center"
+            android:textColor="@color/back_groud_white"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/train_no_last_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/train_no_first_city"
+            android:layout_alignBottom="@+id/train_no_first_city"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="嘉兴"
+            android:gravity="center"
+            android:textColor="@color/back_groud_white"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/train_no_start_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/train_no_first_city"
+            android:layout_alignRight="@+id/train_no_first_city"
+            android:layout_below="@+id/train_no_first_city"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="虹桥"
+            android:textColor="@color/back_groud_white" />
+
+        <TextView
+            android:id="@+id/train_no_end_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/train_no_start_city"
+            android:layout_alignBottom="@+id/train_no_start_city"
+            android:layout_alignLeft="@+id/train_no_last_city"
+            android:layout_alignRight="@+id/train_no_last_city"
+            android:text="南站"
+            android:gravity="center"
+            android:textColor="@color/back_groud_white" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/train_no_first_city"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/bus_station_bus_icon" />
+
+        <TextView
+            android:id="@+id/air_no_cost_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/train_no_end_city"
+            android:layout_alignBottom="@+id/train_no_end_city"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/back_groud_white"
+            android:text="10km" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bus_real_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp" 
+        android:layout_marginRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="@drawable/textview_border_shape"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/train_no_first_left"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="车序" />
+
+        <TextView
+            android:id="@+id/air_no_real_end_city"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="计划发车" />
+
+        <TextView
+            android:id="@+id/air_no_real_start_airport"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="实际发车" />
+
+        <TextView
+            android:id="@+id/air_no_real_end_airport"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="实际到达" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/bus_no_listview"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@color/back_groud_white">
+    </ListView>
+
+</LinearLayout>

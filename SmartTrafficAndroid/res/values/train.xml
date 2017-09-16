@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="train_kind_array">
+        <item >全部</item>
+        <item >高铁</item>
+        <item >动车</item>
+        <item >特快</item>
+        <item >普快</item>
+        <item >普客</item>
+    </string-array>
+    
+
+</resources>
