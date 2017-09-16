@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+	<!-- 标题栏 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center">
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"                
+        android:src="@drawable/ic_selector"
+         android:background="@null"
+        android:onClick="onBack"/>
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="危险货物作业审批"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1"/>
+         <ImageButton 
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="16dp"                
+        android:background="@drawable/ic_title_search"
+        android:onClick="toSearch"
+        android:layout_marginRight="20dp"/>
+               
+        </LinearLayout>
+    <!-- 内容--> 
+   
+  <RadioGroup  
+          android:id="@+id/ra_group"  
+        android:gravity="center"  
+        android:orientation="horizontal"    
+        android:layout_width="fill_parent"     
+        android:layout_height="50dp"
+        android:background="#f5f5f5"  >  
+        <RadioButton     
+            android:id="@+id/btn_0"    
+            android:layout_width="wrap_content"     
+            android:layout_height="match_parent" 
+            android:text="待审批"   
+            android:layout_weight="1"
+            android:textSize="17.0sp"     
+            android:textColor="#333333"    
+            android:gravity="bottom|center"    
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="12dp"
+            android:drawableBottom="@drawable/radiobt_abselector_process"  />   
+       
+        <RadioButton     
+            android:id="@+id/btn_1"  
+            android:layout_width="wrap_content"     
+            android:layout_height="match_parent" 
+            android:text="已审批"  
+            android:textSize="17.0sp"  
+            android:textColor="#333333"    
+            android:gravity="bottom|center"  
+            android:layout_weight="1"  
+             android:checked="false"
+             android:button="@null"
+             android:drawablePadding="12dp"
+            android:drawableBottom="@drawable/radiobt_abselector_process" />    
+         
+    </RadioGroup>
+    <TextView 
+        android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#666666"/>
+  <ListView 
+	    android:id="@+id/list"
+	  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/blinev"   />
+</LinearLayout>

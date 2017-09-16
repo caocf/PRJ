@@ -1,0 +1,212 @@
+package com.hztuen.gh.activity.Adapter;
+
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import android.content.Context;
+import android.graphics.Color;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.gh.modol.CredCardModel;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.Adapter.SearchShipNameAdapter.ViewHolder;
+
+public class CredCardAdapter extends BaseAdapter {
+
+	private Context context;
+	private List<CredCardModel> modellist;
+	private int type;
+	private Date date_today,date_jizhi;
+	
+	private String post=null;
+	private String valid=null;
+	public CredCardAdapter(Context context, List<CredCardModel> modellist,int type) {
+		this.context = context;
+		this.modellist = modellist;
+		this.type=type;
+		
+		long time=System.currentTimeMillis();//long now = android.os.SystemClock.uptimeMillis();  
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+        date_today=new Date(time);  
+       
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return modellist.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return modellist.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		final ViewHolder holder;
+
+		
+		if(type==1)
+		{
+			holder = new ViewHolder();
+			convertView = LinearLayout.inflate(context, R.layout.cred_info_item, null);
+	        holder.ZSMC=(TextView)convertView.findViewById(R.id.tv_title);
+	        holder.FZRQ=(TextView)convertView.findViewById(R.id.tv_send_date_detail);
+	        holder.YXRQ=(TextView)convertView.findViewById(R.id.tv_have_use_detail);
+	        holder.tv_have_use=(TextView)convertView.findViewById(R.id.tv_have_use);
+	        
+	        if("".equals(modellist.get(position).getYXRQ())||modellist.get(position).getYXRQ()==null)
+	        {
+	        	holder.tv_have_use.setTextColor(Color.parseColor("#666666"));
+				holder.YXRQ.setTextColor(Color.parseColor("#666666"));
+	        }else{
+	        	
+	       try {
+			date_jizhi=ConverToDate(modellist.get(position).getYXRQ());
+			
+			
+			if(date_today.getTime()-date_jizhi.getTime()>0)
+			{
+				holder.tv_have_use.setTextColor(Color.RED);
+				holder.YXRQ.setTextColor(Color.RED);
+			}else if(date_today.getTime()-date_jizhi.getTime()<=0||"".equals(date_jizhi.getTime()))
+			{
+				holder.tv_have_use.setTextColor(Color.parseColor("#666666"));
+				holder.YXRQ.setTextColor(Color.parseColor("#666666"));
+			}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	        }
+	        
+	        holder.ZSMC.setText(modellist.get(position).getZSMC());
+	        
+	        post=modellist.get(position).getFZRQ();
+	        
+	        if("".equals(post))
+	        {
+	        	 holder.FZRQ.setText(post);
+	        }else
+	        {
+	        	
+	        	holder.FZRQ.setText(post.substring(0, 10));
+	        }
+	        
+	        valid=modellist.get(position).getYXRQ();
+	        if("".equals(valid))
+	        {
+	        	 holder.YXRQ.setText(valid);
+	        }else{
+	        	
+	        	holder.YXRQ.setText(valid.substring(0, 10));
+	        }
+	        
+	       
+	       
+	        
+//	        holder.FZRQ.setText(modellist.get(position).getFZRQ());
+//	        holder.YXRQ.setText(modellist.get(position).getYXRQ());
+		}else if(type==2)
+		{
+			holder = new ViewHolder();
+			convertView = LinearLayout.inflate(context, R.layout.cred_info_item, null);
+	        holder.title=(TextView)convertView.findViewById(R.id.tv_title);
+	        holder.post=(TextView)convertView.findViewById(R.id.tv_send_date_detail);
+	        holder.valid=(TextView)convertView.findViewById(R.id.tv_have_use_detail);
+	        holder.tv_have_use=(TextView)convertView.findViewById(R.id.tv_have_use);
+	        
+	        if("".equals(modellist.get(position).getvalid())||modellist.get(position).getvalid()==null)
+	        {
+	        	holder.tv_have_use.setTextColor(Color.parseColor("#666666"));
+				//holder.YXRQ.setTextColor(Color.parseColor("#666666"));
+	        }else{
+	        	
+	       try {
+			date_jizhi=ConverToDate(modellist.get(position).getvalid());
+			
+			long time=System.currentTimeMillis();//long now = android.os.SystemClock.uptimeMillis();  
+	        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");  
+	        date_today=new Date(time);  
+			
+			if(date_today.getTime()-date_jizhi.getTime()<=0||"".equals(date_jizhi.getTime()))
+			{
+				holder.tv_have_use.setTextColor(Color.parseColor("#666666"));
+				holder.valid.setTextColor(Color.parseColor("#666666"));
+				//holder.YXRQ.setTextColor(Color.RED);
+			}else if(date_today.getTime()-date_jizhi.getTime()>0)
+			{
+				holder.tv_have_use.setTextColor(Color.RED);
+				holder.valid.setTextColor(Color.RED);
+				//holder.YXRQ.setTextColor(Color.parseColor("#666666"));
+			}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	        }
+	       
+	        holder.title.setText(modellist.get(position).gettitle());
+	        
+	        post=modellist.get(position).getpost();
+	        
+	        if(!"".equals(post))
+	        {
+	        	post=post.substring(0, 10);
+	        }
+      
+	        valid=modellist.get(position).getvalid();
+	        if(!"".equals(valid))
+	        {
+	        	valid=valid.substring(0, 10);
+	        }
+	        
+	        holder.post.setText(post);
+	        holder.valid.setText(valid);
+		}
+		return convertView;
+	}
+
+	class ViewHolder {
+
+		
+		TextView ZSMC;//证书名称
+		TextView FZRQ;//发证日期
+		TextView YXRQ;//有效日期
+		
+//		 "title": "危货作业证书",
+//         "post": "2015-9-6",
+//         "valid": "2015-11-25"
+		
+		TextView title;//证书名称(码头)
+		TextView post;//发证日期(码头)
+		TextView valid;//有效日期(码头)
+		TextView tv_have_use;
+
+	}
+	
+	
+	//把字符串转为日期  
+    public static Date ConverToDate(String strDate) throws Exception  
+    {  
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+        return df.parse(strDate);  
+    }  
+}

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.ShipEreportEN" table="ship_ereport" schema="zjmanager">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="shipname">
+            <column name="shipname" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="goodscount">
+            <column name="goodscount" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lastfuelcount">
+            <column name="lastfuelcount" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="porttime">
+            <column name="porttime" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="lastfueltime">
+            <column name="lastfueltime" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="commitdate">
+            <column name="commitdate" not-null="false"/>
+        </property>
+        <many-to-one name="portregionEN" class="net.modol.ShipPortregionEN" lazy="false">
+            <column name="regionid"/>
+        </many-to-one>
+        <many-to-one name="reporttypeEN" class="net.modol.ShipReporttypeEN" lazy="false">
+            <column name="typeid"/>
+        </many-to-one>
+        <many-to-one name="reportclassEN" class="net.modol.ShipReportclassEN" lazy="false">
+            <column name="classid"/>
+        </many-to-one>
+        <many-to-one name="startport" class="net.modol.CommonPortEN" lazy="false">
+            <column name="startport"/>
+        </many-to-one>
+        <many-to-one name="endport" class="net.modol.CommonPortEN" lazy="false">
+        <column name="endport"/>
+    </many-to-one>
+        <many-to-one name="goodsunitEN" class="net.modol.CommonGoodsunitEN" lazy="false">
+            <column name="goodsunitEN"/>
+        </many-to-one>
+        <many-to-one name="goodstypeEN" class="net.modol.CommonGoodstypeEN" lazy="false">
+            <column name="goodstypeid"/>
+        </many-to-one>
+        <many-to-one name="statusEN" class="net.modol.ShipStatusEN" lazy="false">
+            <column name="status"/>
+        </many-to-one>
+
+        <set name="shipEreporteditENSet" lazy="false">
+            <key column="reportid"></key>
+            <one-to-many class="net.modol.ShipEreporteditEN"></one-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

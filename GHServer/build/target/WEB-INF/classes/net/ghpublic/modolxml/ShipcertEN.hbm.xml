@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.ghpublic.modol.ShipcertEN" table="ship_cert" schema="zjport">
+        <id name="id">
+            <column name="id"/>
+            <generator class="increment"/>
+        </id>
+        <property name="gppc">
+            <column name="GPPC" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="con">
+            <column name="CON" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="acirs">
+            <column name="ACIRS" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="soc">
+            <column name="SOC" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="wtl">
+            <column name="WTL" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <many-to-one name="shipEN" class="net.ghpublic.modol.ShipEN" cascade="none" lazy="false" unique="true">
+            <column name="shipid"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:layout_height="48dp"
+        android:layout_width="match_parent" >
+        
+
+        <TextView
+            android:id="@+id/postion_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@drawable/image_button_back"
+            android:drawablePadding="16dp"
+            android:text="选择城市"
+            android:alpha="100"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+        
+    </RelativeLayout>
+ 	<ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/title_backgrundmenu" />
+
+ 	<LinearLayout
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:background="#f9f9f9" >
+
+ 		<TextView
+ 		    android:id="@+id/textView2"
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_marginBottom="12dp"
+ 		    android:layout_marginLeft="16dp"
+ 		    android:layout_marginTop="12dp"
+ 		    android:text="当前定位城市"
+ 		    android:alpha="100"
+ 		    android:textColor="#999999"
+ 		    android:textSize="16sp" />
+
+ 	</LinearLayout>
+
+ 	<TextView
+ 	    android:id="@+id/textView3"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="1dp"
+ 	    android:background="#d7d7d7"
+ 	    
+ 	    android:text="TextView" />
+
+ 	<LinearLayout
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="50dp" >
+
+ 		<TextView
+ 		    android:id="@+id/postion_city"
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_marginBottom="16dp"
+ 		    android:layout_marginLeft="16dp"
+ 		    android:layout_marginTop="16dp"
+ 		    android:textColor="#333333"
+ 		    android:textSize="16sp"
+ 		    android:text="嘉兴" />
+
+ 	</LinearLayout>
+ 	<TextView
+ 	    android:id="@+id/textView5"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="1dp"
+ 	    android:background="#d7d7d7"
+ 	    
+ 	    android:text="TextView" />
+    <LinearLayout
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:background="#f9f9f9" >
+
+ 		<TextView
+ 		    android:id="@+id/textView6"
+ 		    android:layout_width="wrap_content"
+ 		    android:layout_height="wrap_content"
+ 		    android:layout_marginBottom="12dp"
+ 		    android:layout_marginLeft="16dp"
+ 		    android:layout_marginTop="12dp"
+ 		    android:text="请选择信息来源"
+ 		    android:alpha="100"
+ 		    android:textColor="#999999"
+ 		    android:textSize="16sp" />
+
+ 	</LinearLayout>
+ 	<TextView
+ 	    android:id="@+id/textView7"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="1dp"
+ 	    android:background="#d7d7d7"
+ 	    android:text="TextView" />
+ 	<ListView 
+ 	    android:id="@+id/positionlist"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    ></ListView>
+</LinearLayout>

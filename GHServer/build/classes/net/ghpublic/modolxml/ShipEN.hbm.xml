@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.ghpublic.modol.ShipEN" table="ship_base" schema="zjport">
+        <id name="shipid">
+            <column name="shipid" sql-type="int(225)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="shipname">
+            <column name="shipname" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="regnumber">
+            <column name="regnumber" sql-type="varchar(255)" not-null="false"/>
+        </property>
+
+        <property name="binddate">
+            <column name="binddate"  not-null="false"/>
+        </property>
+        <set name="shipcertENs" lazy="false">
+            <key column="shipid"></key>
+            <one-to-many class="net.ghpublic.modol.ShipcertEN"/>
+        </set>
+
+
+        <many-to-one name="publicUserEN" class="net.ghpublic.modol.PublicUserEN" cascade="none" insert="true"
+                     update="true" lazy="false" >
+            <column name="user"/>
+        </many-to-one>
+        <many-to-one name="shipstatus" class="net.ghpublic.modol.PublicuserStatusEN" cascade="none" insert="true"
+                     update="true" lazy="false" >
+            <column name="shipstatus"/>
+        </many-to-one>
+
+
+    </class>
+</hibernate-mapping>

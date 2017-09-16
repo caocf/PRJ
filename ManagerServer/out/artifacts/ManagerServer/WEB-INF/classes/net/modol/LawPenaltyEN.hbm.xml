@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.LawPenaltyEN" table="law_penalty" schema="zjmanager">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="depend">
+            <column name="depend" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="item1">
+            <column name="item1" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="item2">
+            <column name="item2" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="item3">
+            <column name="item3" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="suggest">
+            <column name="suggest" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="number">
+            <column name="number" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <many-to-one name="lawEvidencesEN" class="net.modol.LawBaseEN" lazy="false" cascade="none" insert="true" update="true">
+            <column name="lawevid"/>
+        </many-to-one>
+        <set name="signedpdfENSet" lazy="false">
+            <key column="penaltyid"></key>
+            <one-to-many  class="net.modol.LawSignedpdfEN"></one-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    
+    android:orientation="vertical"
+     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/title_backgrundmenu">
+
+        <ImageView
+            android:id="@+id/around_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/image_button_back" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+				<TextView 
+				    android:paddingTop="10dp"
+				    android:id="@+id/search_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" 
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="10dp"
+                    android:hint="搜索..."
+                    android:textSize="14sp"
+				    
+				    />
+                <AutoCompleteTextView
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="10dp"
+                    android:ems="20"
+                    android:hint="请输入您需要搜索的内容"
+                    android:visibility="gone"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+<!--             <EditText -->
+<!--                 android:id="@+id/pop_search" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:layout_marginTop="16dp" -->
+<!--                 android:background="#ffffff" -->
+<!--                 android:drawableLeft="@drawable/ic_search" -->
+<!--                 android:drawablePadding="10dp" -->
+<!--                 android:ems="20" -->
+<!--                 android:hint="请输入您要搜索的内容" -->
+<!--                 android:textSize="14sp" -->
+<!--                 android:visibility="gone" /> -->
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="7dp"
+                android:background="#003771"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:text="搜索"
+            android:textColor="#1766b1"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

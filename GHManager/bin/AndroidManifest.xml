@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.hxkg.ghmanager"
+    android:versionCode="8"
+    android:versionName="1.05041513" >
+
+    <uses-sdk android:minSdkVersion="11" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+    <uses-permission android:name="android.permission.CAMERA" />
+	<uses-feature android:name="android.hardware.camera" /> 
+	<!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />    
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>	
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission> 
+
+    <application
+        android:name= "net.hxkg.ghmanager.CenApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >           
+        </activity>
+        <activity
+            android:name="net.hxkg.user.UserActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        
+        <activity
+            android:name="net.hxkg.user.CountActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        
+        <activity
+            android:name="net.hxkg.user.ChangePSWActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">            
+        </activity>
+        
+        <activity
+            android:name="net.hxkg.news.MainFramentNewsActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+         <activity
+            android:name="net.hxkg.news.ActivityNewsFrom"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.news.FramentNewsInfo"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.news.NewsComment"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+         <activity
+            android:name="net.hxkg.permit.PermissionInformationActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.permit.PermissionDetailActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.ship.SearchShipActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.ship.SearchShipBaseInfoActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.ship.CredCardInfoActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.ship.BreakRulesActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+         <activity
+            android:name="net.hxkg.ship.DeductPointsActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.ship.DangersLetInActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.ship.LetInRecordActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+         <activity
+            android:name="net.hxkg.report.OptionActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.lawexcut.LawActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.lawexcut.ReasonActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.lawexcut.IllegalListActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+         <activity
+            android:name="net.hxkg.lawexcut.LawDetailActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.lawexcut.MyIllegalListActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.system.CodeActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.lawexcut.IllegalCheckActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.report.ShipDangerListActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.report.ShipDangerInfoActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.report.WharfDangerListActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+         <activity
+            android:name="net.hxkg.report.WharfDangerInfoActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.cruise.CruiseActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">           
+        </activity>
+        <activity
+            android:name="net.hxkg.cruise.InCruiseActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.cruise.MyLocation"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.company.CompanyInfoActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.company.CompanyDetialActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.company.ImagePagerActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.cruise.CruiseListActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.cruise.CruiseDetailActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="net.hxkg.supervise.SuperviseActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">           
+        </activity>
+        <activity
+            android:name="com.huzhouport.leaveandovertime.LeaveandovertimeAddUSer"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.leaveandovertime.leaveandovertimeNewListMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.leaveandovertime.LeaveandovertimeNewListView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.leaveandovertime.LeaveandovertimeNewListShow"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.huzhouport.leaveandovertime.LeaveandovertimeNewListSearch"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.leaveandovertime.LeaveandovertimeNewListAdd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.leaveandovertime.LeaveandovertimeNewListAddKindName"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.leaveandovertime.LeaveandovertimeNewListAddTime"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.CalendarActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleItem"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleItemTime"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleClock"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleClockTime"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleFeedback"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleDropout"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleDropoutTime"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleAdd"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleAddForward"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name="com.huzhouport.schedule.ScheduleAddForwardTime"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleAddTime"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleSee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name="com.huzhouport.schedule.ScheduleSeeTime"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleSelectUser"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleSelectUserInfo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.huzhouport.schedule.ScheduleUpdate"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name="com.huzhouport.schedule.ScheduleUpdateTime"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name="net.hxkg.office.ComprehensiveSee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name="net.hxkg.office.ComprehensiveMain"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+         <activity
+            android:name="net.hxkg.office.OfficeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+          <activity
+            android:name="net.hxkg.simple.SimpleLawActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+          <activity
+            android:name="net.hxkg.simple.SimpleLawTargetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+           <activity
+            android:name="net.hxkg.simple.SimpleLaw2Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+           <activity
+            android:name="net.hxkg.simple.LawListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+           <activity
+            android:name="net.hxkg.simple.PreviewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+           <activity
+            android:name="net.hxkg.crew.SearchCrewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+           <activity
+            android:name="net.hxkg.crew.CrewInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+            <activity
+            android:name="com.huzhouport.schedule.GetSDTreeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+            <activity
+            android:name="net.hxkg.simple.SimpleLaw3Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+             <activity
+            android:name="net.hxkg.book.BookActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+             <activity
+            android:name="net.hxkg.lawexcut.PoiArroundActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+             <activity
+            android:name="net.hxkg.lawexcut.LawModifyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+             <activity
+            android:name="net.hxkg.system.AboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.tide.TideSearchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.patrolboat.SearchBoatActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.patrolboat.BoatInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.simple.OfPreview1Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.ship.IllegalDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.ship.ChargeListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.ship.ChargeDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.ship.CheckListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.ship.CheckDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.simple.SimpleList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+              <activity
+            android:name="net.hxkg.simple.SimpleDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+               <activity
+            android:name="net.hxkg.simple.SimpleLawTargetActivitySee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+               <activity
+            android:name="net.hxkg.channel.Channel1Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.channel.Channel2Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.channel.TypeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.cruise.RecordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.report.EReportListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.report.ReportInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.cruise.RecordInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.lawexcut.LawOffLineListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.book.BookInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.ais.AISCheckActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.ais.EditAISActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.report.SearchList1Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+                <activity
+            android:name="net.hxkg.report.SearchList2Activity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+       <service android:name="com.baidu.location.f" android:enabled="true"
+			android:process=":remote">
+		</service> 
+		<service
+            android:name="net.hxkg.network.MService"
+            android:enabled="true"
+            android:process=":messege" >
+        </service>
+    </application>
+    
+    <supports-screens android:largeScreens="true"    
+					  android:normalScreens="true" 
+					  android:smallScreens="true"    
+					  android:resizeable="true" 
+					  android:anyDensity="true"/>
+
+</manifest>

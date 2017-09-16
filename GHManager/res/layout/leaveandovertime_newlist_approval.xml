@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/leaveandover_newlist_approvalbutton"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@drawable/leave_button"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/leaveandover_newlist_approvalbutton"
+            android:textColor="#8b8b8b"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/leaveandover_newlist_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/leaveandover_newlist_approvalbutton"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/leaveandover_newlist_approvalbutton1"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_below="@+id/leaveandover_newlist_listview"
+            android:background="@drawable/leave_button"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/leaveandover_newlist_approvalbutton1"
+            android:textColor="#8b8b8b"
+            android:textSize="12sp" 
+            android:visibility="gone" />
+
+        <com.huzhouport.leaveandovertime.MultiListView
+            android:id="@+id/leaveandover_newlist_listview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leaveandover_newlist_approvalbutton1"
+            android:background="@color/white" 
+            android:visibility="gone" />
+    </RelativeLayout>

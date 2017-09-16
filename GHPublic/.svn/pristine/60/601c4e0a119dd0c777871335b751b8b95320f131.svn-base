@@ -1,0 +1,11 @@
+package com.gh.modol.goble;
+
+import android.app.Application;
+
+public class MainApp extends Application{
+	public static final String TAG = MainApp.class.getSimpleName();
+	
+	
+	public static int userType;
+	
+}

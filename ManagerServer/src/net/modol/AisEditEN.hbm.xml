@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.AisEditEN" table="ais_edit" schema="zjmanager">
+        <id name="shipnameid">
+            <column name="shipnameid" sql-type="varchar(255)"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="bh">
+            <column name="bh" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="dir">
+            <column name="dir" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="committime">
+            <column name="committime"   not-null="false"/>
+        </property>
+        <property name="opinion">
+            <column name="opinion"   not-null="false"/>
+        </property>
+        <many-to-one name="status" lazy="false" insert="true" update="true">
+            <column name="status"></column>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

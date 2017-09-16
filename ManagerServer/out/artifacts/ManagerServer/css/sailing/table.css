@@ -1,0 +1,194 @@
+@CHARSET "UTF-8";
+
+/*th 灰色背景的列表*/
+.listTable {
+	margin: 0 auto;
+	padding: 0;
+	table-layout: fixed;
+	text-align: left;
+	width:98%;
+	border-left:solid 1px #e8e9ed;
+}
+
+.listTable  th {
+	padding: 0 0 0 10px;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: middle;
+	text-align:left;
+	background: #e6e6e6;;
+	border-right: solid 1px #b9cdcc;
+	border-bottom: solid 1px #b9cdcc;
+	border-top-width: 0;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}
+
+.listTable td {
+	padding: 0 0 0 10px;
+	font-size: 12px;
+	height: 38px;
+	line-height: 38px;
+	vertical-align: middle;
+	border-right:solid 1px #e8e9ed;
+	border-bottom:solid 1px #e8e9ed;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}
+.addTable{
+	margin:10px 0 0 20px;
+	padding: 0;
+	table-layout: fixed;
+	text-align: left;
+	float:left;
+	width:95%;
+	border-left:solid 1px #e8e9ed;
+	border-top:solid 1px #e8e9ed;
+}
+.addTable td {
+	padding: 0 0 0 10px;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	border-right:solid 1px #e8e9ed;
+	border-bottom:solid 1px #e8e9ed;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}
+.boatmanTable{
+	margin:10px 0 0 20px;
+	padding: 0;
+	table-layout: fixed;
+	text-align: left;
+	float:left;
+	width:95%;
+}
+.boatmanTable td {
+	padding: 0 0 0 10px;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	border-bottom:solid 1px #e8e9ed;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}
+/*.boatmanTable tr{
+	border:solid 1px black;
+	}*/
+.boatmanlistTable{
+	width:100%;
+	table-layout: fixed;
+	text-align: left;
+}
+.boatmanlistTable td {
+	padding: 0 0 0 10px;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}
+.AddMiddle_table {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.AddMiddle_table td {
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	font-size: 12px;
+}
+
+.td_left {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.td_input {
+	height: 28px;
+	width: 235px;
+	border-radius: 3px;
+	outline: none;
+	border: solid 1px #b9cdcc;
+	padding-left: 5px;
+	line-height:28px;
+	vertical-align: middle;
+}
+
+.User_EditMiddle{
+	margin-top:15px;
+	margin-bottom:25px;
+	padding:0;
+	width:510px;
+	height:160px;
+}
+/*跳页*/
+#pageDiv {
+	text-align: right;
+	margin: 0;
+	padding: 6px 15px 6px 0;
+	background: #fff;
+	border: none;
+}
+
+#pageDiv p {
+	margin: 0;
+	padding: 0;
+	height: 35px;
+	line-height: 35px;
+	vertical-align: middle;
+}
+
+.indexCommon{
+	height: auto;
+	width: 14px;
+}
+.dCommonA {
+	margin: 0 5px 0 0;
+	padding: 0
+}
+
+#pageDiv a:link {
+	text-decoration: none;
+	color: #323944
+}
+
+#pageDiv a:visited {
+	text-decoration: none;
+	color: #323944
+}
+
+#pageDiv a:hover {
+	text-decoration: underline;
+	color: #1d2128
+}
+
+#pageDiv a:active {
+	text-decoration: underline;
+	color: #1d2128
+}
+.change_Middle{
+	margin-top:15px;
+	margin-bottom:25px;
+	padding:0;
+	height:120px;
+	width:510px;	
+}

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent_view"
+    android:orientation="vertical" >
+
+    <!-- 有过闸信息 第一种界面效果 -->
+
+    <LinearLayout
+        android:id="@+id/passinfo_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1889d5"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:drawableLeft="@drawable/ic_selector_back_white"
+                android:drawablePadding="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/title_ship_fir"
+                android:layout_width="127dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/shipnameTitle"
+                    android:layout_width="122dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="16dp"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_dropdown2gray" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ref"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/ic_refresh" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- <Button -->
+            <!-- android:id="@+id/button1" -->
+            <!-- style="?android:attr/buttonStyleSmall" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:background="@null" -->
+            <!-- android:text="2" -->
+            <!-- android:gravity="bottom" -->
+            <!-- android:textColor="#ffffff" -->
+            <!-- android:textSize="160sp" /> -->
+
+            <TextView
+                android:id="@+id/pass_order"
+                android:layout_width="wrap_content"
+                android:layout_height="155sp"
+                android:layout_marginLeft="52dp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="-30sp"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="160sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="位"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/shipname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="#ccffffff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="114dp" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="钱江水位"
+                android:textColor="#80ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/level2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/tex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内河水位"
+                android:textColor="#80ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/level1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="52dp" >
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="船舶停靠点共"
+                android:textColor="#ccffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/shipnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#fff87c"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="艘"
+                android:textColor="#ccffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:background="@drawable/bolang" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
+
+                <TextView
+                    android:id="@+id/tm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1.0"
+                    android:text="水位信息采集与16：00"
+                    android:textColor="#80ffffff"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text="信息仅供参考，以实际调度为准"
+                    android:textColor="#80ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第二种情况 -->
+
+    <LinearLayout
+        android:id="@+id/passinfo_second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/back_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:drawableLeft="@drawable/image_button_back"
+                android:drawablePadding="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/title_ship_sec"
+                android:layout_width="127dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/shipnameTitle_sec"
+                    
+                    android:layout_width="122dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="16dp"
+                    android:text=""
+                    android:textColor="#1766b1"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_dropdown2gray" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ref_second"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:src="@drawable/ic_refresh_blue" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/title_backgrundmenu" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_grayship"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:drawablePadding="16dp"
+                android:text="您的船舶当前无过闸信息" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

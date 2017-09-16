@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+body {
+    font-family: 微软雅黑;
+}
+
+.tablabel{
+    display: inline-block;
+    float: left;
+    height:50px;
+    width: 150px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 0;
+    cursor:pointer;
+    border: solid 1px #ccc;
+    border-left: 0;
+}
+
+.activelabel{
+    color: #333!important;
+    border: solid 1px #ccc;
+    border-top: solid 2px #0072b1!important;
+    border-bottom: 0;
+}
+
+.search-sort-list {
+    display: none;
+    position: absolute;
+    top: 46px;
+    z-index: 10;
+    background-color: #FFF;
+    border: 1px solid #cccccc;
+}
+
+.search-sort-list li {
+    padding: 0 20px 0 20px;
+    color: #5B5B5B;
+    line-height:30px;
+}
+
+.search-sort-list .current, .search-sort-list li:hover {
+    background-color: #0072b1!important;
+    color: white;
+}
+
+.search-input {
+    float: left;
+    padding: 0 3px;
+    width: 220px;
+    height: 35px;
+    line-height: 32px;
+    color:#333333;
+    border: 0;
+}

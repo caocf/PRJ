@@ -1,0 +1,93 @@
+package com.hztuen.gh.activity;
+
+import java.io.File;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.os.Environment;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
+import com.example.umengdemo.utils.UmengShareUtils;
+import com.hxkg.ghpublic.R;
+import com.hztuen.lvyou.utils.QRCodeUtil;
+/*
+ * 二维码界面
+ */
+public class QRcodeActivity extends Activity implements OnClickListener{
+
+	private RelativeLayout relative_title_final;
+	private ImageView img_qr;
+	private Button btn_share;
+	private UmengShareUtils umengShareUtils;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_qrcode);
+		init();
+		
+	}
+	private void init()
+	{
+		final String filePath = Environment.getExternalStorageDirectory()+ File.separator
+                + "qr_" + System.currentTimeMillis() + ".jpg";
+		
+		img_qr=(ImageView)findViewById(R.id.img_qr);
+	//	  二维码图片较大时，生成图片、保存文件的时间可能较长，因此放在新线程中
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+            	
+            	
+                boolean success = QRCodeUtil.createQRImage("http://120.55.193.1:8080/GH/appversioninfo.jsp", 800, 800,
+                        BitmapFactory.decodeResource(getResources(), R.drawable.appicon),
+                        filePath);
+
+                if (success) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                        	img_qr.setImageBitmap(BitmapFactory.decodeFile(filePath));
+                        }
+                    });
+                }
+            }
+        }).start();
+        
+    //	umengShareUtils = new UmengShareUtils(this, "友盟测试分享，just a test！http://www.baidu.com");
+        btn_share=(Button)findViewById(R.id.btn_share);
+        btn_share.setOnClickListener(this);
+        relative_title_final=(RelativeLayout)findViewById(R.id.relative_title_final);
+		relative_title_final.setOnClickListener(this);
+	}
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		//点击分享按钮
+		case R.id.btn_share:
+		//	umengShareUtils.share();//弹出分享面板
+			break;
+		//点击返回
+		case R.id.relative_title_final:
+			finish();
+			break;
+		default:
+			break;
+		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		umengShareUtils.authSSO(requestCode, resultCode, data);
+	}
+	
+
+}

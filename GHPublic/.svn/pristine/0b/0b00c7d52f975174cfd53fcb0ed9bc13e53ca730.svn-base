@@ -1,0 +1,869 @@
+package com.hztuen.gh.activity;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.kymjs.kjframe.KJHttp;
+import org.kymjs.kjframe.http.HttpCallBack;
+import org.kymjs.kjframe.http.HttpParams;
+import org.kymjs.kjframe.utils.ImageUtils;
+import org.kymjs.kjframe.utils.KJLoger;
+
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
+import android.provider.MediaStore;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.PopupWindow.OnDismissListener;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.gh.modol.RegistImage;
+import com.hxkg.ghpublic.HomeActivity;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.Adapter.RegistAddImagesAdapter;
+import com.hztuen.gh.contact.contants;
+import com.hztuen.lvyou.utils.HttpFileUpTool;
+import com.hztuen.lvyou.utils.ImageUtil;
+import com.hztuen.lvyou.utils.Util;
+
+/**
+ * @author zzq
+ * @DateTime 2016年7月12日 下午3:27:31
+ * 注册第二页
+ */
+public class RegistSecondCoastal extends Activity{
+	private final static String TAG = RegistSecondCoastal.class.getSimpleName();
+	public static final int MSG_REGISTER = 10000;
+
+	/**
+	 * 一大波popupwindow
+	 * */
+	private PopupWindow popupWindowType;
+	private PopupWindow popupWindowArea;
+	private PopupWindow popupWindowCamera;
+	private PopupWindow popupwindowImage;
+	private PopupWindow popupwindowPrompt;
+	/**
+	 * 界面布局
+	 * */
+	private TextView regist_second_type;
+	private GridView addimage;
+	private TextView regist_coastal_area;
+	private TextView regist_coastal_Back;
+	private EditText companyname;
+	private EditText blnumber;
+	private Button prompt;
+	private Button regist_submit;
+
+	private RegistAddImagesAdapter add_image_adapter;//适配器
+	private List<RegistImage> registImage = new ArrayList<RegistImage>();
+
+	/* 一些需要上传的参数
+	 */
+	private String username;//用户名
+	private String password;//密码
+	private String tel;//电话
+	private String region;//所在地区
+	private int usertype;//用户类型   1.船户  2.码头   3.沿海
+	private String shipname;//船名
+	private String shipnum;//船舶登记号
+	private String wharfname;//码头名称
+	private String wharfnum;//码头编号
+	private String company;//公司名
+	private String Blnumber;//营业执照号
+	private String typename;//沿海用户类型
+	private File img;//证件文件
+
+	/* 用来标识请求照相功能的activity */
+	private static final int CAMERA_WITH_DATA = 3023;
+	/* 用来标识请求gallery的activity */
+	private static final int PHOTO_PICKED_WITH_DATA = 3021;
+	/* 用来标识请求裁剪图片后的activity */
+	private static final int CAMERA_CROP_DATA = 3022;
+
+	private static final int RESULT_ALBUM_CROP_URI = 301;
+	private static final int CROP_BIG_PICTURE = 302;
+	private Uri imageUri;
+
+	/* 拍照的照片存储位置 */
+	private  File PHOTO_DIR = null;
+	// 照相机拍照得到的图片
+	private File mCurrentPhotoFile;
+	private PopupWindow pop;
+	private View view;
+	private int status=1;//检查popwindow的状态
+
+	private LinearLayout parent_view;
+
+	private long exitTime = 0;
+	private String mFileName;
+	private final String IMAGE_TYPE = "image/*";
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_registsecondcoastal);
+		regist_second_type = (TextView) findViewById(R.id.regist_second_type);
+		regist_coastal_area = (TextView) findViewById(R.id.regist_coastal_area);
+		regist_coastal_Back = (TextView) findViewById(R.id.regist_coastal_Back);
+
+		companyname = (EditText) findViewById(R.id.company);
+		blnumber = (EditText) findViewById(R.id.Blnumber);
+
+		addimage = (GridView) findViewById(R.id.add_image);
+		prompt = (Button) findViewById(R.id.prompt);
+		parent_view = (LinearLayout) findViewById(R.id.parent);
+		regist_submit = (Button) findViewById(R.id.regist_submit);
+		parent_view.setOnTouchListener(new OnTouchListener() {
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				// TODO Auto-generated method stub
+				if (popupwindowPrompt != null && popupwindowPrompt.isShowing()) {
+					popupwindowPrompt.dismiss();
+					prompt.setEnabled(true);
+				}
+				if (popupWindowType != null && popupWindowType.isShowing()) {
+					popupWindowType.dismiss();
+					regist_second_type.setEnabled(true);
+				}
+				if (popupWindowArea != null && popupWindowArea.isShowing()) {
+					popupWindowArea.dismiss();
+					regist_coastal_area.setEnabled(true);
+				}
+				if (popupwindowImage != null && popupwindowImage.isShowing()) {
+					popupwindowImage.dismiss();
+					addimage.setEnabled(true);
+				}
+				if (popupWindowCamera != null && popupWindowCamera.isShowing()) {
+					popupWindowCamera.dismiss();
+					addimage.setEnabled(true);
+				}
+				return false;
+			}
+		});
+		/**
+		 * 获取参数
+		 * */
+		Intent intent = getIntent();
+		username = intent.getStringExtra("username");
+		password = intent.getStringExtra("password");
+		tel = intent.getStringExtra("telphone");
+		/* 先在gridview中放一个数据撑开gridview显示界面*/
+		registImage.add(new RegistImage());
+		add_image_adapter = new RegistAddImagesAdapter(getApplicationContext(), registImage);
+		addimage.setAdapter(add_image_adapter);
+		/**
+		 * 监听事件和gridview的item的监听事件
+		 * */
+		addimage.setOnItemClickListener(onitemclick);
+		regist_second_type.setOnClickListener(onclick);
+		regist_coastal_area.setOnClickListener(onclick);
+		regist_coastal_Back.setOnClickListener(onclick);
+		prompt.setOnClickListener(onclick);
+		regist_submit.setOnClickListener(onclick);
+		/* 获取图片路径*/
+		getNewImageUri();
+	}
+	/**
+	 * update imagePath uri
+	 */
+	private void getNewImageUri(){
+		String path = getSDCardPath();
+		PHOTO_DIR = new File(path +File.separator+"temp_"+System.currentTimeMillis()+ ".png");
+		imageUri = Uri.fromFile(PHOTO_DIR);
+	}
+
+	/**
+	 * gridview的item的监听事件
+	 * */
+	public OnItemClickListener onitemclick = new OnItemClickListener(){
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			// TODO Auto-generated method stub
+			switch (parent.getId()){
+			case R.id.add_image:
+				expressItemClick(position);//position 代表你点的哪一个
+				break;
+			}
+		}
+		private void expressItemClick(int position) {
+			// TODO Auto-generated method stub
+			if(position==registImage.size()-1){
+				addimage.setEnabled(false);
+				initPopupWindowCamera();
+			}else{
+				addimage.setEnabled(false);
+				initPopWindowImage(position);
+			}
+			//看你需不需要返回当前界面，如果点返回需要返回到当前界面，就不用这个
+		}
+
+	};
+	/**
+	 * 监听事件
+	 * */
+	public OnClickListener onclick = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.regist_coastal_area:
+				regist_coastal_area.setEnabled(false);
+				initPopWindowArea();
+				break;
+			case R.id.regist_second_type:
+				regist_second_type.setEnabled(false);
+				initPopWindowType();
+				break;
+			case R.id.regist_coastal_Back:
+				finish();
+			case R.id.prompt:
+				prompt.setEnabled(false);
+				initPopWindowPrompt();
+				break;
+			case R.id.regist_submit:
+				registSubmit();
+				break;
+			default:
+				break;
+			}
+		}
+	};
+	/*
+	 * 注册提交
+	 * */
+	public void registSubmit(){
+		region = regist_coastal_area.getText().toString();
+		usertype = 3;
+		company = companyname.getText().toString();
+		typename = regist_second_type.getText().toString();
+		Blnumber = blnumber.getText().toString();
+		//访问网络
+		final Map<String, Object> params = new HashMap<String, Object>();
+		//访问地址
+		//		final String toUrl = "http://120.55.193.1:8080/TEST/filetest";
+		final String toUrl = contants.regist_submit;
+		final String resultcode;
+		/*
+		 * 文件上传
+		 * */
+		final HttpFileUpTool hft = new HttpFileUpTool();
+		final Map<String, File> files = new HashMap<String,File>();
+		for(int i = 0;i<registImage.size()-1;i++){
+			File mFile = ImageUtils.getSmallImageFile(getApplicationContext(), registImage.get(i+1).getImageFolder(), 300, 300, true);
+			if(mFile!=null){
+				files.put(mFile.getName(), mFile);
+			}else{
+				Toast.makeText(getApplicationContext(), "文件缺失", Toast.LENGTH_LONG).show();
+			}
+		}
+		try{
+			if(company.equals("")){
+				Toast.makeText(getApplicationContext(), "缺少公司名", Toast.LENGTH_LONG).show();
+				return;
+			}
+			if(Blnumber.equals("")){
+				Toast.makeText(getApplicationContext(), "缺少营业执照号", Toast.LENGTH_LONG).show();
+				return;
+			}
+			if(region.equals("")){
+				Toast.makeText(getApplicationContext(), "缺少地区", Toast.LENGTH_LONG).show();
+				return;
+			}
+			if(files.size()<=0){
+				Toast.makeText(getApplicationContext(), "文件缺失", Toast.LENGTH_LONG).show();
+				return;
+			}
+			params.put("img",files);
+			params.put("username",username);
+			params.put("password",password);
+			params.put("tel",tel);
+			params.put("region",region);
+			params.put("usertype",usertype);
+			params.put("company",company);
+			params.put("typename",typename);
+			params.put("Blnumber",Blnumber);
+			if(params == null&&params.equals("")){
+				//提示参数制造失败
+				Util.getTip(getApplicationContext(), "构造参数失败");
+			}else {
+				new Thread(new Runnable() {
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						try {
+							String result = hft.post(toUrl, params, files, "img");
+							KJLoger.log(TAG, result);
+							mHandler.obtainMessage(MSG_REGISTER, result).sendToTarget();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+				}).start();
+			}
+		}catch(Exception e){
+			e.getMessage();
+		}
+	}	
+	/**
+	 * 
+	 */
+	private Handler mHandler = new Handler() {  
+		public void handleMessage (Message msg) {//此方法在ui线程运行  
+			switch(msg.what) {  
+			case MSG_REGISTER:  
+				String result = (String) msg.obj;
+				try {
+					registResult(result);
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;  
+			}  
+		};  
+	};
+
+	/**
+	 * 
+	 * @param result
+	 * @throws JSONException 
+	 */
+	public void registResult(String result) throws JSONException{
+		String resu = result.trim();
+		JSONObject res = new JSONObject(resu);
+		int resultcode = res.getInt("resultcode");
+		if(resultcode==-1){
+			Toast.makeText(getApplicationContext(), "注册失败", Toast.LENGTH_LONG).show();
+		}if(resultcode == -2){
+			Toast.makeText(getApplicationContext(), "企业用户注册成功", Toast.LENGTH_LONG).show();
+			Intent mIntent = new Intent();
+			mIntent.setClass(getApplicationContext(), StartActivity.class);
+			startActivity(mIntent);
+		}else if(resultcode>=0){
+			Toast.makeText(getApplicationContext(), "注册成功", Toast.LENGTH_LONG).show();
+			Intent mIntent = new Intent();
+			mIntent.setClass(getApplicationContext(), StartActivity.class);
+			startActivity(mIntent);
+		}else{
+			Toast.makeText(getApplicationContext(), "注册失败，请联系管理员", Toast.LENGTH_LONG).show();
+		}
+	}
+	/**
+	 *照相机 的那个弹出框 
+	 **/
+	public void initPopupWindowCamera(){
+		View contentView = getLayoutInflater().inflate(R.layout.popcamera, null);
+		TextView takephoto = (TextView) contentView.findViewById(R.id.camera_photo);
+		TextView takeimage = (TextView) contentView.findViewById(R.id.camera_images);
+		TextView takecancel = (TextView) contentView.findViewById(R.id.camera_cancel);
+		takephoto.setOnClickListener(onclicklis);
+		takeimage.setOnClickListener(onclicklis);
+		takecancel.setOnClickListener(onclicklis);
+
+		LinearLayout parent = (LinearLayout) this.findViewById(R.id.parent);//父窗口view  
+
+		popupWindowCamera = new PopupWindow(contentView, parent.getWidth()*4/5, ViewGroup.LayoutParams.WRAP_CONTENT);
+		popupWindowCamera.setFocusable(false);
+		popupWindowCamera.setOutsideTouchable(true);
+
+		WindowManager.LayoutParams lp = getWindow().getAttributes();
+		lp.alpha = 0.5f;
+		getWindow().setAttributes(lp);
+		popupWindowCamera.setOnDismissListener(new OnDismissListener() {
+			@Override
+			public void onDismiss() {
+				WindowManager.LayoutParams lp = getWindow().getAttributes();
+				lp.alpha = 1f;
+				getWindow().setAttributes(lp);
+				addimage.setEnabled(true);
+			}
+		});
+		popupWindowCamera.showAtLocation(parent, Gravity.CENTER, 0, 0);
+	}
+	public OnClickListener onclicklis = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.camera_photo:
+				doTakePhoto();
+				popDissmiss3();
+				break;
+			case R.id.camera_images:
+				Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+				intent.setType(IMAGE_TYPE);
+				startActivityForResult(intent, 1001);
+				popDissmiss3();
+				break;
+			case R.id.camera_cancel:
+				popDissmiss3();
+				break;
+			default:
+				break;
+			}
+		}
+	};
+	/**
+	 * 拍照获取图片
+	 */
+	protected void doTakePhoto() {
+		try {
+			mFileName = System.currentTimeMillis() + ".jpg";
+			Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE, null);
+			intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+			startActivityForResult(intent, CAMERA_WITH_DATA);
+		} catch (Exception e) {
+			Toast.makeText(getApplicationContext(), "未找到系统相机", Toast.LENGTH_LONG).show();
+		}
+	}
+	/*
+	 * 查看图片
+	 * 
+	 * */
+	public void initPopWindowImage(final int position){
+		View contenView = getLayoutInflater().inflate(R.layout.pop_coastal_image, null);
+		ImageView image_state = (ImageView) contenView.findViewById(R.id.image_state);//等待存放的图片
+		Bitmap bm = BitmapFactory.decodeFile(registImage.get(position+1).getImageFolder()); 
+		image_state.setImageBitmap(bm);
+		ImageView image_delete = (ImageView) contenView.findViewById(R.id.image_delete);
+		TextView image_back = (TextView) contenView.findViewById(R.id.image_back);
+		image_back.setText(position+1+"/"+(registImage.size()-1));
+		image_back.setOnClickListener(onImageClick);
+		image_delete.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				registImage.remove(position+1);
+				add_image_adapter.notifyDataSetChanged();
+				popupwindowImage.dismiss();
+			}
+		});
+		LinearLayout parent = (LinearLayout) this.findViewById(R.id.parent);//父窗口view  
+		WindowManager.LayoutParams lp = getWindow().getAttributes();
+		lp.alpha = 0.5f;
+		getWindow().setAttributes(lp);
+
+		popupwindowImage = new PopupWindow(contenView, parent.getWidth(), parent.getHeight());
+		popupwindowImage.setFocusable(false);
+		popupwindowImage.setOutsideTouchable(true);
+
+		popupwindowImage.setOnDismissListener(new OnDismissListener() {
+
+			@Override
+			public void onDismiss() {
+				WindowManager.LayoutParams lp = getWindow().getAttributes();
+				lp.alpha = 1f;
+				getWindow().setAttributes(lp);
+				addimage.setEnabled(true);
+			}
+		});
+
+		popupwindowImage.showAtLocation(parent, Gravity.CENTER, 0, 30);
+	}
+	/*
+	 * popimage  的监听事件
+	 * */
+	public OnClickListener onImageClick = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.image_back:
+				popupwindowImage.dismiss();
+				break;
+			default:
+				break;
+			}
+		}
+	};
+	public void initPopWindowType(){
+		View contentView = getLayoutInflater().inflate(R.layout.pop_coastal_type, null);
+		TextView choose_hangyun = (TextView) contentView.findViewById(R.id.choose_hangyun);
+		TextView choose_gangkou = (TextView) contentView.findViewById(R.id.choose_gangkou);
+		TextView choose_chuandai = (TextView) contentView.findViewById(R.id.choose_chuandai);
+		TextView choose_huodai = (TextView) contentView.findViewById(R.id.choose_huodai);
+		TextView choose_xiuzao = (TextView) contentView.findViewById(R.id.choose_xiuzao);
+		TextView choose_qita = (TextView) contentView.findViewById(R.id.choose_qita);
+
+		choose_hangyun.setOnClickListener(onclicklistener);
+		choose_gangkou.setOnClickListener(onclicklistener);
+		choose_chuandai.setOnClickListener(onclicklistener);
+		choose_huodai.setOnClickListener(onclicklistener);
+		choose_xiuzao.setOnClickListener(onclicklistener);
+		choose_qita.setOnClickListener(onclicklistener);
+
+		LinearLayout parent = (LinearLayout) this.findViewById(R.id.parent);//父窗口view  
+		popupWindowType = new PopupWindow(contentView, parent.getWidth()*4/5, ViewGroup.LayoutParams.WRAP_CONTENT);
+		popupWindowType.setFocusable(false);
+		popupWindowType.setOutsideTouchable(true);
+		WindowManager.LayoutParams lp = getWindow().getAttributes();
+		lp.alpha = 0.5f;
+		getWindow().setAttributes(lp);
+		popupWindowType.setOnDismissListener(new OnDismissListener() {
+			@Override
+			public void onDismiss() {
+				WindowManager.LayoutParams lp = getWindow().getAttributes();
+				lp.alpha = 1f;
+				getWindow().setAttributes(lp);
+				regist_second_type.setEnabled(true);
+			}
+		});
+		popupWindowType.showAtLocation(parent, Gravity.TOP, 0, parent.getHeight()*1/6);
+	}
+
+	public void initPopWindowPrompt(){
+		View contentView = getLayoutInflater().inflate(R.layout.pop_regist_prompt, null);
+		LinearLayout parent = (LinearLayout) this.findViewById(R.id.parent);//父窗口view  
+		popupwindowPrompt = new PopupWindow(contentView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+		popupwindowPrompt.setFocusable(false);
+		popupwindowPrompt.setOutsideTouchable(true);
+		popupwindowPrompt.showAtLocation(parent, Gravity.CENTER, parent.getWidth()*1/4, parent.getHeight()*1/25);
+	}
+
+	public void initPopWindowArea(){
+		View contentView = getLayoutInflater().inflate(R.layout.popup_area, null);//动态加载
+		TextView pop_dis = (TextView) contentView.findViewById(R.id.pop_dis);
+		TextView hangzhou = (TextView) contentView.findViewById(R.id.choose_hangzhou);
+		TextView ningbo = (TextView) contentView.findViewById(R.id.choose_ningbo);
+		TextView shaoxing = (TextView) contentView.findViewById(R.id.choose_shaoxing);
+		TextView huzhou = (TextView) contentView.findViewById(R.id.choose_huzhou);
+		TextView jiaxing = (TextView) contentView.findViewById(R.id.choose_jiaxing);
+		TextView jinhua = (TextView) contentView.findViewById(R.id.choose_jinhua);
+		TextView quzhou = (TextView) contentView.findViewById(R.id.choose_quzhou);
+		TextView taizhou = (TextView) contentView.findViewById(R.id.choose_taizhou);
+		TextView lishui = (TextView) contentView.findViewById(R.id.choose_lishui);
+		TextView zhoushan = (TextView) contentView.findViewById(R.id.choose_zhoushan);
+		hangzhou.setOnClickListener(onclikner);
+		ningbo.setOnClickListener(onclikner);
+		shaoxing.setOnClickListener(onclikner);
+		huzhou.setOnClickListener(onclikner);
+		jiaxing.setOnClickListener(onclikner);
+		jinhua.setOnClickListener(onclikner);
+		quzhou.setOnClickListener(onclikner);
+		taizhou.setOnClickListener(onclikner);
+		lishui.setOnClickListener(onclikner);
+		zhoushan.setOnClickListener(onclikner);
+		pop_dis.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				WindowManager.LayoutParams lp = getWindow().getAttributes();
+				lp.alpha = 1f;
+				getWindow().setAttributes(lp);
+				popupWindowArea.dismiss();
+			}
+		});
+		LinearLayout parent = (LinearLayout) this.findViewById(R.id.parent);//父窗口view  
+		popupWindowArea = new PopupWindow(contentView, parent.getWidth()*4/5, ViewGroup.LayoutParams.WRAP_CONTENT);
+		popupWindowArea.setFocusable(false);
+		popupWindowArea.setOutsideTouchable(true);
+		WindowManager.LayoutParams lp = getWindow().getAttributes();
+		lp.alpha = 0.5f;
+		getWindow().setAttributes(lp);
+		popupWindowArea.setOnDismissListener(new OnDismissListener() {
+			@Override
+			public void onDismiss() {
+				WindowManager.LayoutParams lp = getWindow().getAttributes();
+				lp.alpha = 1f;
+				getWindow().setAttributes(lp);
+				regist_coastal_area.setEnabled(true);
+			}
+		});
+		popupWindowArea.showAtLocation(parent, Gravity.TOP, 0, parent.getHeight()*1/8);
+	}
+	//popArea  的监听事件
+	public OnClickListener onclikner = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.choose_hangzhou:
+				regist_coastal_area.setText("杭州");
+				popDissmiss();
+				break;
+			case R.id.choose_ningbo:
+				regist_coastal_area.setText("宁波");
+				popDissmiss();
+				break;
+			case R.id.choose_shaoxing:
+				regist_coastal_area.setText("绍兴");
+				popDissmiss();
+				break;
+			case R.id.choose_huzhou:
+				regist_coastal_area.setText("湖州");
+				popDissmiss();
+				break;
+			case R.id.choose_jiaxing:
+				regist_coastal_area.setText("嘉兴");
+				popDissmiss();
+				break;
+			case R.id.choose_jinhua:
+				regist_coastal_area.setText("金华");
+				popDissmiss();
+				break;
+			case R.id.choose_quzhou:
+				regist_coastal_area.setText("衢州");
+				popDissmiss();
+				break;
+			case R.id.choose_taizhou:
+				regist_coastal_area.setText("台州");
+				popDissmiss();
+				break;
+			case R.id.choose_lishui:
+				regist_coastal_area.setText("丽水");
+				popDissmiss();
+				break;
+			case R.id.choose_zhoushan:
+				regist_coastal_area.setText("舟山");
+				popDissmiss();
+				break;
+			default:
+				popDissmiss();
+				break;
+			}
+		}
+	};
+	//popType  的监听事件
+	public OnClickListener onclicklistener = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.choose_hangyun:
+				regist_second_type.setText("航运企业");
+				popDissmiss2();
+				break;
+			case R.id.choose_gangkou:
+				regist_second_type.setText("港口企业");
+				popDissmiss2();
+				break;
+			case R.id.choose_chuandai:
+				regist_second_type.setText("船代");
+				popDissmiss2();
+				break;
+			case R.id.choose_huodai:
+				regist_second_type.setText("货代");
+				popDissmiss2();
+				break;
+			case R.id.choose_xiuzao:
+				regist_second_type.setText("船舶修造企业");
+				popDissmiss2();
+				break;
+			case R.id.choose_qita:
+				regist_second_type.setText("其他");
+				popDissmiss2();
+				break;
+			default:
+				break;
+			}
+		}
+	};
+	/**
+	 * popupWindowArea的dismiss
+	 * */
+	public void popDissmiss(){
+		WindowManager.LayoutParams lp = getWindow().getAttributes();
+		lp.alpha = 1f;
+		getWindow().setAttributes(lp);
+		popupWindowArea.dismiss();
+	}
+	/**
+	 * popupWindowType的dissmiss
+	 * */
+	public void popDissmiss2(){
+		WindowManager.LayoutParams lp = getWindow().getAttributes();
+		lp.alpha = 1f;
+		getWindow().setAttributes(lp);
+		popupWindowType.dismiss();
+	}
+	/**
+	 * popupWindowCamera的dismiss
+	 * */
+	public void popDissmiss3(){
+		WindowManager.LayoutParams lp = getWindow().getAttributes();
+		lp.alpha = 1f;
+		getWindow().setAttributes(lp);
+		popupWindowCamera.dismiss();
+	}
+	/**
+	 * popupwindowImage的dismiss
+	 * */
+	public void popDissmiss4(){
+		WindowManager.LayoutParams lp = getWindow().getAttributes();
+		lp.alpha = 1f;
+		getWindow().setAttributes(lp);
+		popupwindowImage.dismiss();
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent mIntent) {
+		switch (requestCode) {
+		case CAMERA_WITH_DATA:
+			if ( imageUri != null) {
+				//AbLogUtil.d(getActivity(), "裁剪后得到的图片的路径是 = " + path);
+				Bitmap bitmap = getLoacalBitmap(imageUri.getPath()); //从本地取图片
+				if(bitmap==null) 	{
+				}else{
+					Drawable drawble = new BitmapDrawable(bitmap);
+					RegistImage mRegistImage = new RegistImage();
+					mRegistImage.setImageFolder(imageUri.getPath());
+					registImage.add(mRegistImage);
+					add_image_adapter.notifyDataSetChanged();
+					getNewImageUri();
+				}
+			}else{
+				Toast.makeText(getApplicationContext(), "图片获取失败", Toast.LENGTH_LONG).show();
+			}
+			break;
+		default:
+			break;
+		}
+		if (resultCode != RESULT_OK) {        //此处的 RESULT_OK 是系统自定义得一个常量
+			return;
+		}
+		Bitmap bm = null;
+		//外界的程序访问ContentProvider所提供数据 可以通过ContentResolver接口
+		ContentResolver resolver = getContentResolver();
+		//此处的用于判断接收的Activity是不是你想要的那个
+		if (requestCode == 1001) {
+			try {
+				Uri originalUri = mIntent.getData();        //获得图片的uri 
+				bm = MediaStore.Images.Media.getBitmap(resolver, originalUri);        
+				String[] proj = {MediaStore.Images.Media.DATA};
+				//好像是android多媒体数据库的封装接口，具体的看Android文档
+				Cursor cursor = managedQuery(originalUri, proj, null, null, null); 
+				//按我个人理解 这个是获得用户选择的图片的索引值
+				int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+				//将光标移至开头 ，这个很重要，不小心很容易引起越界
+				cursor.moveToFirst();
+				//最后根据索引值获取图片路径
+				String path = cursor.getString(column_index);
+				Bitmap bitmap = getLoacalBitmap(path); //从本地取图片
+				Drawable drawble = new BitmapDrawable(bitmap);
+				RegistImage mRegistImage = new RegistImage();
+				mRegistImage.setImageFolder(path);
+				registImage.add(mRegistImage);
+				add_image_adapter.notifyDataSetChanged();
+				getNewImageUri();
+			}catch(Exception e){
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+	/**
+	 * 加载本地图片
+	 *
+	 */
+	public static Bitmap getLoacalBitmap(String url) {
+		try {
+			FileInputStream fis = new FileInputStream(url);
+			return BitmapFactory.decodeStream(fis);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	public static String getSDCardPath() {
+		String cmd = "cat /proc/mounts";
+		Runtime run = Runtime.getRuntime();// 返回与当前 Java 应用程序相关的运行时对象
+		try {
+			Process p = run.exec(cmd);// 启动另一个进程来执行命令
+			BufferedInputStream in = new BufferedInputStream(p.getInputStream());
+			BufferedReader inBr = new BufferedReader(new InputStreamReader(in));
+
+			String lineStr;
+			while ((lineStr = inBr.readLine()) != null) {
+				// 获得命令执行后在控制台的输出信息
+				if (lineStr.contains("sdcard")
+						&& lineStr.contains(".android_secure")) {
+					String[] strArray = lineStr.split(" ");
+					if (strArray != null && strArray.length >= 5) {
+						String result = strArray[1].replace("/.android_secure",
+								"");
+						return result;
+					}
+				}
+				// 检查命令是否执行失败。
+				if (p.waitFor() != 0 && p.exitValue() == 1) {
+					// p.exitValue()==0表示正常结束，1：非正常结束
+				}
+			}
+			inBr.close();
+			in.close();
+		} catch (Exception e) {
+			return Environment.getExternalStorageDirectory().getPath();
+		}
+		return Environment.getExternalStorageDirectory().getPath();
+	}
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if (popupwindowPrompt != null && popupwindowPrompt.isShowing()) {
+			popupwindowPrompt.dismiss();
+			prompt.setEnabled(true);
+		}
+		if (popupWindowType != null && popupWindowType.isShowing()) {
+			popupWindowType.dismiss();
+			regist_second_type.setEnabled(true);
+		}
+		if (popupWindowArea != null && popupWindowArea.isShowing()) {
+			popupWindowArea.dismiss();
+			regist_coastal_area.setEnabled(true);
+		}
+		if (popupwindowImage != null && popupwindowImage.isShowing()) {
+			popupwindowImage.dismiss();
+			addimage.setEnabled(true);
+		}
+		if (popupWindowCamera != null && popupWindowCamera.isShowing()) {
+			popupWindowCamera.dismiss();
+			addimage.setEnabled(true);
+		}
+		return false;
+	}
+}

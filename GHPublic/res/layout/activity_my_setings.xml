@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:id="@+id/father_mine"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <RelativeLayout
+            android:id="@+id/relative_title_final"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/image_button_back" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/back"
+                android:text="设置"
+                android:textColor="#1766b1"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+    
+    <ProgressBar 
+            android:id="@+id/my_progress"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_height="wrap_content"
+            android:max="100"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <RelativeLayout 
+                android:id="@+id/relative_hiden"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_title_zhanghao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f9f9f9" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="账号"
+                    android:textColor="#999999"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus31"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative_title_zhanghao"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus31"
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="用户名"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text1_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="20dp"
+                    android:text="xuya"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative1"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus1"
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="手机号"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/id_img_01"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+
+                <TextView
+                    android:id="@+id/text2_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@+id/id_img_01"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="20dp"
+                    android:text="15988134637"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative2"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus2"
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="修改密码"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@+id/id_img_02"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="20dp"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/id_img_02"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus32"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative3"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+            
+            
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_fenxiang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_hiden"
+                android:background="#f9f9f9" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="分享"
+                    android:textColor="#999999"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative_fenxiang"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+            
+            
+          <RelativeLayout
+                android:id="@+id/relative15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus3"
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text15"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="二维码"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/id_img_015"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+
+                <TextView
+                    android:id="@+id/text15_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@+id/id_img_15"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="20dp"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            
+            
+            
+            
+            
+
+            <TextView
+                android:id="@+id/forcus4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative15"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative_qita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus4"
+                android:background="#f9f9f9" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="其他"
+                    android:textColor="#999999"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus21"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative_qita"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus21"
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="检查更新"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text5_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/text5"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="20dp"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative5"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus5"
+                android:background="#ffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="关于我们"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text6_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/text6"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingBottom="20dp"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative6"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/exit_login"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@+id/forcus7"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_exit_background"
+                android:text="退出登录" 
+                android:textColor="#ffff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        
+        
+
+    </ScrollView>
+
+</LinearLayout>

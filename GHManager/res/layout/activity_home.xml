@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.hxkg.ghmanager.HomeActivity"
+    android:background="#f5f5f5" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#1766b1">
+        
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="浙江港航移动业务综合管理平台"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"/>
+        <ImageButton 
+            android:id="@+id/user"
+            android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="0"
+        android:layout_gravity="center|center"
+        android:src="@drawable/ic_user"
+        android:background="@null"
+        android:onClick="onViewClick"/>
+        </LinearLayout>
+        
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#155ba0" />
+    
+    <LinearLayout
+       android:layout_width="match_parent"
+        android:layout_height="140dp" 
+        android:orientation="horizontal" 
+        android:background="#1766b1"
+        android:layout_gravity="center">
+        
+        <!-- 执法取证 -->
+        <LinearLayout
+            android:id="@+id/law"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_weight="1"
+         android:layout_gravity="center"
+          android:gravity="center"
+          android:onClick="onViewClick">
+        	 <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_home_take_the_evidence" />
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textSize="16sp"
+       android:textColor="#ffffff"
+        android:text="执法取证"/>           
+        </LinearLayout>
+        <!-- 简易执法 -->
+        <LinearLayout
+            android:id="@+id/simple"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_weight="1"
+         android:layout_gravity="center"
+         android:gravity="center"
+          android:onClick="onViewClick">
+        	 <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_home_enforce_the_law" />
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textSize="16sp"
+       android:textColor="#ffffff"
+        android:text="简易执法"/>           
+        </LinearLayout>
+         <!-- 实时监测 -->
+        <LinearLayout
+          android:id="@+id/supervize"  
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_weight="1"
+         android:layout_gravity="center"
+          android:gravity="center"
+           android:onClick="onViewClick">
+        	 <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_home_checking" />
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:text="实时监测"/>           
+        </LinearLayout>        
+    </LinearLayout>
+    
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="25dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center|center"
+        android:horizontalSpacing="8dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="35dp" >
+    </GridView>
+
+</LinearLayout>

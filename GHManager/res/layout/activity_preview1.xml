@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<!-- 标题栏 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center"
+        android:layout_weight="0">
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"      
+        android:background="@null"
+        android:src="@drawable/ic_selector"
+        android:onClick="onBack"/>
+        <TextView 
+            android:id="@+id/law"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打印预览"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1"/>       
+        </LinearLayout>
+        
+    
+              <com.joanzapata.pdfview.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_weight="1"/>
+
+        
+        
+    <!-- 内容
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+          <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    
+              
+ 
+  
+
+        
+ </LinearLayout> 
+  </ScrollView>-->
+   <Button
+       android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="0" 
+            android:layout_gravity="center"
+            android:text="盖章并打印"
+            android:padding="16dp"
+            android:background="#1766b1"
+            android:textColor="#ffffff"
+            android:onClick="Submit"/>
+</LinearLayout>

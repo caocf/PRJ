@@ -1,0 +1,69 @@
+@CHARSET "utf-8";
+.profession_top{
+	height:40px;
+	width:100%;	
+}
+.profession_addbutton{
+	margin:6px 0 0 10px;
+	float:left;
+}
+.profession_searchbutton{
+	margin:6px 10px 0 0;
+	float:right;
+}
+.profession_search_input{
+	margin-top:6px;
+	height:26px;
+	line-height: 26px;
+	width:212px;
+	float:right;
+	vertical-align: middle;
+	padding-left:5px;
+	border: solid 1px #d8d8d8;
+	border-right: none;
+}
+.Operate{
+	cursor: pointer;
+	color:#027bcc;
+	margin-right:15px;
+}
+.User_S4{
+	margin-top:10px;
+	margin-right:30px;
+	padding:0;
+	height:30px;
+	float:right;
+	
+}
+.profession_table{
+	margin:0;
+	padding:0px;
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+}
+.profession_table th {
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	padding: 0;
+	background-color: #e6e6e6;
+
+}
+
+.profession_table td {
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	line-height: 30px;
+	vertical-align: middle; /* 支持 Opera */
+}

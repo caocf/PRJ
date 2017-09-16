@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_weight="0"
+        android:gravity="center_vertical"
+        android:padding="0.0px" 
+        android:background="@drawable/title_backgrundmenu">
+
+        <TextView
+            android:id="@+id/ivTitleName"
+            style="@style/A1_Font"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="8.0dip"
+            android:singleLine="true"
+            android:text="@string/maintitle" />
+
+        <Button
+            android:id="@+id/ivTitleBtnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="#00000000"
+            android:drawableRight="@drawable/ic_dropdown"
+            android:gravity="center"
+            android:includeFontPadding="false" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/weatherviewcontaner"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_weight="0"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:padding="0.0px" />
+
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/fragment_content"
+        android:background="#999999" />
+
+    <FrameLayout
+        android:id="@+id/fragment_optionbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/line"
+        android:layout_weight="0" >
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/service_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical" >
+     
+    <include 
+        layout="@layout/around_search_topbar" 
+        android:layout_alignParentTop="true" />
+    <!-- 高德修改 -->
+
+    <com.amap.api.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_below="@+id/header_layout" >
+    </com.amap.api.maps.MapView>
+
+    <ImageView
+        android:id="@+id/dingwei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/bottom_menu"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:src="@drawable/ic_selector_dingwei" />
+
+    <LinearLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <CheckedTextView
+            android:id="@+id/upordown"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_selector_around_service"
+            android:paddingBottom="12dp"
+            android:paddingTop="6dp" />
+
+        <GridView
+            android:id="@+id/servicearound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="8dp"
+            android:listSelector="@color/transparent"
+            android:numColumns="4"
+            android:stretchMode="columnWidth" >
+        </GridView>
+    </LinearLayout>
+    
+    <TextView 
+        android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7"
+            android:layout_above="@+id/bottom_menu"/>
+
+</RelativeLayout>

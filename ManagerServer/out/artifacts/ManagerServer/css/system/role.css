@@ -1,0 +1,195 @@
+@CHARSET "UTF-8";
+
+#content {
+	margin: 0;
+	padding: 0;
+	width: 813px;
+	height: 100%;
+	overflow-x:hidden; 
+	overflow-y:auto 
+}
+#show_addDIV{
+	margin: 0;
+	padding: 0;
+	width: 813px;
+	overflow:hidden; 
+}
+#u2 {
+	width: 830px;
+	margin: 0;
+	padding: 0;
+	height: 630px;
+}
+
+#u2_left {
+	float: left;
+	width: 192px;
+	margin: 0;
+	padding: 0;
+	height: 630px;
+	border: none;
+	border-right: solid 1px #c9d9e9;
+}
+
+#u2_left p {
+	width: 192px;
+	margin: 0;
+	padding: 0;
+	height: 35px;
+	line-height: 35px;
+	background: #f5f7fa;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom: solid 1px #c9d9e9;
+}
+
+#u2_right {
+	float: left;
+	width: 636px;
+	margin: 0;
+	padding: 0;
+	/*height: 610px;*/
+	overflow-x:hidden ;
+	
+}
+
+#u2_right_content {
+	width: 636px;
+	margin: 0;
+	padding: 0;
+	/*height: 610px;*/
+	overflow-x:hidden ;
+}
+
+.u2_top {
+	width: 636px;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+overflow: hidden;
+border: none;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.u2_top img {
+	margin: 4px 0 4px 10px;
+	padding: 0;
+	border: none;
+}
+
+#roleListDiv {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	height: 585px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #f6f7fb;
+}
+
+#role_menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+#role_menu li {
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	color: #323944;
+	background-color: #f6f7fb;
+	text-align: center;
+	width: 192px;
+	overflow: hidden;
+}
+
+#role_menu li a {
+	margin: 0;
+	padding: 0;
+	display: block;
+	cursor: pointer;
+	height: 30px;
+	width: 192px;
+	background-color: #f6f7fb;
+}
+
+.nameDiv {
+	margin: 59px 0 0 20px;
+	padding: 0;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+}
+.RoleNameDiv{
+	margin: 15px 0 0 20px;
+	padding: 0;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+}
+#permission_list {
+	width: 99%;
+	margin: 0;
+	padding: 5px;
+}
+
+#permission_list div {
+	float: left;
+}
+
+#permission_list div INPUT {
+	margin: 0 5px 0 0;
+}
+
+.permissionItem {
+	padding: 10px 0 10px 20px;
+	white-space:nowrap;
+	overflow: hidden;
+	margin: 0 5px;
+}
+
+#submit_div {
+	float:left;
+	margin: 10px 0 20px 0;
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	width: 600px
+}
+
+.input_submit {
+	margin: 10px 0 0 20px;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.input_reset {
+	margin: 10px 0 0 10px;
+	padding: 0;
+	vertical-align: middle;
+}
+
+#submit_div hr {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 1px;
+	border: none;
+	border-top: 1px solid #d6d6d6;
+	vertical-align: top;
+}
+
+.choose_All {
+	margin: 10px 10px 10px 25px;
+	padding: 0;
+	vertical-align: middle;
+}
+
+#submit_div LABEL {
+	padding: 10px 0;
+	vertical-align: middle;
+}

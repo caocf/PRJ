@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="#ffff" >
+
+        <TextView
+            android:id="@+id/newslist_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@drawable/image_button_back"
+            android:drawablePadding="16dp"
+            android:text="港航新闻"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/newsfrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:drawableRight="@drawable/ic_dropdown"
+            android:gravity="center"
+            android:text="嘉兴"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/title_backgrundmenu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F4F4F4"
+        android:orientation="horizontal" >
+
+        <com.hztuen.gh.widge.HomeSecondHeaderView
+            android:id="@+id/importantnews"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            isClick="true"
+            title="港航要闻"
+            android:gravity="center" >
+        </com.hztuen.gh.widge.HomeSecondHeaderView>
+
+        <com.hztuen.gh.widge.HomeSecondHeaderView
+            android:id="@+id/vocationstate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            isClick="false"
+            title="行业动态"
+            android:gravity="center" >
+        </com.hztuen.gh.widge.HomeSecondHeaderView>
+
+        <com.hztuen.gh.widge.HomeSecondHeaderView
+            android:id="@+id/mediaforcus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            isClick="false"
+            title="媒体聚焦"
+            android:gravity="center" >
+        </com.hztuen.gh.widge.HomeSecondHeaderView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+    <!-- <com.ab.view.pullview.AbPullToRefreshView -->
+    <!-- xmlns:android="http://schemas.android.com/apk/res/android" -->
+    <!-- android:id="@+id/mPullRefreshView" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:background="@color/gray_white"> -->
+
+
+    <!-- <ListView -->
+    <!-- android:id="@+id/mListView" -->
+    <!-- android:layout_width="fill_parent" -->
+    <!-- android:layout_height="fill_parent" -->
+    <!-- android:cacheColorHint="#00000000" -->
+    <!-- android:divider="@drawable/list_divider" -->
+    <!-- android:dividerHeight="1px" /> -->
+
+
+    <!-- </com.ab.view.pullview.AbPullToRefreshView> -->
+
+<!--     <ListView -->
+<!--         android:id="@+id/newslistview" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="match_parent" > -->
+<!--     </ListView> -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/newslistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#d7d7d7"
+        android:dividerHeight="1px"
+        android:numColumns="1"
+        android:stretchMode="columnWidth"
+        ptr:ptrHeaderTextColor="#9A9691"
+        ptr:ptrMode="both" />
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/schedule_clock_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/schedule_clock_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/schedule_clock_back"
+            android:text="@string/set_clock"
+            android:textColor="#0067ac"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/schedule_clock_spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_spinner"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:prompt="@string/schedule_spinner01" />
+
+    <Spinner
+        android:id="@+id/schedule_clock_spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_spinner"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:prompt="@string/schedule_spinner02" />
+
+    <Button
+        android:id="@+id/schedule_clock_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/imgbt_submit"
+      />
+
+</LinearLayout>

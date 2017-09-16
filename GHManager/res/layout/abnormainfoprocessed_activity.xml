@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+         <ImageButton
+            android:id="@+id/setup_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back"
+            android:onClick="GoBack" >
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="异常报警详情"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>       
+    </LinearLayout>
+    
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#f9f9f9">
+    
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal" >
+    <TextView
+            android:id="@+id/shipname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="20sp" /> 
+       <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/> 
+            <Button
+                android:id="@+id/putshipname"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+		android:layout_marginBottom="8dp"
+        android:gravity="center"    
+        android:text="补录船名"    
+        android:includeFontPadding="false"
+        android:background="@drawable/btn_bg"
+        android:onClick="PutShip"
+        android:visibility="gone"/>     
+    
+     </LinearLayout>  
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="当前检测点:"
+            
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+       
+        <TextView
+            android:id="@+id/gatename"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="17sp" />      
+        
+    </LinearLayout>
+    
+   
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="航行:"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/route"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="17sp" />      
+        
+    </LinearLayout>
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="AIS:"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        <TextView
+             android:id="@+id/AIS"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="17sp" />      
+        
+    </LinearLayout>
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="黑名单船舶:"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        <TextView
+            android:id="@+id/blackship"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="17sp" />      
+        
+    </LinearLayout>
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" 
+        android:onClick="IllegalInfo">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="是否违章"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/illegal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="17sp" />  
+            <TextView
+                android:id="@+id/detail1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="详情"
+            android:textColor="#0067ac" 
+            android:textSize="12sp" 
+            android:visibility="gone"/>
+         <ImageButton
+             android:id="@+id/imdetail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/address_jiantou"
+            android:visibility="gone"/>       
+        
+    </LinearLayout>
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" 
+        android:onClick="CertInfo">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="是否有过期证书"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/cert"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="17sp" /> 
+            <TextView
+                android:id="@+id/detail2"
+                
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="详情"
+            android:textColor="#0067ac" 
+            android:textSize="12sp" 
+           android:visibility="gone"/>
+         <ImageButton
+               android:id="@+id/imdetail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/address_jiantou"
+            android:visibility="gone"/>           
+        
+    </LinearLayout>
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" 
+        android:onClick="ChargeInfo">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="是否欠费"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/arrearage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="17sp" /> 
+            <TextView
+                android:id="@+id/detail3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="详情"
+            android:textColor="#0067ac" 
+            android:textSize="12sp" 
+            android:visibility="gone"/>
+         <ImageButton
+             android:id="@+id/imdetail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/address_jiantou"
+            android:visibility="gone"/>      
+        
+    </LinearLayout>
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="报港"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/report"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:textColor="#333333" 
+            android:textSize="17sp" />      
+        
+    </LinearLayout>
+    
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+     
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="left"
+            android:text="当前状态"
+            android:textColor="#666666" 
+            android:textSize="13sp" />
+     
+      <TextView
+          android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="left"
+            android:textColor="#333333" 
+            android:textSize="20sp" />
+      
+       <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+       
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="left"
+            android:text="备注信息"
+            android:textColor="#666666" 
+            android:textSize="13sp" />
+       
+       <TextView
+          android:id="@+id/remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="left"
+            android:textColor="#333333" 
+            android:textSize="20sp" />
+       
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999999" />
+       
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="left"
+            android:text="图片"
+            android:textColor="#666666" 
+            android:textSize="13sp" />
+      
+       
+       <com.huzhouport.abnormal.ImageGridView
+        android:id="@+id/ab_gridView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:horizontalSpacing="8dp"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" />
+     
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
+

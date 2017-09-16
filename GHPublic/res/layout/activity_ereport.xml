@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<!-- 标题栏 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center"  >
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="16dp"        
+        android:background="@drawable/ic_selector"
+        android:onClick="onBack"/>
+        <TextView 
+            android:id="@+id/law"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电子报告"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1"
+        android:layout_marginLeft="16dp" />
+        
+        
+        </LinearLayout>
+        
+    <!-- 内容-->
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+          <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+    android:focusable="true"
+    android:divider="@drawable/devider"
+  
+    android:showDividers="middle|end" 
+    android:focusableInTouchMode="true">
+     
+       <TextView 
+           android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重船航行报告"
+        android:textColor="#666666"
+        android:textSize="18sp"          
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        android:drawableLeft="@drawable/dzbg_ic_ship_red"
+        android:onClick="onViewClick"/>       
+              
+     <TextView 
+         android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="空船航行报告"
+        android:textColor="#666666"
+        android:textSize="18sp"  
+        android:gravity="center"   
+         android:drawablePadding="10dp"    
+        android:layout_margin="16dp"
+        android:drawableLeft="@drawable/dzbg_ic_ship_blue"
+        android:onClick="onViewClick"/> 
+        <TextView 
+            android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电子报告记录"
+        android:gravity="center"
+        android:textColor="#666666"
+         android:drawablePadding="10dp"
+        android:textSize="18sp"         
+       android:layout_margin="16dp"
+        android:drawableLeft="@drawable/dzbg_list"
+        android:onClick="onViewClick"/>      
+        
+ </LinearLayout> 
+  </ScrollView>
+</LinearLayout>

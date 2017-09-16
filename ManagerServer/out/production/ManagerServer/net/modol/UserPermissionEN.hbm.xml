@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.UserPermissionEN" table="user_permission" schema="zjmanager">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="permissionname">
+            <column name="permissionname" sql-type="varchar(225)" length="225" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(225)" length="225" not-null="true"/>
+        </property>
+        <property name="group"  >
+            <column name="groupid"  not-null="false"/>
+        </property>
+        <!--<set name="userRoleENs" table="user_role_permit" cascade="all" inverse="false" lazy="false">
+            <key column="perid"></key>
+            <many-to-many class="net.modol.UserRoleEN" column="roleid"/>
+        </set>-->
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"  >
+
+    <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <RelativeLayout
+            android:id="@+id/relative_title_final"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_selector"
+                android:onClick="onBack" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/back"
+                android:text="船舶基本信息"
+                android:textColor="#1766b1"
+                android:textSize="18sp" />
+        </RelativeLayout>       
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+    <ScrollView
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="vertical">
+            
+            <RelativeLayout
+                android:id="@+id/relative0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="中文船名"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text0_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />               
+            </RelativeLayout>
+            
+             <TextView
+                android:id="@+id/forcus0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="船舶登记号"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text1_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />               
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7"/>
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff" >
+
+               <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="船检登记号"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text2_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text=""
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7"/>
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="船籍港"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text3_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text=""
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7"/>
+
+            <RelativeLayout
+                android:id="@+id/relative4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"             
+                android:background="#ffff" >
+
+                 <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="船舶类型"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text4_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text=""
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+            
+
+            <TextView
+                android:id="@+id/forcus5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />
+
+            <RelativeLayout
+                android:id="@+id/relative6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+               <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="所有人"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text6_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text=""
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />
+
+            <RelativeLayout
+                android:id="@+id/relative8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="经营人"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text8_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text=""
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />           
+            
+             <RelativeLayout
+                android:id="@+id/relative9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="经营人联系电话"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text9_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text=""
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+            
+             <TextView
+                android:id="@+id/forcus9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7"/>
+             
+             
+              <RelativeLayout
+                android:id="@+id/relative10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"               
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="参考载货量"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text10_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text=""
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+            
+             <TextView
+                android:id="@+id/forcus10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7"/>
+
+           
+              <RelativeLayout
+                android:id="@+id/relative11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"               
+                android:background="#ffff" >
+
+                <TextView
+                    android:id="@+id/text11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="船舶总长"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text11_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+            
+             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />
+             <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"               
+                android:background="#ffff" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="总吨位"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d7d7d7" />
+             <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"               
+                android:background="#ffff" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="主机总功率"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/gl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#666666"
+                   
+                    android:textSize="16sp" />
+                
+
+            </RelativeLayout>
+             
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:paddingLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:paddingRight="16dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:drawableTop="@drawable/icon_no_message"
+            android:drawablePadding="5dp"
+            android:text="暂无数据"/>
+    
+
+</LinearLayout>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="#ffff" >
+
+        <RelativeLayout
+            android:id="@+id/relative_title_final"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/image_button_back" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/back"
+                android:text="船舶查询"
+                android:textColor="#1766b1"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/relative_title"
+        android:src="@drawable/title_backgrundmenu" />
+
+    <TextView
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+  
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"  
+   				android:focusableInTouchMode="true"
+                android:background="#ffff" >
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/ic_search" />
+
+                <EditText
+                    android:id="@+id/text1_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_toRightOf="@+id/img_search"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入船名号"
+                    android:imeOptions="actionSearch"
+                    android:paddingBottom="14dp"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_clear"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/ic_close" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative1"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+            
+           
+            <ListView 
+                android:id="@+id/list_ship_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#d7d7d7"
+                android:layout_below="@+id/forcus1"
+                android:dividerHeight="1px">
+                
+            </ListView>
+            
+             
+            <ListView 
+                android:id="@+id/list_ship_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#d7d7d7"
+                android:visibility="gone"
+                android:layout_below="@+id/forcus1"
+                android:dividerHeight="1px">
+                
+            </ListView>
+            
+            
+            
+            
+            <RelativeLayout 
+                android:id="@+id/relative_detail_info"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/forcus1"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/forcus26"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+               
+                
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus26"
+                android:background="#ffff" >
+
+                <ImageView
+                    android:id="@+id/img_base_info"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_ship" />
+
+                <TextView
+                    android:id="@+id/text2_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/img_base_info"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp"
+                    android:text="基本信息"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative2"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus2"
+                android:background="#ffff" >
+
+                <ImageView
+                    android:id="@+id/img_ship_zhengshu"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_ship_certificate" />
+
+                <TextView
+                    android:id="@+id/text3_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/img_ship_zhengshu"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp"
+                    android:text="船舶证书"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/img_ss"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+
+                <ImageView
+                    android:id="@+id/img_zhengshu"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_toLeftOf="@+id/img_ss"
+                    android:background="@drawable/ic_wenti" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative3"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus3"
+                android:background="#ffff" >
+
+                <ImageView
+                    android:id="@+id/img_weizhang_info"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_violation" />
+
+                <TextView
+                    android:id="@+id/text4_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/img_weizhang_info"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp"
+                    android:text="违章信息"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/img_sss"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+                
+                <ImageView
+                    android:id="@+id/img_weizhang"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_toLeftOf="@+id/img_sss"
+                    android:background="@drawable/ic_wenti" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative4"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus4"
+                android:background="#ffff" >
+
+                <ImageView
+                    android:id="@+id/img_koufen"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_goodpoints" />
+
+                <TextView
+                    android:id="@+id/text5_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/img_koufen"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp"
+                    android:text="诚信扣分"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative5"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus5"
+                android:background="#ffff"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <ImageView
+                    android:id="@+id/img_baogong_info"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_harbor_reporinfo" />
+
+                <TextView
+                    android:id="@+id/text6_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/img_baogong_info"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp"
+                    android:text="报港信息"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative6"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <RelativeLayout
+                android:id="@+id/relative8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forcus7"
+                android:background="#ffff" >
+
+                <ImageView
+                    android:id="@+id/img_shenbao_info"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_degoods" />
+
+                <TextView
+                    android:id="@+id/text8_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@+id/img_shenbao_info"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="16dp"
+                    android:text="危险品船舶进港预申报信息"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forcus8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relative8"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+            </RelativeLayout>
+        </RelativeLayout>
+   
+
+</LinearLayout>

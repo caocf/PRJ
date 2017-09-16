@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="执勤站点"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        
+        <LinearLayout  
+        android:layout_width="fill_parent"  
+        android:layout_height="match_parent"  
+        android:layout_gravity="center"
+        android:gravity="right|center" >  
+  		
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="请选择站点"
+            android:textColor="#666666" 
+            android:textSize="17sp" 
+            android:onClick="ChoosePot"
+            android:id="@+id/tx_pot" />
+         <ImageButton
+            android:id="@+id/imb_choosepot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/address_jiantou"
+            android:onClick="ChoosePot">
+        </ImageButton>
+         
+    </LinearLayout> 
+        
+        </LinearLayout>
+        
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dedede" />
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f9f9"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="异常情况"
+            android:textColor="#666666" 
+            android:textSize="17sp" />
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dedede" />
+        <ListView
+        android:id="@+id/lv_abnormals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+       
+        
+        </LinearLayout>
+
+</LinearLayout>

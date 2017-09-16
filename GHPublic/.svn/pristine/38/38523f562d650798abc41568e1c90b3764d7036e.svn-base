@@ -1,0 +1,384 @@
+package com.hztuen.gh.activity.Adapter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.kymjs.kjframe.KJHttp;
+import org.kymjs.kjframe.http.HttpCallBack;
+import org.kymjs.kjframe.http.HttpParams;
+import org.kymjs.kjframe.utils.KJLoger;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.PaintDrawable;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.View.OnClickListener;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.PopupWindow.OnDismissListener;
+
+import com.gh.modol.DuckDangerRecordModel;
+import com.gh.modol.RecordLetIn;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.DangerDuckRecordDetailActivity;
+import com.hztuen.gh.activity.DangersLetInActivity;
+import com.hztuen.gh.activity.DuckDangersActivity;
+import com.hztuen.gh.activity.Adapter.RecordLetInAdapter.ViewHolder;
+import com.hztuen.gh.contact.contants;
+import com.hztuen.lvyou.utils.SystemStatic;
+import com.hztuen.lvyou.utils.Util;
+
+public class DuckRecordAdapter extends BaseAdapter{
+	
+	private Context context;
+	private List<DuckDangerRecordModel> recordletinlist;
+	
+	public PopupWindow popupWindowArea;
+	private View contentView;
+
+	public DuckRecordAdapter(Context context, List<DuckDangerRecordModel> recordletinlist) {
+		this.context = context;
+		this.recordletinlist = recordletinlist;
+	}
+
+	@Override
+	public int getCount() {
+
+		return recordletinlist.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return recordletinlist.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(final int position, View convertView, ViewGroup parent) {
+		final ViewHolder holder;
+
+		holder = new ViewHolder();
+		convertView = LinearLayout.inflate(context,
+				R.layout.activity_danger_duck_record_item, null);
+		holder.tv_ship_name = (TextView) convertView.findViewById(R.id.text2);
+		holder.tv_start = (TextView) convertView.findViewById(R.id.text3);
+		holder.tv_target = (TextView) convertView.findViewById(R.id.text3_context);
+		
+		holder.relative_two_choose=(RelativeLayout)convertView.findViewById(R.id.relative_two_choose);
+		holder.tv_line_bottom=(TextView)convertView.findViewById(R.id.tv_line_bottom);
+
+		holder.tv_goods = (TextView) convertView.findViewById(R.id.text2_context);
+	//	holder.tv_goodstype = (TextView) convertView.findViewById(R.id.goods_weight);
+		holder.tv_goodsweight = (TextView) convertView.findViewById(R.id.goods_weight);
+		holder.tv_portime = (TextView) convertView.findViewById(R.id.text4);
+		holder.tv_status = (TextView) convertView.findViewById(R.id.text_state);
+		
+		holder.tv_number = (TextView) convertView.findViewById(R.id.text1_context);
+		
+		holder.tv_tuin=(TextView)convertView.findViewById(R.id.danwei);
+		
+        holder.btn_change=(Button)convertView.findViewById(R.id.btn_revise);
+        holder.btn_cancel=(Button)convertView.findViewById(R.id.btn_cancel);
+        
+        holder.relative_detail=(RelativeLayout)convertView.findViewById(R.id.relative_detail);
+        
+		final DuckDangerRecordModel model = recordletinlist.get(position);
+
+		
+		holder.tv_ship_name.setText(model.getship());
+		holder.tv_start.setText(model.getstartport());
+		holder.tv_target.setText(model.gettargetport());
+		holder.tv_goods.setText(model.getgoods());
+		holder.tv_goodsweight.setText(model.getgoodsweight());
+		holder.tv_portime.setText(model.getportime());
+		
+		
+		
+		if("0".equals(model.getstatus()))
+		{
+			holder.tv_status.setText("待审批");
+		}else if("1".equals(model.getstatus()))
+		{
+			holder.tv_status.setText("不批准");
+			holder.tv_status.setTextColor(Color.RED);
+		}else if("2".equals(model.getstatus()))
+		{
+			holder.tv_status.setText("批准");
+			holder.tv_status.setTextColor(Color.GREEN);
+			holder.relative_two_choose.setVisibility(View.GONE);
+			holder.tv_line_bottom.setVisibility(View.GONE);
+		}else{
+			holder.tv_status.setText(model.getstatus());
+		}
+		
+		
+	//	holder.tv_status.setText(model.getstatus());
+		
+		holder.tv_number.setText(model.getnumber());
+		holder.tv_tuin.setText(model.getunit());
+		
+		
+		
+		//点击修改按钮
+		 holder.btn_change.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Intent intent_change=new Intent();
+					intent_change.setClass(context, DuckDangersActivity.class);
+					intent_change.putExtra("panduan", "修改");
+					
+					intent_change.putExtra("id", model.getid());
+					
+					intent_change.putExtra("ship", model.getship());
+					intent_change.putExtra("startport", model.getstartport());
+					intent_change.putExtra("goods", model.getgoods());
+					intent_change.putExtra("targetport", model.gettargetport());
+					intent_change.putExtra("goodsweight", model.getgoodsweight());
+					
+					intent_change.putExtra("goodstype", model.getgoodstype());
+					
+					intent_change.putExtra("portime", model.getportime());
+					intent_change.putExtra("status", model.getstatus());
+					
+					intent_change.putExtra("endtime", model.getendtime());
+					
+					intent_change.putExtra("unit", model.getunit());
+					
+					
+					
+					
+					intent_change.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					
+					context.startActivity(intent_change);
+					
+				}
+			});
+		 //点击撤销按钮
+		 holder.btn_cancel.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				PopDelete(model.getid(),position);
+				//CannelRecord(model.getid(),position);
+			}
+		});
+		 //点击按钮以上部分进入详情界面
+		 holder.relative_detail.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent();
+				intent.setClass(context, DangerDuckRecordDetailActivity.class);
+				
+				intent.putExtra("ship", model.getship());
+				intent.putExtra("startport", model.getstartport());
+				intent.putExtra("goods", model.getgoods());
+				intent.putExtra("targetport", model.gettargetport());
+				intent.putExtra("goodsweight", model.getgoodsweight());
+				
+				intent.putExtra("goodstype", model.getgoodstype());
+				
+				intent.putExtra("portime", model.getportime());
+				intent.putExtra("status", model.getstatus());
+				
+				intent.putExtra("endtime", model.getendtime());
+				
+				intent.putExtra("unit", model.getunit());
+				
+				
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				context.startActivity(intent);
+				
+			}
+		});
+
+		return convertView;
+	}
+
+	class ViewHolder {
+
+//		   "id": 2,
+//	       "ship": "浙湖州货005",
+//	       "startport": "杭州",
+//	       "targetport": "嘉兴",
+//	       "goods": "油料",
+//	       "goodstype": "危化品",
+//	       "goodsweight": "20",
+//	       "portime": "0114-01-23 00:00:00",
+//	       "status": "不批准"
+
+		TextView tv_ship_name;
+		TextView tv_start;
+		TextView tv_target;
+		TextView tv_goods;
+
+		TextView tv_goodstype;
+		TextView tv_goodsweight;
+		TextView tv_portime;
+		
+		TextView tv_status;
+
+
+		TextView tv_number;
+		
+		TextView tv_endtime;
+		
+		TextView tv_tuin;
+		
+		
+		Button btn_change;
+		Button btn_cancel;
+		
+		RelativeLayout relative_detail;
+		RelativeLayout relative_two_choose;
+		
+		TextView tv_line_bottom;
+
+	}
+	
+	
+	
+	//撤销作业记录
+		private void CannelRecord(String ID,final int position) {
+
+			// TODO Auto-generated method stub
+
+
+			//访问网络
+
+			KJHttp kjh = new KJHttp();
+			List<String> aa = new ArrayList<String>();
+			aa.add("ID="+ID);
+			
+			HttpParams params = null;
+			try {
+				params = Util.prepareKJparams(aa);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			//访问地址
+			String toUrl = contants.pullbackwd;
+			if(params == null){
+				//提示参数制造失败
+				Util.getTip(context, "构造参数失败");
+			}else if(!toUrl.equals("")){
+				kjh.post(toUrl, params,false,new HttpCallBack() {
+					@Override
+					public void onSuccess(Map<String, String> headers, byte[] t) {
+						super.onSuccess(headers, t);
+						// 获取cookie
+						KJLoger.debug("===" + headers.get("Set-Cookie"));
+					
+						String result = new String(t).trim();
+						try {
+							JSONObject resultJO = new JSONObject(result);
+							
+							JSONObject  res = new JSONObject(result);
+							String resultcode = res.getString("resultcode");
+							if(resultcode.equals("1")){
+								Toast.makeText(context, "撤销成功", Toast.LENGTH_SHORT).show();
+								
+								recordletinlist.remove(position);
+								notifyDataSetChanged();
+							}else 
+							{
+								Toast.makeText(context, "撤销失败", Toast.LENGTH_SHORT).show();
+							}
+							
+																		
+						} catch (Exception e1) {
+							e1.printStackTrace();
+						}
+						
+					}
+
+					@Override
+					public void onFailure(int errorNo, String strMsg) {
+						//关闭进度条
+					//	Log.d(TAG, strMsg);
+						//					Util.getTip(cxt, errorNo+"");
+						//						mSVProgressHUD.showErrorWithStatus("验证过程出现问题");
+						super.onFailure(errorNo, strMsg);
+					}
+				});
+			}
+		}
+		
+		
+		
+		
+		private void PopDelete(final String ID,final int position)
+		{
+			contentView = ((Activity) context).getLayoutInflater().inflate(R.layout.pop_delete_my_send_record, null);
+			
+			TextView tv_title=(TextView)contentView.findViewById(R.id.textView2);
+			Button btn_confirm=(Button)contentView.findViewById(R.id.btn_confirm);
+			Button btn_cancel=(Button)contentView.findViewById(R.id.btn_cancel);
+			TextView tv_content=(TextView)contentView.findViewById(R.id.send_goods_msg);
+			
+			tv_content.setText("您确定要撤销这条作业吗？");
+			tv_title.setText("撤销作业");
+			btn_cancel.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					popupWindowArea.dismiss();
+					
+				}
+			});
+			btn_confirm.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					CannelRecord(ID,position);
+					popupWindowArea.dismiss();
+					
+				}
+			});
+
+				LinearLayout parent6 = (LinearLayout) ((Activity) context).findViewById(R.id.father_duck_dangers);//父窗口view  
+				popupWindowArea = new PopupWindow(contentView, parent6.getWidth()*4/5, ViewGroup.LayoutParams.WRAP_CONTENT);
+				popupWindowArea.setFocusable(true);
+				popupWindowArea.setOutsideTouchable(true);
+				popupWindowArea.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+				popupWindowArea.setBackgroundDrawable(new PaintDrawable());
+				WindowManager.LayoutParams lp6 =((Activity) context). getWindow().getAttributes();
+				lp6.alpha = 0.5f;
+				((Activity) context).getWindow().setAttributes(lp6);
+				
+				popupWindowArea.setOnDismissListener(new OnDismissListener() {
+
+					@Override
+					public void onDismiss() {
+						WindowManager.LayoutParams lp =((Activity) context). getWindow().getAttributes();
+						lp.alpha = 1f;
+						((Activity) context).getWindow().setAttributes(lp);
+					}
+				});
+				
+				popupWindowArea.showAtLocation(parent6, Gravity.CENTER, 0,0);
+		}
+
+}

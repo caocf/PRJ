@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <SurfaceView
+        android:id="@+id/recoder_surfaceView1"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dp" />
+
+    <Button
+        android:id="@+id/recoder_btnRecoder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/recoder_surfaceView1"
+        android:text="@string/Recoder" />
+
+    <Button
+        android:id="@+id/recoder_btnRecoderFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recoder_btnRecoder"
+        android:layout_toRightOf="@+id/recoder_surfaceView1"
+        android:text="@string/finish" />
+
+    <Button
+        android:id="@+id/recoder_btnRecoderReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recoder_btnRecoderFinish"
+        android:layout_toRightOf="@+id/recoder_surfaceView1"
+        android:text="@string/reset" />
+
+    <TextView
+        android:id="@+id/recoder_listText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/recoder_btnRecoderReset"
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@+id/recoder_surfaceView1" >
+    </TextView>
+
+</RelativeLayout>

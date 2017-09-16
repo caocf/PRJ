@@ -1,0 +1,180 @@
+@CHARSET "UTF-8";
+
+#calendar {
+	margin: 0 5px;
+	paddign: 0;
+	text-align: center;
+	width: 820px;
+	text-align: center;
+}
+
+#calendar table {
+	text-align: center;
+	width: 820px;
+	border-bottom: none;
+	border-left: none;
+}
+
+#calendar table th {
+	text-align: left;
+	padding: 10px;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	color: #999999;
+	font-size: 12px;
+	font-family: Verdana, sans-serif;
+	font-weight: normal;
+	text-align: center;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #cccccc;
+	border-left: 1px solid #cccccc;
+	padding: 2px 0px 1px 0px;
+	margin: 0px;
+	float: left;
+}
+
+#calendar table td {
+	cursor:pointer;
+	width: 116px;
+	height: 50px;
+	font-size: 12px;
+	font-family: arial;
+	color: #323944 ;text-align :   center;
+	background-color: #f5f7fa;
+	border-bottom: 1px solid #dce8f2;
+	border-left: 1px solid #dce8f2;
+	padding: 0;
+	margin: 0px;
+	font-family: arial;
+}
+#calendar td.Today {
+	color: #fff;
+	font-weight: bold;
+	background-color: #3f9cd7;
+}
+
+#calendar td.head {
+	width: auto;
+	color: #323944;
+	text-align: center;
+	background-color: #fff;
+	font-family: Tahoma, sans-serif;
+	border: none;
+	padding: 0;
+	font-size: 20px;
+	height: 51px;
+	line-height: 51px;
+	vertical-align: middle;
+}
+
+#calendar td.head img {
+	border: none;
+	vertical-align: middle;
+}
+
+#calendar table a.arrow {
+	color: #666666;
+	font-family: webdings;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+#calendar table a:hover.arrow {
+	color: #0000FF;
+}
+
+#calendar .ww,#calendar .we {
+	color: #323944;
+	height: 41px;
+	font-weight: bold;
+	background-color: #dce8f2;
+	border: none;
+}
+
+#calendar span.weekend,#calendar .we {
+	color: #323944;
+	height: 41px;
+	border: none;
+	font-weight: bold;
+	background-color: #dce8f2;
+	font-weight: bold;
+}
+
+/*end*/
+#showEvent {
+	margin: 0 5px;
+	paddign: 0;
+	width: 820px;
+	height: 100%;
+	overflow-y: auto;
+	OVERFLOW-x: hidden;
+}
+
+#EventList {
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+}
+
+#EventList th {
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	padding: 0;
+	background-color: #e6e6e6;
+
+}
+
+#EventList td {
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	line-height: 30px;
+	vertical-align: middle; /* 支持 Opera */
+}
+
+#middleLine {
+	margin: 0 5px;
+	paddign: 0;
+	width: 820px;
+	height: 53px;
+	line-height: 53px;
+	vertical-align: middle;
+}
+
+#middleLine img {
+	float: right;
+	margin: 12px 10px;
+	padding: 0;
+	vertical-align: middle;
+}
+
+#select_day {
+	float: left;
+	margin: 0 0 0 10px;
+	padding: 0;
+	font-size: 40px;
+	font-family: arial;
+	color: #3f9cd7;
+}
+
+#select_time {
+	float: left;
+	margin: 0 0 0 10px;
+	padding: 10px 0 0 0;
+	font-size: 14px;
+	font-family: arial;
+	color: #323944;
+	height: 41px;
+	display: block;
+}

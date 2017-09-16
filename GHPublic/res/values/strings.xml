@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">浙江港航</string>
+    <string name="maintitle">浙江港航公众信息服务平台</string>
+    
+    <string name="login_checkbox1">记住密码</string>
+    <string name="nopsw">忘记密码?</string>
+    <string name="register">立即注册</string>
+    
+    <!-- 登录 -->
+    <string name="login_use">请输入用户名</string>
+    <string name="login_pwd">请输入密码</string>
+    
+    <!-- 颜色 -->
+    <color name="logo_edit">#9cabbf</color>
+    
+    <string name="ic_user">用户</string>
+    <string name="tv_user_register">用户注册</string>
+        
+    <string name="usertype">选择类型</string>
+    <string name="radiobutton1">内地</string>
+    <string name="radiobutton2">沿海</string>
+    
+     <string name="viewpager_indicator">%1$d/%2$d</string>
+    
+	
+     <string name="can_not_find_version_name">获取版本号失败</string>
+    <drawable name="btn_normal">#1766b1</drawable>
+    <drawable name="btn_pressed">#185a9b</drawable>
+    
+    
+    
+    <drawable name="btn_exit_background_normal">#1766b1</drawable>
+    <drawable name="btn_exit_background_press">#da3f31</drawable>
+    
+    
+     <drawable name="btn_exit_text_normal">#1766b1</drawable>
+    <drawable name="btn_exit_text_press">#FFFFFF</drawable>
+    
+    
+    
+    
+    <drawable name="list_normal">#ffff</drawable>
+    <drawable name="list_pressed">#f9f9f9</drawable>
+    
+    <drawable name="sendsms_normal">#50be67</drawable>
+    <drawable name="sendsms_pressed">#44a258</drawable>
+    
+    <drawable name="regist_tab_a">#f9f9f9</drawable>
+    <drawable name="regist_tab_b">#1766b1</drawable>
+    
+	<drawable name="sendmenssage_agree">#d7d7d7</drawable>
+	
+	<drawable name="huise">#4A4A48</drawable>
+	
+	<drawable name="blue">#003771</drawable>
+</resources>

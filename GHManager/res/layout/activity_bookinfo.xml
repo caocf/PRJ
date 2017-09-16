@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#f5f5f5">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/contacts_head_bg"> 
+        
+        <TextView 
+            android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="16dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="left"
+        android:layout_marginTop="16dp"
+        android:text="名字"
+            android:textSize="18sp"  
+        android:drawableLeft="@drawable/ic_back_withe"
+         android:onClick="onClick"
+         android:drawablePadding="10dp"  />     
+          <TextView 
+            android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+            android:textSize="18sp"  
+            android:text="名字"
+        android:drawableTop="@drawable/address_head" 
+         android:drawablePadding="10dp"  />     
+        </LinearLayout> 
+    
+    
+  
+  <TextView
+        
+        android:layout_width="match_parent"
+    android:layout_height="1dp" 
+    android:background="#dcdcdc"/>
+  <LinearLayout 
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center|left"  >
+    <TextView 
+        android:layout_width="90dp"
+    android:layout_height="wrap_content" 
+    android:layout_margin="16dp" 
+     android:text="部门"
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+     <TextView
+        android:id="@+id/dep"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"  
+    android:layout_weight="1"
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+           
+     
+    </LinearLayout>
+    <TextView
+        
+        android:layout_width="match_parent"
+    android:layout_height="1dp" 
+    android:background="#dcdcdc"/>
+  <LinearLayout 
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center|left"  >
+    <TextView 
+        android:layout_width="90dp"
+    android:layout_height="wrap_content" 
+    android:layout_margin="16dp" 
+     android:text="职位"
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+     <TextView
+        android:id="@+id/duty"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"  
+    
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+    
+    </LinearLayout>
+      
+     <TextView
+        
+        android:layout_width="match_parent"
+    android:layout_height="1dp" 
+    android:background="#dcdcdc"/>
+  <LinearLayout 
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center|left"  >
+    <TextView 
+         android:layout_width="90dp"
+    android:layout_height="wrap_content"  
+    android:layout_margin="16dp" 
+     android:text="手机"
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+     <TextView
+        android:id="@+id/tel"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"  
+    android:layout_weight="1"
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+    <ImageView 
+        android:id="@+id/mtel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/ic_phone2"
+        android:onClick="onPhone" />
+    </LinearLayout>
+     <TextView
+        
+        android:layout_width="match_parent"
+    android:layout_height="1dp" 
+    android:background="#dcdcdc"/>
+  <LinearLayout 
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center|left"  >
+    <TextView 
+        android:layout_width="90dp"
+    android:layout_height="wrap_content" 
+    android:layout_margin="16dp" 
+     android:text="虚拟短号"
+    android:textSize="18sp"
+    android:textColor="#333333"/>
+    
+     <TextView
+        android:id="@+id/tel1"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"  
+    android:layout_weight="1"
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+    <ImageView 
+        android:id="@+id/mtel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/ic_phone2" 
+        android:onClick="onPhone"
+        android:visibility="gone"/> 
+    </LinearLayout>
+     <TextView
+        
+        android:layout_width="match_parent"
+    android:layout_height="1dp" 
+    android:background="#dcdcdc"/>
+  <LinearLayout 
+      android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center|left"  >
+    <TextView 
+        android:layout_width="90dp"
+    android:layout_height="wrap_content" 
+    android:layout_margin="16dp" 
+     android:text="办公电话"
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+     <TextView
+        android:id="@+id/officetel"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content"  
+    android:layout_weight="1"
+    android:textSize="18sp"
+    android:textColor="#333333"/> 
+    <ImageView 
+        android:id="@+id/mofficetel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/ic_phone2" 
+        android:onClick="onPhone"
+        android:visibility="gone"/> 
+    </LinearLayout>
+
+</LinearLayout>

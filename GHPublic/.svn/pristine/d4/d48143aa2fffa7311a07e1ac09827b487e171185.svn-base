@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" >
+
+         <TextView
+             android:id="@+id/tv_title"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="16dp"
+             android:layout_marginTop="16dp"
+             android:text="杭州港到嘉兴港"
+             android:textColor="#666666"
+             android:textSize="16sp" />
+         <TextView
+             android:id="@+id/tv_title_content"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="6dp"
+             android:layout_toRightOf="@+id/tv_title"
+             android:layout_marginTop="16dp"
+             android:text="沙子6000吨"
+             android:textColor="#666666"
+             android:textSize="16sp" />
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="12dp" >
+
+         <TextView
+             android:id="@+id/tv_ship_type"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:text="杂间货——散装"
+             android:textColor="#999999"
+             android:textSize="14sp" />
+
+         
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="12dp" >
+
+         <TextView
+             android:id="@+id/tv_goods_money"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="15dp"
+             android:paddingBottom="14dp"
+             android:text="5000元"
+             android:textColor="#ff2323"
+             android:textSize="16sp" />
+
+         <TextView
+             android:id="@+id/tv_date"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="16dp"
+             android:text="15.03.02"
+             android:textColor="#999999"
+             android:textSize="12sp" />
+     </RelativeLayout>
+
+</LinearLayout>

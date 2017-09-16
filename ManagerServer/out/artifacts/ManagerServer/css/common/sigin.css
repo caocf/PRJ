@@ -1,0 +1,183 @@
+@CHARSET "UTF-8";
+
+.listTable td {
+	font-size: 12px;
+	font-family: SimSun； letter-spacing :         2px;
+	margin: 0;
+	padding-bottom: 0;
+}
+
+.listTable td,.listTable th {
+	text-align: left;
+	padding-left: 18px;
+}
+
+.listTable1 td {
+	font-size: 12px;
+	font-family: SimSun； letter-spacing :         2px;
+	margin: 0;
+	padding-bottom: 0;
+}
+
+.listTable1 td,.listTable1 th {
+	text-align: left;
+	padding-left: 18px;
+}
+
+#NoDataTitle {
+	display: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	border-bottom: 1px solid #cccccc;
+}
+
+#layer3 {
+	margin: 0;
+	padding: 0;
+	width: 827px;
+	height: 580px;
+	overflow: hidden;
+}
+
+#layer_top {
+	margin: 0;
+	padding: 0 0px 0 0px;
+	width: 832px;
+	height: 40px;
+	line-height: 44px;
+	vertical-align: middle;
+	overflow: hidden;
+	background-color: rgb(237, 248, 249);
+}
+
+#layer_top div {
+	margin-left: 10px;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+#layer4 {
+	margin: 0;
+	padding: 0 0px 0 0px;
+	width: 825px;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+#layer4_left {
+	float: left;
+	font-size: 12px;
+	margin: 0 0 0 10px;
+	padding: 0;
+	width: 400px;
+	height: 44px;
+	border: 0px solid rgb(206, 220, 237);
+}
+
+#layer4_left1 {
+	float: left;
+	font-size: 12px;
+	margin: 0 0 0 10px;
+	width: 400px;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+}
+
+#layer4_left1 input {
+	vertical-align: middle;
+}
+
+#layer4_right {
+	float: right;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+	text-align: right;
+}
+
+.input_box {
+	height: 30px;
+}
+
+.u3_img {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+#layer4_right img {
+	margin: 6px 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+#layer5 {
+	margin: 0 5px;
+	padding: 0;
+	width: 820px;
+	height: 360px;
+}
+
+.indexCommon {
+	width: 25px;
+	height: 17px;
+	font-size: 11px;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+.
+input {
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	border-bottom: 1px solid #000000;
+}
+
+.mouseover {
+	background-color: #f6f6f6;
+}
+
+#layer2 {
+	margin: 0;
+	padding: 0;
+	width: 830px;
+	height: 30px;
+	background: #f5f7fa;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+#layer2 div {
+	margin-top: 9px;
+	margin-left: 25px;
+	font-weight: bolder;
+	height: 12px;
+}
+
+.signTable_Check,.signTable_Check input {
+	font-size: 13px;
+	font-weight: 10px;
+	padding-left: 20px;
+}
+
+.listTable1 {
+	width: 100%;
+	border-top: solid 1px red;
+	border-right: solid 1px red;
+}
+
+.listTable1 td {
+	border-bottom: 1px solid red;
+	padding-left: 17px;
+	border-left: solid 1px red;
+	height: 35px;
+	line-height: 35px;
+}

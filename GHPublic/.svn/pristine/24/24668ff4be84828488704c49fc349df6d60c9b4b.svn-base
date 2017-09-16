@@ -1,0 +1,26 @@
+package com.gh.modol;
+
+public class MyShipItemStateModel {
+	
+	String jiaofei;
+	String weizhang;
+	String zhengshu;
+	public String getjiaofei() {
+		return jiaofei;
+	}
+	public void setjiaofei(String jiaofei) {
+		this.jiaofei = jiaofei;
+	}
+	public String getweizhang() {
+		return weizhang;
+	}
+	public void setweizhang(String weizhang) {
+		this.weizhang = weizhang;
+	}
+	public String getzhengshu() {
+		return zhengshu;
+	}
+	public void setzhengshu(String zhengshu) {
+		this.zhengshu = zhengshu;
+	}
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/wharfwork_add_goods_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" 
+        android:focusableInTouchMode="true">
+
+        <ImageButton
+            android:id="@+id/wharfwork_add_goods_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/wharfwork_add_goods_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/wharfwork_add_goods_back"
+            android:gravity="fill_vertical"
+            android:text="@string/wharfwork_add_gooods"
+            android:textColor="#0067ac"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+     <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wharfwork_add_goods_titleR" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+        
+
+            <com.huzhouport.knowledge.MultiListView
+                android:id="@+id/wharfwork_add_goods_viewlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+         <TextView
+                android:id="@+id/wharfwork_add_goods_tx"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/wharfwork_add_goods_viewlist"
+                android:background="@color/grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <com.huzhouport.knowledge.MultiListView
+                android:id="@+id/wharfwork_add_goods_viewlist1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wharfwork_add_goods_tx" />
+        </RelativeLayout>
+    </ScrollView>
+    
+    
+</RelativeLayout>

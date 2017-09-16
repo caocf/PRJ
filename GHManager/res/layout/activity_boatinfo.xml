@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.hxkg.ghmanager.HomeActivity"
+    android:background="#f5f5f5"
+    android:showDividers="middle"
+    android:divider="@drawable/linev" >    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu">
+         <ImageButton 
+              android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:layout_gravity="center|center"
+        android:background="@null"
+        android:src="@drawable/ic_selector"
+        android:onClick="onView"/>
+        
+        <TextView 
+            android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="详情"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>       
+        </LinearLayout>
+    
+    <!-- 用户名 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#ffffff">        
+        <TextView             
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:text="船名号"        
+        
+        android:layout_gravity="left|center"/> 
+        <TextView 
+           android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:textColor="#333333"
+        android:layout_weight="1"
+        android:textSize="18sp"/>         
+     </LinearLayout>
+     <!-- 手机号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#ffffff">        
+        <TextView          
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:text="艇长"
+        android:layout_gravity="left|center"/> 
+        <TextView 
+            android:id="@+id/len"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"/>                
+     </LinearLayout>
+     
+    <!-- 建造年份-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#ffffff">        
+        <TextView          
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:text="建造年份"
+        android:layout_gravity="left|center"/> 
+        <TextView 
+            android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:textColor="#333333"
+        android:textSize="18sp"/>                
+     </LinearLayout>
+     
+    <!-- 单位-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#ffffff">        
+        <TextView          
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:text="所属单位"
+        android:layout_gravity="left|center"/> 
+        <TextView 
+            android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:textColor="#333333"
+        android:textSize="18sp"/>                
+     </LinearLayout>
+    
+</LinearLayout>

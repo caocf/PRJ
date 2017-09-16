@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<!-- 标题栏 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center" >
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"       
+        android:src="@drawable/ic_selector"
+        android:background="@null"
+        android:onClick="onViewClick"/>
+        <TextView 
+            android:id="@+id/law"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电子报告记录"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1" />        
+        </LinearLayout>
+          <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"    
+        android:background="#f5f5f5"
+        >
+       
+     <EditText 
+         android:id="@+id/edit"
+         android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="26dp"
+        android:background="@null"
+        android:hint="请输入船名号"
+        android:layout_weight="1"/>
+     
+     <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/ic_title_search"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="25dp"
+        android:onClick="onSearch"/>
+       
+        </LinearLayout>
+       <TextView 
+          android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#333333" />
+       <ListView 
+           android:id="@+id/list"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#666666"
+        android:dividerHeight="1dp"  >
+           
+       </ListView>
+        <TextView 
+          android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#333333" />
+</LinearLayout>

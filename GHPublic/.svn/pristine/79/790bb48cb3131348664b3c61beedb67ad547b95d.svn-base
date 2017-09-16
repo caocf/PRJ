@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView 
+            android:id="@+id/img_case"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zhaochuan"/>
+        <TextView 
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="嘉兴港到杭州港"
+            android:layout_marginTop="16dp"
+            android:textColor="#666666"
+            android:layout_toRightOf="@+id/img_case"
+            android:textSize="16sp"
+            android:layout_marginLeft="6dp"
+            />
+        
+        <TextView 
+            android:id="@+id/tv_goods_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="沙子6000吨"
+            android:layout_marginTop="16dp"
+            android:textColor="#666666"
+            android:layout_toRightOf="@+id/tv_title"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            />
+    </RelativeLayout>
+    
+    
+    
+      <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        >
+        
+        <TextView 
+            android:id="@+id/tv_goods_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杂货间—散货"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            
+            />
+          
+    </RelativeLayout>
+    
+       <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+       
+        >
+        
+        <TextView 
+            android:id="@+id/tv_goods_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5000元"
+            android:textColor="#ff2323"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="14dp"
+            />
+         <TextView 
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15.03.02"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="14dp"
+            
+            />
+         
+         
+         
+          <TextView 
+            android:id="@+id/sourceid"
+            android:visibility="invisible"
+            android:layout_toRightOf="@+id/tv_goods_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            />
+          
+    </RelativeLayout>
+    
+
+</LinearLayout>

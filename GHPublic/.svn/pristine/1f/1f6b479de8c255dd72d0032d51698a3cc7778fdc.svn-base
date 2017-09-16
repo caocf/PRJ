@@ -1,0 +1,575 @@
+package com.hztuen.gh.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.kymjs.kjframe.KJHttp;
+import org.kymjs.kjframe.http.HttpCallBack;
+import org.kymjs.kjframe.http.HttpParams;
+import org.kymjs.kjframe.utils.KJLoger;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.PopupWindow.OnDismissListener;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.gh.modol.ShipModel;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.Adapter.PopShipNameAdapter;
+import com.hztuen.gh.activity.Adapter.ShipAdapter;
+import com.hztuen.gh.contact.contants;
+import com.hztuen.lvyou.utils.SystemStatic;
+import com.hztuen.lvyou.utils.Util;
+
+/**
+ * 船货圈找船
+ * 
+ * @author hztuen7
+ *
+ */
+public class FindShipActivity extends Activity implements OnClickListener {
+
+	private ShipAdapter shipAdapter;
+	private Button togglestart, toggleend, toggletype;
+	public PopupWindow popupWindowArea;
+	private View contentView;
+	public static FindShipActivity instance;
+	private ListView listview_start,lv_find_ship;
+	public ArrayList<String> from_lists;
+	private PopShipNameAdapter fromAdapter;
+	private RelativeLayout relative_title_final;
+	private LinearLayout liner_case;
+	private Boolean isStartOpen = false;
+	private RelativeLayout relative_start, relative_end, relative_type;
+	private TextView tv_start, tv_end, tv_type;
+	private List<ShipModel> modellist = new ArrayList<ShipModel>();
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_findship);
+		init();
+		instance = this;
+	}
+
+	private void init() {
+		
+		shipAdapter = new ShipAdapter(getApplicationContext(), modellist);
+		Toast.makeText(getApplicationContext(), "请选择空船港，到达港和货物类型进行筛选", Toast.LENGTH_SHORT).show();
+		togglestart = (Button) findViewById(R.id.togglestart);
+
+		toggleend = (Button) findViewById(R.id.toggleend);
+
+		toggletype = (Button) findViewById(R.id.toggletype);
+		lv_find_ship=(ListView)findViewById(R.id.lv_find_ship);
+		listview_start = (ListView) findViewById(R.id.listview_start);
+		from_lists = new ArrayList<String>();
+		fromAdapter = new PopShipNameAdapter(this, from_lists, 6);
+		liner_case = (LinearLayout) findViewById(R.id.liner_case);
+
+		relative_start = (RelativeLayout) findViewById(R.id.relative_start);
+		relative_start.setOnClickListener(this);
+		relative_end = (RelativeLayout) findViewById(R.id.relative_end);
+		relative_end.setOnClickListener(this);
+		relative_type = (RelativeLayout) findViewById(R.id.relative_type);
+		relative_type.setOnClickListener(this);
+
+		tv_start = (TextView) findViewById(R.id.tv_start);
+		tv_end = (TextView) findViewById(R.id.tv_end);
+		tv_type = (TextView) findViewById(R.id.tv_type);
+
+		relative_title_final = (RelativeLayout) findViewById(R.id.relative_title_final);
+		relative_title_final.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				finish();
+
+			}
+		});
+	}
+
+	@SuppressLint("ResourceAsColor")
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.relative_start:
+			from_lists.clear();
+			if (isStartOpen == false) {
+				tv_start.setTextColor(getResources().getColor(R.color.blue));
+				tv_end.setTextColor(R.color.text_black_light);
+				tv_type.setTextColor(R.color.text_black_light);
+				togglestart.setBackgroundResource(R.drawable.up);
+				toggleend.setBackgroundResource(R.drawable.ic_dropdown);
+				toggletype.setBackgroundResource(R.drawable.ic_dropdown);
+				String ac0 = "不限";
+				String ac1 = "杭州";
+				String ac2 = "宁波";
+				String ac3 = "绍兴";
+				String ac4 = "湖州";
+				String ac5 = "嘉兴";
+				String ac6 = "金华";
+				String ac7 = "衢州";
+				String ac8 = "台州";
+				String ac9 = "丽水";
+				String ac10 = "舟山";
+				from_lists.add(ac0);
+				from_lists.add(ac1);
+				from_lists.add(ac2);
+				from_lists.add(ac3);
+				from_lists.add(ac4);
+				from_lists.add(ac5);
+				from_lists.add(ac6);
+				from_lists.add(ac7);
+				from_lists.add(ac8);
+				from_lists.add(ac9);
+				from_lists.add(ac10);
+
+				contentView = getLayoutInflater().inflate(R.layout.pop_start,
+						null);// 港口
+
+				listview_start = (ListView) contentView
+						.findViewById(R.id.listview_start);
+				
+				listview_start.setAdapter(fromAdapter);
+
+				LinearLayout parent6 = (LinearLayout) this
+						.findViewById(R.id.findship_view);// 父窗口view
+				popupWindowArea = new PopupWindow(contentView,
+						parent6.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT);
+				// popupWindowArea.setFocusable(true);
+				// popupWindowArea.setOutsideTouchable(true);
+
+				listview_start.setOnItemClickListener(new OnItemClickListener() {
+
+					@Override
+					public void onItemClick(AdapterView<?> parent,
+							View view, int position, long id) {
+						SystemStatic.shipStart=from_lists.get(position);
+						popupWindowArea.dismiss();
+						tv_start.setTextColor(R.color.text_black_light);
+						tv_end.setTextColor(R.color.text_black_light);
+						tv_type.setTextColor(R.color.text_black_light);
+						togglestart.setBackgroundResource(R.drawable.ic_dropdown);
+						toggleend.setBackgroundResource(R.drawable.ic_dropdown);
+						toggletype.setBackgroundResource(R.drawable.ic_dropdown);
+						
+						
+
+						if(SystemStatic.shipTaget==null)
+						{
+							Toast.makeText(getApplicationContext(), "请选择到达港进行筛选", Toast.LENGTH_SHORT).show();
+							
+						}else if(SystemStatic.shipType==null)
+						{
+							Toast.makeText(getApplicationContext(), "请选择货物类型筛选", Toast.LENGTH_SHORT).show();
+						}else if(SystemStatic.shipTaget!=null&&SystemStatic.shipStart!=null&&SystemStatic.shipType!=null)
+						{
+							GetShipsListTask();
+						}
+						
+					}
+				});
+				popupWindowArea.setTouchable(true);
+				popupWindowArea.setTouchInterceptor(new OnTouchListener() {
+
+					@Override
+					public boolean onTouch(View v, MotionEvent event) {
+						
+						return false;
+					}
+				});
+
+				WindowManager.LayoutParams lp6 = getWindow().getAttributes();
+				lp6.alpha = 1f;
+				getWindow().setAttributes(lp6);
+
+				popupWindowArea.setOnDismissListener(new OnDismissListener() {
+
+					@Override
+					public void onDismiss() {
+						WindowManager.LayoutParams lp = getWindow()
+								.getAttributes();
+						lp.alpha = 1f;
+						getWindow().setAttributes(lp);
+					}
+				});
+
+				popupWindowArea.showAsDropDown(liner_case, 0, 0);
+				isStartOpen = true;
+			} else {
+				popupWindowArea.dismiss();
+				isStartOpen = false;
+				from_lists.clear();
+
+				tv_start.setTextColor(R.color.text_black_light);
+				tv_end.setTextColor(R.color.text_black_light);
+				tv_type.setTextColor(R.color.text_black_light);
+				togglestart.setBackgroundResource(R.drawable.ic_dropdown);
+				toggleend.setBackgroundResource(R.drawable.ic_dropdown);
+				toggletype.setBackgroundResource(R.drawable.ic_dropdown);
+				
+			}
+			break;
+		case R.id.relative_end:
+			from_lists.clear();
+
+			if (isStartOpen == false) {
+
+				tv_start.setTextColor(R.color.text_black_light);
+				tv_end.setTextColor(getResources().getColor(R.color.blue));
+				tv_type.setTextColor(R.color.text_black_light);
+				togglestart.setBackgroundResource(R.drawable.ic_dropdown);
+				toggleend.setBackgroundResource(R.drawable.up);
+				toggletype.setBackgroundResource(R.drawable.ic_dropdown);
+				
+				String ac0 = "不限";
+				String ac1 = "杭州";
+				String ac2 = "宁波";
+				String ac3 = "绍兴";
+				String ac4 = "湖州";
+				String ac5 = "嘉兴";
+				String ac6 = "金华";
+				String ac7 = "衢州";
+				String ac8 = "台州";
+				String ac9 = "丽水";
+				String ac10 = "舟山";
+				from_lists.add(ac0);
+				from_lists.add(ac1);
+				from_lists.add(ac2);
+				from_lists.add(ac3);
+				from_lists.add(ac4);
+				from_lists.add(ac5);
+				from_lists.add(ac6);
+				from_lists.add(ac7);
+				from_lists.add(ac8);
+				from_lists.add(ac9);
+				from_lists.add(ac10);
+
+				contentView = getLayoutInflater().inflate(R.layout.pop_start,
+						null);// 港口
+
+				listview_start = (ListView) contentView
+						.findViewById(R.id.listview_start);
+				
+				listview_start.setOnItemClickListener(new OnItemClickListener() {
+
+					@Override
+					public void onItemClick(AdapterView<?> parent,
+							View view, int position, long id) {
+						SystemStatic.shipTaget=from_lists.get(position);
+						popupWindowArea.dismiss();
+						tv_start.setTextColor(R.color.text_black_light);
+						tv_end.setTextColor(R.color.text_black_light);
+						tv_type.setTextColor(R.color.text_black_light);
+						togglestart.setBackgroundResource(R.drawable.ic_dropdown);
+						toggleend.setBackgroundResource(R.drawable.ic_dropdown);
+						toggletype.setBackgroundResource(R.drawable.ic_dropdown);
+						
+						
+						if(SystemStatic.shipStart==null)
+						{
+							Toast.makeText(getApplicationContext(), "请选择到达港进行筛选", Toast.LENGTH_SHORT).show();
+							
+						}else if(SystemStatic.shipType==null)
+						{
+							Toast.makeText(getApplicationContext(), "请选择货物类型筛选", Toast.LENGTH_SHORT).show();
+						}else if(SystemStatic.shipTaget!=null&&SystemStatic.shipStart!=null&&SystemStatic.shipType!=null)
+						{
+							GetShipsListTask();
+						}
+						
+					}
+				});
+				listview_start.setAdapter(fromAdapter);
+
+				LinearLayout parent6 = (LinearLayout) this
+						.findViewById(R.id.findship_view);// 父窗口view
+				popupWindowArea = new PopupWindow(contentView,
+						parent6.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT);
+				// popupWindowArea.setFocusable(true);
+				// popupWindowArea.setOutsideTouchable(true);
+
+				popupWindowArea.setTouchable(true);
+				popupWindowArea.setTouchInterceptor(new OnTouchListener() {
+
+					@Override
+					public boolean onTouch(View v, MotionEvent event) {
+						// TODO Auto-generated method stub
+						return false;
+					}
+				});
+
+				WindowManager.LayoutParams lp6 = getWindow().getAttributes();
+				lp6.alpha = 1f;
+				getWindow().setAttributes(lp6);
+
+				popupWindowArea.setOnDismissListener(new OnDismissListener() {
+
+					@Override
+					public void onDismiss() {
+						WindowManager.LayoutParams lp = getWindow()
+								.getAttributes();
+						lp.alpha = 1f;
+						getWindow().setAttributes(lp);
+					}
+				});
+
+				popupWindowArea.showAsDropDown(liner_case, 0, 0);
+				isStartOpen = true;
+			} else {
+				popupWindowArea.dismiss();
+				isStartOpen = false;
+				from_lists.clear();
+				tv_start.setTextColor(R.color.text_black_light);
+				tv_end.setTextColor(R.color.text_black_light);
+				tv_type.setTextColor(R.color.text_black_light);
+				togglestart.setBackgroundResource(R.drawable.ic_dropdown);
+				toggleend.setBackgroundResource(R.drawable.ic_dropdown);
+				toggletype.setBackgroundResource(R.drawable.ic_dropdown);
+			}
+			break;
+		case R.id.relative_type:
+
+			from_lists.clear();
+
+			if (isStartOpen == false) {
+				tv_start.setTextColor(R.color.text_black_light);
+				tv_end.setTextColor(R.color.text_black_light);
+				tv_type.setTextColor(getResources().getColor(R.color.blue));
+				togglestart.setBackgroundResource(R.drawable.ic_dropdown);
+				toggleend.setBackgroundResource(R.drawable.ic_dropdown);
+				toggletype.setBackgroundResource(R.drawable.up);
+				String ac10 = "货船";
+				String ac1 = "杂货船";
+				String ac2 = "供给船";
+				String ac3 = "散货船";
+				String ac4 = "散货水泥船";
+				String ac5 = "集装箱船";
+				String ac6 = "游船";
+				String ac7 = "工作船";
+				String ac8 = "布缆船";
+				String ac9 = "驳船";
+				from_lists.add(ac10);
+				from_lists.add(ac1);
+				from_lists.add(ac2);
+				from_lists.add(ac3);
+				from_lists.add(ac4);
+				from_lists.add(ac5);
+				from_lists.add(ac6);
+				from_lists.add(ac7);
+				from_lists.add(ac8);
+				from_lists.add(ac9);
+
+				contentView = getLayoutInflater().inflate(R.layout.pop_start,
+						null);// 港口
+
+				listview_start = (ListView) contentView
+						.findViewById(R.id.listview_start);
+				
+				listview_start.setOnItemClickListener(new OnItemClickListener() {
+
+					@Override
+					public void onItemClick(AdapterView<?> parent,
+							View view, int position, long id) {
+						SystemStatic.shipType=from_lists.get(position);
+						popupWindowArea.dismiss();
+						tv_start.setTextColor(R.color.text_black_light);
+						tv_end.setTextColor(R.color.text_black_light);
+						tv_type.setTextColor(R.color.text_black_light);
+						togglestart.setBackgroundResource(R.drawable.ic_dropdown);
+						toggleend.setBackgroundResource(R.drawable.ic_dropdown);
+						toggletype.setBackgroundResource(R.drawable.ic_dropdown);
+						
+						if(SystemStatic.shipStart==null)
+						{
+							Toast.makeText(getApplicationContext(), "请选择到达港进行筛选", Toast.LENGTH_SHORT).show();
+							
+						}else if(SystemStatic.shipType==null)
+						{
+							Toast.makeText(getApplicationContext(), "请选择货物类型筛选", Toast.LENGTH_SHORT).show();
+						}else if(SystemStatic.shipTaget!=null&&SystemStatic.shipStart!=null&&SystemStatic.shipType!=null)
+						{
+							GetShipsListTask();
+						}
+						
+					}
+				});
+				listview_start.setAdapter(fromAdapter);
+
+				LinearLayout parent6 = (LinearLayout) this
+						.findViewById(R.id.findship_view);// 父窗口view
+				popupWindowArea = new PopupWindow(contentView,
+						parent6.getWidth(), ViewGroup.LayoutParams.WRAP_CONTENT);
+				// popupWindowArea.setFocusable(true);
+				// popupWindowArea.setOutsideTouchable(true);
+
+				popupWindowArea.setTouchable(true);
+				popupWindowArea.setTouchInterceptor(new OnTouchListener() {
+
+					@Override
+					public boolean onTouch(View v, MotionEvent event) {
+						// TODO Auto-generated method stub
+						return false;
+					}
+				});
+
+				WindowManager.LayoutParams lp6 = getWindow().getAttributes();
+				lp6.alpha = 1f;
+				getWindow().setAttributes(lp6);
+
+				popupWindowArea.setOnDismissListener(new OnDismissListener() {
+
+					@Override
+					public void onDismiss() {
+						WindowManager.LayoutParams lp = getWindow()
+								.getAttributes();
+						lp.alpha = 1f;
+						getWindow().setAttributes(lp);
+					}
+				});
+
+				popupWindowArea.showAsDropDown(liner_case, 0, 0);
+				isStartOpen = true;
+			} else {
+				popupWindowArea.dismiss();
+				isStartOpen = false;
+				from_lists.clear();
+				tv_start.setTextColor(R.color.text_black_light);
+				tv_end.setTextColor(R.color.text_black_light);
+				tv_type.setTextColor(R.color.text_black_light);
+				togglestart.setBackgroundResource(R.drawable.ic_dropdown);
+				toggleend.setBackgroundResource(R.drawable.ic_dropdown);
+				toggletype.setBackgroundResource(R.drawable.ic_dropdown);
+			}
+			break;
+
+		}
+
+	}
+	
+	
+	// 获取找船列表
+		private void GetShipsListTask() {
+
+			// TODO Auto-generated method stub
+
+			// 访问网络
+
+			KJHttp kjh = new KJHttp();
+			List<String> aa = new ArrayList<String>();
+			 aa.add("From="+SystemStatic.shipStart);
+			 aa.add("To="+SystemStatic.shipTaget);
+			 aa.add("Type="+SystemStatic.shipType);
+			 aa.add("Page="+"0");
+
+
+			HttpParams params = null;
+			try {
+				params = Util.prepareKJparams(aa);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			// 访问地址
+			String toUrl = contants.shipslist;
+			if (!toUrl.equals("")) {
+				kjh.post(toUrl, params, false, new HttpCallBack() {
+					@Override
+					public void onSuccess(Map<String, String> headers, byte[] t) {
+						super.onSuccess(headers, t);
+						// 获取cookie
+						KJLoger.debug("===" + headers.get("Set-Cookie"));
+						// Log.i(TAG+":kymjs---http", new String(t));
+						String result = new String(t).trim();
+						try {
+							JSONObject resultJO = new JSONObject(result);
+							// String resultMsg = resultJO.getString("resultMsg");
+							// Log.i(TAG+":kymjs---resultMsg", resultJO.toString());
+							JSONObject res = new JSONObject(result);
+							JSONArray data = res.getJSONArray("data");
+							Log.i("GH_TEXT", data.length() + "我是数据的size");
+							if (data.length() == 0) {
+								Toast.makeText(getApplicationContext(), "最近无发布信息",
+										Toast.LENGTH_SHORT).show();
+								modellist.clear();
+								shipAdapter.notifyDataSetChanged();
+								
+								
+							} else {
+								modellist.clear();
+								for (int i = 0; i < data.length(); i++) {
+									JSONObject temp = data.getJSONObject(i);
+									ShipModel model = new ShipModel();
+
+									model.setid(temp.getString("id"));
+									model.settitle(temp.getString("title"));
+									model.setshiptype(temp.getString("shiptype"));
+									model.setshipname(temp.getString("shipname"));
+									model.settons(temp.getString("tons"));
+									model.setemptydock(temp.getString("emptydock"));
+									model.settargetdock(temp.getString("targetdock"));
+									model.setroute(temp.getString("route"));
+									model.setprice(temp.getString("price"));
+									model.setlinkman(temp.getString("linkman"));
+									model.settel(temp.getString("tel"));
+									model.setremark(temp.getString("remark"));
+									
+
+//									 "id": 3,
+//								     "title": "杭州货运",
+//								     "shiptype": "c",
+//								     "shipname": "浙杭州货001",
+//								     "tons": "15",
+//								     "emptydock": "a",
+//								     "targetdock": "b",
+//								     "route": "杭州水道",
+//								     "price": "1000",
+//								     "linkman": "李思",
+//								     "postdate": "2016-06-02 15:29:39",
+//								     "tel": "168",
+//								     "remark": "备注"
+									modellist.add(model);
+
+								}
+
+								lv_find_ship.setAdapter(shipAdapter);
+							}
+							
+						} catch (Exception e1) {
+							e1.printStackTrace();
+						}
+					}
+
+					@Override
+					public void onFailure(int errorNo, String strMsg) {
+						// 关闭进度条
+						// Log.d(TAG, strMsg);
+						// Util.getTip(cxt, errorNo+"");
+						// mSVProgressHUD.showErrorWithStatus("验证过程出现问题");
+						super.onFailure(errorNo, strMsg);
+					}
+				});
+			}
+		}
+		
+		
+}

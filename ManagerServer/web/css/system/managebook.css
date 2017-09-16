@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+.totaldiv{
+margin: 0;padding:54px 10px 10px 10px;
+}
+#title{
+margin:0 0 0 300px;
+padding:0;
+font-weight: bold;
+font-size: 14px;
+}
+#a_add{
+color: blue;
+}
+#booklist div{
+margin:0 0 10px 0;
+padding:0;	
+}
+#booklist .a_delete{
+	color: red;
+}
+.nameDiv{
+margin: 0;padding:10px 10px 10px 40px;
+}
+.changeUserStatus_font{
+	margin: 0;padding:10px 10px 10px 0;
+	width: 100%;
+	text-align: center;
+}
+.changeUserStatus_font IMG{
+	margin: 0 0 0 10px;
+}

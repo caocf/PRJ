@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+
+#content {
+	margin: 0 0 0 24px;
+	padding: 0;
+	width: 800px;
+	height: 630px;
+}
+
+.imgIcon {
+	float: left;
+	margin: 25px 22px 0 0;
+	padding: 0;
+	width: 68px;
+	height: 70px
+}
+
+#imgIcon_right_div {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 70px;
+	width: 710px;
+}
+
+#userName {
+	float: left;
+	margin: 26px 200px 20px 0;
+	padding: 0;
+	color: #323944;
+}
+
+.operation {
+	float: left;
+	margin: 22px 10px 26px 0;
+	padding: 0;
+	color: #2290e5;
+	display: block;
+}
+
+.txt1 {
+	float: left;
+	margin: 0; 
+	padding : 20px 0 0 0;
+	font-size: 12px;
+	width: 710px;
+	color: #787878;
+	border: none;
+	border-top: 1px solid #d6d6d6;
+}
+
+.txt3 {
+	float: left;
+	margin: 20px 0 18px 0;
+	padding: 0;
+	font-size: 12px;
+	color: #323944;
+	width: 100%
+}
+
+.txt2 {
+	float: left;
+	margin: 0 0 18px 0;
+	padding: 0;
+	font-size: 12px;
+	color: #323944;
+	width: 100%
+}

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" 
+        android:orientation="horizontal" >
+
+
+        <TextView
+            android:id="@+id/regist_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="完善资料"
+            android:textColor="#1766b1"
+            android:drawableLeft="@drawable/image_button_back"
+            android:drawablePadding="16dp"
+            android:textSize="18sp" 
+            android:onClick="ConfirmQite"/>
+    </RelativeLayout>
+
+
+    <!-- 分割线 -->
+
+    <LinearLayout
+        android:id="@+id/regist_ship"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:paddingBottom="14dp" >
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="14dp"
+                android:text="船名号"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/shipname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入船名称"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7"
+            android:text="TextView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:paddingBottom="14dp" >
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="14dp"
+                android:text="船舶登记号"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/shipnum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:hint="请输入船舶登记号"
+                android:textColor="#333333"
+                android:textSize="16sp" >
+            </EditText>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:background="#d7d7d7"
+            android:text="TextView" />
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" 
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" 
+                android:text="船舶国籍证书"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="8dp" 
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:id="@+id/guoji"
+                android:background="#ffffff"
+                android:layout_gravity="right"
+                android:hint="请确保证件照片四角完整，文字清晰可读"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:drawableRight="@drawable/registe_ic_camera" 
+                
+                android:onClick="onCamera"/>
+         
+        </LinearLayout>
+		<TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7"
+            android:text="TextView" />
+		<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff" 
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" 
+                android:text="AIS证书"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="8dp" 
+                android:layout_weight="1"
+                android:id="@+id/ais"
+                android:layout_gravity="right"
+                android:background="#ffffff"
+                android:gravity="center|right"
+                android:hint="请确保证件照片四角完整，文字清晰可读"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                android:drawableRight="@drawable/registe_ic_camera" 
+                android:onClick="onCamera"/>
+         
+        </LinearLayout>
+		<TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d7d7d7"
+            android:text="TextView" />       
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/regist_submit"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/ic_selector_btn"
+        android:text="提交注册"
+        android:textColor="#ffffff" 
+        android:onClick="onSubmitShip"/>
+
+</LinearLayout>

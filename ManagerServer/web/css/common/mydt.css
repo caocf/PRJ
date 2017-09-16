@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: 微软雅黑;
+}
+
+.buttondt {
+	margin-left:5px;
+	height:100%;
+	width:60px;
+	background: white;
+	border: 0 solid #ffffff;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: '微软雅黑';
+	font-size: 16px;
+	color: #ee7701;
+}
+
+.hidediv{
+	display:none;
+	height:360px;
+	width:840px;
+	margin:-300px 0 0 -400px;
+	background:white;
+}

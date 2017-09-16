@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.ghpublic.modol.CompanyCertEN" table="company_cert" schema="zjport">
+        <id name="id" >
+            <column name="id"/>
+            <generator class="increment"/>
+        </id>
+        <property name="dir">
+            <column name="dir" sql-type="varchar(225)" length="225" not-null="true"/>
+        </property>
+
+        <many-to-one name="companyBaseEN" class="net.ghpublic.modol.CompanyBaseEN" column="companyid" cascade="none" lazy="false" unique="true"/>
+    </class>
+</hibernate-mapping>

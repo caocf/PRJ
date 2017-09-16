@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: 微软雅黑;
+}
+html,body,div {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.buttonifmleft {
+	margin-left:30%;
+	height:100%;
+	background: #8D8D8D;
+	border: 0 solid #ffffff;
+	color: #ffffff;
+	width:8%;
+	float:left;
+}
+.buttonifm {
+	height:100%;
+	background: #BEBEBE;
+	border: 0 solid #ffffff;
+	color: #ffffff;
+	width:8%;
+	float:left;
+}
+
+.menugray {
+	float: left;
+	width: 15%;
+	height: 45px;
+	line-height: 45px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: '微软雅黑';
+	font-size: 20px;
+	color: #666666;
+	background: #f3f2f1;
+	text-decoration: none;
+	border: 0px;
+}
+
+.menuyellow {
+	float: left;
+	width: 15%;
+	height: 45px;
+	line-height: 45px;
+	vertical-align: middle;
+	text-align: center;
+	font-family: '微软雅黑';
+	font-size: 20px;
+	color: #ffffff;
+	background: #ee7701;
+	text-decoration: none;
+	border: 0px;
+}

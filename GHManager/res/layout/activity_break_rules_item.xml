@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView
+                    android:id="@+id/num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="受理号"
+                    android:textColor="#333333"
+                    android:textSize="16sp" 
+                    android:visibility="gone"/>
+    
+    <TextView
+                    android:id="@+id/tv_break_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="违法内容"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+    <TextView
+                    android:id="@+id/tv_break_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="案发时间"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+    <TextView
+                    android:id="@+id/tv_break_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="违章地点"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+    <TextView
+                    android:id="@+id/tv_price_fa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="处罚类别"
+                    android:textColor="#ff2323"
+                    android:textSize="16sp" 
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp"/>
+</LinearLayout>

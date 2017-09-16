@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/login_bg"
+   >
+   
+       <RelativeLayout
+        android:id="@+id/fragment_set_ip_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/fragment_set_ip_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/fragment_set_ip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/fragment_set_ip_back"
+            android:gravity="fill_vertical"
+            android:text="@string/fragment_set_ip_title"
+            android:textColor="#0067ac"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+    
+   
+  
+       <TextView 
+        android:id="@+id/fragment_set_ip_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:textSize="17sp"
+        android:text="@string/fragment_set_ip_title"
+        android:layout_below="@id/fragment_set_ip_titleR"
+        android:background="@color/white"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/Light_black"
+        />
+          <TextView 
+        android:id="@+id/fragment_set_ip_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="17sp"
+        android:layout_below="@id/fragment_set_ip_titleR"
+        android:layout_toRightOf="@+id/fragment_set_ip_tv1"
+        android:background="@color/white"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical|right"
+        android:paddingRight="10dp" 
+        android:textColor="@color/Light_gray"
+        />
+    <Button
+        android:id="@+id/fragment_set_ip_bu"
+        android:layout_below="@id/fragment_set_ip_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+            android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/grey" />
+    
+    
+     <TextView 
+        android:id="@+id/fragment_set_ip_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:textSize="17sp"
+        android:text="@string/fragment_set_ip_tv"
+        android:layout_below="@id/fragment_set_ip_bu"
+        android:background="@color/white"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/Light_black"
+        />
+          <TextView 
+        android:id="@+id/fragment_set_ip_tv4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="17sp"
+        android:layout_below="@id/fragment_set_ip_bu"
+        android:layout_toRightOf="@+id/fragment_set_ip_tv3"
+        android:background="@color/white"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical|right"
+        android:paddingRight="10dp" 
+        android:textColor="@color/Light_gray"
+        />
+    
+  </RelativeLayout>

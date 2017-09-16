@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="16dp"
+    android:background="#bebebe"/>
+    <LinearLayout
+        android:layout_width="match_parent" 
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:gravity="left|center"
+        android:focusable="true">
+       <TextView 
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="船舶名称"
+        android:textColor="#666666"
+        android:textSize="16sp"         
+        android:layout_marginLeft="16dp"/>         
+       <TextView 
+           android:id="@+id/shipname"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_marginLeft="16dp"
+        android:background="@null"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:textColorHint="#bebebe"/>
+  </LinearLayout>
+  <TextView 
+        android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#bebebe"/>
+  <LinearLayout
+        android:layout_width="match_parent" 
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:gravity="left|center"
+        android:focusable="true">
+       <TextView 
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="AIS"
+        android:textColor="#666666"
+        android:textSize="16sp"         
+        android:layout_marginLeft="16dp"/>         
+       <TextView 
+           android:id="@+id/ais"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:layout_marginLeft="16dp"
+        android:background="@null"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:textColorHint="#bebebe"/>
+  </LinearLayout>
+  <TextView 
+        android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#bebebe"/>
+    
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_marginRight="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1" 
+            android:layout_gravity="center"
+            android:text="纠错"
+            android:padding="16dp"
+            android:background="@drawable/button_selector"
+            android:textColor="#ffffff"
+            android:onClick="newAIS"/>
+    
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="#f5f5f5"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <RelativeLayout
+            android:id="@+id/relative_title_final"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/image_button_back" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/back"
+                android:text="换绑手机"
+                android:textColor="#1766b1"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:orientation="horizontal" 
+        android:background="#ffffff" 
+        android:paddingTop="16dp" 
+         android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="16dp" 
+            android:text="手机号"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"  
+                android:gravity="center"
+                android:background="#ffffff"
+                android:digits="0123456789"
+                android:hint="请输入手机号"
+                android:inputType="number"
+                android:textSize="16sp" >
+            </EditText>
+    </LinearLayout>
+    
+      <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:paddingTop="16dp"
+       android:paddingBottom="16dp"
+      
+        android:background="#ffffff" 
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="16dp" 
+            android:text="验证码"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+ 
+
+            <EditText
+                android:id="@+id/get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp" 
+                android:layout_weight="1.0"
+                android:background="#ffffff"
+                android:digits="0123456789"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:textSize="16sp" >
+            </EditText>
+
+            <Button
+                android:id="@+id/getmessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_sendsms"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="发送验证码"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+       
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+    
+    <Button
+        android:id="@+id/regist_next"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_selector_btn"
+        android:text="绑定新号码"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

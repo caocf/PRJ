@@ -1,0 +1,131 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.hxkg.ghmanager.HomeActivity"
+    android:background="#f5f5f5"
+    android:showDividers="middle"
+    android:divider="@drawable/linev" 
+    android:focusable="true"
+    android:focusableInTouchMode="true">    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu">
+         <ImageButton 
+              android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:layout_gravity="center|center"
+        android:background="@null"
+         android:src="@drawable/ic_selector"
+        android:onClick="onClick"/>
+        
+        <TextView 
+            android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="非营运船舶"
+        android:textColor="#0067ac"
+            android:textSize="18sp" 
+        android:layout_weight="1"
+        android:layout_gravity="center"/>       
+        </LinearLayout>
+        
+   <!--  --> 
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+         android:background="#ffffff"
+         android:gravity="center|left">
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_gray_search" />
+        <EditText   
+            android:id="@+id/edit"         
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:hint="搜索"/>       
+        
+        </LinearLayout>
+        
+        <ListView
+        android:id="@+id/tree_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        
+        <LinearLayout 
+            android:id="@+id/lay1"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >        
+            <TextView 
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#1766b1" />            
+        <LinearLayout       
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:gravity="center|left"
+        android:onClick="onChoose">
+         <LinearLayout       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:layout_weight="1">
+    <TextView 
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="10dp"    
+    android:layout_marginBottom="10dp"
+    android:textSize="16sp"
+    android:textColor="#333333"/>    
+     <TextView 
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:layout_marginLeft="16dp"
+    android:drawableLeft="@drawable/ic_mobilephone"
+    android:drawablePadding="5dp"
+    android:textSize="16sp"
+    android:textColor="#333333"
+    android:layout_marginBottom="10dp"/>    
+    </LinearLayout>    
+     <ImageView
+        android:id="@+id/rightImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/ic_phone2"/>
+       </LinearLayout>     
+        </LinearLayout>
+        
+     <ListView
+        android:id="@+id/list2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</LinearLayout>

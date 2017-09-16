@@ -1,0 +1,230 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/lll"
+    android:background="#f5f5f5" >
+
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center|left"
+        android:background="@drawable/title_backgrundmenu">
+         <ImageButton 
+              android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:layout_gravity="center|center"
+        android:src="@drawable/ic_selector"
+         android:background="@null"
+        android:onClick="onViewClick"/>
+        
+        <TextView   
+            android:id="@+id/text"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实时监测"
+		android:gravity="center|left"
+        android:textColor="#0067ac"
+            android:textSize="18sp" 
+        android:layout_weight="1"/> 
+        
+     
+              
+        </LinearLayout>
+        
+        
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/map">        
+        <fragment
+        android:id="@+id/map_fragment"
+        android:name="net.hxkg.cruise.MapFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"        
+        android:layout_alignParentTop="true"/>
+        
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/searchlay"
+        android:orientation="horizontal"
+        
+        android:background="@drawable/bg_white"
+        android:gravity="left|center">
+        
+             <ImageButton 
+                android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/ic_title_search" 
+        android:onClick="PoiSearch"/>
+       	
+             
+         <EditText 
+             android:id="@+id/key"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@null"
+        android:textSize="15sp"
+        android:hint="搜索船名号"/>       
+   </LinearLayout>
+   <ListView 
+       android:id="@+id/namelist"
+       android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchlay"
+        android:background="#f5f5f5"
+        android:visibility="gone">
+       
+   </ListView>
+         
+   <ImageButton 
+       android:id="@+id/loc"
+                android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/supervise_locselector"
+        android:onClick="onViewClick"
+        android:visibility="visible" />
+   
+   <!-- <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+         
+       <CheckBox 
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:button="@drawable/supervise_selector"
+        />
+        <CheckBox 
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/supervise_selector1"/>
+         <CheckBox 
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/supervise_selector2"/>
+          <CheckBox 
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/supervise_selector3"/>
+       
+   </LinearLayout>-->
+ </RelativeLayout>
+    
+ <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:visibility="gone">         
+        <ImageButton 
+            android:id="@+id/up"
+           android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/icon_up"
+         android:onClick="onViewClick"/>
+        <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:textColor="#dcdcdc"
+        android:background="#dcdcdc"/>         
+        <RadioGroup 
+            
+            android:id="@+id/ra_group"
+           android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+            <RadioButton 
+                android:id="@+id/b1"
+                android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:button="@null"
+        android:layout_weight="1"
+        android:text="船舶状况"
+        android:drawablePadding="12dp"
+        android:drawableBottom="@drawable/radiobt_abselector_process" />
+             <RadioButton 
+                  android:id="@+id/b2"
+                android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="闸口点流量"
+        android:gravity="center"
+        android:button="@null"
+        android:layout_weight="1"
+        android:drawablePadding="12dp"
+        android:drawableBottom="@drawable/radiobt_abselector_process" />
+              <RadioButton 
+                   android:id="@+id/b3"
+                android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="码头作业情况"
+        android:gravity="center"
+        android:drawablePadding="12dp"
+         android:button="@null"
+         android:layout_weight="1"
+        android:drawableBottom="@drawable/radiobt_abselector_process" />
+        </RadioGroup>
+         <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:textColor="#dcdcdc"
+        android:background="#dcdcdc"/> 
+        
+        <FrameLayout 
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="16dp">            
+        </FrameLayout>        
+   </LinearLayout>
+   
+    <LinearLayout 
+        android:id="@+id/searchlists"
+        android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:background="#ffffff"
+             android:visibility="gone">
+        <ImageButton 
+            android:id="@+id/close"
+            android:layout_margin="10dp"
+           android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/ic_close"
+             android:layout_gravity="right"
+             android:onClick="onViewClick" />
+        <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:textColor="#dcdcdc"
+        android:background="#dcdcdc"/>
+        <ListView 
+	    android:id="@+id/list"
+	  android:layout_width="match_parent"
+    android:layout_height="200dp"  />
+    </LinearLayout>
+    </RelativeLayout>
+       
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.ghpublic.modol.CommonPermissionEN" table="common_permission" schema="zjport">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="projectname">
+            <column name="projectname" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="location">
+            <column name="location" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="buildproperty">
+            <column name="buildproperty" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="unit">
+            <column name="unit" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="operator">
+            <column name="operator" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="tel">
+            <column name="tel" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="designer">
+            <column name="designer" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="accept">
+            <column name="accept" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="permmitnum">
+            <column name="permmitnum" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="applytime">
+            <column name="applytime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <many-to-one name="user" column="userid" lazy="false"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/parent_view2"
+    android:background="#f5f5f5"  >
+    
+    
+    <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu">
+
+        <RelativeLayout
+            android:id="@+id/relative_title_final"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_selector" 
+            android:onClick="onView"/>
+
+        <TextView            
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/back"
+            android:text="船员信息"
+            android:textColor="#1766b1"
+            android:textSize="18sp" 
+             android:onClick="onView"/>
+        
+        </RelativeLayout>        
+    </RelativeLayout>  
+    
+     <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    
+    <RelativeLayout 
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text1"
+            android:layout_width="100dp"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="姓名"/>
+         <TextView 
+            android:id="@+id/shipname"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>         
+        
+    </RelativeLayout>
+     <TextView
+	        android:id="@+id/forcus1"
+	        android:layout_below="@+id/relative1"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+      <RelativeLayout 
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forcus1"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text2"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="年龄"/>
+         <TextView 
+            android:id="@+id/start"
+            
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>      
+    </RelativeLayout>
+     <TextView	
+         	android:id="@+id/forcus2"  
+         	android:layout_below="@+id/relative2"      
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+      <RelativeLayout 
+        android:id="@+id/relative3"
+        android:layout_below="@+id/forcus2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text3"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+             android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="性别"/>
+         <TextView 
+            android:id="@+id/target"
+             android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>   
+    </RelativeLayout>
+     <TextView
+          	android:id="@+id/forcus3"	
+          	android:layout_below="@+id/relative3"        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+     
+     
+      <RelativeLayout 
+        android:id="@+id/relative4"
+        
+        android:layout_below="@+id/forcus15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text4"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="船员证号"/>
+         <TextView 
+            android:id="@+id/goods"
+            android:textColor="#333333"
+            android:textSize="16sp"
+             android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>   
+    </RelativeLayout>
+     <TextView
+         	android:id="@+id/forcus4"
+         	android:layout_below="@+id/relative4"	        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+         
+        </LinearLayout> 
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,178 @@
+package com.hztuen.gh.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.kymjs.kjframe.KJHttp;
+import org.kymjs.kjframe.http.HttpCallBack;
+import org.kymjs.kjframe.http.HttpParams;
+import org.kymjs.kjframe.utils.KJLoger;
+
+import com.gh.modol.DuckDangerRecordModel;
+import com.gh.modol.RecordLetIn;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.Adapter.DuckDangerAdapter;
+import com.hztuen.gh.activity.Adapter.DuckRecordAdapter;
+import com.hztuen.gh.activity.Adapter.RecordLetInAdapter;
+import com.hztuen.gh.contact.contants;
+import com.hztuen.lvyou.utils.SystemStatic;
+import com.hztuen.lvyou.utils.Util;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+/*
+ * 码头危货作业记录
+ */
+public class DuckDangersRecordActivity extends Activity implements OnClickListener{
+
+	
+	private ListView lv_record;
+	
+	private RelativeLayout relative_title;
+	private DuckRecordAdapter dangerDuckAdapter;
+	
+	private List<DuckDangerRecordModel> recordlist = new ArrayList<DuckDangerRecordModel>();
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_danger_duck_record);
+		init();
+	}
+	private void init()
+	{
+		lv_record=(ListView)findViewById(R.id.listview_record);
+		//recordAdapter = new RecordLetInAdapter(LetInRecordActivity.this, recordlist);
+		
+		
+		
+		relative_title=(RelativeLayout)findViewById(R.id.relative_title);
+		relative_title.setOnClickListener(this);
+		
+		dangerDuckAdapter=new DuckRecordAdapter(getApplicationContext(), recordlist);
+		GetRecord();
+		
+	}
+	//获取码头危货作业记录
+	private void GetRecord() {
+
+		// TODO Auto-generated method stub
+
+
+		//访问网络
+
+		KJHttp kjh = new KJHttp();
+		List<String> aa = new ArrayList<String>();
+		aa.add("Wharfname="+SystemStatic.Wharfname);
+		
+		HttpParams params = null;
+		try {
+			params = Util.prepareKJparams(aa);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//访问地址
+		String toUrl = contants.wdangerlist;
+		if(params == null){
+			//提示参数制造失败
+			Util.getTip(getApplicationContext(), "构造参数失败");
+		}else if(!toUrl.equals("")){
+			kjh.post(toUrl, params,false,new HttpCallBack() {
+				@Override
+				public void onSuccess(Map<String, String> headers, byte[] t) {
+					super.onSuccess(headers, t);
+					// 获取cookie
+					KJLoger.debug("===" + headers.get("Set-Cookie"));
+				
+					String result = new String(t).trim();
+					try {
+						JSONObject resultJO = new JSONObject(result);
+				
+						JSONObject  res = new JSONObject(result);
+						JSONArray data = res.getJSONArray("data");
+						Log.i("GH_TEXT", data.length()+"我是数据的size");
+						if(data.length()==0)
+						{
+							Toast.makeText(getApplicationContext(), "无作业记录", Toast.LENGTH_SHORT).show();
+						}else {
+						for(int i = 0;i<data.length();i++){
+							JSONObject temp = data.getJSONObject(i);
+							DuckDangerRecordModel record= new DuckDangerRecordModel();
+						
+//							   "id": 2,
+//					       "ship": "浙湖州货005",
+//					       "startport": "杭州",
+//					       "targetport": "嘉兴",
+//					       "goods": "油料",
+//					       "goodstype": "危化品",
+//					       "goodsweight": "20",
+//					       "portime": "0114-01-23 00:00:00",
+//					       "status": "不批准"
+							
+							record.setid(temp.getString("id"));
+							record.setship(temp.getString("ship"));
+							record.setstartport(temp.getString("startport"));
+							record.settargetport(temp.getString("targetport"));
+							record.setgoods(temp.getString("goods"));
+							record.setgoodstype(temp.getString("goodstype"));
+							record.setstatus(temp.getString("status"));
+							record.setgoodsweight(temp.getString("goodsweight"));
+							record.setportime(temp.getString("portime"));
+							record.setstatus(temp.getString("status"));
+							
+							record.setnumber(temp.getString("number"));
+							record.setendtime(temp.getString("endtime"));
+							
+							record.setunit(temp.getString("unit"));
+																																									
+							recordlist.add(record);
+																																				
+							}
+						}
+						lv_record.setAdapter(dangerDuckAdapter);												
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+					
+				}
+
+				@Override
+				public void onFailure(int errorNo, String strMsg) {
+					//关闭进度条
+				//	Log.d(TAG, strMsg);
+					//					Util.getTip(cxt, errorNo+"");
+					//						mSVProgressHUD.showErrorWithStatus("验证过程出现问题");
+					super.onFailure(errorNo, strMsg);
+				}
+			});
+		}
+	}
+	
+	@Override
+	public void onClick(View v) {
+		switch(v.getId())
+		{
+		
+			
+		case R.id.relative_title:
+			finish();
+			break;
+			
+		}
+		
+	}
+		
+	
+	
+	
+
+}

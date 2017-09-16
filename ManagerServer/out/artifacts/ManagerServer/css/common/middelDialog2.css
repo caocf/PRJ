@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+
+/*弹出窗口*/
+.window {
+	font-size: 12px;
+	position: absolute;
+	width: 700px;
+	overflow: hidden;
+	border: 2px solid rgb(219, 219, 255);
+}
+
+.window .window-header {
+	margin: 0;
+	background: rgb(219, 219, 255);
+	width: 677px;
+	padding: 0px 0 0 45px;
+	font-weight: bold;
+	font-size: 15px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.window .window-body {
+	width: 680px;
+	height: 400px;
+	background: #fff;
+	background-position: bottom;
+	padding-left: 100px;
+}
+
+.file_div {
+	text-aglin: left;
+}
+
+.style_top1 {
+	width: 100%;
+	height: 20px;
+	background-color: #f5f7fa;
+	font-weight: bold;
+	padding-left: 10px;
+	line-height: 20px;
+}
+
+.file_class {
+	position: relative;
+	border: 0px solid red;
+	width: 100px;
+	height: 30px;
+	overflow: hidden;
+	float: left;
+}
+
+.file_class img {
+	position: relative;
+	top: 0px;
+	left: 10px;
+}
+
+.file1_button {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	text-align: left;
+	cursor: pointer;
+	filter: alpha(opacity :   0);
+	opacity: 0;
+	overflow: hidden;
+	border: 0px solid red;
+}
+
+.listTable1 {
+	margin: 0;
+	padding: 0px;
+	table-layout: automatic;
+	width: 100%;
+	text-align: center;
+}
+
+.listTable1 th {
+	font-size: 12px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	padding: 0;
+	background-color: #e6e6e6;
+}
+
+.listTable1 td {
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	font-family: SimSun;
+	font-size: 14px;
+	vertical-align: middle; /* 支持 Opera */
+}
+
+.td {
+	width: 10px;
+	border: 1px solid red;
+}
+
+.con {
+	color: #333;
+	cursor: pointer;
+}
+
+.con:hover {
+	color: #2290e5;
+}

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.JcCbCbjbxxEN" table="jc_cb_cbjbxx" schema="zjmanager">
+        <id name="cjdjh">
+            <column name="CJDJH" sql-type="varchar(150)" length="150"/>
+        </id>
+        <property name="cbdjh">
+            <column name="CBDJH" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="zwcm">
+            <column name="ZWCM" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="cjg">
+            <column name="CJG" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="cjgdm">
+            <column name="CJGDM" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="cblx">
+            <column name="CBLX" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="cblxdm">
+            <column name="CBLXDM" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="zc">
+            <column name="ZC" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="cc">
+            <column name="CC" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="ldjbc">
+            <column name="LDJBC" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="xk">
+            <column name="XK" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="xs">
+            <column name="XS" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="ckzhl">
+            <column name="CKZHL" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="zdw">
+            <column name="ZDW" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="jdw">
+            <column name="JDW" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="cskz">
+            <column name="CSKZ" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="csmz">
+            <column name="CSMZ" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="zjzgl">
+            <column name="ZJZGL" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="syr">
+            <column name="SYR" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="jyr">
+            <column name="JYR" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="jyrdh">
+            <column name="JYRDH" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

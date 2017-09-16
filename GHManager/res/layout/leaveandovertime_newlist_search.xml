@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/leaveandovertime_newlist_search_titleR"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/leaveandovertime_newlist_search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" />
+
+        <EditText
+            android:id="@+id/leaveandovertime_newlist_search_searchtextname"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/leaveandovertime_newlist_search_searchbutton"
+            android:layout_toRightOf="@+id/leaveandovertime_newlist_search_back"
+            android:background="@drawable/leave_select"
+            android:padding="0dp"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/leaveandovertime_newlist_search_searchbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/le_select" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leaveandovertime_newlist_search_titleR" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/leaveandover_newlist_search_approvalbutton"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@drawable/leave_button"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/leaveandover_newlist_approvalbutton"
+                android:textColor="#8b8b8b"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/leaveandover_newlist_search_listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/leaveandover_newlist_search_approvalbutton" />
+
+            <Button
+                android:id="@+id/leaveandover_newlist_search_approvalbutton1"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_below="@+id/leaveandover_newlist_search_listview"
+                android:background="@drawable/leave_button"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/leaveandover_newlist_approvalbutton1"
+                android:textColor="#8b8b8b"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <com.huzhouport.leaveandovertime.MultiListView
+                android:id="@+id/leaveandover_newlist_search_listview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/leaveandover_newlist_search_approvalbutton1" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

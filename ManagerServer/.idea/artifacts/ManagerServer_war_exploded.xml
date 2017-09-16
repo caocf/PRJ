@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="ManagerServer:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ManagerServer</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ManagerServer" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring MVC-4.1.6.RELEASE" />
+          <element id="library" level="project" name="Spring-4.3.0.RELEASE" />
+          <element id="library" level="project" name="Hibernate 4.2.2-4.2.2" />
+          <element id="library" level="project" name="jackson-annotations-2.6.0-rc4" />
+          <element id="library" level="project" name="commons-dbcp2-2.1.1" />
+          <element id="library" level="project" name="commons-cli-1.2" />
+          <element id="library" level="project" name="asm-3.3.1" />
+          <element id="library" level="project" name="poi-3.10-FINAL-20140208" />
+          <element id="library" level="project" name="sitemesh-2.4.2" />
+          <element id="library" level="project" name="json" />
+          <element id="library" level="project" name="netty-all-4.0.14.Final" />
+          <element id="library" level="project" name="cas-client-core-3.1.9" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="ManagerServer/web/Web" />
+    </root>
+  </artifact>
+</component>

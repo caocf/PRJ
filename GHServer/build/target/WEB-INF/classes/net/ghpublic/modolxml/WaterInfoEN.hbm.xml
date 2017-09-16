@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.ghpublic.modol.WaterInfoEN" table="water_info" schema="zjport">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="updatetime">
+            <column name="updatetime" sql-type="datetime"/>
+        </property>
+        <property name="whatchpoint">
+            <column name="whatchpoint" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="swsz">
+            <column name="SWSZ" sql-type="float" precision="-1"/>
+        </property>
+        <property name="syl">
+            <column name="SYL" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="ryl">
+            <column name="RYL" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="cjjx">
+            <column name="CJJX" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="cwj">
+            <column name="CWJ" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <many-to-one name="region" lazy="false">
+            <column name="region"  not-null="false"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

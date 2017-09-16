@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="smacklibs">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/smacklibs" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/smacklibs" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/smacklibs" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/smacklibs" recursive="false" type="SOURCES" />
+  </library>
+</component>

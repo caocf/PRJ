@@ -1,0 +1,371 @@
+package com.hxkg.mainfragment;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.kymjs.kjframe.KJHttp;
+import org.kymjs.kjframe.http.HttpCallBack;
+import org.kymjs.kjframe.http.HttpParams;
+import org.kymjs.kjframe.utils.KJLoger;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
+import com.ab.activity.AbActivity;
+import com.ab.util.AbDialogUtil;
+import com.gh.modol.News;
+import com.gh.modol.RegionList;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.ActivityNewsFrom;
+import com.hztuen.gh.activity.Adapter.NewListAdapter;
+import com.hztuen.gh.activity.Adapter.PositionAdapter;
+import com.hztuen.gh.contact.contants;
+import com.hztuen.gh.widge.HomeSecondHeaderView;
+import com.hztuen.lvyou.utils.Util;
+import com.hztuen.position.PositionActivity;
+
+/**
+ * @author zzq
+ * @DateTime 2016年7月12日 下午4:17:22
+ */
+public class MainFramentNewsActivity extends AbActivity{
+	private TextView newslistback;
+	private Button newsfrom;
+	private PullToRefreshListView newslistview;
+	private List<News> newslist ;
+	private NewListAdapter newsAdapter;
+
+	private HomeSecondHeaderView importantnews;
+	private HomeSecondHeaderView vocationstate;
+	private HomeSecondHeaderView mediaforcus;
+	String Type="港航要闻";
+	String Region="嘉兴";
+	private int marker = 0;
+	private int Page = 1;
+	private int totolrows = 0;//数据总量
+	protected static final String TAG = MainFramentNewsActivity.class.getSimpleName();
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_newlist);
+		newslistback = (TextView) findViewById(R.id.newslist_back);
+		newsfrom = (Button) findViewById(R.id.newsfrom);
+		newslistview = (PullToRefreshListView) findViewById(R.id.newslistview);
+		importantnews = (HomeSecondHeaderView) findViewById(R.id.importantnews);
+		vocationstate = (HomeSecondHeaderView) findViewById(R.id.vocationstate);
+		mediaforcus = (HomeSecondHeaderView) findViewById(R.id.mediaforcus);
+
+		Intent intent = getIntent();
+		if(intent.getStringExtra("title")!=null){
+			String title=intent.getStringExtra("title");
+			newslistback.setText(title);
+			importantnews.setTitle("港航通知");
+			vocationstate.setTitle("航行通告");
+			mediaforcus.setTitle("行政通知");
+			marker = 1;
+		}
+
+		SharedPreferences preferences= getSharedPreferences("Data", 0);
+		Region=preferences.getString("cityname", "杭州");
+		newsfrom.setText(Region);
+
+		//		newslistview.setDividerHeight(0);
+		//新闻二级标题单机事件
+		importantnews.setOnClickListener(onclicklistener);
+		vocationstate.setOnClickListener(onclicklistener);
+		mediaforcus.setOnClickListener(onclicklistener);
+		//返回按钮单机事件
+		newslistback.setOnClickListener(onclicklistener);
+		newslist = new ArrayList<News>();
+		//新建适配器
+		newsAdapter = new NewListAdapter(MainFramentNewsActivity.this,newslist,marker);
+		newslistview.setAdapter(newsAdapter);
+		//新闻列表的额触摸事件
+		//		newslistview.setOnItemClickListener(onitemclicklistener);
+		newsfrom.setOnClickListener(onclicklistener);
+		init();
+		newslistview.setOnRefreshListener(new OnRefreshListener2<ListView>(){
+
+			@Override
+			public void onPullDownToRefresh(
+					PullToRefreshBase<ListView> refreshView) {
+				// TODO Auto-generated method stub
+				newslist.clear();	
+				Page=1;
+				RefrashTask();
+			}
+			@Override
+			public void onPullUpToRefresh(
+					PullToRefreshBase<ListView> refreshView) {
+				// TODO Auto-generated method stub
+				Page++;
+				if(totolrows==0){
+					Toast.makeText(getApplicationContext(), "已加载完全部数据", Toast.LENGTH_SHORT).show();
+					newslistview.postDelayed(new Runnable() {
+						@Override
+						public void run() {
+							newslistview.onRefreshComplete();
+						}
+					}, 1000);
+				}else {
+					RefrashTask();
+				}
+			}
+
+		});
+	}
+	public void init(){
+		AbDialogUtil.showProgressDialog(MainFramentNewsActivity.this, 0,
+				"信息加载中...");
+		new Handler().postDelayed(new Runnable() {
+
+			@Override
+			public void run() {
+				RefrashTask();
+			}
+		}, 1000);
+
+	}
+	//	public OnItemClickListener onitemclicklistener = new OnItemClickListener(){
+	//
+	//		@Override
+	//		public void onItemClick(AdapterView<?> parent, View view, int position,
+	//				long id) {
+	//			// TODO Auto-generated method stub
+	//			switch (parent.getId()){
+	//			case R.id.newslistview:
+	//				expressItemClick(position);//position 代表你点的哪一个
+	//				break;
+	//			}
+	//		}
+	//
+	//		private void expressItemClick(int position) {
+	//			// TODO Auto-generated method stub
+	//			String newsinfotitle = newslist.get(position).getTitle();
+	//			String newsinfoupdatetime = newslist.get(position).getUpdatetime();
+	//			String newsinfo = newslist.get(position).getContent();
+	//			String newsid = newslist.get(position).getId();
+	//			Intent intent = new Intent();
+	//			intent.putExtra("infonewsid", newsid);
+	//			intent.putExtra("infonewstitle", newsinfotitle);
+	//			intent.putExtra("infonewsupdatetime", newsinfoupdatetime);
+	//			intent.putExtra("infonewsinfo", newsinfo);
+	//			intent.putExtra("marker", marker);
+	//			intent.setClass(MainFramentNewsActivity.this,FramentNewsInfo.class);
+	//			startActivity(intent);
+	//			//看你需不需要返回当前界面，如果点返回需要返回到当前界面，就不用这个
+	//		}
+	//	};
+	public OnClickListener onclicklistener = new OnClickListener(){
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()){
+			case R.id.newslist_back:
+				finish();
+				break;
+			case R.id.importantnews:		
+				Type=importantnews.getTitle();
+				initSecond();	
+				importantnews.setIsClick(true);;
+				break;
+			case R.id.vocationstate:
+				Type=vocationstate.getTitle();
+				initSecond();
+				vocationstate.setIsClick(true);;
+				break;
+			case R.id.mediaforcus:
+				Type=mediaforcus.getTitle();
+				initSecond();
+				mediaforcus.setIsClick(true);;
+				break;
+			case R.id.newsfrom:
+				Intent intent = new Intent(MainFramentNewsActivity.this,ActivityNewsFrom.class);
+				intent.putExtra("city", Region);
+				startActivityForResult(intent, 1000);
+				break;
+			default:
+				break;
+			}
+		}
+	};
+	protected void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		switch (resultCode) {
+		case 1000:
+			Region="浙江省";
+			newsfrom.setText("浙江");
+			newslist.clear();
+			init();
+			break;
+		case 1001:
+			Region="杭州";
+			newsfrom.setText("杭州");
+			newslist.clear();
+			init();
+			break;
+		case 1002:
+			Region="宁波";
+			newsfrom.setText("宁波");
+			newslist.clear();
+			init();
+			break;
+		case 1003:
+			Region="温州";
+			newsfrom.setText("温州");
+			newslist.clear();
+			init();
+			break;
+		case 1004:
+			Region="绍兴";
+			newsfrom.setText("绍兴");
+			newslist.clear();
+			init();
+			break;
+		case 1005:
+			Region="湖州";
+			newsfrom.setText("湖州");
+			newslist.clear();
+			init();
+			break;
+		case 1006:
+			Region="嘉兴";
+			newsfrom.setText("嘉兴");
+			newslist.clear();
+			init();
+			break;
+		case 1007:
+			Region="金华";
+			newsfrom.setText("金华");
+			newslist.clear();
+			init();
+			break;
+		case 1008:
+			Region="衢州";
+			newsfrom.setText("衢州");
+			newslist.clear();
+			init();
+			break;
+		case 1009:
+			Region="台州";
+			newsfrom.setText("台州");
+			newslist.clear();
+			init();
+			break;
+		case 1010:
+			Region="丽水";
+			newsfrom.setText("丽水");
+			newslist.clear();
+			init();
+			break;
+		case 1011:
+			Region="舟山";
+			newsfrom.setText("舟山");
+			newslist.clear();
+			init();
+			break;
+		default:
+			break;
+		}
+	}
+	public void initSecond(){
+		importantnews.setIsClick(false);
+		vocationstate.setIsClick(false);
+		mediaforcus.setIsClick(false);
+		newslist.clear();
+		init();
+	}
+	private void RefrashTask() {
+		// TODO Auto-generated method stub
+		//访问网络
+		KJHttp kjh = new KJHttp();
+		List<String> aa = new ArrayList<String>();
+		aa.add("Region="+Region);
+		aa.add("Type="+Type);
+		aa.add("Page="+Page);
+		HttpParams params = null;
+		try {
+			params = Util.prepareKJparams(aa);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//访问地址
+		String toUrl = contants.newslist_url;
+		if(params == null){
+			//提示参数制造失败
+			Util.getTip(getApplicationContext(), "构造参数失败");
+		}else if(!toUrl.equals("")){
+			kjh.post(toUrl, params,false,new HttpCallBack() {
+				@Override
+				public void onSuccess(Map<String, String> headers, byte[] t) {
+					super.onSuccess(headers, t);
+					newslistview.onRefreshComplete();
+					// 获取cookie
+					KJLoger.debug("===" + headers.get("Set-Cookie"));
+					Log.i(TAG+":kymjs---http", new String(t));
+					String result = new String(t).trim();
+					try {
+						JSONObject resultJO = new JSONObject(result);
+						//String resultMsg = resultJO.getString("resultMsg");
+						Log.i(TAG+":kymjs---resultMsg", resultJO.toString());
+						JSONObject  res = new JSONObject(result);
+						JSONArray data = res.getJSONArray("data");
+						totolrows = res.getInt("total");
+						for(int i = 0;i<data.length();i++){
+							JSONObject temp = data.getJSONObject(i);
+							News news= new News();
+							RegionList region = new RegionList();
+							news.setId(temp.getString("id"));
+							news.setTitle(temp.getString("title"));
+							news.setContent(temp.getString("content"));
+							String times= temp.getString("updatetime");
+							if(times.length()>10){
+								times = times.substring(0, 10);
+							}
+							news.setUpdatetime(times);
+							news.setRegion(temp.getString("region"));
+							news.setNewstype(temp.getString("newstype"));
+							news.setFiledir(temp.getString("filedir"));
+							news.setImdir(temp.getString("imdir"));		
+
+							newslist.add(news);
+
+						}
+						//						newslistview.setAdapter(newsAdapter);		、
+						newsAdapter.notifyDataSetChanged();
+						//						newsAdapter.pre(newslist);
+						AbDialogUtil.removeDialog(MainFramentNewsActivity.this);
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+				}
+				@Override
+				public void onFailure(int errorNo, String strMsg) {
+					//关闭进度条
+					Log.d(TAG, strMsg);
+					super.onFailure(errorNo, strMsg);
+				}
+			});
+		}
+	}
+}

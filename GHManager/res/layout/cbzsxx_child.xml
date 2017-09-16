@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bs_cbzsxx_table"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp" >
+
+    <TableRow
+        android:id="@+id/cbzsxx_tr01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/bs_cbzsxx_txt011"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginRight="5dp"
+            android:text="@string/bs_cbzsxx_txt00"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbzsxx_txt012"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="12sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/cbzsxx_tr02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/bs_cbzsxx_txt021"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/bs_cbzsxx_txt02"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbzsxx_txt022"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="12sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/cbzsxx_tr03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/bs_cbzsxx_txt031"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/bs_cbzsxx_txt03"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bs_cbzsxx_txt032"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="12sp" />
+    </TableRow>
+
+</TableLayout>

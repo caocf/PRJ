@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+body {
+	font-family: 微软雅黑;
+}
+
+
+/* 阴影 */
+#fullbg {
+	background-color: black;
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: 5;
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+/* 浮动对话框 */
+#ShowLoadingDiv {
+	background-color: #fff;
+	left: 50%;
+	margin: 0 0 0 -80px;
+	padding: 1px;
+	position: fixed !important; 
+	position: absolute;
+	top: 40%;
+	z-index: 5;
+	border-radius: 5px;
+	display: none;
+}
+.loadingDiv {
+	background-color: #fff;
+	left: 50%;
+	margin: 0 0 0 -80px;
+	padding: 1px;
+	position: fixed !important; 
+	position: absolute;
+	top: 40%;
+	z-index: 5;
+	border-radius: 5px;
+	display: none;
+}
+#ShowLoadingDiv p {
+	margin: 0;
+}
+
+#ShowLoadingDiv p.close {
+	text-align: right;
+	padding-right: 10px;
+}
+
+#ShowLoadingDiv p.close a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#img_ShowLoadingDiv {
+	margin: 0px;
+	padding: 0px;
+}

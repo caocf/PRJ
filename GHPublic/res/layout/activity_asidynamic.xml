@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/title_backgrundmenu">
+
+        <ImageView
+            android:id="@+id/around_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:src="@drawable/image_button_back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_search"
+                android:drawablePadding="16dp"
+                android:textSize="14sp"
+                android:hint="请输入船舶号" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="7dp"
+                android:background="#003771"
+                android:text="TextView" />
+        </LinearLayout>
+    </LinearLayout>
+
+  
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_weight="1.0"
+            android:text="停靠安全区域"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <CheckedTextView
+            android:id="@+id/c_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="21dp"
+            android:background="@drawable/ic_selector_ais_btn"
+            android:gravity="right" />
+    </LinearLayout>
+
+    <com.amap.api.maps.MapView 
+       xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+</com.amap.api.maps.MapView>
+ 
+
+</LinearLayout>

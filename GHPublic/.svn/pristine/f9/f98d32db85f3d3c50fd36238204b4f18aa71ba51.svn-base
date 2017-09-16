@@ -1,0 +1,278 @@
+package com.hxkg.mainfragment;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.zip.Inflater;
+
+import org.apache.http.params.HttpParams;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.kymjs.kjframe.KJHttp;
+import org.kymjs.kjframe.http.HttpCallBack;
+import org.kymjs.kjframe.utils.KJLoger;
+
+import com.hxkg.ghpublic.R;
+import com.hxkg.mainfragment.share.pop.SharePopupWindow;
+import com.hztuen.gh.activity.LoginActivity;
+import com.hztuen.gh.contact.Contact;
+import com.hztuen.gh.contact.contants;
+import com.hztuen.lvyou.utils.SystemStatic;
+import com.hztuen.lvyou.utils.Util;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnTouchListener;
+import android.view.inputmethod.EditorInfo;
+import android.webkit.WebSettings.LayoutAlgorithm;
+import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.TextView.OnEditorActionListener;
+
+/**
+ * @author zzq
+ * @DateTime 2016年7月12日 下午4:16:43
+ */
+public class FramentNewsInfo extends Activity {
+	protected static final String TAG = FramentNewsInfo.class.getSimpleName();
+
+	private TextView newsinfotitle;
+	private TextView newsinfoupdatetime;
+	private TextView newsinfoinfo;
+	private WebView newsinfocontent;
+	private TextView newslist_back;
+	private LinearLayout myLayout;
+	private ImageButton imageshare;
+	private ImageButton message;
+	private EditText write;
+	private Button sendmessage;
+	private Context context;
+	private LinearLayout bottom;
+	String newsid;
+	String newstitle;
+	String newsupdatetime;
+	String newsinfo;
+	String username;
+	private int marker = 0;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_newinfo);
+		newsinfotitle = (TextView) findViewById(R.id.newsinfotitle);
+		newsinfoupdatetime = (TextView) findViewById(R.id.newsinfoupdate);
+		newsinfocontent = (WebView) findViewById(R.id.newsinfocontent);
+		
+		
+//		//支持javascript
+//		newsinfocontent.getSettings().setJavaScriptEnabled(true); 
+//		// 设置可以支持缩放 
+//		newsinfocontent.getSettings().setSupportZoom(true); 
+////		// 设置出现缩放工具 
+//		newsinfocontent.getSettings().setBuiltInZoomControls(true);
+//		//扩大比例的缩放
+//		newsinfocontent.getSettings().setUseWideViewPort(true);
+//		//自适应屏幕
+//		newsinfocontent.getSettings().setLayoutAlgorithm(LayoutAlgorithm.SINGLE_COLUMN);
+//		newsinfocontent.getSettings().setLoadWithOverviewMode(true);
+//		
+		
+		newslist_back = (TextView) findViewById(R.id.newslist_back);
+
+		imageshare = (ImageButton) findViewById(R.id.imageshare);
+		message = (ImageButton) findViewById(R.id.message);
+		myLayout = (LinearLayout) findViewById(R.id.mylayout);
+		write = (EditText) findViewById(R.id.write);
+		sendmessage = (Button) findViewById(R.id.sendmessage);
+		bottom = (LinearLayout) findViewById(R.id.linearLayout1);
+		
+		imageshare.setOnClickListener(onclicklistener);
+		newslist_back.setOnClickListener(onclicklistener);
+		message.setOnClickListener(onclicklistener);
+		sendmessage.setOnClickListener(onclicklistener);
+		write.setOnFocusChangeListener(onfocus);
+
+		getNewsInfo();
+		newsinfotitle.setText(newstitle);
+		newsinfoupdatetime.setText(newsupdatetime);
+		loadDataWithBaseURL();
+
+	}
+	public OnFocusChangeListener onfocus = new OnFocusChangeListener() {
+
+		@Override
+		public void onFocusChange(View v, boolean hasFocus) {
+			// TODO Auto-generated method stub
+			if(hasFocus){
+				imageshare.setVisibility(View.GONE);
+				message.setVisibility(View.GONE);
+				sendmessage.setVisibility(View.VISIBLE);
+				write.setGravity(Gravity.LEFT);
+
+			}else{
+				imageshare.setVisibility(View.GONE);
+				message.setVisibility(View.VISIBLE);
+				sendmessage.setVisibility(View.GONE);
+				write.setGravity(Gravity.CENTER);
+			}
+		}
+	};
+
+	public OnClickListener onclicklistener = new OnClickListener(){
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(v.getId()){
+			case R.id.newslist_back:
+				finish();
+				break;
+			case R.id.imageshare:
+				//启动popup
+				startActivity(new Intent(FramentNewsInfo.this,SharePopupWindow.class));
+				break;
+			case R.id.sendmessage:
+				try {
+					if(null != SystemStatic.userName && SystemStatic.userName.equals("")){
+						Toast.makeText(getApplicationContext(), "评论需要登录的哟...", Toast.LENGTH_SHORT).show();
+						Intent intent = new Intent();
+						intent.setClass(getApplicationContext(), LoginActivity.class);
+						startActivity(intent);
+					}else{
+						sendmessage();
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			case R.id.message:
+				Intent intent = new Intent();
+				intent.putExtra("newsid", newsid);
+				intent.setClass(getApplicationContext(), NewsComment.class);
+				startActivity(intent);
+			default:
+				break;
+			}
+		}
+
+	};
+
+	public void getNewsInfo(){
+		Intent intent = getIntent();
+		newsid = intent.getStringExtra("infonewsid");
+		newstitle = intent.getStringExtra("infonewstitle");
+		newsupdatetime = intent.getStringExtra("infonewsupdatetime");
+		newsinfo = intent.getStringExtra("infonewsinfo");
+		marker = intent.getIntExtra("marker", 0);
+		if(marker==1){
+			/*处理通知公告信息不能评论*/
+			bottom.setVisibility(View.GONE);
+		}
+	}
+	public void loadDataWithBaseURL (){
+		newsinfocontent.loadDataWithBaseURL("", newsinfo, "text/html", "UTF-8","");  
+	}
+
+	public void sendmessage() throws Exception{
+		String content = write.getText().toString();
+		if(content.equals("")||content.equals(" ")){
+			Toast.makeText(getApplicationContext(), "请输入评论文字....", Toast.LENGTH_SHORT).show();
+			return;
+		}
+		SharedPreferences myshare = getSharedPreferences(Contact.user_ache,MODE_PRIVATE);
+		username = SystemStatic.userName;
+//		if(username == null){
+//			Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT).show();
+//			Intent mIntent = new Intent();
+//			mIntent.setClass(getApplicationContext(), LoginActivity.class);
+//			
+//		}
+		//访问网络
+		KJHttp kj = new KJHttp();
+		List<String> aa = new ArrayList<String>();
+
+		aa.add("Newsid="+newsid);
+//		System.out.println(newsid);
+		aa.add("Content="+content);
+//		System.out.println(content);
+		aa.add("Username="+username);
+//		System.out.println(username);
+		//访问地址
+		org.kymjs.kjframe.http.HttpParams params = null;
+		try {
+			params = Util.prepareKJparams(aa);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//访问地址
+		String toUrl = contants.sendcomment;
+		if(params == null || username == null){
+			//提示参数制造失败
+			Util.getTip(getApplicationContext(), "构造参数失败");
+		}else if(!toUrl.equals("")){
+			kj.post(toUrl, params, false, new HttpCallBack(){
+
+				@Override
+				public void onSuccess(Map<String, String> headers, byte[] t) {
+					// TODO Auto-generated method stub
+					super.onSuccess(headers, t);
+					// 获取cookie
+					KJLoger.debug("===" + headers.get("Set-Cookie"));
+					Log.i(TAG+":kymjs---http", new String(t));
+					String result = new String(t).trim();
+
+					try{
+						JSONObject res = new JSONObject(result);
+						int resultcode = res.getInt("resultcode");
+						if(resultcode>=0){
+							Toast.makeText(getApplicationContext(), "提交成功", Toast.LENGTH_SHORT).show();
+							write.setText("");
+							write.clearFocus();
+							Intent intent = new Intent();
+							intent.putExtra("newsid", newsid);
+							intent.setClass(getApplicationContext(), NewsComment.class);
+							startActivity(intent);
+						}else if(resultcode==-1){
+							Toast.makeText(getApplicationContext(), "提交失败", Toast.LENGTH_SHORT).show();
+						}else{
+							Toast.makeText(getApplicationContext(), "您的网络不稳定，请检查网络", Toast.LENGTH_SHORT).show();
+						}
+					}catch(Exception e){
+						e.printStackTrace();
+					}
+				}
+			});
+		}//else这里结束
+	}
+	
+//	@Override  
+//    public boolean onKeyDown(int keyCode, KeyEvent event)  
+//    {  
+//        if (keyCode == KeyEvent.KEYCODE_BACK )  
+//        {  
+//        	
+//        }  
+//          
+//        return false;  
+//          
+//    }  
+	
+}

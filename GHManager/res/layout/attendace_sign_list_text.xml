@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:shrinkColumns="1"
+    android:stretchColumns="1"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_marginTop="2dp">
+
+        <!-- <TextView
+            android:id="@+id/attendace_sign_list_sname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:padding="3dp"
+            android:text="签到"
+            /> -->
+            <ImageView
+            android:id="@+id/schedule_addImage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="left|center_vertical"
+            android:background="@drawable/signinbutton"
+            />
+
+        <TextView
+            android:id="@+id/attendace_sign_list_slocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="left"
+            android:textSize="17sp" 
+            android:text="地点"
+           />
+       
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:id="@+id/attendace_sign_list_suser"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="姓名"
+           />
+         <TextView
+            android:id="@+id/attendace_sign_list_stime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="left"
+            android:text="时间"
+            />
+    
+  </TableRow>
+</TableLayout>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.publicdata.NewsEN" table="news_base" schema="zjmanagerpub">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="title">
+            <column name="title" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="text"  not-null="true"/>
+        </property>
+        <property name="updatetime">
+            <column name="updatetime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="filedir">
+            <column name="filedir" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="imdir">
+            <column name="imdir" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="region">
+            <column name="region" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="newstype">
+            <column name="newstype" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="opinon">
+        <column name="opinon" sql-type="varchar(255)" not-null="false"/>
+    </property>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="center|left">
+  <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"       
+        android:src="@drawable/ic_selector"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:onClick="onBack"/>
+        <TextView
+            android:id="@+id/newslist_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="1"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/newsfrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="right"
+            android:background="#00000000"
+            android:drawableRight="@drawable/icon_right"
+            android:gravity="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#F4F4F4" >
+
+        <net.hxkg.news.HomeSecondHeaderView
+            android:id="@+id/importantnews"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            isClick="true"
+            title=""
+            android:gravity="center" >
+
+        </net.hxkg.news.HomeSecondHeaderView>
+
+        <net.hxkg.news.HomeSecondHeaderView
+            android:id="@+id/vocationstate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            isClick="false"
+            title="行业动态"
+            android:gravity="center" >
+
+        </net.hxkg.news.HomeSecondHeaderView>
+
+        <net.hxkg.news.HomeSecondHeaderView
+            android:id="@+id/mediaforcus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            isClick="false"
+            title="媒体聚焦"
+            android:gravity="center" >
+
+        </net.hxkg.news.HomeSecondHeaderView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/newslistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />  
+
+</LinearLayout>

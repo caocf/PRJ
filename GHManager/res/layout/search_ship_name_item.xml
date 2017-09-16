@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"                   
+   				android:focusableInTouchMode="true"
+                android:background="#ffff" >
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="19dp"/>
+
+                <TextView
+                    android:id="@+id/text1_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"                    
+                    android:layout_marginTop="19dp"
+                    android:layout_toRightOf="@+id/img_search"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text="浙萧山货23333"
+                    android:paddingBottom="19dp"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+               
+            </RelativeLayout>
+    
+
+</LinearLayout>

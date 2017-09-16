@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="cas-client-core-3.1.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/cas-client-core-3.1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/casclient.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.ghpublic.modol.CompanyBaseEN" table="company_base" schema="zjport">
+        <id name="id" >
+        <column name="id"/>
+        <generator class="increment"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(225)" length="225" not-null="false"/>
+        </property>
+        <property name="regnumber">
+            <column name="regnumber" sql-type="varchar(225)" length="225" not-null="false"/>
+        </property>
+        <property name="binddate">
+            <column name="binddate"  not-null="false"/>
+        </property>
+        <property name="business">
+            <column name="business"  not-null="false"/>
+        </property>
+        <property name="contactname">
+            <column name="contactname"  not-null="false"/>
+        </property>
+        <property name="tel">
+            <column name="tel"  not-null="false"/>
+        </property>
+        <set name="companyCertEN" lazy="false">
+            <key column="companyid"></key>
+            <one-to-many  class="net.ghpublic.modol.CompanyCertEN" />
+        </set>
+
+        <many-to-one name="userEN" class="net.ghpublic.modol.PublicUserEN" cascade="none" insert="true"
+                     update="true" lazy="false" >
+            <column name="userid"/>
+        </many-to-one>
+        <many-to-one name="statusEN" class="net.ghpublic.modol.PublicuserStatusEN" cascade="none" insert="true"
+                     update="true" lazy="false" >
+            <column name="status"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

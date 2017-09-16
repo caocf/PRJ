@@ -1,0 +1,86 @@
+
+body {
+	font-size: 12px;
+}
+
+.style_top {
+	width: 100%;
+	height: 36px;
+	background-color: rgb(237, 247, 250);
+	font-weight: bold;
+	padding-left: 10px;
+	line-height: 36px;
+}
+.style_top img{
+	margin-top: 10px;
+	 
+}
+.content {
+	margin-left: 20px;
+	width: 710px;
+	overflow-x: hidden;
+}
+
+#content_one {
+	height: 70px;
+}
+
+#content_one div {
+	margin-top: 16px;
+}
+
+#content_one_span_1 {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#content_one_span_2 {
+	margin-left: 10px;
+}
+
+#content_one_span_2 a {
+	color: blue;
+	text-decoration: none;
+}
+
+#content_two {
+	height: 170px;
+}
+
+#content_two div,#content_three div{
+	margin-top: 12px;
+}
+
+#content_three {
+	
+}
+
+#content_two span a,#content_three span a,#content_four span a ,#content_three_table a{
+	color: blue;
+	text-decoration: none;
+}
+
+#content_four {
+	height: 50px;
+}
+
+#content_four span {
+	padding-right: 30px;
+	line-height: 50px;
+}
+
+.Span_num {
+	color: red;
+	font-weight: bold;
+}
+
+#content_three_table{
+font-size: 13px;
+}
+#content_three_table td{
+height: 23px;
+}
+.clickword{
+	color: #0099CC;
+	cursor: pointer;
+}

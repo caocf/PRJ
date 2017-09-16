@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.LawBaseEN" table="law_base" schema="zjmanager">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="firstman">
+            <column name="firstman" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="secman">
+            <column name="secman" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="target">
+            <column name="target" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="reason">
+            <column name="reason" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="detail">
+            <column name="detail" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="location">
+            <column name="location" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="checker">
+            <column name="checker" sql-type="varchar(255)"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="sumbdate">
+            <column name="sumbdate"  not-null="true"/>
+        </property>
+        <property name="descr">
+            <column name="descr" />
+        </property>
+        <property name="isllegal">
+            <column name="result" />
+        </property>
+        <property name="lat">
+            <column name="lat" />
+        </property>
+        <property name="lon">
+            <column name="lon" />
+        </property>
+        <property name="issimple">
+            <column name="issimple" />
+        </property>
+        <many-to-one name="typeEN" class="net.modol.LawTypeEN" cascade="none" insert="true" lazy="false" update="true">
+            <column name="typeEN" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

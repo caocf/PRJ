@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="commoner">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/commoner" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/commoner/bjsGH.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/commoner" recursive="false" />
+  </library>
+</component>

@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+#p1{
+	margin: 0;
+	padding: 0;
+	width: 810px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.totaldiv {
+	margin: 0;
+	padding: 60px 10px 10px 10px;
+}
+
+#dateList {
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+	width: 800px;
+}
+#dateList th {
+	margin:  0;
+	padding:0;
+	font-size: 14px;
+}
+#dateList td {
+	margin:  0;
+	padding:10px 0 0 0;
+}
+#dateList1 {
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+	width: 800px;
+}
+#dateList1 th {
+	margin:  0;
+	padding:0;
+	font-size: 14px;
+}
+#dateList1 td {
+	margin: 0;
+	padding:10px 0 0 0;
+	
+}
+.shipbooklist div{
+	margin:  0;
+	padding:10px 0 0 10px;
+	color: #666
+}
+#th1 {
+	margin:  0;
+	padding:0;
+	font-size: 12px;
+}

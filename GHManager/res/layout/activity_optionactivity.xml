@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+         android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center">
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:src="@null"
+        android:background="@drawable/ic_selector"
+        android:onClick="onViewClick"/>
+        <TextView 
+            android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="危货申报管理"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+        android:layout_gravity="center"/>
+        
+        
+        </LinearLayout>
+        
+    
+    <ImageButton 
+         android:id="@+id/ships"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"        
+        android:background="@drawable/ic_declaration_boat"
+        android:onClick="onViewClick"/>
+        
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="危险船舶进港审批"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>  
+         
+<ImageButton 
+    android:id="@+id/goods"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_gravity="center"        
+        android:background="@drawable/ic_declaration_wharf"
+        android:onClick="onViewClick"/>
+        
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="危险货物作业审批"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+  
+
+</LinearLayout>

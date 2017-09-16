@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/comprehensive_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/comprehensive_main_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/comprehensive_main_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/comprehensive_main_back"
+            android:gravity="left|center_vertical"
+            android:text="@string/knowledge_button"
+             android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+   
+
+           <ListView
+               android:id="@+id/comprehensive_main_list"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/comprehensive_frameLayout"
+               android:listSelector="@color/transparent" >
+
+            </ListView>
+
+          
+
+</RelativeLayout>

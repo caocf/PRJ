@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/parent_view2"
+    android:background="#f5f5f5"  >
+    
+    
+    <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+         android:background="@drawable/title_backgrundmenu">
+
+        <RelativeLayout
+            android:id="@+id/relative_title_final"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_selector" 
+            android:background="@null"
+            android:onClick="onView"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:text="危险货物作业详情"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+        
+        </RelativeLayout>        
+    </RelativeLayout>
+   
+    
+     <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <TextView 
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"/>
+            
+       
+         <TextView 
+            android:id="@+id/status"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:background="#ffffff"
+             android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/text9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>  
+</LinearLayout>
+    
+         <TextView
+	        android:id="@+id/forcus1"
+	        android:layout_below="@+id/relative1"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        
+	        android:background="#d7d7d7"
+	        android:text="TextView" />     
+          <TextView
+	        android:layout_below="@+id/relative1"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:layout_marginTop="20dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" /> 
+    
+    <RelativeLayout 
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text1"
+            android:layout_width="100dp"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="船舶"/>
+         <TextView 
+            android:id="@+id/shipname"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>         
+        
+    </RelativeLayout>
+     <TextView
+	        
+	        android:layout_below="@+id/relative1"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+      <RelativeLayout 
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forcus1"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text2"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="始发港"/>
+         <TextView 
+            android:id="@+id/start"
+            
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>      
+    </RelativeLayout>
+     <TextView	
+         	android:id="@+id/forcus2"  
+         	android:layout_below="@+id/relative2"      
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+      <RelativeLayout 
+        android:id="@+id/relative3"
+        android:layout_below="@+id/forcus2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text3"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+             android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="目的港"/>
+         <TextView 
+            android:id="@+id/target"
+             android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>   
+    </RelativeLayout>
+     <TextView
+          	android:id="@+id/forcus3"	
+          	android:layout_below="@+id/relative3"        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+     
+     
+      <RelativeLayout 
+        android:id="@+id/relative4"
+        
+        android:layout_below="@+id/forcus15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text4"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="货物名称"/>
+         <TextView 
+            android:id="@+id/goods"
+            android:textColor="#333333"
+            android:textSize="16sp"
+             android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>   
+    </RelativeLayout>
+     <TextView
+         	android:id="@+id/forcus4"
+         	android:layout_below="@+id/relative4"	        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+     
+     <RelativeLayout 
+        android:id="@+id/relative5"
+        android:layout_below="@+id/forcus4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text5"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+             android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="危货类型"/>
+         <TextView 
+            android:id="@+id/type"
+            android:textColor="#333333"
+            android:textSize="16sp"
+             android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>   
+    </RelativeLayout>
+     <TextView
+         	android:id="@+id/forcus5"
+         	android:layout_below="@+id/relative5"	        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+     
+     
+     <RelativeLayout 
+        android:id="@+id/relative6"
+        android:layout_below="@+id/forcus5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true" 
+		android:focusableInTouchMode="true" 
+        
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text6"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="货物总量"/>
+         <TextView
+            android:id="@+id/tons"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/text6"
+            android:layout_width="165dp"
+            android:background="@null"
+            android:layout_height="wrap_content" />  
+    </RelativeLayout>
+    
+     <TextView
+         	android:id="@+id/forcus7"
+         	android:layout_below="@+id/relative6"	        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+     
+      <RelativeLayout 
+        android:id="@+id/relative8"
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text8"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="作业开始时间"/>
+         <TextView 
+            android:id="@+id/time"
+            android:textColor="#333333"
+            android:textSize="16sp"
+             android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>  
+    </RelativeLayout>
+    <TextView        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7" />
+    <RelativeLayout 
+        android:id="@+id/relative9"
+        
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text9"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_width="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="作业结束时间"/>
+         <TextView 
+            android:id="@+id/endtime"
+            android:textColor="#333333"
+            android:textSize="16sp"
+             android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"/>  
+    </RelativeLayout>
+     <TextView
+         	android:id="@+id/forcus8"
+         	android:layout_below="@+id/relative8"	        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+      
+    
+    <TextView        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7" />
+    
+     
+       <RadioGroup
+       android:id="@+id/ra_group"
+       android:layout_width="match_parent" 
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginTop="16dp"
+       >
+       
+        <RadioButton     
+            android:id="@+id/btn_0"    
+            android:layout_width="wrap_content"     
+            android:layout_height="match_parent" 
+            android:layout_marginLeft="16dp"
+            android:text="批准"   
+            android:textSize="17.0sp"     
+            android:textColor="#333333"    
+            android:gravity="center"   
+            android:checked="false"/>   
+       
+        <RadioButton     
+            android:id="@+id/btn_1"  
+            android:layout_width="wrap_content"     
+            android:layout_height="match_parent" 
+            android:layout_marginLeft="16dp"
+          
+            android:text="不批准"  
+            android:textSize="17.0sp"  
+            android:textColor="#333333"    
+            android:gravity="center"   
+             android:checked="false"/>
+   
+   </RadioGroup>
+   
+   <EditText 
+       
+       android:id="@+id/edit_descr"
+       android:layout_width="match_parent"     
+            android:layout_height="90dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginLeft="20dp"
+       android:layout_marginTop="16dp"
+       android:padding="10dp"
+       android:background="@drawable/rectangle"
+       android:hint="请输入备注"
+       android:textSize="14sp"
+       android:textColorHint="#bebebe"
+            />
+   
+    <Button
+        android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1" 
+            android:layout_gravity="center"
+            android:text="提交"
+            android:padding="16dp"
+            android:background="#1766b1"
+            android:textColor="#ffffff"
+            android:onClick="onView"/>  
+        </LinearLayout> 
+    </ScrollView>
+
+</LinearLayout>

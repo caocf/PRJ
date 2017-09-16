@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+	<!-- 标题栏 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+       android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center">
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="16dp"  
+              
+        android:background="@drawable/ic_selector"
+        android:onClick="onClick"/>
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="离线执法管理"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:onClick="onClick"/>
+               
+        </LinearLayout>
+    <!-- 内容--> 
+   
+    <LinearLayout 
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:visibility="gone">
+        <TextView 
+             android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="自动上传"
+        android:textSize="18sp"
+        />
+        <CheckBox 
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="26dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/checkbox"
+        android:button="@null"/>
+    </LinearLayout>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#666666"
+        />
+  <ListView 
+	    android:id="@+id/list"
+	  android:layout_width="match_parent"
+    android:layout_height="match_parent"  />
+</LinearLayout>

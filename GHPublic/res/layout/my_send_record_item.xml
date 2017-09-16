@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff" >
+
+    <LinearLayout
+        android:id="@+id/liner_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forcus1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             >
+             
+            <TextView
+            android:id="@+id/forcus_title"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+           
+            android:background="#d7d7d7"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/forcus_title"
+                android:layout_marginTop="16dp"
+                android:text="浙萧山货23668"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text2_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/text2"
+                android:text="煤炭"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+            
+            
+            
+            <TextView
+                android:id="@+id/id_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_toRightOf="@+id/text2_context"
+               android:visibility="invisible"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             >
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="嘉兴港"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+            
+            <TextView
+                android:id="@+id/id_id_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="12dp"
+             >
+
+            <TextView
+                android:id="@+id/text_money"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="5000元"
+                android:textColor="#ff2323"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:text="2016-5-20"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/forcus2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relative1"
+            android:background="#d7d7d7"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_two_choose"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/liner_first" >
+
+        <LinearLayout
+            android:id="@+id/liner_two_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_revise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="修改" 
+                android:textColor="#1766b1"
+                android:textSize="16sp" />
+
+            <TextView 
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#d7d7d7" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="取消发布"
+                android:textColor="#666666"
+                android:textSize="16sp" />
+        </LinearLayout>
+                                                  
+    </RelativeLayout>
+
+      <TextView
+            android:id="@+id/text_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relative_two_choose"
+            android:background="#d7d7d7"/>
+    
+    
+    <RelativeLayout
+        android:id="@+id/relative_three_choose"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/liner_first"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/liner_three_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_send_rightnow"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="立即上报"
+                android:textColor="#1766b1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/btn_revise2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="修改"
+                android:textColor="#1766b1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#d7d7d7"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/btn_resend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="发布"
+                android:textColor="#ff2323"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/liner_three_button"
+            android:background="#d7d7d7"
+            android:text="TextView" />
+    </RelativeLayout>
+
+</RelativeLayout>

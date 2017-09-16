@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+/*主页面大致布局*/
+#container{margin:0 auto;padding:0;width:1024px;height:760px;}
+#left{float:left; width:200px; margin:0  10px 0 0;padding:0;height:760px; }
+#right{float:left; width:814px; margin:0;padding:0;height:760px;}

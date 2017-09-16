@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu" 
+         android:onClick="onBack">
+
+        <RelativeLayout
+            android:id="@+id/relative_title_final"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_selector"   
+                 android:onClick="onBack"/>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/back"
+                android:text="船舶违章详情"
+                android:textColor="#1766b1"
+                android:textSize="18sp" 
+                 android:onClick="onBack"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout 
+            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    android:divider="@drawable/linev" 
+    android:showDividers="middle|end">
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="受理号"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/SLH"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="16sp" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="受理时间"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/SLSJ"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="船名"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/ZWCM"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="案由"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/AY"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"  
+        android:gravity="center|left" >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="案发时间"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/FASJ"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="案发地点"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/FADD"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+        <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="案件类别"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/AJLB"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="主要事实"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/ZYSS"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="违法内容"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/WFNR"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="违反条款"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/WFTK"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center|left"   >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="处罚条款"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/CFTK"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center|left"   >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="处罚意见"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/CFYJ"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center|left"   >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="处罚措施 "
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/CFLB"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"
+        android:textColor="#ff2323"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="是否处罚"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/SFCF"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" 
+        android:gravity="center|left"  >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="是否结案"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/SFJA"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"  
+        android:gravity="center|left" >
+        
+        <TextView 
+           android:layout_height="wrap_content"
+        android:layout_width="80dp" 
+        android:layout_margin="16dp"
+        android:text="结案日期"
+        android:textSize="16sp"
+        android:textColor="#666666"/>
+        <TextView 
+            android:id="@+id/JARQ"
+           android:layout_height="wrap_content"
+        android:layout_width="wrap_content" 
+        android:textSize="16sp"/>
+        
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

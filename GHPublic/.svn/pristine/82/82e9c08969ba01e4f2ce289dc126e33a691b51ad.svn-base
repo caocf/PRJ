@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+     <RelativeLayout 
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        
+         <TextView
+	        android:id="@+id/forcus_title"
+	        
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+        <TextView 
+            android:id="@+id/text1"
+            android:layout_width="80dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_below="@+id/forcus_title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="报告单号："/>
+         <TextView 
+            android:id="@+id/text1_context"
+            android:layout_marginTop="14dp"
+            android:paddingBottom="14dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="12116523"/>     
+            
+          <TextView 
+            android:id="@+id/text_state"
+            android:layout_marginTop="14dp"
+            android:paddingBottom="14dp"
+            android:textColor="#f89513"
+            android:textSize="14sp"           
+            android:layout_marginRight="16dp"            
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="待审批"/>     
+    </RelativeLayout>
+    
+     <TextView
+	        android:id="@+id/forcus1"
+	        android:layout_below="@+id/relative1"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+    
+     <LinearLayout 
+         android:id="@+id/liner_first"
+         android:layout_below="@+id/forcus1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+         
+         <RelativeLayout 
+	        android:id="@+id/relative2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffff">
+	        <TextView 
+	            android:id="@+id/text2"
+	            android:layout_width="wrap_content"
+	            android:textColor="#333333"
+	            android:textSize="16sp"
+	            android:layout_marginLeft="16dp"
+	            android:layout_marginTop="16dp"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:text="浙萧山货23668"/>
+	         <TextView 
+	            android:id="@+id/text2_context"
+	            android:layout_marginTop="16dp"
+	            android:paddingBottom="12dp"
+	            android:textColor="#333333"
+	            android:textSize="16sp"
+	            android:layout_marginLeft="16dp"	         
+	            android:layout_toRightOf="@+id/text2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:text="煤炭"/>  
+	            <TextView 
+	            android:id="@+id/goods_weight"
+	            android:layout_marginTop="16dp"
+	            android:paddingBottom="12dp"
+	            android:textColor="#333333"
+	            android:textSize="16sp"	           
+	            android:layout_toRightOf="@+id/text2_context"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:text="2000"/>  
+	            <TextView 
+	            android:id="@+id/danwei"
+	            android:layout_marginTop="16dp"
+	            android:paddingBottom="12dp"
+	            android:textColor="#333333"
+	            android:textSize="16sp"	            
+	            android:layout_toRightOf="@+id/goods_weight"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:gravity="center_vertical"
+	            android:text="吨"/>                
+    </RelativeLayout>
+    
+         
+    <RelativeLayout 
+        android:id="@+id/relative3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginLeft="16dp"           
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="嘉兴港"/>
+        <ImageView 
+            android:id="@+id/point"
+            android:layout_toRightOf="@+id/text3"
+            android:background="@drawable/ic_word_arrow"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            />
+         <TextView 
+            android:id="@+id/text3_context"          
+            
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="湖州港"/>                
+    </RelativeLayout>
+    
+    
+     <RelativeLayout 
+        android:id="@+id/relative4"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+        <TextView 
+            android:id="@+id/text4"
+            android:layout_width="80dp"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:layout_marginLeft="16dp"           
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2016-5-20"/>
+                    
+    </RelativeLayout>
+    <TextView
+	        android:id="@+id/forcus2"
+	        android:layout_below="@+id/relative1"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+     </LinearLayout>
+     <RelativeLayout 
+         android:layout_below="@+id/liner_first"
+         android:id="@+id/relative_two_choose"
+        
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         >
+         
+         <LinearLayout
+             android:id="@+id/liner_two_button" 
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="horizontal">
+             <Button
+                 android:id="@+id/btn_revise" 
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="match_parent"
+                 android:background="@null"
+                 android:textColor="#1766b1"
+                 android:textSize="16sp"
+                 android:text="修改"/>
+             
+              <TextView 
+                   android:layout_width="1dp"
+			        android:layout_height="match_parent"
+			        android:background="#d7d7d7"
+			        android:text="TextView" 
+                  />
+             <Button
+                 android:id="@+id/btn_cancel"  
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:textColor="#666666"
+                 android:textSize="16sp"
+                 android:layout_height="match_parent"
+                 android:background="@null"
+                 android:text="撤销"/>
+         </LinearLayout>
+         
+         		<TextView 
+             		android:layout_below="@+id/liner_two_button"
+                   	android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#d7d7d7"
+			        android:text="TextView" 
+                  />
+     </RelativeLayout>
+     
+     <TextView 
+             		android:layout_below="@+id/relative_two_choose"
+                   	android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#d7d7d7"
+			        android:text="TextView" 
+                  />
+     
+      <RelativeLayout 
+         android:layout_below="@+id/liner_first"
+         android:id="@+id/relative_three_choose"
+         android:layout_width="match_parent"
+         android:layout_height="60dp"
+         android:visibility="gone"
+         >
+         
+         <LinearLayout
+             android:id="@+id/liner_three_button" 
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             
+             android:orientation="horizontal">
+             <Button
+                 android:id="@+id/btn_send_rightnow" 
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="match_parent"
+                 android:background="@null"
+                 android:textColor="#1766b1"
+                 android:textSize="16sp"
+                 android:text="立即上报"/>
+               <TextView 
+                   android:layout_width="1dp"
+			        android:layout_height="match_parent"
+			        android:background="#d7d7d7"
+			        android:text="TextView" 
+                  />
+             
+             <Button
+                 android:id="@+id/btn_revise2" 
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="match_parent"
+                 android:background="@null"
+                 android:textColor="#1766b1"
+                 android:textSize="16sp"
+                 android:text="修改"/>
+             
+              <TextView 
+                   android:layout_width="1dp"
+			        android:layout_height="match_parent"
+			        android:background="#d7d7d7"
+			        android:text="TextView" 
+                  />
+             <Button
+                 android:id="@+id/btn_delete"  
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:textColor="#ff2323"
+                 android:textSize="16sp"
+                 android:layout_height="wrap_content"
+                 android:background="@null"
+                 android:text="删除"/>
+             
+             
+         </LinearLayout>
+         
+         		<TextView 
+             		android:layout_below="@+id/liner_three_button"
+                   	android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:background="#d7d7d7"
+			        android:text="TextView" 
+                  />
+     </RelativeLayout>
+    
+    
+
+</RelativeLayout>

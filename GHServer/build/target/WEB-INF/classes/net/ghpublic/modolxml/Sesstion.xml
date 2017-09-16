@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://120.55.193.1:3306/zjport</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <mapping resource="net/ghpublic/modol/IndustoryInfoEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/CommentEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/AdviceEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmShipEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmShipcertEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmWharfEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmWharfcertEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmUsertypeEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmCoastalEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmCoastalcertEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmValidationEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmInformationEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmCommentEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/MmWaterinfoEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/ShipCreditEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/ShipIllegalEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/ShipDangerreportEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/TradeGoodssourceEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/TradeShiprentEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/TradeShipsaleEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/TradeShipsourceEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/TradeLatestEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/TradeMypostEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/ShipCrossEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/CommonPermissionEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/WharfDangerreportEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/CompanyBaseEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/CompanyCertEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/CommonVersionEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/GateBaseEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/CompanyLicenceEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/WharfLicenceEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/CompanyCreditEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/WharfCreditEN.hbm.xml"/>
+    <mapping resource="net/ghpublic/modol/WaterTideEN.hbm.xml"/>
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

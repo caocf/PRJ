@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:contentDescription="@string/back"
+            android:src="@drawable/title_back" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/search_name"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/search_tab_hs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="horizontal" 
+            android:background="@color/Light_white">
+
+            <TextView
+                android:id="@+id/search_tab_cbjbxx"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/bs_menulist01" 
+                android:textColor="@color/Light_gray"/>
+
+            <TextView
+                android:id="@+id/search_tab_cbzsxx"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/bs_menulist02" 
+                android:textColor="@color/Light_gray"/>
+
+            <TextView
+                android:id="@+id/search_tab_cbwzxx"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/bs_menulist03" 
+                android:textColor="@color/Light_gray"/>
+
+            <TextView
+                android:id="@+id/search_tab_cbqzxx"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/bs_menulist04" 
+                android:textColor="@color/Light_gray"/>
+
+            <TextView
+                android:id="@+id/search_tab_cbjfxx"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/bs_menulist05" 
+                android:textColor="@color/Light_gray"/>
+
+            <TextView
+                android:id="@+id/search_tab_cbjyxx"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/bs_menulist06" 
+                android:textColor="@color/Light_gray"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_tab_viewPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

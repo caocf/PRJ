@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu" 
+        >
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@drawable/ic_back_normal"
+            android:drawablePadding="16dp"
+            android:alpha="100"
+            android:textColor="#1766b1"
+            android:textSize="18sp"
+            android:text="AIS核查" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:focusable="true"
+        android:focusableInTouchMode="true" 
+        android:paddingTop="12dp"
+        android:gravity="center"
+        android:paddingBottom="12dp">
+        
+        <ImageView
+            android:id="@+id/txt_clear"
+            android:layout_width="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/clear_normal" />
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff" 
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:hint="请输入船名号"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="25dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_ais" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+  <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.ghpublic.modol.CommonAdviceEN" table="common_advice" schema="zjport">
+        <id name="id">
+            <column name="id"/>
+            <generator class="increment"/>
+        </id>
+        <property name="cotent">
+            <column name="content"/>
+        </property>
+        <property name="contact">
+            <column name="contact" />
+        </property>
+        <property name="city">
+            <column name="city" />
+        </property>
+        <property name="name">
+            <column name="name" />
+        </property>
+        <property name="time">
+            <column name="comtime" />
+        </property>
+    </class>
+</hibernate-mapping>

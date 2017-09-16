@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hxkg.ghpublic"
+    android:versionCode="5"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 友盟分享需要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d007974b311046c4a9f5450c2920015a" />
+
+        <activity
+            android:name="com.hztuen.gh.activity.StartActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 腾讯SSO授权的Activity注册 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 这里需要配置自己QQ互联的AppID:tencentXXXXXX，和代码中保持一致 -->
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- *************************    分享相关的注册 START **************************** -->
+        <!-- 分享内容编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- *************************    分享相关的注册 END **************************** -->
+
+        <activity
+            android:name="com.hztuen.gh.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 主界面呀 -->
+        <activity
+            android:name="com.hxkg.ghpublic.HomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 新闻界面 -->
+        <activity
+            android:name="com.hxkg.mainfragment.MainFramentNewsActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 详细新闻界面 -->
+        <activity
+            android:name="com.hxkg.mainfragment.FramentNewsInfo"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <!-- 新闻评论界面 -->
+        <activity
+            android:name="com.hxkg.mainfragment.NewsComment"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 新闻来源 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ActivityNewsFrom"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 意见箱区域来源 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ActivityArea"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 这是用于跳转的示例页面，由供应商替换为实际业务处理页面 -->
+        <activity
+            android:name=".BusinessActivityExample"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 位置信息 -->
+        <activity
+            android:name="com.hztuen.position.PositionActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 水文信息 -->
+        <activity
+            android:name="com.hxkg.activity.water.WaterInfoActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 意见箱 -->
+        <activity
+            android:name="com.hxkg.activity.ideabox.IdeaBoxActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 注册 -->
+        <activity
+            android:name="com.hztuen.gh.activity.RegistActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <!-- 注册第二页 -->
+        <activity
+            android:name="com.hztuen.gh.activity.RegistSecondPageActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.hztuen.gh.activity.RegistSecondCoastal"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- 分享popup 弹出 -->
+        <activity
+            android:name="com.hxkg.mainfragment.share.pop.SharePopupWindow"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 许可信息 -->
+        <activity
+            android:name="com.hztuen.gh.activity.PermissionInformationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 许可信息详情 -->
+        <activity
+            android:name="com.hztuen.gh.activity.PermissionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 危货进港提交页 -->
+        <activity
+            android:name="com.hztuen.gh.activity.DangersLetInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 危货进港记录页 -->
+        <activity
+            android:name="com.hztuen.gh.activity.LetInRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈主页 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ShipGoodsCircleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈租船 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ShipRentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈租船详情 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ShipRentDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈售船 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ShipBoughtActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈售船详情 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ShipBoughtDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈找船 -->
+        <activity
+            android:name="com.hztuen.gh.activity.FindShipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 船货圈找货 -->
+        <activity
+            android:name="com.hztuen.gh.activity.FindGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈找船详情 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ShipDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈发布租船信息 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SendRentMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈找船详情界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.GoodsDetailsAdcivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈发布货源信息界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SendGoodsMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈发布船源信息界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SendShipResMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈发布船舶出售信息界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SendShipSellActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船货圈我的发布记录界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.MySendRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 周边 -->
+        <activity
+            android:name="com.hztuen.gh.activity.MainFragmentAround"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 周边搜索 -->
+        <activity
+            android:name="com.hztuen.gh.activity.AroundSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 搜索列表 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SerachListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 搜索地图 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SearchMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <service android:name="com.amap.api.location.APSService" >
+        </service>
+        <!-- 船舶查询 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SearchShipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 按船名获取船舶基本信息 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SearchShipBaseInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 船舶证书界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.CredCardInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 电子报告界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ElectReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 违章信息界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.BreakRulesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 诚信扣分界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.DeductPointsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 违章信息详情界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.BreakRulesDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 报港记录界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.BaoGangActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 我的，船户版 -->
+        <activity
+            android:name="com.hztuen.gh.activity.MineChuanHuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的，码头版 -->
+        <activity
+            android:name="com.hztuen.gh.activity.MineMaTouActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 我的，船户版,详情 -->
+        <activity
+            android:name="com.hztuen.gh.activity.MineShipDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 缴费信息 -->
+        <activity
+            android:name="com.hztuen.gh.activity.PayInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 添加我的船舶 -->
+        <activity
+            android:name="com.hztuen.gh.activity.MineAddShipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 我的设置界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.MineSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 更改密码界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ChangePassWordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 换绑手机界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ChangePhoneNumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 换绑手机下一步界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ChangePhoneSecondActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 关于我们界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 二维码界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.QRcodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 码头信息查询界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.SearchDockListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 码头详情界面界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.DuckDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- AIS -->
+        <activity
+            android:name="com.hztuen.gh.activity.AISDynamicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 查看九宫格界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.ImagePagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 码头危货提交界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.DuckDangersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 过闸信息 -->
+        <activity
+            android:name="com.hztuen.gh.activity.PassInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 企业信息 -->
+        <activity
+            android:name="com.hztuen.gh.activity.CompanyInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 企业详细信息 -->
+        <activity
+            android:name="com.hztuen.gh.activity.CompanyDetialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 电话报警 -->
+        <activity
+            android:name="com.hztuen.gh.activity.CallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 码头作业危货申报记录界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.DuckDangersRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 码头作业危货申报记录详情界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.DangerDuckRecordDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 我的沿海版界面 -->
+        <activity
+            android:name="com.hztuen.gh.activity.MineYanHaiaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 安全应急设备 -->
+        <activity
+            android:name="com.hztuen.gh.activity.EmergencyDeviceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 安全应急设备详情 -->
+        <activity
+            android:name="com.hztuen.gh.activity.EmergencyDeviceDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 潮汐信息 -->
+        <activity
+            android:name="com.hztuen.gh.activity.TideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 潮汐信息港口 -->
+        <activity
+            android:name="com.hztuen.gh.activity.TidePortActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 潮汐信息详情 -->
+        <activity
+            android:name="com.hztuen.gh.activity.TideDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- 地图搜索列表 -->
+        <activity
+            android:name="com.hztuen.gh.activity.AroundMapListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        
+        <!-- 游客登陆页 -->
+        <activity
+            android:name="com.hztuen.gh.activity.UnLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,80 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: 微软雅黑;
+}
+body{
+	margin: 0px;
+	height: 100%;
+}
+
+#top {
+	height:80px;
+	margin-top:0px;
+	min-width:800px;
+	background-image: url("../image/yetou.png");
+	padding: 0px;
+}
+
+#left {
+	float: left;
+	height:30px;
+	margin-left: 155px;
+	margin-top: 35px;
+}
+
+#right {
+	float: right;
+	margin-right:167px;
+	margin-top: 55px;
+}
+
+#spantxt {
+	font-family: '微软雅黑';
+	font-size: 20px;
+	font-weight: bold;
+	color: #ee7701;
+}
+
+#logout {
+	cursor: pointer;
+	font-size: 14px;
+	color: #ee7701;
+	font-family: 微软雅黑;
+}
+
+#welcome {
+	font-family: '微软雅黑';
+	font-size: 14px;
+	color: #333333;
+	font-family: 微软雅黑
+}
+
+#imgtopr{
+	top: 10px;
+	position: relative;
+}
+
+
+#framediv {
+	margin-left: 123px;
+	margin-bottom: 0px;
+	margin-right: 123px;
+	padding:0px;
+	position:relative;
+}
+
+
+#fullbg {
+	background-color: black;
+	display:none;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	z-index: 5;
+	filter: alpha(opacity = 60);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+}
+

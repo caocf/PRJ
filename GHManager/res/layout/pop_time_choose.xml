@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res/net.hxkg.ghmanager" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="预计进港时间"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#333333"/>
+        
+        <TextView
+            android:id="@+id/time_in" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="预计进港时间"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal">
+        <RelativeLayout 
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            >
+            
+             <TextView 
+	            android:layout_width="6dp"
+	            android:layout_height="match_parent"
+	            android:background="#f9f9f9"/>
+              <TextView 
+	            android:layout_width="6dp"
+	            android:layout_height="50dp"
+	            android:layout_centerInParent="true"
+	            android:background="#1667b1"/>
+        </RelativeLayout>
+        
+       
+         <net.hxkg.ship.WheelView 
+             android:id="@+id/date"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+              app:itemNumber="5"
+	          app:lineColor="#C1CDCD"
+	          app:lineHeight="1dp"
+	          app:maskHight="50dp"
+	          app:noEmpty="true"
+	          
+	          app:normalTextColor="#a3a3a3"
+	          app:normalTextSize="12sp"
+	          app:selectedTextColor="#1766b1"
+	          app:selectedTextSize="16sp"
+	          app:unitHight="50dp"
+             />
+         
+         <TextView 
+	            android:layout_width="1dp"
+	            android:layout_height="match_parent"
+	            android:background="#f9f9f9"/>
+          <net.hxkg.ship.WheelView 
+             android:id="@+id/hour"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+              app:itemNumber="5"
+	          app:lineColor="#C1CDCD"
+	          app:lineHeight="1dp"
+	          app:maskHight="50dp"
+	          app:unitHight="50dp"
+	          app:noEmpty="true"
+	          app:normalTextColor="#a3a3a3"
+	          app:normalTextSize="12sp"
+	          app:selectedTextColor="#1766b1"
+	          app:selectedTextSize="16sp"
+	         
+             
+             />
+          
+          <TextView 
+	            android:layout_width="1dp"
+	            android:layout_height="match_parent"
+	            android:background="#f9f9f9"/>
+           <net.hxkg.ship.WheelView 
+             android:id="@+id/second"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+              app:itemNumber="5"
+	          app:lineColor="#C1CDCD"
+	          app:lineHeight="1dp"
+	          app:maskHight="50dp"
+	          
+	          app:noEmpty="true"
+	          app:normalTextColor="#a3a3a3"
+	          app:normalTextSize="12sp"
+	          app:selectedTextColor="#1766b1"
+	          app:selectedTextSize="16sp"
+	          app:unitHight="50dp"
+             
+             />
+    </LinearLayout>
+    
+     <LinearLayout
+             android:id="@+id/liner_two_button" 
+             android:layout_width="match_parent"
+             android:layout_marginLeft="16dp"
+             android:layout_marginRight="16dp"
+             android:layout_marginTop="16dp"
+             android:layout_marginBottom="16dp"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+            
+
+              <Button
+                  android:id="@+id/btn_ok"
+                  android:layout_width="0dp"
+                  android:layout_height="48dp"
+                  android:layout_weight="1"                
+                  android:text="确定"
+                  android:background="#1667b1"
+                  android:textColor="#ffffff"
+                  android:textSize="16sp" />
+
+             <Button
+                 android:id="@+id/btn_cancel"  
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:textColor="#666666"
+                 android:layout_marginLeft="16dp"
+                 android:textSize="16sp"
+                 android:layout_height="48dp"
+                 android:background="@null"
+                 android:text="取消"/>
+         </LinearLayout>
+     
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.JcxxYhEN" table="jcxx_yh" schema="zjmanager">
+        <id name="id">
+            <column name="ID" sql-type="char(255)" length="32"/>
+        </id>
+        <property name="zh">
+            <column name="ZH" sql-type="varchar(255)" length="20" not-null="true"/>
+        </property>
+        <property name="xm">
+            <column name="XM" sql-type="varchar(255)" length="20" not-null="true"/>
+        </property>
+        <property name="mm">
+            <column name="MM" sql-type="char(255)" length="32" not-null="true"/>
+        </property>
+        <property name="zw">
+            <column name="ZW" sql-type="varchar(255)" length="225" not-null="true"/>
+        </property>
+        <property name="dw">
+            <column name="DW" sql-type="varchar(255)" length="32" not-null="true"/>
+        </property>
+        <property name="bm">
+            <column name="BM" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+
+        <property name="sjzg">
+            <column name="SJZG" sql-type="varchar(255)" length="32" not-null="true"/>
+        </property>
+        <property name="yx">
+            <column name="YX" sql-type="varchar(255)" length="50" not-null="true"/>
+        </property>
+        <property name="bgdh">
+            <column name="BGDH" sql-type="varchar(255)" length="15" not-null="true"/>
+        </property>
+        <property name="sjhm">
+            <column name="SJHM" sql-type="varchar(255)" length="13" not-null="true"/>
+        </property>
+        <property name="xnwh">
+            <column name="XNWH" sql-type="varchar(255)" length="6" not-null="true"/>
+        </property>
+        <property name="zt">
+            <column name="ZT" sql-type="char(1)" length="1" not-null="true"/>
+        </property>
+        <property name="wzh">
+            <column name="WZH" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="sjzzjgidlb">
+            <column name="SJZZJGIDLB" sql-type="varchar(1000)" length="1000" not-null="true"/>
+        </property>
+        <property name="jdid">
+            <column name="JDID" sql-type="varchar(255)" length="32" not-null="false"/>
+        </property>
+        <property name="bmmc">
+            <column name="BMMC" sql-type="varchar(500)" length="500" not-null="false"/>
+        </property>
+        <many-to-one name="userRoleEN" class="net.modol.UserRoleEN" insert="false" update="false" lazy="false"
+            cascade="none"         not-found="ignore">
+            <column name="JS"/>
+        </many-to-one>
+        <property name="personal">
+            <column name="personal" sql-type="varchar(500)" length="500" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

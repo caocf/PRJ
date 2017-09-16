@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 830px;
+}
+
+#condition
+{
+	float: left;
+	margin: 1px 1px 1px 1px;
+	padding: 1px;
+	width: 100%;
+	height: 70px;
+	background-color: #f5f5f5;
+	border-bottom-color: #dcdcdc;
+
+}
+
+.a1
+{
+	display: block;
+	width: 100px;
+	text-align:center;
+	font-size: 18px;	
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+	background: url("../../image/left/down_button.png") no-repeat 95% center;
+	background-color: #337ab7;
+}
+
+.a1:hover
+{
+	text-decoration: none;
+	background-color: #A3C6C8;
+}
+
+.ulchild
+{
+	padding: 0;
+	position:absolute;
+	display: none;
+	text-align: center;
+	width:100px;
+	list-style-type:none;
+	background: border-box ;
+	background-color: #A3C6C8;
+
+	z-index:10 ;
+}
+
+.a2
+{
+	width: 200px;
+	text-align:center;
+	font-size: 18px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.a2:hover
+{
+	text-decoration: none;
+	color: yellow;
+}
+#list
+{
+	position: absolute;
+	margin: 80px 1px 1px 1px;
+	padding: 1px;
+	width: 99%;
+	z-index: 0;
+	border-bottom:thin solid gray ;
+}
+.checkInput
+{
+	cursor: pointer;margin-top: 10px;
+}
+.con
+{
+	float: left;
+	width: 100px;
+	height: inherit;
+	vertical-align: middle;
+	line-height: 45px;
+	position: absolute;
+	margin-top: 15px;
+}
+.caozuoword
+{
+	cursor: pointer;
+}
+
+.uniquenews
+{
+	cursor: pointer;
+}
+
+.uniquenews:hover
+{
+	cursor: pointer;
+	color: yellowgreen;
+}

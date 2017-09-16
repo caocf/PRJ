@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5" 
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="center|left" >
+
+ <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"       
+        android:src="@drawable/ic_selector"
+        android:background="@null"
+        android:layout_gravity="center"
+        android:onClick="onBack"/>
+        <TextView
+            android:id="@+id/newslist_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+    </LinearLayout>    
+
+
+    <TextView
+        android:id="@+id/newsinfotitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#333333"
+        android:textSize="21sp" 
+        />
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newsinfotitle"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/newsinfoupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/forcus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+    </LinearLayout>  
+    
+    
+
+    <WebView
+        android:id="@+id/newsinfocontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:layout_below="@+id/l1"
+        android:layout_marginTop="8dp" 
+        android:layout_marginBottom="50dp"
+         android:background="#fff"/>
+    
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="#F4F5F6"
+        android:paddingBottom="3dp"
+        android:orientation="horizontal" 
+        android:visibility="visible">
+        
+
+        <EditText
+            android:id="@+id/write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:hint="写评论"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/mylayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" >
+
+
+            <ImageButton
+                android:id="@+id/message"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="#F4F5F6"
+                android:src="@drawable/ic_message" />
+
+            <Button
+                android:id="@+id/sendmessage"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="6dp"
+                android:background="@null"
+                android:text="发送"
+                android:textColor="#1667b1"
+                android:textSize="16dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

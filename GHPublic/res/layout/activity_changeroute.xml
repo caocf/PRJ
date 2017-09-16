@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<!-- 标题栏 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center"
+        android:onClick="onViewClick">
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="16dp"        
+        android:background="@drawable/ic_selector"
+        android:onClick="onViewClick"/>
+        <TextView 
+            android:id="@+id/law"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调整航线"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1"
+        android:layout_marginLeft="16dp" />
+        
+        
+        </LinearLayout>
+        
+    <!-- 内容-->
+  <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+	    android:focusable="true" 
+	    android:focusableInTouchMode="true"> 
+   
+          <TableLayout 
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#fff" 	        
+	        android:divider="#666666"
+	        android:showDividers="middle">
+	        
+              <TableRow   
+                  android:background="#fff">
+               <TextView 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="目的港"
+                   android:layout_gravity="center|left"
+                   android:textColor="#666666"
+                   android:textSize="17sp"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginBottom="16dp"
+                   android:layout_marginLeft="16dp"/>
+                <com.hxkg.ereport.PortSpinner
+		            android:id="@+id/portspinner"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"  
+		             android:layout_marginTop="16dp"
+                   android:layout_marginBottom="16dp"
+		            android:textSize="16sp"  
+		            android:layout_marginLeft="16dp"            
+		            android:background="@drawable/bg_spinner" /> 
+              </TableRow> 
+              <TableRow   
+                  android:gravity="center|left">
+               <TextView 
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="预计进港时间"
+                    android:textColor="#666666"
+                   android:textSize="17sp"
+                   android:layout_marginLeft="16dp"
+		             android:layout_marginTop="16dp"
+                   android:layout_marginBottom="16dp"/>
+               <TextView
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:hint="请选择时间"
+				android:layout_marginLeft="25dp" 
+		             android:layout_marginTop="16dp"
+                   android:layout_marginBottom="16dp"
+            android:id="@+id/time"
+            android:onClick="onTimePick"/>  
+              </TableRow>
+              <Button 
+		      android:layout_width="match_parent"
+		      android:layout_height="60dp"
+		      android:layout_margin="20dp"
+		      android:text="提交"
+		      android:textColor="#fff"
+		      android:textSize="17sp"
+		      android:onClick="onCommit"
+		      android:background="@drawable/ic_selector_btn"/>
+          </TableLayout> 	
+        
+ 	</LinearLayout>          
+  </ScrollView>
+</LinearLayout>

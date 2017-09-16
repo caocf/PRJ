@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/father_duck_dangers"
+    android:orientation="vertical" 
+    android:background="#f9f9f9">
+    
+    <RelativeLayout
+       
+        android:layout_width="match_parent"
+        android:layout_height="48dip" >
+
+        <RelativeLayout
+            android:id="@+id/relative_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/title_backgrundmenu" >
+
+        <ImageView
+            android:id="@+id/permission_list_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/image_button_back" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/permission_list_back"
+            android:text="危险货物码头作业申报记录"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+        
+        </RelativeLayout>
+        
+    </RelativeLayout> 
+	    
+	    
+	  <RelativeLayout
+        android:id="@+id/relative_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dip" 
+        android:background="#f9f9f9" >
+		<com.hxkg.company.CompanySpinner 
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null" 
+        android:textAlignment="gravity"
+       android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:paddingLeft="30dp"
+        android:id="@+id/company"/>
+        
+        
+    </RelativeLayout>
+    <TextView
+	        android:id="@+id/aaa"
+	         android:layout_below="@+id/imageView2"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff">
+        
+         <ListView 
+	        android:id="@+id/listview_record"
+	        android:layout_width="match_parent"
+	        android:dividerHeight="16dp"
+	        android:divider="#f9f9f9"
+	        android:layout_height="wrap_content">
+	        
+	    </ListView>
+        
+        
+    </RelativeLayout>
+	   
+	    
+    
+
+</LinearLayout>

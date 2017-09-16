@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - zjport@120.55.193.1" uuid="c65fc6f3-5eb6-47ed-95b8-65061ee3b372">
+      <secret-storage>memory</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>zjport.*</schema-pattern>
+      <default-schemas>zjport.*</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.JcxxZzjgEN" table="jcxx_zzjg" schema="zjmanager">
+        <id name="id">
+            <column name="ID" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="zzjgmc">
+            <column name="ZZJGMC" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="zzjgbm">
+            <column name="ZZJGBM" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="zzjgdm">
+            <column name="ZZJGDM" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="zzjglb">
+            <column name="ZZJGLB" sql-type="varchar(2)" length="2" not-null="true"/>
+        </property>
+        <property name="zzym">
+            <column name="ZZYM" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="sjzzjg">
+            <column name="SJZZJG" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="sjzzjgidlb">
+            <column name="SJZZJGIDLB" sql-type="varchar(1000)" length="1000" not-null="true"/>
+        </property>
+        <property name="wzh">
+            <column name="WZH" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="sfck">
+            <column name="SFCK" sql-type="char(1)" length="1"/>
+        </property>
+        <property name="sfjd">
+            <column name="SFJD" sql-type="char(1)" length="1"/>
+        </property>
+        <property name="zzjgjc">
+            <column name="ZZJGJC" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="ssqy">
+            <column name="SSQY" sql-type="char(32)" length="32" not-null="true"/>
+        </property>
+        <property name="wsdwbh">
+            <column name="WSDWBH" sql-type="varchar(30)" length="30" not-null="false"/>
+        </property>
+        <property name="adcode">
+            <column name="adcode" sql-type="varchar(30)" length="225" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+@CHARSET "utf-8";
+
+.fixedTermData_table {
+	width: 830px;
+	height: 40px;
+	background: #edf6fe;
+	height: 40px;
+	font-size: 13px;
+	letter-spacing: 1px;
+	border-collapse: collapse;
+}
+
+.fixedTermDataItem_table {
+	width: 830px;
+	height: 40px;
+	height: 40px;
+	font-size: 13px;
+	letter-spacing: 1px;
+	border-collapse: collapse;
+}
+
+.fixedTermDataItem_table th {
+	height: 30px;
+	text-align: left;
+	background: rgb(240, 241, 240);
+	padding-left: 15px;
+}
+
+.fixedTermDataItem_table td {
+	height: 30px;
+}
+
+.fixedTermData_table td,.fixedTermDataItem_table td,.fixedTermDataItem_table th
+	{
+	padding-left: 15px;
+	border-top: 1px solid #c8dbe4;
+}
+
+#showFixedTermReport {
+	border-bottom: 1px solid #c8dbe4;
+}
+
+
+.overState {
+	color: #da251c;
+	font-weight: bold;
+	background: url("../../image/electric/to_left.png") no-repeat 75 center;
+}
+
+.ingState {
+	color: #7fc41c;
+	font-weight: bold;
+	background: url("../../image/electric/to_left.png") no-repeat 75 center;
+}

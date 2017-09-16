@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#f5f5f5">
+
+	<EditText 
+	    android:id="@+id/edit_reason"
+	    android:layout_width="match_parent"
+    android:layout_height="70dp" 
+    android:layout_margin="16dp"
+    android:hint="请输入案由"/>
+	<Button
+	    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:textSize="16sp"
+    android:padding="16dp"
+    android:text="确定"
+    android:background="#1766ba"
+    android:textColor="#ffffff"
+    android:onClick="onClick" />
+	
+</LinearLayout>

@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+
+body {
+    font-family: 微软雅黑;
+}
+
+html, body, div {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tablabel {
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 150px;
+    line-height: 50px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    margin-bottom: 0;
+    border-bottom: solid 1px #ccc;
+}
+
+.activitylabel {
+    color: #333 !important;
+    font-weight: bolder;
+    border-top: solid 3px #0072b1 !important;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    border-bottom: 0;
+}
+
+.textth {
+    background: azure;
+    font-family: 微软雅黑;
+    font-size: 13px;
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    font-weight: bolder;
+    border: solid 1px #ccc;
+}
+
+.texttd {
+    background: azure;
+    font-family: 微软雅黑;
+    font-size: 13px;
+    width: 20%;
+    height: 50px;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bolder;
+    border: solid 1px #ccc;
+}
+
+.datatd {
+    width: 30%;
+    font-family: 微软雅黑;
+    font-size: 13px;
+    height: 50px;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bolder;
+    border: solid 1px #ccc;
+}
+
+.zstd {
+    font-family: 微软雅黑;
+    font-size: 13px;
+    height: 50px;
+    text-align: left;
+    padding-left: 10px;
+    border: solid 1px #ccc;
+}
+

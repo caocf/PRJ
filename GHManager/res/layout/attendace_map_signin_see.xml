@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageButton
+            android:id="@+id/attendace_sign_seeinback"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/attendace_signin_inmap_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/attendace_sign_seeinback"
+            android:gravity="center_vertical"
+            android:text="@string/attendace_sign_insee"
+            android:textColor="#0067ac"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/attendace_signin_inmap_bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_above="@+id/table2"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/frameLayout1" >
+    </com.baidu.mapapi.map.MapView>
+
+    <TableRow
+        android:id="@+id/table1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/table2"
+        android:background="@color/grey" >
+
+        
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/positioning"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/attendace_signin_localtextsignin"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="6dp"
+            android:gravity="left"
+            android:textSize="16sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/table2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/grey" >
+
+        <TextView
+            android:id="@+id/attendace_signin_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="6dp"
+            android:gravity="left"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/attendace_signin_datesignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="6dp"
+            android:gravity="left"
+            android:textSize="14sp" />
+    </TableRow>
+
+</RelativeLayout>

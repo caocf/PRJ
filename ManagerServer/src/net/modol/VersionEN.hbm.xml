@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.VersionEN" table="version" schema="zjmanager">
+        <id name="id">
+            <column name="id" />
+            <generator class="increment"/>
+        </id>
+        <property name="versionNum">
+            <column name="num" />
+        </property>
+        <property name="verstionDec">
+            <column name="descr" />
+        </property>
+        <property name="uptime">
+            <column name="uploadtime"/>
+        </property>
+        <property name="address">
+            <column name="address"/>
+        </property>
+        <property name="log">
+            <column name="log"/>
+        </property>
+    </class>
+</hibernate-mapping>

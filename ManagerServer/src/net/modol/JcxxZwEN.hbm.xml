@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.JcxxZwEN" table="jcxx_zw" schema="zjmanager">
+        <id name="id">
+            <column name="ID" sql-type="varchar(32)" length="32"/>
+        </id>
+        <property name="zwmc">
+            <column name="ZWMC" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="ssdwid">
+            <column name="SSDWID" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="ssdwmc">
+            <column name="SSDWMC" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="wzh">
+            <column name="WZH" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

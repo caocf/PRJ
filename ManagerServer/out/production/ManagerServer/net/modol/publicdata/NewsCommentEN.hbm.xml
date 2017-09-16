@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.publicdata.NewsCommentEN" table="news_comment" schema="zjport">
+        <id name="id">
+            <column name="id" sql-type="int(100)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="content">
+            <column name="content" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="sumbtime">
+            <column name="sumbtime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="username">
+            <column name="username" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="newsid">
+            <column name="newsid" sql-type="varchar(255)" not-null="false"/>
+        </property>
+    </class>
+</hibernate-mapping>

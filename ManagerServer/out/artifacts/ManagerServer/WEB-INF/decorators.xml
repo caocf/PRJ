@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<decorators defaultdir="/main">
+    <!-- 此处用来定义不需要过滤的页面 -->  
+    <excludes>
+        <pattern>/Login/login.jsp</pattern>
+
+    </excludes>
+
+    <decorator name="main" page="main.jsp">
+      <pattern>/*</pattern>
+    </decorator>
+</decorators>

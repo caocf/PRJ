@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:gravity="center_horizontal"
+>
+
+   
+   
+    <Button
+      android:layout_width="wrap_content"
+     android:layout_height="wrap_content" 
+     android:text="@string/dangerousgoodsportln_button" 
+     android:id="@+id/dangerousgoodsportln_text1"  />
+     <Button
+      android:layout_width="wrap_content"
+     android:layout_height="wrap_content" 
+     android:text="@string/dangerousgoodsportln_button1" 
+     android:id="@+id/dangerousgoodsportln_text2"  />
+      <Button
+      android:layout_width="wrap_content"
+     android:layout_height="wrap_content" 
+     android:text="@string/dangerousgoodsjob_button" 
+     android:id="@+id/dangerousgoodsjob_text1"  />  
+      <Button
+      android:layout_width="wrap_content"
+     android:layout_height="wrap_content" 
+     android:text="@string/dangerousgoodsjob_button1" 
+     android:id="@+id/dangerousgoodsjob_text2"  /> 
+         <Button
+      android:layout_width="wrap_content"
+     android:layout_height="wrap_content" 
+     android:text="@string/cruiselog_title" 
+     android:id="@+id/cruiselog_text"  /> 
+     
+</LinearLayout>

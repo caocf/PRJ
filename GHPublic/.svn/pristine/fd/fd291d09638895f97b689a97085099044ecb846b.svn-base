@@ -1,0 +1,166 @@
+package com.hztuen.gh.activity;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.kymjs.kjframe.KJHttp;
+import org.kymjs.kjframe.http.HttpCallBack;
+import org.kymjs.kjframe.http.HttpParams;
+import org.kymjs.kjframe.utils.KJLoger;
+
+import com.gh.modol.PermissionInformation;
+import com.gh.modol.RecordLetIn;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.Adapter.PermissionInformationAdapter;
+import com.hztuen.gh.activity.Adapter.RecordLetInAdapter;
+import com.hztuen.gh.contact.contants;
+import com.hztuen.lvyou.utils.SystemStatic;
+import com.hztuen.lvyou.utils.Util;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+
+public class LetInRecordActivity extends Activity implements OnClickListener{
+
+	
+	private List<RecordLetIn> recordlist = new ArrayList<RecordLetIn>();
+	private RecordLetInAdapter recordAdapter;
+	private ListView lv_record;
+	
+	private RelativeLayout relative_title;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_letin_record);
+		init();
+		GetRecord();
+		
+	}
+	void init()
+	{
+		lv_record=(ListView)findViewById(R.id.listview_record);
+		recordAdapter = new RecordLetInAdapter(LetInRecordActivity.this, recordlist);
+		
+		
+		
+		relative_title=(RelativeLayout)findViewById(R.id.relative_title);
+		relative_title.setOnClickListener(this);
+		
+		
+		
+		
+	}
+	
+	
+	
+	private void GetRecord() {
+
+		// TODO Auto-generated method stub
+
+
+		//访问网络
+
+		KJHttp kjh = new KJHttp();
+		List<String> aa = new ArrayList<String>();
+		aa.add("Shipname="+SystemStatic.searchShipName);
+		
+		HttpParams params = null;
+		try {
+			params = Util.prepareKJparams(aa);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//访问地址
+		String toUrl = contants.dangerlist;
+		if(params == null){
+			//提示参数制造失败
+			Util.getTip(getApplicationContext(), "构造参数失败");
+		}else if(!toUrl.equals("")){
+			kjh.post(toUrl, params,false,new HttpCallBack() {
+				@Override
+				public void onSuccess(Map<String, String> headers, byte[] t) {
+					super.onSuccess(headers, t);
+					// 获取cookie
+					KJLoger.debug("===" + headers.get("Set-Cookie"));
+				
+					String result = new String(t).trim();
+					try {
+						JSONObject resultJO = new JSONObject(result);
+				
+						JSONObject  res = new JSONObject(result);
+						JSONArray data = res.getJSONArray("data");
+						Log.i("GH_TEXT", data.length()+"我是数据的size");
+						
+						for(int i = 0;i<data.length();i++){
+							JSONObject temp = data.getJSONObject(i);
+							RecordLetIn record= new RecordLetIn();
+							//RegionList region = new RegionList();
+//							
+//							 "id": 6,
+//						      "start": "杭州",
+//						      "berthtime": "2016-6-20",
+//						      "status": "待审批",
+//						      "target": "上海",
+//						      "goods": "散货",
+//						      "rank": "爆炸品",
+//						      "tons": "100",
+//						      "unit": "吨",
+////						  "number": "12423000"
+							
+							record.setid(temp.getString("id"));
+							record.setberthtime(temp.getString("berthtime"));
+							record.setgoods(temp.getString("goods"));
+							record.setnumber(temp.getString("number"));
+							record.setrank(temp.getString("rank"));
+							record.setstart(temp.getString("start"));
+							record.setstatus(temp.getString("status"));
+							record.settarget(temp.getString("target"));
+							record.settons(temp.getString("tons"));
+							record.setunit(temp.getString("unit"));
+																																									
+							recordlist.add(record);
+																																				
+						}
+						lv_record.setAdapter(recordAdapter);												
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+				}
+
+				@Override
+				public void onFailure(int errorNo, String strMsg) {
+					//关闭进度条
+				//	Log.d(TAG, strMsg);
+					//					Util.getTip(cxt, errorNo+"");
+					//						mSVProgressHUD.showErrorWithStatus("验证过程出现问题");
+					super.onFailure(errorNo, strMsg);
+				}
+			});
+		}
+	}
+	@Override
+	public void onClick(View v) {
+		switch(v.getId())
+		{
+		
+			
+		case R.id.relative_title:
+			finish();
+			break;
+			
+		}
+		
+	}
+	
+
+}

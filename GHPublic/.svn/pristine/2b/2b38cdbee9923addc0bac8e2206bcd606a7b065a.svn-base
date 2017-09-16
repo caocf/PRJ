@@ -1,0 +1,316 @@
+package com.hztuen.gh.activity.Adapter;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.kymjs.kjframe.KJHttp;
+import org.kymjs.kjframe.http.HttpCallBack;
+import org.kymjs.kjframe.http.HttpParams;
+import org.kymjs.kjframe.utils.KJLoger;
+
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.gh.modol.DeductPointsModel;
+import com.gh.modol.MineShipModel;
+import com.gh.modol.MyShipItemStateModel;
+import com.google.gson.JsonArray;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.BreakRulesDetailActivity;
+import com.hztuen.gh.activity.MineShipDetailsActivity;
+import com.hztuen.gh.activity.StartActivity;
+import com.hztuen.gh.activity.Adapter.DeductPointsAdapter.ViewHolder;
+import com.hztuen.gh.contact.contants;
+import com.hztuen.lvyou.utils.SystemStatic;
+import com.hztuen.lvyou.utils.Util;
+
+public class MineChuanHuAdapter extends BaseAdapter implements OnClickListener{
+	
+	private Context context;
+	private List<MineShipModel> modellist;
+	
+	
+	private String jiaofei,weizhang,zhengshu;
+	
+	private List<MyShipItemStateModel> modelliststate ;
+	public MineChuanHuAdapter(Context context, List<MineShipModel> modellist,List<MyShipItemStateModel> modelliststate ) {
+		this.context = context;
+		this.modellist = modellist;
+		this.modelliststate=modelliststate;
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return modellist.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return modellist.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		final ViewHolder holder;
+
+		holder = new ViewHolder();
+	
+		convertView = LinearLayout.inflate(context, R.layout.activity_mine_ship_item, null);
+		convertView.setTag(holder);
+        holder.shipname=(TextView)convertView.findViewById(R.id.ship_name);
+        
+        holder.tv_jiaofei=(TextView)convertView.findViewById(R.id.text1_context);
+        holder.tv_weizhang=(TextView)convertView.findViewById(R.id.text2_context);
+        holder.tv_zhengshu=(TextView)convertView.findViewById(R.id.text3_context);
+        
+        
+		if (modelliststate.size() != 0 && modelliststate != null) {
+			 jiaofei = modelliststate.get(position).getjiaofei();
+			if ("0".equals(jiaofei)) {
+				holder.tv_jiaofei.setText("正常");
+				holder.tv_jiaofei.setTextColor(Color.BLACK);
+			} else if ("1".equals(jiaofei)) {
+				holder.tv_jiaofei.setText("警告");
+				holder.tv_jiaofei.setTextColor(Color.YELLOW);
+			} else if ("2".equals(jiaofei)) {
+				holder.tv_jiaofei.setText("异常");
+				holder.tv_jiaofei.setTextColor(Color.RED);
+			}else{
+				holder.tv_jiaofei.setText("N/A");
+				holder.tv_jiaofei.setTextColor(Color.RED);
+			}
+
+			 weizhang = modelliststate.get(position).getweizhang();
+
+			if ("0".equals(weizhang)) {
+				holder.tv_weizhang.setText("正常");
+				holder.tv_weizhang.setTextColor(Color.BLACK);
+			} else if ("1".equals(weizhang)) {
+				holder.tv_weizhang.setText("警告");
+				holder.tv_weizhang.setTextColor(Color.YELLOW);
+			} else if ("2".equals(weizhang)) {
+				holder.tv_weizhang.setText("异常");
+				holder.tv_weizhang.setTextColor(Color.RED);
+			}else{
+				holder.tv_weizhang.setText("N/A");
+				holder.tv_weizhang.setTextColor(Color.RED);
+			}
+
+			zhengshu = modelliststate.get(position).getzhengshu();
+
+			if ("0".equals(zhengshu)) {
+				holder.tv_zhengshu.setText("正常");
+				holder.tv_zhengshu.setTextColor(Color.BLACK);
+			} else if ("1".equals(zhengshu)) {
+				holder.tv_zhengshu.setText("警告");
+				holder.tv_zhengshu.setTextColor(Color.YELLOW);
+			} else if ("2".equals(zhengshu)) {
+				holder.tv_zhengshu.setText("异常");
+				holder.tv_zhengshu.setTextColor(Color.RED);
+			}else{
+				holder.tv_zhengshu.setText("N/A");
+				holder.tv_zhengshu.setTextColor(Color.RED);
+			}
+		}
+       
+//      
+//    	KJHttp kjh = new KJHttp();
+//		List<String> aa = new ArrayList<String>();
+//		aa.add("Shipname=" + SystemStatic.searchShipName);
+//		
+//
+//		HttpParams params = null;
+//		try {
+//			params = Util.prepareKJparams(aa);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		// 访问地址
+//		String toUrl = contants.shipcheck;
+//		if (!toUrl.equals("")) {
+//			kjh.post(toUrl, params, false, new HttpCallBack() {
+//				@Override
+//				public void onSuccess(Map<String, String> headers, byte[] t) {
+//					super.onSuccess(headers, t);
+//					// 获取cookie
+//					KJLoger.debug("===" + headers.get("Set-Cookie"));
+//					// Log.i(TAG+":kymjs---http", new String(t));
+//					String result = new String(t).trim();
+//					try {
+//
+//						JSONObject resultJO = new JSONObject(result);
+//						// String resultMsg = resultJO.getString("resultMsg");
+//						// Log.i(TAG+":kymjs---resultMsg", resultJO.toString());
+//						JSONObject res = new JSONObject(result);
+//						JSONObject ress = res.getJSONObject("result");
+//						JSONObject dataList = ress.getJSONObject("dataList");
+//						Log.i("GH_TEXT", dataList.length() + "我是数据的size");
+//						if (dataList.length() == 0) {
+//							Toast.makeText(context, "",
+//									Toast.LENGTH_SHORT).show();
+//						} else {
+//							JSONArray json_jiaofei=dataList.getJSONArray("data4");
+//							String jiaofei=json_jiaofei.getString(1).toString();
+//							if("0".equals(jiaofei))
+//							{
+//								holder.tv_jiaofei.setText("正常");
+//								holder.tv_jiaofei.setTextColor(Color.BLACK);
+//							}else if("1".equals(jiaofei))
+//							{
+//								holder.tv_jiaofei.setText("警告");
+//								holder.tv_jiaofei.setTextColor(Color.YELLOW);
+//							}else if("2".equals(jiaofei))
+//							{
+//								holder.tv_jiaofei.setText("异常");
+//								holder.tv_jiaofei.setTextColor(Color.RED);
+//							}
+//							
+//							
+//							JSONArray json_weizhang=dataList.getJSONArray("data0");
+//							String weizhang=json_weizhang.getString(1).toString();
+//							
+//							
+//							if("0".equals(weizhang))
+//							{
+//								holder.tv_weizhang.setText("正常");
+//								holder.tv_weizhang.setTextColor(Color.BLACK);
+//							}else if("1".equals(weizhang))
+//							{
+//								holder.tv_weizhang.setText("警告");
+//								holder.tv_weizhang.setTextColor(Color.YELLOW);
+//							}else if("2".equals(weizhang))
+//							{
+//								holder.tv_weizhang.setText("异常");
+//								holder.tv_weizhang.setTextColor(Color.RED);
+//							}
+//							
+//							
+//							JSONArray json_zhengshu=dataList.getJSONArray("data2");
+//							String zhengshu=json_zhengshu.getString(1).toString();
+//							
+//							
+//							
+//							if("0".equals(zhengshu))
+//							{
+//								holder.tv_zhengshu.setText("正常");
+//								holder.tv_zhengshu.setTextColor(Color.BLACK);
+//							}else if("1".equals(zhengshu))
+//							{
+//								holder.tv_zhengshu.setText("警告");
+//								holder.tv_zhengshu.setTextColor(Color.YELLOW);
+//							}else if("2".equals(zhengshu))
+//							{
+//								holder.tv_zhengshu.setText("异常");
+//								holder.tv_zhengshu.setTextColor(Color.RED);
+//							}
+//							
+//							
+//							
+//						}
+//						
+//					} catch (Exception e1) {
+//						e1.printStackTrace();
+//					}
+//				}
+//
+//				@Override
+//				public void onFailure(int errorNo, String strMsg) {
+//					super.onFailure(errorNo, strMsg);
+//				}
+//			});
+//		}
+        
+        
+    	final MineShipModel model = modellist.get(position);
+    	final MyShipItemStateModel model_state=modelliststate.get(position);
+       
+        holder.shipname.setText(model.getshipname());
+       
+      
+        
+        convertView.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				SystemStatic.searchShipName=model.getshipname();
+				Intent in = new Intent();
+				in.setClass(context, MineShipDetailsActivity.class);
+				
+				in.putExtra("jiaofei", model_state.getjiaofei());
+				in.putExtra("weizhang", model_state.getweizhang());
+				in.putExtra("zhengshu", model_state.getzhengshu());
+				
+				
+				in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				
+				context.startActivity(in);
+			}
+		});
+        
+        
+        
+		
+        
+		return convertView;
+	}
+
+	class ViewHolder {
+
+//	    "shipid": 3,
+//        "shipname": "浙安吉货1931",
+//        "regnumber": "16",
+//        "firstregnum": null,
+//        "ssrn": null,
+//        "englishname": "ppp",
+//        "homeport": "i",
+//        "shiptype": "i",
+//        "manufacturer": "i",
+//        "builtdate": "i",
+//        "imo": null
+//		
+		
+		TextView shipname;	
+		TextView reason;
+		TextView time;
+		
+		TextView tv_jiaofei;//未缴费
+		TextView tv_weizhang;//未处理违章
+		TextView tv_zhengshu;//证书到期
+		
+		
+
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+	
+
+}

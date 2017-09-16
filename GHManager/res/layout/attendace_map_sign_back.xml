@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_background2" >
+
+        <ImageButton
+            android:id="@+id/attendace_main_back"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/title_back" />
+
+        <TextView
+            android:id="@+id/attendace_main_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/attendace_sign_back"
+            android:textColor="#fff"
+            android:textSize="18sp" >
+        </TextView>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/attendace_main_button"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/title_background2"
+        android:text="@string/attendace_location" />
+
+    <EditText
+        android:id="@+id/attendace_main_geocodekey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/frameLayout1"
+        android:ems="10"
+        android:text="嘉兴市城南路1369号市科创中心11号楼407" >
+    </EditText>
+
+    <Button
+        android:id="@+id/attendace_main_geocode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/attendace_main_geocodekey"
+        android:layout_alignBottom="@+id/attendace_main_geocodekey"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:text="定位" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/attendace_main_bmapView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/attendace_main_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/attendace_main_geocodekey"
+        android:clickable="true" >
+
+    </com.baidu.mapapi.map.MapView>
+
+</RelativeLayout>

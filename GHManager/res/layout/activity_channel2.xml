@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<!-- 标题栏 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu"
+        android:gravity="left|center"
+        android:onClick="onViewClick">
+        <ImageButton 
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="16dp"        
+        android:background="@drawable/ic_selector" />
+        <TextView 
+            android:id="@+id/law"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="事件记录"
+        android:textColor="#0067ac"
+        android:textSize="18sp"
+         android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        />
+        
+        
+        </LinearLayout>
+        
+    <!-- 内容-->
+   <ListView 
+       android:layout_width="match_parent"
+        android:layout_height="400dp" 
+        android:id="@+id/list">
+       
+   </ListView>
+    
+    
+  
+   <TextView 
+        android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#bebebe"/>
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:gravity="left|center"
+        android:focusable="true">
+ 	<Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1" 
+            android:layout_gravity="center"
+            android:text="提交巡查日志"
+            android:padding="16dp"
+            android:background="@drawable/button_selector"
+            android:textColor="#ffffff"
+            android:onClick="Submit"/>
+ 		<Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1" 
+            android:layout_gravity="center"
+            android:text="添加项"
+            android:padding="16dp"
+            android:background="@drawable/button_selector"
+            android:textColor="#ffffff"
+            android:onClick="addItem"/>
+ 	 </LinearLayout>
+        
+</LinearLayout>

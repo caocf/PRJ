@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="Server">
+    <output-path>$PROJECT_DIR$/build/target</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="GHServer" />
+          <element id="dir-copy" path="$PROJECT_DIR$/config" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 4.2.2-4.2.2" />
+          <element id="library" level="project" name="Spring MVC-4.2.5.RELEASE" />
+          <element id="library" level="project" name="Spring-4.2.5.RELEASE" />
+          <element id="library" level="project" name="jackson" />
+          <element id="library" level="project" name="commoner" />
+          <element id="library" level="project" name="smacklibs" />
+          <element id="library" level="project" name="json" />
+          <element id="library" level="project" name="axis" />
+          <element id="library" level="project" name="taobao-sdk-java-auto_1455552377940-20160607-source" />
+          <element id="library" level="project" name="jsoup-1.9.2" />
+          <element id="library" level="project" name="poi-3.14-20160307" />
+          <element id="library" level="project" name="fastjson-1.1.41" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <element id="dir-copy" path="D:/库/SH/web/WEB-INF/page" />
+      </element>
+      <element id="javaee-facet-resources" facet="GHServer/web/Web" />
+    </root>
+  </artifact>
+</component>

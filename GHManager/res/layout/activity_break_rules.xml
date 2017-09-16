@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="#fff"
+     android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <RelativeLayout
+            android:id="@+id/relative_title_final"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_selector" 
+                android:onClick="onViewClick" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/back"
+                android:text="船舶违章信息"
+                android:textColor="#1766b1"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+    
+    <ListView 
+        android:id="@+id/lv_break"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:divider="#d7d7d7"  
+             
+        android:dividerHeight="1px" >
+        
+    </ListView>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/img_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      	android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:visibility="gone"
+        android:text="该船无违章记录"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:drawablePadding="30dp"
+        android:drawableTop="@drawable/img_cbwzxx_no_record" />
+
+</LinearLayout>

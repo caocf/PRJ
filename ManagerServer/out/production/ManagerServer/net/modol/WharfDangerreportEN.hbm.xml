@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.WharfDangerreportEN" table="wharf_dangerreport" schema="zjmanager">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="ship">
+            <column name="ship" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="portime">
+            <column name="portime" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="reason">
+            <column name="reason" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="number">
+            <column name="number" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="endtime">
+            <column name="endtime" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="wharfEN">
+            <column name="wharfEN" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="goodsname">
+            <column name="goodsname" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="mount">
+            <column name="mount" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="checker">
+            <column name="checker" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="workway">
+            <column name="workway" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <many-to-one name="startport" class="net.modol.CommonPortEN" column="startport" lazy="false" insert="true" update="true" cascade="none"/>
+        <many-to-one name="targetport" class="net.modol.CommonPortEN" column="targetport" lazy="false" insert="true" update="true" cascade="none"/>
+        <many-to-one name="rank" class="net.modol.CommonDangerrankEN" column="ranktype" lazy="false" insert="true" update="true" cascade="none"/>
+        <many-to-one name="unit" class="net.modol.CommonGoodsunitEN" column="unit" lazy="false" insert="true" update="true" cascade="none"/>
+        <many-to-one name="status" class="net.modol.ShipStatusEN" column="status" lazy="false" insert="true" update="true" cascade="none"/>
+
+    </class>
+</hibernate-mapping>

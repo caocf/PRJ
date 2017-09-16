@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#f9f9f9">
+    
+    <RelativeLayout
+       
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="#ffff" >
+
+        <RelativeLayout
+            android:id="@+id/relative_title"
+            android:layout_width="wrap_content"
+            android:layout_height="48dip"
+            android:background="#ffff" >
+
+        <ImageView
+            android:id="@+id/permission_list_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/image_button_back" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/permission_list_back"
+            android:text="进港预申报记录"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+        
+        </RelativeLayout>
+        
+    </RelativeLayout>
+	    <ImageView
+	        android:id="@+id/imageView2"
+	        android:layout_below="@+id/relative_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:scaleType="fitXY"
+	        android:src="@drawable/title_backgrundmenu" />	
+	    <TextView
+	        android:id="@+id/aaa"
+	         android:layout_below="@+id/imageView2"
+	        android:layout_width="match_parent"
+	        android:layout_height="1dp"
+	        android:background="#d7d7d7"
+	        android:text="TextView" />
+	    
+	  <RelativeLayout
+        android:id="@+id/relative_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:visibility="gone"
+        android:background="#f9f9f9" >
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_search" />
+
+        <TextView
+            android:id="@+id/textView_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_search"
+            android:text="搜索"
+            android:textColor="#bebebe"
+            android:textSize="14sp" />
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff">
+        
+         <ListView 
+	        android:id="@+id/listview_record"
+	        android:layout_width="match_parent"
+	        android:dividerHeight="16dp"
+	        android:divider="#f9f9f9"
+	        android:layout_height="wrap_content">
+	        
+	    </ListView>
+        
+        
+    </RelativeLayout>
+	   
+	    
+    
+
+</LinearLayout>

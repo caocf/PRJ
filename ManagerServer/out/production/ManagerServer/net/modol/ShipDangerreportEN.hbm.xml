@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.ShipDangerreportEN" table="ship_dangerreport" schema="zjmanager">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="goods">
+            <column name="goods" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="tons">
+            <column name="tons" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="berthtime">
+            <column name="berthtime" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="committime">
+            <column name="committime"   not-null="false"/>
+        </property>
+        <property name="number">
+        <column name="number" sql-type="varchar(255)" not-null="false"/>
+    </property>
+        <property name="reason">
+            <column name="reason" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="shipname">
+            <column name="shipname" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="checker">
+            <column name="checker" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <many-to-one name="dangerrankEN" class="net.modol.CommonDangerrankEN" cascade="none" column="rank" lazy="false"/>
+        <many-to-one name="goodsunitEN" class="net.modol.CommonGoodsunitEN" cascade="none" column="unit" lazy="false"/>
+        <many-to-one name="startportEN" class="net.modol.CommonPortEN" cascade="none" column="startport" lazy="false"/>
+        <many-to-one name="endportEN" class="net.modol.CommonPortEN" cascade="none" column="endport" lazy="false"/>
+        <many-to-one name="status" class="net.modol.ShipStatusEN" cascade="none" column="statusid" lazy="false"/>
+    </class>
+</hibernate-mapping>

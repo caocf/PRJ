@@ -1,0 +1,251 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.hxkg.ghmanager.HomeActivity"
+    android:background="#f5f5f5"
+    android:showDividers="middle|end"
+    android:divider="@drawable/linev" >    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/title_backgrundmenu">
+         <ImageButton 
+              android:id="@+id/back"
+            android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:layout_gravity="center|center"
+        android:background="@null"
+        android:src="@drawable/ic_selector"
+        android:onClick="onClick"/>
+        
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的"
+        android:textColor="#0067ac"
+            android:textSize="18sp" 
+        android:layout_weight="1"
+        android:layout_gravity="center"/>       
+        </LinearLayout>
+        
+   <!-- <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line" /> --> 
+    
+    
+    <LinearLayout
+        android:id="@+id/tocount"        
+        android:onClick="onView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="#ffffff">
+       <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:background="@drawable/ic_avatar" />
+       <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="19dp"
+        android:gravity="center">
+        <!-- 用户名 -->
+        <TextView 
+            android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:layout_gravity="left"/> 
+        <!-- 部门 -->
+        <TextView 
+            android:id="@+id/dep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#bebebe"
+        android:textSize="18sp"
+        android:layout_gravity="left"/>  
+        </LinearLayout>
+        <ImageButton            
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center|center"
+        android:background="@drawable/icon_right"/>
+       
+     </LinearLayout>
+    
+    <LinearLayout
+       android:layout_width="match_parent"
+        android:layout_height="80dp" 
+        android:orientation="horizontal" 
+        android:background="#ffffff"
+        android:layout_gravity="center">
+        
+        <!-- 执法取证 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_weight="1"
+         android:layout_gravity="center"
+          android:gravity="center"
+          android:id="@+id/law"
+          android:onClick="onView">
+        	 <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_mine_take_the_evidence" />
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="我的取证"/>           
+        </LinearLayout>
+        <!-- 简易执法 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:id="@+id/simple"
+          android:onClick="onView"
+         android:layout_gravity="center"
+         android:gravity="center">
+        	 <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_mine_enforce_the_law" />
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="离线执法"/>           
+        </LinearLayout>
+         <!-- 巡查 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:id="@+id/potrade"
+          android:onClick="onView"
+         android:layout_gravity="center"
+          android:gravity="center">
+        	 <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_mine_patrol_log" />
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="我的巡查"/>           
+        </LinearLayout>  
+        <!-- 审批 -->
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:id="@+id/check"
+          android:onClick="onView"
+         android:layout_gravity="center"
+          android:gravity="center">
+        	 <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_mine_approval" />
+        	<TextView 
+        	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+        android:text="我的审批"/>           
+        </LinearLayout>      
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center|left"
+        android:background="#ffffff"
+        android:onClick="onView">        
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="二维码"
+        android:layout_marginLeft="16dp"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:layout_weight="1"/>  
+        <ImageButton 
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/icon_right"
+        />     
+        </LinearLayout>
+   <LinearLayout
+       android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center|left"
+        android:background="#ffffff"
+         android:onClick="onView">        
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="检查更新"
+        android:layout_marginLeft="16dp"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:layout_weight="1"
+       />      
+        </LinearLayout>
+        
+    <LinearLayout
+        android:id="@+id/aboutus"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center|left"
+        android:background="#ffffff"
+        android:onClick="onView">        
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关于我们"
+        android:layout_marginLeft="16dp"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:layout_weight="1"/>  
+        <ImageButton 
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/icon_right"
+        />     
+        </LinearLayout>
+
+</LinearLayout>

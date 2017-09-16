@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    >
+     <RelativeLayout
+        android:id="@+id/relative_title"
+        android:layout_width="wrap_content"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu" >
+
+        <ImageView
+            android:id="@+id/permission_list_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+          
+            android:src="@drawable/ic_selector" />
+        
+        
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/permission_list_back"
+            android:text="许可信息"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+
+        
+    </RelativeLayout>    
+
+    <TextView
+        android:id="@+id/aaa"
+         android:layout_below="@+id/relative_title"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+    <RelativeLayout 
+        android:id="@+id/empty_permission"
+	    android:layout_below="@+id/aaa"  
+	    android:background="#ffff" 
+	    android:visibility="gone"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+        <ImageView 
+            android:id="@+id/empty_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          	android:layout_centerInParent="true"
+            android:background="@drawable/ic_graypermission"
+            />
+        <TextView 
+            android:id="@+id/empty_textg"
+            android:layout_marginTop="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_image"
+            android:textColor="#666666"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+  			android:text="近三个月内，您暂无申请许可"/>
+    
+    </RelativeLayout>
+	<RelativeLayout 
+	    android:id="@+id/permission_have"
+	    android:layout_below="@+id/aaa"  
+	    android:background="#ffff" 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/lv_permission"   
+        android:layout_width="match_parent"
+        android:divider="#d7d7d7"
+        android:dividerHeight="1px"
+        android:layout_height="match_parent" >
+    </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

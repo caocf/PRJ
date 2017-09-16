@@ -1,0 +1,175 @@
+package com.hztuen.position;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.TextView;
+
+import com.gh.modol.RegionList;
+import com.hxkg.ghpublic.HomeActivity;
+import com.hxkg.ghpublic.R;
+import com.hztuen.gh.activity.Adapter.PositionAdapter;
+import com.hztuen.lvyou.utils.SystemStatic;
+
+/**
+ * @author zzq
+ * @DateTime 2016年7月12日 下午4:12:02
+ */
+public class PositionActivity extends Activity{
+	private TextView position_back;
+	private ListView cityList;
+	private TextView postion_defult;
+	private PositionAdapter postionadapter;
+	private List<RegionList> regionlist = new ArrayList<RegionList>();
+	private String postion_city = "";
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_postion);
+		position_back = (TextView) findViewById(R.id.postion_back);
+		cityList = (ListView) findViewById(R.id.positionlist);
+		postion_defult = (TextView) findViewById(R.id.postion_city);
+		cityList.setDividerHeight(0);
+		//准备数据
+		getCity();
+//		Intent intent = getIntent();
+//		postion_city = intent.getStringExtra("city");
+		if(SystemStatic.city.equals("") || SystemStatic.city == null){
+			postion_defult.setText("定位中,请稍候...");
+		}else{
+//			SystemStatic.city
+			postion_defult.setText(SystemStatic.city);
+		}
+//		postion_defult.setText(postion_city);
+		
+		postionadapter = new PositionAdapter(getApplicationContext(), regionlist);
+		cityList.setAdapter(postionadapter);
+		position_back.setOnClickListener(onclicklistener);
+		cityList.setOnItemClickListener(onitemclicklistener);
+	}
+	public OnItemClickListener onitemclicklistener = new OnItemClickListener(){
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			// TODO Auto-generated method stub
+			switch (parent.getId()){
+			case R.id.positionlist:
+				expressItemClick(position);//position 代表你点的哪一个
+				break;
+			}
+		}
+		private void expressItemClick(int position) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent();
+			intent.setClass(getApplicationContext(), HomeActivity.class);
+			String cityPostion = regionlist.get(position).getRegion().toString();
+			if(cityPostion.equals("杭州")){
+				setResult(1001, intent);
+				finish();
+			}else if(cityPostion.equals("宁波")){
+				setResult(1002, intent);
+				finish();
+			}else if(cityPostion.equals("温州")){
+				setResult(1003, intent);
+				finish();
+			}else if(cityPostion.equals("绍兴")){
+				setResult(1004, intent);
+				finish();
+			}else if(cityPostion.equals("湖州")){
+				setResult(1005, intent);
+				finish();
+			}else if(cityPostion.equals("嘉兴")){
+				setResult(1006, intent);
+				finish();
+			}else if(cityPostion.equals("金华")){
+				setResult(1007, intent);
+				finish();
+			}else if(cityPostion.equals("衢州")){
+				setResult(1008, intent);
+				finish();
+			}else if(cityPostion.equals("台州")){
+				setResult(1009, intent);
+				finish();
+			}else if(cityPostion.equals("丽水")){
+				setResult(1010, intent);
+				finish();
+			}else if(cityPostion.equals("舟山")){
+				setResult(1011, intent);
+				finish();
+			}
+			//看你需不需要返回当前界面，如果点返回需要返回到当前界面，就不用这个
+		}
+	};
+	public OnClickListener onclicklistener = new OnClickListener(){
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch(v.getId()){
+			case R.id.postion_back:
+				finish();
+				break;
+			default:
+				break;
+			}
+		}
+	};
+	/*
+	 * 添加数据
+	 * */
+	public void getCity(){
+		regionlist.clear();
+		RegionList mRegionList =new RegionList();
+		mRegionList.setRegion("杭州");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("宁波");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("温州");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("绍兴");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("湖州");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("嘉兴");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("金华");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("衢州");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("台州");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("丽水");
+		regionlist.add(mRegionList);
+
+		mRegionList =new RegionList();
+		mRegionList.setRegion("舟山");
+		regionlist.add(mRegionList);
+	}
+
+}

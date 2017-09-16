@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+/*弹出窗口*/
+.window {
+	font-size: 12px;
+	position: absolute;
+	width: 473px;
+	overflow: hidden;
+}
+
+.window .window-header {
+	height: 0;
+}
+
+.window .window-body {
+	width: 500px;
+	background: #fff;
+	border: solid 1px #ccc;
+}
+
+#dialog_div {
+	padding: 0 10px 10px 10px;
+}
+
+.closeDialog {
+	float: right;
+	margin: 5px;
+	padding: 5px;
+	border: solid 1px #ccc;
+}
+
+.closeDialog:HOVER {
+	color: red
+}
+
+#dialog_table {
+	table-layout: fixed;
+	width: 500px;
+}
+
+#dialog_table td {
+	margin: 0;
+	padding: 0 0 10px 10px;
+}

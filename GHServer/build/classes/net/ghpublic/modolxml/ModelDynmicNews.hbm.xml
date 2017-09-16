@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.ghpublic.modol.ModelDynmicNews" table="news_Knowlege" schema="zjport">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="titile">
+            <column name="title" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="contenct">
+            <column name="content" sql-type="longtext"  not-null="true"/>
+        </property>
+        <property name="date">
+            <column name="updatetime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="url">
+            <column name="url" sql-type="varchar(255)" not-null="false"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

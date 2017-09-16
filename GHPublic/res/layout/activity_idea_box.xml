@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_backgrundmenu" >
+
+
+        <TextView
+            android:id="@+id/idea_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@drawable/image_button_back"
+            android:drawablePadding="16dp"
+            android:text="意见箱"
+            android:textColor="#1766b1"
+            android:textSize="18sp" />
+
+        
+    </RelativeLayout>
+ 
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/idea_postion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="请选择当前城市"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:textColor="#333333"
+            android:layout_weight="1.0"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_local"
+            android:drawableRight="@drawable/ic_dropdown"
+            
+            android:drawablePadding="8dp"
+            android:text="" />
+
+
+    </LinearLayout>
+<TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff" >
+
+        <EditText
+            android:id="@+id/idea_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:digits="1234567890"
+            android:phoneNumber="true"
+            android:background="#ffffff"
+            android:hint="请输入您的手机号"
+            
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginLeft="18dp"
+            android:layout_weight="1.0"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_mobilephone"
+            android:textColor="#333333"
+            android:drawablePadding="8dp"
+            android:inputType="textPhonetic"
+            android:text="" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+<TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:layout_marginTop="16dp"
+        android:text="number" />
+    
+    <EditText
+        android:id="@+id/idea_input"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#ffffff"
+        android:hint="请输入您要反馈的意见"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="16dp"
+        android:textSize="16sp"
+        android:gravity="top"
+        android:ems="120"
+        android:textColor="#333333"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+        
+    </EditText>
+<TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7"
+        android:text="TextView" />
+
+<Button
+    android:id="@+id/idea_submit"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_marginTop="20dp"
+    android:textSize="18sp"
+    android:textColor="#ffff"
+    android:layout_marginRight="18dp"
+    android:layout_marginLeft="18dp"
+    android:background="@drawable/ic_selector_btn"
+    android:text="提交" />
+
+</LinearLayout>

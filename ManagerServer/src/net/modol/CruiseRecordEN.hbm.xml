@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="net.modol.CruiseRecordEN" table="cruise_record" schema="zjmanager">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="member">
+            <column name="member" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="area">
+            <column name="area" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="period">
+            <column name="period" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="miles">
+            <column name="miles"   not-null="false"/>
+        </property>
+        <property name="tools">
+            <column name="tools" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="dir">
+            <column name="dir" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="records">
+            <column name="records" sql-type="varchar(255)" not-null="false"/>
+        </property>
+        <property name="starttime">
+            <column name="starttime" sql-type="varchar(255)" not-null="false"/>
+        </property>
+
+        <many-to-one name="userBaseEN" class="net.modol.JcxxYhEN" cascade="none" insert="true" update="true" lazy="false">
+            <column name="userid" sql-type="varchar(255)" not-null="false"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
