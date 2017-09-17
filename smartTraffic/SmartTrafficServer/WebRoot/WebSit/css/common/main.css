@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+#simpleMap {
+	float: right;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.sMap_network_div{
+	position: absolute;
+	top: 285px;
+	left: 475px;
+	border: solid #cbcccf;
+	border-width: 1px;
+	border-bottom-right-radius:3px;
+	border-bottom-left-radius:3px;
+	height: 45px;
+	width: 128px;
+	color:#666666;
+	background-color: #fff;
+	border-top: none;
+}
+.sMap_road_div{
+	position: absolute;
+	top: 305px;
+	right: 15px;
+	padding: 0;
+	text-align:center;
+	border:1px solid #ccccccc;
+	height: 58px;
+	width: 58px;
+	background-color: #fff;
+	border-radius:3px;
+	color: #666666; 
+}

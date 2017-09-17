@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<train>
+		<trainNo>7998</trainNo>
+		<station>上海</station>
+		<planStart>9:00</planStart>
+		<planEnd>10:00</planEnd>
+		<realStart>9:10</realStart>
+		<realReach>10:10</realReach>
+		<retain>2</retain>
+	</train>
+
+	<train>
+		<trainNo>7998</trainNo>
+		<station>上海</station>
+		<planStart>9:00</planStart>
+		<planEnd>10:00</planEnd>
+		<realStart>9:10</realStart>
+		<realReach>10:10</realReach>
+		<retain>2</retain>
+	</train>
+	<train>
+		<trainNo>7998</trainNo>
+		<station>上海</station>
+		<planStart>9:00</planStart>
+		<planEnd>10:00</planEnd>
+		<realStart>9:10</realStart>
+		<realReach>10:10</realReach>
+		<retain>2</retain>
+	</train>
+</list>

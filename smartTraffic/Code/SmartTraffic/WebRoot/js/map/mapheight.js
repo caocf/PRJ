@@ -1,0 +1,38 @@
+$(function(){
+	$("#traffic_map").width($("#traffic_map_1").width());
+	$("#traffic_map").height($("#traffic_map_1").height());
+	$("#port_map").width($("#port_map_1").width());
+	$("#port_map").height($("#port_map_1").height());
+	$("#road_map").width($("#road_map_1").width());
+	$("#road_map").height($("#road_map_1").height());
+	$("#flat_map").width($("#flat_map_1").width());
+	$("#flat_map").height($("#flat_map_1").height());
+	$("#transport_map").width($("#transport_map_1").width());
+	$("#transport_map").height($("#transport_map_1").height());
+	$("#video_map").width($("#video_map_1").width());
+	$("#video_map").height($("#video_map_1").height());
+	$("#taxi_map").width($("#taxi_map_1").width());
+	$("#taxi_map").height($("#taxi_map_1").height());
+	$("#ship_map").width($("#ship_map_1").width());
+	$("#ship_map").height($("#ship_map_1").height());
+	$("#video_out").height();
+	//alert($("#video_map").width)
+});
+window.onresize=function(){
+	$("#traffic_map").width($("#traffic_map_1").width());
+	$("#traffic_map").height($("#traffic_map_1").height());
+	$("#port_map").width($("#port_map_1").width());
+	$("#port_map").height($("#port_map_1").height());
+	$("#road_map").width($("#road_map_1").width());
+	$("#road_map").height($("#road_map_1").height());
+	$("#flat_map").width($("#flat_map_1").width());
+	$("#flat_map").height($("#flat_map_1").height());
+	$("#transport_map").width($("#transport_map_1").width());
+	$("#transport_map").height($("#transport_map_1").height());
+	$("#video_map").width($("#video_map_1").width());
+	$("#video_map").height($("#video_map_1").height());
+	$("#taxi_map").width($("#taxi_map_1").width());
+	$("#taxi_map").height($("#taxi_map_1").height());
+	$("#ship_map").width($("#ship_map_1").width());
+	$("#ship_map").height($("#ship_map_1").height());
+}

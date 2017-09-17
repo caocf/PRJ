@@ -1,0 +1,12 @@
+@CHARSET "utf-8";
+.traffic_map{
+	  z-index:0;
+	 
+	  height:100%;
+	  width:100%;
+}
+
+.traffic_map_back{
+      height:100%;
+	  width:100%;
+}

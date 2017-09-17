@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.trafficinfo.model.ICcard" table="st_iccard">
+		<id name="id" column="ic_id"></id>
+		<property name="name" column="ic_name"></property>
+		<property name="zone" column="ic_zone"></property>
+		<property name="introduce" column="ic_introduce"></property>
+		<property name="address" column="ic_address"></property>
+		<property name="phone" column="ic_phone"></property>
+		<property name="time" column="ic_time"></property>
+	</class>
+	
+	<class name="com.sts.trafficinfo.model.TaxiCompany" table="st_taxtcompany">
+		<id name="id" column="tc_id"></id>
+		<property name="name" column="tc_name"></property>
+		<property name="introduce" column="tc_info"></property>
+		<property name="address" column="tc_addr"></property>
+		<property name="phone" column="tc_phone"></property>
+	</class>
+	
+	<class name="com.sts.trafficinfo.model.TicketsAgent" table="st_ticketagent">
+		<id name="id" column="ta_id"></id>
+		<property name="name" column="ta_name"></property>
+		<property name="address" column="ta_address"></property>
+		<property name="time" column="ta_service_time"></property>
+		<property name="phone" column="ta_phone"></property>
+		<property name="zone" column="ta_zone"></property>
+	</class>
+	
+	<class name="com.sts.trafficinfo.model.TicketHotLine" table="st_tickethotline">
+		<id name="id" column="th_id"></id>
+		<property name="name" column="th_name"></property>
+		<property name="phone" column="th_phone"></property>
+	</class>
+	
+	<class name="com.sts.trafficinfo.model.TrafficPoint" table="st_trafficpoint">
+		<id name="id" column="tp_id"></id>
+		<property name="name" column="tp_name"></property>
+		<property name="phone" column="tp_phone"></property>
+		<property name="type" column="tp_type"></property>
+		<property name="address" column="tp_addr"></property>
+	</class>
+	
+	
+</hibernate-mapping>

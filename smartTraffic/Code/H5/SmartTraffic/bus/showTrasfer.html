@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>换乘详情</title>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<style>
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+			
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			
+			.oa-contact-content {
+				width: 100%;
+			}
+			
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			
+			.oa-contact-name,
+			oa-contact-position {
+				float: left;
+			}
+			.mui-bar{
+				background-color:#FFFFFF ;
+			}
+			.mui-media-body{
+				line-height: 60px;
+				font-size: 30px;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	</head>
+
+	<body>
+		<header></header>
+		<nav class="mui-bar mui-bar-tab" style="line-height: 100px; height: 100px;">
+			<a class="mui-tab-item mui-active" href="#tabbar" id="nav0" style="display: none;">
+				<span class="mui-tab-label" style="font-size: 28px;">方案一</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat" id="nav1" style="display: none;">
+				<span class="mui-tab-label"  style="font-size: 28px;">方案二</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact" id="nav2" style="display: none;">
+				<span class="mui-tab-label" style="font-size: 28px;">方案三</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map" id="nav3" style="display: none;">
+				<span class="mui-tab-label" style="font-size: 28px;">方案四</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content mui-active">
+				<ul class="mui-table-view" id="table0">
+
+				</ul>
+				<hr />
+				<ul class="mui-table-view" id="list0">
+
+				</ul>
+			</div>
+			<div id="tabbar-with-chat" class="mui-control-content">
+				<ul class="mui-table-view" id="table1">
+
+				</ul>
+				<hr />
+				<ul class="mui-table-view" id="list1">
+
+				</ul>
+			</div>
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<ul class="mui-table-view" id="table2">
+
+				</ul>
+				<hr />
+				<ul class="mui-table-view" id="list2">
+
+				</ul>
+			</div>
+			<div id="tabbar-with-map" class="mui-control-content">
+				<ul class="mui-table-view" id="table3">
+
+				</ul>
+				<hr />
+				<ul class="mui-table-view" id="list3">
+
+				</ul>
+			</div>
+		</div>
+
+		<footer>
+		</footer>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script>
+			mui.init();
+
+			mui.ready(function() {
+//				alert(document.body.offsetWidth)
+				var list = JSON.parse(localStorage.trasferData)
+				document.title = localStorage.startAddress+"->"+localStorage.endAddress
+//				app.queryOriginTrafficTrasfer(queryData, function(data) {
+					console.log(JSON.stringify(list[0]))
+					for(var i = 0; i < list.length; i++) {
+						var table = document.getElementById("table"+i)
+						var listtable = document.getElementById("list"+i)
+						var nava = document.getElementById("nav"+i);
+						nava.style.display = ""
+						var lineList = list[i].LineList;
+						var l = ""
+						for(var j = 0; j < lineList.length; j++) {
+							l = l + lineList[j] + "-&gt;"
+						}
+						if(l.length > 0) {
+							l = l.substring(0, l.length - 5)
+						} else {
+							l = "步行"
+						}
+						var li = document.createElement("li");
+						li.classList.add("mui-table-view-cell");
+						li.classList.add("mui-media");
+						var newList = list[i].NewList;
+						
+						var Distance = 0
+						for(var k = 0; k < newList.length; k++) {
+							if(newList[k].Type == 0) {
+								Distance += newList[k].Distance;
+							}
+							var inli = document.createElement("li");
+							inli.classList.add("mui-table-view-cell");
+							inli.classList.add("mui-media");
+							var ina = document.createElement("a");
+
+							var indiv = document.createElement("div");
+							indiv.className = "mui-media-body";
+							var instr = ""
+							if(newList[k].Type == 0){
+								instr = newList[k].Direction + "步行" + newList[k].Distance + "米"
+							}else if(newList[k].Type == 1){
+								instr = "在"+newList[k].StationName+"乘坐"+newList[k].LineDetails.Name + "<p class='mui-ellipsis' style='font-size:22px'>" + newList[k].LineDetails.StationCount+"站</p>"
+							}else if(newList[k].Type == 2){
+								instr = "在"+newList[k].BikeStationAddress+"取公共自行车"+newList[k].Direction+"骑行" + newList[k].Distance + "米"
+							}
+							indiv.innerHTML = instr
+							ina.appendChild(indiv);
+							inli.appendChild(ina);
+							listtable.appendChild(inli);
+						}
+						var a = document.createElement("a");
+
+						var div = document.createElement("div");
+						div.className = "mui-media-body";
+						div.innerHTML = l + "<p class='mui-ellipsis' style='font-size:22px'>" + list[i].Time + "分钟·" + (list[i].Distance / 1000).toFixed(2) + "km·步行" + Distance + "m·" + list[i].Price + "元" + "</p>"
+						a.appendChild(div);
+						div.ref = JSON.stringify(newList)
+						div.addEventListener("tap",function(){
+							localStorage.trasferGPS = this.ref;
+							mui.openWindow("showTrasferInMap.html","showTrasferInMap");
+						});
+						li.appendChild(a);
+						table.appendChild(li);
+					}
+//				});
+			});
+		</script>
+	</body>
+
+</html>

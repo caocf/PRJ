@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    
+    <!--                  行政执法                                                    -->
+	<package name="xzcf" extends="cement-interceptor" namespace="/xzcf">
+	    
+	    <!--  行政处罚详情查询  -->
+		<action name="xzcfxq" method="selectXzcfXq"
+			class="com.highwaycenter.legal.action.XzPunishmentAction">
+			<result name="json" type="json"></result>
+		</action>
+		  <!--  行政处罚列表查询    -->
+		<action name="xzcflist" method="selectXzcfList"
+			class="com.highwaycenter.legal.action.XzPunishmentAction">
+			<result name="json" type="json"></result>
+		</action>
+		  <!--  行政处罚新增    -->
+		<action name="savexzcf" method="saveXzcf"
+			class="com.highwaycenter.legal.action.XzPunishmentAction">
+			<result name="json" type="json"></result>
+		</action>
+		  <!--  行政处罚编辑    -->
+		<action name="updatexzcf" method="updateXzcf"
+			class="com.highwaycenter.legal.action.XzPunishmentAction">
+			<result name="json" type="json"></result>
+		</action>
+		 <!--  行政处罚删除    -->
+       <action name="deletexzcf" method="deleteXzcf"
+			class="com.highwaycenter.legal.action.XzPunishmentAction">
+			<result name="json" type="json"></result>
+		</action>
+		 <!--  行政处罚下拉框接口    -->
+       <action name="selectoptionlist" method="selectOptionList"
+			class="com.highwaycenter.legal.action.XzPunishmentAction">
+			<result name="json" type="json"></result>
+		</action>
+	</package> 
+	
+</struts>

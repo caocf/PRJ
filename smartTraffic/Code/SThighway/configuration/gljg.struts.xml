@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    
+    <!--                    管理机构部门列表配置信息                                                     -->
+	<package name="gljglist" extends="cement-interceptor" namespace="/gljglist">
+	    <!--  获取机构列表  -->
+		<action name="gljglist" method="gljgList"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!--  获取机构列表  -->
+		<action name="gljgjbxxlist" method="selectGljgList"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+         <!--  根据父机构获取机构列表  -->
+		<action name="gljglistbyfjg" method="gljgListByFjg"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--  根据机构获取部门列表  -->
+		<action name="glbmlistbyfjg" method="glbmListByFjg"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--  根据部门获取人员列表  -->
+		<action name="glrylistbybm" method="gllryListByBm"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		 <!--  获取机构信息  -->
+		<action name="findjginfo" method="findJgInfo"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+	 <!--  获取部门信息  -->
+		<action name="selectbmxq" method="selectBmXq"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 获取一级下级部门 -->
+		<action name="selectorderlist" method="selectOrderList"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 获取人员排序字段 -->
+		<action name="selectryorderlist" method="selectRyOrderList"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!-- 更新排序字段-->
+		<action name="updateorderlist" method="updateOrderList"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 更新人员排序字段-->
+		<action name="updateryorderlist" method="updateRyOrderList"
+			class="com.highwaycenter.gljg.action.GljgListAction">
+			<result name="json" type="json"></result>
+		</action>
+	</package>  
+	
+	
+	<!--                    管理机构部门管理配置信息                                                     -->
+	<package name="jgmanager" extends="cement-interceptor" namespace="/jgmanager">
+	    <!--  新增部门  -->
+		<action name="glbmsave" method="glbmSave"
+			class="com.highwaycenter.gljg.action.GljgManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--  更新部门 -->
+		<action name="glbmupdate" method="glbmUpdate"
+			class="com.highwaycenter.gljg.action.GljgManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   删除部门  -->
+		<action name="glbmdelete" method="glbmDelete"
+			class="com.highwaycenter.gljg.action.GljgManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   新增机构 -->
+		<action name="gljgsave" method="gljgSave"
+			class="com.highwaycenter.gljg.action.GljgManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   更新机构 -->
+		<action name="gljgupdate" method="gljgUpdate"
+			class="com.highwaycenter.gljg.action.GljgManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   删除机构  -->
+		<action name="gljgdelete" method="gljgDelete"
+			class="com.highwaycenter.gljg.action.GljgManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+	</package>
+	
+	 <!--                         管理人员配置信息                                                     -->
+	<package name="rymanager" extends="cement-interceptor" namespace="/rymanager">
+		  
+		 <!--  编辑管理人员   -->
+		<action name="glryupdate" method="glryUpdate"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+	    <!--  新增管理人员   -->
+		<action name="glrysave" method="glrySave"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+	    <!--  删除管理人员 (一并删除人员的人员角色关系)   -->
+		<action name="glrydelete" method="glryDelete"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--  给人员分配角色   -->
+		<action name="jstory" method="jsToRy"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   获取用户列表 -->
+		<action name="glrylistall" method="glryListAll"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   根据属性获取用户列表 -->
+		<action name="glrylistbyproperty" method="glryListByProperty"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		<!--   获取用户信息 -->
+		<action name="findryInfo" method="findRyInfo"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   用户上传头像 -->
+		<action name="imgupload" method="imgUpload"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   用户修改密码 -->
+		<action name="passwordupdate" method="passwordUpdate"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>		
+		
+		<!--   重置密码 -->
+		<action name="pwchongzhi" method="pwChongzhi"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>		
+		
+		<!--   查看个人信息 -->
+		<action name="finduserInfo" method="findUserInfo"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!--   用户修改个人信息 -->
+		<action name="basicinfoupdate" method="basicInfoUpdate"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>		
+		<!--   获取职位列表 -->
+		<action name="postlist" method="selectPostlist"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!--   分页获取职位列表 -->
+		<action name="postlistpage" method="selectPostlistPage"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>	
+		<!--   新增 -->
+		<action name="savepost" method="savePost"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>		
+		
+		<!--   编辑职位 -->
+		<action name="updatepost" method="updatePost"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>	
+		<!--   删除职位 -->
+		<action name="deletepost" method="deletePost"
+			class="com.highwaycenter.gljg.action.GlryManagerAction">
+			<result name="json" type="json"></result>
+		</action>	
+	</package>
+</struts>      

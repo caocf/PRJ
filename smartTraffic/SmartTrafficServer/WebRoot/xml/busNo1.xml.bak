@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<bus>
+		<busNo>7998</busNo>
+		<order>1</order>
+		<planStart>9:00</planStart>
+		<realStart>9:00</realStart>
+		<realReach>10:10</realReach>
+	</bus>
+
+	<bus>
+		<busNo>7998</busNo>
+		<order>1</order>
+		<planStart>9:00</planStart>
+		<realStart>9:00</realStart>
+		<realReach>10:10</realReach>
+	</bus>
+
+	<bus>
+		<busNo>7998</busNo>
+		<order>1</order>
+		<planStart>9:00</planStart>
+		<realStart>9:00</realStart>
+		<realReach>10:10</realReach>
+	</bus>
+</list>

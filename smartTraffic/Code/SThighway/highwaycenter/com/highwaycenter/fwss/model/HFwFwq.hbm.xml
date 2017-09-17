@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.fwss.model.HFwFwq" table="h_fw_fwq"  >
+        <id name="fwqbh" type="java.lang.Integer">
+            <column name="fwqbh" />
+            <generator class="identity" />
+        </id>
+        <property name="fwqmc" type="java.lang.String">
+            <column name="fwqmc" length="50">
+             </column>
+        </property>
+         <property name="ssgs" type="java.lang.String">
+            <column name="ssgs" length="200">
+             </column>
+        </property>
+        <property name="xlmc" type="java.lang.String">
+            <column name="xlmc" length="20">
+             </column>
+        </property>
+         <property name="sxjkzh" type="java.lang.String">
+            <column name="sxjkzh" length="50">
+             </column>
+        </property>
+          <property name="xxjkzh" type="java.lang.String">
+            <column name="xxjkzh" length="50">
+             </column>
+        </property>
+           <property name="sxckzh" type="java.lang.String">
+            <column name="sxckzh" length="50">
+             </column>
+        </property>
+        <property name="xxckzh" type="java.lang.String">
+            <column name="xxckzh" length="50">
+             </column>
+        </property>
+         <property name="jyss" type="java.lang.Integer">
+            <column name="jyss" length="11">
+             </column>
+        </property>
+        <property name="cyss" type="java.lang.Integer">
+            <column name="cyss" length="11">
+             </column>
+        </property>
+        <property name="zsss" type="java.lang.Integer">
+            <column name="zsss" length="11">
+             </column>
+        </property>
+        <property name="gwss" type="java.lang.Integer">
+            <column name="gwss" length="11">
+             </column>
+        </property>
+        <property name="clwxss" type="java.lang.Integer">
+            <column name="clwxss" length="11">
+             </column>
+        </property>
+        <property name="glzdzh" type="java.lang.String">
+            <column name="glzdzh" length="50">
+             </column>
+        </property>
+        <property name="zczzh" type="java.lang.String">
+            <column name="zczzh" length="50">
+             </column>
+        </property>
+        <property name="gljjzh" type="java.lang.String">
+            <column name="gljjzh" length="50">
+             </column>
+        </property>
+    </class>
+</hibernate-mapping>

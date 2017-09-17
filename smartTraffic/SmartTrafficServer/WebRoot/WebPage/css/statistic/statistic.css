@@ -1,0 +1,93 @@
+@CHARSET "UTF-8";
+#report_totalDiv{
+	margin:0;
+	padding: 0;
+	overflow-x:hidden; 
+}
+
+#title_line {
+	margin: 0;
+	padding: 0 0 0 10px;
+	width: 820px;
+	height: 44px;
+	background: #f5f7fa;
+	overflow: hidden;
+	border-style: solid;
+	border-color: #d6d6d6;
+	border-width: 0 0 1px 0;
+	line-height: 44px;
+	vertical-align: middle;
+	position: fixed;
+	top: 0;
+}
+
+#report_content {
+	margin: 0;
+	padding: 44px 10px 0 10px;
+	width: 810px;
+	height: 584px;
+}
+
+#level1 {
+	margin: 0;
+	padding: 0;
+	width: 810px;
+	height: 44px;
+	line-height: 44px;
+	vertical-align: middle;
+}
+
+#level1 LABEL,#level1 INPUT,#level1 SELECT,#level1 img {
+	vertical-align: middle;
+}
+
+
+#beginTime,#endTime {
+	width: 70px;
+}
+
+#bt_ChangePage {
+	position: absolute;
+	top: 60px;
+	right: 20px;
+}
+
+#report_imgdiv {
+	margin: 20px 0 0 0;
+}
+
+#report_imgdiv img {
+	width: 700px;
+}
+
+#report_datediv {
+	margin: 0;
+	padding: 10px;
+	display: none
+}
+
+#dataTable td {
+	margin: 0;
+	padding: 10px;
+	text-align: left;
+}
+#dataTable .td1{
+	border:solid;
+	border-width: 1px 0 0 1px;
+	border-color: #ccc;
+}
+#dataTable .td2{
+	border:solid;
+	border-width: 1px 1px 0 1px;
+	border-color: #ccc;
+}
+#dataTable .td3{
+	border:solid;
+	border-width: 1px 0 1px 1px;
+	border-color: #ccc;
+}
+#dataTable .td4{
+	border:solid;
+	border-width: 1px;
+	border-color: #ccc;
+}

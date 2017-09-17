@@ -1,0 +1,21 @@
+@CHARSET "utf-8";
+
+#main{
+margin: 0 auto;
+padding: 0;
+width: 1000px;
+height: 753px
+}
+.main_left{
+width: 100px;
+height: 700px;
+float: left;
+padding: 0;
+
+}
+.main_right{
+width: 770px;
+height: 700px;
+float: left;
+margin-left: 20px;
+}

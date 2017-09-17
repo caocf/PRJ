@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.smartbus.model.BusStation" table="ZHJTADMIN.Z_GJ_ZDJBXX">
+		<id name="Id" column="ZDBH"></id>
+		<property name="Name" column="ZDMC"></property>
+		<property name="Rename" column="ZDBM"></property>
+		<property name="Longitude" column="ZDJD"></property>
+		<property name="Latitude" column="ZDWD"></property>
+		<property name="QrCode" column="ZDEWM"></property>
+		<property name="StationType" column="ZDLX"></property>
+	</class>
+	
+	
+	
+	
+</hibernate-mapping>

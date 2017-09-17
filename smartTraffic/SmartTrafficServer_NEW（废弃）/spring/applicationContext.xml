@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<context:component-scan base-package="com" />
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	
+ 	<import resource="classpath:applicationContext_Data.xml" />		
+	
+	<import resource="classpath:com/sts/spring/train/*.xml"/>
+  	<import resource="classpath:com/sts/spring/user/*.xml"/>
+  	<import resource="classpath:com/sts/spring/weather/*.xml"/>
+  	<import resource="classpath:com/sts/spring/air/*.xml"/>
+  	<import resource="classpath:com/sts/spring/trafficValue/*.xml"/>
+  	<import resource="classpath:com/sts/spring/suggestion/*.xml"/>
+  	<import resource="classpath:com/sts/spring/complain/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/breakRules/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/school/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/repair/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/news/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/bike/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/busStation/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/debug/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/favor/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/system/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/smartbus/*.xml"/>
+  	<import resource="classpath:com/sts/spring/parking/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/download/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/taxi/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/parkingdb/*.xml"/> 
+  	<import resource="classpath:com/sts/spring/trafficinfo/*.xml"/> 
+  	
+
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+	<!-- 公路配置信息 -->
+	<package name="taxidata" extends="cement-interceptor"
+		namespace="/taxidata">
+		<action name="searchAllTaxis" method="searchAllTaxis"
+			class="com.SmartTraffic.taxidata.action.TaxiAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="searchTaxiData" method="searchTaxiData"
+			class="com.SmartTraffic.taxidata.action.TaxiAction">
+			<result name="success" type="json"></result>
+		</action>
+		
+	</package>
+</struts>

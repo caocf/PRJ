@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+.search{
+	outline: none;
+	border: solid 1px #b5b5b5;
+	border-right-width: 0;
+	padding-left:5px;
+	width:250px;
+	height:28px;
+	line-height:28px;
+	vertical-align:middle;
+	color:#a3a3a3;
+	float:right;
+	margin-top: 12px;
+}
+.search_photo{
+	height:28px;
+	width:28px;
+	float:right;
+	margin:12px 11px 10px 0;
+	border:solid 1px #b5b5b5;
+	border-left-width: 0;
+	cursor: pointer;
+}
+.adduser_Middle{
+	margin-top:31px;
+	margin-bottom:19px;
+	height:110px;
+	width:612px;
+}
+.select{
+	width:183px;
+	height:33px;
+}
+
+.userbottom_button1,.userbottom_button2{
+	margin:10px 22px 10px 130px;
+	border:0;
+	width:57px;
+	height:30px;
+	cursor:pointer;
+	line-height:30px;
+	text-align:center;
+	vertical-align:middle;
+	color:#000000;
+	float:left;
+	outline:none;
+	background: url("../../image/main/short_button_normal.png");
+}
+.userbottom_button1{
+	margin-left:0;
+}
+.search_div{
+	float:left;
+	height:35px;
+	width:300px;
+	margin-right:22px;
+	margin-top:8px;
+}
+.search_input{
+	width:250px;
+	height:33px;
+	line-height: 33px;
+	vertical-align: middle;
+	outline: none;
+	border:solid 1px #dcdcdc;
+	border-right:0;
+	float:right;
+	color:#a3a3a3;
+	padding-left:5px;
+}
+.image_div{
+	float:right;
+	height:33px;
+	width:20px;
+	border:solid 1px #dcdcdc;
+	border-left:0;
+	cursor: pointer;
+	background: white;
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="busStation" extends="cement-interceptor" namespace="/">
+		<action name="GetBusStationPositionInfo" class="com.sts.station.action.BusStationAction"
+			method="GetBusStationPositionInfo">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetBusTickets" class="com.sts.station.action.BusStationAction"
+			method="GetBusTickets">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetBusCodeByStationName" class="com.sts.station.action.BusStationAction"
+			method="GetBusCodeByStationName">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetBusCodeByBusCode" class="com.sts.station.action.BusStationAction"
+			method="GetBusCodeByBusCode">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetStationInfoByBusNo" class="com.sts.station.action.BusStationAction"
+			method="GetStationInfoByBusNo">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetBusStationDetailUrl" class="com.sts.station.action.BusStationAction"
+			method="GetBusStationDetailUrl">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetAgent" class="com.sts.station.action.BusStationAction"
+			method="GetAgent">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetBusTicketsByStationName" class="com.sts.station.action.BusStationAction"
+			method="GetBusTicketsByStationName">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

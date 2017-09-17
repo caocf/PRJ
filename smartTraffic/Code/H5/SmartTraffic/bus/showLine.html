@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>公交查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<style>
+			.mui-icon-arrowthinright {
+				color: gray;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				padding-right: 10px;
+			}
+			table{
+				color: grey;
+				width: 100%;
+			}
+			td{
+				width: 50%;
+			}
+			.frist{
+				padding: 10px;
+			}
+			.second{
+				padding-left: 10px;
+				background-color: white;
+				height: 50px;
+				line-height: 50px;
+			}
+			.second .bus{
+				width: 30px;
+			}
+			.second span{
+				margin-left: 10px;
+			}
+			.second .mui-pull-right{
+				width: 40px;
+				margin-top: 7px;
+			}
+			.thrid{
+				/*overflow-x: scroll;*/
+			}
+			.thrid div{
+				word-wrap: break-word;
+				width: 30px;
+				font-size: 16px;
+				float: left;
+			}
+			.thrid div p{
+				width: 15px;
+				height: 3px;
+			}
+			.thrid div p img{
+				width: 15px;
+				margin-left: -2px;
+			}
+			#onLoad{
+				text-align: center;
+			}
+			.mui-title{
+				color: #000000;
+			}
+			::-webkit-scrollbar{width:0px;}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-icon-map mui-pull-right" id="toMap"></a>
+			<h1 id="title" class="mui-title">公交查询</h1>
+		</header>
+		<div class="mui-content">
+			<div class="frist">
+				<div style="text-align: center;">
+				<span id="start"></span><span id="change" class="mui-icon mui-icon-arrowthinright"></span><span id="end"></span>
+				</div>
+				<table>
+					<tr>
+						<td style="text-align: right;">首末班：</td>
+						<td id="time"></td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">发班间隔（分）：</td>
+						<td id="intervalTime"></td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">票价（元）：</td>
+						<td id="price"></td>
+					</tr>
+					<tr>
+						<td style="text-align: right;">线路长度（米）：</td>
+						<td id="lineLength"></td>
+					</tr>
+				</table>
+			</div>
+			<!--<div class="second">
+				<!--<img src="../image/smart_bus_onroad.png" class="bus"/>
+				<span>途中</span>-->
+				<!--<img src="../image/smart_bus_refresh_normal.png" id="reflush" class="mui-pull-right"/>
+				<img src="../image/icon_start_end_change_pressed.png" id="change" class="mui-pull-right"/>-->
+			<!--</div>-->
+			<div style="overflow-x: auto;width:100%; height: 75%;" >
+				<div class="thrid" id="thrid">
+				
+				</div>
+			
+				<div class="onLoad" id="onLoad">
+					数据加载中<span class="mui-spinner"></span>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+		</footer>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			var lineId;
+			var direct;
+			var info;
+			var draw = function(div,data){
+				div.style.width = (30*data.length) + "px"
+				div.innerHTML = ""
+				var queryD = {lineID:info.Line.Id,direct:direct,count:20,stationID:data[data.length - 1].StationId}
+				var list = app.queryOriginBusArrive(queryD)
+				console.log(JSON.stringify(list));
+				for(var i = 0;i<data.length;i++){
+					var out = document.createElement("div");
+					var str = "<p></p>"
+					for(var j = 0;j<list.length;j++){
+						if(data[i].StationId == list[j]){
+							str = "<p><img src='../image/smart_bus_onroad.png'></p>"
+						}
+					}
+					out.ref = data[i].StationId;
+					out.innerHTML = str + "<img src='../image/smart_bus_line.png' style='width: 30px;' />" + (i+1) +"<br/>"+data[i].StationName;
+					out.addEventListener("tap",function(){
+						var stationId = this.ref
+						localStorage.stationId = stationId
+						mui.openWindow({
+							url: "showStation.html",
+							id: "showStation"
+						});
+					});
+					div.appendChild(out);
+				}
+				document.getElementById("onLoad").style.display = "none"
+			}
+			var queryLineInfo = function(isChange) {
+				document.getElementById("onLoad").style.display = ""
+				var a = {};
+				a["lineID"] = lineId;
+				if(isChange) {
+					direct = direct == 2 ? 1:2;
+				}
+				a["direct"] = direct;
+				app.queryLineById(a, function(data) {
+					info = JSON.parse(data);
+					console.log(JSON.stringify(info.Line))
+					var start = document.getElementById("start");
+					var end = document.getElementById("end");
+					var time = document.getElementById("time")
+					var inTime = document.getElementById("intervalTime");
+					var price = document.getElementById("price");
+					var lineL = document.getElementById("lineLength");
+					var thirdDiv = document.getElementById("thrid");
+					document.title = info.Line.Name
+					if(direct == 1){//上行
+						start.innerText = info.Line.UpStartStationName
+						end.innerText = info.Line.UpEndStationName
+						time.innerText = info.Line.LineUpStartTime + "-" + info.Line.LineUpEndTime
+						inTime.innerText = info.Line.LineupIntervalTime
+						price.innerText = info.Line.Price
+						lineL.innerText = info.Line.LineupLength
+						draw(thirdDiv,info.UpList);
+					}else{//下行
+						start.innerText = info.Line.DownStartStationName
+						end.innerText = info.Line.DownEndStationName
+						time.innerText = info.Line.LineDownStartTime + "-" + info.Line.LineDownEndTime
+						inTime.innerText = info.Line.LinedownIntervalTime
+						price.innerText = info.Line.Price
+						lineL.innerText = info.Line.LinedownLength
+						draw(thirdDiv,info.DownList);
+					}
+				});
+			}
+//			document.getElementById("reflush").addEventListener("tap",function(){
+//				queryLineInfo(false);
+//			});
+			document.getElementById("change").addEventListener("tap",function(){
+				queryLineInfo(true);
+			});
+			document.getElementById("toMap").addEventListener("tap",function(){
+				localStorage.lineInfo = JSON.stringify(info);
+				mui.openWindow({
+					url:"lineMap.html",
+					id:"lineMap"
+				});
+			});
+			mui.ready(function() {
+				lineId = localStorage.lineID;
+				direct = localStorage.direct
+				queryLineInfo(false);
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BusTransfer</key>
+	<array>
+		<string>火车站 → 交通大楼</string>
+		<string>紫景雅苑 → 运管</string>
+	</array>
+	<key>BusStation</key>
+	<array/>
+	<key>BusLine</key>
+	<array/>
+	<key>PublicBike</key>
+	<array>
+		<string>火车站</string>
+	</array>
+	<key>Parking</key>
+	<array/>
+</dict>
+</plist>

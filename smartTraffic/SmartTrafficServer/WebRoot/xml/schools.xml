@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<DrivingSchool>
+		<name>&#x56FD;&#x5B8F;&#x9A7E;&#x6821;</name>
+		<address>&#x5609;&#x5174;&#x5E02;xxxxxx</address>
+		<distance>100.6</distance>
+		<level>3</level>
+		<phone>0573-82000000</phone>
+	</DrivingSchool>
+
+	<DrivingSchool>
+		<name>&#x56FD;&#x5B8F;&#x9A7E;&#x6821;</name>
+		<address>&#x5609;&#x5174;&#x5E02;xxxxxx</address>
+		<distance>100.6</distance>
+		<level>3</level>
+		<phone>0573-82000000</phone>
+	</DrivingSchool>
+</list>

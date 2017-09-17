@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+/*地图菜单div*/
+.map_menu_div {
+	margin: 7px 0 0 0;
+	height: 33px;
+	border-bottom: solid 1px #5e79ec;
+	padding: 0 4px;
+}
+/*居中非地图菜单div*/
+.menu_div {
+margin: 0 auto;
+width: 985px;
+padding-left: 15px;
+height: 32px;
+border-bottom: solid 2px #5e79ec;
+}
+
+/*末级菜单未选中*/
+.layout1_a {
+	margin: 0 5px 0 0;
+	list-style: none;
+	height: 33px;
+	padding: 0 8px;
+	text-align: center;
+	line-height: 33px;
+	vertical-align: middle;
+	float: left;
+}
+
+/*末级菜单选中*/
+.a_select {
+	margin: 0 5px 0 0;
+	list-style: none;
+	height: 33px;
+	padding: 0 10px;
+	float: left;
+	background-color: #5e79ec;
+	text-align: center;
+	line-height: 33px;
+	vertical-align: middle;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-weight: bold;
+}
+
+.layout1_a:HOVER {
+	background-color: #5e79ec;
+	text-align: center;
+	line-height: 33px;
+	vertical-align: middle;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+}
+
+/*末级菜单的路径*/
+.pagepath {
+	float: right;
+	line-height: 33px;
+	color: #666;
+}

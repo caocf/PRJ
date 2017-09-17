@@ -1,0 +1,1 @@
+select  a1.MID as QL_JSZKDJ, a1.MNAME as QL_JSZKDJ_desc,sum(YM) as YM from MDM_QL_SLYM a0,MCODE_QL_JSZKDJ a1 where 1=1 and a0.QL_JSZKDJ= a1.MID group by a1.MID,a1.MNAME order by  a1.MID asc

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.glz.model.HGlzDbYscqktjxx" table="h_glz_db_yscqktjxx"  >
+        <id name="id" type="java.lang.String">
+            <column name="id" length="200" />
+            <generator class="assigned" />
+        </id>
+        <property name="stationId" type="java.lang.String">
+            <column name="stationId" length="200">
+                <comment>å…¬è·¯ç«™id</comment>
+            </column>
+        </property>
+        <property name="workDate" type="java.sql.Timestamp">
+            <column name="workDate" length="19">
+                <comment>ç»Ÿè®¡å¹´æœˆ</comment>
+            </column>
+        </property>
+        <property name="planFund" type="java.lang.Double">
+            <column name="planFund" precision="18" scale="3">
+                <comment>è®¡åˆ'ç»�è´¹</comment>
+            </column>
+        </property>
+        <property name="actualFund" type="java.lang.Double">
+            <column name="actualFund" precision="18" scale="3">
+                <comment>å®žé™…ç»�è´¹</comment>
+            </column>
+        </property>
+        <property name="planSandStone" type="java.lang.Double">
+            <column name="planSandStone" precision="18" scale="3">
+                <comment>è®¡åˆ'æ²™çŸ³æ-™</comment>
+            </column>
+        </property>
+        <property name="actualSandStone" type="java.lang.Double">
+            <column name="actualSandStone" precision="18" scale="3">
+                <comment>å®žé™…æ²™çŸ³æ-™</comment>
+            </column>
+        </property>
+        <property name="planAsphalt" type="java.lang.Double">
+            <column name="planAsphalt" precision="18" scale="3">
+                <comment>è®¡åˆ'æ²¥é�'</comment>
+            </column>
+        </property>
+        <property name="actualAsphalt" type="java.lang.Double">
+            <column name="actualAsphalt" precision="18" scale="3">
+                <comment>å®žé™…æ²¥é�'</comment>
+            </column>
+        </property>
+        <property name="qualityNorm" type="java.lang.Double">
+            <column name="qualityNorm" precision="18" scale="3">
+                <comment>è´¨é‡�æŒ‡æ&#160;‡</comment>
+            </column>
+        </property>
+        <property name="actualQuality" type="java.lang.Double">
+            <column name="actualQuality" precision="18" scale="3">
+                <comment>å®žé™…è´¨é‡�</comment>
+            </column>
+        </property>
+        <property name="qualityPercent" type="java.lang.Double">
+            <column name="qualityPercent" precision="18" scale="3">
+                <comment>è´¨é‡�å®Œæˆ�çŽ‡</comment>
+            </column>
+        </property>
+        <property name="planAmount" type="java.lang.Double">
+            <column name="planAmount" precision="18" scale="3">
+                <comment>è®¡åˆ'å·¥ç¨‹é‡�</comment>
+            </column>
+        </property>
+        <property name="actualAmount" type="java.lang.Double">
+            <column name="actualAmount" precision="18" scale="3">
+                <comment>å®žé™…å·¥ç¨‹é‡�</comment>
+            </column>
+        </property>
+        <property name="projectQuality" type="java.lang.String">
+            <column name="projectQuality" length="32">
+                <comment>å·¥ç¨‹è´¨é‡�</comment>
+            </column>
+        </property>
+        <property name="dutyPercent" type="java.lang.Double">
+            <column name="dutyPercent" precision="18" scale="3">
+                <comment>å‡ºå‹¤çŽ‡</comment>
+            </column>
+        </property>
+        <property name="producePercent" type="java.lang.Double">
+            <column name="producePercent" precision="18" scale="3">
+                <comment>ç"Ÿäº§çŽ‡</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

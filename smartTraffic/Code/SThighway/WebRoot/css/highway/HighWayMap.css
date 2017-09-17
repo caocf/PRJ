@@ -1,0 +1,440 @@
+@CHARSET "utf-8";
+.highway_left{
+	margin:0;
+	padding:0;
+	float:left;
+	min-height:750px;
+	font-size: 14px;
+	background-color:white;
+	color:#333333;
+	width:349px;
+	border-right:solid 1px #dcdcdc;
+	/* position: absolute; */
+	z-index: 3;
+}
+.image_size{
+	width:10px;
+	height:50px;
+	border:solid 1px #cccccc;
+	border-left:0;
+	top:350px;
+	left:350px;
+	cursor: pointer;
+	z-index: 5;
+	position: absolute;
+	background: white;
+}
+.highway_image{
+	margin-top:20px;
+}
+.highway_center{
+	height:750px;
+	width:10px;
+	float:left;
+}
+.map_mark_div{
+	width:60px;
+	height:100px;
+	float:left;
+	margin:30px 0 0 21px;
+}
+.map_mark_text{
+	width:100%;
+	margin-top:20px;
+	height:20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+}
+/*桥梁信息*/
+.highway_left_top{
+	width:100%;
+	height:49px;
+	border-bottom: solid 1px #dcdcdc;
+}
+.highway_left_middle{
+	width:100%;
+	height:589px;
+}
+.highway_left_middle_div{
+	width:100%;
+	border-bottom: solid 1px #dcdcdc;
+	cursor: pointer;
+}
+.highway_left_middle_div:HOVER{
+	background: #d3e2e8;
+}
+.highway_left_middle_div_select{
+	width:100%;
+	border-bottom: solid 1px #dcdcdc;
+	background: #d3e2e8;
+	cursor: pointer;
+}
+.highway_left_bottom{
+	width:100%;
+	height:59px;
+	border-bottom: solid 1px #dcdcdc;
+}
+.highway_out{
+	min-width: 1366px;
+	width:100%;
+	height:800px;
+}
+.highway_right{
+	/* float:left; */
+	height:750px;
+	/* margin:0 0 0 361px !important; */
+	margin:0 0 0 351px;
+}
+.highway_right_top{
+	height:50px;
+	width:100%;
+	background: #f6f6f6;
+	z-index: 999px;
+}
+.highway_right_map{
+	height:100%;
+	width:100%;
+}
+.bridge_name{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+.bridge_area{
+	width:100%;
+	height:39px;
+	line-height:39px;
+	vertical-align: middle;
+}
+/*路段信息*/
+.highway_route_top{
+	width:100%;
+	height:39px;
+	
+	border-bottom: solid 1px #dcdcdc;
+	background: #f6f6f6;
+}
+.checkbox_type{
+	float:left;
+	margin-top:14px;
+}
+.checkbox_text{
+	float:left;
+	margin-top:10px;
+	width:60px;
+}
+.highway_route_info{
+	width:100%;
+	height:49px;
+	line-height: 49px;
+	vertical-align: middle;
+	border-bottom: solid 1px #dcdcdc;
+	background: white;
+	cursor: pointer;
+}
+.highway_route_info_selected{
+	width:100%;
+	height:49px;
+	line-height: 49px;
+	vertical-align: middle;
+	border-bottom: solid 1px #dcdcdc;
+	background: white;
+	cursor: pointer;
+	display: none;
+}
+.highway_route_info:HOVER{
+	background: #f6f6f6;
+}
+.highway_route_name{
+	margin-left:30px;
+	cursor: pointer;
+}
+.highway_route_info_detail{
+	width:100%;
+	height:109px;
+	border-bottom: solid 1px #dcdcdc;
+	display:none;
+	background: #f6f6f6;
+}
+.highway_route_info_detail_selected{
+	width:100%;
+	height:109px;
+	border-bottom: solid 1px #dcdcdc;
+	display:none;
+	background: #f6f6f6;
+	display: block;
+}
+.highway_route_info_detail_top{
+	margin:0 10px 0 30px;
+	height:40px;
+}
+.detail_top_left{
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	float:left;
+	font-weight: bold;
+}
+.detail_top_right{
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	float:right;
+	cursor: pointer;
+}
+.higgway_route_info_detail_body{
+	margin:0 10px 0 30px;
+	height:65px;
+}
+.detail_body_desc{
+	width:135px;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	float:left;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.service_ul{
+	height:40px;
+	width:100%;
+}
+.service_li{
+	height:40px;
+	line-height:40px;
+	vertical-align:middle;
+	width:50%;
+	float:left;
+	text-align: center;
+	color: #006993;
+	background: #6aafe0;
+	cursor: pointer;
+}
+/* .service_li:HOVER{
+	color:white;
+	background: #f09801;
+} */
+.service_li_select{
+	height:40px;
+	line-height:40px;
+	vertical-align:middle;
+	width:50%;
+	float:left;
+	text-align: center;
+	color:white;
+	background: #f09801;
+	cursor: pointer;
+}
+
+.search_div{
+	width:100%;
+	height:50px;
+	border-bottom: solid 1px #dcdcdc;
+}
+.search_input{
+	margin:8px 0 0 20px;
+	width:250px;
+	height:33px;
+	line-height: 33px;
+	vertical-align: middle;
+	outline: none;
+	border:solid 1px #dcdcdc;
+	border-right:0;
+	float:left;
+	color:#a3a3a3;
+	padding-left:5px;
+}
+.image_div{
+	margin-top:8px;
+	float:left;
+	height:33px;
+	width:20px;
+	border:solid 1px #dcdcdc;
+	border-left:0;
+	cursor: pointer;
+	background: white;
+}
+/*视频监控*/
+.highway_left_video{
+	width:100%;
+	height:700px;
+	overflow-y:auto;
+	overflow-x:hidden;  
+}
+.equipment{
+	width:100%;
+	height:auto;
+	float:left;
+}
+.equipment_name{
+	height:42px;
+	line-height:42px;
+	width:200px;
+	margin-left:10px;
+	float:left;
+}
+.img_div{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+}
+.camera{
+	width:100%;
+	height:auto;
+	display: none;
+}
+.camera_label{
+	margin-left:50px;
+	cursor: pointer;
+}
+.department_arrow_style{
+	float:right;
+	margin-top:16px;
+}
+.camera_no_select_li{
+	height:35px;
+	float:left;
+	width:100%;
+	line-height:35px;
+	vertical-align: middle;
+	margin-bottom:2px;
+	cursor: pointer;
+}
+.camera_select_li{
+	height:35px;
+	float:left;
+	width:100%;
+	background-color:#d3e2e8;
+	line-height:35px;
+	vertical-align: middle;
+	margin-bottom:2px;
+	cursor: pointer;
+	
+}
+.camera_no_select_li:HOVER{
+	background-color:#d3e2e8;
+}
+.plugin{
+	margin: 0;
+  	padding: 0;
+  	height:250px;
+  	width:400px;
+}
+.video_button_start{
+	width:60px;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	margin-right:15px;
+	margin-top:10px;
+	margin-left:15px;
+	cursor: pointer;
+	outline: none;
+	border:1px solid #EBEBE4; 
+	background: #006993;
+	color:#FFFFFF;
+	font-family:'微软雅黑';
+}
+.video_button_start:HOVER{
+	 background:#00435E;
+	 border:1px solid #EBEBE4;
+	 outline: none;	
+}
+.video_button_stop{
+	width:60px;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	margin-top:10px;
+	cursor: pointer;
+	outline: none;
+	border:1px solid #EBEBE4;
+	background:#F0F0F0;
+	font-family:'微软雅黑';
+	color:#000000;
+}
+.video_button_stop:HOVER {
+	 background:#999999;
+	 border:1px solid #EBEBE4;
+	  outline: none;	
+}
+/*新的video*/
+.equipment{
+	width:100%;
+	height:auto;
+	float:left;
+}
+.second_Div{
+	float:left;
+}
+.three_Div{
+	float:left;
+}
+.equipment_name{
+	height:42px;
+	line-height:42px;
+	width:200px;
+	margin-left:10px;
+	float:left;
+}
+.img_div{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+}
+.img_div2{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+	margin-left:20px;
+}
+.img_div3{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+	margin-left:40px;
+}
+.second{
+	width:100%;
+	height:auto;
+}
+.three{
+	width:100%;
+	height:auto;
+	display: none;
+}
+.third{
+	width:100%;
+	height:auto;
+	display: none;
+}
+.regioncamera{
+	height:42px;
+	line-height: 42px;
+	cursor: pointer;
+	width:100%;
+	float:left;
+}
+.regioncamera:HOVER{
+	background: #006993;
+	color:white;
+}
+.regioncamera_select{
+	height:42px;
+	line-height: 42px;
+	cursor: pointer;
+	width:100%;
+	float:left;
+	color:white;
+	background: #006993;
+}
+.regioncamera_name{
+	margin-left:80px;
+	cursor: pointer;
+}

@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+.layout1 {
+	margin: 0 auto;
+	width: 1000px;
+	height: 80px;
+}
+
+.layout1_left {
+	float: left;
+	width: 820px;
+	height: 80px;
+	line-height: 32px;
+}
+
+.layout1_left TABLE {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.layout1_left TABLE tr:FIRST-CHILD {
+	margin-bottom: 16px
+}
+
+.layout1_left TABLE td {
+	padding-bottom: 16px;
+	height: 32px
+}
+
+.layout1_right {
+	float: left;
+	padding: 0 20px;
+	height: 80px;
+}
+
+.layout1_right img {
+	margin-top: 22px;
+	cursor: pointer;
+}
+
+.layout2 {
+	margin: 0 auto;
+	width: 1000px;
+	padding: 20px 0 10px 0;
+	min-height: 600px
+}
+
+.div_input {
+	margin: 0;
+	padding: 0 5px;
+	width: 293px;
+	height: 30px;
+	line-height: 28px;
+	vertical-align: middle;
+	border: solid 1px #ccc;
+	outline: none;
+	background-color: #fff;
+}
+
+.input_text_illegal {
+	margin: 0;
+	padding: 0 5px;
+	width: 243px;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: middle;
+	border: 0px;
+	outline: none;
+	background-color: #fff;
+}

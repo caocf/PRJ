@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+
+.Wdate {
+	width: 180px;
+	height: 24px;
+	line-height:24px;
+	vertical-align:middle;
+	border: solid 1px #666;
+	background: #fff url(datePicker.gif) no-repeat right;
+	
+}
+
+
+.span3{
+width: 180px;
+height: 24px;
+font-size: 12px;
+font-weight: normal;
+color:  #999;
+outline:medium
+}
+.span4{
+text-decoration: none;
+display: block;
+color: rgb(92,92,92);
+font-size: 14px;
+height: 100%;
+float: left;
+}
+.layout3 {
+	margin: 0 auto;
+	width: 1000px;
+	padding: 0 0 10px 0;
+	min-height: 600px;
+	margin-top: 20px;
+}
+/*th 灰色背景的列表*/
+.listTable {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+}
+
+.listTable  th {
+	font-size: 12px;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	padding: 0;
+	background-color: rgb(235,235,235);
+	border-top: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #5c5c5c;
+}
+
+.listTable_th01 {
+	border-left: solid 1px #cccccc;
+}
+
+.listTable_th02 {
+	border-right: solid 1px #cccccc;
+}
+
+.listTable td {
+	padding: 0;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}

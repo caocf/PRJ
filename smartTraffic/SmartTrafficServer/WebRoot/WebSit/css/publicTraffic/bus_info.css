@@ -1,0 +1,179 @@
+@CHARSET "UTF-8";
+
+.layout1 {
+	height: 753px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.layout1_left {
+	width: 650px;
+	height: 751px;
+	float: left;
+	border: 1px solid #ccc;
+}
+
+.layout1_right {
+	margin-left: 20px;
+	width: 326px;
+	height: 751px;
+	float: left;
+}
+
+.map_bus_right_search {
+	width: 250px;
+	height: 28px;
+	margin-top: 2px;
+	line-height: 28px;
+	outline: none;
+	margin-left: 5px;
+}
+
+.map_bus_right_bottom {
+	width: 50px;
+	height: 28px;
+	line-height: 28px;
+	outline: none;
+	margin-left: 2px;
+	text-align: center;
+	color: black;
+}
+
+.layout1_right_layout1 {
+	width: 100%;
+	height: 280px;
+	border: 1px solid #ccc;
+}
+
+.layout1_right_layout1_layout1 {
+	width: 100%;
+	height: 280px;/*有搜索244px*/
+}
+
+.layout1_right_layout2 {
+	margin-top: 15px;
+	width: 100%;
+	height: 452px;
+	border: 1px solid #ccc;
+}
+
+/*左边显示*/
+
+.map_bus_div1 {
+	height: 32px;
+	border-bottom: solid 1px #c2d6f4;
+	line-height: 32px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.map_bus_title {
+	font-size: 16px;
+	font-weight: bolder;
+	color: rgb(40, 70, 161);
+}
+
+.map_bus_save {
+	float: right;
+	margin-right: 10px;
+	line-height: 30px;
+	color: rgb(107, 132, 162);
+}
+
+.map_bus_colloct {
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.map_bus_div2 {
+	height: 20px;
+	margin-left: 10px;
+	padding: 4px 0;
+}
+
+.map_bus_road {
+	float: left;
+	line-height: 20px;
+	margin-right: 20px;
+}
+
+.map_bus_div2_noselect {
+	display: block;
+	float: left;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.map_bus_div2_select,.map_bus_div2_noselect:HOVER {
+	display: block;
+	background-color: #f44a60;
+	color: #fff;
+	float: left;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.map_bus_div3 {
+	padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.listTable {
+	margin: 5px 10px;
+	padding: 0;
+	table-layout: fixed;
+	width: 630px;
+	text-align: center;
+	border-style: solid;
+	border-width: 0 1px;
+	border-color: #cccccc;
+}
+
+.listTable  th {
+	font-size: 12px;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	padding: 0;
+	background-color: #eeedfc;
+	border-top: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #5c5c5c;
+}
+
+.listTable td {
+	padding: 0;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+  <!--                     数据同步状态                                                    -->
+	<package name="datastate" extends="cement-interceptor" namespace="/datastate">
+	    <!--  数据同步状态列表 -->
+		<action name="selectdatastate" method="selectDataState"
+			class="com.highwaycenter.data.action.DataAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 数据同步状态 -->
+		<action name="datasyncsystem" method="selectCurrentState"
+			class="com.highwaycenter.data.action.DataAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 数据同步状态折线图数据 -->
+		<action name="findmoreinfo" method="selectStateXq"
+			class="com.highwaycenter.data.action.DataAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 模块数据同步状态详情 -->
+		<action name="datalinechartinfo" method="selectStateLine"
+			class="com.highwaycenter.data.action.DataAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 查询模块的同步成功率 -->
+		<action name="datapiechartinfo" method="selectSuccessRate"
+			class="com.highwaycenter.data.action.DataAction">
+			<result name="json" type="json"></result>
+		</action>
+</package>
+	
+</struts>

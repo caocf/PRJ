@@ -1,0 +1,129 @@
+{
+	"index.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/gaode.css",
+			"js/webviewGroup.js",
+			"bus/search.html"
+		],
+		"refer": [
+			"bus/searchLine.html",
+			"bus/search.html",
+			"bus2/search.html"
+		]
+	},
+	"bus/searchLine.html": {
+		"resources": [
+			"css/app.css",
+			"css/mui.min.css",
+			"js/app.js",
+			"js/mui.min.js",
+			"image/trip_history_clock.png",
+			"js/mui.js",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"bus/showLine.html"
+		]
+	},
+	"bus/showLine.html": {
+		"resources": [
+			"css/mui.min.css",
+			"css/app.css",
+			"image/smart_bus_onroad.png",
+			"image/icon_start_end_change_pressed.png",
+			"image/smart_bus_refresh_normal.png",
+			"js/app.js",
+			"js/mui.min.js",
+			"image/smart_bus_line.png"
+		],
+		"refer": [
+			"bus/lineMap.html",
+			"bus/showStation.html"
+		]
+	},
+	"bus/lineMap.html": {
+		"resources": [
+			"css/mui.min.css",
+			"css/gaode.css",
+			"js/mui.min.js",
+			"js/app.js"
+		],
+		"refer": []
+	},
+	"bus/search.html": {
+		"resources": [
+			"js/webviewGroup.js",
+			"css/mui.min.css",
+			"bus/searchLine.html",
+			"css/app.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/gaode.css",
+			"js/app.js",
+			"js/GPS.js",
+			"js/jquery-2.1.0.js"
+		],
+		"refer": [
+			"bus/searchLine.html",
+			"bus/searchStation.html"
+		]
+	},
+	"bus/searchStation.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/app.js",
+			"js/mui.js",
+			"image/repair_icon_search.png"
+		],
+		"refer": [
+			"bus/stationMap.html",
+			"bus/showStation.html"
+		]
+	},
+	"bus/stationMap.html": {
+		"resources": [
+			"css/gaode.css",
+			"js/app.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"bus/showStation.html": {
+		"resources": [
+			"css/mui.min.css",
+			"image/smart_bus_refresh_normal.png"
+		],
+		"refer": [
+			"bus/eStation.html"
+		]
+	},
+	"bus/eStation.html": {
+		"resources": [
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"search.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"js/webviewGroup.js",
+			"css/mui.min.css",
+			"bus/searchLine.html"
+		],
+		"refer": [
+			"bus/searchLine.html"
+		]
+	},
+	"bus2/search.html": {
+		"resources": [
+			"js/app.js"
+		]
+	}
+}

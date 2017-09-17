@@ -1,0 +1,275 @@
+﻿@CHARSET "utf-8";
+.highway_left{
+	margin:0;
+	padding:0;
+	float:left;
+	height:100%;
+	font-size: 14px;
+	background-color:white;
+	color:#333333;
+	width:349px;
+	border-right:solid 1px #dcdcdc;
+	/* position: absolute; */
+	z-index: 3;
+	overflow:hidden;
+}
+.highway_out{
+	min-width: 1366px;
+	width:100%;
+	
+}
+.highway_right{
+	/* float:left; */
+	/* height:820px; */
+	/* margin:0 0 0 361px !important; */
+	margin:0 0 0 351px;
+	 min-height: 762px;
+}
+.highway_right_map{
+	height:100%;
+	width:100%;
+}
+.image_size{
+	width:10px;
+	height:50px;
+	border:solid 1px #cccccc;
+	border-left:0;
+	top:50%;
+	left:349px;
+	cursor: pointer;
+	z-index: 5;
+	position: absolute;
+	background: white;
+}
+.videoitem{
+	height:42px;
+	width:100%;
+	line_height:42px;
+	float:left;
+	cursor:pointer;
+}
+.video_left{
+	width:100%;
+	height:100%;
+	overflow:auto;
+	display:inline-block;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+.video_div{
+	float:left;
+	width:100%;
+	height:auto;
+	display:inline-block;
+}
+.firstUnit_Div{
+	list-style-type: none;
+	height:auto;
+	display: block;
+	clear:both;
+	width:100%;
+}
+.firstRegion_Div{
+	list-style-type: none;
+	height:auto;
+	display: block;
+	clear:both;
+	width:100%;
+}
+.firstCamera_Div{
+	list-style-type: none;
+	height:auto;
+	display: block;
+	clear:both;
+	width:100%;
+}
+.equipment_name{
+	height:42px;
+	line-height:42px;
+	margin-left:10px;
+	float:left;
+}
+.img_div2{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+}
+.img_div3{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+}
+.img_region2{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+}
+.img_region3{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+}
+.department_arrow_style{
+	float:right;
+	margin-top:16px;
+}
+.cameraItem{
+	list-style-type: none;
+	height:42px;
+	display: inline-block;
+	clear:both;
+	cursor: pointer;
+	text-align:center;	
+    white-space:nowrap;
+    width:100%;
+}
+/**.cameraItem:HOVER{
+	background: #006993;
+	color:white;
+}
+.cameraItem_selected{
+	list-style-type: none;
+	height:42px;
+	display: block;
+	clear:both;
+	cursor: pointer;
+	background:#006993;
+}**/
+.Operate{
+	width:60px;
+	cursor: pointer;
+	color:#ffffff;
+	line-height:26px;
+	height:26px;
+	background:#1C58A5;
+	vertical-align:middle;
+	margin-top:8px;
+	text-align:center;
+	border-radius:4px;
+	text-decoration: none;
+	display:inline-block;
+}
+
+}
+.video_button_start:HOVER{
+	 background:#00435E;
+	 border:1px solid #EBEBE4;
+	 outline: none;	
+}
+.video_button_stop{
+	width:60px;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	margin-top:10px;
+	cursor: pointer;
+	outline: none;
+	border:1px solid #EBEBE4;
+	background:#F0F0F0;
+	font-family:'微软雅黑';
+	color:#000000;
+}
+.video_button_stop:HOVER {
+	 background:#999999;
+	 border:1px solid #EBEBE4;
+	  outline: none;	
+}
+
+/**camera_Label style**/
+.cameraLabel_name{
+	height:42px;
+	line-height:42px;
+	margin-left:10px;
+	float:left;
+	margin-left:20px;
+	margin-left:0px\\0;
+        padding-left:10px;
+        padding-right:10px;
+	cursor: pointer;
+	
+}
+
+.cameraLabel_name:HOVER{
+	background: #006993;
+	color:white;
+}
+.cameraLabel_selected{
+	list-style-type: none;
+	height:42px;
+	line-height:42px;
+	margin-left:10px;
+	float:left;
+	margin-left:20px;
+	margin-left:0px\\0;
+        padding-left:10px;
+        padding-right:10px;
+	display: block;
+	/**clear:both;**/
+	cursor: pointer;
+	background:#006993;
+}
+.stateguid{
+	position:absolute;
+	width:432px;
+	height:34px;
+	right:50px;
+	top:80px;
+	border:1px solid #c4c7cc;
+	border-radius:4px;
+	text-aligh:center;
+	background:white; 
+	
+	-webkit-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+}
+.stateguid span{
+	float:left;
+	margin-left:13px;
+	line-height:34px;
+}
+.stateguid_split{
+	float:left;
+	margin-left:13px;
+	background:#c4c7cc;
+	height:100%;
+	width:1px;
+}
+.gl_colorshow{
+	float:left;
+	background:#008181;
+	width:19px;
+	height:7px;
+	margin-top:13px;
+	margin-left:6px;
+	
+}
+.gh_colorshow{
+	float:left;
+	background:#2A8EFF;
+	width:19px;
+	height:7px;
+	margin-top:13px;
+	margin-left:6px;
+	}
+.gw_colorshow{
+	float:left;
+	background:#6073e1;
+	width:19px;
+	height:7px;
+	margin-top:13px;
+	margin-left:6px;
+}
+.yg_colorshow{
+	float:left;
+	background:#2ABB5D;
+	width:19px;
+	height:7px;
+	margin-top:13px;
+	margin-left:6px;
+
+}

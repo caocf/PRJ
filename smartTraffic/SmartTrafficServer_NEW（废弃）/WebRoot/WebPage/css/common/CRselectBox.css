@@ -1,0 +1,162 @@
+@CHARSET "UTF-8";
+
+.CRselectBox {
+	border: 1px solid #999;
+	cursor: pointer;
+	display: block;
+	/*width: 150px;*/
+	height: 30px;
+	margin: 0;
+	background: url('../../image/suggest/select_box_off.png') no-repeat
+		right;
+		float: right;
+}
+
+.CRselectBoxHover {
+	background-image: url("../../image/suggest/select_box_on.png");
+	background-repeat: no-repeat;
+}
+
+.CRselectBox a.CRselectValue {
+	display: block;
+	margin: 0px 1px 2px 0;
+	padding: 0 20px 0 10px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000;
+	overflow: hidden;
+	
+	position: relative;
+	/*z-index: 88;*/
+}
+
+.CRselectBoxOptions {
+	background: #FFFFFF;
+	border: 1px solid #999;
+	margin-left: -1px;
+	list-style: none;
+	z-index: 90;
+	position: absolute;
+	/*width: 108px;*/
+	margin-top: -2px;
+	display: none;
+	padding-left: 42px;
+}
+
+.CRselectBoxOptions a {
+	color: #000;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 12px;
+	background: #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-left: -42px;
+}
+.CRselectBoxOptions label {
+	color: #666;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 12px;
+	background: #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-left: -42px;
+	cursor: not-allowed;
+}
+.CRselectBoxOptions a:hover {
+	background: #bbb
+}
+
+.CRselectBoxOptions a.selected {
+	background: #bbb;
+	/*width: 138px;*/
+	margin-left: -42px;
+	margin-top: -3px;
+	padding-top: 4px;
+}
+
+.CRselectBox a {
+	outline: none;
+	text-decoration: none;
+}
+
+.CRselectBox a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+/*小下拉框*/
+.CRselectBox_small {
+	border: 1px solid #999;
+	cursor: pointer;
+	display: block;
+	height: 20px;
+	margin: 0;
+	background: url('../../image/suggest/select_box_off.png') no-repeat
+		right;
+}
+
+
+.CRselectBox_small a.CRselectValue_small {
+	display: block;
+	margin: 0px 1px 2px 0;
+	padding: 0 3px 0 3px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000;
+	overflow: hidden;
+	position: relative;
+	z-index: 88;
+}
+
+.CRselectBoxOptions_small {
+	background: #FFFFFF;
+	border: 1px solid #999;
+	margin-left: -1px;
+	list-style: none;
+	z-index: 90;
+	position: absolute;
+	margin-top: -2px;
+	display: none;
+	padding-left: 42px;
+}
+
+.CRselectBoxOptions_small a {
+	color: #000;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 3px;
+	background: #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-left: -42px;
+}
+
+.CRselectBoxOptions_small a:hover {
+	background: #bbb
+}
+
+.CRselectBoxOptions_small a.selected {
+	background: #bbb;
+	margin-left: -42px;
+	margin-top: -3px;
+	padding-top: 4px;
+}
+
+.CRselectBox_small a {
+	outline: none;
+	text-decoration: none;
+}
+
+.CRselectBox_small a:focus {
+	outline: none;
+	text-decoration: none;
+}

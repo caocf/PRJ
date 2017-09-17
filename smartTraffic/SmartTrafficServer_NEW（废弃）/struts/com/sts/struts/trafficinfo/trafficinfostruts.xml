@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="trafficinfo" extends="cement-interceptor" namespace="/">
+	
+		<action name="queryICcards" class="com.sts.trafficinfo.action.TrafficInfoAction"
+			method="queryICcards">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="queryTrafficPoints" class="com.sts.trafficinfo.action.TrafficInfoAction"
+			method="queryTrafficPoints">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="queryTaxiCompanies" class="com.sts.trafficinfo.action.TrafficInfoAction"
+			method="queryTaxiCompanies">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="queryTicketsAgents" class="com.sts.trafficinfo.action.TrafficInfoAction"
+			method="queryTicketsAgents">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="queryTicketHotLines" class="com.sts.trafficinfo.action.TrafficInfoAction"
+			method="queryTicketHotLines">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+
+	</package>
+</struts>    

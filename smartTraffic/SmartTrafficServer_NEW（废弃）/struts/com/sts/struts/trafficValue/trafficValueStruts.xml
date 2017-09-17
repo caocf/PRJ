@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="trafficValue" extends="cement-interceptor" namespace="/">
+		<action name="GetTrafficValue" class="com.sts.trafficValue.action.TrafficValueAction"
+			method="GetTrafficValue">
+			<result name="success" type="json"> <param name="root">trafficValue</param> </result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetRealInformation" class="com.sts.trafficValue.action.TrafficValueAction"
+			method="GetRealInformation">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		
+		
+		
+		
+		<action name="queryRoad" class="com.sts.trafficValue.action.TrafficValueAction"
+			method="queryRoad">
+			<result name="success" type="json"><param name="root">result</param></result>
+			<result name="error"/>
+		</action>
+		<action name="queryChannel" class="com.sts.trafficValue.action.TrafficValueAction"
+			method="queryChannel">
+			<result name="success" type="json"><param name="root">result</param></result>
+			<result name="error"/>
+		</action>
+		<action name="queryHot" class="com.sts.trafficValue.action.TrafficValueAction"
+			method="queryHot">
+			<result name="success" type="json"><param name="root">result</param></result>
+			<result name="error"/>
+		</action>
+		<action name="queryRegion" class="com.sts.trafficValue.action.TrafficValueAction"
+			method="queryRegion">
+			<result name="success" type="json"><param name="root">result</param></result>
+			<result name="error"/>
+		</action>
+		<action name="queryArea" class="com.sts.trafficValue.action.TrafficValueAction"
+			method="queryArea">
+			<result name="success" type="json"><param name="includeProperties">result,result_area</param></result>
+			<result name="error"/>
+		</action>
+		
+	</package>
+</struts>    

@@ -1,0 +1,216 @@
+@CHARSET "UTF-8";
+
+/*公共css*/
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+img {
+	border: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	font-family: SimSun;
+	display: block;
+	background-color: #fff;
+	min-height: 750px;
+	min-width: 1000px;
+}
+
+a {
+	cursor: pointer;
+	color: #333
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+/*文字操作*/
+.operation {
+	cursor: pointer;
+	color: #07b01f;
+	margin: 0 10px 0 0;
+}
+
+.operation:link {
+	text-decoration: none;
+	color: #07b01f;
+}
+
+.operation:visited {
+	text-decoration: none;
+	color: #07b01f;
+}
+
+.operation:hover {
+	text-decoration: underline;
+	color: #07b01f;
+}
+
+.operation:active {
+	text-decoration: underline;
+	color: #07b01f;
+}
+
+/*不能操作的文字*/
+.no_operation {
+	cursor: pointer;
+	color: #ccc;
+	margin: 0 10px 0 0;
+}
+
+/*页面空间基本属性*/
+TEXTAREA {
+	resize: none; /*固定大小*/
+}
+
+/*输入框、按钮*/ /*无输入提示的输入框*/
+.input_text,.textarea {
+	margin: 0;
+	padding: 5px;
+	width: 600px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	border: solid 1px #ccc;
+	outline: none;
+	background-color: #fff;
+}
+
+.input_time {
+	margin: 0;
+	padding: 5px;
+	width: 293px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	border: solid 1px #ccc;
+	outline: none;
+	background: url("../image/datePicker.gif") no-repeat;
+	background-position: center right;
+}
+
+.input_login {
+	margin: 0;
+	padding: 5px;
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	border: solid 1px #ccc;
+	outline: none;
+	background-color: #fff;
+}
+
+/*选择框*/
+SELECT {
+	background: #fafdfe;
+	height: 28px;
+	border: solid 1px #ccc;
+	line-height: 28px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	vertical-align: middle;
+}
+
+.errLabel {
+	color: red;
+}
+
+/*按钮图片*/ /*跳页*/
+#pageDiv {
+	text-align: right;
+	margin: 0;
+	padding: 6px 15px 6px 0;
+	background: #fff;
+	border: 0px;
+}
+
+#pageDiv p {
+	margin: 0;
+	padding: 0;
+}
+
+.indexCommon {
+	width: 35px;
+	height: auto;
+}
+
+.dCommonA {
+	margin: 0 7px 0 0;
+	padding: 0 2px;
+	display: inline-table
+}
+
+#pageDiv a:link {
+	text-decoration: none;
+	color: #323944
+}
+
+#pageDiv a:visited {
+	text-decoration: none;
+	color: #323944
+}
+
+#pageDiv a:hover {
+	text-decoration: underline;
+	color: #1d2128
+}
+
+#pageDiv a:active {
+	text-decoration: underline;
+	color: #1d2128
+}
+
+#page_content {
+	width: 100%;
+	height: auto;
+}
+
+#main_content {
+	margin: 10px;
+	height: auto;
+	padding: 0;
+	overflow: auto
+}
+
+#main_content_update {
+	width: 1000px;
+	margin: 0 auto;
+	height: auto;
+	padding: 0;
+	overflow: auto
+}
+
+.sbutton {
+	margin: 0 0 0 10px;
+	height: 28px;
+	width: 50px;
+	vertical-align: middle;
+}
+
+.submitdiv {
+	width: 400px;
+	margin: 10px 0 0 0;
+	text-align: center;
+}

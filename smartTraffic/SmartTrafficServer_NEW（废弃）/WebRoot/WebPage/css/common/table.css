@@ -1,0 +1,123 @@
+@CHARSET "UTF-8";
+
+/*th 灰色背景的列表*/
+.listTable {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+}
+
+.listTable  th {
+	font-size: 12px;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	padding: 0;
+	background-color: #eeedfc;
+	border-top: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #5c5c5c;
+}
+
+.listTable_th01 {
+	border-left: solid 1px #cccccc;
+}
+
+.listTable_th02 {
+	border-right: solid 1px #cccccc;
+}
+
+.listTable td {
+	padding: 0;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}
+
+/*th 蓝色背景的列表*/
+.listTable2 {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: left;
+}
+
+.listTable2  th {
+	font-size: 12px;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	padding: 0;
+	background-color: #eeedfc;
+	border-top: solid 1px #2746a1;
+	border-bottom: solid 1px #2746a1;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #fff;
+	background-color: #2746a1;
+	text-align: left;
+}
+
+.listTable2 td {
+	padding: 5px 0;
+	height: auto;
+	line-height: 26px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}
+
+.listTable2 td img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.listTable2 .td_first {
+	color: #2c3f9e;
+	font-weight: bold;
+}
+/*待发*/
+.listTable2 td .label_grey{
+color:#989898
+}
+/*起飞*/
+.listTable2 .td_achieve {
+	color: #0ca202;
+}
+
+/*到达*/
+.listTable2 .td_delay {
+	color: #f51b29;
+}
+
+/*延误*/
+.listTable2 .td_takeoff {
+	color: #444444;
+}
+.listTable2 .tishi{
+width: 100%;
+	text-align: center;
+	display: block;}

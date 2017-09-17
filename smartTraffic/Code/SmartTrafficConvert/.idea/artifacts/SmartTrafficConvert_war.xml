@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SmartTrafficConvert:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SmartTrafficConvert.war">
+      <element id="artifact" artifact-name="SmartTrafficConvert:war exploded" />
+    </root>
+  </artifact>
+</component>

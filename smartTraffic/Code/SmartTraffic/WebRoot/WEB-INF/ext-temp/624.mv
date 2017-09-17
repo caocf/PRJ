@@ -1,0 +1,1 @@
+select  a1.MID as GL_XZDJ, a1.MNAME as GL_XZDJ_desc,sum(XZ_ZLC_ZZ) as XZ_ZLC_ZZ from MDM_GL_ZLC_LN a0,MCODE_GL_XZDJ a1 where 1=1 and a0.GL_XZDJ= a1.MID and  YEAR = $YEAR group by a1.MID,a1.MNAME order by  a1.MID asc

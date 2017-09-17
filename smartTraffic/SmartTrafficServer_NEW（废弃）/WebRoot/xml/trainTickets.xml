@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<train>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<trainNumber>G102</trainNumber>
+		<trainKind>&#x9AD8;&#x94C1;</trainKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<startKind>1</startKind>
+		<endKind>1</endKind>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<length>20.2</length>
+			<first>10</first>
+			<second>20</second>
+			<business>20</business>
+			<other>30</other>
+	</train>
+
+	<train>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<trainNumber>G102</trainNumber>
+		<trainKind>&#x9AD8;&#x94C1;</trainKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<startKind>1</startKind>
+		<endKind>1</endKind>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<length>20.2</length>
+			<first>10</first>
+			<second>20</second>
+			<business>20</business>
+			<other>30</other>
+	</train>
+
+	<train>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<trainNumber>G102</trainNumber>
+		<trainKind>&#x9AD8;&#x94C1;</trainKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<startKind>2</startKind>
+		<endKind>2</endKind>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<length>20.2</length>
+			<first>10</first>
+			<second>20</second>
+			<business>20</business>
+			<other>30</other>
+	</train>
+
+</list>

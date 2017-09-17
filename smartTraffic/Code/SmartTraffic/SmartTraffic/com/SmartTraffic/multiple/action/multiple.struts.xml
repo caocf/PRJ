@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+	<package name="multiple" extends="cement-interceptor"
+		namespace="/multiple">
+		<action name="selectTaxiInfo" method="selectTaxiInfo"
+			class="com.SmartTraffic.multiple.action.MultipleAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectTaxiData" method="selectTaxiData"
+			class="com.SmartTraffic.multiple.action.MultipleAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectShipInfo" method="selectShipInfo"
+			class="com.SmartTraffic.multiple.action.MultipleAction">
+			<result name="success" type="json"></result>
+		</action>	
+	    <action name="selectNumById" method="selectNumById"
+			class="com.SmartTraffic.multiple.action.MultipleAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectJdInfo" method="selectJdInfo"
+			class="com.SmartTraffic.multiple.action.MultipleAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="showGcdInfo" method="showGcdInfo"
+			class="com.SmartTraffic.multiple.action.MultipleAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="showTrafficByGcd" method="showTrafficByGcd"
+			class="com.SmartTraffic.multiple.action.MultipleAction">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

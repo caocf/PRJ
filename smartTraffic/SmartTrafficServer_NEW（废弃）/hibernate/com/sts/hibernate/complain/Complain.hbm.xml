@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.complain.model.Complain" table="st_complain">
+		<id name="id" column="complainID"></id>
+		<property name="type" column="complainType"></property>
+		<property name="title" column="complainTitle"></property>
+		<property name="content" column="complainContent"></property>
+		<property name="contact" column="complainContact"></property>
+		<property name="date" column="complainTime"></property>
+
+	</class>
+	
+	<class name="com.sts.complain.model.ComplainType" table="st_complaintype">
+		<id name="id" column="complainTypeID"></id>
+		<property name="name" column="complainTypeName"></property>
+	</class>
+</hibernate-mapping>

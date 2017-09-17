@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>公交查询</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css" />
+		<link rel="stylesheet" href="../css/gaode.css" />
+		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+		<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+		<script src="http://webapi.amap.com/maps?v=1.3&key=3a1316dfb76f09e882251604b588fdb7"></script>
+		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<style>
+			#type_div button {
+				width: 33.3%;
+				border: 1px gainsboro;
+			}
+			
+			.active {
+				background-color: #00aaff;
+			}
+			
+			.gjct {
+				font-size: 16px!important;
+				color: #C9C9C9!important;
+			}
+		</style>
+	</head>
+
+	<body onmousedown="show_element(event)">
+		<header class="mui-bar mui-bar-nav">
+			<h1 id="title" class="mui-title">公交查询</h1>
+		</header>
+		<div class="mui-content">
+			<div style="padding: 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a id="item2222" class="mui-control-item  mui-active" href="#item2">站点查询</a>
+					<a id="item1111" class="mui-control-item" href="#item1">公交查询</a>
+					<a id="item3333" class="mui-control-item" href="#item3">换乘查询</a>
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content">
+					<div style="padding: 10px;">
+						<div class="mui-input-row mui-search">
+							<input type="search" id="searchLine" class="mui-input-clear" placeholder="公交线路查询">
+						</div>
+						<button class="app-main-button" id="searchBtnLine">搜索</button>
+					</div>
+					<div style="padding: 10px;display: none;" id="historyLine">
+						<div class="title">
+							附近线路
+						</div>
+						<ul class="mui-table-view" id="history_tableLine">
+
+						</ul>
+					</div>
+					<div style="padding: 10px;display: none;" id="promptLine">
+						<div class="title">
+							提示
+						</div>
+						<ul class="mui-table-view" id="prompt_tableLine">
+
+						</ul>
+					</div>
+				</div>
+				<div id="item2" class="mui-control-content  mui-active">
+					<div style="padding: 10px;">
+						<div class="mui-input-row mui-search">
+							<input type="search" id="searchStation" class="mui-input-clear" placeholder="公交站点查询">
+						</div>
+						<button class="app-main-button" id="searchBtnStation">搜索</button>
+						<!--<button class="app-button" id="nearby">附近站点</button>-->
+					</div>
+					<div style="padding: 10px;display: none;" id="history">
+						<div class="title">
+							<span>附件站点</span>
+						</div>
+						<ul class="mui-table-view" id="history_table">
+
+						</ul>
+					</div>
+					<div style="padding: 10px;display: none;" id="prompt">
+						<div class="title">
+							提示
+						</div>
+						<ul class="mui-table-view" id="prompt_table">
+
+						</ul>
+					</div>
+				</div>
+				<div id="history1" style="display:none;position: absolute;top:160px;height: 200px;background:white;z-index: 10000;width: 90%;left:5%;box-shadow: 0 0 5px #333;">
+					<div class="mui-scroll-wrapper" style="overflow: auto;">
+						<div class="mui-scroll">
+							<ul class="mui-table-view" id='historyul'>
+								<li class="mui-table-view-cell gjct">
+									关键词提示
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-2
+								</li>
+								<li class="mui-table-view-cell footgreenli">
+									清空历史
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<div style="padding: 10px;">
+						<div class="mui-input-row mui-search">
+							<input type="search" id="start" class="mui-input-clear" placeholder="我的位置">
+								<input type="hidden" id="startP" />
+						</div>
+						<div class="mui-input-row mui-search">
+							<input type="search" id="end" class="mui-input-clear" placeholder="终点">
+								<input type="hidden" id="endP" />
+						</div>
+						<button class="app-main-button" id="searchBtnTrasfer">搜索</button>
+					</div>
+					<div style="padding: 10px;display: none;" id="historyTrasfer">
+						<div class="title">
+							附近站点
+						</div>
+						<ul class="mui-table-view" id="history_tableTrasfer">
+
+						</ul>
+					</div>
+					<!--<div id="type_div" class="mui-segmented-control">
+						<button class="app-button active" id="shc">少换乘</button>
+						<button class="app-button " id="sjd">时间短</button>
+						<button class="app-button" id="sbx">少步行</button>
+					</div>-->
+					<div style="padding: 10px;display: none;" id="promptTrasfer">
+						<div class="title">
+							提示
+						</div>
+						<ul class="mui-table-view" id="prompt_tableTrasfer">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="container" style="display: none;"></div>
+		</div>
+		<footer>
+		</footer>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js?v=1.2"></script>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="../js/GPS.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			var showLine = function(lineId, direct, info) {
+				pushHistoryLine(JSON.parse(info));
+				localStorage.lineID = lineId;
+				localStorage.direct = direct
+				mui.openWindow({
+					url: "showLine.html",
+					id: "showLine"
+				});
+			}
+			var promptDivLine = document.getElementById("promptLine")
+			var showPromptLine = function() {
+				document.getElementById("historyLine").style.display = "none";
+				promptDivLine.style.display = "";
+			}
+			var showHistoryLine = function() {
+				promptDivLine.style.display = "none";
+				document.getElementById("historyLine").style.display = "";
+
+				//				var historystr = localStorage.getItem("bus_line_history");
+				//				if(historystr != null && history.length > 0) {
+				//					var historyList = JSON.parse(historystr);
+				//					var promptTable = document.getElementById("history_tableLine");
+				//					var resultLength = historyList.length;
+				//					if(resultLength > 0) {
+				//						//						showPrompt()
+				//						promptTable.innerHTML = ""
+				//					}
+				//					var innerHtml = ""
+				//					for(var i = 0; i < resultLength; i++) {
+				//						var lineInfo = historyList[i];
+				//						var li = document.createElement("li");
+				//						li.classList.add("mui-table-view-cell");
+				//						li.classList.add("mui-media");
+				//						li.ref = lineInfo.Id;
+				//						li.info = JSON.stringify(lineInfo);
+				//						li.addEventListener("tap", function() {
+				//							showLine(this.ref, 1, this.info);
+				//						})
+				//
+				//						var a = document.createElement("a");
+				//
+				//						var img = document.createElement("img");
+				//						img.classList.add("mui-media-object");
+				//						img.classList.add("mui-pull-left");
+				//						img.src = "../image/trip_history_clock.png";
+				//
+				//						var div = document.createElement("div");
+				//						div.className = "mui-media-body";
+				//						div.innerHTML = lineInfo.Name 
+				//
+				//						a.appendChild(img);
+				//						a.appendChild(div);
+				//						li.appendChild(a);
+				//						promptTable.appendChild(li);
+				//					}
+				//					var li = document.createElement("li");
+				//					li.classList.add("mui-table-view-cell");
+				//					li.classList.add("mui-media");
+				//					li.innerText = "清除记录"
+				//					li.addEventListener("tap", function() {
+				//						localStorage.removeItem("bus_line_history");
+				//						showHistoryLine();
+				//					});
+				//					promptTable.appendChild(li);
+				//				} else {
+				//					document.getElementById("history_tableLine").innerHTML = "";
+				//				}
+			}
+			var pushHistoryLine = function(info) {
+				var historystr = localStorage.getItem("bus_line_history");
+				var historyList = []
+				if(historystr != null && history.length > 0) {
+					historyList = JSON.parse(historystr);
+				}
+				var i = 0;
+				for(; i < historyList.length; i++) {
+					if(info.Id == historyList[i].Id) {
+						break;
+					}
+				}
+				if(historyList.length == i) {
+					historyList.push(info);
+				}
+				localStorage.setItem("bus_line_history", JSON.stringify(historyList));
+			}
+			var queryLine = function(name) {
+				if(name == null || name == "") {
+					return;
+				}
+				var queryDate = {
+					lineName: encodeURI(name)
+				}
+				app.queryLineByName(queryDate, function(data) {
+					data = JSON.parse(data);
+					if(data == null || data == "") {
+						mui.alert("没有找到相关路线")
+						return;
+					}
+					if(data.LineList == null || data.LineList.length == 0) {
+						mui.alert("没有找到相关路线")
+						return;
+					}
+					var promptTable = document.getElementById("prompt_tableLine");
+					var resultLength = data.LineList.length;
+					console.log(JSON.stringify(data.LineList));
+					if(resultLength > 0) {
+						showPromptLine()
+						promptTable.innerHTML = ""
+					}
+					var innerHtml = ""
+					for(var i = 0; i < resultLength; i++) {
+						var lineInfo = data.LineList[i];
+						var li = document.createElement("li");
+						li.classList.add("mui-table-view-cell");
+						li.classList.add("mui-media");
+						li.ref = lineInfo.Id;
+						li.info = JSON.stringify(lineInfo);
+						li.addEventListener("tap", function() {
+							showLine(this.ref, 1, this.info);
+						})
+
+						var a = document.createElement("a");
+
+						var img = document.createElement("img");
+						img.classList.add("mui-media-object");
+						img.classList.add("mui-pull-left");
+						img.src = "../image/trip_history_clock.png";
+
+						var div = document.createElement("div");
+						div.className = "mui-media-body";
+						div.innerHTML = lineInfo.Name + "<p class='mui-ellipsis'>" + lineInfo.UpStartStationName + "-&gt;" + lineInfo.UpEndStationName + "</p>"
+
+						a.appendChild(img);
+						a.appendChild(div);
+						li.appendChild(a);
+						promptTable.appendChild(li);
+
+						var li2 = document.createElement("li");
+						li2.classList.add("mui-table-view-cell");
+						li2.classList.add("mui-media");
+						li2.ref = lineInfo.Id;
+						li2.info = JSON.stringify(lineInfo);
+						li2.addEventListener("tap", function() {
+							showLine(this.ref, 0, this.info);
+						})
+
+						var a2 = document.createElement("a");
+
+						var img2 = document.createElement("img");
+						img2.classList.add("mui-media-object");
+						img2.classList.add("mui-pull-left");
+						img2.src = "../image/trip_history_clock.png";
+
+						var div2 = document.createElement("div");
+						div2.className = "mui-media-body";
+						div2.innerHTML = lineInfo.Name + "<p class='mui-ellipsis'>" + lineInfo.DownStartStationName + "-&gt;" + lineInfo.DownEndStationName + "</p>"
+
+						a2.appendChild(img2);
+						a2.appendChild(div2);
+						li2.appendChild(a2);
+						promptTable.appendChild(li2);
+					}
+				});
+			}
+
+			//			document.getElementById("searchLine").addEventListener("input", function(e) {
+			//				queryLine(this.value)
+			//			});
+
+			document.getElementById("searchBtnLine").addEventListener("tap", function() {
+				var v = document.getElementById("searchLine").value
+				queryLine(v)
+			});
+			/*=============================================================================================*/
+			var promptDiv = document.getElementById("prompt")
+			var showPrompt = function() {
+				document.getElementById("history").style.display = "none";
+				promptDiv.style.display = "";
+			}
+			var showHistory = function() {
+				promptDiv.style.display = "none";
+				document.getElementById("history").style.display = "";
+
+				//				var historystr = localStorage.getItem("bus_station_history");
+				//				if(historystr != null && history.length > 0) {
+				//					var historyList = JSON.parse(historystr);
+				//					var promptTable = document.getElementById("history_table");
+				//					var resultLength = historyList.length;
+				//					if(resultLength > 0) {
+				//						//						showPrompt()
+				//						promptTable.innerHTML = ""
+				//					}
+				//					var innerHtml = "";
+				//					for(var i = 0; i < resultLength; i++) {
+				//						var lineInfo = historyList[i];
+				//						console.log(JSON.stringify(historyList[i]))
+				//						var li = document.createElement("li");
+				//						li.classList.add("mui-table-view-cell");
+				//						li.classList.add("mui-media");
+				//						li.ref = lineInfo.Id;
+				//						li.info = JSON.stringify(lineInfo);
+				//						li.addEventListener("tap", function() {
+				//							showStation(this.ref, this.info);
+				//						})
+				//
+				//						var a = document.createElement("a");
+				//
+				//						var img = document.createElement("img");
+				//						img.classList.add("mui-media-object");
+				//						img.classList.add("mui-pull-left");
+				//						img.src = "../image/repair_icon_search.png";
+				//
+				//						var div = document.createElement("div");
+				//						div.className = "mui-media-body";
+				//						var lineList = lineInfo.List;
+				//						var lines = ""
+				//						for(var j = 0;j<lineList.length;j++){
+				//							lines = lines + lineList[j].Name + ","
+				//						}
+				//						if(lines.length > 0){
+				//							lines = lines.substr(0,lines.length - 1);
+				//						}
+				//						div.innerHTML = lineInfo.Name + "<p class='mui-ellipsis'>" + lines + "</p>"
+				//
+				//						a.appendChild(img);
+				//						a.appendChild(div);
+				//						li.appendChild(a);
+				//						promptTable.appendChild(li);
+				//					}
+				//					var li = document.createElement("li");
+				//					li.classList.add("mui-table-view-cell");
+				//					li.classList.add("mui-media");
+				//					li.innerText = "清除记录"
+				//					li.addEventListener("tap", function() {
+				//						localStorage.removeItem("bus_station_history");
+				//						showHistory();
+				//					});
+				//					promptTable.appendChild(li);
+				//				} else {
+				//					document.getElementById("history_table").innerHTML = "";
+				//				}
+			}
+
+			var pushHistory = function(info) {
+				var historystr = localStorage.getItem("bus_station_history");
+				var historyList = []
+				if(historystr != null && history.length > 0) {
+					historyList = JSON.parse(historystr);
+				}
+				var i = 0;
+				for(; i < historyList.length; i++) {
+					if(info.Id == historyList[i].Id) {
+						break;
+					}
+				}
+				if(historyList.length == i) {
+					historyList.push(info);
+				}
+				localStorage.setItem("bus_station_history", JSON.stringify(historyList));
+			}
+
+			var showStation = function(stationId, info) {
+				pushHistory(JSON.parse(info));
+				localStorage.stationId = stationId
+				mui.openWindow({
+					url: "showStation.html",
+					id: "showStation"
+				});
+
+			}
+
+			var queryStation = function(name) {
+				var queryDate = {
+					stationName: encodeURI(name)
+				}
+				app.queryOriginBusStation(queryDate, function(data) {
+					if(data == null || data == "") {
+						mui.alert("没有找到相关站点")
+						return;
+					}
+					data = JSON.parse(data);
+					if(data.StationList == null || data.StationList.length == 0) {
+						mui.alert("没有找到相关站点")
+						return;
+					}
+					var prompt_table = document.getElementById("prompt_table");
+					var resultLength = data.StationList.length
+					if(resultLength > 0) {
+						showPrompt()
+						prompt_table.innerHTML = ""
+					}
+					for(var i = 0; i < resultLength; i++) {
+						var lineInfo = data.StationList[i];
+						var li = document.createElement("li");
+						li.classList.add("mui-table-view-cell");
+						li.classList.add("mui-media");
+						li.ref = lineInfo.Id;
+						li.info = JSON.stringify(lineInfo);
+						li.addEventListener("tap", function() {
+							showStation(this.ref, this.info);
+						})
+
+						var a = document.createElement("a");
+
+						var img = document.createElement("img");
+						img.classList.add("mui-media-object");
+						img.classList.add("mui-pull-left");
+						img.src = "../image/repair_icon_search.png";
+
+						var div = document.createElement("div");
+						div.className = "mui-media-body";
+						var lineList = lineInfo.List;
+						var lines = ""
+						for(var j = 0; j < lineList.length; j++) {
+							lines = lines + lineList[j].Name + ","
+						}
+						if(lines.length > 0) {
+							lines = lines.substr(0, lines.length - 1);
+						}
+						div.innerHTML = lineInfo.Name + "<p class='mui-ellipsis'>" + lines + "</p>"
+
+						a.appendChild(img);
+						a.appendChild(div);
+						li.appendChild(a);
+						prompt_table.appendChild(li);
+					}
+				});
+			}
+			//			document.getElementById("searchStation").addEventListener("input", function(e) {
+			//				queryStation(this.value)
+			//			});
+			document.getElementById("searchBtnStation").addEventListener("tap", function() {
+				var v = document.getElementById("searchStation").value
+				queryStation(v)
+			});
+			//			document.getElementById("nearby").addEventListener("tap", function() {
+			//				mui.openWindow("stationMap.html", "stationMap");
+			//			});
+			//==============================================================================================
+			//换乘查询
+			var shcBtn = document.getElementById("shc"); //少换乘按钮
+			var sjdBtn = document.getElementById("sjd"); //时间短按钮
+			var sbxBtn = document.getElementById("sbx"); //少步行按钮
+			var startText = document.getElementById("start");
+			var endText = document.getElementById("end");
+			startText.value = "";
+			endText.value = "";
+			var startP = document.getElementById("startP");
+			var endP = document.getElementById("endP");
+			startP.value = "";
+			endP.value = "";
+			var isstart = true;
+			var startPoint;
+			var endPoint;
+//			= {
+//				lon: 120.780069,
+//				lat: 30.743604
+//			}; //120.780069,30.743604
+			var showPromptTrasfer = function() {
+				document.getElementById("historyTrasfer").style.display = "none";
+				document.getElementById("promptTrasfer").style.display = "";
+			}
+			var searchTrasfer = function(start, end, type) {
+				if(start == null || start.lat == null || start.lon == null) {
+					if(startText.value == null || startText.value == "") {
+						mui.alert("定位不可用，请选择起点站")
+					} else {
+						mui.alert("起点站无效，请重新选择")
+					}
+				}else{
+					//startP.value = JSON.stringify(start)
+				}
+				if(end == null || end.lat == null || end.lon == null) {
+					mui.alert("终点站无效，请重新选择")
+				}else{
+					//endP.value = JSON.stringify(end)
+				}
+				var table = document.getElementById("prompt_tableTrasfer");
+				table.innerHTML = ""
+				type = type || "1"
+				var queryData = {
+					startLantitude: start.lat,
+					startLontitude: start.lon,
+					endLontitude: end.lon,
+					endLantitude: end.lat,
+					order: type,
+					count: 4
+				}
+				localStorage.startAddress = startText.value || "我的位置"
+				localStorage.endAddress = endText.value
+				
+				app.queryOriginTrafficTrasfer(queryData, function(data) {
+					console.log(data)
+					if(data == null || data == "") {
+						mui.alert("没有找到相应换乘路线")
+						return;
+					}
+					var res = JSON.parse(data)
+					var list = res.List;
+					console.log(list)
+					if(list == null || list.length == 0) {
+						mui.alert("没有找到相应换乘路线")
+						return;
+					}
+					
+					localStorage.trasferData = JSON.stringify(list);
+					mui.openWindow("showTrasfer.html", "showTrasfer");
+				})
+			}
+			startText.addEventListener("input", function() {
+				searchStart();
+			})
+			endText.addEventListener("input", function() {
+				searchEnd()
+			})
+			var searchStart = function() {
+				var value = startText.value;
+				var querydata = {
+					stationName: encodeURI(value)
+				}
+				app.queryOriginBusStation(querydata, function(data) {
+					if(data != null && data != "") {
+						isstart = true;
+						data = JSON.parse(data)
+
+						var StationList = data.StationList;
+						var historydiv = document.getElementById("historyul");
+						historydiv.innerHTML = ''
+						document.getElementById("history1").style.display = 'block';
+						if(isstart)
+							document.getElementById("history1").style.top = '110px';
+						else
+							document.getElementById("history1").style.top = '160px';
+						var headli = document.createElement('li');
+						headli.setAttribute('class', 'mui-table-view-cell gjct');
+						headli.innerHTML = '站点提示';
+						historydiv.appendChild(headli);
+						for(var i = 0; i < StationList.length; i++) {
+							if(i % 2 == 0) {
+								var li = document.createElement('li');
+								li.setAttribute('class', 'mui-table-view-cell');
+								li.setAttribute('id', StationList[i].Longitude + '_' + StationList[i].Latitude);
+								li.innerText = StationList[i].Name;
+								historydiv.appendChild(li);
+								li.addEventListener("tap", function() {
+									var jwd = this.getAttribute("id").split('_');
+									if(isstart) {
+										startText.value = this.innerText;
+										startPoint = {
+											lon: parseFloat(jwd[0]),
+											lat: parseFloat(jwd[1])
+										};
+//										sp.value = JSON.stringify(startPoint)
+									} else {
+										endText.value = this.innerText;
+										endPoint = {
+											lon: parseFloat(jwd[0]),
+											lat: parseFloat(jwd[1])
+										};
+									}
+
+									document.getElementById("history1").style.display = 'none';
+								});
+							}
+						}
+						//TODO 展示StationList.Name到候选框
+						//点击候选框   startPoint ={lon:StationList.Longitude,lat:StationList.Latitude} 
+					} else {
+						return;
+					}
+				});
+			}
+			var searchEnd = function() {
+				var value = endText.value;
+				var querydata = {
+					stationName: encodeURI(value)
+				}
+				app.queryOriginBusStation(querydata, function(data) {
+					if(data != null && data != "") {
+						data = JSON.parse(data)
+						isstart = false;
+						var StationList = data.StationList;
+						var historydiv = document.getElementById("historyul")
+						historydiv.innerHTML = ''
+						document.getElementById("history1").style.display = 'block';
+						if(isstart)
+							document.getElementById("history1").style.top = '110px';
+						else
+							document.getElementById("history1").style.top = '160px';
+						var headli = document.createElement('li');
+						headli.setAttribute('class', 'mui-table-view-cell gjct');
+						headli.innerHTML = '站点提示';
+						historydiv.appendChild(headli);
+						for(var i = 0; i < StationList.length; i++) {
+							if(i % 2 == 0) {
+								var li = document.createElement('li');
+								li.setAttribute('class', 'mui-table-view-cell');
+								li.setAttribute('id', StationList[i].Longitude + '_' + StationList[i].Latitude);
+								li.innerText = StationList[i].Name;
+								historydiv.appendChild(li);
+								li.addEventListener("tap", function() {
+									var jwd = this.getAttribute("id").split('_');
+									if(isstart) {
+										startText.value = this.innerText;
+										startPoint = {
+											lon: parseFloat(jwd[0]),
+											lat: parseFloat(jwd[1])
+										};
+									} else {
+										endText.value = this.innerText;
+										endPoint = {
+											lon: parseFloat(jwd[0]),
+											lat: parseFloat(jwd[1])
+										};
+									}
+									document.getElementById("history1").style.display = 'none';
+								});
+							}
+						}
+						//TODO 展示StationList.Name到候选框
+						//点击候选框   endPoint ={lon:StationList.Longitude,lat:StationList.Latitude} 
+					} else {
+						return;
+					}
+				});
+			}
+
+			document.getElementById("searchBtnTrasfer").addEventListener("tap", function() {
+				
+				var sp;
+				try{
+					sp = JSON.parse(startP.value);
+				}catch(err){
+					
+				}
+				var ep;
+				try{
+					ep = JSON.parse(endP.value);
+				}catch(err){
+					
+				}
+				startPoint = startPoint || sp;
+				endPoint = endPoint || ep;
+				searchTrasfer(startPoint, endPoint, "1")
+			});
+			//			shcBtn.addEventListener("tap", function() {
+			//				shcBtn.classList.add("active")
+			//				sbxBtn.classList.remove("active");
+			//				sjdBtn.classList.remove("active");
+			//				searchTrasfer(startPoint, endPoint, "1")
+			//			});
+			//			sbxBtn.addEventListener("tap", function() {
+			//				sbxBtn.classList.add("active")
+			//				shcBtn.classList.remove("active");
+			//				sjdBtn.classList.remove("active");
+			//				searchTrasfer(startPoint, endPoint, "3")
+			//			});
+			//			sjdBtn.addEventListener("tap", function() {
+			//				sjdBtn.classList.add("active")
+			//				shcBtn.classList.remove("active");
+			//				sbxBtn.classList.remove("active");
+			//				searchTrasfer(startPoint, endPoint, "2")
+			//			});
+			//==============================================================================================
+			var getLocation = function() {
+					var map, geolocation;
+					//加载地图，调用浏览器定位服务
+					map = new AMap.Map('container', {
+						resizeEnable: true
+					});
+					map.plugin('AMap.Geolocation', function() {
+						geolocation = new AMap.Geolocation({
+							enableHighAccuracy: true, //是否使用高精度定位，默认:true
+							timeout: 10000, //超过10秒后停止定位，默认：无穷大
+							buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+							zoomToAccuracy: true, //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+							buttonPosition: 'LB',
+							useNative: false,
+							convert: false
+						});
+						map.addControl(geolocation);
+						geolocation.getCurrentPosition();
+						AMap.event.addListener(geolocation, 'complete', function(data) {
+							startPoint = {
+								lon: data.position.getLng(),
+								lat: data.position.getLat()
+							}
+							var line = document.getElementById("history_table")
+							var lineTable = document.getElementById("history_tableLine")
+							var queryDate = {
+								longtitude: startPoint.lon,
+								lantitude: startPoint.lat,
+								distance: 500
+							}
+							app.queryOriginNearByBusStation(queryDate, function(data) {
+
+								if(data == null || data == "") {
+									return;
+								}
+								data = JSON.parse(data);
+								if(data.StationList == null || data.StationList.length == 0) {
+									return;
+								}
+								var resultLength = data.StationList.length
+								if(resultLength > 0) {
+									showHistory();
+									showHistoryLine();
+									line.innerHTML = ""
+									lineTable.innerHTML = ""
+								}
+								for(var i = 0; i < resultLength; i += 2) {
+									var lineInfo = data.StationList[i];
+									var li = document.createElement("li");
+									li.classList.add("mui-table-view-cell");
+									li.classList.add("mui-media");
+									li.ref = lineInfo.Id;
+									li.info = JSON.stringify(lineInfo);
+									li.addEventListener("tap", function() {
+										showStation(this.ref, this.info);
+									})
+
+									var a = document.createElement("a");
+
+									var img = document.createElement("img");
+									img.classList.add("mui-media-object");
+									img.classList.add("mui-pull-left");
+									img.src = "../image/repair_icon_search.png";
+
+									var div = document.createElement("div");
+									div.className = "mui-media-body";
+									var lineList = lineInfo.List;
+									var lines = ""
+									for(var j = 0; j < lineList.length; j++) {
+										lines = lines + lineList[j].Name + ","
+
+										//====
+										var li3 = document.createElement("li");
+										li3.classList.add("mui-table-view-cell");
+										li3.classList.add("mui-media");
+										li3.ref = lineList[j].Id;
+										li3.info = JSON.stringify(lineList[j]);
+										li3.direct = lineList[j].Direct
+										li3.addEventListener("tap", function() {
+											showLine(this.ref, this.direct, this.info);
+										})
+
+										var a3 = document.createElement("a");
+
+										var img3 = document.createElement("img");
+										img3.classList.add("mui-media-object");
+										img3.classList.add("mui-pull-left");
+										img3.src = "../image/trip_history_clock.png";
+
+										var div3 = document.createElement("div");
+										div3.className = "mui-media-body";
+										div3.innerHTML = lineList[j].Name + "<p class='mui-ellipsis'>" + lineList[j].StartStationName + "-&gt;" + lineList[j].EndStationName + "</p>"
+
+										a3.appendChild(img3);
+										a3.appendChild(div3);
+										li3.appendChild(a3);
+										lineTable.appendChild(li3);
+
+										//										var li2 = document.createElement("li");
+										//										li2.classList.add("mui-table-view-cell");
+										//										li2.classList.add("mui-media");
+										//										li2.ref = lineList[j].Id;
+										//										li2.info = JSON.stringify(lineList[j]);
+										//										li2.addEventListener("tap", function() {
+										//											showLine(this.ref, 0, this.info);
+										//										})
+										//				
+										//										var a2 = document.createElement("a");
+										//				
+										//										var img2 = document.createElement("img");
+										//										img2.classList.add("mui-media-object");
+										//										img2.classList.add("mui-pull-left");
+										//										img2.src = "../image/trip_history_clock.png";
+										//				
+										//										var div2 = document.createElement("div");
+										//										div2.className = "mui-media-body";
+										//										div2.innerHTML = lineList[j].Name + "<p class='mui-ellipsis'>" + lineList[j].DownStartStationName + "-&gt;" + lineList[j].DownEndStationName + "</p>"
+										//				
+										//										a2.appendChild(img2);
+										//										a2.appendChild(div2);
+										//										li2.appendChild(a2);
+										//										lineTable.appendChild(li2);
+										//=====
+									}
+									if(lines.length > 0) {
+										lines = lines.substr(0, lines.length - 1);
+									}
+									div.innerHTML = lineInfo.Name + "<p class='mui-ellipsis'>" + lines + "</p>"
+
+									a.appendChild(img);
+									a.appendChild(div);
+									li.appendChild(a);
+									line.appendChild(li);
+
+								}
+								var li = document.createElement("li");
+								li.classList.add("mui-table-view-cell");
+								li.classList.add("mui-media");
+								li.addEventListener("tap", function() {
+									mui.openWindow("stationMap.html", "stationMap");
+								})
+								var a = document.createElement("a");
+								var div = document.createElement("div");
+								div.className = "mui-media-body";
+								div.innerHTML = "在地图上查看"
+								a.appendChild(div);
+								li.appendChild(a);
+								line.appendChild(li);
+
+							})
+						}); //返回定位信息
+						AMap.event.addListener(geolocation, 'error', function(data) {
+							console.log(JSON.stringify(data));
+							mui.alert("定位失败");
+						}); //返回定位出错信息
+					});
+
+				}
+				(function($) {
+					var deceleration = mui.os.ios ? 0.003 : 0.0009;
+					$('.mui-scroll-wrapper').scroll({
+						bounce: false,
+						indicators: true, //是否显示滚动条
+						deceleration: deceleration
+					});
+					$('#scroll').scroll({
+						indicators: true //是否显示滚动条
+					});
+					var segmentedControl = document.getElementById('segmentedControl');
+					$('.mui-input-group').on('change', 'input', function() {
+						if(this.checked) {
+							var styleEl = document.querySelector('input[name="style"]:checked');
+							var colorEl = document.querySelector('input[name="color"]:checked');
+							if(styleEl && colorEl) {
+								var style = styleEl.value;
+								var color = colorEl.value;
+								segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+							}
+						}
+					});
+					getLocation();
+				})(mui);
+
+			function show_element() {
+				document.getElementById("history1").style.display = 'none';
+			}
+		</script>
+
+	</body>
+
+</html>

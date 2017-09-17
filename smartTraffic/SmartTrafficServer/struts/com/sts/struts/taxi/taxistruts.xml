@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="taxi" extends="cement-interceptor" namespace="/">
+		<action name="orderTaxi" class="com.sts.taxi.action.TaxiAction"
+			method="orderTaxi">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+
+		<action name="queryOrder" class="com.sts.taxi.action.TaxiAction"
+			method="queryOrder">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+
+		<action name="searchTaxtByLocationCircle" class="com.sts.taxi.action.TaxiAction"
+			method="searchTaxtByLocationCircle">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+
+
+		<action name="searchTaxiDetailByName" class="com.sts.taxi.action.TaxiAction"
+			method="searchTaxiDetailByName">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		
+		<action name="queryTaxiPhoneById" class="com.sts.taxi.action.TaxiAction"
+			method="queryTaxiPhoneById">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+		
+		<action name="searchAllTaxis" class="com.sts.taxi.action.TaxiAction"
+			method="searchAllTaxis">
+			<result name="success" type="json" />
+			<result name="error" />
+		</action>
+
+	</package>
+</struts>    

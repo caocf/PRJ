@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<Ticket>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<carNumber>7008</carNumber>
+		<carKind>&#x5927;&#x5BA2;</carKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<length>20.2</length>
+		<price>55.0</price>
+		<leaveTicketNumber>9</leaveTicketNumber>
+	</Ticket>
+
+	<Ticket>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<carNumber>7009</carNumber>
+		<carKind>&#x666E;&#x5BA2;</carKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<length>20.2</length>
+		<price>45.0</price>
+		<leaveTicketNumber>9</leaveTicketNumber>
+	</Ticket>
+
+	<Ticket>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<carNumber>7010</carNumber>
+		<carKind>&#x5927;&#x5BA2;</carKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<length>20.2</length>
+		<price>95.0</price>
+		<leaveTicketNumber>9</leaveTicketNumber>
+	</Ticket>
+</list>

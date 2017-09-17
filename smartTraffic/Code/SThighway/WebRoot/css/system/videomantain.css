@@ -1,0 +1,88 @@
+@CHARSET "utf-8";
+.videolistTable {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: left; 
+}
+.videolistTable  tr{
+	text-align:center;
+} 
+.videolistTable  th {
+	text-align:center;
+	font-size: 14px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	padding: 0 0 0 0px;
+	background-color: #ffffff;
+	border-bottom:solid 1px #dcdcdc;
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+	-o-text-overflow: ellipsis;
+	color: black;
+}
+.videolistTable td {
+	text-align:center;
+	padding: 0 0 0 0;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #dcdcdc;
+	background-color: #ffffff;
+	overflow: hidden; /* 鐡掑懎鍤惃鍕劥閸掑棝娈ｉ挊蹇氭崳閺夛拷*/
+	white-space: nowrap; /* 娑撳秵妯夌粈铏规畱閸︾増鏌熼悽銊ф阜閻ｃ儱褰�..娴狅絾娴�*/
+	text-overflow: ellipsis; /* 閺�垱瀵�IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}
+
+
+.td_left {
+	text-align: right;
+	padding-right: 10px;
+}
+.update_class{
+	float:right;
+	margin-right:30px;
+	line-height:52px;
+	color:#006994;
+}
+.Operate{
+	cursor: pointer;
+    color: #006993;
+   margin-right: 15px;
+}
+.Operate1{
+	cursor: pointer;
+    color: #006993;	
+}
+.common_c3 a:visited {
+	text-decoration: underline;
+}
+
+.common_c3 a:hover {
+	text-decoration: underline;
+}
+.common_c3 a:link {
+	text-decoration: underline;
+}
+.common_c3 a:active {
+	text-decoration: underline;
+}
+.pop_up_middle_table {
+	width:320px;
+}
+.pop_up_middle_table tr{
+	width:100px;
+}
+.pop_up_middle_table td{
+	width:50px;
+}
+.videoselect{
+	width:100px;
+}

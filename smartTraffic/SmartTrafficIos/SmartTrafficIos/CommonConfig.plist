@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ReadStatement</key>
+	<false/>
+	<key>LoginUser</key>
+	<dict>
+		<key>phone</key>
+		<string>18805732560</string>
+		<key>password</key>
+		<string>222222</string>
+	</dict>
+	<key>jxtpiTempServer</key>
+	<dict>
+		<key>serverProjectName</key>
+		<string>jxtpi</string>
+		<key>serverPort</key>
+		<integer>8080</integer>
+		<key>serverAddress</key>
+		<string>115.159.64.244</string>
+	</dict>
+	<key>jxtpiServer</key>
+	<dict>
+		<key>serverProjectName</key>
+		<string>jxtpi</string>
+		<key>serverPort</key>
+		<integer>80</integer>
+		<key>serverAddress</key>
+		<string>115.231.73.253</string>
+	</dict>
+	<key>mainServer</key>
+	<dict>
+		<key>serverProjectName</key>
+		<string>SmartTraffic</string>
+		<key>serverPort</key>
+		<integer>8888</integer>
+		<key>serverAddress</key>
+		<string>www.jxjtj.gov.cn</string>
+	</dict>
+</dict>
+</plist>

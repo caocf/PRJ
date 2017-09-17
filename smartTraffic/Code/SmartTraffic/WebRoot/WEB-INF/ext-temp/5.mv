@@ -1,0 +1,5 @@
+
+select  year, sum(zs) val from MDM_QL_SLYM a, code_year b where a.year = b.year_id
+group by year, b.year_name, year order by year asc
+
+						

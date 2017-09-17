@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+	<!-- 公路配置信息 -->
+	<package name="video" extends="cement-interceptor"
+		namespace="/video">
+		<!-- 获取机日志列表 -->
+		<action name="loginVideoPlat" method="loginVideoPlat"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="saveVideoList" method="saveVideoList"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="selectControlUnit" method="selectControlUnit"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectRegion" method="selectRegion"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectCamere" method="selectCamere"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="updateLonlat" method="updateLonlat"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectLonlat" method="selectLonlat"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectPlayInfo" method="selectPlayInfo"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectAllCamera" method="selectAllCamera"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="tbGlvideo" method="tbGlvideo"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="tbVideo" method="tbVideo"
+			class="com.SmartTraffic.video.action.VideoAction">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

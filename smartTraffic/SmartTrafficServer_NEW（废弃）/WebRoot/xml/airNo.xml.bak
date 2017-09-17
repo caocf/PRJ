@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<air>
+	<airNo>7998</airNo>
+	<planStart>9:00</planStart>
+	<planEnd>10:00</planEnd>
+	<realStart>9:00</realStart>
+	<realReach>10:10</realReach>
+	<time>10:00</time>
+	<startCity>北京</startCity>
+	<endCity>上海</endCity>
+	<startAirPort>景洪机场</startAirPort>
+	<ednAirPort>虹桥机场</ednAirPort>
+
+	<economyPirce>550</economyPirce>
+	<ecnomyLeft>20</ecnomyLeft>
+	
+	<businessPirce>550</businessPirce>
+	<businessLeft>20</businessLeft>
+
+	<TopPirce>550</TopPirce>
+	<TopLeft>20</TopLeft>
+</air>
+

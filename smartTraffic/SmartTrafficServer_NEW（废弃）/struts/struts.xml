@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- 指定Web应用的默认编码，相当于调用request的setCharacterEncoding方法 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 把Action对象交给Spring创建和管理 -->
+	<constant name="struts.objectFactory" value="spring" />
+
+	<!-- 设置导入时文件大小 -->
+	<constant name="struts.multipart.maxSize" value="1000000000" />
+	<!-- 定义默认包 -->
+	<package name="cement-interceptor" extends="json-default" namespace="/">
+		<!-- 统一异常处理 -->
+		<global-exception-mappings>
+			<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	</package>
+
+
+	<constant name="struts.multipart.saveDir"
+		value="D:\SmartTraffic\apache-tomcat-7.0.40\webapps\SmartTrafficServer\temp"></constant>
+
+
+	<include file="com/sts/struts/weather/*.xml"></include> 
+	<include file="com/sts/struts/train/*.xml"></include> 
+	<include file="com/sts/struts/user/*.xml"></include> 
+	<include file="com/sts/struts/air/*.xml"></include> 
+	<include file="com/sts/struts/trafficValue/*.xml"></include> 
+	<include file="com/sts/struts/suggestion/*.xml"></include> 
+	<include file="com/sts/struts/complain/*.xml"></include> 
+	<include file="com/sts/struts/breakRules/*.xml"></include>
+	<include file="com/sts/struts/school/*.xml"></include>
+	<include file="com/sts/struts/repair/*.xml"></include>
+	<!-- 停车诱导 -->
+	<include file="com/sts/struts/parking/*.xml"></include>
+	<include file="com/sts/struts/news/*.xml"></include>
+	<include file="com/sts/struts/bike/*.xml"></include>
+	<include file="com/sts/struts/busStation/*.xml"></include>
+	<include file="com/sts/struts/debug/*.xml"></include>
+	<include file="com/sts/struts/favor/*.xml"></include>
+	<include file="com/sts/struts/system/*.xml"></include>
+	<include file="com/sts/struts/smartbus/*.xml"></include>
+	<include file="com/sts/struts/download/*.xml"></include>
+	<include file="com/sts/struts/taxi/*.xml"></include>
+	<include file="com/sts/struts/parkingDB/*.xml"></include>
+	<!-- 短信 -->
+	<include file="com/sts/struts/message/*.xml"></include>
+	<include file="com/sts/struts/trafficinfo/*.xml"></include>
+	
+	
+</struts>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.sts.favor.model.LineFavor" table="st_line_favor">
+		<id name="id" column="favorID"></id>
+		<property name="lineID" column="lineID"></property>
+		<property name="userID" column="userID"></property>
+		<property name="direct" column="direct"></property>
+	</class>
+	
+	<class name="com.sts.favor.model.StationFavor" table="st_station_favor">
+		<id name="id" column="favorID"></id>
+		<property name="stationID" column="stationID"></property>
+		<property name="userID" column="userID"></property>
+		<property name="stationName" column="stationName"></property>
+		<property name="lantitude" column="lantitude"></property>
+		<property name="longtitude" column="longtitude"></property>
+	</class>
+	
+	<class name="com.sts.favor.model.TransferFavor" table="st_transfer_favor">
+		<id name="id" column="favorID"></id>
+		<property name="userID" column="userID"></property>
+		<property name="startLantitude" column="startLantitude"></property>
+		<property name="startLongtitude" column="startLongtitude"></property>
+		<property name="endLantitude" column="endLantitude"></property>
+		<property name="endLongtitude" column="endLongtitude"></property>
+		<property name="startName" column="startName"></property>
+		<property name="endName" column="endName"></property>
+	</class>
+	
+	
+	
+	
+	
+	
+	
+	
+	<class name="com.sts.favor.model.AppLineFavor" table="st_app_linefavor">
+		<id name="id" column="id"></id>
+		<property name="lineID" column="lineid"></property>
+		<property name="userID" column="userid"></property>
+		<property name="direct" column="direct"></property>
+		<property name="linename" column="linename"></property>
+		<property name="startname" column="startname"></property>
+		<property name="endname" column="endname"></property>
+	</class>
+	
+	<class name="com.sts.favor.model.AppStationFavor" table="st_app_stationfavor">
+		<id name="id" column="id"></id>
+		<property name="stationID" column="stationid"></property>
+		<property name="userID" column="userid"></property>
+		<property name="stationName" column="stationname"></property>
+		<property name="lines" column="stationlines"></property>
+	</class>
+	
+	<class name="com.sts.favor.model.AppTransferFavor" table="st_app_transferfavor">
+		<id name="id" column="id"></id>
+		<property name="userID" column="userid"></property>
+		<property name="startLantitude" column="startlan"></property>
+		<property name="startLongtitude" column="startlon"></property>
+		<property name="endLantitude" column="endlan"></property>
+		<property name="endLongtitude" column="endlon"></property>
+		<property name="startName" column="startname"></property>
+		<property name="endName" column="endname"></property>
+	</class>
+	
+	<class name="com.sts.favor.model.AppBikeStationFavor" table="st_app_bikestationfavor">
+		<id name="id" column="favorid"></id>
+		<property name="stationID" column="stationid"></property>
+		<property name="userID" column="userid"></property>
+		<property name="stationName" column="stationname"></property>
+		<property name="address" column="address"></property>
+	</class>
+	
+
+</hibernate-mapping>

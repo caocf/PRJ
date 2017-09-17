@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.air.model.AirCity" table="st_aircity">
+		<id name="id" column="cityID"></id>
+		<property name="name" column="cityName"></property>
+		<property name="englishName" column="cityEnglishName"></property>
+		<property name="abbreviation" column="cityAbbreviation"></property>
+
+	</class>
+</hibernate-mapping>

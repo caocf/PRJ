@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>公交查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<style>
+			.mui-icon-arrowthinright {
+				color: gray;
+			}
+			.mui-bar-nav.mui-bar .mui-icon{
+				padding-right: 10px;
+			}
+			table{
+				color: grey;
+			}
+			td{
+				width: 25%;
+			}
+			.frist{
+				padding: 10px;
+				text-align: center;
+				height: 63px;
+				background-color:#FFFFFF ;
+			}
+			.frist img{
+				margin-right: 30px;
+				margin-top: -10px;
+			}
+			.frist p{
+				font-size: 28px;
+				line-height: 28px;
+				color: #000000;
+				float: left;
+				width: auto;
+				margin-left: 30px;
+			}
+			.second{
+				padding-left: 10px;
+				background-color: white;
+				line-height: 50px;
+				/*display: none;*/
+			}
+			.second .bus{
+				width: 30px;
+			}
+			.second span{
+				margin-left: 10px;
+			}
+			.second .mui-pull-right{
+				width: 40px;
+				margin-top: 7px;
+			}
+			#onLoad{
+				text-align: center;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">公交查询</h1>
+		</header>
+		<div class="mui-content">
+			<div class="frist">
+				<p id="stationName"></p>
+				<!--<img src="../image/smart_bus_refresh_normal.png" class="mui-pull-right" id="reLoad"/>-->
+			</div>
+			<hr />
+			<div class="second" id="second">
+				<ul class="mui-table-view" id="table">
+					
+				</ul>
+			</div>
+			<div class="onLoad" id="onLoad">
+				数据加载中<span class="mui-spinner"></span>
+			</div>
+		</div>
+		<footer>
+		</footer>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js" ></script>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			var id;
+			var queryStationInfo = function(){
+				var queryDate = {stationID:id}
+				app.queryOriginBusStationByID(queryDate,function(data){
+					data = JSON.parse(data);
+					var table  = document.getElementById("table");
+					table.innerHTML = ""
+					var list = data.LineList
+					document.getElementById("stationName").innerText = data.Station.Name
+					for(var i = 0;i<list.length;i++){
+						/**
+						 * 
+						 * <li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<div class="mui-media-body">
+							幸福<span style="color: #8f8f94;font-size: 14px;">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</span>
+							<p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+						</div>
+					</a>
+				</li>
+						 * 
+						 */
+						var li = document.createElement("li");
+						li.classList.add("mui-table-view-cell");
+						li.classList.add("mui-media")
+						
+						var a = document.createElement("a");
+						
+						var div = document.createElement("div");
+						
+						var lineName = list[i].Name;
+						var start = list[i].StartStationName;
+						var end = list[i].EndStationName;
+						var busList = list[i].BusLocationList
+						var p = {stationName:data.Station.Name,lineName:list[i].Name,str:start+"-&gt"+end,time:list[i].Time}
+						li.ref = JSON.stringify(busList)
+						li.ref2 = JSON.stringify(p)
+						var str = ""
+						if(busList == null || busList.length == 0){
+							str = list[i].Time;
+							if(str.indexOf(":") > 0){
+								str += "发车"
+							}
+						}else{
+							var bus = busList[0]
+							str = "下趟公交车还有"+bus.Distance+"米到站"//+bus.CongestionDegree
+						}
+						div.innerHTML = lineName + "<span style='color: #8f8f94;font-size: 14px;'>"+start + "-&gt"+end+"</span><p class='mui-ellipsis'>"+str+"</p>";
+						
+						a.appendChild(div)
+						li.appendChild(a)
+						
+						li.addEventListener("tap",function(){
+							var ref = this.ref;
+							var ref2 = this.ref2;
+							localStorage.busList = ref;
+							localStorage.line = ref2;
+							mui.openWindow({
+								url:"eStation.html",
+								id:"eStation"
+							});
+						})
+						table.appendChild(li);
+					}
+				});
+				
+				document.getElementById("onLoad").style.display = "none"
+				document.getElementById("second").style.display = ""
+			}
+//			document.getElementById("reLoad").addEventListener("tap",function(){
+//				document.getElementById("second").style.display = "none"
+//				document.getElementById("onLoad").style.display = ""
+//				queryStationInfo()
+//			});
+			mui.ready(function() {
+				id = localStorage.stationId;
+				console.log(id);
+				queryStationInfo();
+			});
+		</script>
+	</body>
+
+</html>

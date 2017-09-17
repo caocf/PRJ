@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+
+	<bean id="newsForPhoneAction" class="com.sts.news.action.NewsForPhoneAction" scope="prototype">
+		<property name="newsForPhoneService" ref="newsForPhoneService"></property>
+	</bean>
+
+	<bean id="newsForPhoneService" class="com.sts.news.service.NewsForPhoneService" scope="prototype">
+		<property name="newsDao" ref="newsDao"/>
+	</bean>
+	
+	<bean id="newsDao" class="com.sts.news.dao.NewsDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplateOracle"/>
+	</bean>
+	
+	<bean id="newsForWebAction" class="com.sts.news.action.NewsForWebAction" scope="prototype">
+		<property name="newsForWebService" ref="newsForWebService"></property>
+	</bean>
+
+	<bean id="newsForWebService" class="com.sts.news.service.NewsForWebService" scope="prototype">
+		<property name="newsDao" ref="newsDao"/>
+	</bean>
+</beans>

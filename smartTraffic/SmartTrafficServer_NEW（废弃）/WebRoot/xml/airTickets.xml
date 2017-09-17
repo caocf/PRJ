@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<air>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<airNumber>MU517</airNumber>
+		<airKind>&#x4E1C;&#x65B9;&#x822A;&#x7A7A;</airKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<time>5:20</time>
+		<economy>10</economy>
+		<business>20</business>
+		<top>20</top>
+	</air>
+
+	<air>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<airNumber>MU517</airNumber>
+		<airKind>&#x4E1C;&#x65B9;&#x822A;&#x7A7A;</airKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<time>5:20</time>
+		<economy>10</economy>
+		<business>20</business>
+		<top>20</top>
+	</air>
+
+	<air>
+		<leaveTime>16:45</leaveTime>
+		<reachTime>18:45</reachTime>
+		<airNumber>MU517</airNumber>
+		<airKind>&#x4E1C;&#x65B9;&#x822A;&#x7A7A;</airKind>
+		<startCity>&#x5609;&#x5174;</startCity>
+		<endCity>&#x676D;&#x5DDE;</endCity>
+		<time>5:20</time>
+		<economy>10</economy>
+		<business>20</business>
+		<top>20</top>
+	</air>
+</list>

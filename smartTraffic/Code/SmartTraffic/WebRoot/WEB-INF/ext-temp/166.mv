@@ -1,0 +1,9 @@
+
+select gl_jsdj, b.mname,  sum(JS_ZLC) val from MDM_GL_ZLC_LN a, mcode_gl_jsdj b where a.gl_jsdj = b.mid
+#if($year !='')
+          and year = '$year'
+#end
+
+
+group by gl_jsdj, b.mname,  gl_jsdj order by gl_jsdj asc
+						

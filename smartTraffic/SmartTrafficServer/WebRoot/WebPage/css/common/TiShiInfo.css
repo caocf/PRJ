@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+
+.tishi_startcity {
+	position: absolute;
+	top: 307px;
+	z-index: 99;
+	width: 250px;
+	display: none;
+	margin-left: 16px;
+}
+
+.tishi_startcity a {
+	display: block;
+	border: solid 1px #ccc;
+	border-top: 0;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 0 0 35px;
+	padding: 0 0 0 15px;
+	background-color: #fff;
+}
+
+.tishi_startcity a:HOVER {
+	background: #bbb
+}
+
+.tishi_startcity .ahover {
+	display: block;
+	border: solid 1px #ccc;
+	border-top: 0;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 0 0 35px;
+	padding: 0 0 0 15px;
+	background: #bbb
+}
+
+.tishi_endcity {
+	position: absolute;
+	top: 307px;
+	z-index: 99;
+	width: 250px;
+	display: none;
+	margin-left: 343px;
+}
+
+.tishi_endcity a {
+	display: block;
+	border: solid 1px #ccc;
+	border-top: 0;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 0 0 35px;
+	padding: 0 0 0 15px;
+	background-color: #fff;
+}
+
+.tishi_endcity a:HOVER {
+	background: #bbb
+}
+
+.tishi_endcity .ahover {
+	display: block;
+	border: solid 1px #ccc;
+	border-top: 0;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 0 0 35px;
+	padding: 0 0 0 15px;
+	background: #bbb
+}

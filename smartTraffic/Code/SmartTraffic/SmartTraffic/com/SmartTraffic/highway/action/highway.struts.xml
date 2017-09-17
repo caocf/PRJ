@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+	<!-- 公路配置信息 -->
+	<package name="highway" extends="cement-interceptor"
+		namespace="/highway">
+		<!-- 获取实时拥挤度 -->
+		<action name="selectTransDataTimeCS" method="selectTransDataTimeCS"
+			class="com.SmartTraffic.highway.action.HighWayTrafficAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 获取实时拥挤度 -->
+		<action name="selectGczInfo" method="selectGczInfo"
+			class="com.SmartTraffic.highway.action.HighWayTrafficAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 获取国省道路线 -->
+		<action name="selectJdlx" method="selectJdlx"
+			class="com.SmartTraffic.highway.action.HighWayTrafficAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 获取路线的统计流量 -->
+		<action name="selectJdInfo" method="selectJdInfo"
+			class="com.SmartTraffic.highway.action.HighWayTrafficAction">
+			<result name="success" type="json"></result>
+		</action>
+		<!-- 获取路线的年统计流量 -->
+		<action name="selectDayData" method="selectDayData"
+			class="com.SmartTraffic.highway.action.HighWayTrafficAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectMonData" method="selectMonData"
+			class="com.SmartTraffic.highway.action.HighWayTrafficAction">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="selectYearData" method="selectYearData"
+			class="com.SmartTraffic.highway.action.HighWayTrafficAction">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+</struts>

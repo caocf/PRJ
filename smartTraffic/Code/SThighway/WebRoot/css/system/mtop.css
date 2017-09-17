@@ -1,0 +1,70 @@
+@CHARSET "utf-8";
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	height:auto;
+	width:100%;
+}
+.mtop_u1{
+	margin: 0;
+	padding: 0;
+	width:100%;
+	height:82px;
+	/* height:5%; */
+	overflow: hidden;
+	background:#006993;
+	color:white;
+	min-width: 1366px;
+}
+.mtop_no_select{
+	float:left;
+	width:128px;
+	height:32px;
+	line-height: 32px;
+	vertical-align: middle;
+	text-align:center;
+	color:#006993;
+	background: #6aafe0;
+}
+.mtop_select{
+	float:left;
+	width:128px;
+	height:32px;
+	line-height: 32px;
+	vertical-align: middle;
+	text-align:center;
+	color:#ffffff;
+	background: #f09801;
+}
+.top_u2{
+	margin-top: 14px ;
+	margin-left:30px;
+	padding: 0;
+	float:left;
+	cursor: pointer;
+}
+.top_text{
+	float:left;
+	font-family: 微软雅黑;
+	font-size: 16px;
+	margin-top:14px;
+	margin-left:10px;
+	font-weight: bold;
+}
+.top_link_image{
+	margin:15px 15px 0 0;
+	float:left;
+}
+.backmain{
+	height:30px;
+	width:80px;
+	line-height:30px;
+	vertical-align:middle;
+	text-align:center;
+	float:left;
+	cursor: pointer;
+	background: #cccccc;
+	color:black;
+}

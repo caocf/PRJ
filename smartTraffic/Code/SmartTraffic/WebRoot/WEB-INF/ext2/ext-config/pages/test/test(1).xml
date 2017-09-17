@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ext-config>
+<br/>
+<br/>
+<div style="margin:10px;">
+<text><![CDATA[
+
+<div id="abc" isopen="0">dttt</div>
+<script>
+
+alert(jQuery('#abc').attr('isopen'));
+
+</script>
+
+]]></text>
+
+	<textField id="a1" desc="情感词" size="82" value="悲伤" /> <br/><br/>
+
+	<textField type="textarea" id="a2" desc="描述" size="50" value=""/>  <br/><br/>
+	<button type="button" desc="保存" /> <button type="button" desc="取消" />
+</div>
+</ext-config>

@@ -1,0 +1,1 @@
+select  a1.year_id as YEAR, a1.year_name as YEAR_desc,sum(JS_ZLC) as JS_ZLC from MDM_GL_ZLC_LN a0,code_year a1 where 1=1 and a0.YEAR= a1.year_id group by a1.year_id,a1.year_name order by  a1.year_id desc

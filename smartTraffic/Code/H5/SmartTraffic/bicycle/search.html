@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>公共自行车查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app.css" />
+		<link rel="stylesheet" href="../css/gaode.css" />
+		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+		<!--<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+		<script src="http://webapi.amap.com/maps?v=1.3&key=3a1316dfb76f09e882251604b588fdb7"></script>
+		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>-->
+		<script type="text/javascript" src="http://app.zjzwfw.gov.cn/open/jssdk/writejs/index.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="http://app.zjzwfw.gov.cn/open/jssdk/js/index.js"></script>
+		<script data-main="http://app.zjzwfw.gov.cn/open/jssdk/jmportal_SDK.js" src=" http://app.zjzwfw.gov.cn/open/jssdk/require.js"></script>
+		<script type="text/javascript" src="http://app.zjzwfw.gov.cn/open/jssdk/js/function.js"></script>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+
+		<head></head>
+		<div class="mui-content">
+			<div style="padding: 10px;">
+				<div class="mui-input-row mui-search">
+					<input type="search" id="searchLine" class="mui-input-clear" placeholder="公共自行车查询">
+				</div>
+				<button class="app-main-button" id="searchBtn">搜索</button>
+				<!--<button class="app-main-button" id="mapButton" style="width: 5%"></button>-->
+			</div>
+			<div style="padding: 10px;display: none;" id="nearby">
+				<div class="title">
+					附近站点
+				</div>
+				<ul class="mui-table-view" id="nearbyT">
+
+				</ul>
+			</div>
+			<div style="padding: 10px;display: none;" id="prompt">
+				<div class="title">
+					提示
+				</div>
+				<ul class="mui-table-view" id="promptT">
+
+				</ul>
+			</div>
+		</div>
+		<footer></footer>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript">
+			mui.init();
+
+			var ndiv = document.getElementById("nearby");
+			var ntable = document.getElementById("nearbyT");
+			var pdiv = document.getElementById("prompt");
+			var ptable = document.getElementById("promptT");
+			var getCount = function(countList, stationId) {
+				for(var i = 0; i < countList.length; i++) {
+					if(countList[i].Stationid == stationId) {
+						return parseInt(countList[i].Count);
+					}
+				}
+			}
+			var formartData = function(data, table, list) {
+				var countList = JSON.parse(data);
+				table.innerHTML = "";
+				for(var i = 0; i < list.length; i++) {
+					var li = document.createElement("li");
+					li.classList.add("mui-table-view-cell");
+					li.classList.add("mui-media");
+
+					var a = document.createElement("a")
+
+					var img = document.createElement("img");
+					img.classList.add("mui-media-object");
+					img.classList.add("mui-pull-right");
+					img.src = "../image/smart_bus_gothere.png";
+					img.res = JSON.stringify(list[i]);
+					img.addEventListener("tap", function() {
+						if(localStorage.bicysleStart != null && localStorage.bicysleStart != "") {
+							var ss = JSON.parse(localStorage.bicysleStart);
+							if(ss.longtitude != null || ss.longtitude > 0) {
+								localStorage.bicysleEnd = this.res;
+								mui.openWindow("go.html", "go");
+							} else {
+								mui.alert("定位不可用，不能导航")
+							}
+						} else {
+							mui.alert("定位不可用，不能导航")
+						}
+					});
+
+					var span = document.createElement("span");
+					var count = getCount(countList.List, list[i].Id);
+					span.innerHTML = "可借数量<span style='color:red'>" + count + "</span>&nbsp;可还数量<span style='color:red'>" + (list[i].Count - count) + "</span>";
+
+					var div = document.createElement("div");
+					div.innerHTML = list[i].Name + "<p class='mui-ellipsis'>" + list[i].Address + "</p>"
+
+					a.appendChild(img);
+					a.appendChild(div);
+					a.appendChild(span);
+					li.appendChild(a);
+					table.appendChild(li);
+				}
+
+				/*
+				 * <li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-right" src="../images/yuantiao.jpg">
+							<div class="mui-media-body">
+								远眺
+								<p class='mui-ellipsis'>静静的看这个世界，最后终于疯了</p>
+							</div>
+						</a>
+					</li>
+				 */
+			}
+
+			function onLocation() {
+				getlocation({
+					success: function(data) {
+						if(typeof data === 'string' && data.constructor == String) {
+							console.log(data);
+						} else {
+							var cityName = data.cityName;
+							var region = data.region;
+							var detailAddress = data.detailAddress;
+							var longitude = data.longitude;
+							var latitude = data.latitude;
+							var qd = {
+								longtitude: longitude, //120.780069,//
+								lantitude: latitude, //30.743604,//
+								distance: 1000,
+								count: 10
+							}
+							var queryDate = {
+								action: "QueryOriginNearByBikeStation",
+								param: JSON.stringify(qd)
+
+							}
+							localStorage.bicysleStart = JSON.stringify(qd);
+							request({
+								url: 'http://120.55.193.1:8080/SmartTrafficConvert/convert',
+								data: queryDate,
+								header: '',
+								success: function(data) {
+									if(data == null || data == "") {
+										//							mui.alert("没有找到相关站点");
+										return;
+									}
+									localStorage.bicycleStationList = data;
+									ndiv.style.display = "";
+									pdiv.style.display = "none";
+									var dataList = JSON.parse(data);
+									var list = dataList.StationList;
+									if(list.length == 0) {
+										//							mui.alert("没有找到相关站点");
+										return;
+									}
+									var bikeList = "";
+									for(var i = 0; i < list.length; i++) {
+										bikeList += list[i].Id;
+										if(i < list.length - 1) {
+											bikeList += ","
+										}
+									}
+									var qd = {
+										bikeList: bikeList
+									};
+									ntable.innerHTML = "";
+									var qqq = {
+										action: "QueryOriginBikeParkingCount",
+										param: JSON.stringify(qd)
+									}
+									request({
+										url: 'http://120.55.193.1:8080/SmartTrafficConvert/convert',
+										data: qqq,
+										header: '',
+										success: function(data) {
+											formartData(data, ntable, list);
+										},
+										fail: function(data) {
+											alert(data);
+										}
+									});
+
+								},
+								fail: function(data) {
+									alert(data);
+								}
+							});
+							//							app.queryOriginNearByBikeStation(queryDate, function(data) {
+							//								alert(data[0].Id);
+							//								
+							//								app.queryOriginBikeParkingCount(qd, function(data) {
+							//									formartData(data, ntable, list);
+							//								});
+							//							});
+						}
+					},
+					fail: function(data) {
+						console.log(data);
+					}
+				});
+			};
+
+			mui.ready(function() {
+				onLocation();
+			})
+
+			document.getElementById("searchBtn").addEventListener("tap", function() {
+				var v = document.getElementById("searchLine").value;
+				var ss = {
+					stationName: encodeURI(v)
+				}
+				request({
+					url: 'http://zhcx.jxjtj.gov.cn/SmartTraffic/QueryOriginBikeStation',
+					data: ss,
+					header: '',
+					success: function(data) {
+						if(data == null || data == "") {
+							mui.alert("没有找到相关站点");
+							return;
+						}
+						localStorage.bicycleStationList = data;
+						pdiv.style.display = "";
+						ndiv.style.display = "none";
+						var dataList = JSON.parse(data);
+						var list = dataList.StationList;
+						console.log(list)
+						if(list.length == 0) {
+							mui.alert("没有找到相关站点");
+							return;
+						}
+						var bikeList = "";
+						for(var i = 0; i < list.length; i++) {
+							bikeList += list[i].Id;
+							if(i < list.length - 1) {
+								bikeList += ","
+							}
+						}
+						var qd = {
+							bikeList: bikeList
+						};
+						ptable.innerHTML = "";
+						var qqq = {
+							action: "QueryOriginBikeParkingCount",
+							param: JSON.stringify(qd)
+						}
+						request({
+							url: 'http://120.55.193.1:8080/SmartTrafficConvert/convert',
+							data: qqq,
+							header: '',
+							success: function(data) {
+								formartData(data, ptable, list);
+							},
+							fail: function(data) {
+								alert(data);
+							}
+						});
+
+					},
+					fail: function(data) {
+						alert(data);
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

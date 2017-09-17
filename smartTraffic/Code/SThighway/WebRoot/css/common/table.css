@@ -1,0 +1,305 @@
+@CHARSET "UTF-8";
+
+/*table列表*/
+.listTable {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: left; 
+}
+
+.listTable  th {
+	font-size: 14px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	padding: 0 0 0 10px;
+	background-color: #ffffff;
+	border-bottom:solid 1px #dcdcdc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: black;
+	text-align: left;
+}
+
+
+.listTable td {
+	padding: 0 0 0 10px;
+	height: 45px;
+	line-height: 45px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #dcdcdc;
+	background-color: #ffffff;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}
+.td_input1{
+	height: 34px;
+	width: 270px;
+	outline: none;
+	border: solid 1px #d8d8d8;
+	padding-left: 5px;
+	line-height:34px;
+	vertical-align: middle;
+}
+.td_input{
+	height: 34px;
+	width: 70%;
+	outline: none;
+	border: solid 1px #d8d8d8;
+	padding-left: 5px;
+	line-height:34px;
+	vertical-align: middle;
+}
+.mark_input{
+	height: 34px;
+	width: 200px;
+	outline: none;
+	border: solid 1px #d8d8d8;
+	padding-left: 5px;
+	line-height:34px;
+	vertical-align: middle;
+}
+.pop_up_middle{
+	width:100%;
+	background: white;
+	display: inline-block;
+}
+.outer_table{
+	margin:20px;
+}
+.pop_up_middle_table{
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.pop_up_middle_table td {
+	height: 55px;
+	vertical-align: middle;
+	overflow: hidden;
+ 	/* white-space: nowrap;
+ 	text-overflow: ellipsis; */
+ 	word-wrap : break-word ;
+}
+.see_pop_up_middle_table{
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	border-top:solid 1px #e7f0f8;
+	width:100%;
+}
+
+.see_pop_up_middle_table td {
+	height: 50px;
+	vertical-align: middle;
+	overflow: hidden;
+ 	word-wrap : break-word ;
+ 	border-bottom:solid 1px #e7f0f8;
+ 	border-right:solid 1px #e7f0f8;
+}
+.td_left1 {
+	text-align: right;
+	background: #f9f9f9;
+	border-left:solid 1px #e7f0f8;
+	width:140px;
+	font-weight: bold;
+}
+.td_left2 {
+	text-align: right;
+	background: #f9f9f9;
+	width:140px;
+	font-weight: bold;
+}
+.td_right{
+	text-align: left;
+	/* padding-left:10px; 
+	width:230px; */
+	/* *padding-left:0; */
+}
+.td_right label{
+	/* overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: ellipsis; */
+ 	word-wrap : break-word ;
+}
+/*地图泡泡*/
+.map_pop_tabel{
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+.map_pop_tabel td{
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: ellipsis;
+ 	word-wrap : break-word ;
+ 	border-bottom:solid 1px #e7f0f8;
+ 	border-right:solid 1px #e7f0f8;
+}
+.pop_td_left1{
+	text-align: right;
+	background: #f9f9f9;
+	border-left:solid 1px #e7f0f8;
+	width:120px;
+}
+.pop_td_right{
+	text-align: left;
+	width:120px;
+}
+.pop_td_left2{
+	text-align: right;
+	background: #f9f9f9;
+	width:120px;
+}
+/*详情表*/
+.personalTable {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: left;
+}
+.personalTable td {
+	padding: 0 0 0 10px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}
+.personal_input{
+	height:34px;
+	width:280px;
+	line-height: 34px;
+	vertical-align: middle;
+	padding-left:5px;
+	outline: none;
+	color: #6E6E6E;
+	border:solid 1px #cccccc;
+}
+/*公路站详情样式*/
+.stationDetailTable {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: left;
+}
+
+.stationDetailTable  th {
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	padding: 0 0 0 10px;
+	background-color: #F3FAF1;
+	border-bottom:solid 1px #dcdcdc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: black;
+}
+
+
+.stationDetailTable td {
+	padding: 0 0 0 10px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #dcdcdc;
+	background-color: #ffffff;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}
+/*公路站员工表样式*/
+.member_table{
+	table-layout: fixed;
+	width: 500px;
+	float:left;
+	text-align: left;
+	margin-top:20px;
+}
+.member_table td {
+	padding: 0 0 0 10px;
+	height: 45px;
+	line-height: 45px;
+	vertical-align: middle;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333;
+}
+/*标志标线表格*/
+.markTable {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: left; 
+}
+
+.markTable  th {
+	font-size: 14px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	padding: 0 0 0 10px;
+	background-color: #ffffff;
+	border-bottom:solid 1px #dcdcdc;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: black;
+	text-align: left;
+}
+
+
+.markTable td {
+	padding: 0 0 0 10px;
+	height: 70px;
+	/* line-height: 70px; */
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #dcdcdc;
+	background-color: #ffffff;
+	overflow: hidden; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	color: #333
+}
+.hideTr{
+	display: none;
+}

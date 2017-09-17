@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="repair" extends="cement-interceptor" namespace="/">
+		<action name="GetCarRepairPoint" class="com.sts.repair.action.CarRepairAction"
+			method="GetCarRepairPoint">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetCarRepairByName" class="com.sts.repair.action.CarRepairAction"
+			method="GetCarRepairByName">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetCarRepair" class="com.sts.repair.action.CarRepairAction"
+			method="GetCarRepair">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="callHelp" class="com.sts.repair.action.CallHelpAction"
+			method="callHelp">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

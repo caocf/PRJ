@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.news.model.NewsForPhone" table="ZHJTADMIN.Z_ST_NEWS">
+		<id name="id" column="STID"></id>
+		<property name="type" column="STTYPE"></property>
+		<property name="subType" column="STSUBTYPE"></property>
+		<property name="title" column="STTITLE"></property>
+		<property name="content" column="STCONTENT"></property>
+		<property name="date" column="STDATE"></property>
+	</class>
+
+
+	<class name="com.sts.news.model.NewsDetailForPhone" table="ZHJTADMIN.Z_ST_NEWS">
+		<id name="id" column="STID"></id>
+		<property name="type" column="STTYPE"></property>
+		<property name="subType" column="STSUBTYPE"></property>
+		<property name="title" column="STTITLE"></property>
+		<property name="content" column="STCONTENT"></property>
+		<property name="date" column="STDATE"></property>
+
+		<property name="source" column="STSOURCE"></property>
+		<property name="clickNum" column="STCLICKNUM"></property>
+		<property name="author" column="STAUTHOR"></property>
+
+	</class>
+
+	<class name="com.sts.news.model.RoadInfo" table="ZHJTADMIN.Z_LK_LKXX">
+		<id name="title" column="LKBT"></id>
+		<property name="createTime" column="FBSJ"></property>
+		<property name="contetnt" column="LKNR"></property>
+		<property name="source" column="LY"></property>
+		<property name="click" column="DJL"></property>
+		<property name="startTime" column="YXSJKS"></property>
+		<property name="endTime" column="YJJCSJ"></property>
+	</class>
+	
+	<class name="com.sts.news.model.RoadWork" table="ZHJTADMIN.Z_LK_CSDLSGXX">
+		<id name="workRoadName" column="SGDL"></id>
+		<property name="workRoadStart" column="SGQD"></property>
+		<property name="workRoadEnd" column="SGZD"></property>
+		<property name="workRoadStartTime" column="SGQSSJ"></property>
+		<property name="workRoadEndTime" column="SGJSSJ"></property>
+		<property name="degree" column="SGYXCD"></property>
+	</class>
+	
+
+</hibernate-mapping>

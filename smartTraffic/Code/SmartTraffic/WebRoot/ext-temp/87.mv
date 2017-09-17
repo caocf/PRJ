@@ -1,0 +1,5 @@
+
+select xzqh, b.mname,  sum(ZS) val from MDM_QL_SLYM a, mcode_xzqh_dtl b where a.xzqh = b.mid
+group by XZQH, b.mname,  px order by px asc
+
+						

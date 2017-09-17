@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    
+    <!--                    登陆登出  （免过滤器拦截器配置）                                                     -->
+	<package name="login" extends="cement-interceptor" namespace="/login">
+	    <!--  登陆接口  -->
+		<action name="userlogin" method="userLogin"
+			class="com.highwaycenter.gljg.action.LoginAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+         <!--  退出系统接口  -->
+		<action name="userlogout" method="userLogout"
+			class="com.highwaycenter.gljg.action.LoginAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		  <!--  读版本号  -->
+		<action name="versionCode" method="selectVersionCode"
+			class="com.highwaycenter.gljg.action.LoginAction">
+			<result name="json" type="json"></result>
+		</action>
+
+		  <!--  解码  -->
+		<action name="rememberName" method="decodePassword"
+			class="com.highwaycenter.gljg.action.LoginAction">
+			<result name="json" type="json"></result>
+		</action>	
+		 <!--  下载字体  -->
+		<action name="frontdownload" method="frontExeDownload"
+			class="com.highwaycenter.gljg.action.LoginAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+	</package>  
+	
+
+</struts>      

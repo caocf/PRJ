@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="SmartTrafficServer1">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/struts"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/spring"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/hibernate"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Train"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Util"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/User"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Weather"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Air"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/TrafficValue"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Suggestion"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Complain"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/BreakRules"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/parking"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/common"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/DrivingSchool"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/CarRepair"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/News"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/CityBike"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/BusStation"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Debug"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Favor"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/System"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/SmartBus"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Taxi"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/download"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/SMS"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/ParkingFromDB"/>
+        <property name="context-root" value="/SmartTrafficServer"/>
+        <property name="java-output-path" value="/SmartTrafficServer1/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

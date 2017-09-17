@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="user" extends="cement-interceptor" namespace="/">
+		<action name="login" class="com.sts.user.action.UserAction"
+			method="login">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="reSendVerifyCode" class="com.sts.user.action.UserAction"
+			method="reSendVerifyCode">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="registerPhone" class="com.sts.user.action.UserAction"
+			method="registerPhone">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="registerPhoneVerify" class="com.sts.user.action.UserAction"
+			method="registerPhoneVerify">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SaveUserInfo" class="com.sts.user.action.UserAction"
+			method="SaveUserInfo">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="EditPassword" class="com.sts.user.action.UserAction"
+			method="EditPassword">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="forgetPassword" class="com.sts.user.action.UserAction"
+			method="forgetPassword">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="modifyVerifyCode" class="com.sts.user.action.UserAction"
+			method="modifyVerifyCode">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="PhoneIsRegisterForWeb" class="com.sts.user.action.UserAction"
+			method="PhoneIsRegisterForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetVerifyCodeForWeb" class="com.sts.user.action.UserAction"
+			method="GetVerifyCodeForWeb">
+			<result name="success" type="json">
+			    <param name="excludeProperties">code</param>
+			</result>
+			<result name="error"/>
+		</action>
+		
+		<action name="RegisterUserForWeb" class="com.sts.user.action.UserAction"
+			method="RegisterUserForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="UserExit" class="com.sts.user.action.UserAction"
+			method="UserExit">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetUserInfoForWeb" class="com.sts.user.action.UserAction"
+			method="GetUserInfoForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="ModifyUserInfoForWeb" class="com.sts.user.action.UserAction"
+			method="ModifyUserInfoForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="EditPasswordForWeb" class="com.sts.user.action.UserAction"
+			method="EditPasswordForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		
+		<action name="GetNameFromSession" class="com.sts.user.action.UserAction"
+			method="GetNameFromSession">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<!-- Web端忘记密码第一步 和重发忘记密码的验证码-->
+		<action name="forgetPasswordForWeb" class="com.sts.user.action.UserAction"
+			method="forgetPasswordForWeb">
+			<result name="success" type="json">
+			    <param name="excludeProperties">code</param>
+			</result>
+			<result name="error"/>
+		</action>
+		<!--  Web端忘记密码（第二步） 适用WEB-->
+		<action name="ChackViricodeForWeb" class="com.sts.user.action.UserAction"
+			method="ChackViricodeForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		<!--  Web端忘记密码（第三步） 适用WEB-->
+		<action name="ChangePasswordForWeb" class="com.sts.user.action.UserAction"
+			method="ChangePasswordForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="appPhoneIsExisted" class="com.sts.user.action.AppUserAction"
+			method="appPhoneIsExisted">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="appSendMessage" class="com.sts.user.action.AppUserAction"
+			method="appSendMessage">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="appAddUser" class="com.sts.user.action.AppUserAction"
+			method="appAddUser">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="appLogin" class="com.sts.user.action.AppUserAction"
+			method="appLogin">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="appEditPassword" class="com.sts.user.action.AppUserAction"
+			method="appEditPassword">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="appResetPass" class="com.sts.user.action.AppUserAction"
+			method="appResetPass">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="appEditUserInfo" class="com.sts.user.action.AppUserAction"
+			method="appEditUserInfo">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		
+	</package>
+</struts>    

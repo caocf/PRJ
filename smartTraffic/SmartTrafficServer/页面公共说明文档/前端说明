@@ -1,0 +1,9 @@
+1.部分页面地址：
+		驾培动态：WebPage/page/carTraining/dynamic.jsp
+                      交通违章查询页面:WebPage/page/illegal/illegal.jsp
+                      营运证违章查询：WebPage/page/illegal/illegal_OC.jsp
+                       之前版本的城市交通：http://115.231.73.253/jxtpi/public_index
+                     水路交通：WebPage/page/main/waterWay.jsp
+        
+ 2.行车诱导：
+         四维做的，图片放在WebPage\image\driving的独立文件夹中

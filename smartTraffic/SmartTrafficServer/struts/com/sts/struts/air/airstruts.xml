@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="air" extends="cement-interceptor" namespace="/">
+		<action name="GetAirSchedule" class="com.sts.air.action.AirScheduleAction"
+			method="GetAirSchedule">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetAirCity" class="com.sts.air.action.AirScheduleAction"
+			method="GetAirCity">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="UpdateCity" class="com.sts.air.action.AirScheduleAction"
+			method="UpdateCity">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetRealTimeAir" class="com.sts.air.action.AirScheduleAction"
+			method="GetRealTimeAir">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetAirByAirno" class="com.sts.air.action.AirScheduleAction"
+			method="GetAirByAirno">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetRealAirByAirno" class="com.sts.air.action.AirScheduleAction"
+			method="GetRealAirByAirno">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetStationDetailUrl" class="com.sts.air.action.AirScheduleAction"
+			method="GetStationDetailUrl">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetStationInfoByAirno" class="com.sts.air.action.AirScheduleAction"
+			method="GetStationInfoByAirno">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/task 
+	http://www.springframework.org/schema/task/spring-task-3.1.xsd 
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+   
+	<bean id="dataSourceOracle" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close" abstract="false">
+		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@(description=(address_list= (address=(host=172.20.44.4) (protocol=tcp)(port=1521))(address=(host=172.20.44.5)(protocol=tcp) (port=1521)) (load_balance=yes)(failover=yes))(connect_data=(service_name=orcl)))" />
+		<property name="user" value="ZhjtAdmin" />
+		<property name="password" value="Zhjt1234" />
+	</bean>
+
+	<bean id="sessionFactoryOracle"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceOracle" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.OracleDialect</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:com/sts/hibernate/trace</value>
+				<value>classpath:com/sts/hibernate/driving</value>
+				<value>classpath:com/sts/hibernate/repair</value>
+				<value>classpath:com/sts/hibernate/news</value>
+				<value>classpath:com/sts/hibernate/parking</value>
+				<value>classpath:com/sts/hibernate/smartbus</value>
+				<value>classpath:com/sts/hibernate/taxioracle</value>
+			</list>
+		</property>
+		
+	</bean>
+
+	<bean id="hibernateTemplateOracle" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryOracle" />
+		</property>
+	</bean>
+
+	
+ 		
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close" abstract="false">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/smarttraffic?useUnicode=true&amp;characterEncoding=utf8" />
+		<property name="user" value="root" />
+		<property name="password" value="123456" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
+		abstract="false">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			    <prop key="hibernate.show_sql">true</prop>
+			    <prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:com/sts/hibernate/air</value>
+				<value>classpath:com/sts/hibernate/complain</value>
+				<value>classpath:com/sts/hibernate/debug</value>
+				<value>classpath:com/sts/hibernate/favor</value>
+				<value>classpath:com/sts/hibernate/suggestion</value>
+				<value>classpath:com/sts/hibernate/user</value>	
+				<value>classpath:com/sts/hibernate/download</value>	
+				<value>classpath:com/sts/hibernate/callhelp</value>	
+				<value>classpath:com/sts/hibernate/taxi</value>	
+				<value>classpath:com/sts/hibernate/trafficinfo</value>	
+				<value>classpath:com/sts/hibernate/liveness</value>	
+				
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+		p:sessionFactory-ref="sessionFactory" />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+</beans>
+

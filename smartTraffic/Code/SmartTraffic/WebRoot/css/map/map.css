@@ -1,0 +1,96 @@
+@CHARSET "utf-8";
+.video_left{
+	margin:0;
+	padding:0;
+	float:left;
+	min-height:750px;
+	font-size: 14px;
+	background-color:white;
+	color:#333333;
+	width:280px;
+	height:100%;
+	border-right:solid 1px #dcdcdc;
+	/* position: absolute; */
+	z-index: 3;
+}
+/**搜索框**/
+.search{
+	margin-top:15px;
+	float:left;
+	width:204px;
+	height:36px;
+	margin-left:12px;
+	background: #3982de;
+	
+	/* 边框 */
+	 border:2px solid  #3982de;
+	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.35);
+	-moz-box-shadow: 1px 1px 5px rgba(0,0,0,.35);
+	 box-shadow: 1px 1px 5px rgba(0,0,0,.35);
+	/* 上左下左圆角 */
+	/* Gecko browsers */
+	-moz-border-radius: 4px;
+	/* Webkit browsers */
+	-webkit-border-radius: 4px;
+	/* W3C syntax */
+	border-radius: 4px;
+}
+.search_input{
+	float:left;
+	width:160px;
+	height:34px;	
+	border:0px;
+	font-family:'微软雅黑';
+}
+.serach_right{
+	display: inline-block;
+	height:100%;
+	width:42px;
+	text-align:center;
+	line-height:36px;
+	color:white;
+	font-family:'微软雅黑';
+	cursor: pointer;
+}
+.image_size{
+	width:10px;
+	height:50px;
+	border:solid 1px #cccccc;
+	border-left:0;
+	top:350px;
+	left:280px;
+	cursor: pointer;
+	z-index: 5;
+	position: absolute;
+	background: white;
+}
+.video_right{
+	margin:0 0 0 280px;
+	float:left; 
+	height:100%;
+	min-height:760px;
+	/* margin:0 0 0 361px !important; */
+	/* margin:0 0 0 228px; */
+	/* width:100%;*/
+}
+.video_right_map{
+	height:100%;
+	width:100%;
+}
+.download-control {
+    width: 100%;
+    height: 100%;
+    background-color: #212b33;
+    border: 1px solid black;
+    position: relative;
+}
+.download-control span {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 0px;
+    text-align: center;
+    font-size: 16px !important;
+    color: white;
+}

@@ -1,0 +1,148 @@
+@CHARSET "utf-8";
+.department_left_select_child{
+	width:100%;	
+	background-color:#f6f6f6;
+	height:798px;
+	max-height: 798px;
+	overflow-y:auto;
+	overflow-x:auto;
+}
+.equipment{
+	width:100%;
+	height:auto;
+	float:left;
+}
+.second_Div{
+	float:left;
+	width:100%;
+}
+.three_Div{
+	float:left;
+}
+.equipment_name{
+	height:42px;
+	line-height:42px;
+	margin-left:5px;
+	float:left;
+}
+.img_div{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+}
+.img_div2{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+	margin-left:15px;
+}
+.img_div3{
+	height:42px;
+	width:30px;
+	float:left;
+	cursor: pointer;
+	margin-left:28px;
+}
+.second{
+	width:100%;
+	height:auto;
+}
+.three{
+	width:100%;
+	height:auto;
+	display: none;
+}
+.third{
+	width:100%;
+	height:auto;
+	display: none;
+}
+.regioncamera{
+	height:42px;
+	line-height: 42px;
+	cursor: pointer;
+	width:100%;
+	float:left;
+}
+.regioncamera:HOVER{
+	background: #006993;
+	color:white;
+}
+.regioncamera_select{
+	height:42px;
+	line-height: 42px;
+	cursor: pointer;
+	width:100%;
+	float:left;
+	color:white;
+	background: #006993;
+}
+.regioncamera_name{
+	margin-left:70px;
+	cursor: pointer;
+}
+.camera_label{
+	margin-left:50px;
+	cursor: pointer;
+}
+.department_arrow_style{
+	float:right;
+	margin-top:16px;
+}
+.camera_no_select_li{
+	height:35px;
+	float:left;
+	width:100%;
+	background-color:#f6f6f6;
+	line-height:35px;
+	vertical-align: middle;
+	margin-bottom:2px;
+	cursor: pointer;
+}
+.camera_select_li{
+	height:35px;
+	float:left;
+	width:100%;
+	background-color:#d3e2e8;
+	line-height:35px;
+	vertical-align: middle;
+	margin-bottom:2px;
+	cursor: pointer;
+	
+}
+.camera_no_select_li:HOVER{
+	background-color:#d3e2e8;
+}
+/*插件*/
+.plugin{
+	margin: 0;
+  	padding: 0;
+  	margin: 0 0 0 301px!important;
+  	margin: 0 0 0 300px;
+  	min-height: 798px;
+}
+fieldset{
+	display:block;
+}
+.stop_button{
+	height:50px;
+	width:100%;
+}
+.video_button_stop{
+	width:60px;
+	height:30px;
+	margin:10px 10px 0 10px;
+	cursor: pointer;
+	outline: none;
+	border:1px solid #EBEBE4;
+	background:#F0F0F0;
+	font-family:'微软雅黑';
+	color:#000000;
+}
+.video_button_stop:HOVER {
+	 background:#999999;
+	 border:1px solid #EBEBE4;
+	  outline: none;	
+}

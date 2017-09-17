@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="bike" extends="cement-interceptor" namespace="/">
+		<action name="GetBikes" class="com.sts.bike.action.BikeAction"
+			method="GetBikes">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchBikesByName" class="com.sts.bike.action.BikeAction"
+			method="SearchBikesByName">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchBikesByRegion" class="com.sts.bike.action.BikeAction"
+			method="SearchBikesByRegion">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+
+		<action name="GetRegion" class="com.sts.bike.action.BikeAction"
+			method="GetRegion">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.SmartTraffic.video.model.STCamera" table="z_st_camera"  >
+        <id name="cameraId" type="integer">
+            <column name="camera_id"/>
+            <generator class="assigned" />
+        </id>
+        <property name="deviceName" type="string">
+            <column name="device_name"  />
+        </property>
+         <property name="deviceId" type="integer">
+            <column name="device_id"  />
+        </property>
+         <property name="controlunitId" type="integer">
+            <column name="controlunit_id"  />
+        </property>
+        
+         <property name="regionId" type="integer">
+            <column name="region_id"  />
+        </property>
+         <property name="parentDeviceId" type="integer">
+            <column name="parentDevice_id"  />
+        </property>
+         <property name="categoryId" type="integer">
+            <column name="category_id"  />
+        </property>
+        
+           <property name="connectType" type="integer">
+            <column name="connect_type"  />
+        </property>
+         <property name="deviceType" type="integer">
+            <column name="device_type"  />
+        </property>
+         <property name="inport" type="string">
+            <column name="inport"  />
+        </property>
+         <property name="longitude" type="string">
+            <column name="longitude"  />
+        </property>
+         <property name="latitude" type="string">
+            <column name="latitude"  />
+        </property>
+        </class>
+</hibernate-mapping>

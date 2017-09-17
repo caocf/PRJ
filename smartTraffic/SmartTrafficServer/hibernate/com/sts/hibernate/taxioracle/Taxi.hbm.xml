@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.sts.taxi.model.Taxi" table="ZHJTADMIN.Z_CL_CZCJBXX">
+		<id name="cphm" column="cphm"></id>
+		<property name="dlyszh" column="dlyszh"></property>
+		<property name="xzqhdm" column="xzqhdm"></property>
+		<property name="xzqhmc" column="xzqhmc"></property>
+		<property name="ysxz" column="ysxz"></property>
+		<property name="ysxzmc" column="ysxzmc"></property>
+		<property name="hzzl" column="hzzl"></property>
+		<property name="hdzk" column="hdzk"></property>
+		<property name="jyfw" column="jyfw"></property>
+		<property name="cpys" column="cpys"></property>
+		<property name="cllx" column="cllx"></property>
+		<property name="cllxmc" column="cllxmc"></property>
+		<property name="rllx" column="rllx"></property>
+		<property name="cc" column="cc"></property>
+		<property name="ck" column="ck"></property>
+		<property name="cg" column="cg"></property>
+		<property name="czs" column="czs"></property>
+		<property name="yxqz" column="yxqz"></property>
+		<property name="yxqq" column="yxqq"></property>
+		<property name="cplx" column="cplx"></property>
+		<property name="cplxmc" column="cplxmc"></property>
+		<property name="jsdj" column="jsdj"></property>
+		<property name="qyrq" column="qyrq"></property>
+		<property name="cjrq" column="cjrq"></property>
+		<property name="nsyxjz" column="nsyxjz"></property>
+		<property name="fzrq" column="fzrq"></property>
+		<property name="cp" column="cp"></property>
+		<property name="bz" column="bz"></property>
+		<property name="nsyxrq" column="nsyxrq"></property>
+		<property name="djrq" column="djrq"></property>
+		<property name="gxrq" column="gxrq"></property>
+		<property name="yhid" column="yhid"></property>
+		<property name="yhmc" column="yhmc"></property>
+		<property name="jyxkzh" column="jyxkzh"></property>
+		<property name="jyqlx" column="jyqlx"></property>
+		<property name="jyqyxqq" column="jyqyxqq"></property>
+		<property name="jyqyxqz" column="jyqyxqz"></property>
+		<property name="clzkdm" column="clzkdm"></property>
+		<property name="fdjpl" column="fdjpl"></property>
+		<property name="yjlx" column="yjlx"></property>
+		<property name="clrlfl" column="clrlfl"></property>
+		<property name="clpffl" column="clpffl"></property>
+
+	</class>
+	
+</hibernate-mapping>

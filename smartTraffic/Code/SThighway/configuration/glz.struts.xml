@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    
+    <!--                    公路站列表配置信息                                                    -->
+	<package name="glzxxlist" extends="cement-interceptor" namespace="/glzxxlist">
+	    <!--  公路站信息列表、详情: 公路站详情 -->
+		<action name="glzxxxq" method="selectGlzxxXq"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+	    <!--  公路站信息列表、详情: 公路站概况列表-->
+		<action name="glzgklist" method="selectGlzgkList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!-- 公路站信息列表、详情: 公路站名列表-->
+		<action name="glznamelist" method="selectGlznameList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!-- 管养路段列表、详情: 管养路段概况列表-->
+		<action name="gyldgklist" method="selectGyldList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!-- 管养路段列表、详情: 管养路段详情-->
+		<action name="gyldxq" method="selectGyldXq"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--公路站人员列表、详情: 单位人员概况列表-->
+		<action name="dwrylist" method="selectDwryList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		 <!--公路站人员列表、详情: 单位人员详情-->
+		<action name="dwryxq" method="selectDwryXq"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--桥梁列表、详情:  桥梁概况列表-->
+		<action name="glzqlgklist" method="selectGlzQlgkList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		
+		 <!--桥梁列表、详情:  桥梁详情-->
+		<action name="glzqlxq" method="selectGlzQlXq"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--涵洞列表、详情:  涵洞概况列表-->
+		<action name="glzhdgklist" method="selectGlzHdgkList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		
+		 <!--涵洞列表、详情: 涵洞详情-->
+		<action name="glzhdxq" method="selectGlzHdXq"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--月生产统计计划-->
+		<action name="yscqktjxxlist" method="selectDbYscqktjxxList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!--月生产统计计划 年份列表-->
+		<action name="workdatelist" method="selectWorkDateList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--公路巡查记录:公路巡查记录列表-->
+		<action name="glxclist" method="selectGlxcList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--公路巡查记录:公路巡查 年份列表-->
+		<action name="glxcdatelist" method="selectGlxcDateList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--公路巡查记录:记录详情-->
+		<action name="glxcxq" method="selectGlxcXq"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+	
+		 <!--桥梁经常性检查（包括明细）:桥梁名字列表-->
+		<action name="qlnamelist" method="selectQlNameList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		 <!--桥梁经常性检查（包括明细）:桥梁巡查记录列表-->
+		<action name="qlxclist" method="selectQlxcList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		 <!--桥梁巡查记录详情-->
+		<action name="qlxcxq" method="selectQlxcXq"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		
+		 <!--涵洞经常性检查（包括明细）:涵洞名字列表-->
+		<action name="hdnamelist" method="selectHdNameList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		 <!--涵洞经常性检查（包括明细）:涵洞巡查记录列表-->
+		<action name="hdxclist" method="selectHdxcList"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		
+		 <!--涵洞经常性检查（包括明细）桥梁巡查记录详情-->
+		<action name="hdxcxq" method="selectHdxcXq"
+			class="com.highwaycenter.glz.action.GlzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+
+		
+	</package>
+	
+</struts>

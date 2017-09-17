@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<DrivingSchool>
+		<name>国宏驾校</name>
+		<address>嘉兴市xxxxxx</address>
+		<distance>100.6</distance>
+		<level>3</level>
+		<phone>0573-82000000</phone>
+	</DrivingSchool>
+
+	<DrivingSchool>
+		<name>国宏驾校</name>
+		<address>嘉兴市xxxxxx</address>
+		<distance>100.6</distance>
+		<level>3</level>
+		<phone>0573-82000000</phone>
+	</DrivingSchool>
+</list>

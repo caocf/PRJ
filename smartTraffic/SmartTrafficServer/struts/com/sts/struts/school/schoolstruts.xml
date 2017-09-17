@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="school" extends="cement-interceptor" namespace="/">
+		<action name="GetDrivingSchool" class="com.sts.school.action.DrivingSchoolAction"
+			method="GetDrivingSchool">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetDrivingSchoolByName" class="com.sts.school.action.DrivingSchoolAction"
+			method="GetDrivingSchoolByName">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchDrivingListNews" class="com.sts.school.action.DrivingSchoolAction"
+			method="SearchDrivingListNews">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchDrivingDetailNews" class="com.sts.school.action.DrivingSchoolAction"
+			method="SearchDrivingDetailNews">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetRegionForSchool" class="com.sts.school.action.DrivingSchoolAction"
+			method="GetRegionForSchool">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

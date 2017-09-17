@@ -1,0 +1,6 @@
+{"versionList":[{"versionID":"31","versionDownUrl":"/version/31/31.json"},
+{"versionID":"30","versionDownUrl":"/version/30/30.json"},
+{"versionID":"29","versionDownUrl":"/version/29/29.json"},
+{"versionID":"28","versionDownUrl":"http://115.231.73.254/SmartTraffic/version/28/28.json"},
+{"versionID":"27","versionDownUrl":"http://115.231.73.254/SmartTraffic/version/27/27.json"},
+{"versionID":"26","versionDownUrl":"http://115.231.73.254/SmartTraffic/version/26/26.json"},{"versionID":"24","versionDownUrl":"http://115.231.73.254/SmartTraffic/version/24/24.json"}]}

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.jd.model.HJdJxdczxx" table="h_jd_jxdczxx"  >
+        <id name="dczbh" type="java.lang.String">
+            <column name="dczbh"/>
+            <generator class="assigned" />
+        </id>
+        <property name="dczmc" type="java.lang.String">
+            <column name="dczmc" >
+            </column>
+        </property>
+        <property name="nf" type="java.lang.Integer">
+            <column name="nf" >
+            </column>
+        </property>
+        <property name="gljg" type="java.lang.String">
+            <column name="gljg" >
+            </column>
+        </property>
+        <many-to-one name="xzqh" class="com.highwaycenter.lxjbxx.model.HJcXzqh" fetch="select" lazy="false">
+            <column name="xzqhdm" >  
+            </column>
+        </many-to-one>
+         <property name="lx" type="java.lang.String">
+            <column name="lx" >
+            </column>
+        </property>
+        <many-to-one name="dczlx" class="com.highwaycenter.jd.model.HJdDczlx" fetch="select" lazy="false">
+            <column name="dczlxbh" >  
+            </column>
+        </many-to-one>
+        <property name="jzsj" type="java.util.Date">
+            <column name="jzsj" >
+            </column>
+        </property>
+         <many-to-one name="dcff" class="com.highwaycenter.jd.model.HJdDcff" fetch="select" lazy="false">
+            <column name="dcffbh" >  
+            </column>
+        </many-to-one>
+        <property name="tcyf" type="java.lang.String">
+            <column name="tcyf" >
+            </column>
+        </property>
+        <property name="zh" type="java.lang.Float">
+            <column name="zh" >
+            </column>
+        </property>
+         <property name="qdzh" type="java.lang.Float">
+            <column name="qdzh" >
+            </column>
+        </property>
+        <property name="zdzh" type="java.lang.Float">
+            <column name="zdzh" >
+            </column>
+        </property>
+        <property name="qdmc" type="java.lang.String">
+            <column name="qdmc" >
+            </column>
+        </property>
+        <property name="zdmc" type="java.lang.String">
+            <column name="zdmc" >
+            </column>
+        </property>
+        <property name="sxmc" type="java.lang.String">
+            <column name="sxmc" >
+            </column>
+        </property>
+        <property name="xxmc" type="java.lang.String">
+            <column name="xxmc" >
+            </column>
+        </property>
+        <property name="dblc" type="java.lang.Float">
+            <column name="dblc" >
+            </column>
+        </property>
+        <many-to-one name="jsdj" class="com.highwaycenter.jd.model.HJdJsdj" fetch="select" lazy="false">
+            <column name="jsdjbh" >  
+            </column>
+        </many-to-one>
+        <property name="jsdjwy" type="java.lang.String">
+            <column name="jsdjwy" >
+            </column>
+        </property>
+        <property name="yjlc" type="java.lang.Float">
+            <column name="yjlc" >
+            </column>
+        </property>
+         <property name="ejlc" type="java.lang.Float">
+            <column name="ejlc" >
+            </column>
+        </property>
+         <property name="sjlc" type="java.lang.Float">
+            <column name="sjlc" >
+            </column>
+        </property>
+        <property name="sijlc" type="java.lang.Float">
+            <column name="sijlc" >
+            </column>
+        </property>
+        <property name="gslc" type="java.lang.Float">
+            <column name="gslc" >
+            </column>
+        </property>
+        <property name="dwlc" type="java.lang.Float">
+            <column name="dwlc" >
+            </column>
+        </property>
+        <many-to-one name="cdtz" class="com.highwaycenter.jd.model.HJdCdtz" fetch="select" lazy="false">
+            <column name="cdtzbh" >  
+            </column>
+        </many-to-one>
+        <many-to-one name="lmlx" class="com.highwaycenter.jd.model.HJdLmlx" fetch="select" lazy="false">
+            <column name="lmlxbh" >  
+            </column>
+        </many-to-one>
+        <property name="lmkd" type="java.lang.Float">
+            <column name="lmkd" >
+            </column>
+        </property>
+        <property name="sjss" type="java.lang.Integer">
+            <column name="sjss" >
+            </column>
+        </property>
+        <property name="dm" type="java.lang.String">
+            <column name="dm" >
+            </column>
+        </property>
+        <property name="syjtl" type="java.lang.Integer">
+            <column name="syjtl" >
+            </column>
+        </property>
+        <many-to-one name="gdfs" class="com.highwaycenter.jd.model.HJdGdfs" fetch="select" lazy="false">
+            <column name="gdfsbh" >  
+            </column>
+        </many-to-one>
+        <many-to-one name="txfs" class="com.highwaycenter.jd.model.HJdTxfs" fetch="select" lazy="false">
+            <column name="txfsbh" >  
+            </column>
+        </many-to-one>
+        <many-to-one name="glgn" class="com.highwaycenter.jd.model.HJdGlgn" fetch="select" lazy="false">
+            <column name="glgnbh" >  
+            </column>
+        </many-to-one>
+        <property name="dcrysl" type="java.lang.Integer">
+            <column name="dcrysl" >
+            </column>
+        </property>
+        <property name="bz" type="java.lang.String">
+            <column name="bz" >
+            </column>
+        </property>
+        <property name="dczzt" type="java.lang.String">
+            <column name="dczzt" >
+            </column>
+        </property>
+        <property name="bzqdzh" type="java.lang.Float">
+            <column name="bzqdzh" >
+            </column>
+        </property>
+        <property name="bzzdzh" type="java.lang.Float">
+            <column name="bzzdzh" >
+            </column>
+        </property>
+        <property name="bzdblc" type="java.lang.Float">
+            <column name="bzdblc" >
+            </column>
+        </property>
+        </class>
+        </hibernate-mapping>

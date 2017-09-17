@@ -1,0 +1,197 @@
+﻿@CHARSET "UTF-8";
+html,body{
+	width:100%;
+	background:url("../../image/newmain/main_back.png") ;
+	text-align:center;
+    margin:0px;
+    background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	-moz-background-size:cover;
+	-webkit-background-size:cover; 	
+	font-family:'微软雅黑';
+    font-size:18px;
+    /* font-weight:normal; */
+    color:#ffffff; 
+    min-height:700px;
+   
+ /*    over-flow:auto; */
+}
+.mainall{
+	width:100%;
+	height:100%;
+	    zoom:1; 
+	   
+} 
+.mainstyle{  
+	display: inline-block;
+    width:900px;  
+     position:absolute ;  
+    text-align:center;
+     left:50%;
+     top:10%; 
+     margin-left:-443px;  
+/*      min-height:699px;
+    _height:699px;   */
+	
+}
+.logintop{	
+	display: inline-block;
+	text-align:center;
+	clear:both;
+    float:left;
+    width:100%;
+    word-wrap:normal;
+    margin-bottom:30px;
+    
+}
+
+.p1{
+	text-align:center;
+    margin-left:0px;
+    height:65px;
+    font-family:'黑体';
+    font-size:48px;
+    font-weight:bold;
+    color:#ffffff;  
+    width:100%;
+   /*  display:table;  */
+    vertical-align: middle;
+   }
+
+   .p1 label{
+    vertical-align:middle; 
+    display:table-cell;   
+    height:65px;
+    line-height:65px;
+   /*  margin-left:12px; */
+   }
+
+.maindiv{
+	display: inline-block;
+	width:100%;
+    margin:0px auto;  
+}
+.main_level1{
+	width:100%;
+	clear:both;
+	height:auto;
+	display: inline-block;
+	
+}
+.main_level1 img{
+	float:left;
+	cursor: pointer;
+	display: inline-block;
+	margin-top:84px;
+}
+
+.main_level2{
+	width:100%;
+	clear:both;
+	height:auto;
+	display: inline-block;
+	margin-top:17px;
+}
+.main_level2 img{
+	float:left;
+	cursor: pointer;
+	display: inline-block;
+}
+
+
+.footer{
+
+    display: inline-block;
+	clear:both;
+	text-align:center;
+    font-size:12px;
+    width:100%;
+    *padding-top:625px;
+    /*  padding-top:625px\0; */
+   /*  margin-top:843px;  */
+    color:#cccccc; 
+   /*  margin-top:90px; */
+ }
+
+.versiondiv 
+{
+	height:75px;
+	/* opacity: 0.2; */
+    filter: alpha(opacity=20); 
+    filter:Alpha(opacity=20);
+	background: #000000;
+	 background:rgba(0,0,0,0.2);  
+     
+     color:#cccccc; 
+      background:rgba(0.2); 
+       position:static; IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 
+     *zoom:1; 激活IE6、7的haslayout属性，让它读懂Alpha 
+}
+.versiondiv div{
+    color:#cccccc; 
+    font-size:14px; 
+    position:relative;
+}
+
+/** 覆盖层 **/
+#popBack{
+	/* background:url("../../image/newmain/pop_win.png") norepeat!important; */
+	background:url("../../image/newmain/pop_win.png")!important;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	-moz-background-size:cover;
+	-webkit-background-size:cover; 	
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: 5;
+	 display:none;
+	/* filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5; */
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../image/newmain/pop_win.png',  sizingMethod='scale');
+}
+
+.popWin{  
+	display: inline-block;
+    width:640px;  
+    height:155px;
+    position:absolute ;  
+    text-align:center;
+     left:50%;
+     top:50%; 
+     margin-left:-305px;  
+	 margin-top:-70px; 
+	 display:none;
+	 z-index:99;
+}
+.popWin img{
+	float:left;
+	cursor: pointer;
+	display: inline-block;
+	backgrund-image:url(about:blank);
+	z-index:99;
+}
+.popWin1{  
+	display: inline-block;
+    width:640px;  
+    height:155px;
+    position:absolute ;  
+    text-align:center;
+     left:50%;
+     top:50%; 
+     margin-left:-305px;  
+	 margin-top:-70px; 
+	 display:none;
+	 z-index:99;
+}
+.popWin1 img{
+	float:left;
+	cursor: pointer;
+	display: inline-block;
+	backgrund-image:url(about:blank);
+	z-index:99;
+}

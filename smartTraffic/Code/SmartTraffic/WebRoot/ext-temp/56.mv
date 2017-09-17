@@ -1,0 +1,9 @@
+
+select xzqh, b.mname,  sum(ym) val from MDM_QL_SLYM a, mcode_xzqh_dtl b where a.xzqh = b.mid
+#if($year !='')
+          and year = '$year'
+#end
+
+group by XZQH, b.mname,  px order by px asc
+
+						

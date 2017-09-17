@@ -1,0 +1,249 @@
+@CHARSET "UTF-8";
+
+/*地图上公交的浮云*/
+.map_bus_div {
+	height: 360px;
+}
+
+.map_bus_div1 {
+	height: 32px;
+	border-bottom: solid 1px #c2d6f4;
+	line-height: 32px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.map_bus_title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.map_bus_link {
+	font-size: 16px;
+	color: #2647a1;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.map_bus_colloct {
+	float: right;
+	margin-right: 30px;
+	margin-top: 7px;
+	cursor: pointer;
+}
+
+.map_bus_div2 {
+	margin-left: 10px;
+	padding: 4px 0;
+	float: left;
+	width: 100%;
+}
+
+.map_bus_div2_noselect {
+	display: block;
+	float: left;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.map_bus_div2_select,.map_bus_div2_noselect:HOVER {
+	display: block;
+	background-color: #f44a60;
+	color: #fff;
+	float: left;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.map_bus_div3 {
+	padding: 10px;
+	height: 87px;
+	overflow: hidden;
+}
+
+.map_bus_div3_l1 {
+	width: 365px;
+	text-align: center;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	font-size: 18px;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.map_bus_div3_l1 img {
+	margin: 0 5px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+.map_bus_div3_l2 {
+	width: 300px;
+	text-align: center;
+	float: left;
+	height: 22px;
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+.map_bus_div3_l2 img {
+	margin: 0 5px;
+	line-height: 22px;
+	vertical-align: middle;
+}
+
+.poupcontent_busRouteName {
+	display: block;
+	width: 114px;
+	height: 62px;
+	background-color: #2647a1;
+	color: #fff;
+	font-size: 24px;
+	border-radius: 5px;
+	line-height: 62px;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+}
+
+.map_bus_div4 {
+	color: #666666;
+	margin: 5px 0 5px 10px;
+	float: left;
+}
+
+.map_bus_div5 {
+	display: none;
+}
+
+/*
+
+
+.map_bus_div5 img {
+	margin: 5px 0 0 5px;
+}
+*/
+.map_bus_div6 {
+	margin: 10px 5px;
+	width: 500px;
+	height: 185px;
+	overflow: hidden;
+}
+
+.map_bus_div6_right,.map_bus_div6_left {
+	float: left;
+	display: block;
+	width: 10px;
+	height: 100%;
+	padding: 70px 0;
+}
+
+.map_bus_div6_right:HOVER,.map_bus_div6_left:HOVER {
+	background-color: #b2cfff;
+}
+
+.map_bus_div6_content {
+	background: url('../../image/common/map_bus_div5_bg.png') repeat-x;
+	background-position: top;
+	float: left;
+	width: 480px;
+	height: 185px;
+	overflow: hidden;
+}
+
+.map_bus_div6 ul {
+	background: url('../../image/common/map_station_icon_line2.png')
+		repeat-x;
+	background-position: 0 25px;
+	height: 185px;
+	list-style: none;
+	white-space: normal;
+}
+
+.map_bus_div6 ul li {
+	float: left;
+	display: inline;
+	width: 12px;
+	height: auto;
+	font-size: 12px;
+	word-wrap: break-word;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.map_bus_div6 ul .busicon {
+	float: left;
+	display: inline;
+	width: 20px;
+	margin-top: 7px;
+}
+
+.map_bus_div6 ul .busicon img {
+	width: 20px;
+}
+
+.map_bus_div7 {
+	margin: 0 5px;
+	height: 70px;
+	overflow: hidden;
+	background-color: white;
+	border: solid 1px #c2d6f4;
+	width: 487px;
+}
+
+.map_bus_div7_span1 {
+	width: 33%;
+	height: 30px;
+	display: block;
+	float: left;
+	border-left: solid 1px #c2d6f4;
+	border-right: solid 1px #c2d6f4;
+	text-align: center;
+}
+
+.map_bus_div7_span {
+	width: 161px;
+	height: 30px;
+	display: block;
+	float: left;
+	border-right: solid 1px #c2d6f4;
+	border-bottom: solid 1px #c2d6f4;
+	text-align: center;
+}
+
+
+
+.map_bus_div7_span img,.map_bus_div7_span1 img {
+	margin: 5px;
+	vertical-align: middle;
+}
+
+.map_bus_div7_content1 {
+	margin: 5px 0;
+	float: left;
+}
+
+.map_bus_div7_content {
+	display: none;
+	margin: 5px 0;
+	float: left;
+}
+
+.map_bus_div7_button {
+	border: solid 1px #c2d6f4;
+	display: -webkit-inline-box;
+	width: 25px;
+	text-align: center;
+	padding: 5px;
+}

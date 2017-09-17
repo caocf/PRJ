@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="smartbusoracle" extends="cement-interceptor"
+		namespace="/">
+
+		<action name="queryStationByStationID" class="com.sts.smartbus.action.SmartBusOracleAction"
+			method="queryStationByStationID">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+
+		<action name="querySimilarStationByName" class="com.sts.smartbus.action.SmartBusOracleAction"
+			method="querySimilarStationByName">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+
+	</package>
+</struts>    

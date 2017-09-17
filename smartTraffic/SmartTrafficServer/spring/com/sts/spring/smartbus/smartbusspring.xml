@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+
+	<!-- 三网接口获取的数据 -->
+	<bean id="smartBusAction" class="com.sts.smartbus.action.SmartBusAction" scope="prototype">
+		<property name="smartBusService" ref="smartBusService"  />
+	</bean>
+
+	<bean id="smartBusService" class="com.sts.smartbus.service.SmartBusService" scope="prototype">
+	</bean>
+
+	<!-- 四维周边数据 -->
+	<bean id="circleSearchAction" class="com.sts.smartbus.action.CircleSearchAction" scope="prototype">
+		<property name="circleSearchService" ref="circleSearchService"  />
+	</bean>
+
+	<bean id="circleSearchService" class="com.sts.smartbus.service.CircleSearchService" scope="prototype">
+		<property name="circleDao" ref="circleDao"  />
+	</bean>
+	
+	<bean id="circleDao" class="com.sts.smartbus.dao.CircleDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplateOracle"  />
+	</bean>
+	
+	
+	<!-- 数据库线路轨迹数据 -->
+	<bean id="lineTraceAction" class="com.sts.smartbus.action.LineTraceAction" scope="prototype">
+		<property name="lineTraceService" ref="lineTraceService"  />
+	</bean>
+
+	<bean id="lineTraceService" class="com.sts.smartbus.service.LineTraceService" scope="prototype">
+		<property name="lineTraceDao" ref="lineTraceDao"  />
+	</bean>
+
+	<bean id="lineTraceDao" class="com.sts.smartbus.dao.LineTraceDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplateOracle"  />
+	</bean>
+	
+	<!-- 数据库的数据 -->
+	<bean id="smartBusOracleAction" class="com.sts.smartbus.action.SmartBusOracleAction" scope="prototype">
+		<property name="smartBusOracleService" ref="smartBusOracleService"  />
+	</bean>
+
+	<bean id="smartBusOracleService" class="com.sts.smartbus.service.SmartBusOracleService" scope="prototype">
+		<property name="smartBusOracleDao" ref="smartBusOracleDao"  />
+	</bean>
+
+	<bean id="smartBusOracleDao" class="com.sts.smartbus.dao.SmartBusOracleDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplateOracle"  />
+	</bean>
+	
+	
+</beans>

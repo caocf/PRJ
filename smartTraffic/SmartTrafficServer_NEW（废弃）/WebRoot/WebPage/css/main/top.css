@@ -1,0 +1,301 @@
+@CHARSET "UTF-8";
+
+#top_container {
+	margin: 0 auto;
+	padding: 0;
+}
+
+#top_layout1 {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 31px;
+	font-size: 12px;
+	background: url("../../image/main/top_background.png") repeat-x;
+}
+
+#top_layout1_content {
+	margin: 0 auto;
+	padding: 0;
+	width: 1000px;
+	height: 30px;
+}
+
+#top_layout1_content a {
+	margin: 0 2px;
+}
+
+#top_layout1_content img {
+	margin: 0 2px;
+	vertical-align: middle;
+}
+
+#top_layout1_left {
+	float: left;
+	margin: 0;
+	width: 350px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+#top_layout1_right_login,#top_layout1_right_nologin {
+	float: right;
+	text-align: right;
+	margin: 0;
+	width: 250px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	display: none;
+}
+
+.top_logionname {
+	color: #2746a2
+}
+
+#top_layout2 {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 70px;
+	background-color: #203b81;
+}
+
+#top_layout2_content {
+	margin: 0 auto;
+	padding: 0;
+	width: 1000px;
+	height: 70px;
+	background: url("../../image/main/top_right.png") no-repeat;
+	background-position: 600px;
+}
+
+#top_layout2_traffice_web {
+	position: relative;
+	cursor: pointer;
+	left: 410px;
+}
+
+/*一级菜单 */
+#top_layout3 {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 40px;
+	background: url("../../image/main/menu_background.png") repeat-x bottom;
+}
+
+#main_menu {
+	margin: 0 auto;
+	padding: 0;
+	width: 1000px;
+	height: 40px;
+	font-family: "微软雅黑";
+}
+
+#top_menu {
+	height: 40px;
+}
+
+#top_menu UL {
+	z-index: 100;
+	position: relative;
+	background-color: white;
+}
+
+#top_menu TABLE {
+	border-collapse: collapse
+}
+
+#top_menu LI {
+	float: left;
+	width: 125px;
+	font-size: 16px;
+}
+
+#top_menu LI LI {
+	float: none;
+	border: solid 1px #ccc;
+	border-bottom: none;
+}
+
+#top_menu LI A LI {
+	float: left
+}
+
+#top_menu LI A {
+	display: block;
+	line-height: 40px;
+	white-space: nowrap;
+	height: 40px;
+	text-decoration: none;
+	text-align: center;
+}
+
+#top_menu LI LI A {
+	float: none;
+	line-height: 40px;
+	height: 40px;
+	font-size: 16px;
+}
+
+#top_menu LI:hover {
+	z-index: 100;
+	position: relative;
+}
+
+#top_menu A:hover {
+	z-index: 100;
+	position: relative
+}
+
+#top_menu LI:hover>A {
+	background: url("../../image/main/menu_select_line.png") no-repeat;
+	background-position: bottom;
+	font-weight: bold;
+}
+
+#top_menu :hover UL {
+	z-index: 300;
+	left: 0px;
+	top: 40px
+}
+
+#top_menu A:hover UL {
+	left: -1px;
+	color: #5e79ec;
+}
+
+#top_menu UL {
+	left: -9999px;
+	position: absolute;
+	top: -9999px;
+	border-bottom: solid 1px #ccc;
+}
+
+#top_menu LI:hover LI:hover>UL {
+	left: 0px;
+	margin-left: 100%;
+	top: -1px
+}
+
+#top_menu LI:hover>UL UL {
+	left: -9999px;
+	widows: auto;
+	position: absolute;
+	top: -9999px
+}
+
+#top_menu LI:hover LI:hover>A {
+	background: none;
+	font-weight: normal;
+	color: #5e79ec;
+	font-size: 16px;
+}
+
+#top_menu LI A:hover UL LI A:hover {
+	
+}
+
+#top_menu A:hover A:hover UL {
+	left: 100%;
+	top: 0px
+}
+
+#top_menu A:hover A:hover A:hover UL {
+	left: 100%;
+	top: 0px
+}
+
+#top_menu A:hover A:hover A:hover A:hover UL {
+	left: 100%;
+	top: 0px
+}
+
+#top_menu A:hover A:hover A:hover A:hover A:hover UL {
+	left: 100%;
+	top: 0px
+}
+
+#top_menu A:hover UL UL {
+	left: -9999px;
+	position: absolute;
+	top: -9999px
+}
+
+#top_menu A:hover A:hover UL UL {
+	left: -9999px;
+	position: absolute;
+	top: -9999px
+}
+
+#top_menu A:hover A:hover A:hover UL UL {
+	left: -9999px;
+	position: absolute;
+	top: -9999px
+}
+
+#top_menu A:hover A:hover A:hover A:hover UL UL {
+	left: -9999px;
+	position: absolute;
+	top: -9999px
+}
+
+/* 浮动对话框*/
+#personDiv {
+	background-color: #fff;
+	height: 66px;
+	position: relative;
+	left: 100px;
+	top: 31px;
+	width: 78px;
+	z-index: 5;
+	border-radius: 0 0 5px 5px;
+	display: none;
+	cursor: pointer;
+	border: solid #dddddd;
+	border-width: 0 1px 1px 1px;
+	padding: 1px;
+	float: right;
+}
+
+#personDiv div {
+	width: 99%;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	color: #5c5c5c;
+	overflow: hidden;
+	position: relative;
+}
+
+#APKDIV {
+	background-color: #fff;
+	height: 66px;
+	position: relative;
+	left: 850px;
+	top: 31px;
+	width: 115px;
+	z-index: 5;
+	border-radius: 0 0 5px 5px;
+	display: none;
+	cursor: pointer;
+	border: solid #dddddd;
+	border-width: 0 1px 1px 1px;
+	padding: 1px;
+}
+
+#APKDIV div {
+	width: 99%;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	color: #5c5c5c;
+	overflow: hidden;
+	position: relative;
+	top: -26px;
+}

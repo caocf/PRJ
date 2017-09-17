@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statisticsinfo>
+    <module name="公路信息">
+     <group id="1">
+         <name>公路里程数分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022143401</url>
+     </group>
+     <group id="2">
+         <name>公路密度分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022140944</url>
+     </group>
+     <group id="3">
+         <name>桥梁数量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022140439</url>
+     </group>
+     <group id="4">
+         <name>交通量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151110100623</url>
+     </group>
+     </module>
+      <module name="水路信息">
+	   <group id="5">
+         <name>船舶分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151024140601</url>
+     </group> 
+      <group id="1">
+         <name>航道里程、密度分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151028160505</url>
+       </group>
+       <!--<group id="2">
+         <name>航道密度分析</name>
+         <url>/control/extView.servlet?mvid=usave.20150610141326</url>
+      </group> 
+        -->
+       <group id="3">
+         <name>码头数量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022103819</url>
+     </group>
+     <group id="4">
+         <name>泊位数量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151021145705</url>
+     </group>
+     <group id="6">
+         <name>货运量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022094921</url>
+     </group>
+      <group id="6">
+         <name>航运货运量流向</name>
+         <url>/control/extView.servlet?mvid=usave.20151103131353</url>
+     </group>
+     <group id="7">
+         <name>吞吐量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022100812</url>
+     </group>
+     </module>
+      <module name="运管信息" >
+     <group id="1">
+         <name>长途客运车辆数分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022111759</url>
+     </group>
+	  <group id="3">
+         <name>长途客运量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022130648</url>
+     </group>
+      <group id="1">
+         <name>营运性货车车辆数分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022130443</url>
+     </group>
+     <group id="2">
+         <name>货运量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151022124235</url>
+     </group>
+     <group id="4">
+         <name>公交车辆数分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151024110407</url>
+     </group>
+      <group id="5">
+         <name>公交客运量分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151023145550</url>
+     </group>
+     <group id="6">
+         <name>出租车车辆数分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151026094958</url>
+     </group>
+     <group id="6">
+         <name>危险品运输企业数</name>
+         <url>/control/extView.servlet?mvid=usave.20151104132932</url>
+     </group>
+     
+     </module>
+      <module name="投资信息">
+     <group id="1">
+         <name>公路投资额分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151029092029</url>
+     </group> 
+     <group id="2">
+         <name>水路投资额分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151029084259</url>
+     </group>
+     <group id="3">
+         <name>站场投资额分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151029093422</url>
+     </group>
+     <group id="4">
+         <name>信息化投资额分析</name>
+         <url>/control/extView.servlet?mvid=usave.20150706155622</url>
+     </group> 
+     </module>
+ <module name="综合信息">
+     <group id="1">
+         <name>道路运输企业分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151104104945</url>
+     </group>
+     <group id="2">
+         <name>物流企业分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151028084040</url>
+     </group>
+      <group id="3">
+         <name>水路运输企业分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151024100648</url>
+     </group>
+     <group id="5">
+         <name>交通工程施工企业分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151023154544</url>
+     </group>
+     <group id="6">
+         <name>交通工程设计企业分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151028101038</url>
+     </group>
+     <group id="4">
+         <name>交通工程监理企业分析</name>
+         <url>/control/extView.servlet?mvid=usave.20151023151747</url>
+     </group>
+     </module> 
+</statisticsinfo>

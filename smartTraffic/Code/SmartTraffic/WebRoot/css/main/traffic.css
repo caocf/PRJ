@@ -1,0 +1,527 @@
+﻿@CHARSET "UTF-8";
+/**left float **/
+/* 搜索框输入内容 */
+.travelcount{
+	width:280px;
+	*width:282px;
+	width:282px\0;
+	width:282px\9;
+	position:absolute;  /** 漂浮层**/  
+	top:80px;
+	left:50px;
+	background:white; 
+    border: 1px solid #3982de;		
+}
+.travelcount_title{
+	float:left;
+	height:31px;
+	font-size:17px;
+	font-family:'微软雅黑';
+	font-weight:bold;	
+	line-height:31px;
+	
+	border:0px;
+	width:280px;
+
+}
+.travelcount img{
+	float:right;
+	margin-right:7px;
+	margin-top:24px;
+	cursor: pointer;
+}
+
+.serach{
+	width:320px;
+	height:34px;
+	position: absolute; /** 漂浮层**/
+	top: 80px;
+	left: 50px;
+	background: #3982de;
+	
+	/* 边框 */
+	border:2px solid  #3982de;
+	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.35);
+	-moz-box-shadow: 1px 1px 5px rgba(0,0,0,.35);
+	box-shadow: 1px 1px 5px rgba(0,0,0,.35);
+	/* 上左下左圆角 */
+	/* Gecko browsers */
+	-moz-border-radius: 4px;
+	/* Webkit browsers */
+	-webkit-border-radius: 4px;
+	/* W3C syntax */
+	border-radius: 4px;
+}
+.search_input{
+	float:left;
+	width:250px;
+	height:100%;	
+	border:0px;
+	padding-left:10px;
+	font-family:'微软雅黑';
+	
+}
+.serach_right{
+	float:left;
+	margin-left:20px;
+	display: inline-block;
+	height:100%;
+	text-aligh:center;
+	line-height:34px;
+	color:white;
+	font-family:'微软雅黑';
+	cursor: pointer;
+}
+
+.runstate{
+	width:158px;
+	position:absolute;  /** 漂浮层**/  
+	top:80px;
+	left:50px;
+	background:white; 	
+}
+
+.runstate_line1_left{
+	text-align:center;
+	font-size: 26px;
+    color:#3982de;
+    vertical-align: bottom;
+     border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #c4c7cc;
+}
+.stateguid{
+	position:absolute;
+	width:273px;
+	height:34px;
+	right:250px;
+	top:80px;
+	border:1px solid #c4c7cc;
+	border-radius:4px;
+	text-aligh:center;
+	background:white; 
+	
+	-webkit-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+}
+.stateguid_yjd{
+	position:absolute;
+	width:98px;
+	height:150px;
+	right:80px;
+	top:80px;
+	border:1px solid #c4c7cc;
+	border-radius:4px;
+	text-aligh:center;
+	background:white; 
+    -webkit-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	 box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	 /* 下左下右圆角 */
+	/* Gecko browsers */
+	-moz-border-radius: 4px;
+
+	/* Webkit browsers */
+	-webkit-border-radius: 4px;
+
+	/* W3C syntax */
+	border-radius: 4px;
+	
+}
+
+.stateguid_right{
+	text-align:left;
+	display:inline-block;
+	width:60px;
+}
+.stateguid_left{
+	width:10px;
+	height:20px;
+	display:inline-block;
+	margin-left:20px;
+	margin-top:10px;
+	font-size:0px;
+}
+.stateguid span{
+	margin-left:34px;
+	float:left;
+	margin-left:13px;
+	line-height:34px;
+}
+.stateguid_yjd span{
+	position:absolute;
+	width:580px;
+	height:34px;
+	right:50px;
+	top:80px;
+	border:1px solid #c4c7cc;
+	border-radius:4px;
+	text-aligh:center;
+	background:white; 
+	
+	-webkit-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+}
+.stateguid_split{
+	float:left;
+	margin-left:13px;
+	background:#c4c7cc;
+	height:100%;
+	width:1px;
+}
+.colorshow{
+	width:7px;
+	height:19px;
+	margin-left:10px;
+}
+.normal_colorshow{
+	clear:both;
+	float:left;
+	background:#3982de;
+	width:19px;
+	height:7px;
+	margin-top:13px;
+	margin-left:6px;
+	
+}
+.leaveoff_colorshow{
+	float:left;
+	background:#C02FEC;
+	width:19px;
+	height:7px;
+	margin-top:13px;
+	margin-left:6px;
+	}
+.fault_colorshow{
+	float:left;
+	background:red;
+	width:19px;
+	height:7px;
+	margin-top:13px;
+	margin-left:6px;
+
+}
+
+.cartypeguid{
+	position:absolute;
+	/* width:94px; */
+	height:34px;
+	right:50px;
+	top:80px;
+	border:1px solid #c4c7cc;
+	border-radius:4px;
+	text-aligh:center;
+	background:white; 
+	
+	-webkit-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+}
+.cartypeguid_left{
+   float:left;
+   width:32px;
+   height:100%;
+   border-right:1px solid #c4c7cc;
+   text-align:center;   
+   cursor: pointer;
+}
+.cartypeguid_center{
+   float:left;
+   width:28px;
+   height:100%;
+   border-right:1px solid #c4c7cc;
+   text-align:center;  
+   cursor: pointer; 
+}
+.cartypeguid_right{
+   float:left;
+   width:28px;
+   height:100%;
+   text-align:center;
+   cursor: pointer;  
+
+}
+.cartypeguid img{
+  
+}
+.regionselect{
+	position:absolute;
+	width:80px;
+	height:36px;
+	right:50px;
+	top:80px;
+	border-radius:4px;
+	border:1px solid #c4c7cc;
+	background:white; 
+	padding-left:10px;
+	
+	-webkit-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+}
+
+.linkline{
+	position:absolute;
+	height:70px;
+	bottom:10px;
+	left:50%;
+	margin-left:-540px;
+	 width:1080px;
+	 z-index:900;
+	 -webkit-box-shadow: 0 0 20px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 20px rgba(12, 4, 7, .35);
+	box-shadow: 0 0 20px rgba(12, 4, 7, .35);
+	   -moz-border-radius: 20px; /* Firefox */
+	-webkit-border-radius: 20px; /* Safari Chrome */
+	border-radius: 20px; /* Opera 10.5+,  Internet Explorer 6+  IE-CSS3 */
+	behavior: url(ie-css3.htc);
+	
+}
+
+.linkline_img{
+	float:left;
+	cursor: pointer;
+	width:180px;
+	height:70px;
+	
+	/*非IE的主流浏览器识别的垂直居中的方法*/ 
+  /*   display: table-cell; 
+    vertical-align:middle; */ 
+/*设置水平居中*/ 
+/* text-align:center;  */
+
+/* 针对IE的Hack */ 
+/* *display: block; 
+*font-size: 79px;约为高度的0.873，200*0.873 约为175 
+*font-family:Arial;防止非utf-8引起的hack失效问题，如gbk编码  */
+   
+}
+.linkline_img img{
+	width:30px;
+	vertical-align:middle; 
+	margin-left:25px;
+	cursor: pointer;
+	/* margin-top:20px; */
+}
+.linkline_img label{
+	vertical-align:middle; 
+	clear:both;
+	height:70px; 
+	line-height:70px;
+	font-size:18px;
+	margin-left:15px;
+	color:white;
+	font-weight:bold;
+	cursor: pointer;
+	/* margin-left:-20px\9; */
+}
+.gcz_line{
+	vertical-align: middle;
+    width:100%;	
+    height:28px;
+    text-align:center;
+}
+.gcz_line_select{
+	vertical-align: middle;
+    width:100%;	
+    height:28px;
+    text-align:center;
+	background-color:#f6f6f6;
+}
+.gcz_line_select td{
+	text-align:center;
+}
+.gcz_line td{
+	text-align:center;
+}
+.gcz_line:HOVER{
+	background-color:#d3e2e8;
+	cursor:pointer;
+}
+/**车辆信息 **/
+.carinfodiv{
+	position:absolute;
+	width:300px;
+	height:230px;
+	top:30%;
+	left:40%;
+	border:1px solid #c4c7cc;
+	border-radius:4px;	
+	background:white; 	
+	-webkit-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	box-shadow: 0 0 5px rgba(12, 4, 7, .35);	
+}
+.carinfodiv_title{
+	float:left;
+	height:50px;
+	margin-left:20px;
+	text-align:left;
+	font-weight:bold;	
+	font-size:16px;
+	line-height:50px;
+}
+.gcd_title{
+	height:50px;
+	margin-left:20px;
+	text-align:left;
+	font-weight:bold;	
+	font-size:16px;
+	line-height:50px;
+}
+
+.carinfodiv_close{
+	float:right;
+	margin-right:20px;
+	height:50px;
+	color:#92B7EB;
+	font-size:10px;
+	line-height:50px;
+	cursor: pointer;
+}
+.carinfodiv_left{
+	clear:both;
+	float:left;
+	height:30px;
+	margin-left:20px;
+	font-size:14px;
+	line-height:30px;
+	text-align:left;
+	font-family:'微软雅黑';
+}
+.carinfodiv_right{
+	float:left;
+	height:30px;
+	font-size:14px;
+	line-height:30px;
+	text-align:left;
+	border:0px;
+	font-family:'微软雅黑';
+}
+
+.ic_rightdiv{
+    position:absolute;
+    top:320px;
+	left:1069px;
+}
+
+.traffic_map_back{
+	
+}
+
+/**菜单栏 **/
+.list{
+	/* float:left; */
+	position:absolute;
+	border:2px solid  #1F5AA7;
+	border-bottom:0px;
+	width:176px;
+	border:0\0;
+    width:180px\0;
+    width:180px\9;
+    *width:180px;
+	font-weight: normal;
+	text-align:center;
+	/* -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.35);
+	-moz-box-shadow: 1px 1px 5px rgba(0,0,0,.35);
+	box-shadow: 1px 1px 5px rgba(0,0,0,.35); */
+	/* 上左下左圆角 */
+	/* Gecko browsers */
+	-moz-border-radius: 4px 4px 0 0;
+	/* Webkit browsers */
+	-webkit-border-radius:  4px 4px 0 0;
+	/* W3C syntax */
+	border-radius:  4px 4px 0 0;
+	display:none; 
+	background:#1F5AA7;
+	color:white;
+	z-index:900;
+}
+.list_item{
+	border:0px;
+	border-top:1px solid #BFBFBF;
+	font-size:16px;
+	font-family:'微软雅黑';
+	font-weight:bold;
+	height:55px;
+	line-height:55px;
+	cursor:pointer;
+}
+
+/** **/
+.gcd_line{
+	height:30px;
+	margin-left:20px;
+	font-size:14px;
+	line-height:30px;
+	text-align:left;
+	font-family:'微软雅黑';
+}
+.gcd_table{
+	border:1px solid #ccc;
+	margin-left:20px;
+	font-size:14px;
+	font-family:'微软雅黑';
+	text-align:center;
+}
+.degreeguid{
+	position:absolute;
+	width:273px;
+	height:34px;
+	right:50px;
+	top:80px;
+	border:1px solid #c4c7cc;
+	border-radius:4px;
+	text-aligh:center;
+	background:white; 
+	
+	-webkit-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	-moz-box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+	box-shadow: 0 0 5px rgba(12, 4, 7, .35);
+}
+.degreeguid img{
+	float:left;
+	margin-left:10px;
+	margin-top:13px;
+}
+.degreeguid span{
+	float:left;
+	margin-left:10px;
+	line-height:34px;
+}
+.degreeguid div{
+	float:left;
+	margin-left:10px;
+	background:#c4c7cc;
+	height:100%;
+	wdith:1px;
+}
+.roadlistTb{
+	border:1px solid #ccc;
+	/* border-bottom:1px solid #ccc; */
+	margin:10px;
+	width:520px;
+}
+.roadlistTb tr{
+	
+}
+.roadlistTb td{
+border-left:1px solid #ccc;
+	border-top:1px solid #ccc;
+}
+.roadlistPop{
+	width:480px;
+	height:270px;
+    border:1px solid #ccc;
+    font-size:14px;
+    margin-left:3px;
+    font-weight:normal;
+}
+.roadlistPop td{
+ border-left:1px solid #ccc;
+ border-top:1px solid #ccc;
+ font-size:14px;
+ font-weight:normal;
+}

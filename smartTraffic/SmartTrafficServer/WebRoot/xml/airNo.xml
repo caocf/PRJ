@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<air>
+	<airNo>7998</airNo>
+	<planStart>9:00</planStart>
+	<planEnd>10:00</planEnd>
+	<realStart>9:00</realStart>
+	<realReach>10:10</realReach>
+	<time>10:00</time>
+	<startCity>&#x5317;&#x4EAC;</startCity>
+	<endCity>&#x4E0A;&#x6D77;</endCity>
+	<startAirPort>&#x666F;&#x6D2A;&#x673A;&#x573A;</startAirPort>
+	<ednAirPort>&#x8679;&#x6865;&#x673A;&#x573A;</ednAirPort>
+
+	<economyPirce>550</economyPirce>
+	<ecnomyLeft>20</ecnomyLeft>
+	
+	<businessPirce>550</businessPirce>
+	<businessLeft>20</businessLeft>
+
+	<TopPirce>550</TopPirce>
+	<TopLeft>20</TopLeft>
+</air>
+

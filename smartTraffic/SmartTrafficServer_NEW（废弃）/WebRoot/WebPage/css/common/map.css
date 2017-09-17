@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+
+/*地图层*/
+.simpleMap_notop {
+	float: right;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.simpleMap_top {
+	float: right;
+	position: relative;
+	top: 40px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+/*地图头部一条*/
+#simpleMap_top {
+	height: 44px;
+	line-height: 40px;
+	vertical-align: middle;
+	padding: 0 16px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url("../../image/graphical/map_top_bg.png") repeat-x;
+}
+
+.simpleMap_top_location {
+	float: left;
+	width: 150px;
+}
+
+.simpleMap_top_news {
+	float: left;
+	margin-top:5px;
+	color: #ff7a36;
+	width: 500px;
+	height: 30px;
+	overflow: hidden;
+}
+
+.simpleMap_top_item {
+	float: right;
+	width: 150px;
+	text-align: right;
+	height: 44px;
+	padding-top: 5px;
+}
+
+.simpleMap_top_map {
+	float: left;
+	width: 50px;
+	height: 26px;
+	line-height: 26px;
+	vertical-align: middle;
+	text-align: center;
+	display: block;
+	background-color: #2647a1;
+	border-radius: 3px 0 0 3px;
+	border: solid 1px #81a8dc;
+	color: #fff;
+	cursor: pointer;
+}
+
+.simpleMap_top_satellite {
+	float: left;
+	width: 50px;
+	height: 26px;
+	line-height: 26px;
+	vertical-align: middle;
+	text-align: center;
+	display: block;
+	border-radius: 0 3px 3px 0;
+	border-color: #81a8dc;
+	border-style: solid;
+	border-width: 1px 1px 1px 0;
+	color: #4c4c4c;
+	cursor: pointer;
+}
+
+/*全路网指数*/
+.sMap_network_div {
+	position: absolute;
+	top: 38px;
+	left: 72px;
+	border: solid #cbcccf;
+	border-width: 1px;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	height: 45px;
+	width: 128px;
+	color: #666666;
+	background-color: #fff;
+	border-top: none;
+}
+
+/*实时路况*/
+.sMap_road_div {
+	position: absolute;
+	top: 70px;
+	right: 15px;
+	padding: 0;
+	text-align: center;
+	border: 1px solid #ccccccc;
+	height: 58px;
+	width: 58px;
+	background-color: #fff;
+	border-radius: 3px;
+	color: #666666;
+}
+
+.Map_ttopp {
+	position: absolute;
+	top: 248px;
+	padding: 0;
+	border: solid #ededef;
+	border-width: 1px;
+	height: 36px;
+	line-height: 36px;
+	width: 1493px;
+	color: #666666;
+	background-color: #fff;
+	filter: alpha(opacity = 90);
+	-moz-opacity: 0.9;
+	-khtml-opacity: 0.9;
+	opacity: 0.9;
+}
+/*地图页面左侧*/
+.layout1_left_datalist_title {
+	height: 30px;
+	line-height: 30px;
+	width: 330px;
+	padding: 0 10px;
+	visibility: hidden;
+	vertical-align: middle;
+}
+
+.layout1_left_datalist_title SPAN {
+	vertical-align: middle;
+}
+
+.layout1_left_datalist_title LABEL {
+	vertical-align: top;
+}
+
+.layout1_left_datalist_title IMG {
+	margin-top: 5px;
+}
+
+
+.BusSelectStation{
+	color:#2746a2;
+	font-weight: bold;
+}
+
+.map_bus_div6 a:hover{
+	color:#2746a2;
+	font-weight: bold;
+}

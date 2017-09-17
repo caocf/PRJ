@@ -1,0 +1,1 @@
+select  a1.MID as QL_DX, a1.MNAME as QL_DX_desc, a2.MID as XZQH, a2.MNAME as XZQH_desc,sum(ZS) as ZS,sum(YM) as YM from MDM_QL_SLYM a0,MCODE_QL_DX a1,MCODE_XZQH_DTL a2 where 1=1 and a0.QL_DX= a1.MID and a0.XZQH= a2.MID group by a1.MID,a1.MNAME,a2.MID,a2.MNAME, a2.PX order by  a1.MID asc, a2.PX asc

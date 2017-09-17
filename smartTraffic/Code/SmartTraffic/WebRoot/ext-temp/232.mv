@@ -1,0 +1,5 @@
+
+select  year, sum(JS_ZLC_ZZ) val from MDM_GL_ZLC_LN a, code_year b where a.year = b.year_id
+group by year, b.year_name, year order by year asc
+
+						

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="system" extends="cement-interceptor" namespace="/">
+		<action name="GetAbout" class="com.sts.system.action.SystemAction"
+			method="GetAbout">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetHelp" class="com.sts.system.action.SystemAction"
+			method="GetHelp">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetAppNewestAppInfo" class="com.sts.system.action.SystemAction"
+			method="GetAppNewestAppInfo">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetAppList" class="com.sts.system.action.SystemAction"
+			method="GetAppList">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryStatement" class="com.sts.system.action.SystemAction"
+			method="QueryStatement">
+			<result name="success" type="json"><param name="root">statement</param></result>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

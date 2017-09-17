@@ -1,0 +1,396 @@
+@CHARSET "utf-8";
+.search_div{
+	float:left;
+	height:35px;
+	width:295px;
+	margin-right:15px;
+	margin-top:8px;
+}
+.search_input{
+	width:250px;
+	height:33px;
+	line-height: 33px;
+	vertical-align: middle;
+	outline: none;
+	border:solid 1px #dcdcdc;
+	border-right:0;
+	float:right;
+	color:#a3a3a3;
+	padding-left:5px;
+}
+.image_div{
+	float:right;
+	height:33px;
+	line-height:33px; 
+	width:20px;
+	border:solid 1px #dcdcdc;
+	border-left:0;
+	cursor: pointer;
+	background: white;
+}
+/*详情样式*/
+/* .personalTable {
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	width: 100%;
+	text-align: left;
+}
+.personalTable td {
+	padding: 0 0 0 10px;
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+	background:#ffffff;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: #cccccc;
+	overflow: hidden; 超出的部分隐藏起来
+	word-wrap : break-word ;
+	color: #333
+}
+.personal_input{
+	height:34px;
+	width:280px;
+	line-height: 34px;
+	vertical-align: middle;
+	padding-left:5px;
+	outline: none;
+	color: #6E6E6E;
+	border:solid 1px #cccccc;
+} */
+.bridge_map{
+	height:100%;
+	margin-left:5%;
+	margin-right:6%;
+	border:solid 1px #dcdcdc;
+	overflow: hidden;
+}
+.bridge_map_div{
+	height:100%;
+	background: white;
+}
+.map_text{
+	color:white;
+	margin-top:-30px;
+	height:30px;
+	line-height:30px;
+	vertical-align:middle;
+	width:100%;
+	background: #000000;
+	opacity: 0.5;
+	filter: alpha(opacity =   60);
+	-moz-opacity: 0.6;
+	-khtml-opacity: 0.6;
+}
+.title_info{
+	height:50px;
+	width:100%;
+	background: #f6f6f6;
+}
+.close_image{
+	float:right;
+	margin:16px 20px 0 0;
+	cursor: pointer;
+}
+.left_no_select:HOVER {
+	background: #d3e2e8;
+}
+/*公路站样式*/
+.roadstation_c1{
+	margin:0;
+	padding:0;
+	/* padding-left:230px; */
+	/* position: absolute; */
+	/* float:left; */
+	background-color: #f6f6f6;
+	min-height: 798px;
+}
+.roadstation_c4{
+	margin:0 0 0 201px!important;
+	margin:0 0 0 200px;
+}
+.station_title{
+	width:100%;
+	height:50px;
+	font-size: 16px;
+	font-weight: bold;
+	background: #f6f6f6;
+}
+.station_title_label{
+	heihgt:50px;
+	line-height: 50px;
+	float: left;
+	vertical-align: middle;
+	margin-left:20px;
+}
+.memberInfo{
+	height:750px;
+	max-height:750px;
+	width:800px;
+	right:0;
+	top:151px;
+	z-index: 99px;
+	background: white;
+	border-left:solid 1px #dcdcdc;
+	overflow-y:auto;
+	overflow-x:hidden;
+	float:right;
+	margin-left:-800px;
+	margin-top:-750px; 
+}
+.memberInfo_top{
+	height:40px;
+	width:100%;
+	border-bottom: solid 1px #dcdcdc;
+}
+.memberInfo_top_title{
+	height:40px;
+	line-height: 40px;
+	vertical-align: middle;
+	float: left;
+	margin-left: 20px;
+}
+.div_close_image{
+	float: right;
+	margin-right:20px;
+	margin-top: 11px;
+	cursor: pointer;
+}
+.year_select_div{
+	margin-right:30px;
+	float:right;
+	width:220px;
+	height:auto;
+	margin-top:9px;
+}
+.year_select{
+	height:30px;
+	border: solid 1px #dcdcdc;
+	border-radius:3px;	
+	width:100%;
+	cursor: pointer;
+}
+.year_select_time{
+	float:left;
+	height:30px;
+	line-height: 30px;
+	vertical-align: middle;
+	margin-left:5px;
+	width:170px;
+	cursor: pointer;
+	font-weight: normal;
+	font-size: 14px;
+}
+.year_down_ul{
+	width:220px;
+	height:auto;
+	border: solid 1px #dcdcdc;
+	margin-top:37px;
+	position: absolute;
+	display:none;
+	z-index: 5;
+	background: white;
+	max-height: 241px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+.year_down_ul li{
+	height:40px;
+	padding-left:5px;
+	line-height: 40px;
+	vertical-align: middle;
+	width:100%;
+	font-weight: normal;
+}
+.year_down_ul li:HOVER{
+	background: #f6f6f6;
+}
+/*标志类型选择的样式*/
+.type_select_div{
+	margin-right:1px;
+	float:right;
+	width:220px;
+	height:auto;
+	margin-top:8px;
+}
+.type_select{
+	height:33px;
+	border: solid 1px #dcdcdc;
+	border-radius:3px;	
+	width:100%;
+	cursor: pointer;
+}
+.type_select_mark{
+	float:left;
+	height:35px;
+	line-height: 35px;
+	vertical-align: middle;
+	margin-left:5px;
+	width:220px;
+	cursor: pointer;
+	font-weight: normal;
+	font-size: 14px;
+}
+.type_down_ul{
+	width:220px;
+	height:auto;
+	border: solid 1px #dcdcdc;
+	margin-top:37px;
+	position: absolute;
+	display:none;
+	z-index: 5;
+	background: white;
+	max-height: 241px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+.type_down_ul li{
+	height:40px;
+	padding-left:5px;
+	line-height: 40px;
+	vertical-align: middle;
+	width:100%;
+	font-weight: normal;
+}
+.type_down_ul li:HOVER{
+	background: #f6f6f6;
+}
+.mark_top{
+	width:100%;
+	height:120px;
+	border-top:solid 1px #dcdcdc;
+}
+.search_select{
+	width:230px;
+	height:34px;
+	display: block;
+	margin-left:10px;
+}
+.second_search_select{
+	width:207px;
+	height:34px;
+	display: none;
+}
+.superSearch{
+	float:left;
+	width:75px;
+	height:30px;
+	margin-top:10px;
+	cursor: pointer;
+	outline: none;
+}
+/*通阻信息*/
+.tz_detail_title{
+	width:100%;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 16px;
+	font-weight: bold;
+	margin:10px 0;
+}
+.tz_detail_time{
+	height:25px;
+	text-align: right;
+	border-bottom: solid 1px #cccccc;
+	color:#999999;
+}
+.tz_text{
+	margin:20px;
+	min-height: 200px;
+	max-height: 550px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	line-height: 25px;
+}
+.route_title{
+	width:100%;
+	margin-top:36px;
+	margin-bottom:36px;
+	font-size: 28px;
+	text-align: center;
+	color:#006993;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	height:40px;
+	display: inline-block;
+}
+.route_left{
+	width:600px;
+	font-family: "微软雅黑";
+	display: inline-block;
+	float:left;
+	margin-right:30px;
+}
+.route_right{
+	float:left;
+	width:460px;
+	font-family: "微软雅黑";
+	display: inline-block;
+}
+.left_text{
+	width:575px;
+	font-size: 18px;
+	line-height: 32px;
+	text-indent:2em;
+	word-wrap:break-word;
+	text-align:justify;
+	text-justify:inter-ideograph;
+}
+.left_text_textarea{
+	width:575px;
+	height:auto;
+	font-size: 18px;
+	line-height: 32px;
+	text-indent:2em;
+	word-wrap:break-word;
+	resize: none;
+}
+.right_text{
+	width:454px;
+	font-size: 18px;
+	margin-top:30px;
+	line-height: 32px;
+	text-indent:2em;
+	word-wrap:break-word;
+	text-align:justify;
+	text-justify:inter-ideograph;
+}
+.right_text_textarea{
+	width:454px;
+	font-size: 18px;
+	margin-top:30px;
+	line-height: 32px;
+	text-indent:2em;
+	word-wrap:break-word;
+	resize: none;
+}
+.route_intro{
+	width:1090px;
+	margin:0 auto;
+}
+.law_textarea{
+	height:150px;
+	overflow-y:hidden;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:88.75%;
+	outline: none;
+	font-size: 16px;
+	font-family: 微软雅黑;
+}
+.law_title{
+	width:100%;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	height:40px;
+	line-height: 40px;
+}
+#power option {
+	width:200px;
+	overflow: hidden;
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}

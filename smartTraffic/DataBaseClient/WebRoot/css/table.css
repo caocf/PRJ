@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+
+.listTable {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	border-style: solid;
+	border-width: 0 1px 0 0;
+	border-color: #cccccc;
+}
+
+.listTable  th {
+	padding: 5px 10px;
+	font-size: 12px;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	background-color: #e6e6e6;
+	border-style: solid;
+	border-width: 1px 0 1px 1px;
+	border-color: #cccccc;
+	overflow: auto; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}
+
+.listTable td {
+	padding: 0 5px;
+	height: 36px;
+	line-height: 36px;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 0 0 1px 1px;
+	border-color: #cccccc;
+	overflow: auto; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}
+
+.listTable1 {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.listTable1  th {
+	padding: 5px 10px;
+	font-size: 12px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+
+	overflow: auto; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+	text-align: center;
+}
+
+.listTable1 td {
+	padding: 3px 10px 3px 0;
+	min-height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	overflow: auto; /* 超出的部分隐藏起来 */
+	white-space: nowrap; /* 不显示的地方用省略号...代替 */
+	text-overflow: ellipsis; /* 支持 IE */
+	-o-text-overflow: ellipsis;
+}

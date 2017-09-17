@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>公交查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<link rel="stylesheet" href="../css/gaode.css" />
+		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+		<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+		<script src="http://webapi.amap.com/maps?v=1.3&key=3a1316dfb76f09e882251604b588fdb7"></script>
+		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<style>
+			.marker{
+				font-size: 12px;
+				background-color: #EDEDED;
+				border: 1px #007AFF;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">公交查询</h1>
+		</header>
+		<div class="mui-content" id="container"></div>
+		<footer>
+		</footer>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="../js/GPS.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			var map, geolocation;
+			//加载地图，调用浏览器定位服务
+			map = new AMap.Map('container', {
+				resizeEnable: true,
+				zoom:16
+			});
+			map.plugin('AMap.Geolocation', function() {
+				geolocation = new AMap.Geolocation({
+					enableHighAccuracy: true, //是否使用高精度定位，默认:true
+					timeout: 10000, //超过10秒后停止定位，默认：无穷大
+					buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+					zoomToAccuracy: true, //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+					buttonPosition: 'LB',
+					useNative:false,
+					convert:false,
+					showMarker:false,
+					showCircle:false
+				});
+				map.addControl(geolocation);
+				geolocation.getCurrentPosition();
+				AMap.event.addListener(geolocation, 'complete', onComplete); //返回定位信息
+				AMap.event.addListener(geolocation, 'error', onError); //返回定位出错信息
+			});
+			//解析定位结果
+			function onComplete(data) {
+				//				var str = ['定位成功'];
+				//				str.push('经度：' + data.position.getLng());
+				//				str.push('纬度：' + data.position.getLat());
+				//				if(data.accuracy) {
+				//					str.push('精度：' + data.accuracy + ' 米');
+				//				} //如为IP精确定位结果则没有精度信息
+				//				str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+//				var p = GPS.gcj_decrypt_exact(data.position.getLat(),data.position.getLng())
+				var queryDate = {
+					longtitude: data.position.getLng(),
+					lantitude: data.position.getLat(),
+					distance: 500
+				}
+				
+				var ps = [[queryDate.longtitude,queryDate.lantitude]];
+				var cps = app.convert(ps)
+				map.panTo(cps[0])
+				var circle = new AMap.Circle({
+			        center: new AMap.LngLat(cps[0][0], cps[0][1]),// 圆心位置
+			        radius: 500, //半径
+			        strokeColor: "#0000bb", //线颜色
+			        strokeOpacity: 1, //线透明度
+			        strokeWeight: 1, //线粗细度
+			        fillColor: "#0022ff", //填充颜色
+			        fillOpacity: 0.03//填充透明度
+			    });
+			    circle.setMap(map);
+			    var mark = new AMap.Marker({
+			    	icon:"http://webapi.amap.com/theme/v1.3/markers/n/loc.png",
+			    	position:[cps[0][0],cps[0][1]],
+				offset : new AMap.Pixel(0,0)
+			    });
+			    mark.setMap(map)
+				app.queryOriginNearByBusStation(queryDate,function(data){
+					console.log(JSON.stringify(data));
+					data = JSON.parse(data);
+					for(var i = 0;i<data.StationList.length;i++){
+						var info = data.StationList[i]
+						var point = app.convert([[info.Longitude, info.Latitude]])[0]
+						var marker = new AMap.Marker({
+				            icon: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
+				            position: [point[0], point[1]]
+				        });
+				        marker.temp = info.Id
+				        marker.on("click",function(){
+				        	var d = this.temp;
+				        	localStorage.stationId = d;
+				        	mui.openWindow("showStation.html","showStation")
+				        })
+				        var markerContent = document.createElement("div");// 点标记中的文本
+				        markerContent.style.width = (20*info.Name.length)+"px";
+				        var markerImg = document.createElement("img");
+				        markerImg.className = "markerlnglat";
+				        markerImg.src = "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png";
+				        markerContent.appendChild(markerImg);
+				        var markerSpan = document.createElement("span");
+				        markerSpan.className = 'marker';
+				        markerSpan.innerHTML = info.Name;
+				        markerContent.appendChild(markerSpan);
+        				marker.setContent(markerContent); //更新点标记内容
+				        marker.setMap(map);
+					}
+				});
+
+			
+			}
+			//解析定位错误信息
+			function onError(data) {
+				var startPoint = JSON.parse(localStorage.locaAddress)
+				var queryDate = {
+					longtitude: startPoint.lon,
+					lantitude: startPoint.lat,
+					distance: 500
+				}
+				
+				var ps = [[queryDate.longtitude,queryDate.lantitude]];
+				var cps = app.convert(ps)
+				map.panTo(cps[0])
+				var circle = new AMap.Circle({
+			        center: new AMap.LngLat(cps[0][0], cps[0][1]),// 圆心位置
+			        radius: 1000, //半径
+			        strokeColor: "#0000bb", //线颜色
+			        strokeOpacity: 1, //线透明度
+			        strokeWeight: 1, //线粗细度
+			        fillColor: "#0022ff", //填充颜色
+			        fillOpacity: 0.03//填充透明度
+			    });
+			    circle.setMap(map);
+			    var mark = new AMap.Marker({
+			    	icon:"http://webapi.amap.com/theme/v1.3/markers/n/loc.png",
+			    	position:[cps[0][0],cps[0][1]],
+				offset : new AMap.Pixel(0,0)
+			    });
+			    mark.setMap(map)
+				app.queryOriginNearByBusStation(queryDate,function(data){
+					console.log(JSON.stringify(data));
+					data = JSON.parse(data);
+					for(var i = 0;i<data.StationList.length;i++){
+						var info = data.StationList[i]
+						var point = app.convert([[info.Longitude, info.Latitude]])[0]
+						var marker = new AMap.Marker({
+				            icon: "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
+				            position: [point[0], point[1]]
+				        });
+				        marker.temp = info.Id
+				        marker.on("click",function(){
+				        	var d = this.temp;
+				        	localStorage.stationId = d;
+				        	mui.openWindow("showStation.html","showStation")
+				        })
+				        var markerContent = document.createElement("div");// 点标记中的文本
+				        markerContent.style.width = (20*info.Name.length)+"px";
+				        var markerImg = document.createElement("img");
+				        markerImg.className = "markerlnglat";
+				        markerImg.src = "http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png";
+				        markerContent.appendChild(markerImg);
+				        var markerSpan = document.createElement("span");
+				        markerSpan.className = 'marker';
+				        markerSpan.innerHTML = info.Name;
+				        markerContent.appendChild(markerSpan);
+        				marker.setContent(markerContent); //更新点标记内容
+				        marker.setMap(map);
+					}
+				});
+
+			
+			}
+		</script>
+	</body>
+
+</html>

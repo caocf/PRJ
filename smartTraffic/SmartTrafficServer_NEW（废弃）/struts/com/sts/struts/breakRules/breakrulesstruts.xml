@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="breakRules" extends="cement-interceptor" namespace="/">
+		<action name="GetBreakRulesRecord" class="com.sts.breakRules.action.BreakRulesAction"
+			method="GetBreakRulesRecord">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

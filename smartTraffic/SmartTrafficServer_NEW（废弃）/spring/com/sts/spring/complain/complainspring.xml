@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+
+	<bean id="complainAction" class="com.sts.complain.action.ComplainAction" scope="prototype">
+		<property name="complainService" ref="complainService"  />
+	</bean>
+
+	<bean id="complainService" class="com.sts.complain.service.ComplainService" scope="prototype">
+		<property name="complainDao" ref="complainDao"  />
+	</bean>
+	
+	<bean id="complainDao" class="com.sts.complain.dao.ComplainDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+	</bean>
+	
+	<bean id="complainTypeAction" class="com.sts.complain.action.ComplainTypeAction" scope="prototype">
+		<property name="complainTypeService" ref="complainTypeService"  />
+	</bean>
+
+	<bean id="complainTypeService" class="com.sts.complain.service.ComplainTypeService" scope="prototype">
+		<property name="complainTypeDao" ref="complainTypeDao"  />
+	</bean>
+	
+	<bean id="complainTypeDao" class="com.sts.complain.dao.ComplainTypeDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+	</bean>
+	
+</beans>

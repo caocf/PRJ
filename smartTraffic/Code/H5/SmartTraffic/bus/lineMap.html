@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>公交查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<link rel="stylesheet" href="../css/gaode.css" />
+		<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+		<script src="http://webapi.amap.com/maps?v=1.3&key=3a1316dfb76f09e882251604b588fdb7"></script>
+		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">公交查询</h1>
+		</header>
+		<div class="mui-content" id="container"></div>
+		<footer>
+		</footer>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/app.js" ></script>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+
+			var map = new AMap.Map('container', {
+				resizeEnable: true,
+				zoom: 11
+			});
+			mui.ready(function() {
+				var info = JSON.parse(localStorage.lineInfo);
+				console.log(JSON.stringify(info))
+				var lineArr = [];
+				if(info.DownList != null && info.DownList.length > 0) {
+					var station;
+					for(var i= 0;i<info.DownList.length;i++){
+						station = info.DownList[i];
+						var point = [station.Longitude,station.Latitude];
+						lineArr.push(point)
+					}
+				} else if(info.UpList != null && info.UpList.UpList > 0) {
+					var station;
+					for(var i= 0;i<info.UpList.length;i++){
+						station = info.UpList[i];
+						var point = [station.Longitude,station.Latitude];
+						lineArr.push(point)
+					}
+				} else {
+					mui.alert("没有找到轨迹")
+				}
+				if(lineArr.length > 0){
+					lineArr = app.convert(lineArr);
+					map.setZoomAndCenter(14, lineArr[0]);
+					var polyline = new AMap.Polyline({
+				        path: lineArr,          //设置线覆盖物路径
+				        strokeColor: "#3366FF", //线颜色
+				        strokeOpacity: 1,       //线透明度
+				        strokeWeight: 5,        //线宽
+				        strokeStyle: "solid",   //线样式
+				        strokeDasharray: [10, 5] //补充线样式
+				    });
+			    	polyline.setMap(map);
+				}
+			});
+		</script>
+	</body>
+
+</html>

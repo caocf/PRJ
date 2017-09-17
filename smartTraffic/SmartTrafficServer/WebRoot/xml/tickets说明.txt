@@ -1,0 +1,9 @@
+leaveTime:起始时间
+reachTime:到达时间
+carNumber:车次
+carKind:客车种类
+startCity:出发城市
+endCity:目的城市
+length:行驶里程
+price:价格
+leaveTicketNumber:余票数

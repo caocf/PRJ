@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="favor" extends="cement-interceptor" namespace="/">
+		<action name="SaveStationFavor" class="com.sts.favor.action.FavorAction"
+			method="SaveStationFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SaveLineFavor" class="com.sts.favor.action.FavorAction"
+			method="SaveLineFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SaveTransferFavor" class="com.sts.favor.action.FavorAction"
+			method="SaveTransferFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryAllStationFavor" class="com.sts.favor.action.FavorAction"
+			method="QueryAllStationFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryAllLineFavor" class="com.sts.favor.action.FavorAction"
+			method="QueryAllLineFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryAllTransferFavor" class="com.sts.favor.action.FavorAction"
+			method="QueryAllTransferFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="DeleteForStation" class="com.sts.favor.action.FavorAction"
+			method="DeleteForStation">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="DeleteForLine" class="com.sts.favor.action.FavorAction"
+			method="DeleteForLine">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="DeleteForTransfer" class="com.sts.favor.action.FavorAction"
+			method="DeleteForTransfer">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		
+		<!--APP端 -->
+		
+		
+		<action name="APPSaveStationFavor" class="com.sts.favor.action.AppFavorAction"
+			method="APPSaveStationFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPSaveBikeStationFavor" class="com.sts.favor.action.AppFavorAction"
+			method="APPSaveBikeStationFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPSaveLineFavor" class="com.sts.favor.action.AppFavorAction"
+			method="APPSaveLineFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPSaveTransferFavor" class="com.sts.favor.action.AppFavorAction"
+			method="APPSaveTransferFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPQueryAllStationFavor" class="com.sts.favor.action.AppFavorAction"
+			method="APPQueryAllStationFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPQueryAllBikeStationFavor" class="com.sts.favor.action.AppFavorAction"
+			method="APPQueryAllBikeStationFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPQueryAllLineFavor" class="com.sts.favor.action.AppFavorAction"
+			method="APPQueryAllLineFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPQueryAllTransferFavor" class="com.sts.favor.action.AppFavorAction"
+			method="APPQueryAllTransferFavor">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPDeleteForTransfer" class="com.sts.favor.action.AppFavorAction"
+			method="APPDeleteForTransfer">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPDeleteForStation" class="com.sts.favor.action.AppFavorAction"
+			method="APPDeleteForStation">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPDeleteBikeForStation" class="com.sts.favor.action.AppFavorAction"
+			method="APPDeleteBikeForStation">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="APPDeleteForLine" class="com.sts.favor.action.AppFavorAction"
+			method="APPDeleteForLine">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+	</package>
+</struts>    

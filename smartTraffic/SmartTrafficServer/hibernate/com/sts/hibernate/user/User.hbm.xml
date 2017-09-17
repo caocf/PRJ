@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.user.model.User" table="st_user">
+		<id name="userid" column="userid"></id>
+		<property name="username" column="username"></property>
+		<property name="password" column="password"></property>
+		<property name="email" column="email"></property>
+		<property name="phone" column="phone"></property>
+  		<property name="registerDate" column="registerDate"></property>
+		<property name="lastLoginDate" column="lastLoginDate"></property> 
+		<property name="verifyCode" column="verifyCode"></property> 
+		<property name="verifyStatus" column="verifyStatus"></property> 
+		<property name="sex" column="sex"></property> 
+		<property name="birthday" column="birthday"></property> 
+		<property name="address" column="address"></property> 
+	</class>
+	
+	<class name="com.sts.user.model.AppUser" table="st_app_user">
+		<id name="userid" column="userid"></id>
+		<property name="username" column="name"></property>
+		<property name="userpassword" column="password"></property>
+		<property name="email" column="email"></property>
+		<property name="phone" column="phone"></property>
+	</class>
+</hibernate-mapping>

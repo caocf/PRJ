@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="smartbus" extends="cement-interceptor" namespace="/">
+	
+		<action name="QueryLineByLineName" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryLineByLineName">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchCircleByID" class="com.sts.smartbus.action.CircleSearchAction"
+			method="SearchCircleByID">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchPointByName" class="com.sts.smartbus.action.CircleSearchAction"
+			method="SearchPointByName">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetStationInfoByID" class="com.sts.smartbus.action.SmartBusAction"
+			method="GetStationInfoByID">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetRealStationInfo" class="com.sts.smartbus.action.SmartBusAction"
+			method="GetRealStationInfo">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		
+		<action name="QueryNearbyBikeStation" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryNearbyBikeStation">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryNearbyBusStation" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryNearbyBusStation">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryBikeStationByID" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryBikeStationByID">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryBusArrive" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryBusArrive">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryBusLineByID" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryBusLineByID">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="queryBusStationByName" class="com.sts.smartbus.action.SmartBusAction"
+			method="queryBusStationByName">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryStationByID" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryStationByID">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetOriginData" class="com.sts.smartbus.action.SmartBusAction"
+			method="GetOriginData">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		
+		
+		
+		
+		
+		
+		<action name="QueryOriginNearByBikeStation" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginNearByBikeStation">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginNearByBusStation" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginNearByBusStation">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginBikeStationByID" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginBikeStationByID">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginBusArrive" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginBusArrive">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginBusLineByID" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginBusLineByID">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginBusStationByID" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginBusStationByID">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginBikeParkingCount" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginBikeParkingCount">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginBikeStation" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginBikeStation">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginBusLine" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginBusLine">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginBusStation" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginBusStation">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginTrafficTrasfer" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginTrafficTrasfer">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginTrafficTrasferOfBike" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginTrafficTrasferOfBike">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginLineTrack" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginLineTrack">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryOriginLineTrack2" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryOriginLineTrack2">
+			<result type="json" name="success"><param name="root">orginData</param></result>
+			<result name="error"/>
+		</action>
+		
+		
+		<action name="QueryLineDetailInfoByName" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryLineDetailInfoByName">
+			<result type="json" name="success"><param name="root">lineDetails</param></result>
+			<result name="error"/>
+		</action>
+		<action name="QueryLineAndStationTogethor" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryLineAndStationTogethor">
+			<result type="json" name="success"><param name="includeProperties">busLineDetail.*,busStationDetail.*</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryStationIDByQRCode" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryStationIDByQRCode">
+			<result type="json" name="success"><param name="root">busStationForQueryByName</param></result>
+			<result name="error"/>
+		</action>
+		
+		<action name="QueryBikeAverage" class="com.sts.smartbus.action.SmartBusAction"
+			method="QueryBikeAverage">
+			<result type="json" name="success"><param name="root">bikeStations</param></result>
+			<result name="error"/>
+		</action>
+		
+		
+		
+		<action name="QueryBaseLineTrace" class="com.sts.smartbus.action.LineTraceAction"
+			method="QueryBaseLineTrace">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		<action name="QueryStationIDByQRCodeFromDB" class="com.sts.smartbus.action.LineTraceAction"
+			method="QueryStationIDByQRCodeFromDB">
+			<result type="json" name="success"><param name="root">qr</param></result>
+			<result name="error"/>
+		</action>
+		
+		
+		
+		<action name="SearchSimilarityBusStation" class="com.sts.smartbus.action.CircleSearchAction"
+			method="SearchSimilarityBusStation">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+		
+		
+		<action name="parse" class="com.sts.smartbus.action.SmartBusAction"
+			method="parse">
+			<result type="json" name="success"></result>
+			<result name="error"/>
+		</action>
+		
+	</package>
+</struts>    

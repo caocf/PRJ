@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.glz.model.HGlzGlzGyld" table="h_glz_glz_gyld"  >
+        <id name="id" type="java.lang.String">
+            <column name="id" length="200" />
+            <generator class="assigned" />
+        </id>
+        <property name="code" type="java.lang.String">
+            <column name="code" length="100">
+             </column>
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="type" length="100">
+             </column>
+        </property>
+        <property name="stationId" type="java.lang.String">
+            <column name="stationId" length="200">
+             </column>
+        </property>
+        <property name="districtId" type="java.lang.String">
+            <column name="districtId" length="200">
+            </column>
+        </property>
+        <property name="sectionName" type="java.lang.String">
+            <column name="sectionName" length="200">
+                <comment>è·¯æ®µå��ç§°</comment>
+            </column>
+        </property>
+        <property name="startStake" type="java.lang.String">
+            <column name="startStake" length="100">
+                <comment>è·¯æ®µèµ·ç'¹æ¡©å�·ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="startStake2" type="java.lang.Double">
+            <column name="startStake2" precision="18" scale="3">
+                <comment>è·¯æ®µèµ·ç'¹æ¡©å�·ï¼ˆå…¬é‡Œï¼‰2</comment>
+            </column>
+        </property>
+        <property name="startStakeName" type="java.lang.String">
+            <column name="startStakeName" length="200">
+                <comment>è·¯æ®µèµ·ç'¹å��ç§°</comment>
+            </column>
+        </property>
+        <property name="endStake" type="java.lang.String">
+            <column name="endStake" length="100">
+                <comment>è·¯æ®µæ­¢ç'¹æ¡©å�·ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="endStake2" type="java.lang.Double">
+            <column name="endStake2" precision="18" scale="3">
+                <comment>è·¯æ®µæ­¢ç'¹æ¡©å�·ï¼ˆå…¬é‡Œï¼‰2</comment>
+            </column>
+        </property>
+        <property name="endStakeName" type="java.lang.String">
+            <column name="endStakeName" length="200">
+                <comment>è·¯æ®µæ­¢ç'¹å��ç§°</comment>
+            </column>
+        </property>
+        <property name="historyNo" type="java.lang.Integer">
+            <column name="historyNo">
+                <comment>åŽ†å�²åº�å�·</comment>
+            </column>
+        </property>
+        <property name="latestMark" type="java.lang.Short">
+            <column name="latestMark">
+                <comment>æœ€æ-°è®°å½•æ&#160;‡è®°</comment>
+            </column>
+        </property>
+        <property name="removeMark" type="java.lang.Short">
+            <column name="removeMark">
+                <comment>åˆ&#160;é™¤æ&#160;‡è®°</comment>
+            </column>
+        </property>
+        <property name="versionId" type="java.lang.String">
+            <column name="versionId" length="200">
+                <comment>ç‰ˆæœ¬id</comment>
+            </column>
+        </property>
+        <property name="rid" type="java.lang.String">
+            <column name="rid" length="200">
+                <comment>rid</comment>
+            </column>
+        </property>
+        <property name="manageLength" type="java.lang.Double">
+            <column name="manageLength" precision="18" scale="3">
+                <comment>ç®¡å…»é‡Œç¨‹</comment>
+            </column>
+        </property>
+        <property name="qytclc" type="java.lang.Double">
+            <column name="qytclc" precision="18" scale="3">
+                <comment>æ™´é›¨é€šè½¦é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="gldj" type="java.lang.String">
+            <column name="gldj" length="100">
+                <comment>å…¬è·¯ç­‰çº§</comment>
+            </column>
+        </property>
+        <property name="npjjdcjtl" type="java.lang.Double">
+            <column name="npjjdcjtl" precision="18" scale="3">
+                <comment>å¹´å¹³å�‡æœºåŠ¨è½¦äº¤é€šé‡�ï¼ˆè¾†/æ˜¼å¤œï¼‰</comment>
+            </column>
+        </property>
+        <property name="ljkd" type="java.lang.Double">
+            <column name="ljkd" precision="18" scale="3">
+                <comment>è·¯åŸºå®½åº¦ï¼ˆç±³ï¼‰</comment>
+            </column>
+        </property>
+        <property name="qjxzxbj" type="java.lang.Double">
+            <column name="qjxzxbj" precision="18" scale="3">
+                <comment>å¹³æ›²çº¿æœ€å°�å�Šå¾"ï¼ˆç±³/å¤"ï¼‰</comment>
+            </column>
+        </property>
+        <property name="zdcp" type="java.lang.Double">
+            <column name="zdcp" precision="18" scale="3">
+                <comment>æœ€å¤§çºµå�¡ï¼ˆ%/å¤"ï¼‰</comment>
+            </column>
+        </property>
+        <property name="lmkd" type="java.lang.Double">
+            <column name="lmkd" precision="18" scale="3">
+                <comment>è·¯é�¢å®½åº¦ï¼ˆç±³ï¼‰</comment>
+            </column>
+        </property>
+        <property name="lmgjsntlc" type="java.lang.Double">
+            <column name="lmgjsntlc" precision="18" scale="3">
+                <comment>è·¯é�¢é«˜çº§æ°´æ³¥ç&#160;¼é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="lmgjlqtlc" type="java.lang.Double">
+            <column name="lmgjlqtlc" precision="18" scale="3">
+                <comment>è·¯é�¢é«˜çº§æ²¥é�'ç&#160;¼é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="lmcgjlc" type="java.lang.Double">
+            <column name="lmcgjlc" precision="18" scale="3">
+                <comment>è·¯é�¢æ¬¡é«˜çº§é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="lmzjlc" type="java.lang.Double">
+            <column name="lmzjlc" precision="18" scale="3">
+                <comment>è·¯é�¢ä¸­çº§é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="lmdjlc" type="java.lang.Double">
+            <column name="lmdjlc" precision="18" scale="3">
+                <comment>è·¯é�¢ä½Žçº§é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="klhlc" type="java.lang.Double">
+            <column name="klhlc" precision="18" scale="3">
+                <comment>å�¯ç»¿åŒ-é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+        <property name="ylhlc" type="java.lang.Double">
+            <column name="ylhlc" precision="18" scale="3">
+                <comment>å·²ç»¿åŒ-é‡Œç¨‹ï¼ˆå…¬é‡Œï¼‰</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

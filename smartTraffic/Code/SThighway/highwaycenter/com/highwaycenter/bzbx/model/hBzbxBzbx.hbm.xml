@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.bzbx.model.HBzbxBzbx" table="h_bzbx_bzbx"  >
+        <id name="bzbxbh" type="java.lang.Integer">
+            <column name="bzbxbh" length="11" />
+            <generator class="identity" />
+        </id>
+        <property name="xzqhdm" type="java.lang.Integer">
+            <column name="xzqhdm">
+            </column>
+        </property>
+        <property name="xlmc" type="java.lang.String">
+            <column name="xlmc" length="200">
+             </column>
+        </property>
+        <property name="bzbxlxbh" type="java.lang.Integer">
+            <column name="bzbxlxbh" length="200">
+             </column>
+        </property>
+        <property name="gldj" type="java.lang.String">
+            <column name="gldj" length="200">
+             </column>
+        </property>
+        <property name="bzwzl" type="java.lang.String">
+            <column name="bzwzl" length="200">
+             </column>
+        </property>
+         <property name="bzwzm" type="java.lang.String">
+            <column name="bzwzm" length="200">
+             </column>
+        </property>
+         <property name="bzwzr" type="java.lang.String">
+            <column name="bzwzr" length="200">
+             </column>
+        </property>
+         <property name="bmnrta" type="java.lang.String">
+            <column name="bmnrta" length="200">
+             </column>
+         </property>
+         <property name="bmnrsl" type="java.lang.String">
+            <column name="bmnrsl" length="200">
+             </column>
+        </property>
+         <property name="bmcc" type="java.lang.String">
+            <column name="bmcc" length="200">
+             </column>
+        </property>
+         <property name="zcxsjgg" type="java.lang.String">
+            <column name="zcxsjgg" length="200">
+             </column>
+        </property>
+        <property name="azsj" type="java.lang.String">
+            <column name="azsj" length="50">
+             </column>
+        </property>
+        <property name="zzazdw" type="java.lang.String">
+            <column name="zzazdw" length="500">
+             </column>
+        </property>
+
+            <property name="gldw" type="java.lang.String">
+            <column name="gldw" length="500">
+             </column>
+        </property>
+            <property name="bz" type="java.lang.String">
+            <column name="bz" length="4000">
+             </column>
+        </property>
+    </class>
+</hibernate-mapping>

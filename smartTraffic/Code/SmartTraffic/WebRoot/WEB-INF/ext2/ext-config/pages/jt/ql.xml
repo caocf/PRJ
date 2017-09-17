@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="GBK"?>
+<ext-config>
+
+<text>
+<![CDATA[
+<script>
+
+function clickzb(year){
+	var url =  "extView.servlet?mvid=usave.20150930100928";
+	$('#pdailog').dialog({
+		title: '桥梁数量分析',
+		closed: false,
+		cache: false,
+		modal: true,
+		href:url,
+		width:1200,
+		height:550,
+		buttons:[{
+				text:'关闭',
+				iconCls:"icon-cancel",
+				handler:function(){
+					$('#pdailog').dialog('close');
+				}
+			}]
+	});	
+	
+}
+
+function clickme(a, b, c){
+	
+	var url =  "extView.servlet?mvid=jt.ql_bt&year="+a;
+	$('#pdailog').dialog({
+		title: '桥梁数量分析',
+		closed: false,
+		cache: false,
+		modal: true,
+		href:url,
+		width:1080,
+		height:550,
+		buttons:[{
+				text:'关闭',
+				iconCls:"icon-cancel",
+				handler:function(){
+					$('#pdailog').dialog('close');
+				}
+			}]
+	});	
+}
+</script>
+
+]]>
+</text>
+
+
+<div style="width:800px; margin:auto;">
+<text>
+
+<![CDATA[
+<div style='font-size:30px; text-align:center; margin-top:10%'>
+桥梁数量分析
+</div>
+<div align='right'>
+	<a href='javascript:clickzb(2014)'style='font-size:20px'>总表 </a>
+	</div>
+	]]>
+</text>
+				<chart shape="column" xcol="year" ycol="val"  width="800" align="center"
+						height="250">
+						<property>
+							<key name="ydesc" value="桥梁座数(座)" />
+							<key name="xdesc" value="年度" />
+							<key name="formatCol" value="###,##0" />
+							<key name="unitCol" value="座" />
+							<key name="showLegend" value="true" />
+							<key name="action" value="clickme" />
+						</property>
+						<ds><![CDATA[
+select  year, sum(zs) val from MDM_QL_SLYM a, code_year b where a.year = b.year_id
+group by year, b.year_name, year order by year asc
+
+						]]></ds>
+					</chart>
+
+</div>
+
+<div style="width:800px; margin:auto;">
+<text>
+
+
+
+
+
+
+<text>
+<![CDATA[
+<script>
+
+function clickzb(year){
+	var url =  "extView.servlet?mvid=usave.20150930100928";
+	$('#pdailog').dialog({
+		title: '桥梁数量分析',
+		closed: false,
+		cache: false,
+		modal: true,
+		href:url,
+		width:1200,
+		height:550,
+		buttons:[{
+				text:'关闭',
+				iconCls:"icon-cancel",
+				handler:function(){
+					$('#pdailog').dialog('close');
+				}
+			}]
+	});	
+	
+}
+
+function clickme(a, b, c){
+	
+	var url =  "extView.servlet?mvid=jt.ql_bt&year="+a;
+	$('#pdailog').dialog({
+		title: '桥梁数量分析',
+		closed: false,
+		cache: false,
+		modal: true,
+		href:url,
+		width:1080,
+		height:550,
+		buttons:[{
+				text:'关闭',
+				iconCls:"icon-cancel",
+				handler:function(){
+					$('#pdailog').dialog('close');
+				}
+			}]
+	});	
+}
+</script>
+
+]]>
+</text>
+<![CDATA[
+<div style='font-size:30px; text-align:center; margin-top:10%'>
+桥梁数量按行政区划分析
+</div>
+<div align='right'>
+	<a href='javascript:clickzb(2014)'style='font-size:20px'>总表 </a>
+	</div>
+	]]>
+</text>
+				<chart shape="column" xcol="mname" ycol="val"  width="800" align="center"
+						height="250">
+						<property>
+							<key name="ydesc" value="桥梁座数(座)" />
+							<key name="xdesc" value="行政区划" />
+							<key name="formatCol" value="###,##0" />
+							<key name="unitCol" value="座" />
+							<key name="showLegend" value="true" />
+							<key name="action" value="clickme" />
+						</property>
+						<ds><![CDATA[
+select xzqh, b.mname,  sum(ZS) val from MDM_QL_SLYM a, mcode_xzqh_dtl b where a.xzqh = b.mid
+
+group by xzqh, b.mname,  px order by px asc
+
+						]]></ds>
+					</chart>
+
+</div>
+
+
+<div id="pdailog"></div>
+
+</ext-config>

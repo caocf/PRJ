@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.fwss.model.HFwSfz" table="h_fw_sfz"  >
+        <id name="sfzbh" type="java.lang.Integer">
+            <column name="sfzbh" />
+            <generator class="identity" />
+        </id>
+        <property name="sfzmc" type="java.lang.String">
+            <column name="sfzmc" length="50">
+             </column>
+        </property>
+         <property name="sfzpjzm" type="java.lang.String">
+            <column name="sfzpjzm" length="50">
+             </column>
+        </property>
+         <property name="ssgs" type="java.lang.String">
+            <column name="ssgs" length="200">
+             </column>
+        </property>
+        <property name="xlmc" type="java.lang.String">
+            <column name="xlmc" length="50">
+             </column>
+        </property>
+        <property name="sfzlxbh" type="java.lang.Integer">
+            <column name="sfzlxbh" length="11">
+             </column>
+        </property>
+         <property name="jketccdsl" type="java.lang.Integer">
+            <column name="jketccdsl" length="11">
+             </column>
+        </property>
+          <property name="jkrgcdsl" type="java.lang.Integer">
+            <column name="jkrgcdsl" length="11">
+             </column>
+        </property>
+           <property name="zxsxjkzh" type="java.lang.String">
+            <column name="zxsxjkzh" length="50">
+             </column>
+        </property>
+        <property name="zxxxjkzh" type="java.lang.String">
+            <column name="zxxxjkzh" length="50">
+             </column>
+        </property>
+         <property name="cketccdsl" type="java.lang.Integer">
+            <column name="cketccdsl" length="11">
+             </column>
+        </property>
+        <property name="ckrgcdsl" type="java.lang.Integer">
+            <column name="ckrgcdsl" length="11">
+             </column>
+        </property>
+        <property name="zxsxckzh" type="java.lang.String">
+            <column name="zxsxckzh" length="50">
+             </column>
+        </property>
+        <property name="zxxxckzh" type="java.lang.String">
+            <column name="zxxxckzh" length="50">
+             </column>
+        </property>
+        <property name="ckzx" type="java.lang.String">
+            <column name="ckzx" length="50">
+             </column>
+        </property>
+    </class>
+</hibernate-mapping>

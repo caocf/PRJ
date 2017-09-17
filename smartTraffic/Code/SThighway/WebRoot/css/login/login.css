@@ -1,0 +1,365 @@
+@CHARSET "UTF-8";
+input[type=text] { box-sizing : content-box; -moz-box-sizing : content-box; }
+input[type=password] { box-sizing : content-box; -moz-box-sizing : content-box; }
+html,body{
+	width:100%;
+	font-size: 14px;
+	/* background:url("../../image/login/login_back1.png") ; */
+	background:#008181;
+	text-align:center;
+    margin:0px;
+    background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	-moz-background-size:cover;
+	-webkit-background-size:cover; 	
+	font-family:'微软雅黑';
+    /* font-weight:normal; */
+
+    min-height:650px;
+    min-width:1100px;
+    _height:650px; 
+
+} 
+.mainall{
+	width:100%;
+	zoom:1;    
+} 
+
+/**居中样式**/
+.loginstyle{ 
+	display: inline-block;
+    width:480px;
+  /*   height:467px;  */
+    position:absolute;
+    left:50%;
+    top:50%;
+  /*   margin-top:-260px;*注意这里必须是DIV高度的一半    * */
+    margin-left:-240px;
+    margin-top:-270px;
+    	clear:both;
+    	
+	
+}
+
+.logintop{	
+	display: inline-block;
+	
+	text-align:center;
+	clear:both;
+    /* margin:0px auto;   */
+    width:480px;
+    word-wrap:normal;
+    margin-bottom:20px;
+     margin-left:5px; 
+    
+}
+
+.p1{
+	text-align:center;
+    margin-left:0px;
+    height:65px;
+    font-family:'微软雅黑';
+    font-size:32px;
+    font-weight:bold;
+    color:#ffffff;  
+    width:100%;
+   /*  display:table;  */
+    vertical-align: middle;
+   }
+
+/*    .p1 img{
+    vertical-align:middle;   
+    display:table-cell;   
+
+    
+   } */
+   .p1 label{
+    vertical-align:middle; 
+    display:table-cell;   
+    height:65px;
+    line-height:65px;
+   /*  margin-left:12px; */
+   }
+   
+
+
+
+.logindiv{
+	z-index:99;
+	display: inline-block;
+	width:923px;
+	height:460px;
+	text-align:center;
+	margin:0px auto ;
+	clear:both;
+	background:url("../../image/login/logincenter_back.png") ;
+/* 	clear:both;
+    margin:0px auto;  
+    width:520px;
+    height:390px;
+    background:#ffffff;
+    阴影效果
+    -webkit-box-shadow: 1px 2px 6px rgba(6,0,1,.4); 
+    -moz-box-shadow: 1px 2px 6px rgba(6,0,1,.4); 
+    box-shadow: 1px 2px 6px rgba(6,0,1,.4); 
+    border: solid 1px #ccc; */
+ /*    
+   position:absolute;层漂浮    
+   top:45%;    
+   left:50%;     */
+      
+  /*  height:390px;  */   
+/*    margin-top:-170px;注意这里必须是DIV高度的一半    
+   margin-left:-260px;这里是DIV宽度的一半     */
+   
+    /* background:#ffffff; */
+    clear:both;
+    
+    /**  阴影效果**/
+/*      -webkit-box-shadow: 1px 2px 6px rgba(6,0,1,.4); 
+    -moz-box-shadow: 1px 2px 6px rgba(6,0,1,.4); 
+    box-shadow: 1px 2px 6px rgba(6,0,1,.4); 
+    border: solid 1px #ccc; */
+
+	}
+
+	
+
+.logsign{
+	height:50px;
+	text-align:left;
+	padding-left:59px;
+	padding-top:30px;
+	font-family:'微软雅黑';
+    font-size:24px;
+  /*  // font-weight:bold; */
+    color:#000000;
+      
+    
+}
+
+.logsign label{
+	font-family:'微软雅黑';
+    font-size:18px;
+    color:#999999;
+    margin-left:9px;  
+    font-weight:normal;
+}
+	
+
+.logininput{
+	clear:both;
+	height:40px;
+	padding-left:59px;
+	text-align:left;
+	font-family:'微软雅黑';
+    font-size:18px;
+    color:#999999;
+    font-weight:normal;
+	
+}
+.logininput_image{
+	clear:both;
+	/* border:1px solid #DDDDDD; */
+	border-top:1px solid #DDDDDD;
+	border-bottom:1px solid #DDDDDD;
+	border-left:1px solid #DDDDDD;
+	border-right:0px; 
+	text-align:center;
+	width:40px;
+	height:40px;
+	background:#EEEEEE;
+	float:left;    
+}
+.logininput_image img{
+	overflow:hidden;
+
+}
+
+.logininput  input{
+	overflow:hidden;	
+	border:1px solid #DDDDDD;
+/* 	border-top:1px solid #DDDDDD;
+	border-bottom:1px solid #DDDDDD;
+	border-left:1px solid #DDDDDD;
+	border-right:0px; */
+	height:26px;
+	*height:40px; 
+	
+ 	width:305px;	
+ 	font-family:'微软雅黑';
+    font-size:15px;
+    line-height:26px;
+     padding-top:7px;
+    padding-bottom:7px; 
+    *line-height:40px;
+    *padding-top:0px;
+    *padding-bottom:0px;
+    *margin-top:-1px;
+    color:#999999;
+    font-weight:normal;
+     outline:medium;
+     padding-left:15px;
+     
+  
+  
+}
+.logincheck{
+	height:20px;
+	padding-left:60px;
+	text-align:left;
+	font-family:'微软雅黑';
+    font-size:14px;
+    color:#333333;
+    font-weight:normal;   
+}
+.logincheck input {
+	
+	width:20px;
+	height:20px;
+	background:#EEEEEE;
+    width: 20px;
+        height: 20px;
+        margin: 0;
+        cursor: pointer;
+        vertical-align: bottom;
+        background: #fff;
+        /* border:1px solid #DDDDDD; */
+        
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+	/*   -webkit-appearance: none;
+       
+       */
+	
+}
+.logincheck label {
+	color:#333333;
+	margin-left:5px;
+	margin-bottom:1px;
+	height:20px;
+	line-height:21px;
+    vertical-align: bottom;
+}
+
+.loginbutton{
+ 
+	height:40px;
+	padding-left:59px;
+	text-align:left;
+}
+.loginbutton button{
+	outline: 0;
+	border:0px;
+	width:365px;
+	height:100%;
+	text-align:center;
+	font-family:'微软雅黑';
+    font-size:18px;
+    color:#ffffff;
+    font-weight:normal;
+    background:#006993;	
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+
+.loginbutton button:hover{
+	 background:#006193;	
+	 border:0px ;
+	    outline: 0;
+}
+ .loginbutton button:focus{
+
+	    outline: 0;
+} 
+.loginbutton button:active{
+	 background:#006993;	
+	 border:0px ;
+	   outline: 0;
+}
+
+#errormessage{
+	text-align:center;
+	font-family:'微软雅黑';
+    font-size:12px;
+    color:#ff0000;
+    font-weight:normal;
+    border:0px;
+}
+.diatanctdiv{
+	clear:both;
+	height:20px;
+}
+.diatantdiv2{
+	clear:both;
+	height:40px;
+}
+.diatanctdiv1{
+	clear:both;
+	height:28%;
+}
+.footerdiv{
+	 *padding-top:843px;
+	width:100%;
+	display: inline-block;
+      min-height:70px;
+      vertical-align: middle;
+      text-align: center;
+/*       	opacity: 0.2;
+    filter: alpha(opacity=20); 
+    filter:Alpha(opacity=20);
+	background: #000000;
+	 background:rgba(0,0,0,0.2); 
+     color:#cccccc; 
+      background:rgba(0.2); 
+      position:static; IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 
+     *zoom:1; 激活IE6、7的haslayout属性，让它读懂Alpha */
+} 
+   
+#footerdiv label{
+	
+	text-align:center;
+	/* margin-bottom:20px; */
+	height:70px;
+	line_height:70px;
+	width:100%;
+	 color:#cccccc;
+	 font-size:12px;
+	 font-family:'微软雅黑';
+	 vertical-align: bottom;
+	 	
+}
+.versiondiv 
+{
+	
+	height:70px;
+	line_height:70px;
+	 /* opacity: 0.2; */
+    filter: alpha(opacity=20); 
+    filter:Alpha(opacity=20);
+	background: #000000;
+	 background:rgba(0,0,0,0.2); 
+     color:#cccccc; 
+      background:rgba(0.2); 
+      position:static; IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 
+     *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+
+}
+.versiondiv label{
+	height:70px;
+    line-height:70px;
+    color:#cccccc; 
+     position:relative; 
+}
+
+
+/* .search input[type=""search""]{
+    background:no-repeat 0 0 scroll ＃EEEEEE;
+    border:none;
+    outline:medium;
+} */

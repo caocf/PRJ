@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="parking" extends="cement-interceptor" namespace="/">
+		<!-- 停车场查询 -->
+		<action name="queryparkingplacecoordinate" class="com.sts.parking.action.ParkingAction"
+			method="queryparkingplacecoordinate">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- 周边搜索 -->
+		<action name="searchsurround" class="com.sts.parking.action.ParkingAction"
+			method="searchsurround">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- 关键字搜索地址  -->
+		<action name="searchpoibykey" class="com.sts.parking.action.ParkingAction"
+			method="searchpoibykey">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- POI分类搜索地址  -->
+		<action name="searchpoibycat" class="com.sts.parking.action.ParkingAction"
+			method="searchpoibycat">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- POI分类名称的模糊查询  -->
+		<action name="searchpoibycatByName" class="com.sts.parking.action.ParkingAction"
+			method="searchpoibycatByName">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!--公交线路查询接口  -->
+		<action name="queryBusRoute" class="com.sts.parking.action.ParkingAction"
+			method="queryBusRoute">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- 公交站点查询接口 -NAME-->
+		<action name="queryBusStation" class="com.sts.parking.action.ParkingAction"
+			method="queryBusStation">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- 公交站点查询接口 -ID-->
+		<action name="queryBusStationId" class="com.sts.parking.action.ParkingAction"
+			method="queryBusStationId">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- 周边公交站点查询-->
+		<action name="querySurroundBusStation" class="com.sts.parking.action.ParkingAction"
+			method="querySurroundBusStation">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- 公交换乘接口 -->
+		<action name="queryBusTransfer" class="com.sts.parking.action.ParkingAction"
+			method="queryBusTransfer">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<!-- 自驾道路查询 -->
+		<action name="queryroad" class="com.sts.parking.action.ParkingAction"
+			method="queryroad">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		
+		
+		
+		<action name="queryParkingFromCG" class="com.sts.parking.action.ParkingAction"
+			method="queryParkingFromCG">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<action name="queryParkingCountFromCG" class="com.sts.parking.action.ParkingAction"
+			method="queryParkingCountFromCG">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		
+		<action name="queryParkingFormCGByName" class="com.sts.parking.action.ParkingAction"
+			method="queryParkingFormCGByName">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<action name="queryParkingFromCGByType" class="com.sts.parking.action.ParkingAction"
+			method="queryParkingFromCGByType">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<action name="queryParkingFromCGByID" class="com.sts.parking.action.ParkingAction"
+			method="queryParkingFromCGByID">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>
+		<action name="queryParkingFromCGByNameAndType" class="com.sts.parking.action.ParkingAction"
+			method="queryParkingFromCGByNameAndType">
+			<result type="json" name="success"></result>
+			<result name="error" />
+		</action>		
+
+	</package>
+</struts>    

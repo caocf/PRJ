@@ -1,0 +1,291 @@
+@CHARSET "UTF-8";
+
+.layout1 {
+	height: 753px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.layout1_left {
+	width: 650px;
+	height: 751px;
+	float: left;
+	border: 1px solid #ccc;
+}
+
+.layout1_right {
+	margin-left: 20px;
+	width: 326px;
+	height: 751px;
+	float: left;
+}
+
+.map_bus_right_search {
+	width: 250px;
+	height: 28px;
+	margin-top: 2px;
+	line-height: 28px;
+	outline: none;
+	margin-left: 5px;
+}
+
+.map_bus_right_bottom {
+	width: 50px;
+	height: 28px;
+	line-height: 28px;
+	outline: none;
+	margin-left: 2px;
+	text-align: center;
+	color: black;
+}
+
+.layout1_right_layout1 {
+	width: 100%;
+	height: 280px;
+	border: 1px solid #ccc;
+}
+
+.layout1_right_layout1_layout1 {
+	width: 100%;
+	height: 280px;/*有搜索244px*/
+}
+
+.layout1_right_layout2 {
+	margin-top: 15px;
+	width: 100%;
+	height: 452px;
+	border: 1px solid #ccc;
+}
+
+/*左边显示*/
+.map_bus_div {
+	
+}
+
+.map_bus_div1 {
+	height: 32px;
+	border-bottom: solid 1px #c2d6f4;
+	line-height: 32px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.map_bus_title {
+	font-size: 16px;
+	font-weight: bolder;
+	color: rgb(40, 70, 161);
+}
+
+.map_bus_link {
+	font-size: 16px;
+	color: #2647a1;
+	margin-left: 10px;
+}
+
+.map_bus_save {
+	float: right;
+	margin-right: 10px;
+	line-height: 28px;
+	color: rgb(107, 132, 162);
+}
+
+.map_bus_colloct {
+	float: right;
+	margin-right: 30px;
+	margin-top: 7px;
+}
+
+.map_bus_div2 {
+	height: 20px;
+	margin-left: 10px;
+	padding: 4px 0;
+}
+
+.map_bus_road {
+	float: left;
+	line-height: 20px;
+	margin-right: 20px;
+}
+
+.map_bus_div2_noselect {
+	display: block;
+	float: left;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.map_bus_div2_select,.map_bus_div2_noselect:HOVER {
+	display: block;
+	background-color: #f44a60;
+	color: #fff;
+	float: left;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.map_bus_div3 {
+	padding: 10px;
+	height: 64px;
+}
+
+.map_bus_div3_l1 {
+	margin-top: 10px;
+	width: 420px;
+	text-align: center;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.map_bus_div3_l1 img {
+	margin: 0 5px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+.map_bus_middle img {
+	margin: 0 5px;
+	line-height: 22px;
+}
+
+.map_bus_refresh img {
+	margin: 12px 5px;
+}
+
+.map_bus_div3_l2 {
+	margin-top: 10px;
+	width: 80px;
+	text-align: left;
+	float: right;
+	padding: 8px 5px; 
+	border: 1px solid rgb(187, 206, 238);
+	background-color: rgb(236, 239, 246);
+	line-height: 20px;
+}
+
+.map_bus_refresh {
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin-top: 6px;
+	border-left: 1px solid rgb(187, 206, 238);
+	line-height: 40px;
+}
+
+.map_bus_refresh_botton {
+	padding-top: 10px;
+}
+
+.map_bus_middle {
+	float: left;
+	width: 75px;
+	height: 40px;
+	margin-top: 6px;
+}
+
+.map_bus_in {
+	float: left;
+}
+
+.map_bus_div3_l2_1 {
+	float: left;
+}
+
+.poupcontent_busRouteName {
+	display: block;
+	width: 114px;
+	height: 62px;
+	background-color: #2647a1;
+	color: #fff;
+	font-size: 24px;
+	border-radius: 5px;
+	line-height: 62px;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+}
+
+.map_bus_div4 {
+	margin-left: 10px;
+	color: #666666;
+	margin-bottom: 5px;
+}
+
+.map_bus_div5 {
+	display:none;
+}
+/*
+
+
+.map_bus_div5 img {
+	margin: 5px 0 0 5px;
+}
+*/
+.map_bus_div6 {
+	margin: 10px 5px;
+	width: 650px;
+
+	overflow: hidden;
+}
+
+.map_bus_div6_right,.map_bus_div6_left {
+	float: left;
+	display: block;
+	width: 20px;
+	height: 100%;
+	padding: 70px 0;
+}
+
+.map_bus_div6_right:HOVER,.map_bus_div6_left:HOVER {
+	background-color: #b2cfff;
+}
+
+.map_bus_div6_content {
+	background: url('../../image/common/map_bus_div5_bg.png') repeat-x;
+	background-position: top;
+	float: left;
+	width: 600px;
+
+	overflow: hidden;
+}
+
+.map_bus_div6 ul {
+	background: url('../../image/common/map_station_icon_line2.png') repeat-x;
+	background-position: 0 25px;
+	height: 300px;
+	list-style: none;
+	white-space: normal;
+}
+
+.map_bus_div6 ul li {
+	float: left;
+	display: inline;
+	width: 12px;
+	height: auto;
+	font-size: 12px;
+	word-wrap: break-word;
+	text-align: center;
+	margin-top: 40px;
+}
+.map_bus_div6 ul .busicon {
+	float: left;
+	display: inline;
+	width: 20px;
+	margin-top: 7px;
+}
+
+.map_bus_div6 ul .busicon img {
+	width: 20px;
+}

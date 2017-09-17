@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+     <!-- 配置DAO组件 -->
+	<bean id="downloadDao" class="com.sts.smartbus.download.dao.impl.DownloadDaoImpl">
+	<property name="hibernateTemplate" ref="hibernateTemplate"></property>
+	</bean>
+
+	<!-- 配置业务逻辑组件 -->
+ 	<bean id="downloadService" class="com.sts.smartbus.download.service.impl.DownloadServiceImpl">
+		<property name="downloadDao" ref="downloadDao"></property>
+	</bean>	
+
+
+	<!-- 创建实例 -->
+	<bean id="downloadAction" class="com.sts.smartbus.download.action.DownloadAction"
+		scope="prototype">
+		<property name="downloadService" ref="downloadService"></property>
+	</bean>
+
+</beans>

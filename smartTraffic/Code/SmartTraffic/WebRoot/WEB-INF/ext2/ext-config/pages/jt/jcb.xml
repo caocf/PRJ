@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ext-config>
+<textField type="hidden" id="year"/>
+
+						<text>
+<![CDATA[
+<div style='font-size:16px; text-align:center;margin-top:10%;margin-botton:0%'>
+公路养护里程按行政区划饼图分析
+(<a href='javascript:clickme(2006);'>  总表 </a> )
+</div>
+
+	]]>
+</text>
+					<crossReport>
+				<rowHeads>
+				  <rowHead desc="案卷来源"></rowHead>
+				</rowHeads>
+				<report-cols>
+					<crossCol desc="案卷数量(起)" type="kpiOther" alias="js_zlc" aggregation="sum" formatPattern="#,##0.000" />
+				</report-cols>
+				<report-rows>
+					<crossRow desc="案卷来源" type="frd" alias="name" aliasDesc="name" multi="true" />
+					<crossRow type="none" desc="合计"/>
+				</report-rows>
+				<ds><![CDATA[
+select xzqh, b.mname,  sum(JS_ZLC) val from MDM_GL_ZLC_LN a, mcode_xzqh_dtl b where a.xzqh = b.mid  ]]>
+				</ds>
+			</crossReport>	
+					
+		
+			
+</ext-config>

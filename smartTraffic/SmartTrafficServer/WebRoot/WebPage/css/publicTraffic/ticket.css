@@ -1,0 +1,109 @@
+@CHARSET "UTF-8";
+
+.layout1 {
+	margin: 0 auto;
+	width: 985px;
+	padding-left: 15px;
+	height: 32px;
+	border-bottom: solid 2px #5e79ec;
+}
+
+
+.layout2 {
+	margin: 0;
+	width: 970px;
+	padding: 0 15px;
+	height: 110px;
+}
+
+.layout2_left {
+	float: left;
+	height: 100px;
+	padding: 10px 0 0 0;
+	width: 710px;
+}
+
+.layout2_left_layout1 {
+	width: 100%;
+	
+	height: 50px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+.layout2_left_layout1 INPUT {
+	vertical-align: middle;	
+	margin: 0;
+}
+.layout2_label1,.layout2_label5{
+	vertical-align: middle;	
+	margin: 0;
+}
+.layout2_left_layout1 img {
+	vertical-align: middle;
+	margin: 0 10px;
+}
+
+.layout2_label4 {
+	vertical-align: middle;
+	margin-left: 40px;
+}
+
+
+.layout2_right {
+	float: left;
+	margin-top: 45px;
+	margin-left: 30px;
+}
+
+.layout4,.layout5 {
+	margin: 0 auto;
+	width: 1000px;
+	padding: 0 0 10px 0;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+}
+
+.layout4_label1,.layout5 LABEL {
+	font-weight: bold;
+}
+
+.layout5 LABEL {
+	float: left;
+}
+
+.layout5 .CRselectBox_small {
+	float: left;
+	margin-top: 8px
+}
+
+.layout6 {
+	margin: 0 auto;
+	width: 1000px;
+	padding: 0 0 10px 0;
+	min-height: 600px
+}
+/*公交概况修改*/
+#main_content_businfo{
+	margin: 0 10px 0 10px;
+	height: auto;
+	padding: 10px 0 10px 0;
+}
+.layout1_businfo{
+	margin:0 7px 0 8px;
+	padding-left: 15px;
+	height: 32px;
+	border-bottom: solid 2px #5e79ec;
+}
+.layout_businfo {
+	margin: 0 auto;
+	padding: 0 0 10px 0;
+	line-height: 30px;
+	vertical-align: middle;
+}
+.layout6_businfo{
+	margin: 0 auto;
+	padding: 0 0 10px 0;
+	min-height: 600px
+}

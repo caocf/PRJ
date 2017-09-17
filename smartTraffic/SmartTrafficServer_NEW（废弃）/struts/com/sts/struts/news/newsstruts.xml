@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="news" extends="cement-interceptor" namespace="/">
+		<action name="GetListNews" class="com.sts.news.action.NewsForPhoneAction"
+			method="GetListNews">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		<action name="GetDetailNews" class="com.sts.news.action.NewsForPhoneAction"
+			method="GetDetailNews">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchNewsTypeForWeb" class="com.sts.news.action.NewsForWebAction"
+			method="SearchNewsTypeForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchListNewsForWeb" class="com.sts.news.action.NewsForWebAction"
+			method="SearchListNewsForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="SearchDetailNewsForWeb" class="com.sts.news.action.NewsForWebAction"
+			method="SearchDetailNewsForWeb">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetBusListNews" class="com.sts.news.action.NewsForPhoneAction"
+			method="GetBusListNews">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetBusDetailNews" class="com.sts.news.action.NewsForPhoneAction"
+			method="GetBusDetailNews">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		
+		<action name="GetRoadNews" class="com.sts.news.action.NewsForPhoneAction"
+			method="GetRoadNews">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetRoadWorkNews" class="com.sts.news.action.NewsForPhoneAction"
+			method="GetRoadWorkNews">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

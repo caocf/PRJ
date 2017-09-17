@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.parkingdb.model.ParkingDB" table="ZHJTADMIN.Z_TCC_JBXX">
+		<id name="parkpointid" column="TCCBH"></id>
+		<property name="parktype" column="TCCLX"></property>
+		<property name="pointname" column="TCCMC"></property>
+		<property name="roadname" column="SSDLMC"></property>
+		<property name="gpslo" column="TCCJD"></property>
+		<property name="gpsla" column="TCCWD"></property>
+		<property name="parklotcount" column="ZCWS"></property>
+		<property name="chargemode" column="SFBZ"></property>
+	</class>
+	
+	<class name="com.sts.parkingdb.model.ParkingDBReal" table="ZHJTADMIN.Z_TCC_SSXX">
+		<id name="parkpointid" column="TCCBH"></id>
+		<property name="freecount" column="DQKCWS"></property>
+		<property name="updateTime" column="CWGXSJ"></property>
+	</class>
+</hibernate-mapping>

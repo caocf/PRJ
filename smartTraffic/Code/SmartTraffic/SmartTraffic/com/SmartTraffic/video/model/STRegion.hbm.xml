@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.SmartTraffic.video.model.STRegion" table="z_st_region"  >
+        <id name="regionId" type="integer">
+            <column name="region_id"/>
+            <generator class="assigned" />
+        </id>
+        <property name="regionName" type="string">
+            <column name="region_name"  />
+        </property>
+         <property name="regionHigh" type="integer">
+            <column name="region_high"  />
+        </property>
+          <property name="regionLevel" type="integer">
+            <column name="region_lever"  />
+        </property>
+          <property name="regionCellLsh" type="integer">
+            <column name="regionCell_lsh"  />
+        </property>
+        
+        </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.smartbus.model.Trace" table="ZHJTADMIN.Z_GJ_XLGJXX">
+		<id name="id" column="JQDJL"></id>
+		<property name="lineID" column="XLBH"></property>
+		<property name="direct" column="XLFX"></property>
+		<property name="lan" column="WD"></property>
+		<property name="lon" column="JD"></property>
+	</class>
+	
+	<class name="com.sts.smartbus.model.QRCode" table="ZHJTADMIN.Z_GJ_ZDJBXX">
+		<id name="id" column="ZDBH"></id>
+		<property name="qr" column="ZDEWM"></property>
+		<property name="lan" column="ZDWD"></property>
+		<property name="lon" column="ZDJD"></property>
+		<property name="name" column="ZDMC"></property>
+	</class>
+	
+	
+</hibernate-mapping>

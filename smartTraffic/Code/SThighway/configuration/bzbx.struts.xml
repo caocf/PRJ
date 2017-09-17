@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    
+    <!--                  标志标线配置信息                                                     -->
+	<package name="bzbxmanager" extends="cement-interceptor" namespace="/bzbxmanager">
+	    
+	    <!-- 标志标线列表  -->
+		<action name="bzbxlist" method="selectBzbxList"
+			class="com.highwaycenter.bzbx.action.BzbxManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		 <!-- 标志标线类型列表  -->
+		<action name="bzbxlxlist" method="selectBzbxlxList"
+			class="com.highwaycenter.bzbx.action.BzbxManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!-- 标志标线详情  -->
+		<action name="bzbxxq" method="selectBzbxQx"
+			class="com.highwaycenter.bzbx.action.BzbxManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!-- 新增标志标线  -->
+		<action name="savebzbx" method="saveBzbx"
+			class="com.highwaycenter.bzbx.action.BzbxManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!-- 编辑标志标线  -->
+		<action name="updatebzbx" method="updateBzbx"
+			class="com.highwaycenter.bzbx.action.BzbxManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		<!-- 删除标志标线  -->
+		<action name="deletebzbx" method="deleteBzbx"
+			class="com.highwaycenter.bzbx.action.BzbxManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 获取标志标线国标图片路径list -->
+		
+		<action name="chinesestandardlist" method="selectChineseStandard"
+			class="com.highwaycenter.bzbx.action.BzbxManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+      </package>
+	
+	<!--                  服务设施配置信息                                                     -->
+	<package name="fwssmanager" extends="cement-interceptor" namespace="/fwssmanager">
+	    
+	     <!-- 服务区列表  -->
+		<action name="fwqlist" method="selectFwqList"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		 <!-- 服务区详情  -->
+		<action name="fwqxq" method="selectFwqXq"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		  <!-- 收费站列表  -->
+		<action name="sfzlist" method="selectSfzList"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		 <!-- 收费站详情  -->
+		<action name="sfzxq" method="selectSfzXq"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		 <!-- 删除服务区  -->
+		<action name="deletefwq" method="deleteFwq"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		 <!-- 删除收费站  -->
+		<action name="deletesfz" method="deleteSfz"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 新增服务区  -->
+		<action name="savefwq" method="saveFwq"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 编辑服务区  -->
+		<action name="updatefwq" method="updateFwq"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 新增收费站  -->
+		<action name="savesfz" method="saveSfz"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 编辑收费站  -->
+		<action name="updatesfz" method="updateSfz"
+			class="com.highwaycenter.fwss.action.FwssManagerAction">
+			<result name="json" type="json"></result>
+		</action>
+	</package>
+
+	
+</struts>

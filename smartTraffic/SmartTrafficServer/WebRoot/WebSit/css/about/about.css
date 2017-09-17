@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+
+.layout1 {
+	height: 682px;
+	width: 1000px;;
+	border: 1px solid #999;
+	margin: 2px auto;
+}

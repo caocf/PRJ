@@ -1,0 +1,9 @@
+
+select ql_jszkdj, b.mname,  sum(ym) val from MDM_QL_SLYM a, mcode_ql_jszkdj b where a.ql_jszkdj = b.mid
+#if($year !='')
+          and year = '$year'
+#end
+
+
+group by ql_jszkdj, b.mname,  ql_jszkdj order by ql_jszkdj asc
+						

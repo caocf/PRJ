@@ -1,0 +1,1 @@
+select  a1.year_id as YEAR, a1.year_name as YEAR_desc, a2.MID as XZQH, a2.MNAME as XZQH_desc,sum(ZS) as ZS,sum(YM) as YM from MDM_QL_SLYM a0,code_year a1,MCODE_XZQH_DTL a2 where 1=1 and a0.YEAR= a1.year_id and a0.XZQH= a2.MID group by a1.year_id,a1.year_name,a2.MID,a2.MNAME, a2.PX order by  a1.year_id desc, a2.PX asc

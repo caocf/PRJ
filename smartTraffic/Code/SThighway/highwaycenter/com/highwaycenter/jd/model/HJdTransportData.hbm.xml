@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.jd.model.HJdTransportData" table="h_jd_transdata"  >
+        <id name="tddm" type="java.lang.Integer">
+            <column name="tddm"/>
+            <generator class="identity" />
+        </id>
+        <property name="lxdm" type="java.lang.String">
+            <column name="lxdm" length="50" >
+            </column>
+        </property>
+        <property name="lxmc" type="java.lang.String">
+            <column name="lxmc" length="200" >
+            </column>
+        </property>
+        <property name="gclc" type="java.lang.Double">
+            <column name="gclc" >
+            </column>
+        </property>
+        <property name="jdcdlshj" type="java.lang.Integer">
+            <column name="jdcdlshj" >
+            </column>
+        </property>
+        <property name="jdczrshj" type="java.lang.Integer">
+            <column name="jdczrshj" >
+            </column>
+        </property>
+        <property name="qcdlshj" type="java.lang.Integer">
+            <column name="qcdlshj" >
+            </column>
+        </property>
+        <property name="qczrshj" type="java.lang.Integer">
+            <column name="qczrshj" >
+            </column>
+        </property>
+        <property name="xxhc" type="java.lang.Integer">
+            <column name="xxhc" >
+            </column>
+        </property>
+        <property name="zxhc" type="java.lang.Integer">
+            <column name="zxhc" >
+            </column>
+        </property>
+        <property name="dxhc" type="java.lang.Integer">
+            <column name="dxhc" >
+            </column>
+        </property>
+        <property name="tdxhc" type="java.lang.Integer">
+            <column name="tdxhc" >
+            </column>
+        </property>
+        <property name="jzxc" type="java.lang.Integer">
+            <column name="jzxc" >
+            </column>
+        </property>
+        <property name="zxkc" type="java.lang.Integer">
+            <column name="zxkc" >
+            </column>
+        </property>
+        <property name="dkc" type="java.lang.Integer">
+            <column name="dkc" >
+            </column>
+        </property>
+        <property name="mtc" type="java.lang.Integer">
+            <column name="mtc" >
+            </column>
+        </property>
+        <property name="tlj" type="java.lang.Integer">
+            <column name="tlj" >
+            </column>
+        </property>
+        <property name="rlc" type="java.lang.Integer">
+            <column name="rlc" >
+            </column>
+        </property>
+        <property name="clc" type="java.lang.Integer">
+            <column name="clc" >
+            </column>
+        </property>
+        <property name="zxc" type="java.lang.Integer">
+            <column name="zxc" >
+            </column>
+        </property>
+        <property name="xsl" type="java.lang.Integer">
+            <column name="xsl" >
+            </column>
+        </property>
+        <property name="syjtl" type="java.lang.Integer">
+            <column name="syjtl" >
+            </column>
+        </property>
+        <property name="jtyjd" type="java.lang.Double">
+            <column name="jtyjd" >
+            </column>
+        </property>
+        <property name="tjsj" type="java.lang.String">
+            <column name="tjsj" >
+            </column>
+        </property>
+        </class>
+        </hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.jd.model.HJdCdtz" table="h_jd_cdtz"  >
+        <id name="cdtzbh" type="java.lang.Integer">
+            <column name="cdtzbh"/>
+            <generator class="identity" />
+        </id>
+        <property name="cdtz" type="java.lang.String">
+            <column name="cdtz" >
+            </column>
+        </property>
+        </class>
+</hibernate-mapping>

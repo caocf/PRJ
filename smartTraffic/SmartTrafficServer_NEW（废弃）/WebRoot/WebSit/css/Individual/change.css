@@ -1,0 +1,39 @@
+@CHARSET "utf-8";
+
+#main {
+	height: 700px;
+	width: 1000px;
+	margin: 0 auto;
+	height: auto;
+	padding: 0 0 10px 0;
+	margin-bottom: 600px;
+}
+
+.center {
+	margin: 0 auto;
+	margin-left: 50px;
+	width: 430px;
+	height: 230px;
+	float: left;
+	margin-top: 80px
+}
+
+.top {
+	width: 430px;
+	height: 50px;
+}
+
+.span {
+	font-size: 18px;
+	font-weight: bolder;
+	color: #333
+}
+
+.span2 {
+	width: 293px;
+	height: 36px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #999;
+	outline: medium
+}

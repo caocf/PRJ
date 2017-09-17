@@ -1,0 +1,9 @@
+
+select xzqh, b.mname,  sum(JS_ZLC) val from MDM_GL_ZLC_LN a, mcode_xzqh_dtl b where a.xzqh = b.mid
+#if($year !='')
+          and year = '$year'
+#end
+
+group by XZQH, b.mname,  px order by px asc
+
+						

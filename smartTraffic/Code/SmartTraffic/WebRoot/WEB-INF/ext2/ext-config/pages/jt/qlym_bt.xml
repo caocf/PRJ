@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="GBK"?>
+<ext-config>
+<textField type="hidden" id="year"/>
+
+			<table>
+				<tr>
+					<td>
+						<text>
+<![CDATA[
+<div style='font-size:16px; text-align:center;margin-top:10%;margin-botton:0%'>
+桥梁延米按行政区划饼图分析
+<a href='javascript:clickme(2006);'></a>
+</div>
+
+	]]>
+</text>
+					<chart shape="pie" xcol="mname" ycol="val"  width="355"
+						height="360">
+						<property>
+							<key name="ydesc" value="桥梁延米" />
+							<key name="xdesc" value="行政区划" />
+							<key name="formatCol" value="###,##0.000" />
+							<key name="unitCol" value="米" />
+							<key name="showLegend" value="true"/>
+							<key name="showLabel" value="true"/>
+							<key name="action" value="clickme" />
+							<key name="legendLayout" value="horizontal" />
+						</property>
+						<ds><![CDATA[
+select xzqh, b.mname,  sum(ym) val from MDM_QL_SLYM a, mcode_xzqh_dtl b where a.xzqh = b.mid
+#if($year !='')
+          and year = '$year'
+#end
+
+group by XZQH, b.mname,  px order by px asc
+
+						]]></ds>
+					</chart>	
+					</td>
+					
+					<td>
+						<text>
+<![CDATA[
+<div style='font-size:16px; text-align:center;margin-top:10%;margin-botton:0%'>
+桥梁延米按桥梁大小饼图分析
+<a href='javascript:clickme(2007);'></a>
+</div>
+
+	]]>
+</text>
+					<chart shape="pie" xcol="mname" ycol="val" width="340"
+						height="360">
+						<property>
+							<key name="ydesc" value="桥梁延米" />
+							<key name="xdesc" value="桥梁大小" />
+							<key name="formatCol" value="###,##0.000" />
+							<key name="unitCol" value="米" />
+							<key name="showLegend" value="true"/>
+							<key name="showLabel" value="true"/>
+							<key name="action" value="clickme" />
+                                                        <key name="legendLayout" value="horizontal" />
+						</property>
+						<ds><![CDATA[
+select ql_dx, b.mname,  sum(ym) val from MDM_QL_SLYM a, mcode_ql_dx b where a.ql_dx = b.mid
+#if($year !='')
+          and year = '$year'
+#end
+
+
+group by ql_dx, b.mname,  ql_dx order by ql_dx asc
+						]]></ds>
+					</chart>
+					</td>
+					
+					<td>
+						<text>
+<![CDATA[
+<div style='font-size:16px; text-align:center;margin-top:10%;margin-botton:0%'>
+桥梁延米按技术等级饼图分析
+<a href='javascript:clickme(2007);'></a>
+</div>
+
+	]]>
+</text>
+						<chart shape="pie" xcol="mname" ycol="val" width="360"
+						height="340">
+						<property>
+							<key name="ydesc" value="桥梁延米" />
+							<key name="xdesc" value="技术等级" />
+							<key name="formatCol" value="###,##0.000" />
+							<key name="unitCol" value="米" />
+							<key name="showLegend" value="true"/>
+							<key name="showLabel" value="true"/>
+							<key name="action" value="clickme" />
+                                                        
+                                                        <key name="legendLayout" value="horizontal" />
+						</property>
+						<ds><![CDATA[
+select ql_jszkdj, b.mname,  sum(ym) val from MDM_QL_SLYM a, mcode_ql_jszkdj b where a.ql_jszkdj = b.mid
+#if($year !='')
+          and year = '$year'
+#end
+
+
+group by ql_jszkdj, b.mname,  ql_jszkdj order by ql_jszkdj asc
+						]]></ds>
+					</chart>
+					</td>
+				</tr>
+			</table>	
+</ext-config>

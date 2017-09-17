@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">           
+  
+
+	<bean id="suggestionAction" class="com.sts.suggstion.action.SuggestionAction" scope="prototype">
+		<property name="suggestionService" ref="suggestionService"  />
+	</bean>
+
+	<bean id="suggestionService" class="com.sts.suggstion.service.SuggestionService" scope="prototype">
+		<property name="suggestionDao" ref="suggestionDao"  />
+		<property name="suggestionTypeDao" ref="suggestionTypeDao"  />
+	</bean>
+	
+	<bean id="suggestionDao" class="com.sts.suggstion.dao.SuggestionDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplate"  />
+	</bean>
+	
+	
+	<bean id="suggestionTypeAction" class="com.sts.suggstion.action.SuggestionTypeAction" scope="prototype">
+		<property name="suggestionTypeService" ref="suggestionTypeService"  />
+	</bean>
+
+	<bean id="suggestionTypeService" class="com.sts.suggstion.service.SuggestionTypeService" scope="prototype">
+		<property name="suggestionTypeDao" ref="suggestionTypeDao"  />
+	</bean>
+	
+	<bean id="suggestionTypeDao" class="com.sts.suggstion.dao.SuggestionTypeDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplate"  />
+	</bean>
+	
+	
+	
+	<bean id="appSuggestionAction" class="com.sts.suggstion.action.AppSuggestionAction" scope="prototype">
+		<property name="appSuggestionService" ref="appSuggestionService"  />
+	</bean>
+
+	<bean id="appSuggestionService" class="com.sts.suggstion.service.AppSuggestionService" scope="prototype">
+		<property name="appSuggestionDao" ref="appSuggestionDao"  />
+	</bean>
+	
+	<bean id="appSuggestionDao" class="com.sts.suggstion.dao.AppSuggestionDao" scope="prototype">
+		<property name="hibernateTemplate" ref="hibernateTemplate"  />
+	</bean>
+	
+</beans>

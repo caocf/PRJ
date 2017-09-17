@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    
+    <!--                   路线信息                                                     -->
+	<package name="lxjbxxlist" extends="cement-interceptor" namespace="/lxjbxxlist">
+	    <!--  路线概况列表  -->
+		<action name="lxgklist" method="selectLxgkList"
+			class="com.highwaycenter.lxjbxx.action.LxjbxxListAction">
+			<result name="json" type="json"></result>
+			<result name="autfail" >/WEB-INF/page/login/login.jsp</result>
+		</action>
+		
+         <!--  路线详情列表  不使用-->
+		<!-- <action name="lxqxlist" method="selectLxxqList"
+			class="com.highwaycenter.lxjbxx.action.LxjbxxListAction">
+			<result name="json" type="json"></result>
+		</action> -->
+		
+	    <!--  路线详情  -->
+		<action name="lxqx" method="selectLxxq"
+			class="com.highwaycenter.lxjbxx.action.LxjbxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+		 <!--  编辑桥梁路线简介  -->
+		<action name="editlwintroduce" method="editLxqlIntroduce"
+			class="com.highwaycenter.lxjbxx.action.LxjbxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+			    <!--  路线详情  -->
+		<action name="lwintroduce" method="selectLxqlIntroduce"
+			class="com.highwaycenter.lxjbxx.action.LxjbxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+	
+		
+		  <!--  行政区划列表  -->
+		<!-- <action name="xzqhlist" method="selectXzqhList"
+			class="com.highwaycenter.lxjbxx.action.LxjbxxListAction">
+			<result name="json" type="json"></result>
+		</action> -->
+	</package>  
+	
+	<!--                   桥梁信息                                                     -->
+	<package name="qljbxxlist" extends="cement-interceptor" namespace="/qljbxxlist">
+
+
+		
+		  <!--  行政区划列表  -->
+		<action name="xzqhlist" method="selectXzqhList"
+			class="com.highwaycenter.qljbxx.action.QljbxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+         <!--  桥梁概况列表  -->
+		<action name="qlgklist" method="selectQlgkList"
+			class="com.highwaycenter.qljbxx.action.QljbxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+	    <!--  桥梁详情列表  不使用-->
+		<!-- <action name="qlqxlist" method="selectQlxqList"
+	    	class="com.highwaycenter.qljbxx.action.QljbxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+	 -->
+		
+		  <!--  桥梁详情 -->
+		<action name="qlqx" method="selectQlxq"
+			class="com.highwaycenter.qljbxx.action.QljbxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+	</package>  
+	
+	<!--                   通阻信息                                                    -->
+	<package name="tzxxlist" extends="cement-interceptor" namespace="/tzxxlist">
+	    <!--  通阻信息列表  -->
+		<action name="tzxxlist" method="selectTzxxList"
+			class="com.highwaycenter.tzxx.action.TzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+         <!--  通阻信息详情  -->
+		<action name="tzxxxq" method="selectTzxxXq"
+			class="com.highwaycenter.tzxx.action.TzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+	    <!--  桥梁详情列表  不使用-->
+		<!-- <action name="qlqxlist" method="selectQlxqList"
+	    	class="com.highwaycenter.qljbxx.action.QljbxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+	 -->
+		
+		  <!-- 通阻类别列表 -->
+		<action name="tzcolumnlist" method="selectColumnList"
+			class="com.highwaycenter.tzxx.action.TzxxListAction">
+			<result name="json" type="json"></result>
+		</action>
+	</package>  
+	
+	
+	
+	<!--                   交调信息                                                    -->
+	<package name="jxdczxx" extends="cement-interceptor" namespace="/jxdczxx">
+	    <!--  调查站信息详情  -->
+		<action name="dczxx" method="selectJczxxXq"
+			class="com.highwaycenter.jd.action.JxdczxxAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 下拉列表 -->
+		<action name="optionlist" method="selectOptionList" class="com.highwaycenter.jd.action.JxdczxxAction">
+		    <result name="json" type="json"></result>
+		</action>
+		<!-- 交通信息列表 -->
+		<action name="dczxxlist" method="selectDczxxList" class="com.highwaycenter.jd.action.JxdczxxAction">
+		    <result name="json" type="json"></result>
+		</action>
+		
+		<!-- 交通量数据查询接口 -->
+		<action name="transdatalist" method="selectTransDataList" class="com.highwaycenter.jd.action.JxdczxxAction">
+		    <result name="json" type="json"></result>
+		</action>
+		<!-- 实时拥挤度查询接口 -->
+		<action name="timecs" method="selectTransDataTimeCS" class="com.highwaycenter.jd.action.JxdczxxAction">
+		    <result name="json" type="json"></result>
+		</action>
+		
+	</package>  
+	
+	
+	<!-- 视频信息 -->
+	<package name="videolist" extends="cement-interceptor" namespace="/videolist">
+	
+		<!--视频插件下载 -->
+		<action name="exedownload" method="downloadExe"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 更新数据库设备区域组织信息 -->
+		<action name="updatesqldate" method="selectAllDCCR"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+			<!-- 更新数据库区域设备关系信息 -->
+		<action name="updatesqlconnection" method="selectRegionCamera"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		
+				<!--查询所有设备-->
+		<action name="devicelist" method="selectDeviceList"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+			<!--查询所有监控-->
+		<action name="cameralist" method="selectCameraList"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!--查询通道-->
+		<action name="cameradto" method="selectCameraDTO"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!--查询控制中心-->
+		<action name="controlunitlist" method="selectControlUnitList"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!--查询区域-->
+		<action name="regionlist" method="selectRegionList"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!--查询区域下的设备-->
+		<action name="regioncameralist" method="selectRegionCameraList"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 查询维护信息 列表-->
+		<action name="spsxxlist" method="selectSpSxxList"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 查询维护信息 详情-->
+		<action name="spsxxunique" method="selectSpSxxUnique"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!-- 维护信息下拉列表 -->
+		<action name="spsxxoption" method="selectSpSxxoption"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+				<!-- 新增维护信息-->
+		<action name="savespsxx" method="saveSpSxx"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+				<!-- 编辑维护信息 -->
+		<action name="updatespsxx" method="updateSpSxx"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+				<!-- 删除维护信息 -->
+		<action name="deletespsxx" method="deleteSpSxx"
+			class="com.highwaycenter.video.action.VideoSurveillanceAction">
+			<result name="json" type="json"></result>
+		</action>
+	</package>
+	
+	
+	<!-- 获取k桩号 -->
+	<package name="transferPre" extends="cement-interceptor" namespace="/transferPre">
+
+		<action name="transferPre" method="transferPre"
+			class="com.highwaycenter.map.action.KstakeQueryAction">
+			<result name="json" type="json"></result>
+		</action>
+	</package>
+	
+	
+</struts>      

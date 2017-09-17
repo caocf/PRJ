@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.suggstion.model.Suggestion" table="st_suggestion">
+		<id name="id" column="suggestionID"></id>
+		<property name="type" column="suggestionType"></property>
+		<property name="title" column="suggestionTitle"></property>
+		<property name="content" column="suggestionContent"></property>
+		<property name="contact" column="suggestionContact"></property>
+		<property name="suggestionPersion" column="suggestionPersion"></property>
+<!--  		<property name="date" column="suggestionTime"></property>    -->
+
+	</class>
+	
+	
+	<class name="com.sts.suggstion.model.SuggestionType" table="st_suggestiontype">
+		<id name="id" column="suggestionTypeID"></id>
+		<property name="name" column="suggestionTypeName"></property>
+
+
+	</class>
+	
+	<class name="com.sts.suggstion.model.SuggestionDepartment" table="st_suggestiondepartment">
+		<id name="id" column="suggestionDepartmentID"></id>
+		<property name="name" column="suggestionDepartmentName"></property>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sts.taxi.model.TaxiOrder" table="st_ordertaxi">
+		<id name="id" column="id"></id>
+		<property name="userid" column="userid"></property>
+		<property name="start" column="start"></property>
+		<property name="end" column="end"></property>
+		<property name="date" column="date"></property>
+		<property name="status" column="status"></property>
+		<property name="company" column="company"></property>
+		<property name="alert" column="alert"></property>
+		<property name="phone" column="phone"></property>
+	</class>
+	
+</hibernate-mapping>

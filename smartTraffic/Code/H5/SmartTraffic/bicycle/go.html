@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+		<title>步行规划</title>
+		<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+		<style type="text/css">
+			#panel {
+				position: fixed;
+				background-color: white;
+				max-height: 30%;
+				overflow-y: auto;
+				top: 10px;
+				right: 10px;
+				width: 280px;
+			}
+		</style>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3a1316dfb76f09e882251604b588fdb7&plugin=AMap.Walking"></script>
+		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+	</head>
+
+	<body>
+		<div id="container"></div>
+		<div id="panel"></div>
+		<script type="text/javascript" src="../js/mui.js"></script>
+		<script type="text/javascript" src="../js/app.js"></script>
+		<script type="text/javascript">
+			var start = JSON.parse(localStorage.bicysleStart);
+			var end = JSON.parse(localStorage.bicysleEnd);
+			var list = [
+				[start.longtitude, start.lantitude],
+				[end.Longitude, end.Latitude]
+			];
+			var ps = app.convert(list);
+			var map = new AMap.Map("container", {
+				resizeEnable: true,
+				center: [start.longtitude, start.lantitude], //地图中心点
+				zoom: 13 //地图显示的缩放级别
+			});
+			//步行导航
+			var walking = new AMap.Walking({
+				map: map,
+				panel: "panel"
+			});
+			//根据起终点坐标规划步行路线
+			walking.search(ps[0], ps[1]);
+		</script>
+	</body>
+
+</html>

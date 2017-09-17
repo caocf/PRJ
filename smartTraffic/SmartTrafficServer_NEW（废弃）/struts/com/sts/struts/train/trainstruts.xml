@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="train" extends="cement-interceptor" namespace="/">
+		<action name="GetTrainSchedule" class="com.sts.train.action.TrainScheduleAction"
+			method="GetTrainSchedule">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetTrainCode" class="com.sts.train.action.TrainCodeAction"
+			method="GetTrainCode">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetTicketsByTrainNoAndStartEnd" class="com.sts.train.action.TrainScheduleAction"
+			method="GetTicketsByTrainNoAndStartEnd">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetStationInfoByTrainno" class="com.sts.train.action.TrainScheduleAction"
+			method="GetStationInfoByTrainno">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+		
+		<action name="GetTrainStationDetailUrl" class="com.sts.train.action.TrainScheduleAction"
+			method="GetTrainStationDetailUrl">
+			<result name="success" type="json"/>
+			<result name="error"/>
+		</action>
+	</package>
+</struts>    

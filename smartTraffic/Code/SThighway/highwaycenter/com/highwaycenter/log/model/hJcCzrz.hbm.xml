@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.highwaycenter.log.model.HJcCzrz" table="h_jc_czrz"  >
+        <id name="rzbh" type="java.lang.Integer">
+            <column name="rzbh" />
+            <generator class="identity" />
+        </id>
+      
+        <property name="rzlxbh" type="java.lang.Integer">
+            <column name="rzlxbh" />
+        </property>
+        <property name="czr" type="java.lang.Integer">
+            <column name="czr">
+             </column>
+        </property>
+        <property name="rzbt" type="java.lang.String">
+            <column name="rzbt" length="1000">
+             </column>
+        </property>
+        <property name="rzmc" type="java.lang.String">
+            <column name="rzmc" length="4000">
+             </column>
+        </property>
+        <property name="czsj" type="java.sql.Timestamp">
+            <column name="czsj" length="19">
+             </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    
+    <!--                  高级搜索                                                     -->
+	<package name="advancedsearch" extends="cement-interceptor" namespace="/advancedsearch">
+	    
+	    <!--  高级搜索字段查询  -->
+		<action name="advancedsearch" method="advancedSearch"
+			class="com.highwaycenter.common.action.SearchAction">
+			<result name="json" type="json"></result>
+		</action>
+		  <!--  字段下拉列表查询  -->
+		<action name="searchselect" method="searchSelect"
+			class="com.highwaycenter.common.action.SearchAction">
+			<result name="json" type="json"></result>
+		</action>
+		<action name="selectbycondition" method="selectListByCondition"
+			class="com.highwaycenter.common.action.SearchAction">
+			<result name="json" type="json"></result>
+		</action>
+	
+		
+	</package> 
+	
+	<package name="authoritycheck" extends="cement-interceptor" namespace="/authoritycheck">
+	    
+	    <!-- 根据权限对应的名字校验  -->
+		<action name="checkbyname" method="checkAuthorityByname"
+			class="com.highwaycenter.common.action.AuthorityCheckAction">
+			<result name="json" type="json"></result>
+		</action>
+		  <!--  校验统计分析权限 -->
+		<action name="checkstatictis" method="checkStatisticsAuthority"
+			class="com.highwaycenter.common.action.AuthorityCheckAction">
+			<result name="json" type="json"></result>
+		</action>
+		<!--  查询所有权限 -->
+		<action name="selectallaut" method="selectAllAut"
+			class="com.highwaycenter.common.action.AuthorityCheckAction">
+			<result name="json" type="json"></result>
+		</action>
+	
+		
+	</package> 
+	
+</struts>

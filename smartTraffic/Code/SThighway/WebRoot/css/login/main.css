@@ -1,0 +1,287 @@
+@CHARSET "UTF-8";
+html,body{
+	height:100%;
+	width:100%;
+	background:url("../../image/login/main_back.png") ;
+	text-align:center;
+    margin:0px;
+    background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	-moz-background-size:cover;
+	-webkit-background-size:cover; 	
+	font-family:'微软雅黑';
+    font-size:18px;
+    /* font-weight:normal; */
+    color:#ffffff; 
+    background:#fffff; 
+    min-height:800px;
+    min-width:1100px;
+    _height:800px; 
+ /*    over-flow:auto; */
+}
+  .mainall{
+	width:100%;
+	height:100%;
+	    zoom:1; 
+	   
+} 
+.mainstyle{  
+	display: inline-block;
+    width:1035px;  
+     position:absolute ;  
+    text-align:center;
+     left:50%;
+     top:10%; 
+     margin-left:-517px;  
+/*      min-height:699px;
+    _height:699px;   */
+	
+}
+.logintop{	
+	display: inline-block;
+	text-align:center;
+	clear:both;
+    float:left;
+    width:100%;
+    word-wrap:normal;
+    margin-bottom:30px;
+    
+}
+
+.p1{
+	text-align:center;
+    margin-left:0px;
+    height:65px;
+    font-family:'黑体';
+    font-size:34px;
+    font-weight:bold;
+    color:#ffffff;  
+    width:100%;
+   /*  display:table;  */
+    vertical-align: middle;
+   }
+
+   .p1 label{
+    vertical-align:middle; 
+    display:table-cell;   
+    height:65px;
+    line-height:65px;
+   /*  margin-left:12px; */
+   }
+
+.userdiv{
+   z-index:99;
+   clear:both;
+   width:136px;
+   position:absolute;
+   right:0px;
+   top:62px;
+   	font-family:'微软雅黑';
+    font-size:14px;
+    /* font-weight:normal; */
+    color:#333333; 
+     display:none;  
+    
+}
+.userset{
+    width:100%;
+	height:40px;
+	background:#ffffff;
+	border-bottom:1px solid #DDDDDD;
+	cursor:pointer;
+}
+
+
+.logout{
+    width:100%;
+	height:40px;
+	background:#ffffff;
+	border-bottom:0px ;
+	cursor:pointer;
+}
+
+
+.maindiv{
+	display: inline-block;
+	width:100%;
+    margin:0px auto;  
+}
+.main_left{
+	width:403px;;
+	display: inline-block;
+	float:left;
+}
+.main_middle{
+	float:left;
+	width:408px;
+	margin-left:15px;
+	display: inline-block;
+	/* -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71);  */
+}
+.main_right{
+	float:left;
+	width:194px;
+	
+	margin-left:15px;
+
+}
+.routediv{
+	display: inline-block;
+    width:403px;
+    height:162px;
+	cursor: pointer;
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+}
+
+.tzxxdiv{
+	width:194px;
+    height:162px;
+	cursor: pointer;
+	float:left;
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+}
+.vediodiv{
+	display: inline-block;
+	width:194px;
+	height:162px;
+	margin-left:15px;
+	*padding-left:15px;
+	cursor: pointer;
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+}
+.mapdiv{
+	display: inline-block;
+	width:408px;
+	height:339px;
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    cursor: pointer;
+}
+.lawdiv{
+	display: inline-block;
+	width:408px;
+	height:162px;
+	margin-top:15px;
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    cursor: pointer;
+}
+/* .mapbottom{
+	margin-top:208px;
+	background:url("../../image/login/mapbottom.png");
+	width:348px;
+	height:140px;
+	filter: alpha(opacity=80); 
+	opacity: 0.8;
+	background:rgba(0.8) ; 实现FF背景透明，文字不透明
+    filter:Alpha(opacity=80);实现IE背景透明 
+   
+   	
+} */
+/* .mapbottom label{
+	margin-left:50px;
+	height:140px;
+	line-height:140px;
+	position:relative;
+	color:#ffffff; 
+	cursor: pointer;
+} */
+.managerdiv{
+	display: inline-block;
+    float:left;
+    width:194px;
+    height:162px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 	
+}
+.transportdiv{
+	display: inline-block;
+    float:left;
+    width:194px;
+    height:162px;
+    margin-top:15px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+}
+
+
+.statisticsdiv{
+	display: inline-block;
+	width:403px;
+	height:162px;
+	margin-top:15px;
+	cursor: pointer;
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+}
+
+
+.datadiv{
+	display: inline-block;
+	float:left;
+	width:194px;
+	height:162px;
+	margin-top:15px;
+	cursor: pointer;
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+    box-shadow: 1px 1px 3px rgba(0,0,0,.71); 
+}
+
+.footer{
+	display: inline-block;
+	clear:both;
+	text-align:center;
+    font-size:12px;
+    width:100%;
+    *padding-top:843px;
+   /*  margin-top:843px;  */
+    color:#cccccc; 
+   /*  margin-top:90px; */
+ }
+
+.versiondiv 
+{
+	height:75px;
+	/* opacity: 0.2; */
+    filter: alpha(opacity=20); 
+    filter:Alpha(opacity=20);
+	background: #000000;
+	 background:rgba(0,0,0,0.2); 
+     
+     color:#cccccc; 
+      background:rgba(0.2); 
+      position:static; IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 
+     *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+}
+.versiondiv label{
+	height:75px;
+    line-height:75px;
+    color:#cccccc; 
+     position:relative; 
+}
+.whitediv{
+	background:#ffffff;
+	height:12px;
+}
+.yellowdiv{
+	background:#f1a420;
+	height:24px;
+}
+

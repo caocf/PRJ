@@ -1,0 +1,76 @@
+@CHARSET "UTF-8";
+
+.CRselectBox {
+	cursor: pointer;
+	display: block;
+	height: 30px;
+	margin: 5px 0;
+	background: url('../../image/suggest/select_box_off.png') no-repeat
+		right;
+	float: left;
+}
+
+.CRselectBoxHover {
+	background-image: url("../../image/suggest/select_box_on.png");
+	background-repeat: no-repeat;
+}
+
+.CRselectBox a.CRselectValue {
+	display: block;
+	margin: 0px 1px 2px 0;
+	padding: 0 20px 0 10px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000;
+	overflow: hidden;
+	position: relative;
+	font-weight: bold;
+}
+
+.CRselectBoxOptions {
+	background: #FFFFFF;
+	border: 1px solid #cbcccf;
+	margin-left: -1px;
+	list-style: none;
+	z-index: 90;
+	position: absolute;
+	margin-top: -1px;
+	display: none;
+	padding-left: 42px;
+	border-top: 0px;
+}
+
+.CRselectBoxOptions a {
+	color: #000;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 12px;
+	background: #fff;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-left: -42px;
+}
+
+.CRselectBoxOptions a:hover {
+	background: #cbcccf
+}
+
+.CRselectBoxOptions a.selected {
+	background: #cbcccf;
+	margin-left: -42px;
+	margin-top: -1px;
+	padding-top: 4px;
+}
+
+.CRselectBox a {
+	outline: none;
+	text-decoration: none;
+}
+
+.CRselectBox a:focus {
+	outline: none;
+	text-decoration: none;
+}
