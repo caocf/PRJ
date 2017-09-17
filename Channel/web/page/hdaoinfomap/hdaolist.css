@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body {
+    font-family: 微软雅黑;
+    background-color: white;
+    min-width: 1000px;
+}
+
+.table th {
+    text-align: center;
+}
+
+.infoline {
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #666666;
+    font-weight: bold;
+}
+
+.infodetailrow {
+    min-height: 44px;
+    line-height: 44px;
+    background: #f5f5f5;
+}
+
+.infodetailkey {
+    min-height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #666666;
+    background: #f5f5f5;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis;
+}
+
+.infodetailval {
+    min-height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #333333;
+    background: white;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis;
+}

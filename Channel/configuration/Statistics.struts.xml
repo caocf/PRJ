@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="statistics" extends="cement-interceptor" namespace="/statistics">
+        <action name="queryggtable" method="queryGgTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="yuebao" type="redirect">/page/tongjibaobiao/fading/gugan/yuedu.jsp
+            </result>
+            <result name="jibao" type="redirect">/page/tongjibaobiao/fading/gugan/jidu.jsp
+            </result>
+        </action>
+        <action name="queryzxtable" method="queryZxTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="yuebao" type="redirect">/page/tongjibaobiao/fading/qita/yuedu.jsp
+            </result>
+            <result name="jibao" type="redirect">/page/tongjibaobiao/fading/qita/jidu.jsp
+            </result>
+        </action>
+        <action name="queryzxgctable" method="queryZxgcTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="yuebao" type="redirect">/page/tongjibaobiao/fading/zhuanxiang/yuedu.jsp
+            </result>
+            <result name="jibao" type="redirect">/page/tongjibaobiao/fading/zhuanxiang/jidu.jsp
+            </result>
+        </action>
+        <action name="querysstable" method="querySsTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/sheding/hdzyss/baobiao.jsp
+            </result>
+        </action>
+        <action name="querylctable" method="queryLcTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/sheding/hdxz/baobiao.jsp
+            </result>
+        </action>
+        <action name="querylcfltable" method="queryLcflTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/sheding/hdlcfl/baobiao.jsp
+            </result>
+        </action>
+        <action name="queryqltable" method="queryQlTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/hdyxssfl/ql.jsp
+            </result>
+        </action>
+        <action name="queryhbtable" method="queryHbTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/hdyxssfl/hb.jsp
+            </result>
+        </action>
+        <action name="querymttable" method="queryMtTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/hdyxssfl/mt.jsp
+            </result>
+        </action>
+        <action name="querygxtable" method="queryGxTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/hdyxssfl/gx.jsp
+            </result>
+        </action>
+        <action name="exportggtable" method="exportGgTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exportzxtable" method="exportZxTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exportzxgctable" method="exportZxgcTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exportlctable" method="exportLcTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exportlcfltable" method="exportLcflTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exportsstable" method="exportSsTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exporthdyxssflqltable" method="exportHdyxssflQlTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+
+        <action name="exporthdyxssflmttable" method="exportHdyxssflMtTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+
+        <action name="exporthdyxssflhbtable" method="exportHdyxssflHbTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+
+        <action name="exporthdyxssflgxtable" method="exportHdyxssflGxTable"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryjsy61table" method="queryJsy61Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/fading/jiaoshuiyun/jiaoshuiyuntable.jsp
+            </result>
+        </action>
+        <action name="exportjsy61table" method="exportJsy61Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryjsy62table" method="queryJsy62Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/fading/jiaoshuiyun/jiaoshuiyuntable.jsp
+            </result>
+        </action>
+        <action name="exportjsy62table" method="exportJsy62Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryjsy63table" method="queryJsy63Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/fading/jiaoshuiyun/jiaoshuiyuntable.jsp
+            </result>
+        </action>
+        <action name="exportjsy63table" method="exportJsy63Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryjsy64table" method="queryJsy64Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/fading/jiaoshuiyun/jiaoshuiyuntable.jsp
+            </result>
+        </action>
+        <action name="exportjsy64table" method="exportJsy64Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryjsy65table" method="queryJsy65Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/fading/jiaoshuiyun/jiaoshuiyuntable.jsp
+            </result>
+        </action>
+        <action name="exportjsy65table" method="exportJsy65Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryjsy671table" method="queryJsy671Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="success" type="redirect">/page/tongjibaobiao/fading/jiaoshuiyun/jiaoshuiyuntable.jsp
+            </result>
+        </action>
+        <action name="exportjsy671table" method="exportJsy671Table"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryhdql" method="queryHdQl"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/ghdzyss/ql.jsp
+            </result>
+        </action>
+        <action name="exporthdql" method="exportHdQl"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryhdgx" method="queryHdGx"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/ghdzyss/gx.jsp
+            </result>
+        </action>
+        <action name="exporthdgx" method="exportHdGx"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryhdhb" method="queryHdHb"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/ghdzyss/hb.jsp
+            </result>
+        </action>
+        <action name="exporthdhb" method="exportHdHb"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryhdmt" method="queryHdMt"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/ghdzyss/mt.jsp
+            </result>
+        </action>
+        <action name="exporthdmt" method="exportHdMt"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryhdmcql" method="queryHdmcQl"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/ghdzysshdmc/ql.jsp
+            </result>
+        </action>
+        <action name="queryhdmchb" method="queryHdmcHb"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/ghdzysshdmc/hb.jsp
+            </result>
+        </action>
+        <action name="queryhdmcgx" method="queryHdmcGx"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/ghdzysshdmc/gx.jsp
+            </result>
+        </action>
+        <action name="queryhdmcmt" method="queryHdmcMt"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/ghdzysshdmc/mt.jsp
+            </result>
+        </action>
+        <action name="exporthdmcql" method="exportHdmcQl"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exporthdmchb" method="exportHdmcHb"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exporthdmcgx" method="exportHdmcGx"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exporthdmcmt" method="exportHdmcMt"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exporthdsyn" method="exportHdsyn"
+                class="com.channel.statistics.StatisticsAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+    </package>
+</struts>
+

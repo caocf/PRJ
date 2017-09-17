@@ -1,0 +1,102 @@
+.corn {
+    background: url("../../img/line_italic.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+
+#multidivselhdao {
+    text-align: center;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-style: hidden;
+}
+
+#multidivselgcz {
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-style: solid;
+}
+
+#multidivnewselhdao {
+    text-align: center;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-style: hidden;
+}
+
+#multidivnewselgcz {
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-style: solid;
+}
+
+#multidivupdateselhdao {
+    text-align: center;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-style: hidden;
+}
+
+#multidivupdateselgcz {
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-style: solid;
+}
+
+
+#multidivselhdaobyship {
+    text-align: center;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-style: hidden;
+}
+
+#multidivselgczbyship {
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-style: solid;
+}
+
+#multidivnewselhdaobyship {
+     text-align: center;
+     border-bottom-right-radius: 0;
+     border-top-right-radius: 0;
+     border-right-style: hidden;
+ }
+
+#multidivnewselgczbyship {
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-style: solid;
+}
+
+#multidivupdateselhdaobyship {
+    text-align: center;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-style: hidden;
+}
+
+#multidivupdateselgczbyship {
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left-style: solid;
+}
+
+#formnew table td{
+    border:0px;
+}
+
+#formview table td{
+    border:0px;
+}
+
+#formupdate table td{
+    border:0px;
+}

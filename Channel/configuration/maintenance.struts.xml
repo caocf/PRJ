@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="maintenance" extends="cement-interceptor"
+             namespace="/maintenance">
+        <action name="queryggstarttime" method="queryGgStarttime"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryzxstarttime" method="queryZxStarttime"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryzxgcstarttime" method="queryZxgcStarttime"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querymainbyid" method="queryMainById"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querymaintenances" method="queryMaintenances"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delmaintenance" method="delMaintenance"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addmaintenance" method="addMaintenance"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatemaintenance" method="updateMaintenance"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querybranchbyid" method="queryBranchById"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querybranches" method="queryBranches"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delbranch" method="delBranch"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addbranch" method="addBranch"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatebranch" method="updateBranch"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryalljsdw" method="queryAllJsdw"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryzxgcbyid" method="queryZxgcById"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryzxgcs" method="queryZxgcs"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delzxgc" method="delZxgc"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addzxgc" method="addZxgc"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatezxgc" method="updateZxgc"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addcyhfj" method="addCyhfj"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delcyhfj" method="delCyhfj"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querycyhybb" method="queryCyhybb"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querylastyd" method="queryLastYd"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addcyhybb" method="addCyhybb"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delcyhybb" method="delCyhybb"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatecyhybb" method="updateCyhybb"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="downloadcyhfj" method="downloadCyhfj"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="downloadyjqtgcfj" method="downloadYjqtgcfj"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryyjqtgcbyid" method="queryYjqtgcById"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addyjqtgc" method="addYjqtgc"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delyjqtgc" method="delYjqtgc"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateyjqtgc" method="updateYjqtgc"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchyjqtgc" method="searchYjqtgc"
+                class="com.channel.maintenance.action.MaintenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+</struts>
+

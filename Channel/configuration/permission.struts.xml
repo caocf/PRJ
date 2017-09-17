@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="permission" extends="cement-interceptor">
+        <action name="toPermManager" method="toPermManager"
+                class="com.channel.permission.PermissionAction">
+            <result name="success">/page/systemwh/perm/PM.jsp</result>
+        </action>
+
+        <action name="addPermGroup" method="addPermGroup"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="delPermGroup" method="delPermGroup"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="updatePermGroup" method="updatePermGroup"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="queryPermGroups" method="queryPermGroups"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="queryPermGroupPerms" method="queryPermGroupPerms"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="queryPermGroupPerms_r" method="queryPermGroupPerms_r"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="addPerm" method="addPerm"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="delPerms" method="delPerms"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="updatePerm" method="updatePerm"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="addRole" method="addRole"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="updateRole" method="updateRole"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="delRole" method="delRole"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryRoles" method="queryRoles"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryRolesByXzqh" method="queryRolesByXzqh"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryRolePerms" method="queryRolePerms"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="bindRolePerms" method="bindRolePerms"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="delBindRolePerms" method="delBindRolePerms"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="queryRoleUsers" method="queryRoleUsers"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="queryRoleUserInfos" method="queryRoleUserInfos"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="bindRoleUsers" method="bindRoleUsers"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="delBindRoleUsers" method="delBindRoleUsers"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="queryUserPerms" method="queryUserPerms"
+                class="com.channel.permission.PermissionAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+</struts>
+

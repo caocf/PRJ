@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="channelmanage" extends="cement-interceptor"
+             namespace="/channelmanage">
+        <action name="addchannelmanage" method="addChannelManage"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delchannelmanage" method="delChannelManage"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatechannelmanage" method="updateChannelManage"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querychannelmanage" method="queryChannelManage"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querychannelmanagebyid" method="queryChannelManageById"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="redirect">
+                /page/hangzheng/xzxk.jsp
+            </result>
+        </action>
+        <action name="addargument" method="addArgument"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delargument" method="delArgument"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateargument" method="updateArgument"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryargument" method="queryArgument"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryargumentbyid" method="queryArgumentById"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="redirect">
+                /page/hangzheng/thlz.jsp
+            </result>
+        </action>
+        <action name="queryargumentbyidjson" method="queryArgumentByIdJson"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="downloadchzfj" method="downloadCHzFj"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryreparation" method="queryReparation"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addreparation" method="addReparation"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delreparation" method="delReparation"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatereparation" method="updateReparation"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryreparationbyid" method="queryReparationById"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryadminpenalty" method="queryAdminpenalty"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryadminpenaltybyid" method="queryAdminpenaltyById"
+                class="com.channel.channelmanage.ChannelManageAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+</struts>
+

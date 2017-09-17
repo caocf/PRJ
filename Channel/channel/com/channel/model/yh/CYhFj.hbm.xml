@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.channel.model.yh.CYhFj" table="c_yh_fj" >
+        <id name="fjid" type="java.lang.Integer">
+            <column name="FJID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="CYhZxgc" class="com.channel.model.yh.CYhZxgc" fetch="select">
+            <column name="PID" not-null="true" />
+        </many-to-one>
+        <property name="resname" type="java.lang.String">
+            <column name="RESNAME" length="64" not-null="true" />
+        </property>
+        <property name="ressize" type="java.lang.String">
+            <column name="RESSIZE" length="128" not-null="true" />
+        </property>
+        <property name="respath" type="java.lang.String">
+            <column name="RESPATH" length="128" not-null="true" />
+        </property>
+        <property name="filemd5" type="java.lang.String">
+            <column name="FILEMD5" length="256" not-null="true" />
+        </property>
+        <property name="creater" type="java.lang.Integer">
+            <column name="CREATER" />
+        </property>
+        <property name="createtime" type="timestamp">
+            <column name="CREATETIME" length="0" />
+        </property>
+        <property name="updatetime" type="timestamp">
+            <column name="UPDATETIME" length="0" />
+        </property>
+    </class>
+</hibernate-mapping>

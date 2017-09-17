@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.channel.model.hd.CZdAppattribute" table="c_zd_appattribute">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="type" type="java.lang.Integer">
+			<column name="TYPE" not-null="true" />
+		</property>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" not-null="true" />
+		</property>
+		<property name="namedesc" type="java.lang.String">
+			<column name="NAMEDESC" not-null="true" />
+		</property>
+		<property name="attrdesc" type="java.lang.String">
+			<column name="ATTRDESC" not-null="true" />
+		</property>
+		<property name="createtime" type="timestamp">
+			<column name="CREATETIME" length="0" not-null="true" />
+		</property>
+		<property name="updatetime" type="timestamp">
+			<column name="UPDATETIME" length="0" not-null="true" />
+		</property>
+		<property name="valid" type="java.lang.Integer">
+			<column name="valid" not-null="true" />
+		</property>
+		<property name="editable" type="java.lang.Integer">
+			<column name="editable" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+body {
+	
+}
+
+.table p {
+	margin: 0;
+}
+
+.table label {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	padding-top: 4px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.table button {
+	padding: 0px;
+	background-color: transparent;
+	border: 0;
+	color: #337ab7;
+}
+
+.table button:focus,.table button:hover,.table button:active {
+	border: 0;
+	background-color: transparent;
+	color: #0000ff
+}
+
+.modal-body label {
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	color: red;
+	height: 34px;
+	line-height: 34px;
+}
+
+.editInput {
+	border:0;
+	height: 26px;
+	width: 200px;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	font-size: 16px;
+	line-height:26px;
+}

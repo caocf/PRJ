@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="traffic" extends="cement-interceptor">
+        <action name="querygcdbyhdao" method="queryGcdByHdao"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querygcdbyids" method="queryGcdByIds"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querytraffic" method="queryTraffic"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querytrafficinfo" method="queryTrafficInfo"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addtraffic" method="addTraffic"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatetraffic" method="updateTraffic"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="deltraffic" method="delTraffic"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryshiptraffic" method="queryShipTraffic"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryshiptrafficinfo" method="queryShipTrafficInfo"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addshiptraffic" method="addShipTraffic"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateshiptraffic" method="updateShipTraffic"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delshiptraffic" method="delShipTraffic"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querycbgcd" method="queryCbGcd"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querycbll" method="queryCbll"
+                class="com.channel.traffic.TrafficAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/cbll/baobiao.jsp
+            </result>
+        </action>
+        <action name="exportcbll" method="exportCbll"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="queryjggcd" method="queryJgGcd"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryjgll" method="queryJgll"
+                class="com.channel.traffic.TrafficAction">
+            <result name="baobiao" type="redirect">/page/tongjibaobiao/sheding/jgll/baobiao.jsp
+            </result>
+        </action>
+        <action name="exportjgll" method="exportJgll"
+                class="com.channel.traffic.TrafficAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+    </package>
+</struts>
+

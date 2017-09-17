@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="repeatmileage" extends="cement-interceptor"
+		namespace="/repeatmileage">
+		<action name="delcflcglbybh" method="delCflcglByBh"
+			class="com.channel.repeatmileage.action.RepeatMileageAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="delcflcbyhdaobh" method="delCflcByHdaobh"
+			class="com.channel.repeatmileage.action.RepeatMileageAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="delcflcbyhduanbh" method="delCflcByHduanbh"
+			class="com.channel.repeatmileage.action.RepeatMileageAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="delcflcbycflcbh" method="delCflcByCflcbh"
+			class="com.channel.repeatmileage.action.RepeatMileageAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="querycflcbybh" method="queryCflcByBh"
+			class="com.channel.repeatmileage.action.RepeatMileageAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="querycflcbyhduanbh" method="queryCflcByHduanbh"
+			class="com.channel.repeatmileage.action.RepeatMileageAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="querycflcbyhdaobh" method="queryCflcByHdaobh"
+			class="com.channel.repeatmileage.action.RepeatMileageAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="querycflcbycflcbh" method="queryCflcByCflcbh"
+			class="com.channel.repeatmileage.action.RepeatMileageAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+	</package>
+</struts>
+

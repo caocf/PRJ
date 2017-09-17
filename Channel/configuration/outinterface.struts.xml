@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="outinterface" extends="cement-interceptor" namespace="/outinterface">
+        <action name="outsstable" method="outSsTable"
+                class="com.channel.outinterface.OutInterfaceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="login" method="Login"
+                class="com.channel.outinterface.OutInterfaceAction">
+            <result name="success" type="redirect">/page/home/home.jsp
+            </result>
+            <result name="usererror" type="redirect">/page/login/login.jsp
+            </result>
+        </action>
+    </package>
+</struts>
+

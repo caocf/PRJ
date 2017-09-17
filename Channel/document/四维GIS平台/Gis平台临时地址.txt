@@ -1,0 +1,2 @@
+http://172.20.24.105/webt/map.html
+ÒıÓÃhttp://172.20.24.105/WebtAPI/wapi.js

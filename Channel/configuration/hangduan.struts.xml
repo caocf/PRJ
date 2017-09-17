@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="hangduan" extends="cement-interceptor"
+             namespace="/hangduan">
+        <action name="querymaxhdbh" method="queryMaxHdbh"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryhdbhexisted" method="queryHdbhExisted"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchallhangduan" method="searchAllHangDuan"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchhangduanhddj" method="searchHangDuanHddj"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryhangduanbysshdid" method="queryHangDuanBySshdid"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryhangduanbyxzqh" method="queryHangDuanByXzqh"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryhangduaninfo" method="queryHangDuanInfo"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delhangduan" method="delHangDuan"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addhangduan" method="addHangDuan"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatehangduan" method="updateHangDuan"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="zhcxhduan" method="zhcxHduan"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="exporthduan" method="exportHduan"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exporthduaninfo" method="exportHduanInfo"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="zhcxhduaninfo" method="zhcxHduanInfo"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="importhduan" method="importHduan"
+                class="com.channel.hangduan.action.HangDuanAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+</struts>
+

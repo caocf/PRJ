@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="model" extends="cement-interceptor" namespace="/model">
+		<action name="querymodeladdinfo" method="queryModelAddInfo"
+			class="com.common.utils.uiinput.action.ModelUtilAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="querymodelupdateinfo" method="queryModelUpdateInfo"
+			class="com.common.utils.uiinput.action.ModelUtilAction">
+			<result name="success" type="json">
+				<param name="root">result</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+	</package>
+</struts>
+

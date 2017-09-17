@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="appurtenancetype" extends="cement-interceptor"
+             namespace="/appurtenancetype">
+        <action name="queryappbytype" method="queryAppByType"
+                class="com.channel.appurtenance.action.AppurtenanceTypeAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryallparent" method="queryAllParent"
+                class="com.channel.appurtenance.action.AppurtenanceTypeAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryallhduanparent" method="queryAllHduanParent"
+                class="com.channel.appurtenance.action.AppurtenanceTypeAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchallhduanxzqh" method="searchAllHduanXzqh"
+                class="com.channel.appurtenance.action.AppurtenanceTypeAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchallhduanparent" method="searchAllHduanParent"
+                class="com.channel.appurtenance.action.AppurtenanceTypeAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querysubclass" method="querySubClass"
+                class="com.channel.appurtenance.action.AppurtenanceTypeAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryallfswclass" method="queryAllFswClass"
+                class="com.channel.appurtenance.action.AppurtenanceTypeAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="appurtenance" extends="cement-interceptor"
+             namespace="/appurtenance">
+        <action name="importql" method="importQl"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="importlx" method="importLx"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="importkymt" method="importKymt"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="importsn" method="importSn"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="batchimport" method="batchImport"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="downloadtemplate" method="downloadTemplate"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="querymaxappbh" method="queryMaxAppbh"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryappbhexisted" method="queryAppbhExisted"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryappbh" method="queryAppBh"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchappurtenances" method="searchAppurtenances"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryappurtenances" method="queryAppurtenances"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchappbycontent" method="searchAppByContent"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryappurtenanceinfo" method="queryAppurtenanceInfo"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryapppopup" method="queryAppPopup"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delappurtenance" method="delAppurtenance"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="downloadchdfj" method="downloadCHdFj"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="addnavigationmark" method="addNavigationmark"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addbridge" method="addBridge"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addaqueduct" method="addAqueduct"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addcable" method="addCable"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addpipeline" method="addPipeline"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addtunnel" method="addTunnel"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addkydock" method="addKyDock"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addhydock" method="addHyDock"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addgwdock" method="addGwDock"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addshipyard" method="addShipyard"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addtakeoutfall" method="addTakeoutfall"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addhydrologicalstation" method="addHydrologicalstation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addgasstation" method="addGasstation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addmanagementstation" method="addManagementstation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addservicearea" method="addServicearea"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addmooringarea" method="addMooringarea"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addhub" method="addHub"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="adddam" method="addDam"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addregulationrevement" method="addRegulationrevement"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addlaserobservation" method="addLaserobservation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addvideoobservation" method="addVideoobservation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addmanualobservation" method="addManualobservation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addbollard" method="addBollard"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatenavigationmark" method="updateNavigationmark"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatebridge" method="updateBridge"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateaqueduct" method="updateAqueduct"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatecable" method="updateCable"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatepipeline" method="updatePipeline"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatetunnel" method="updateTunnel"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatedock" method="updateDock"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateshipyard" method="updateShipyard"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatetakeoutfall" method="updateTakeoutfall"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatehydrologicalstation" method="updateHydrologicalstation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updategasstation" method="updateGasstation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatemanagementstation" method="updateManagementstation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateservicearea" method="updateServicearea"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatemooringarea" method="updateMooringarea"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatehub" method="updateHub"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatedam" method="updateDam"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateregulationrevement" method="updateRegulationrevement"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatelaserobservation" method="updateLaserobservation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatevideoobservation" method="updateVideoobservation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatemanualobservation" method="updateManualobservation"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatebollard" method="updateBollard"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryfsw" method="queryFsw"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="zhcxapp" method="zhcxApp"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="exportapp" method="exportApp"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="zhcxappinfo" method="zhcxAppInfo"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="zhcxapps" method="zhcxApps"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchappbyxzqh" method="searchAppByXzqh"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="exportfswinfo" method="exportFswInfo"
+                class="com.channel.appurtenance.action.AppurtenanceAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+    </package>
+
+</struts>
+

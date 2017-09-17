@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.menuleftshouqi {
+	background: url("../../img/btn_shouqi_normal.png");
+}
+
+.menuleftshouqi:focus,.menuleftshouqi:hover,.menuleftshouqi:active {
+	background: url("../../img/btn_shouqi_hover.png");
+}
+
+.menuleftzhankai {
+	background: url("../../img/btn_zhankai_normal.png");
+}
+
+.menuleftzhankai:focus,.menuleftzhankai:hover,.menuleftzhankai:active {
+	background: url("../../img/btn_zhankai_hover.png");
+}

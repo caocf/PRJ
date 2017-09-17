@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
+    <display-name>Channel</display-name>
+    <context-param>
+        <param-name>webAppRootKey</param-name>
+        <param-value>Channel</param-value>
+    </context-param>
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:applicationContext*.xml</param-value>
+    </context-param>
+    <!-- 单点登录登出监听器过滤器 -->
+    <!--<listener>-->
+        <!--<listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>-->
+    <!--</listener>-->
+
+    <!--<filter>-->
+        <!--<filter-name>CAS Single Sign Out Filter</filter-name>-->
+        <!--<filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>CAS Single Sign Out Filter</filter-name>-->
+        <!--<url-pattern>/logout/*</url-pattern>-->
+    <!--</filter-mapping>-->
+    <!--&lt;!&ndash; 该过滤器负责用户的认证工作，必须启用它 &ndash;&gt;-->
+    <!--<filter>-->
+        <!--<filter-name>CASFilter</filter-name>-->
+        <!--<filter-class>com.channel.permission.CASAuthenticationFilter</filter-class>-->
+        <!--&lt;!&ndash;<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>&ndash;&gt;-->
+        <!--<init-param>-->
+            <!--<param-name>casServerLoginUrl</param-name>-->
+            <!--<param-value>http://172.26.24.160/casZjgh/login</param-value>-->
+            <!--&lt;!&ndash;<param-value>http://220.189.207.21:8290/casEG/login</param-value>&ndash;&gt;-->
+            <!--&lt;!&ndash;这里的server是服务端的IP &ndash;&gt;-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>serverName</param-name>-->
+            <!--<param-value>http://10.100.70.126</param-value>-->
+            <!--&lt;!&ndash;<param-value>http://localhost:8080</param-value>&ndash;&gt;-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>ExcludeFile</param-name>-->
+            <!--<param-value>http://10.100.70.126/Channel/outinterface/*-->
+            <!--</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+
+    <!--<filter-mapping>-->
+        <!--<filter-name>CASFilter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+    <!--&lt;!&ndash;该过滤器负责对Ticket的校验工作，必须启用它&ndash;&gt;-->
+    <!--<filter>-->
+        <!--<filter-name>CAS Validation Filter</filter-name>-->
+        <!--<filter-class>-->
+            <!--org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter-->
+        <!--</filter-class>-->
+        <!--<init-param>-->
+            <!--<param-name>casServerUrlPrefix</param-name>-->
+            <!--<param-value>http://172.26.24.160/casZjgh</param-value>-->
+            <!--&lt;!&ndash;<param-value>http://220.189.207.21:8290/casEG</param-value>&ndash;&gt;-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>serverName</param-name>-->
+            <!--<param-value>http://10.100.70.126</param-value>-->
+            <!--&lt;!&ndash;<param-value>http://localhost:8080</param-value>&ndash;&gt;-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>encoding</param-name>-->
+            <!--<param-value>UTF-8</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>CAS Validation Filter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+    <!--&lt;!&ndash;该过滤器负责实现HttpServletRequest请求的包裹， 比如允许开发者通过HttpServletRequest的getRemoteUser()方法获得SSO登录用户的登录名，可选配置。&ndash;&gt;-->
+    <!--<filter>-->
+        <!--<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>-->
+        <!--<filter-class>-->
+            <!--org.jasig.cas.client.util.HttpServletRequestWrapperFilter-->
+        <!--</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+    <!--&lt;!&ndash;该过滤器使得开发者可以通过org.jasig.cas.client.util.AssertionHolder来获取用户的登录名。 比如AssertionHolder.getAssertion().getPrincipal().getName()。&ndash;&gt;-->
+    <!--<filter>-->
+        <!--<filter-name>CAS Assertion Thread Local Filter</filter-name>-->
+        <!--<filter-class>org.jasig.cas.client.util.AssertionThreadLocalFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>CAS Assertion Thread Local Filter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+    <!-- 单点登录登出监听器过滤器 -->
+    <listener>
+        <listener-class>com.channel.permission.PermissionSessionListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>SessionFilter</filter-name>
+        <filter-class>com.channel.permission.PermissionSessionFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SessionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>hibernate4Filter</filter-name>
+        <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>hibernate4Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>struts2Filter</filter-name>
+        <filter-class>com.common.framework.CXFFilter</filter-class>
+        <init-param>
+            <param-name>configProviders</param-name>
+            <param-value>com.common.framework.CustomStrutsConfigurationProvider</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>struts2Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- session 失效时间 -->
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+
+    <!--错误页面配置-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/common/error/error.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/common/error/error.jsp</location>
+    </error-page>
+
+
+    <welcome-file-list>
+        <welcome-file>/page/login/login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

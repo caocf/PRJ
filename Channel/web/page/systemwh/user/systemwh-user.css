@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.adddialogpadding{
+	padding-top:10px;
+}
+
+.ustatuslbgreen{
+	color:green;
+	font-weight:normal;
+	font-size: 16px;
+}
+
+.ustatuslbred{
+	color:red;
+	font-weight:normal;
+	font-size: 16px;
+}
+
+.btnoper{
+	font-weight:normal;
+	font-size: 16px;
+}

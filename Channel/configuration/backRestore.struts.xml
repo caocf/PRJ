@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="backRestore" extends="cement-interceptor" namespace="/backrestore">
+        <action name="querytables" method="queryTables"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="querybackschedules" method="queryBackSchedules"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="querybackhistories" method="queryBackHistories"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="deletebackhistory" method="deleteBackHistory"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="enablebackschedule" method="enableBackSchedule"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="disablebackschedule" method="disableBackSchedule"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="deletebackschedule" method="deleteBackSchedule"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="viewbackschedule" method="viewBackSchedule"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="addbackschedule" method="addBackSchedule"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="updatebackschedule" method="updateBackSchedule"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="restore" method="restore"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="backup" method="backup"
+                class="com.channel.backrestore.BackRestoreAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+</struts>
+

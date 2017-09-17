@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="hangdao" extends="cement-interceptor" namespace="/hangdao">
+        <action name="searchallhangdao" method="searchAllHangDao"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchhangdaosjbh" method="searchHangDaoSjbh"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="searchhangdaohddj" method="searchHangDaoHddj"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryallhangdao" method="queryAllHangDao"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryhdmanxzqh" method="queryHdManXzqh"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addhangdao" method="addHangDao"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatehangdao" method="updateHangDao"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryhangdaoinfo" method="queryHangDaoInfo"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delhangdao" method="delHangDao"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="zhcxhdao" method="zhcxHdao"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="exporthdao" method="exportHdao"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="exporthdaoinfo" method="exportHdaoInfo"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="json" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+            <result name="file" type="stream">
+                <param name="contentType">application/octet-stream</param>
+                <param name="contentLength">${dlFilelength}</param>
+                <param name="inputName">dlFile</param>
+                <param name="contentDisposition">attachment;${dlFileName}</param>
+                <param name="bufferSize">4096</param>
+            </result>
+        </action>
+        <action name="zhcxhdaoinfo" method="zhcxHdaoInfo"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="importhdao" method="importHdao"
+                class="com.channel.hangdao.action.HangDaoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+</struts>
+

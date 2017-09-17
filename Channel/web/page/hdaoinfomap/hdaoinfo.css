@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+
+.menuleftshouqi {
+    background: url("../../img/btn_shouqi_normal.png");
+}
+
+.menuleftshouqi:focus, .menuleftshouqi:hover, .menuleftshouqi:active {
+    background: url("../../img/btn_shouqi_hover.png");
+}
+
+.menuleftzhankai {
+    background: url("../../img/btn_zhankai_normal.png");
+}
+
+.menuleftzhankai:focus, .menuleftzhankai:hover, .menuleftzhankai:active {
+    background: url("../../img/btn_zhankai_hover.png");
+}
+
+.fswa {
+    width: 80%;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fswlabel {
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 0 0 0;
+    color: black;
+}
+
+.nvgrow {
+    background-color: #f5f5f5;
+    height: 38px;
+    padding-left: 25px;
+}
+
+.navmap {
+    background-color: #f5f5f5;
+    height: 38px;
+    padding-left: 25px;
+}
+
+.nvgrow a:hover {
+    background-color: #f5f5f5;
+    border-bottom: 2px solid royalblue;
+    color: blue;
+    font-family: 微软雅黑;
+}
+
+.navmap a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.nvgrow a, .nvgrow button {
+    border-radius: 0;
+}
+
+.nvgrow label, .navmap label {
+    padding: 0px;
+    margin: 0px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    color: white;
+}
+
+.nvgrow a, .nvgrow button {
+    background-color: transparent;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 15px 0 15px;
+    margin: 0;
+    border: 0px;
+    font-size: 14px;
+}
+
+.searchclk {
+    background-color: #f5f5f5;
+    border-bottom: 2px solid royalblue;
+    color: blue;
+    font-family: 微软雅黑;
+}
+
+.temptr td {
+    padding-top: 8px;
+}
+
+.temptd a {
+    text-decoration: none;
+}
+
+.addinfoline {
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #666666;
+    font-weight: bold;
+    background: #f5f5f5;
+    margin-bottom: 15px;
+}

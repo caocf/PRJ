@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="userlogin" extends="cement-interceptor" namespace="/user">
+        <action name="login" method="Login"
+                class="com.channel.user.action.UserAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <!--验证码  change by 庄佳彬 at 2017-03-28-->
+        <action name="verifyCode" method="getVerifyCodeImg" class="com.channel.user.action.UserAction">
+        </action>
+    </package>
+    <package name="version" extends="cement-interceptor">
+        <action name="queryversion" method="queryVersion"
+                class="com.channel.user.action.UserAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="user" extends="cement-interceptor" namespace="/user">
+        <action name="logout" method="Logout"
+                class="com.channel.user.action.UserAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateuser" method="updateUser"
+                class="com.channel.user.action.UserAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="disableuser" method="disableUser"
+                class="com.channel.user.action.UserAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="enableuser" method="enableUser"
+                class="com.channel.user.action.UserAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="deluser" method="delUser"
+                class="com.channel.user.action.UserAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryuser" method="queryUser"
+                class="com.channel.user.action.UserAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="userinfo" extends="cement-interceptor"
+             namespace="/userinfo">
+        <action name="queryuserinfo" method="queryUserInfo"
+                class="com.channel.user.action.UserInfoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateuserinfo" method="updateUserInfo"
+                class="com.channel.user.action.UserInfoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updateuserpassword" method="updateUserPassword"
+                class="com.channel.user.action.UserInfoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="adduserinfo" method="addUserInfo"
+                class="com.channel.user.action.UserInfoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryuserinfobyname" method="queryUserInfoByName"
+                class="com.channel.user.action.UserInfoAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="dpt" extends="cement-interceptor">
+        <action name="queryroot" method="queryRoot"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryallrootdpt" method="queryAllRootDpt"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryalldpt" method="queryAllDpt"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querytreedpt" method="queryTreeDpt"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryxzqhdpt" method="queryXzqhDpt"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querydptinfo" method="queryDptInfo"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="adddpt" method="addDpt"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatedpt" method="updateDpt"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="deldpt" method="delDpt"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+
+        <action name="queryDptDefaultRoles" method="queryDptDefaultRoles"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+
+    <package name="xzqh" extends="cement-interceptor" namespace="/xzqh">
+        <action name="queryallxzqh" method="queryAllXzqh"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="querytreexzqh" method="queryTreeXzqh"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="queryxzqhinfo" method="queryXzqhInfo"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="delxzqh" method="delXzqh"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="updatexzqh" method="updateXzqh"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+        <action name="addxzqh" method="addXzqh"
+                class="com.channel.user.action.DptAction">
+            <result name="success" type="json">
+                <param name="root">result</param>
+                <param name="ignoreHierarchy">false</param>
+            </result>
+        </action>
+    </package>
+
+</struts>
+

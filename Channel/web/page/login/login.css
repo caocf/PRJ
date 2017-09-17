@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+body {
+	background: url("../../img/home_background.png");
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.lbTitle {
+	margin-top: 15px;
+	font-size: 30px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.lbErrmsg {
+	color: red;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+}
