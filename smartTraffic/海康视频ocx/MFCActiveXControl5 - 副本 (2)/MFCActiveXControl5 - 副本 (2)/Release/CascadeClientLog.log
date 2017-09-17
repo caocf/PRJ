@@ -1,0 +1,306 @@
+
+--- 2015-08-10 16:44:02 Logging Started on ---
+16:44:02 [D] MediaClient_InitLib Successed  [CClientSession::InitCascadeClient:229]
+16:44:02 [D] Init CascadeClient.dll Success, LocalIP: 192.168.1.200  [CClientSession::InitCascadeClient:240]
+16:44:03 [D] Connect To Cascade Success, ServerIp: 172.20.44.194 , ServerPort: 7100  [CClientSession::ConnectToServer:388]
+16:44:03 [D] Send RegisterMessage, Version: V2.3.6  [CClientSession::SendRegister:844]
+16:44:05 [D] recvbuf, recvlien: 171, len: 171, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="1205">FAIL</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:44:06 [D] recvbuf, recvlien: 176, len: 176, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>REGISTER_RSP</Command>
+<Result id="200">OK</Result>
+<HbCylce>30</HbCylce>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:44:06 [D] Register to Cascade Success, HeartTime: 30000  [CClientSession::ProcRegisterAnswered:648]
+16:44:37 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:45:06 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:45:36 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:46:06 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:46:36 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:47:07 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:47:37 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:48:07 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:48:37 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:49:07 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:49:37 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:50:07 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:50:37 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:51:08 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:51:39 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:52:08 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:52:38 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:53:08 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:53:38 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:54:08 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:54:38 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:55:08 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:55:39 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:56:09 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:56:55 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:57:09 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+16:58:32 [D] recvbuf, recvlien: 168, len: 168, 
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+<Pack type="HKP">
+<Command>HEARTBEAT_RSP</Command>
+<Result id="200">OK</Result>
+<TimeStamp/>
+</Pack>
+</Message>
+  [CClientSession::SocketReceive:542]
+17:00:46 [D] Connection with Cascade is interrupted  [CClientSession::SocketReceive:631]
+17:00:46 [D] Connect to Server Again ...  [CClientSession::ConnectRepeatThread:2025]
+17:01:07 [E] Send MessageHeader To CascadeServer Fail  [CClientSession::SendToServer:1761]
+17:01:37 [E] Send MessageHeader To CascadeServer Fail  [CClientSession::SendToServer:1761]
+17:02:07 [E] Send MessageHeader To CascadeServer Fail  [CClientSession::SendToServer:1761]
+17:02:38 [E] Send MessageHeader To CascadeServer Fail  [CClientSession::SendToServer:1761]
+17:03:08 [E] Send MessageHeader To CascadeServer Fail  [CClientSession::SendToServer:1761]
+17:03:38 [E] Send MessageHeader To CascadeServer Fail  [CClientSession::SendToServer:1761]
+17:04:08 [E] Send MessageHeader To CascadeServer Fail  [CClientSession::SendToServer:1761]

@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>Test ActiveX</TITLE>
+
+
+<script type="text/javascript">
+	function aaa()
+	{
+	   alert("connect");
+          var r= devread.InitConnect();
+
+		  alert(r);
+	}
+
+	function QueryAllCamera()
+	{
+	   alert("find");
+          var r2= devread.QueryAllCamera();
+
+		  alert(r2);
+	}
+
+	function PlayCamera()
+	{
+	   alert("play");
+
+	   var c=document.getElementById("button4").value;
+
+	   alert(c);
+
+          var r3= devread.PlayCamera(c);
+
+		  alert(r3);
+	}
+
+</script>
+
+
+</HEAD>
+
+<body>
+
+<OBJECT ID="DemoCtrl"  name= "devread" WIDTH=1000 HEIGHT=500 classid="CLSID:CEAA8AEA-3D39-4CCE-A9D9-E948F6455D33" codebase="E:\visual studio application\MFCActiveXControl5 - 副本 (2)\Debug\MFCActiveXControl5.ocx">
+    <PARAM NAME="_Version" VALUE="65536">
+    <PARAM NAME="_ExtentX" VALUE="12806">
+    <PARAM NAME="_ExtentY" VALUE="1747">
+    <PARAM NAME="_StockProps" VALUE="0">
+</OBJECT>
+
+
+<INPUT id="button1" type="button" value="连接" name="button1" onclick="aaa()">
+<INPUT id="button2" type="button" value="列表" name="button2" onclick="QueryAllCamera()">
+
+<INPUT id="button4" type="input" value="" name="button4" onclick="">
+<INPUT id="button3" type="button" value="播放" name="button3" onclick="PlayCamera()">
+
+
+</body>
+</HTML>

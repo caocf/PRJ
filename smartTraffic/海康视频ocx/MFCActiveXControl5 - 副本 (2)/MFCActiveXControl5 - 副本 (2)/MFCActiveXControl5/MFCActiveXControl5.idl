@@ -1,0 +1,57 @@
+// MFCActiveXControl5.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(MFCActiveXControl5.tlb)，该类型库将成为
+// MFCActiveXControl5.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(A0AA506D-8BF6-4D3C-9178-ED001FAEAD0B), version(1.0),
+  control ]
+library MFCActiveXControl5Lib
+{
+	importlib(STDOLE_TLB);
+
+	//  CMFCActiveXControl5Ctrl 的主调度接口
+	[ 
+		uuid(A90C30BE-25CC-4E7F-A3A5-BD7F4978A9CA)	
+	]
+	dispinterface _DMFCActiveXControl5
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(1)] SHORT InitConnect(void);
+			[id(2)] BSTR QueryAllCamera(void);
+			[id(3)] CHAR QueryAllCamera2(void);
+			[id(4)] SHORT PlayCamera(SHORT id);
+			[id(5)] SHORT InitConnect2(CHAR* IP, CHAR* name, CHAR* pass, CHAR* port);
+			[id(6)] SHORT InitConnect3(BSTR ip, BSTR name, BSTR pass, BSTR port);
+	};
+
+	//  CMFCActiveXControl5Ctrl 的事件调度接口
+
+	[ 
+		uuid(BC9E9507-297B-4538-9288-73D249E70C15)	
+	]
+	dispinterface _DMFCActiveXControl5Events
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CMFCActiveXControl5Ctrl 的类信息
+	[
+		uuid(CEAA8AEA-3D39-4CCE-A9D9-E948F6455D33)
+	]
+	coclass MFCActiveXControl5
+	{
+		[default] dispinterface _DMFCActiveXControl5;
+		[default, source] dispinterface _DMFCActiveXControl5Events;
+	};
+
+};

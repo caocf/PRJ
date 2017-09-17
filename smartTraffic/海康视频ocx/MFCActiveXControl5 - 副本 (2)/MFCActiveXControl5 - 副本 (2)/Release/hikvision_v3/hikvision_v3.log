@@ -1,0 +1,23 @@
+
+--- 2015-08-10 16:44:06 Logging Started on ---
+16:44:06 [D] init log sdk  [media_init:72]
+16:44:06 [D] config info: <?xml version="1.0" encoding="UTF-8"?>
+<Config>
+<PacketCount>30
+</PacketCount>
+<SockBuf>4
+</SockBuf>
+<PlayBuf>8
+</PlayBuf>
+<DisPlayBuf>30
+</DisPlayBuf>
+<StreamMode>0
+</StreamMode>
+<DownSpeed>8
+</DownSpeed>
+<TimeOut>0
+</TimeOut>
+<YUVBack>0
+</YUVBack>
+<Log>1</Log>
+</Config>  [media_init:121]

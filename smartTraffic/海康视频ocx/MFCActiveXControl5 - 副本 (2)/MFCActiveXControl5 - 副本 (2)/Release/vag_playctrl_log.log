@@ -1,0 +1,14 @@
+
+--- 2015-08-07 15:40:45 Logging Started on ---
+15:40:45 [D] ProcPluginLoad, Plugin: hik  [CPluginMgr::LoadPlugin:555]
+15:40:45 [D] Plugin Load Success, pszProcName:hik!  [CPluginMgr::LoadPlugin:634]
+15:40:45 [D] ProcPluginLoad, Plugin: dahua  [CPluginMgr::LoadPlugin:555]
+15:40:45 [D] Plugin Load Success, pszProcName:dahua!  [CPluginMgr::LoadPlugin:634]
+15:40:45 [D] ProcPluginLoad, Plugin: chengfeng  [CPluginMgr::LoadPlugin:555]
+15:40:45 [D] Plugin Load Success, pszProcName:chengfeng!  [CPluginMgr::LoadPlugin:634]
+15:40:45 [D] ProcPluginLoad, Plugin: db33  [CPluginMgr::LoadPlugin:555]
+15:40:45 [D] Plugin Load Success, pszProcName:db33!  [CPluginMgr::LoadPlugin:634]
+15:40:45 [D] ProcPluginLoad, Plugin: hik  [CPluginMgr::LoadPlugin:555]
+15:40:45 [D] Plugin Load Success, pszProcName:hik!  [CPluginMgr::LoadPlugin:634]
+15:40:45 [D] Vag playctrl sdk init success!  [VPLAY_Init:86]
+15:40:45 [D] Vag playctrl sdk has inited!  [VPLAY_Init:65]

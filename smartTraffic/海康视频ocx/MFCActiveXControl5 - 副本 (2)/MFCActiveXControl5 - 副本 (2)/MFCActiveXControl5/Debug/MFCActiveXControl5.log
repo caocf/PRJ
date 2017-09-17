@@ -1,0 +1,47 @@
+﻿生成启动时间为 2015/8/7 15:48:52。
+     1>项目“E:\visual studio application\MFCActiveXControl5 - 副本 (2)\MFCActiveXControl5\MFCActiveXControl5.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>Midl:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\midl.exe /D _DEBUG /W1 /nologo /char signed /env win32 /h "MFCActiveXControl5idl.h" /tlb "Debug\MFCActiveXControl5.tlb" /robust MFCActiveXControl5.idl 
+         Processing .\MFCActiveXControl5.idl
+         MFCActiveXControl5.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\objidl.idl
+         objidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\wtypesbase.idl
+         wtypesbase.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\shared\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Windows Kits\8.0\Include\um\oaidl.acf
+         oaidl.acf
+       ClCompile:
+         E:\visual studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\MFCActiveXControl5.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         E:\visual studio\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\MFCActiveXControl5.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt MFCActiveXControl5.cpp MFCActiveXControl5Ctrl.cpp MFCActiveXControl5PropPage.cpp
+         MFCActiveXControl5PropPage.cpp
+         MFCActiveXControl5Ctrl.cpp
+         MFCActiveXControl5.cpp
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\MFCActiveXControl5.res" MFCActiveXControl5.rc 
+       Link:
+         E:\visual studio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\visual studio application\MFCActiveXControl5 - 副本 (2)\Debug\MFCActiveXControl5.ocx" /INCREMENTAL /NOLOGO /DEF:".\MFCActiveXControl5.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"E:\visual studio\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"E:\visual studio application\MFCActiveXControl5 - 副本 (2)\Debug\MFCActiveXControl5.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\visual studio application\MFCActiveXControl5 - 副本 (2)\Debug\MFCActiveXControl5.lib" /MACHINE:X86 /DLL Debug\MFCActiveXControl5.res
+         Debug\MFCActiveXControl5.obj
+         Debug\MFCActiveXControl5Ctrl.obj
+         Debug\MFCActiveXControl5PropPage.obj
+         Debug\stdafx.obj
+            正在创建库 E:\visual studio application\MFCActiveXControl5 - 副本 (2)\Debug\MFCActiveXControl5.lib 和对象 E:\visual studio application\MFCActiveXControl5 - 副本 (2)\Debug\MFCActiveXControl5.exp
+         MFCActiveXControl5.vcxproj -> E:\visual studio application\MFCActiveXControl5 - 副本 (2)\Debug\MFCActiveXControl5.ocx
+       RegisterOutput:
+         regsvr32 /s "E:\visual studio application\MFCActiveXControl5 - 副本 (2)\Debug\MFCActiveXControl5.ocx"
+     1>已完成生成项目“E:\visual studio application\MFCActiveXControl5 - 副本 (2)\MFCActiveXControl5\MFCActiveXControl5.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.00

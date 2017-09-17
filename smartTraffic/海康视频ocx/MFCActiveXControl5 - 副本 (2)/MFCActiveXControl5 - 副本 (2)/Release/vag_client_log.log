@@ -1,0 +1,8 @@
+
+--- 2015-08-07 15:40:45 Logging Started on ---
+15:40:45 [D] 3-PAG-<53>	<DeviceObject_Init>,DahuaPlugin: DeviceObject_Init  [pfnDeviceSdkLogCB:19]
+15:40:45 [D] 3-PAG-<42>	<DeviceObject_Init>,HikPlugin: DeviceObject_Init  [pfnDeviceSdkLogCB:19]
+15:40:45 [D] Vag client sdk init success!  [VAG_Init:110]
+15:42:14 [D] connect 172.20.44.194:7302 success  [TransmitSendWithWaitRsp:139]
+15:42:15 [D] Vag client login:172.20.44.194:7302 iHandle:5244 success!  [VAG_Login:248]
+15:42:21 [D] 172.20.44.194:7302 timeout, index:1  [CLetterMgr::CheckConnectTimeOut:504]
