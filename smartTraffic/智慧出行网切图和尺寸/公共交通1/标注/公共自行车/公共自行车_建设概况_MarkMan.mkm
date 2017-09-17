@@ -1,0 +1,14 @@
+<MKM version="2.0" imageFileUrl="file:///E:/JiaXingSmartTraffic/%e6%99%ba%e6%85%a7%e5%87%ba%e8%a1%8c%e7%bd%91%e5%88%87%e5%9b%be%e5%92%8c%e5%b0%ba%e5%af%b8/%e5%85%ac%e5%85%b1%e4%ba%a4%e9%80%9a1/%e6%a0%87%e6%b3%a8/%e5%85%ac%e5%85%b1%e8%87%aa%e8%a1%8c%e8%bd%a6/%e5%85%ac%e5%85%b1%e8%87%aa%e8%a1%8c%e8%bd%a6_%e5%bb%ba%e8%ae%be%e6%a6%82%e5%86%b5_MarkMan.png">
+  <Marks>
+    <LengthMark x="287" y="385" color="16711680" length="10" direction="3"/>
+    <LengthMark x="268" y="284" color="16711680" length="20" direction="3"/>
+    <LengthMark x="408" y="360.5" color="16711680" length="20" direction="3"/>
+    <LengthMark x="394" y="330" color="16711680" length="20" direction="3"/>
+    <LengthMark x="395" y="451" color="16711680" length="46" direction="3"/>
+    <LengthMark x="385" y="661" color="16711680" length="46" direction="3"/>
+    <TextMark x="631" y="562" color="16711680" offsetX="38" offsetY="36" defaultDirection="9" direction="9" textMaxWidth="142" text="color:#333333&#xD;size:12px"/>
+    <TextMark x="409" y="506" color="16711680" offsetX="61" offsetY="25" defaultDirection="9" direction="9" textMaxWidth="150" text="color:#333333&#xD;size:14px bold"/>
+    <TextMark x="187" y="367" color="16711680" offsetX="47" offsetY="10" defaultDirection="5" direction="5" textMaxWidth="117" text="color：#333333      &#xD;size:12px"/>
+    <LengthMark x="169" y="240" color="16711680" length="16" direction="3"/>
+  </Marks>
+</MKM>
